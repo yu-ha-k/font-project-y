@@ -4,10 +4,40 @@ var _HOST_IMG_NAME = "";
 var _pathName = window.location.pathname;
 
 /* ───────────── repo base 추출: "/font-project-y/" ───────────── */
+/* ===== 배포 전용 안전 로더 (docs/ + /font-project-y/ 루트 대응) ===== */
 (function () {
-  var seg = (location.pathname.split("/")[1] || "").trim();
-  window.__REPO_BASE__ = "/" + seg + "/"; // 예: "/font-project-y/"
+  // GitHub Pages 루트 자동판정 (repo pages: /font-project-y/…)
+  var ROOT =
+    location.pathname.indexOf("/font-project-y/") === 0 ? "/font-project-y/" : "/";
+
+  // JS: 기본은 docs/js/… , 인자로 pub/…가 오면 그대로 붙임
+  window.includeJs = function (url) {
+    var full = url.indexOf("pub/") === 0 ? ROOT + url : ROOT + "js/" + url;
+    document.write("<script src=\"" + full + "\"></script>");
+  };
+
+  // CSS: 기본은 docs/pub/css/… , 인자로 pub/… 또는 css/…가 오면 보정
+  window.includeCss = function (url) {
+    var full;
+    if (url.indexOf("pub/") === 0) {
+      full = ROOT + url; // e.g. "pub/css/xxx.css"
+    } else if (url.indexOf("css/") === 0) {
+      full = ROOT + "pub/" + url; // "css/…" -> "pub/css/…"
+    } else {
+      full = ROOT + "pub/css/" + url; // 파일명만 들어온 경우
+    }
+    document.write("<link rel=\"stylesheet\" href=\"" + full + "\">");
+  };
+
+  // 확장자 보고 자동 라우팅 (안심용)
+  window.includeAsset = function (url) {
+    if (/\.js(\?|#|$)/i.test(url)) return window.includeJs(url);
+    if (/\.css(\?|#|$)/i.test(url)) return window.includeCss(url);
+    // 확장자 없으면 JS로 간주
+    return window.includeJs(url);
+  };
 })();
+
 
 /* ───────────── 경로 헬퍼 (배포 전용) ───────────── */
 // 기본 JS는 docs/js/ 아래에서 로드
