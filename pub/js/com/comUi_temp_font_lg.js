@@ -927,5 +927,106 @@ $(function () {
   } catch (e) {}
 })();
 
+(function () {
+  // 우리 공용 스케줄러가 있으면 사용, 없으면 rafReflow로 폴백
+  var schedule = window.__BT_scheduleReflow__ || function () {
+    if (window.rafReflow) window.rafReflow();
+  };
+
+  // 대상 컨테이너 안에 줄바꿈 판단 대상이 있는지 빠르게 체크
+  function hasWrapTargets(node) {
+    if (!node || node.nodeType !== 1) return false;
+    if (node.matches && node.matches(
+      ".line, ul.d_list, ul.sub_d_list, .result_list, .group_item_detail, .card_item_detail"
+    )) return true;
+    if (node.querySelector) {
+      return !!node.querySelector(
+        ".line, ul.d_list, ul.sub_d_list, .result_list, .group_item_detail, .card_item_detail"
+      );
+    }
+    return false;
+  }
+
+  // 실제 화면에 ‘보이는’ 상태인지(조상까지 포함)
+  function isVisible(el) {
+    if (!el) return false;
+    var cur = el;
+    while (cur && cur !== document.body) {
+      var cs = getComputedStyle(cur);
+      if (cs.display === "none" || cs.visibility === "hidden") return false;
+      cur = cur.parentElement;
+    }
+    var r = el.getBoundingClientRect();
+    return r.width > 0 && r.height > 0;
+  }
+
+  // 보임상태 변화(숨김→보임) 감지용 캐시
+  var wasVisible = new WeakMap();
+  function check(node) {
+    if (!hasWrapTargets(node)) return;
+    var now = isVisible(node);
+    var prev = wasVisible.get(node);
+    if (prev === undefined) { wasVisible.set(node, now); return; }
+    if (now && !prev) {        // ▶ 숨김→보임 전환 순간
+      wasVisible.set(node, now);
+      schedule();              // 한 번만 재계산
+      return;
+    }
+    wasVisible.set(node, now);
+  }
+
+  // 초기 시드(스텝/탭/섹션/리스트 등 전역)
+  document.querySelectorAll(
+    "[id^='step'], .step, .tab_panel, .tab_contents, .popup, .bottom_popup, " +
+    ".panel, .section, .result_list, ul.d_list, ul.sub_d_list, .group_item_detail, .card_item_detail"
+  ).forEach(function (n) { wasVisible.set(n, isVisible(n)); });
+
+  // MutationObserver: class/style 토글(보임 전환) + 동적 주입 모두 감지
+  try {
+    var mo = new MutationObserver(function (muts) {
+      var need = false;
+      for (var i = 0; i < muts.length; i++) {
+        var m = muts[i];
+
+        // 1) class/style 변경으로 보임 전환되는 케이스
+        if (m.type === "attributes" && (m.attributeName === "class" || m.attributeName === "style")) {
+          var n = m.target;
+          // 해당 노드와 상위 몇 단계까지 같이 체크(스텝/탭 전환이 래퍼에서 일어나는 경우)
+          var p = n;
+          for (var k = 0; k < 4 && p; k++) { check(p); p = p.parentElement; }
+        }
+
+        // 2) 동적 노드 주입(리스트/라인이 늦게 붙는 경우)
+        if (m.type === "childList" && m.addedNodes && m.addedNodes.length) {
+          for (var j = 0; j < m.addedNodes.length; j++) {
+            var a = m.addedNodes[j];
+            if (a.nodeType !== 1) continue;
+            if (hasWrapTargets(a)) { need = true; break; }
+          }
+        }
+        if (need) break;
+      }
+      if (need) schedule();
+    });
+
+    mo.observe(document.body, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      attributeFilter: ["class", "style"]
+    });
+  } catch (e) {}
+
+  // 레이아웃에 영향 큰 전역 이벤트도 얕게 훅(중복 호출은 내부 스케줄러가 막음)
+  try {
+    $(document).on("STEP_CHANGED TAB_CHANGED PANEL_SHOWN JEX_PAGE_READY", schedule);
+  } catch (e) {}
+  window.addEventListener("pageshow", schedule, { passive: true });
+  window.addEventListener("orientationchange", schedule, { passive: true });
+  if (window.visualViewport) {
+    visualViewport.addEventListener("resize", schedule, { passive: true });
+    visualViewport.addEventListener("scroll", schedule, { passive: true });
+  }
+})();
 
 /*==========================e: test ================================================*/
