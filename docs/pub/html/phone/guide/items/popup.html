@@ -1,0 +1,3279 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<style>
+				.popup_guide_btn_wrap {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-orient: horizontal;
+					-webkit-box-direction: normal;
+					-ms-flex-flow: row wrap;
+					flex-flow: row wrap;
+					gap: 0.5rem;
+					padding-bottom: 1rem;
+				}
+
+				.popup_guide_btn_wrap button {
+					padding: 0.5rem 1rem;
+					border-radius: 0.5rem;
+				}
+			</style>
+			<div class="container_wrap ios">
+				<div class="cont_wrap">
+					<h1 class="guide_h1">test</h1>
+					<div class="popup_guide_btn_wrap">
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('test1');">option 팝업 열기</button>
+					</div>
+
+					<div class="bottom_popup_wrap" id="test1">
+						<div class="bottom_popup">
+							<div class="bottom_popup_header">
+								<h2 class="tit">option test</h2>
+								<button type="button" class="btn_close" onclick="comLayerPopUtil.close('test1');">닫기</button>
+							</div>
+							<div class="bottom_popup_body">
+								<ul class="select_list ty1" role="listbox">
+									<li role="option" tabindex="-1" class="active" aria-selected="true">naver.com t1</li>
+									<li role="option" tabindex="-1" aria-selected="false">gmail.com t2</li>
+									<li role="option" tabindex="-1" aria-selected="false">daum.net t3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h1 class="guide_h1">popup</h1>
+					<div class="popup_guide_btn_wrap">
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('no_header');">팝업 열기 - 헤더 없는 케이스</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popup1');">팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popup2');">팝업 열기 - 최대높이 고정형</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('fullpopup1');">전체팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('fullpopup2');">전체팝업 열기 - 케이스</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('layerpopup1');">레이어팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popup3');">달력 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popup4');">선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popup5_old');">은행 선택 팝업 열기 - 구버젼</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('pin');">핀테크사 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('bcc');">카드사 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popup5');">은행 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('banktab');">은행 - 탭 - 선택 팝업 열기 (이체에 사용)</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popupAccount');">계좌번호 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popupAccount_old');">계좌번호 선택 팝업 열기 -(구)</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('current_pop');">최근거래계좌 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('often_pop');">자주쓰는계좌 선택 팝업 열기 -(구)</button>
+
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popup6');">공통 - 조건설정 팝업 - 1타입</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popup7');">공통 - 조건설정 팝업 - 2타입</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('time');">시간 선택 팝업</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('optlist');">범용 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('telecom');">통신사 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('share');">공유하기 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('cert');">인증서 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('monthlist');">청구월 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('datelist');">청구일 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('countSelect');">회차 선택 팝업 열기</button>
+
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('single_agree');">단일 동의 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('popup8');">결재선조회 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('currency');">통화 선택(외화송금Ver) 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="window.open('../../guide/items/fullpopup_c1.html')">통화 선택(환율조회Ver) 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="window.open('../../guide/items/fullpopup_c2.html')">국가(소재국) 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('datePic');">복수선택 - 자동이체 - 하단 버튼 있음</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('datePic2');">복수선택 - 집금 - 하단 버튼 없음</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('agpop');">약관동의 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('emailOptList');">이메일 도메인 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('cardlist');">카드 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('businessNum');">사업장번호 선택 팝업 열기</button>
+						<button type="button" class="btn s_2 c_2 r_2" onclick="comLayerPopUtil.open('placelist');">사업장 선택 팝업 열기</button>
+
+						<div style="display: block; flex: none; width: 100%; height: 500px; background-color: #ddd"></div>
+						<div style="display: block">
+							<button type="button" class="btn s_2 c_2 r_2" onclick="$('#test1').openPop();">테스트 호출</button>
+						</div>
+						<div style="display: block; flex: none; width: 100%; height: 200px; background-color: #ddd"></div>
+
+						<div class="bottom_popup_wrap" id="test1">
+							<div class="bottom_popup">
+								<div class="bottom_popup_header">
+									<h2 class="tit">테스트 팝업 호출</h2>
+									<button type="button" class="btn_close" onclick="comLayerPopUtil.close('test1');">닫기</button>
+								</div>
+								<div class="bottom_popup_body">
+									테스트 팝업
+									<br />
+									테스트 팝업
+									<br />
+									테스트 팝업
+									<br />
+									테스트 팝업
+									<br />
+									테스트 팝업
+									<br />
+									테스트 팝업
+									<br />
+									테스트 팝업
+									<br />
+									테스트 팝업
+									<br />
+									테스트 팝업
+									<br />
+									테스트 팝업
+									<br />
+								</div>
+								<div class="bottom_popup_footer">
+									<button type="button" class="btn s_5 c_1 r_2" onclick="$('#test1').closePop();">취소</button>
+									<button type="button" class="btn s_5 c_3 r_2" onclick="$('#test1').closePop();">확인</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom_popup_wrap" id="datePic">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">자동이체</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('datePic');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="select_list_group">
+							<div class="item">
+								<ul class="select_list ty7" role="listbox">
+									<li role="option" tabindex="-1" class="active" aria-selected="true">매월</li>
+									<li role="option" tabindex="-1" aria-selected="false">2개월</li>
+									<li role="option" tabindex="-1" aria-selected="false">3개월</li>
+									<li role="option" tabindex="-1" aria-selected="false">4개월</li>
+									<li role="option" tabindex="-1" aria-selected="false">5개월</li>
+									<li role="option" tabindex="-1" aria-selected="false">6개월</li>
+									<li role="option" tabindex="-1" aria-selected="false">12개월</li>
+									<li role="option" tabindex="-1" aria-selected="false">매월말</li>
+									<li role="option" tabindex="-1" aria-selected="false">매월말영업일</li>
+									<li role="option" tabindex="-1" aria-selected="false">매일</li>
+									<li role="option" tabindex="-1" aria-selected="false">매주</li>
+									<li role="option" tabindex="-1" aria-selected="false">은행영업일</li>
+								</ul>
+							</div>
+							<div class="item">
+								<ul class="select_list ty7" role="listbox">
+									<li role="option" tabindex="-1" class="active" aria-selected="true">1일~31일</li>
+									<li role="option" tabindex="-1" aria-selected="false">1일~31일</li>
+									<li role="option" tabindex="-1" aria-selected="false">1일~31일</li>
+									<li role="option" tabindex="-1" aria-selected="false">1일~31일</li>
+									<li role="option" tabindex="-1" aria-selected="false">1일~31일</li>
+									<li role="option" tabindex="-1" aria-selected="false">1일~31일</li>
+									<li role="option" tabindex="-1" aria-selected="false">1일~31일</li>
+									<li role="option" tabindex="-1" aria-selected="false">매월말</li>
+									<li role="option" tabindex="-1" aria-selected="false">매월말영업일</li>
+									<li role="option" tabindex="-1" aria-selected="false">매일</li>
+									<li role="option" tabindex="-1" aria-selected="false">월요일~금요일</li>
+									<li role="option" tabindex="-1" aria-selected="false">은행영업일</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bottom_popup_footer ty2">
+						<button type="button" class="btn s_5 c_1 r_2">취소</button>
+						<button type="button" class="btn s_5 c_3 r_2">선택</button>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_popup_wrap" id="datePic2">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">집금</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('datePic2');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="select_list_group">
+							<div class="item">
+								<ul class="select_list ty7" role="listbox">
+									<li role="option" tabindex="-1" class="active" aria-selected="true">매월</li>
+									<li role="option" tabindex="-1" aria-selected="false">매주</li>
+									<li role="option" tabindex="-1" aria-selected="false">매일</li>
+								</ul>
+							</div>
+							<div class="item">
+								<ul class="select_list ty7" role="listbox">
+									<li role="option" tabindex="-1" class="active" aria-selected="true">1일~31일</li>
+									<li role="option" tabindex="-1" aria-selected="false">월요일~금요일</li>
+									<li role="option" tabindex="-1" aria-selected="false">매일</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_popup_wrap always_full" id="popup2">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">예시 2</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+						blah~ blah~ blah~
+						<br />
+						<br />
+					</div>
+
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('popup2');">확인</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom_popup_wrap" id="no_header">
+				<div class="bottom_popup no_header">
+					<div class="bottom_popup_body">content</div>
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('popup1');">취소</button>
+						<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup1');">확인</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom_popup_wrap" id="popup1">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">예시 1</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="popup_msg_txt1">.popup_msg_txt1</div>
+						<div class="popup_msg_txt2">.popup_msg_txt2</div>
+						<div class="popup_msg_txt3">.popup_msg_txt3</div>
+						<div class="popup_msg_txt4">.popup_msg_txt4</div>
+						<div class="popup_msg_txt5">.popup_msg_txt5</div>
+					</div>
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('popup1');">취소</button>
+						<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup1');">확인</button>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_popup_wrap always_full" id="popup2">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">예시 2</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">blah~ blah~ blah~</div>
+
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('popup2');">확인</button>
+					</div>
+				</div>
+			</div>
+			<div class="full_popup_wrap" id="fullpopup1">전체팝업 컨텐츠용</div>
+			<div class="full_popup_wrap" id="fullpopup2">
+				<div class="content_wrap ty4">
+					<div class="group">
+						<div class="layout_error">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								오류
+								<div class="note_cmt" id="comErrorMsg"></div>
+							</div>
+							<div class="acd_wrap accodian_wrap ty2 etc2 active">
+								<div class="acd_cont accodian_cont">
+									<div class="inner" style="display: block">
+										<div class="bg_box ty4" id="comErrorCode">824606</div>
+									</div>
+								</div>
+								<div class="acd_head accodian_head active">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">더보기</span>
+										<span class="title sub">접기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1"><button type="button" class="btn s_5 c_3 r_2" id="btnComErrorConfirm" onclick="comLayerPopUtil.close('fullpopup2');">확인</button></div>
+					</div>
+				</div>
+			</div>
+			<div class="layer_popup_wrap" id="layerpopup1">
+				<div class="layer_popup">
+					<div class="layer_popup_body">
+						layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer
+						<br />
+						layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer
+						<br />
+						layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer
+						<br />
+						layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer
+						<br />
+						layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer
+						<br />
+						layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer
+						<br />
+						layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer layer
+						<br />
+						d
+					</div>
+					<!-- <div class="btn_area flex_none mt_40">
+            <button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('layerpopup1');">확인</button>
+          </div> -->
+					<div class="layer_popup_footer">
+						<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('layerpopup1');">확인</button>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_popup_wrap" id="popup6">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">조건설정</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup6');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="form_group">
+							<h3 class="input_label ty1">사용자</h3>
+							<div class="dropdown ty2" role="button" title="사용자 목록보기">
+								<div class="dropdown_text">전체</div>
+							</div>
+
+							<h3 class="input_label ty1">조회기간</h3>
+							<div class="search_group">
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">당일</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">전일</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">7일</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">15일</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+								</div>
+								<div class="comp_wrap from_to">
+									<div class="input">
+										<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+										<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+									</div>
+									<span>~</span>
+									<div class="input">
+										<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+										<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+									</div>
+								</div>
+							</div>
+							<h3 class="input_label ty1">구분</h3>
+							<div class="dropdown ty2" role="button" title="구분 목록보기">
+								<div class="dropdown_text">전체</div>
+							</div>
+
+							<h3 class="input_label ty1">채널</h3>
+							<div class="dropdown ty2" role="button" title="채널 목록보기">
+								<div class="dropdown_text">전체</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_3 r_2">조회</button>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_popup_wrap" id="popup7">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">조건설정</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup7');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="form_group">
+							<h3 class="input_label ty1">조회 구분</h3>
+							<div class="btn_area clickable ty1" role="radiogroup">
+								<button type="button" role="radio" aria-checked="true" class="active"><span class="text">카드번호</span></button>
+								<button type="button" role="radio" aria-checked="false"><span class="text">사업장번호</span></button>
+							</div>
+
+							<h3 class="input_label ty1">카드선택</h3>
+							<div class="dropdown ty2" role="button" title="카드선택 목록보기">
+								<div class="dropdown_text">1234-****-9999-1234 카드별명</div>
+							</div>
+
+							<h3 class="input_label ty1">사업장번호</h3>
+							<div class="dropdown ty2" role="button" title="사업장번호 목록보기">
+								<div class="dropdown_text">123-45-67890</div>
+							</div>
+
+							<h3 class="input_label ty1">조회 구분2</h3>
+							<div class="btn_area clickable ty1" role="radiogroup">
+								<button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+								<button type="button" role="radio" aria-checked="false"><span class="text">일시불</span></button>
+								<button type="button" role="radio" aria-checked="false"><span class="text">할부</span></button>
+								<button type="button" role="radio" aria-checked="false"><span class="text">해외</span></button>
+							</div>
+
+							<h3 class="input_label ty1">조회기간</h3>
+							<div class="search_group">
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="half active"><span class="text">당일</span></button>
+									<button type="button" role="radio" aria-checked="false" class="half"><span class="text">당월</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">1주일</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">3개월</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">6개월</span></button>
+								</div>
+								<div class="comp_wrap from_to">
+									<div class="input">
+										<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+										<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+									</div>
+									<span>~</span>
+									<div class="input">
+										<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+										<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_3 r_2">조회</button>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_popup_wrap" id="popup3">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">달력</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup3');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+							<div class="calendar_select_wrap">
+								<div class="calendar_select">
+									<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+										<span class="t_hidden">이전 년도</span>
+									</button>
+									<span>
+										<em id="year">2024</em>
+										년
+									</span>
+									<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+										<span class="t_hidden">다음 년도</span>
+									</button>
+								</div>
+								<div class="calendar_select">
+									<button id="preMon" type="button" class="btn_prev" title="이전 달">
+										<span class="t_hidden">이전 달</span>
+									</button>
+									<span>
+										<em id="mon">5</em>
+										월
+									</span>
+									<button id="nextMon" type="button" class="btn_next" title="다음 달">
+										<span class="t_hidden">다음 달</span>
+									</button>
+								</div>
+							</div>
+							<div class="wrap_calendar">
+								<table class="calendar weekday">
+									<caption class="hidden">상세기간 달력</caption>
+									<colgroup>
+										<col style="width: 14.28%" />
+										<col style="width: 14.28%" />
+										<col style="width: 14.28%" />
+										<col style="width: 14.28%" />
+										<col style="width: 14.28%" />
+										<col style="width: 14.28%" />
+										<col style="width: 14.28%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" class="sun">일</th>
+											<th scope="col">월</th>
+											<th scope="col">화</th>
+											<th scope="col">수</th>
+											<th scope="col">목</th>
+											<th scope="col">금</th>
+											<th scope="col" class="sat">토</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="btn_prev">
+												<em class="hidden">이전달</em>
+												28
+											</td>
+											<td class="btn_prev">
+												<em class="hidden">이전달</em>
+												29
+											</td>
+											<td class="btn_prev">
+												<em class="hidden">이전달</em>
+												30
+											</td>
+											<td>
+												<button type="button">1</button>
+											</td>
+											<td>
+												<button type="button">2</button>
+											</td>
+											<td>
+												<button type="button">3</button>
+											</td>
+											<td class="sat">
+												<em class="hidden">휴일</em>
+												<button type="button">4</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="sun">
+												<em class="hidden">휴일</em>
+												<button type="button">5</button>
+											</td>
+											<td>
+												<button type="button">6</button>
+											</td>
+											<td>
+												<button type="button">7</button>
+											</td>
+											<td>
+												<button type="button">8</button>
+											</td>
+											<td>
+												<button type="button">9</button>
+											</td>
+											<td>
+												<button type="button">10</button>
+											</td>
+											<td class="sat">
+												<em class="hidden">휴일</em>
+												<button type="button">11</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="sun">
+												<em class="hidden">휴일</em>
+												<button type="button">12</button>
+											</td>
+											<td>
+												<button type="button">13</button>
+											</td>
+											<td>
+												<button type="button">14</button>
+											</td>
+											<td>
+												<button type="button">15</button>
+											</td>
+											<td>
+												<button type="button">16</button>
+											</td>
+											<td>
+												<button type="button">17</button>
+											</td>
+											<td class="sat">
+												<em class="hidden">휴일</em>
+												<button type="button">18</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="sun">
+												<em class="hidden">휴일</em>
+												<button type="button">19</button>
+											</td>
+											<td>
+												<button type="button">20</button>
+											</td>
+											<td class="today">
+												<button type="button" title="오늘 날짜">21</button>
+											</td>
+											<td>
+												<button type="button">22</button>
+											</td>
+											<td class="on term">
+												<button type="button" title="선택된 날짜">23</button>
+											</td>
+											<td class="off">
+												<button type="button">24</button>
+											</td>
+											<td class="off">
+												<em class="hidden">휴일</em>
+												<button type="button">25</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="off">
+												<em class="hidden">휴일</em>
+												<button type="button">26</button>
+											</td>
+											<td class="off">
+												<button type="button">27</button>
+											</td>
+											<td class="off">
+												<button type="button">28</button>
+											</td>
+											<td class="off">
+												<button type="button">29</button>
+											</td>
+											<td class="off">
+												<button type="button">30</button>
+											</td>
+											<td class="off">
+												<button type="button">31</button>
+											</td>
+											<td class="btn_next">
+												<em class="hidden">다음달</em>
+												1
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_popup_wrap" id="popup4">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">출금계좌 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup4');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty1" role="listbox">
+							<li role="option" tabindex="-1" class="active" aria-selected="true">000-000000-00-000 별명노출 000-000000-00-000 별명노출 000-000000-00-000 별명노출</li>
+							<li role="option" tabindex="-1" aria-selected="false">000-000000-00-000 별명노출</li>
+							<li role="option" tabindex="-1" aria-selected="false">000-000000-00-000 별명노출 000-000000-00-000 별명노출 000-000000-00-000 별명노출</li>
+							<li role="option" tabindex="-1" aria-selected="false">000-000000-00-000 별명노출</li>
+							<li role="option" tabindex="-1" aria-selected="false">000-000000-00-000 별명노출</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- 핀테크사 -->
+			<div class="bottom_popup_wrap" id="pin">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">기관 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('pin');">닫기</button>
+					</div>
+					<div class="bottom_popup_body agency_select_popup">
+						<div class="agency_select_wrap">
+							<div class="agency_select_wrap_title">핀테크사</div>
+							<ul class="agency_select_list" role="listbox">
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F02"></div>
+									<span class="name">핀샷</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F03"></div>
+									<span class="name">글로벌머니 익스프레스</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F04"></div>
+									<span class="name">한패스</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F05"></div>
+									<span class="name">트래블월렛</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F06"></div>
+									<span class="name">비바리퍼블리카</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F07"></div>
+									<span class="name">핀크</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F08"></div>
+									<span class="name">디셈버앤컴퍼니</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F09"></div>
+									<span class="name">카카오페이</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F10"></div>
+									<span class="name">헥토파이낸셜</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F11"></div>
+									<span class="name">뱅크샐러드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F12"></div>
+									<span class="name">쿠콘</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F13"></div>
+									<span class="name">갤럭시아 머니트리</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F14"></div>
+									<span class="name">코나아이</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F16"></div>
+									<span class="name">네이버파이낸셜</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F17"></div>
+									<span class="name">에스에스지닷컴</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F18"></div>
+									<span class="name">티머니</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F19"></div>
+									<span class="name">페이코</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F20"></div>
+									<span class="name">십일번가</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F22"></div>
+									<span class="name">아이엠유페이</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F24"></div>
+									<span class="name">오케이인베스트먼트파트너스</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F25"></div>
+									<span class="name">나이스정보통신</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F28"></div>
+									<span class="name">다날</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F33"></div>
+									<span class="name">카카오모빌리티</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F27"></div>
+									<span class="name">차이코퍼레이션</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F37"></div>
+									<span class="name">한국조폐공사</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_pin_logo ico_bank_F46"></div>
+									<span class="name">씨제이올리브네트웍스</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // 핀테크사 -->
+
+			<!-- 카드사 -->
+			<div class="bottom_popup_wrap" id="bcc">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">기관 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('bcc');">닫기</button>
+					</div>
+					<div class="bottom_popup_body agency_select_popup">
+						<div class="agency_select_wrap">
+							<div class="agency_select_wrap_title">카드사</div>
+							<ul class="agency_select_list" role="listbox">
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo"></div>
+									<span class="name">기본</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_003003"></div>
+									<span class="name">기업은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_041041"></div>
+									<span class="name">우리카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_361023"></div>
+									<span class="name">비씨카드(SC제일은행)</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_361031"></div>
+									<span class="name">비씨카드(iM[구 대구은행])</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_361032"></div>
+									<span class="name">비씨카드(부산은행)</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_361039"></div>
+									<span class="name">비씨카드(경남은행)</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_361361"></div>
+									<span class="name">비씨카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_365365"></div>
+									<span class="name">삼성카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_366366"></div>
+									<span class="name">신한카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_367367"></div>
+									<span class="name">현대카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_368368"></div>
+									<span class="name">롯데카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_027027"></div>
+									<span class="name">씨티카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_374374"></div>
+									<span class="name">하나카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_381381"></div>
+									<span class="name">국민카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_381090"></div>
+									<span class="name">국민카드(카카오뱅크)</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo"></div>
+									<span class="name">오픈카드</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_011011"></div>
+									<span class="name">농협은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_002002"></div>
+									<span class="name">산업은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_007007"></div>
+									<span class="name">수협은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_034034"></div>
+									<span class="name">광주은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_035035"></div>
+									<span class="name">제주은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_037037"></div>
+									<span class="name">전북은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_089089"></div>
+									<span class="name">케이뱅크</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_071071"></div>
+									<span class="name">우체국</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_092092"></div>
+									<span class="name">토스뱅크</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_card_logo ico_bank_361027"></div>
+									<span class="name">비씨카드(씨티은행)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // 카드사 -->
+
+			<!-- 은행 선택 팝업 - 구버젼 -->
+			<div class="bottom_popup_wrap" id="popup5_old">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">은행</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup5_old');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty2" role="listbox">
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">한국은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_002"></div>
+								<span class="name">산업은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_003"></div>
+								<span class="name">기업은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_004"></div>
+								<span class="name">국민은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_007"></div>
+								<span class="name">수협</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">수출입은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_011"></div>
+								<span class="name">농협은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">지역농축협</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_020"></div>
+								<span class="name">우리은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_023"></div>
+								<span class="name">SC은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_027"></div>
+								<span class="name">한국씨티은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_031"></div>
+								<span class="name">대구은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">부산은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_034"></div>
+								<span class="name">광주은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_035"></div>
+								<span class="name">제주은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_037"></div>
+								<span class="name">전북은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_039"></div>
+								<span class="name">경남은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_045"></div>
+								<span class="name">새마을금고</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_048"></div>
+								<span class="name">신협</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_050"></div>
+								<span class="name">저축은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_054"></div>
+								<span class="name">HSBC</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_055"></div>
+								<span class="name">도이치</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">ABN암로은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_057"></div>
+								<span class="name">JP모간</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_060"></div>
+								<span class="name">BOA</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_061"></div>
+								<span class="name">BNP파리바</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_062"></div>
+								<span class="name">중국공상은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_063"></div>
+								<span class="name">중국은행서울지점</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_064"></div>
+								<span class="name">산림조합</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_067"></div>
+								<span class="name">중국건설은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_071"></div>
+								<span class="name">우체국</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_081"></div>
+								<span class="name">하나은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_088"></div>
+								<span class="name">신한은행</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_089"></div>
+								<span class="name">케이뱅크</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_090"></div>
+								<span class="name">카카오뱅크</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_092"></div>
+								<span class="name">토스뱅크</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">기업</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_209"></div>
+								<span class="name">유안타증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_218"></div>
+								<span class="name">KB증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_221"></div>
+								<span class="name">상상인증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_224"></div>
+								<span class="name">BNK투자증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_225"></div>
+								<span class="name">IBK투자증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_227"></div>
+								<span class="name">다올투자증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_238"></div>
+								<span class="name">미래에셋</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_240"></div>
+								<span class="name">삼성증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_243"></div>
+								<span class="name">한국투자</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">BK투자증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_261"></div>
+								<span class="name">교보증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_262"></div>
+								<span class="name">하이투자</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_263"></div>
+								<span class="name">현대차증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_264"></div>
+								<span class="name">키움증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">LS증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_266"></div>
+								<span class="name">SK증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_267"></div>
+								<span class="name">대신증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">솔로몬증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_269"></div>
+								<span class="name">한화증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_270"></div>
+								<span class="name">하나증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_271"></div>
+								<span class="name">토스증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_278"></div>
+								<span class="name">신한투자증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_279"></div>
+								<span class="name">DB금융투자</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_280"></div>
+								<span class="name">유진투자증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_287"></div>
+								<span class="name">메리츠증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_288"></div>
+								<span class="name">카카오페이증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_289"></div>
+								<span class="name">NH농협증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_290"></div>
+								<span class="name">부국증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_291"></div>
+								<span class="name">신영증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">에이프투자증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_294"></div>
+								<span class="name">한국포스증권</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">BANK OF Ne</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_C4"></div>
+								<span class="name">이베스트증권2</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_C5"></div>
+								<span class="name">이베스트증권2</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // 은행 선택 팝업 - 구버젼 -->
+
+			<!-- 은행 선택 팝업 -->
+			<div class="bottom_popup_wrap" id="popup5">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">기관 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup5');">닫기</button>
+					</div>
+					<div class="bottom_popup_body agency_select_popup">
+						<div class="agency_select_wrap">
+							<div class="agency_select_wrap_title">은행</div>
+							<ul class="agency_select_list" role="listbox">
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000"></div>
+									<span class="name">기본</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_003"></div>
+									<span class="name">기업은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_004"></div>
+									<span class="name">국민은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_020"></div>
+									<span class="name">우리은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_088"></div>
+									<span class="name">신한은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_081"></div>
+									<span class="name">하나은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_011"></div>
+									<span class="name">농협은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_012"></div>
+									<span class="name">지역농축협</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_023"></div>
+									<span class="name">SC은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_027"></div>
+									<span class="name">한국씨티은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_071"></div>
+									<span class="name">우체국</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_039"></div>
+									<span class="name">경남은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_034"></div>
+									<span class="name">광주은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_031"></div>
+									<span class="name">iM[구 대구은행]</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_055"></div>
+									<span class="name">도이치</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_032"></div>
+									<span class="name">부산은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_064"></div>
+									<span class="name">산림조합</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_002"></div>
+									<span class="name">산업은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_050"></div>
+									<span class="name">저축은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_045"></div>
+									<span class="name">새마을금고</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_007"></div>
+									<span class="name">수협</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_048"></div>
+									<span class="name">신협</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_037"></div>
+									<span class="name">전북은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_035"></div>
+									<span class="name">제주은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_060"></div>
+									<span class="name">BOA</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_054"></div>
+									<span class="name">HSBC</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_057"></div>
+									<span class="name">JP모간</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_062"></div>
+									<span class="name">중국공상은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_061"></div>
+									<span class="name">BNP파리바</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_067"></div>
+									<span class="name">중국건설은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_063"></div>
+									<span class="name">중국은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_090"></div>
+									<span class="name">카카오뱅크</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_089"></div>
+									<span class="name">케이뱅크</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_092"></div>
+									<span class="name">토스뱅크</span>
+								</li>
+
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0B9"></div>
+									<span class="name">AMEX</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0A4"></div>
+									<span class="name">MELLAT</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0C4"></div>
+									<span class="name">중국은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0B7"></div>
+									<span class="name">교통은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0C2"></div>
+									<span class="name">BANK OF NEW YORK</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_059"></div>
+									<span class="name">MUFG은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0B8"></div>
+									<span class="name">BARCLAYS</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0A8"></div>
+									<span class="name">BNP PARIBAS</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0A6"></div>
+									<span class="name">CALYON</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0C6"></div>
+									<span class="name">건설은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0A3"></div>
+									<span class="name">인도</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0C5"></div>
+									<span class="name">공상은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0B6"></div>
+									<span class="name">ING</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0C1"></div>
+									<span class="name">JP MORGAN</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0A1"></div>
+									<span class="name">미즈호</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0C3"></div>
+									<span class="name">PAKISTAN</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0B5"></div>
+									<span class="name">OCBC</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0A7"></div>
+									<span class="name">SOCIETE GENERALE</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0A2"></div>
+									<span class="name">스미토모미쯔이</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_008"></div>
+									<span class="name">수출입은행</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0A5"></div>
+									<span class="name">UBAF</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_0A9"></div>
+									<span class="name">UBS</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_056"></div>
+									<span class="name">ABN암로은행</span>
+								</li>
+							</ul>
+
+							<div class="agency_select_wrap_title">국세/지방세</div>
+							<ul class="agency_select_list" role="listbox">
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_government"></div>
+									<span class="name">국세</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_government"></div>
+									<span class="name">국고금</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_government"></div>
+									<span class="name">지방세입</span>
+								</li>
+							</ul>
+
+							<div class="agency_select_wrap_title">증권사</div>
+							<ul class="agency_select_list" role="listbox">
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_261"></div>
+									<span class="name">교보증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_267"></div>
+									<span class="name">대신증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_238"></div>
+									<span class="name">미래에셋</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_279"></div>
+									<span class="name">DB금융투자</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_209"></div>
+									<span class="name">유안타증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_287"></div>
+									<span class="name">메리츠증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_290"></div>
+									<span class="name">부국증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_240"></div>
+									<span class="name">삼성증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_291"></div>
+									<span class="name">신영증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_278"></div>
+									<span class="name">신한투자증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_247"></div>
+									<span class="name">NH투자증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_280"></div>
+									<span class="name">유진투자증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_265"></div>
+									<span class="name">LS증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_264"></div>
+									<span class="name">키움증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_270"></div>
+									<span class="name">하나증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_262"></div>
+									<span class="name">아이엠증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_243"></div>
+									<span class="name">한국투자</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_269"></div>
+									<span class="name">한화투자증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_218"></div>
+									<span class="name">KB증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_263"></div>
+									<span class="name">현대차증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_292"></div>
+									<span class="name">케이프투자증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_289"></div>
+									<span class="name">NH농협증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_266"></div>
+									<span class="name">SK증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_288"></div>
+									<span class="name">카카오페이증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_224"></div>
+									<span class="name">BNK투자증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_225"></div>
+									<span class="name">IBK투자증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_227"></div>
+									<span class="name">다올투자증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_221"></div>
+									<span class="name">상상인증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_294"></div>
+									<span class="name">우리투자증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_271"></div>
+									<span class="name">토스증권</span>
+								</li>
+								<li role="option" tabindex="-1">
+									<div class="ico_box ty1 ico_bank_000 ico_bank_C4"></div>
+									<span class="name">이베스트투자증권</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // 은행 선택 팝업 -->
+
+			<!-- 선택 목록 기본형 -->
+			<div class="bottom_popup_wrap" id="optlist" title="타이틀입력">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">타이틀입력</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty1" role="listbox">
+							<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+							<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+							<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+							<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // 선택 목록 기본형 -->
+
+			<div class="bottom_popup_wrap" id="cardlist" title="카드 선택">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">카드 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('cardlist');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty3" role="listbox">
+							<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+								<div class="item">
+									<div class="item_top">참! 좋은 Biz카드(대한항공)</div>
+									<div class="item_bottom">4140-****-****-3915</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false" aria-disabled="true">
+								<div class="item">
+									<div class="item_top">기업 그린카드(신용)</div>
+									<div class="item_bottom">4140-****-****-4996</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">기업 그린카드(신용)</div>
+									<div class="item_bottom">4140-****-****-5941</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">기업 그린카드(신용)</div>
+									<div class="item_bottom">4140-****-****-1923</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">기업 그린카드(신용)</div>
+									<div class="item_bottom">4140-****-****-1931</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">기업 그린카드(신용)</div>
+									<div class="item_bottom">4140-****-****-1949</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">기업 그린카드(신용)</div>
+									<div class="item_bottom">4140-****-****-1956</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_popup_wrap" id="placelist" title="사업장 선택">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">사업장 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('placelist');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty3" role="listbox">
+							<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+								<div class="item">
+									<div class="item_top">00001 담초코(민)</div>
+									<div class="item_bottom">9430-****-****-5970</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false" aria-disabled="true">
+								<div class="item">
+									<div class="item_top">00001 담초코(민)</div>
+									<div class="item_bottom">9430-****-****-7926</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">00001 담초코(민)</div>
+									<div class="item_bottom">9430-****-****-2948</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">00001 담초코(민)</div>
+									<div class="item_bottom">9430-****-****-8940</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 청구월/일 목록형 -->
+			<div class="bottom_popup_wrap" id="monthlist" title="청구월 목록">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">청구월 목록</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('monthlist');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty1" role="listbox">
+							<li role="option" tabindex="-1" class="active" aria-selected="true">2024-07</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-06</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-05</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-04</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-03</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-02</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-01</li>
+							<li role="option" tabindex="-1" aria-selected="false">2023-12</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom_popup_wrap" id="datelist" title="청구일 선택">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">청구일 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('datelist');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty1" role="listbox">
+							<li role="option" tabindex="-1" class="active" aria-selected="true">2024-07-23</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-06-23</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-05-23</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-04-23</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-03-23</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-02-23</li>
+							<li role="option" tabindex="-1" aria-selected="false">2024-01-23</li>
+							<li role="option" tabindex="-1" aria-selected="false">2023-12-23</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // 구월/일 목록형 -->
+
+			<!-- s: 통신사 선택 팝업 -->
+			<div class="bottom_popup_wrap" id="telecom">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">통신사 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('telecom');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty1" role="listbox">
+							<li role="option" tabindex="-1" aria-selected="false">SKT</li>
+							<li role="option" tabindex="-1" aria-selected="false">KT</li>
+							<li role="option" tabindex="-1" aria-selected="false">LGU+</li>
+							<li role="option" tabindex="-1" aria-selected="false">SKT (알뜰폰)</li>
+							<li role="option" tabindex="-1" aria-selected="false">KT (알뜰폰)</li>
+							<li role="option" tabindex="-1" aria-selected="false">LGU+ (알뜰폰)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- e: 통신사 선택 팝업 -->
+
+			<!-- s: 공유하기 선택 팝업 -->
+			<div class="bottom_popup_wrap" id="share">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">공유하기</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('share');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="select_cert">
+							<button type="button" class="btn btn_cert btn_cert_sms"><span class="text">SMS</span></button>
+							<button type="button" class="btn btn_cert btn_cert_kakao"><span class="text">카카오톡</span></button>
+							<button type="button" class="btn btn_cert btn_cert_fax"><span class="text">FAX</span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: 공유하기 선택 팝업 -->
+
+			<div class="bottom_popup_wrap" id="cert">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">본인인증 방법 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('cert');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="select_cert">
+							<button type="button" class="btn btn_cert btn_cert_phone"><span class="text">휴대폰</span></button>
+							<button type="button" class="btn btn_cert btn_cert_lock"><span class="text">공동인증서</span></button>
+							<button type="button" class="btn btn_cert btn_cert_cloud"><span class="text">금융인증서</span></button>
+						</div>
+					</div>
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+					</div>
+				</div>
+			</div>
+			<!-- 계좌 선택 팝업 -->
+			<div class="bottom_popup_wrap" id="popupAccount">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">계좌선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+					</div>
+
+					<div class="bottom_popup_body">
+						<ul class="select_list ty3" role="listbox">
+							<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+								<div class="item">
+									<div class="item_top">
+										<div class="badge_cont">
+											<span class="badge ty3 colorB5">개인</span>
+											<div class="item_top_text">별칭</div>
+										</div>
+									</div>
+									<div class="item_bottom">
+										<div class="item_bottom_text">000-000000-00-000</div>
+									</div>
+								</div>
+							</li>
+							<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">
+										<div class="badge_cont">
+											<span class="badge ty3 colorB5">개인</span>
+										</div>
+									</div>
+									<div class="item_bottom">
+										<div class="item_bottom_text">000-000000-00-000</div>
+									</div>
+								</div>
+							</li>
+							<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">
+										<div class="badge_cont">
+											<span class="badge ty3 colorETC11">기업</span>
+										</div>
+									</div>
+									<div class="item_bottom">
+										<div class="item_bottom_text">000-000000-00-000</div>
+									</div>
+								</div>
+							</li>
+							<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">
+										<div class="item_top_text">별칭</div>
+									</div>
+									<div class="item_bottom">
+										<div class="item_bottom_text">000-000000-00-000</div>
+									</div>
+								</div>
+							</li>
+							<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_bottom">
+										<div class="item_bottom_text">000-000000-00-000</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // 계좌 선택 팝업 -->
+
+			<!-- 계좌 선택 팝업 -->
+			<div class="bottom_popup_wrap" id="popupAccount_old">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">계좌선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount_old');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty4" role="listbox">
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">
+									<span class="bank_name">한국</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_002"></div>
+								<span class="name">
+									<span class="bank_name">산업</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_004"></div>
+								<span class="name">
+									<span class="bank_name">국민</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_007"></div>
+								<span class="name">
+									<span class="bank_name">수협</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">
+									<span class="bank_name">수출입</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_011"></div>
+								<span class="name">
+									<span class="bank_name">농협</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">
+									<span class="bank_name">지역농축협</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_020"></div>
+								<span class="name">
+									<span class="bank_name">우리</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_023"></div>
+								<span class="name">
+									<span class="bank_name">SC</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_027"></div>
+								<span class="name">
+									<span class="bank_name">신한씨티</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_031"></div>
+								<span class="name">
+									<span class="bank_name">대구</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">
+									<span class="bank_name">부산</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_034"></div>
+								<span class="name">
+									<span class="bank_name">광주</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_035"></div>
+								<span class="name">
+									<span class="bank_name">제주</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_037"></div>
+								<span class="name">
+									<span class="bank_name">전북</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_039"></div>
+								<span class="name">
+									<span class="bank_name">경남</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_045"></div>
+								<span class="name">
+									<span class="bank_name">새마을금고</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_048"></div>
+								<span class="name">
+									<span class="bank_name">신협</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_050"></div>
+								<span class="name">
+									<span class="bank_name">저축</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_054"></div>
+								<span class="name">
+									<span class="bank_name">HSBC</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_055"></div>
+								<span class="name">
+									<span class="bank_name">도이치</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_000"></div>
+								<span class="name">
+									<span class="bank_name">ABN암로은행</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_057"></div>
+								<span class="name">
+									<span class="bank_name">JP모간</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+							<li role="option" tabindex="-1">
+								<div class="ico_box ty1 ico_bank_060"></div>
+								<span class="name">
+									<span class="bank_name">BOA</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // 계좌 선택 팝업 -->
+
+			<!-- 은행선택 탭형태 -->
+			<!-- banktab -->
+			<div class="bottom_popup_wrap" id="banktab">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">ㅇㅇㅇㅇ 계좌선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('banktab');">닫기</button>
+					</div>
+					<div class="bottom_popup_body tab_in">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="true" class="active">기업은행</button>
+							<button type="button" role="tab" aria-selected="false">다른은행</button>
+						</div>
+
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true">
+							<ul class="select_list ty3 mt_24" role="listbox">
+								<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<span class="badge ty3 colorB5">개인</span>
+											<div class="item_top_text">개인사업자주거래우대통장</div>
+											<span class="main_trans">주거래 통장</span>
+										</div>
+
+										<div class="acount_item ty5">
+											<div class="ico_box ty5 ico_bank_003"></div>
+											<div class="item">
+												<div class="item_top">
+													<span class="bank_name">기업은행</span>
+													<span class="ac_num">000-000000-00-000</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<span class="badge ty3 colorETC11">기업</span>
+
+											<div class="item_top_text">개인사업자주거래우대통장</div>
+										</div>
+
+										<div class="acount_item ty5">
+											<div class="ico_box ty5 ico_bank_003"></div>
+											<div class="item">
+												<div class="item_top">
+													<span class="bank_name">기업은행</span>
+													<span class="ac_num">000-000000-00-000</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<span class="badge ty3 colorETC11">기업</span>
+
+											<div class="item_top_text">개인사업자주거래우대통장</div>
+										</div>
+
+										<div class="acount_item ty5">
+											<div class="ico_box ty5 ico_bank_003"></div>
+											<div class="item">
+												<div class="item_top">
+													<span class="bank_name">기업은행</span>
+													<span class="ac_num">000-000000-00-000</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="tab_cont" role="tabpanel" aria-expanded="true">
+							<ul class="select_list ty3 mt_24" role="listbox">
+								<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">개인사업자주거래우대통장</div>
+										</div>
+
+										<div class="acount_item ty5">
+											<div class="ico_box ty5 ico_bank_081"></div>
+											<div class="item">
+												<div class="item_top">
+													<span class="bank_name">하나은행</span>
+													<span class="ac_num">000-000000-00-000</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="item_top skeleton">
+											<div class="item_top_text">12,000,123원</div>
+										</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">개인사업자주거래우대통장</div>
+										</div>
+
+										<div class="acount_item ty5">
+											<div class="ico_box ty5 ico_bank_090"></div>
+											<div class="item">
+												<div class="item_top">
+													<span class="bank_name">카카오은행</span>
+													<span class="ac_num">0000-00-0000000</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="item_top">
+											<div class="item_top_text">12,000,123원</div>
+										</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">개인사업자주거래우대통장</div>
+										</div>
+
+										<div class="acount_item ty5">
+											<div class="ico_box ty5 ico_bank_088"></div>
+											<div class="item">
+												<div class="item_top">
+													<span class="bank_name">신한</span>
+													<span class="ac_num">0000-00-0000000</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<!-- s: 오픈뱅킹 가입하기 -->
+							<!-- 
+              <div class="no_result_msg">
+                <div class="msg">오픈뱅킹 가입 후 이용이 가능합니다.</div>
+                <div class="btn_area center">
+                  <button type="button" class="btn s_3 c_1 r_3 join"><span class="text">오픈뱅킹 가입하기</span></button>
+                </div>
+                <div class="ps_box">
+                  보이스피싱 피해 방지를 위해 오픈뱅킹 최초 계좌 등록일 포함 3일간 이체 거래가 제한됩니다
+                </div>
+              </div>
+              -->
+							<!-- e: 오픈뱅킹 가입하기 -->
+
+							<!-- s: 다른은행 계좌 등록 -->
+							<!-- 
+              <div class="no_result_msg">
+                <div class="msg">다른 은행 계좌를 등록하셔야 이용이 가능합니다</div>
+                <div class="btn_area center">
+                  <button type="button" class="btn plus"><span class="text">다른은행 계좌 등록</span></button>
+                </div>
+                <div class="ps_box">
+                  보이스피싱 피해 방지를 위해 오픈뱅킹 최초 계좌 등록일 포함 3일간 이체 거래가 제한됩니다
+                </div>
+              </div>
+              -->
+							<!-- e: 다른은행 계좌 등록 -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // 은행선택 탭형태 -->
+
+			<!-- 단일 동의 선택 팝업 -->
+			<div class="bottom_popup_wrap" id="single_agree">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">정보조회 위임 동의</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('single_agree');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="label label_box">
+							<input type="checkbox" name="" id="ag01" />
+							<label for="ag01" class="checkbox">
+								<i></i>
+								<span>고객정보조회 위임 동의</span>
+							</label>
+						</div>
+					</div>
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+					</div>
+				</div>
+			</div>
+			<!-- // 단일 동의 선택 팝업 -->
+
+			<!-- s: 결재선 조회 팝업-->
+			<div class="bottom_popup_wrap" id="popup8">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">결재선조회</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup8');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="space_list_ty1">
+							<li>
+								<div class="card_item">
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="txt_ty1">2024.06.04 13:22:34</span>
+											</span>
+											<span class="line_right">
+												<span class="txt_ty2">등록(완료)</span>
+											</span>
+										</p>
+									</div>
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="data_case">
+													<span class="badge_cont">
+														<span class="badge ty3 colorB5">등록자</span>
+													</span>
+													<span class="data_case_num">01.</span>
+													<span class="data_case_text">홍길동 (9231316)</span>
+												</span>
+											</span>
+										</p>
+									</div>
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="data_case">
+													<span class="badge_cont">
+														<span class="badge ty3 colorD3">대직자</span>
+													</span>
+													<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+												</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="card_item">
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="txt_ty1">2024.06.04 13:22:34</span>
+											</span>
+											<span class="line_right">
+												<span class="txt_ty2">결재(대기)</span>
+											</span>
+										</p>
+									</div>
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="data_case">
+													<span class="badge_cont">
+														<span class="badge ty3 colorB5">등록자</span>
+													</span>
+													<span class="data_case_num">01.</span>
+													<span class="data_case_text">홍길동 (9231316)</span>
+												</span>
+											</span>
+										</p>
+									</div>
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="data_case">
+													<span class="badge_cont">
+														<span class="badge ty3 colorD3">대직자</span>
+													</span>
+													<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+												</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="card_item">
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="txt_ty1">2024.06.04 13:22:34</span>
+											</span>
+											<span class="line_right">
+												<span class="txt_ty2">결재(완료)</span>
+											</span>
+										</p>
+									</div>
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="data_case">
+													<span class="badge_cont">
+														<span class="badge ty3 colorB5">등록자</span>
+													</span>
+													<span class="data_case_num">01.</span>
+													<span class="data_case_text">홍길동 (9231316)</span>
+												</span>
+											</span>
+										</p>
+									</div>
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="data_case">
+													<span class="badge_cont">
+														<span class="badge ty3 colorD3">대직자</span>
+													</span>
+													<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+												</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="card_item">
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="txt_ty1">2024.06.04 13:22:34</span>
+											</span>
+											<span class="line_right">
+												<span class="txt_ty2">실행(대기)</span>
+											</span>
+										</p>
+									</div>
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="data_case">
+													<span class="badge_cont">
+														<span class="badge ty3 colorB5">등록자</span>
+													</span>
+													<span class="data_case_num">01.</span>
+													<span class="data_case_text">홍길동 (9231316)</span>
+												</span>
+											</span>
+										</p>
+									</div>
+									<div class="card_item_sub_data">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="data_case">
+													<span class="badge_cont">
+														<span class="badge ty3 colorD3">대직자</span>
+													</span>
+													<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+												</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_3 r_2">확인</button>
+					</div>
+				</div>
+			</div>
+			<!-- e: 결재선 조회 팝업 -->
+
+			<!-- s: 회차번호 선택 팝업 -->
+			<div class="bottom_popup_wrap" id="countSelect">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">회차 번호 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('countSelect');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="round_select_head">
+							<div class="content_head_left">회차 번호</div>
+							<div class="content_head_right">계약금액</div>
+						</div>
+
+						<ul class="round_select_list" role="listbox">
+							<li role="option" tabindex="-1" class="item active" aria-selected="true">
+								<div class="item_left">1</div>
+								<div class="item_right">JPY 0.00</div>
+							</li>
+							<li role="option" tabindex="-1" class="item" aria-selected="false">
+								<div class="item_left">2</div>
+								<div class="item_right">EUR 0.00</div>
+							</li>
+							<li role="option" tabindex="-1" class="item" aria-selected="false">
+								<div class="item_left">3</div>
+								<div class="item_right">CNY 0.00</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- e: 회차번호 선택 팝업 -->
+
+			<!-- 통화 선택 팝업 -->
+			<div class="bottom_popup_wrap" id="currency" title="통화 선택">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">통화 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('currency');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty4 currency_list" role="listbox">
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_usd"></div>
+								<strong class="eng">USD</strong>
+								<span class="kor">(미국 달러)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_jpy"></div>
+								<strong class="eng">JPY</strong>
+								<span class="kor">(일본 엔)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_eur"></div>
+								<strong class="eng">EUR</strong>
+								<span class="kor">(유로)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_gbp"></div>
+								<strong class="eng">GBP</strong>
+								<span class="kor">(영국 파운드)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_aud"></div>
+								<strong class="eng">AUD</strong>
+								<span class="kor">(호주 달러)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_nzd"></div>
+								<strong class="eng">NZD</strong>
+								<span class="kor">(뉴질랜드 달러)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_chf"></div>
+								<strong class="eng">CHF</strong>
+								<span class="kor">(스위스 프랑)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_cad"></div>
+								<strong class="eng">CAD</strong>
+								<span class="kor">(캐나다 달러)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_nok"></div>
+								<strong class="eng">NOK</strong>
+								<span class="kor">(노르웨이 크로네)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_sek"></div>
+								<strong class="eng">SEK</strong>
+								<span class="kor">(스웨덴 크로나)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_hkd"></div>
+								<strong class="eng">HKD</strong>
+								<span class="kor">(홍콩 달러)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_sgd"></div>
+								<strong class="eng">SGD</strong>
+								<span class="kor">(싱가폴 달러)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_thb"></div>
+								<strong class="eng">THB</strong>
+								<span class="kor">(태국 바트)</span>
+							</li>
+							<li role="option" tabindex="-1" class="item">
+								<div class="ico_box ty1 flag_cny"></div>
+								<strong class="eng">CNY</strong>
+								<span class="kor">(중국 위안)</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // 통화 선택 팝업 -->
+
+			<!-- s: 이메일 팝업 -->
+			<div class="bottom_popup_wrap" id="emailOptList" title="도메인 선택">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">도메인 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('emailOptList');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty1" role="listbox">
+							<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+							<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+							<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+							<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- e: 이메일 팝업 -->
+
+			<div class="bottom_popup_wrap" id="agpop">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">약관동의</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('agpop');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<p class="txt_style ty10">내 계좌 모으기 서비스 가입을 위해 약관에 동의해주세요</p>
+						<div class="chk_group_wrap">
+							<div class="agree_check">
+								<div class="acd_wrap accodian_wrap ty1">
+									<div class="acd_head accodian_head check_as_all active chk_middle">
+										<div class="label">
+											<input type="checkbox" name="" id="ag_chk00" class="chk_point" />
+											<label for="ag_chk00" class="checkbox">
+												<i></i>
+												<span>
+													약관 모두 동의
+
+													<span class="ess_mark">필수</span>
+												</span>
+											</label>
+										</div>
+										<button type="button" aria-label="필수 약관동의 목록보기" aria-expanded="true" class="acd_btn box_ty"></button>
+									</div>
+									<div class="acd_cont accodian_cont chk_list">
+										<div class="inner" style="display: block">
+											<ul class="term_list">
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="ag_chk01" class="chk_point_sub" />
+														<label for="ag_chk01" class="checkbox small lbl">
+															<i></i>
+															<span>
+																개인정보 수집 및 이용 동의
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">개인정보 수집 및 이용 동의</span>
+														보기
+													</button>
+												</li>
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="ag_chk02" class="chk_point_sub" />
+														<label for="ag_chk02" class="checkbox small lbl">
+															<i></i>
+															<span>
+																고유식별정보 수집 및 이용 동의
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">고유식별정보 수집 및 이용 동의</span>
+														보기
+													</button>
+												</li>
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="ag_chk03" class="chk_point_sub" />
+														<label for="ag_chk03" class="checkbox small lbl">
+															<i></i>
+															<span>
+																개인정보 제3자 제공 동의(유효성검증)
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">개인정보 제3자 제공 동의(유효성검증)</span>
+														보기
+													</button>
+												</li>
+											</ul>
+										</div>
+										<div class="acd_cont accodian_cont chk_list">
+											<div class="inner" style="display: block">
+												<ul class="term_list">
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="ag_chk01" class="chk_point_sub" />
+															<label for="ag_chk01" class="checkbox small lbl">
+																<i></i>
+																<span>
+																	개인정보 수집 및 이용 동의
+
+																	<span class="ess_mark">필수</span>
+																</span>
+															</label>
+														</div>
+														<button type="button" class="btn ty_txt3 line_bttm btn_view">
+															<span class="sr_only">개인정보 수집 및 이용 동의</span>
+															보기
+														</button>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="ag_chk02" class="chk_point_sub" />
+															<label for="ag_chk02" class="checkbox small lbl">
+																<i></i>
+																<span>
+																	고유식별정보 수집 및 이용 동의
+
+																	<span class="ess_mark">필수</span>
+																</span>
+															</label>
+														</div>
+														<button type="button" class="btn ty_txt3 line_bttm btn_view">
+															<span class="sr_only">고유식별정보 수집 및 이용 동의</span>
+															보기
+														</button>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="ag_chk03" class="chk_point_sub" />
+															<label for="ag_chk03" class="checkbox small lbl">
+																<i></i>
+																<span>
+																	개인정보 제3자 제공 동의(유효성검증)
+
+																	<span class="ess_mark">필수</span>
+																</span>
+															</label>
+														</div>
+														<button type="button" class="btn ty_txt3 line_bttm btn_view">
+															<span class="sr_only">개인정보 제3자 제공 동의(유효성검증)</span>
+															보기
+														</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom_popup_footer">
+						<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(7);">다음</button>
+					</div>
+				</div>
+			</div>
+			<!-- s: 사업장번호 선택 팝업 -->
+			<div class="bottom_popup_wrap" id="businessNum">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">사업장번호 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('businessNum');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<ul class="select_list ty3" role="listbox">
+							<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+								<div class="item">
+									<div class="item_top">
+										<span>[0001]</span>
+										<span>사업장명</span>
+									</div>
+									<div class="item_bottom">
+										<span>대표카드번호</span>
+										<span>1234-5678-9000</span>
+										<span>세금전용</span>
+									</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false" aria-disabled="true">
+								<div class="item">
+									<div class="item_top">
+										<span>[0001]</span>
+										<span>사업장명</span>
+									</div>
+									<div class="item_bottom">
+										<span>대표카드번호</span>
+										<span>1234-5678-9000</span>
+										<span>세금전용</span>
+									</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">
+										<span>[0001]</span>
+										<span>사업장명</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- e: 사업장번호 선택 팝업 -->
+
+			<!-- s: 최근거래 계좌 팝업 -->
+			<div class="bottom_popup_wrap" id="current_pop">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">최근거래 계좌 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('current_pop');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="input btnmix has_search">
+							<button type="button" class="input_button" aria-label="받는분 입력">&#x27;받는분&#x27;으로 검색</button>
+							<button type="button" class="search">검색</button>
+						</div>
+						<hr aria-hidden="true" class="divider ty1 full" />
+
+						<ul class="select_list ty3" role="listbox">
+							<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+								<div class="item">
+									<div class="item_top">
+										<div class="item_top_text">예금주명</div>
+									</div>
+									<div class="acount_item ty5">
+										<div class="ico_box ty5 ico_bank_003"></div>
+										<div class="item">
+											<div class="item_top">
+												<span class="bank_name">기업</span>
+												<span class="ac_num">000-000000-00-000</span>
+											</div>
+										</div>
+									</div>
+									<div class="item_bottom">
+										<div class="item_bottom_date">2024.12.26</div>
+									</div>
+									<div class="btn_area ty4 mt_12">
+										<button type="button" class="btn s_1 c_1 r_3">자주쓰는 계좌 등록</button>
+									</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">
+										<div class="item_top_text">예금주명</div>
+									</div>
+									<div class="acount_item ty5">
+										<div class="ico_box ty5 ico_bank_081"></div>
+										<div class="item">
+											<div class="item_top">
+												<span class="bank_name">하나</span>
+												<span class="ac_num">000-000000-00-000</span>
+											</div>
+										</div>
+									</div>
+									<div class="item_bottom">
+										<div class="item_bottom_date">2024.12.26</div>
+									</div>
+									<div class="btn_area ty4 mt_12">
+										<button type="button" class="btn s_1 c_1 r_3">자주쓰는 계좌 등록</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="no_result_msg">
+									<div class="msg">찾으시는 계좌가 없습니다</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- e: 최근거래 계좌 팝업 -->
+
+			<!-- s: 자주쓰는 계좌 팝업 -->
+			<div class="bottom_popup_wrap" id="often_pop">
+				<div class="bottom_popup">
+					<div class="bottom_popup_header">
+						<h2 class="tit">자주쓰는 계좌 선택</h2>
+						<button type="button" class="btn_close" onclick="comLayerPopUtil.close('often_pop');">닫기</button>
+					</div>
+					<div class="bottom_popup_body">
+						<div class="content_head ty2">
+							<div class="content_head_right">
+								<button type="button" class="btn link_ty1">자주쓰는 계좌 관리</button>
+							</div>
+						</div>
+						<div class="input mt_8 btnmix has_search">
+							<button type="button" class="input_button" aria-label="계좌관리명 입력">&#x27;계좌관리명&#x27;으로 검색</button>
+							<button type="button" class="search">검색</button>
+						</div>
+						<hr aria-hidden="true" class="divider ty1 full" />
+						<ul class="select_list ty3" role="listbox">
+							<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+								<div class="item">
+									<div class="item_top">
+										<div class="item_top_text">계좌관리명</div>
+									</div>
+									<div class="acount_item ty5">
+										<div class="ico_box ty5 ico_bank_003"></div>
+										<div class="item">
+											<div class="item_top">
+												<span class="bank_name">기업</span>
+												<span class="ac_num">000-000000-00-000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">
+										<div class="item_top_text">계좌관리명</div>
+									</div>
+									<div class="acount_item ty5">
+										<div class="ico_box ty5 ico_bank_090"></div>
+										<div class="item">
+											<div class="item_top">
+												<span class="bank_name">카카오</span>
+												<span class="ac_num">000-000000-00-000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+								<div class="item">
+									<div class="item_top">
+										<div class="item_top_text">계좌관리명</div>
+									</div>
+									<div class="acount_item ty5">
+										<div class="ico_box ty5 ico_bank_081"></div>
+										<div class="item">
+											<div class="item_top">
+												<span class="bank_name">하나</span>
+												<span class="ac_num">000-000000-00-000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="no_result_msg">
+									<div class="msg">찾으시는 계좌가 없습니다</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- e: 자주쓰는 계좌 팝업 -->
+		</div>
+	</body>
+	<script></script>
+</html>

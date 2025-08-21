@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 사고신고 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">디지털OTP 사고신고 서비스</div>
+							<p class="txt">휴대폰 분실 등 사고가 생긴 경우 디지털OTP 이용을 일시정지할 수 있어요.</p>
+							<div class="title_text ty1 mt_32">디지털OTP 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신규일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2024.05.05</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상태</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">정상</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사고해제가능 여부</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">불가능</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>사고신고 해제는 영업점에서만 할 수 있습니다.</li>
+											<li>일시적인 이용정지가 아니라 더 이상 디지털OTP를 이용하지 않으려면 [디지털OTP 이용해지]에서 신청해 주세요.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2)">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 사고신고 -->
+
+				<!-- s: step2 완료 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								디지털OTP 사고신고를
+								<br />
+								했어요
+							</div>
+
+							<div class="title_text ty1 mt_32">신고내역</div>
+							<ul class="d_list ty2 mt_32">
+								<li>
+									<span class="d_list_l">이용자번호</span>
+									<span class="d_list_r">000000</span>
+								</li>
+								<li>
+									<span class="d_list_l">이용자</span>
+									<span class="d_list_r">홍길동</span>
+								</li>
+								<li>
+									<span class="d_list_l">디지털OTP 일련번호</span>
+									<span class="d_list_r">00000000</span>
+								</li>
+								<li>
+									<span class="d_list_l">디지털OTP 발급일</span>
+									<span class="d_list_r">2024.05.05</span>
+								</li>
+								<li>
+									<span class="d_list_l">디지털OTP 상태</span>
+									<span class="d_list_r">사고신고</span>
+								</li>
+								<li>
+									<span class="d_list_l">사고신고일</span>
+									<span class="d_list_r">2024.08.05</span>
+								</li>
+							</ul>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 완료 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

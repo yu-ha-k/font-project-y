@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 입출금 계좌개설 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 상품 약관동의 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1 color ty6">가입권유 확인서(적합성 원칙)</div>
+							<p class="txt_style ty11 color ty8">IBK기업은행은 「금융소비자 보호에 관한 법률」에 따라 설명의무 이행 대상에 해당하는지 적합성을 확인하고 예금상품의 중요한 사항을 소비자가 이해할 수 있도록 충분히 설명해야 하며, 계약을 체결하는 경우 지체 없이 계약서류를 제공해야 합니다.</p>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">금융소비자 유형</div>
+								<div class="comp_wrap">
+									<div class="input unit_ty1">
+										<input type="num" name="" id="" class="comma" placeholder="전문금융소비자" title="금융소비자유형 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+										<span class="unit">구분</span>
+									</div>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>금융소비자 보호에 따라 법률에 따라 강화된 설명의무 이행 대상자입니다.</li>
+								</ul>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">계약서류 받을 이메일 주소</div>
+								<div class="comp_wrap email form_wrap mt_0">
+									<div class="select_domain">
+										<div class="input">
+											<input type="text" name="" id="" class="input_box" value="ibk1234" title="이메일 사용자 이름 입력" placeholder="이메일" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+										<span>@</span>
+										<div class="dropdown ty5" role="button" title="도메인 선택 목록 보기" onclick="comLayerPopUtil.open('emailOptList');">
+											<div class="dropdown_text">ibkibk.com</div>
+										</div>
+									</div>
+									<div class="input direct">
+										<input type="text" name="" id="" title="도메인 직접 입력" placeholder="도메인 직접 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>상품 가입 후 해당 이메일로, 입력하신 이메일로 상품 계약서, 이용약관 및 설명서를 보내드립니다.</li>
+								</ul>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">관리점</div>
+								<div class="comp_wrap with_btn2">
+									<div class="input has_search">
+										<input type="text" name="" id="" title="지점명 입력" placeholder="지점명 입력" />
+
+										<button type="button" class="search">검색</button>
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<button type="button" class="btn s_5 c_1 r_2 inp_reset_event" disabled="true">입력취소</button>
+								</div>
+								<p class="placeholder_text">지점명을 입력하고 검색 버튼을 눌러주세요</p>
+							</div>
+
+							<!-- s: 25-01-09 수정 -->
+							<ul class="d_list ty2 mt_32">
+								<li>
+									<span class="d_list_l">집에 가까운 지점</span>
+									<span class="d_list_r">
+										<button type="button" class="btn ty_txt6">
+											<span class="text underline">을지6가</span>
+										</button>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">사업장에 가까운 지점</span>
+									<span class="d_list_r">
+										<button type="button" class="btn ty_txt6">
+											<span class="text underline">본부기업금융센터</span>
+										</button>
+									</span>
+								</li>
+							</ul>
+							<!-- e: 25-01-09 수정 -->
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 상품 약관동의 -->
+
+				<!-- s: 금융상품 설명에 관한 확인사항 -->
+
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3 card_account_join">
+						<div class="group">
+							<p class="txt_style ty8">답변 내용이 향후 민원 분쟁 조정 시 판단자료로 활용될 수 있으니 질문에 정성껏 답변해 주세요.</p>
+							<div class="title_text ty1 mt_32">예금상품 가입권유</div>
+
+							<div class="question_list mt_0">
+								<div class="question">
+									<div class="question_num">1.</div>
+									<div class="question_cont">본인은 위 예금상품의 상품설명서(핵심상품설명서 포함)를 제공받으셨습니까?</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">아니요</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">예</span></button>
+									</div>
+								</div>
+							</div>
+
+							<div class="title_text ty1 mt_24">예금상품 계약체결</div>
+
+							<div class="question_list mt_0">
+								<div class="question">
+									<div class="question_num">1.</div>
+									<div class="question_cont">본인은 위 예금상품과 관련한 모든 약관을 제공받으셨습니까?</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">아니요</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">예</span></button>
+									</div>
+								</div>
+								<div class="question">
+									<div class="question_num">2.</div>
+									<div class="question_cont">본인은 위 예금상품의 약관 내용을 이해하고, 이 상품에 가입하시겠습니까?</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">아니요</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">예</span></button>
+									</div>
+								</div>
+							</div>
+
+							<hr aria-hidden="true" class="divider ty2" />
+							<div class="title_text ty1">예금상품에 대한 중요한 사항을 충분히 설명 받고 이해하셨습니까?</div>
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>상품의 내용(계약기간, 이자의 지급시기 및 지급제한사유)</li>
+									<li>이자율(수익률, 중도해지 이자율, 만기해지 이자율, 만기 후 이자율 및 각 이자율에 대한 산출 근거 포함), 수수료 등 부대비용, 계약해지 시 불이익, 계좌이체 제한 등 거래제한사항</li>
+									<li>계약의 해제·해지, 위법계약해지권, 민원처리 절차 및 분쟁조정, 예금자보호 여부 및 그 내용</li>
+									<li>(연계·제휴서비스 제공 상품인 경우) 내용, 제공 =받을 수 있는 요건, 제공기간, 이행책임, 변경 시 변경내용 및 그 사유 등을 사전에 알린다는 사실 및 알리는 방법</li>
+								</ul>
+							</div>
+							<div class="label mt_16">
+								<input type="checkbox" name="" id="chk5" />
+								<label for="chk5" class="checkbox small">
+									<i></i>
+									<span>
+										<span class="txt_style ty6">본인의 의사에 따라 작성했습니다. 동 예금상품 계약서(예금상품 가입권유 확인서 겸용) (고객 교부용)를 제공받았음을 확인합니다.</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+
+				<!-- e: 금융상품 설명에 관한 확인사항 -->
+
+				<!-- s: 계좌개설 완료 -->
+
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty4 card_account_join">
+						<div class="group countinue_join">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								IBK평생주거래기업통장
+								<br />
+								계좌를 개설했어요
+							</div>
+
+							<div class="group_item mt_60">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-000000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">개설일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기타</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">한도계좌</span>
+										</span>
+									</p>
+								</div>
+							</div>
+
+							<div class="title_text ty1 with_btn mt_60">
+								한도계좌
+								<button type="button" class="btn s_1 c_1 r_2" onclick="uf_goStep(100);">제출서류 안내</button>
+							</div>
+							<ul class="list_bullet ty1">
+								<li>금융위원회가 정한 입출금식 계좌 개설 강화정책에 따라 최초 개설 시 한도계좌로 개설됩니다.</li>
+								<li>1일 이체한도는 30만원으로 제한됩니다.</li>
+								<li>한도계좌 해제를 하려면 영업점을 방문해 주세요.</li>
+							</ul>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 계좌개설 완료 -->
+
+				<!-- s: 금융거래목적 확인 제출서류 -->
+				<!-- s: 전체팝업 -->
+				<div id="step100" data-jx-step-no="100" data-jx-effect="slide">
+					<div class="content_wrap ty3 card_account_join">
+						<div class="group">
+							<div class="title_text ty1">금융거래 목적에 따라 아래와 같은 서류가 필요할 수 있어요</div>
+
+							<ul class="list_number ty2">
+								<li>
+									<div class="list_number_num">1.</div>
+									<div class="list_number_cont">물품공급계약서(계산서), (전자)세금계산서(공급자용), 직전년도 재무제표, 부가가치세증명원, 납세사실증명, 부가세과세표준증명원, 학원설립 운영등록증, 프랜차이즈 가맹점 예치신청서 등</div>
+								</li>
+								<li>
+									<div class="list_number_num">2.</div>
+									<div class="list_number_cont">
+										임대사업자인 경우 본인명의 부동산등기부등본- 신설업체인 경우 확정일자를 받은 임대차계약서 또는 부동산중개업소가 명시된 임대차계약서*
+										<ul class="list_asterisk mt_8">
+											<li>부동산중개업소로 연락하여 진위확인이 된 경우만 사용가능</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="list_number_num">3.</div>
+									<div class="list_number_cont">임의단체인 경우 정관(회칙)·조직구성원의 명부</div>
+								</li>
+								<li>
+									<div class="list_number_num">4.</div>
+									<div class="list_number_cont">기술보증기금의 벤처기업확인서</div>
+								</li>
+								<li>
+									<div class="list_number_num">5.</div>
+									<div class="list_number_cont">풍력사업 관련업체의 발전사업허가증</div>
+								</li>
+								<li>
+									<div class="list_number_num">6.</div>
+									<div class="list_number_cont">개인과외 교습자 신고증명서</div>
+								</li>
+								<li>
+									<div class="list_number_num">7.</div>
+									<div class="list_number_cont">건설기계대여업종의 주기장시설 보유확인서</div>
+								</li>
+							</ul>
+							<div class="bg_box ty1 mt_40">
+								<ul class="list_bullet ty1">
+									<li>
+										자세한 문의는 가까운 영업점
+										<br />
+										또는 고객센터(1588-2588)로 문의해주시기 바랍니다.
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 금융거래목적 확인 제출서류 -->
+
+				<!-- s: popup -->
+
+				<div class="bottom_popup_wrap" id="emailOptList" title="도메인 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">도메인 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('emailOptList');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 서비스 가능 시간 안내 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="system_error">
+								<div class="ico_txt ty1 lottie_case1">
+									<div class="lottie_box">
+										<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+									</div>
+									서비스 가능시간이
+									<br />
+									아닙니다.
+								</div>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="txt_style ty2">서비스이용 가능 시간</div>
+							<ul class="d_list ty1 mt_20">
+								<li>
+									<span class="d_list_l">서비스명</span>
+									<span class="d_list_r">
+										<span class="txt">이체 MMT출금</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">평일</span>
+									<span class="d_list_r">
+										<span class="txt">05:00 ~ 23:00</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">토요일</span>
+									<span class="d_list_r">
+										<span class="txt">09:00 ~ 16:00</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">휴일</span>
+									<span class="d_list_r">
+										<span class="txt">09:00 ~ 16:00</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 서비스 가능 시간 안내 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

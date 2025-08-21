@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 보안계좌등록 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 상단문구 -->
+						<div class="group">
+							<ul class="list_bullet ty1">
+								<li>
+									보안계좌 등록 서비스란 고객이 지정한 계좌에 대해서 전자금융 조회 및 이체는 할 수 없고 
+									<span class="color ty2">영업점 창구 및 자동화기기(CD/ATM)에서만 이용할 수 있는 서비스</span>
+									예요.
+								</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 상단문구 -->
+
+						<!-- s: 계좌번호 선택 -->
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">
+									<div class="label">
+										<input type="radio" name="name" id="radio1" />
+										<label for="radio1" class="radio">
+											<i></i>
+											<span>원화 계좌번호</span>
+										</label>
+									</div>
+								</div>
+								<div class="input">
+									<div class="dropdown ty2" role="button" title="원화 계좌번호 선택 목록 보기" onclick="comLayerPopUtil.open('wonAccountList');">
+										<div class="dropdown_text">선택</div>
+									</div>
+								</div>
+								<div class="input_label ty1">
+									<div class="label">
+										<input type="radio" name="name" id="radio2" />
+										<label for="radio2" class="radio">
+											<i></i>
+											<span>외화 계좌번호</span>
+										</label>
+									</div>
+								</div>
+								<div class="input">
+									<div class="dropdown ty2" role="button" title="외화 계좌번호 선택 목록 보기" onclick="comLayerPopUtil.open('fcAccountList');">
+										<div class="dropdown_text">선택</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 계좌번호 선택 -->
+
+						<!-- s: (결재)등록자인 경우에만 노출 -->
+						<div class="group">
+							<div class="btn_area ty1 mt_32">
+								<button type="button" class="btn s_2 c_1 r_1" onclick="comLayerPopUtil.open('popup1');">결재선 조회</button>
+							</div>
+						</div>
+						<!-- e: (결재)등록자인 경우에만 노출 -->
+
+						<!-- s: 결재자 노출 -->
+						<div class="group">
+							<div class="btn_area ty1 mt_32">
+								<button type="button" class="btn s_2 c_1 r_1" onclick="comLayerPopUtil.open('popup1');">결재선 조회</button>
+								<button type="button" class="btn s_2 c_1 r_1">목록</button>
+							</div>
+							<div class="btn_area ty1 mt_64">
+								<button type="button" class="btn s_5 c_1 r_2">반송</button>
+								<button type="button" class="btn s_5 c_3 r_2">결재</button>
+							</div>
+						</div>
+						<!-- e: 결재자 노출 -->
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li class="color ty2">출금계좌로 등록된 계좌는 [뱅킹 관리 〉 직원 이용자 관리 > 계좌·카드 관리 > 권한 설정]에서 계좌 출금권한 해제 후 보안계좌로 등록할 수 있습니다.</li>
+											<li class="color ty2">보안계좌 조회 및 해제는 영업점에서 신청해 주세요.</li>
+											<li>'IBK주식투자통장' 또는 'IBK주식적립통장'에 보안계좌 서비스 등록 시 주식매매가 제한됩니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+								<!-- <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">목록</button> -->
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 보안계좌등록 -->
+
+				<!-- s: step2 등록완료 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								보안계좌를 등록했어요
+								<div class="note_cmt">
+									스마트뱅킹 로그아웃 후 다시 로그인하면 보안계좌 등록번호가 보이지 않습니다.
+									<br />
+									<br />
+									보안계좌 조회 및 해제는 가까운 영업점에서 해주세요.
+								</div>
+							</div>
+
+							<ul class="d_list ty1">
+								<li>
+									<div class="d_list_l">보안계좌등록번호</div>
+									<div class="d_list_r">
+										<span class="account_no">000-000000-00-000</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step2 등록완료 -->
+
+				<!-- s: Popup -->
+
+				<!-- s: 결재선 조회 팝업-->
+
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">결재선조회</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">등록(완료)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">결재(대기)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">결재(완료)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">실행(대기)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 결재선 조회 팝업 -->
+
+				<div class="bottom_popup_wrap" id="wonAccountList" title="원화 계좌번호 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">원화 계좌번호 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('wonAccountList');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="fcAccountList" title="외화 계좌번호 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">외화 계좌번호 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('fcAccountList');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 결재선조회 팝업 -->
+
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

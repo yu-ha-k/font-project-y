@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.type_box {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: row;
+				flex-direction: row;
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
+				justify-content: space-between;
+				padding: 0.9375rem 0;
+			}
+			.type_box + .type_box {
+				border-top: 1px solid #000;
+			}
+			.type_box + .type_box > div:not(.skeleton_item) {
+				padding-right: 0.625rem;
+			}
+			.type_box.tp2 {
+				display: block;
+			}
+			.skeleton_item {
+				overflow: hidden;
+				height: 1.3125rem;
+			}
+			.skeleton_item > .skeleton_text {
+				position: relative;
+				display: inline-block;
+			}
+			.skeleton_item.img::before,
+			.skeleton_text::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+				background-size: 200% 100%;
+				background-position: 100% 0;
+				border-radius: 0.375rem;
+				overflow: hidden;
+				-webkit-animation: loading 1s infinite;
+				animation: loading 1s infinite;
+			}
+			.skeleton_item.on.img::before,
+			.skeleton_item.on .skeleton_text::before {
+				content: none;
+			}
+			.skeleton_item.img {
+				position: relative;
+				display: -webkit-inline-box;
+				display: -ms-inline-flexbox;
+				display: inline-flex;
+				height: auto;
+			}
+			.skeleton_item + .skeleton_item {
+				margin-top: 0.625rem;
+			}
+
+			@-webkit-keyframes loading {
+				100% {
+					background-position: -100% 0;
+				}
+			}
+
+			@keyframes loading {
+				100% {
+					background-position: -100% 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="content">
+				<div class="section">
+					<div class="type_box skeleton_box">
+						<div class="skeleton_item img">
+							<img src="../../../../img/ico/ico_item_001.png" alt="" />
+						</div>
+						<div>
+							<div class="skeleton_item">
+								<span class="skeleton_text">스켈레톤 테스트입니다.</span>
+							</div>
+							<div class="skeleton_item">
+								<span class="skeleton_text">스켈레톤 스켈레톤테스트입니다.</span>
+							</div>
+						</div>
+					</div>
+					<div class="type_box tp2">
+						<div class="skeleton_item img">
+							<img src="../../../../img/ico/ico_item_001.png" alt="" />
+						</div>
+						<div class="skeleton_item">
+							<span class="skeleton_text">스켈레톤 테스트입니다. 스켈레톤 테스트입니다.</span>
+						</div>
+						<div class="skeleton_item">
+							<span class="skeleton_text">스켈레톤 테스트입니다. 스켈레톤 테스트입니다. 스켈레톤 테스트입니다.</span>
+						</div>
+						<div class="skeleton_item">
+							<span class="skeleton_text">스켈레톤 테스트입니다 테스트입니다.</span>
+						</div>
+						<div class="skeleton_item">
+							<span class="skeleton_text">스켈레톤 테스트입니다. 스켈레톤 테스트입니다. 스켈레톤 테스트입니다.</span>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="type_box tp2">
+						<div class="skeleton_item">
+							<span class="skeleton_text">스켈레톤 테스트입니다.</span>
+						</div>
+						<div class="skeleton_item img">
+							<img src="../../../../img/ico/ico_item_001.png" alt="" />
+						</div>
+					</div>
+					<div class="type_box">
+						<div>
+							<div class="skeleton_item">
+								<span class="skeleton_text">스켈레톤 테스트입니다.스켈레톤 테스트입니다.</span>
+							</div>
+							<div class="skeleton_item">
+								<span class="skeleton_text">스켈레톤 테스트입니다.</span>
+							</div>
+						</div>
+						<div class="skeleton_item img">
+							<img src="../../../../img/ico/ico_item_001.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			const skeletonItem = document.querySelectorAll(".skeleton_item");
+
+			const hideSkeleton = () => {
+				skeletonItem.forEach(ele => {
+					const a = window.getComputedStyle(ele, "::before");
+					const b = a.getPropertyValue("content");
+					ele.classList.add("on");
+					// a.style.display = "none";
+				});
+			};
+
+			window.onload = () => {
+				setTimeout(hideSkeleton, 2000);
+			};
+		</script>
+	</body>
+</html>

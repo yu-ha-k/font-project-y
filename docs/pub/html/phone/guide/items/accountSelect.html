@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap">
+				<div class="cont_wrap">
+					<h1 class="guide_h1">계좌선택</h1>
+
+					<h4 class="guide_h4">계좌선택 유형</h4>
+					<div class="dropdown ty2" role="button" title="출금계좌번호 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+						<div class="dropdown_text">전체</div>
+					</div>
+
+					<h4 class="guide_h4">계좌선택 유형 - 선택불가</h4>
+					<div class="dropdown ty2 disabled" role="button" title="출금계좌번호 목록보기" aria-disabled="true" tabindex="-1" onclick="comLayerPopUtil.open('popupAccount');">
+						<div class="dropdown_text">선택 가능한 계좌가 없습니다.</div>
+					</div>
+
+					<h4 class="guide_h4">계좌선택 유형 - 별칭이 없는 경우</h4>
+
+					<h5 class="guide_h5">선택 전</h5>
+					<div class="dropdown ty2" role="button" title="출금계좌번호 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+						<div class="dropdown_text">전체</div>
+					</div>
+
+					<h5 class="guide_h5">선택 후</h5>
+					<div class="dropdown ty2 active" role="button" title="출금계좌번호 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+						<div class="dropdown_text">000-000000-00-000</div>
+					</div>
+
+					<h4 class="guide_h4">계좌선택 유형 - 별칭이 있는 경우</h4>
+					<h5 class="guide_h5">선택 전</h5>
+					<div class="dropdown ty2" role="button" title="출금계좌번호 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+						<div class="dropdown_text">전체</div>
+					</div>
+
+					<h5 class="guide_h5">선택 후</h5>
+					<div class="dropdown ty2 active" role="button" title="출금계좌번호 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+						<div class="dropdown_text">
+							<div class="sub_text">
+								<div class="badge_cont">
+									<div class="item_top_text">별명</div>
+								</div>
+							</div>
+
+							000-000000-00-000
+						</div>
+					</div>
+
+					<h4 class="guide_h4">계좌선택 유형 - 뱃지가 있는 경우</h4>
+					<h5 class="guide_h5">선택 전</h5>
+					<div class="dropdown ty2" role="button" title="출금계좌번호 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+						<div class="dropdown_text">전체</div>
+					</div>
+
+					<h5 class="guide_h5">선택 후</h5>
+					<div class="dropdown ty2 active" role="button" title="출금계좌번호 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+						<div class="dropdown_text">
+							<div class="sub_text">
+								<div class="badge_cont">
+									<span class="badge ty3 colorB5">개인</span>
+									<div class="item_top_text">별명</div>
+								</div>
+							</div>
+
+							000-000000-00-000
+						</div>
+					</div>
+
+					<h4 class="guide_h4">이체</h4>
+					<h5 class="guide_h5">선택버튼 케이스 - 뱃지 : 개인</h5>
+					<div class="acount_item ty3" role="button" title="계좌선택 목록보기" onclick="comLayerPopUtil.open('banktab');">
+						<div class="badge_cont">
+							<span class="badge ty3 colorB5">개인</span>
+							<span class="txt_style ty6 fw_4">IBK간편한통장(별명1줄)</span>
+						</div>
+
+						<div class="acount_item ty5">
+							<div class="ico_box ty5 ico_bank_003"></div>
+							<div class="item">
+								<div class="item_top">
+									<span class="bank_name">기업은행</span>
+									<span class="ac_num">000-000000-00-000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h5 class="guide_h5">선택버튼 케이스 - 뱃지 : 개인사업자</h5>
+					<div class="acount_item ty3" role="button" title="계좌선택 목록보기" onclick="comLayerPopUtil.open('banktab');">
+						<div class="badge_cont">
+							<span class="badge ty3 colorETC11">기업</span>
+							<span class="txt_style ty6 fw_4">IBK간편한통장(별명1줄)</span>
+						</div>
+
+						<div class="acount_item ty5">
+							<div class="ico_box ty5 ico_bank_003"></div>
+							<div class="item">
+								<div class="item_top">
+									<span class="bank_name">기업은행</span>
+									<span class="ac_num">000-000000-00-000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h5 class="guide_h5">선택버튼 케이스 - 뱃지 : 없음</h5>
+					<div class="acount_item ty3" role="button" title="계좌선택 목록보기" onclick="comLayerPopUtil.open('banktab');">
+						<div class="badge_cont">
+							<span class="txt_style ty6 fw_4">IBK간편한통장(별명1줄)</span>
+						</div>
+
+						<div class="acount_item ty5">
+							<div class="ico_box ty5 ico_bank_003"></div>
+							<div class="item">
+								<div class="item_top">
+									<span class="bank_name">기업은행</span>
+									<span class="ac_num">000-000000-00-000</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<h5 class="guide_h5">선택버튼 케이스 - 관리자-출금계좌 없음</h5>
+					<div class="acount_item ty3 none" role="button" aria-disabled="true" title="계좌선택 목록보기">
+						<div class="none_msg">
+							<div class="none_msg_tit">출금 가능한 계좌가 없습니다</div>
+							<span class="txt">영업점으로 문의해 주세요</span>
+						</div>
+					</div>
+
+					<h5 class="guide_h5">선택버튼 케이스 - 이용자-권한 있는 계좌 없음</h5>
+					<div class="acount_item ty3 none" role="button" aria-disabled="true" title="계좌선택 목록보기">
+						<div class="none_msg">
+							<div class="none_msg_tit">출금 가능한 계좌가 없습니다</div>
+							<span class="txt">관리자에게 문의해 주세요</span>
+						</div>
+					</div>
+
+					<!-- s: 일반 계좌선택 -->
+					<div class="bottom_popup_wrap" id="popupAccount">
+						<div class="bottom_popup">
+							<div class="bottom_popup_header">
+								<h2 class="tit">계좌선택</h2>
+								<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+							</div>
+
+							<div class="bottom_popup_body">
+								<ul class="select_list ty3" role="listbox">
+									<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+										<div class="item">
+											<div class="item_top">
+												<div class="badge_cont">
+													<span class="badge ty3 colorB5">개인</span>
+													<div class="item_top_text">별칭</div>
+												</div>
+											</div>
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+									<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+										<div class="item">
+											<div class="item_top">
+												<div class="badge_cont">
+													<span class="badge ty3 colorB5">개인</span>
+												</div>
+											</div>
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+									<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+										<div class="item">
+											<div class="item_top">
+												<div class="badge_cont">
+													<span class="badge ty3 colorETC11">기업</span>
+												</div>
+											</div>
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+									<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+										<div class="item">
+											<div class="item_top">
+												<div class="item_top_text">별칭</div>
+											</div>
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+									<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+										<div class="item">
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- e: 일반 계좌선택 -->
+
+					<!-- s: 이체 계좌선택 -->
+					<!-- banktab -->
+					<div class="bottom_popup_wrap" id="banktab">
+						<div class="bottom_popup">
+							<div class="bottom_popup_header">
+								<h2 class="tit">ㅇㅇㅇㅇ 계좌선택</h2>
+								<button type="button" class="btn_close" onclick="comLayerPopUtil.close('banktab');">닫기</button>
+							</div>
+							<div class="bottom_popup_body tab_in">
+								<div class="tab_list ty1" role="tablist">
+									<button type="button" role="tab" aria-selected="true" class="active">기업은행</button>
+									<button type="button" role="tab" aria-selected="false">다른은행</button>
+								</div>
+
+								<div class="tab_cont active" role="tabpanel" aria-expanded="true">
+									<ul class="select_list ty3 mt_24" role="listbox">
+										<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+											<div class="item">
+												<div class="item_top">
+													<span class="badge ty3 colorB5">개인</span>
+													<div class="item_top_text">개인사업자주거래우대통장</div>
+													<span class="main_trans">주거래 통장</span>
+												</div>
+
+												<div class="acount_item ty5">
+													<div class="ico_box ty5 ico_bank_003"></div>
+													<div class="item">
+														<div class="item_top">
+															<span class="bank_name">기업은행</span>
+															<span class="ac_num">000-000000-00-000</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+											<div class="item">
+												<div class="item_top">
+													<span class="badge ty3 colorETC11">기업</span>
+
+													<div class="item_top_text">개인사업자주거래우대통장</div>
+												</div>
+
+												<div class="acount_item ty5">
+													<div class="ico_box ty5 ico_bank_003"></div>
+													<div class="item">
+														<div class="item_top">
+															<span class="bank_name">기업은행</span>
+															<span class="ac_num">000-000000-00-000</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+											<div class="item">
+												<div class="item_top">
+													<span class="badge ty3 colorETC11">기업</span>
+
+													<div class="item_top_text">개인사업자주거래우대통장</div>
+												</div>
+
+												<div class="acount_item ty5">
+													<div class="ico_box ty5 ico_bank_003"></div>
+													<div class="item">
+														<div class="item_top">
+															<span class="bank_name">기업은행</span>
+															<span class="ac_num">000-000000-00-000</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="tab_cont" role="tabpanel" aria-expanded="true">
+									<ul class="select_list ty3 mt_24" role="listbox">
+										<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+											<div class="item">
+												<div class="item_top">
+													<div class="item_top_text">개인사업자주거래우대통장</div>
+												</div>
+
+												<div class="acount_item ty5">
+													<div class="ico_box ty5 ico_bank_081"></div>
+													<div class="item">
+														<div class="item_top">
+															<span class="bank_name">하나은행</span>
+															<span class="ac_num">000-000000-00-000</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="item_top skeleton">
+													<div class="item_top_text">12,000,123원</div>
+												</div>
+											</div>
+										</li>
+										<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+											<div class="item">
+												<div class="item_top">
+													<div class="item_top_text">개인사업자주거래우대통장</div>
+												</div>
+
+												<div class="acount_item ty5">
+													<div class="ico_box ty5 ico_bank_090"></div>
+													<div class="item">
+														<div class="item_top">
+															<span class="bank_name">카카오은행</span>
+															<span class="ac_num">0000-00-0000000</span>
+														</div>
+													</div>
+												</div>
+
+												<div class="item_top">
+													<div class="item_top_text">12,000,123원</div>
+												</div>
+											</div>
+										</li>
+										<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+											<div class="item">
+												<div class="item_top">
+													<div class="item_top_text">개인사업자주거래우대통장</div>
+												</div>
+
+												<div class="acount_item ty5">
+													<div class="ico_box ty5 ico_bank_088"></div>
+													<div class="item">
+														<div class="item_top">
+															<span class="bank_name">신한</span>
+															<span class="ac_num">0000-00-0000000</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+
+									<!-- s: 오픈뱅킹 가입하기 -->
+									<!-- 
+                  <div class="no_result_msg">
+                    <div class="msg">오픈뱅킹 가입 후 이용이 가능합니다.</div>
+                    <div class="btn_area center">
+                      <button type="button" class="btn s_3 c_1 r_3 join"><span class="text">오픈뱅킹 가입하기</span></button>
+                    </div>
+                    <div class="ps_box">
+                      보이스피싱 피해 방지를 위해 오픈뱅킹 최초 계좌 등록일 포함 3일간 이체 거래가 제한됩니다
+                    </div>
+                  </div>
+                  -->
+									<!-- e: 오픈뱅킹 가입하기 -->
+
+									<!-- s: 다른은행 계좌 등록 -->
+									<!-- 
+                  <div class="no_result_msg">
+                    <div class="msg">다른 은행 계좌를 등록하셔야 이용이 가능합니다</div>
+                    <div class="btn_area center">
+                      <button type="button" class="btn plus"><span class="text">다른은행 계좌 등록</span></button>
+                    </div>
+                    <div class="ps_box">
+                      보이스피싱 피해 방지를 위해 오픈뱅킹 최초 계좌 등록일 포함 3일간 이체 거래가 제한됩니다
+                    </div>
+                  </div>
+                  -->
+									<!-- e: 다른은행 계좌 등록 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- e: 이체 계좌선택 -->
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>

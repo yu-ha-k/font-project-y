@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 프랜차이즈 맞춤형 뱅킹서비스 : 서비스가입 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 서비스가입 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<a href="#" role="button" class="franchise_banner_link">
+								<div class="txt_wrap">
+									<div class="txt">사업 운영을 더 편하게!</div>
+									<div class="tit">
+										프랜차이즈 맞춤형
+										<br />
+										뱅킹서비스
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<!-- s: 설명 문구 -->
+						<div class="group pt_24">
+							<div class="title_text ty1">프랜차이즈 맞춤형 뱅킹서비스란?</div>
+							<div class="txt_style ty11">IBK기업은행과 협약한 우수 프랜차이즈 기업을 대상으로, 가맹점이 가맹본사에서 사업운영물품 구매 시 비대면으로 결제할 수 있도록 지원하는 서비스</div>
+
+							<div class="title_text ty1 mt_32">이체 서비스</div>
+							<ul class="list_bullet ty4">
+								<li>가맹점이 본사에 물류대금을 계좌 이체로 결제</li>
+							</ul>
+
+							<div class="title_text ty1 mt_32">카드 서비스</div>
+							<ul class="list_bullet ty4">
+								<li>가맹점이 본사에 물류대금을 브랜드별 전용카드로 결제</li>
+							</ul>
+
+							<div class="title_text ty1 mt_32">대출 서비스</div>
+							<ul class="list_bullet ty4">
+								<li>가맹점이 본사에 물류대금을 물류대금 전용 대출로 결제</li>
+							</ul>
+
+							<div class="title_text ty1 mt_32">서비스 이용 대상</div>
+							<ul class="list_bullet ty4">
+								<li>i-ONE뱅크 기업 이용 고객 중 관리자에 해당하는 개인사업자 및 법인</li>
+							</ul>
+						</div>
+						<!-- e: 설명 문구 -->
+
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>이 서비스는 IBK기업은행과 본사용 서비스 계약을 체결한 프랜차이즈 가맹점만 가입할 수 있습니다.</li>
+											<li>프랜차이즈 가맹점은 이 서비스로 가입·조회·해지할 수 있습니다.</li>
+											<li>프랜차이즈 가맹점은 본사가 계약한 서비스(이체, 카드, 대출)만 이용할 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('agpop');">가맹점주 가입하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+
+				<!-- e: step1 서비스가입 -->
+
+				<!-- s: step2 약관동의 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">약관동의</div>
+							<div class="title_text ty1">약관을 확인 후 동의해 주세요</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">이전</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 약관동의 -->
+
+				<!-- s: step3 정보입력 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보입력</div>
+							<div class="form_group">
+								<div class="input_label ty1">브랜드</div>
+
+								<div class="dropdown ty2" role="button" title="브랜드 선택 목록보기" onclick="comLayerPopUtil.open('optlist');">
+									<div class="dropdown_text">선택</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">이전</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 정보입력 -->
+
+				<!-- s: step4 정보확인 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보확인</div>
+
+							<div class="title_text ty1">가입고객정보 및 고객확인</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">가입구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">가맹점</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">123-OO-12345</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기업명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">(주)지앤푸드</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">김가은</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자 휴대폰번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">010-123-****</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자 이메일주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">abc@naver.com</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">본사/사업장 주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												00000
+												<br />
+												서울특별시 기업구 기업로1길
+												<br />
+												상세주소
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+
+							<div class="title_text ty1 mt_32">신청 정보</div>
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">브랜드</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">굽네치킨</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(3);">이전</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 정보확인 -->
+
+				<!-- s: step5 가입완료 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								프랜차이즈 맞춤형 뱅킹서비스에
+								<br />
+								가입했어요
+							</div>
+
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">가입구분</span>
+									<span class="d_list_r">
+										<span class="txt">가맹점</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">브랜드</span>
+									<span class="d_list_r">
+										<span class="brand">굽네치킨</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 가입완료 -->
+
+				<!-- s: step6 약관동의 -->
+				<!-- s: 전체팝업 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">약관 내용</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: step6 약관동의 -->
+
+				<!-- s: Popup -->
+
+				<div class="bottom_popup_wrap" id="agpop">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">약관 동의</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('agpop');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<p class="txt_style ty10">서비스 가입을 위해 약관 동의가 필요해요.</p>
+
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="ag_chk00" class="chk_point_all" />
+												<label for="ag_chk00" class="checkbox">
+													<i></i>
+													<span>
+														모두 동의
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+										</div>
+										<div class="inner">
+											<ul class="term_list chk_list">
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="ag_chk02" class="chk_point_sub" />
+														<label for="ag_chk02" class="checkbox small lbl">
+															<i></i>
+															<span>
+																프랜차이즈 맞춤형 뱅킹서비스 이용약관
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(6);">
+														<span class="sr_only">프랜차이즈 맞춤형 뱅킹서비스 이용약관</span>
+														보기
+													</button>
+												</li>
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="ag_chk01" class="chk_point_sub" />
+														<label for="ag_chk01" class="checkbox small lbl">
+															<i></i>
+															<span>
+																개인(신용)정보 수집·이용·제공 동의
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(6);">
+														<span class="sr_only">개인(신용)정보 수집·이용·제공 동의</span>
+														보기
+													</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('agpop'); uf_goStep(3);">다음</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bottom_popup_wrap" id="optlist" title="브랜드 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">브랜드 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

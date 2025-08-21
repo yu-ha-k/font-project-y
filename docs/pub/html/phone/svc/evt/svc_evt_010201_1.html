@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 이벤트 목록 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">
+						<!-- s: 탭 버튼 리스트 -->
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="false">진행중 이벤트</button>
+							<button type="button" role="tab" aria-selected="true" class="active">종료된 이벤트</button>
+						</div>
+						<!-- e: 탭 버튼 리스트 -->
+
+						<!-- s: 탭 컨텐츠 -->
+						<!-- s: 진행중 이벤트 -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group">
+								<ul class="space_list_ty3 mt_24">
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="link_item_ty3">
+												<div class="link_item_ty3_img">
+													<img src="../../../../img/temp/img_temp_main_event.png" alt="메인 이벤트 베너" />
+												</div>
+												<div class="item_text2 sb">
+													<span class="item_text2_left">2024-06-10 ~ 2025-06-10</span>
+													<span class="item_text2_right date">D-14</span>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="link_item_ty3">
+												<div class="link_item_ty3_img">
+													<img src="../../../../img/temp/img_temp_main_event.png" alt="메인 이벤트 베너" />
+												</div>
+												<div class="item_text2 sb">
+													<span class="item_text2_left">2024-06-10 ~ 2025-06-10</span>
+													<span class="item_text2_right date">D-14</span>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="link_item_ty3">
+												<div class="link_item_ty3_img">
+													<img src="../../../../img/temp/img_temp_main_event.png" alt="메인 이벤트 베너" />
+												</div>
+												<div class="item_text2 sb">
+													<span class="item_text2_left">2024-06-10 ~ 2025-06-10</span>
+													<span class="item_text2_right date">D-14</span>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="no_data">
+										<div class="no_result_msg">
+											<div class="msg">진행중 이벤트가 없습니다</div>
+										</div>
+									</li>
+								</ul>
+
+								<div class="btn_area ty1 more">
+									<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+								</div>
+							</div>
+						</div>
+						<!-- e: 진행중 이벤트 -->
+						<!-- s: 종로된 이벤트 -->
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true">
+							<div class="group">
+								<ul class="space_list_ty8 mt_24">
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(3);">
+											<div class="link_item_ty3 link">
+												<div class="inner">
+													<div class="link_item_left">
+														<div class="item_text1 line_climp_2">종료된 이벤트 목록 종료된 이벤트 목록 종료된 이벤트 목록 종료된 이벤트 목록 종료된 이벤트 목록</div>
+														<div class="item_text2">2024-06-10 ~ 2024-06-10</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(3);">
+											<div class="link_item_ty3 link">
+												<div class="inner">
+													<div class="link_item_left">
+														<div class="item_text1 line_climp_2">종료된 이벤트 목록 종료된 이벤트 목록 종료된 이벤트 목록 종료된 이벤트 목록 종료된 이벤트 목록</div>
+														<div class="item_text2">2024-06-10 ~ 2024-06-10</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="no_data">
+										<div class="no_result_msg">
+											<div class="msg">종료된 이벤트가 없습니다</div>
+										</div>
+									</li>
+								</ul>
+
+								<div class="btn_area ty1 more">
+									<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+								</div>
+							</div>
+						</div>
+						<!-- e: 종로된 이벤트 -->
+						<!-- e: 탭 컨텐츠 -->
+					</div>
+				</div>
+				<!-- e: 이벤트 목록 -->
+
+				<!-- s: 목록 상세 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="main_event_detail">
+								<div class="main_event_detail_head">
+									<div class="title">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</div>
+									<div class="main_event_detail_head_sub">
+										<span class="date">2024.01.01 ~ 2024.01.31</span>
+										<button type="button" class="btn ico_share simple" onclick="comLayerPopUtil.open('share');"><span class="text">공유하기</span></button>
+									</div>
+								</div>
+								<div class="main_event_detail_cont">
+									<div style="height: 500px; background-color: blue; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 24px; color: #fff">이벤트 상세 내용 출력</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">목록</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 목록 상세 -->
+
+				<!-- s: 종료된 이벤트 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="main_event_detail">
+								<div class="main_event_detail_head">
+									<div class="title">제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목 제목</div>
+									<div class="main_event_detail_head_sub">
+										<span class="date">2024.01.01 ~ 2024.01.31</span>
+										<button type="button" class="btn ico_share simple" onclick="comLayerPopUtil.open('share');"><span class="text">공유하기</span></button>
+									</div>
+								</div>
+								<div class="main_event_detail_cont main_event_detail_cont_end">
+									<div class="main_event_detail_cont_end_msg">
+										<div class="inner">
+											<strong class="tit">이벤트 종료</strong>
+											<p class="desc">해당 이벤트는 종료된 이벤트입니다.</p>
+										</div>
+									</div>
+									<div style="height: 500px; background-color: blue; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 24px; color: #fff">이벤트 상세 내용 출력</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">목록</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 종료된 이벤트 -->
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="share">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">공유하기</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('share');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="select_cert">
+								<button type="button" class="btn btn_cert btn_cert_sms"><span class="text">문자</span></button>
+								<button type="button" class="btn btn_cert btn_cert_kakao"><span class="text">카카오톡</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

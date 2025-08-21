@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap">
+				<div class="cont_wrap">
+					<h1 class="guide_h1">Button Style</h1>
+					<h4 class="guide_h4">버튼 Size</h4>
+					.s_1 :
+					<button type="button" class="btn s_1 c_1">Height 24px</button>
+					<br />
+					<br />
+					.s_2 :
+					<button type="button" class="btn s_2 c_1">Height 32px</button>
+					<br />
+					<br />
+					.s_3 :
+					<button type="button" class="btn s_3 c_1">Height 40px</button>
+					<br />
+					<br />
+					.s_4 :
+					<button type="button" class="btn s_4 c_1">Height 48px - c_1일떄</button>
+					<br />
+					<br />
+					.s_4 :
+					<button type="button" class="btn s_4 c_2">Height 48px - c_1이 아닐때</button>
+					<br />
+					<br />
+					.s_5 :
+					<button type="button" class="btn s_5 c_1">Height 56px</button>
+
+					<h4 class="guide_h4">버튼 Color</h4>
+					.c_1 :
+					<button type="button" class="btn s_2 c_1">background color: #fff</button>
+					<br />
+					<br />
+					.c_2 :
+					<button type="button" class="btn s_2 c_2">background color: #e4f2ff</button>
+					<br />
+					<br />
+					.c_3 :
+					<button type="button" class="btn s_2 c_3">background color: #4393f0</button>
+
+					<h4 class="guide_h4">버튼 Radius</h4>
+					.r_1 :
+					<button type="button" class="btn s_2 r_1 c_1">6px</button>
+					<br />
+					<br />
+					.r_2 :
+					<button type="button" class="btn s_2 r_2 c_1">12px</button>
+					<br />
+					<br />
+					.r_3 :
+					<button type="button" class="btn s_2 r_3 c_1">50px</button>
+
+					<h4 class="guide_h4">버튼 disabled</h4>
+					<div class="btn_area ty1">
+						<button type="button" class="btn s_2 c_1" disabled>버튼 disabled</button>
+						<button type="button" class="btn s_2 c_2" disabled>버튼 disabled</button>
+						<button type="button" class="btn s_2 c_3" disabled>버튼 disabled</button>
+					</div>
+
+					<h4 class="guide_h4">버튼 넓이 100%</h4>
+					<button type="button" class="btn s_2 c_1 w_100p">100%</button>
+
+					<h4 class="guide_h4">버튼 icon 추가 형태</h4>
+					<div class="guide_grid_wrap n3">
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn s_3 c_1 r_3 edit"><span class="text">내 이체함 편집</span></button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn s_3 c_1 r_3 join"><span class="text">오픈뱅킹 가입하기</span></button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn plus">
+								<span class="text">예약추가</span>
+							</button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn badge ty2">
+								<span class="ico_box ty3 ico_bank_031"></span>
+								대구
+							</button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn badge ty2">
+								<span class="ico_box ty3 ico_bank_011"></span>
+								NH농협
+							</button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn chk_ty1" role="checkbox" aria-checked="false" aria-live="polite">
+								<span class="text">예약이체</span>
+							</button>
+							<br />
+							<button type="button" class="btn chk_ty1 active" role="checkbox" aria-checked="true" aria-live="polite">
+								<span class="text">2024.06.16 (08~09시 예약)</span>
+							</button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn link_ty1" aria-label="상세 이동">내 이체함</button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn ico_share"><span class="text">공유하기</span></button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn ico_share simple"><span class="text">공유하기</span></button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn ico_ty1">
+								<span class="text">
+									이체대기
+									<span class="by">1</span>
+									건
+								</span>
+							</button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn ico_ty2"><span class="blind">삭제</span></button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn ico_ty3"><span class="blind">설정</span></button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn btn_wish_item" role="checkbox" aria-checked="false" aria-label="관심상품 등록"></button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn btn_wish_item active" role="checkbox" aria-checked="false" aria-label="관심상품 등록"></button>
+						</div>
+
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn thecheat is_case" aria-expanded="false">
+								<span class="blind">사기의심계좌 자동조회</span>
+								<span class="text">피해사례 있음</span>
+							</button>
+						</div>
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn thecheat none_case" aria-expanded="false">
+								<span class="blind">사기의심계좌 자동조회</span>
+								<span class="text">피해사례 없음</span>
+							</button>
+						</div>
+						<div class="guide_grid_wrap_item">
+							<button type="button" class="btn thecheat error_case" aria-expanded="false">
+								<span class="blind">사기의심계좌 자동조회</span>
+								<span class="text">오류</span>
+							</button>
+						</div>
+					</div>
+
+					<h4 class="guide_h4">버튼 전화상담/용어사전</h4>
+					<div class="util_btn_wrap">
+						<a href="#" class="btn s_1 c_1 r_3 link_to">
+							금융계산기
+							<span class="ico_box ico_calc"></span>
+						</a>
+						<a href="#" class="btn s_1 c_1 r_3 link_to">
+							용어설명
+							<span class="ico_box ico_explane"></span>
+						</a>
+						<a href="#" class="btn s_1 c_1 r_3 link_to">
+							용어사전
+							<span class="ico_box ico_dictionary"></span>
+						</a>
+						<a href="#" class="btn s_1 c_1 r_3 link_to">
+							대출계산기
+							<span class="ico_box ico_loan_calc"></span>
+						</a>
+						<a href="#" class="btn s_1 c_1 r_3 link_to">
+							전화상담
+							<span class="ico_box ico_tel_consul"></span>
+						</a>
+						<a href="#" class="btn s_1 c_1 r_3 link_to">
+							다운로드
+							<span class="ico_box ico_download"></span>
+						</a>
+						<a href="#" class="btn s_1 c_1 r_3 link_to">
+							공유하기
+							<span class="ico_box ico_share"></span>
+						</a>
+					</div>
+
+					<h4 class="guide_h4">텍스트 버튼</h4>
+					<button type="button" class="btn ty_txt1">
+						<div class="ico_box ico_temp"></div>
+						기본 텍스트 버튼(.ty_txt1) 높이 22
+						<div class="ico_box ico_temp"></div>
+					</button>
+					<br />
+					<button type="button" class="btn ty_txt2">
+						높이18 버튼 기본(.ty_txt2)
+						<div class="ico_box ico_temp"></div>
+					</button>
+					<br />
+					<button type="button" class="btn ty_txt3">높이18 글자13(.ty_txt3)</button>
+					<br />
+					<button type="button" class="btn ty_txt3 line_bttm">높이18 글자13 언더라인(.line_bttm)</button>
+					<br />
+					<button type="button" class="btn ty_txt4 line_bttm">높이18 글자14(.ty_txt4)</button>
+					<br />
+					<button type="button" class="btn ty_txt5">높이20 글자14(.ty_txt5)</button>
+					<br />
+					<button type="button" class="btn ty_txt6">
+						<span class="text underline">을지6가</span>
+					</button>
+
+					<h4 class="guide_h4">아이콘 버튼 & 아이콘 버튼 영역</h4>
+					<div class="btn_area ty_ico btn_join">
+						<button type="button" class="btn s_4 c_1 r_2 btn_ico btn_fav">
+							<span class="txt">즐겨찾기</span>
+							<span class="ico ico_fav"></span>
+						</button>
+						<button type="button" class="btn s_4 c_2 r_2 w_100p">가입하기</button>
+					</div>
+
+					<h4 class="guide_h4">앱 다운로드 버튼</h4>
+					<div class="app_download">
+						<a href="#" role="button">
+							<img src="../../../../img/common/app_download/img_aos.png" alt="todo 대체텍스트 필요" />
+						</a>
+						<a href="#" role="button">
+							<img src="../../../../img/common/app_download/img_ios.png" alt="todo 대체텍스트 필요" />
+						</a>
+					</div>
+					<div class="app_download small">
+						<a href="#" role="button">
+							<img src="../../../../img/common/app_download/img_aos.png" alt="todo 대체텍스트 필요" />
+						</a>
+						<a href="#" role="button">
+							<img src="../../../../img/common/app_download/img_ios.png" alt="todo 대체텍스트 필요" />
+						</a>
+					</div>
+
+					<h1 class="guide_h1">btn area 여러개로 구성 - grouping</h1>
+					<h4 class="guide_h4">.btn_group_wrap</h4>
+					<div class="btn_group_wrap">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_4 c_1 r_2" onclick="uf_goStep(5);">카드번호 전체조회</button>
+						</div>
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_4 c_1 r_2" onclick="uf_goStep(8);">재발급</button>
+							<button type="button" class="btn s_4 c_1 r_2" onclick="uf_goStep(2);">분실신고</button>
+						</div>
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_4 c_3 r_2">확인</button>
+						</div>
+					</div>
+
+					<h1 class="guide_h1">btn area 종류</h1>
+					<h4 class="guide_h4">btn_area ty1</h4>
+					<div class="btn_area ty1">
+						<button type="button" class="btn s_1 c_1">버튼</button>
+						<button type="button" class="btn s_1 c_1">버튼</button>
+					</div>
+					<h4 class="guide_h4">btn_area ty1 - 다른 Case</h4>
+					<div class="btn_area ty1">
+						<button type="button" class="btn s_1 c_1 w_full">버튼</button>
+						<button type="button" class="btn s_1 c_1">버튼</button>
+						<button type="button" class="btn s_1 c_1">버튼</button>
+						<button type="button" class="btn s_1 c_1 w_full">버튼</button>
+					</div>
+					<h4 class="guide_h4">btn_area ty2</h4>
+					<div class="btn_area ty2">
+						<button type="button" class="btn s_1 c_1">버튼</button>
+						<button type="button" class="btn s_1 c_1">버튼</button>
+					</div>
+
+					<h4 class="guide_h4">btn_area ty3</h4>
+					<div class="btn_area ty3">
+						<button type="button" class="btn s_1 c_1">버튼1</button>
+						<button type="button" class="btn s_1 c_1">버튼2</button>
+						<button type="button" class="btn s_1 c_1">버튼3</button>
+						<button type="button" class="btn s_1 c_1">버튼4</button>
+					</div>
+
+					<h4 class="guide_h4">btn_area ty4</h4>
+					<div class="btn_area ty4">
+						<button type="button" class="btn s_1 c_1">버튼1</button>
+						<button type="button" class="btn s_1 c_1">버튼2</button>
+						<button type="button" class="btn s_1 c_1">버튼3</button>
+						<button type="button" class="btn s_1 c_1">버튼4</button>
+						<button type="button" class="btn s_1 c_1">버튼5</button>
+						<button type="button" class="btn s_1 c_1">버튼6</button>
+					</div>
+					<h4 class="guide_h4">btn_area ty5</h4>
+					<div class="btn_area ty5">
+						<button type="button" class="btn s_1 c_1">버튼1</button>
+						<button type="button" class="btn s_1 c_1">버튼2</button>
+						<button type="button" class="btn s_1 c_1">버튼3</button>
+					</div>
+					<h4 class="guide_h4">btn_area ty_combi</h4>
+					<div class="btn_area ty_combi">
+						<button type="button" class="btn s_1 c_1">버튼1</button>
+						<button type="button" class="btn s_1 c_1">버튼2</button>
+						<button type="button" class="btn s_1 c_1">버튼3</button>
+					</div>
+					<h4 class="guide_h4">btn_area tyTxt</h4>
+					<div class="btn_area tyTxt">
+						<button type="button" class="btn ty_txt2 line_bttm">텍스트 버튼1</button>
+						<button type="button" class="btn ty_txt2 line_bttm">텍스트 버튼2</button>
+					</div>
+					<h4 class="guide_h4">btn_area center / 단일 가운데 정렬</h4>
+					<div class="btn_area center">
+						<button type="button" class="btn plus">
+							<span class="text">예약추가</span>
+						</button>
+					</div>
+
+					<h4 class="guide_h4">btn_area - 툴팁 추가 형태</h4>
+					<br />
+					<br />
+					<div class="btn_area ty1 favorite_tooltip_wrap">
+						<div class="favorite_tooltip">체크카드를 발급하시려면 버튼을 눌러 주세요.</div>
+						<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(12);">체크카드 발급</button>
+					</div>
+
+					<h4 class="guide_h4">btn_area - btn_list</h4>
+					<div class="btn_area btn_list">
+						<button type="button">달콤탕후루 방이점</button>
+						<button type="button" class="active">달콤탕후루 방이점</button>
+					</div>
+
+					<h4 class="guide_h4">더보기</h4>
+					<div class="btn_area">
+						<button type="button" class="btn more"><span class="text">더보기</span></button>
+					</div>
+
+					<h4 class="guide_h4">더보기</h4>
+					<div class="btn_area ty1 more">
+						<button type="button" class="btn s_2 c_1 r_1"><span class="text">더보기</span></button>
+					</div>
+
+					<h4 class="guide_h4">적용 예시 페이지 &gt;</h4>
+					<a href="../layout/layout.html" target="_blank">적용 예시 페이지 &gt;</a>
+
+					<h4 class="guide_h4">페이지 하단 고정 버튼</h4>
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2">취소</button>
+							<button type="button" class="btn s_5 c_3 r_2">승인</button>
+						</div>
+					</div>
+
+					<div class="bottom_btn_area ibk">
+						<a href="#" role="button" class="txt_wrap">
+							<div class="ibk_tit">i-ONE뱅크 개인</div>
+							<div class="ibk_txt">
+								내폰을 등록하면 개인 스마트뱅킹으로
+								<br />
+								편리하게 자동로그인
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 인증방법 선택 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">content</div>
+					</div>
+				</div>
+				<!-- e: 인증방법 선택 -->
+
+				<!-- s: Popup -->
+				<!-- s: 로그인 연장 안내 -->
+				<div class="bottom_popup_wrap active" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">로그인 연장 안내</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="common_logout">
+								<div class="common_logout_remain">
+									<strong class="time">26</strong>
+									초 후
+									<br />
+									로그아웃 됩니다.
+								</div>
+								<div class="bg_box ty1">안전한 금융거래를 위하여 서비스 이용이 없으면 자동으로 로그아웃 됩니다.</div>
+							</div>
+						</div>
+
+						<div class="bottom_popup_footer ty2">
+							<button type="button" class="btn s_5 c_1 r_2">로그아웃</button>
+							<button type="button" class="btn s_5 c_3 r_2">로그인 연장</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 로그인 연장 안내 -->
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

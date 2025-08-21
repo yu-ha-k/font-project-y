@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 부가세매입_자주사용하는거래 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 자주사용하는거래선택 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<ul class="space_list_ty3">
+								<li>
+									<a href="#" role="button" class="block" title="상세이동">
+										<div class="group_item link">
+											<div class="group_item_info">
+												<div class="txt3">금 거래</div>
+											</div>
+										</div>
+									</a>
+									<div class="btn_area ty1 mt_16">
+										<button type="button" class="btn s_2 c_1 r_1">삭제</button>
+										<button type="button" class="btn s_2 c_1 r_1">변경</button>
+									</div>
+								</li>
+								<li>
+									<a href="#" role="button" class="block" title="상세이동">
+										<div class="group_item link">
+											<div class="group_item_info">
+												<div class="txt3">자주사용하는 거래 제목</div>
+											</div>
+										</div>
+									</a>
+									<div class="btn_area ty1 mt_16">
+										<button type="button" class="btn s_2 c_1 r_1">삭제</button>
+										<button type="button" class="btn s_2 c_1 r_1">변경</button>
+									</div>
+								</li>
+								<li>
+									<a href="#" role="button" class="block" title="상세이동">
+										<div class="group_item link">
+											<div class="group_item_info">
+												<div class="txt3">최대 한글 30자</div>
+											</div>
+										</div>
+									</a>
+									<div class="btn_area ty1 mt_16">
+										<button type="button" class="btn s_2 c_1 r_1">삭제</button>
+										<button type="button" class="btn s_2 c_1 r_1">변경</button>
+									</div>
+								</li>
+								<li>
+									<div class="no_result_msg ty1">
+										<div class="msg">
+											자주사용하는 거래를
+											<br />
+											찾을 수 없습니다.
+										</div>
+										<div class="ps">자주사용하는 거래를 등록할까요?</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">자주사용하는 거래 새로 등록하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 자주사용하는거래선택 -->
+
+				<!-- s: step2 자주사용하는거래 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">자주사용하는 거래</div>
+							<div class="title_text ty1">자주사용하는 거래 제목</div>
+							<div class="input">
+								<input type="text" name="" id="" title="자주사용하는 거래 제목 입력" placeholder="최대 30자" />
+
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">출금계좌</div>
+
+							<div class="acount_item_select ty1 mt_0">
+								<div class="acount_item ty3" role="button" title="계좌선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<span class="txt_style ty6 fw_4">IBK간편한통장(별명1줄)</span>
+
+									<div class="acount_item ty5">
+										<div class="item">
+											<div class="item_top">
+												<span class="bank_name">기업은행</span>
+												<span class="ac_num">000-000000-00-000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<span class="acount_item_select_money">출금가능액 : 12,000,000원</span>
+							</div>
+
+							<div class="group mt_32">
+								<div class="title_text ty1">입금은행</div>
+								<div class="dropdown ty2" role="button" title="은행/증권사 선택 목록 보기" onclick="comLayerPopUtil.open('optList2');">
+									<div class="dropdown_text">은행/증권사 선택</div>
+								</div>
+
+								<div class="btn_area ty1 mt_16">
+									<button type="button" class="btn s_2 c_1 r_1">자주쓰는계좌</button>
+								</div>
+							</div>
+
+							<div class="group mt_32">
+								<div class="title_text ty1">입금계좌번호</div>
+								<div class="input">
+									<input type="text" name="" id="" title="입금계좌번호 입력" placeholder="숫자만 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+
+							<div class="group mt_32">
+								<div class="title_text ty1">실거래 금액</div>
+
+								<div class="live_input_group">
+									<div class="live_input ty2 enter">
+										<div class="value disabled" aria-live="assertive" role="button" aria-disabled="true" title="실거래 금액 입력">
+											123
+											<span class="unit">원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="group mt_32">
+								<div class="title_text ty1">대금 결제방식 선택</div>
+								<div class="label">
+									<input type="radio" name="name1" id="radio1" />
+									<label for="radio1" class="radio">
+										<i></i>
+										<span>공급가액과 부가세액을 즉시 결제하는 경우</span>
+									</label>
+								</div>
+								<br />
+								<div class="label">
+									<input type="radio" name="name1" id="radio2" />
+									<label for="radio2" class="radio">
+										<i></i>
+										<span>기업구매자금대출 등의 결제방식을 이용하는 경우</span>
+									</label>
+								</div>
+								<br />
+								<div class="label">
+									<input type="radio" name="name1" id="radio3" />
+									<label for="radio3" class="radio">
+										<i></i>
+										<span>
+											금·스크랩 등 거래 시
+											<strong>*영세율</strong>
+											적용을 받는 경우
+											<ul class="list_refer_mark mt_8">
+												<li>세금 부과 대상에는 포함되나 세율은 0% 적용</li>
+											</ul>
+										</span>
+									</label>
+								</div>
+							</div>
+
+							<hr aria-hidden="true" class="divider ty1 full" />
+
+							<div class="group">
+								<div class="title_text ty1">영세율 거래 확인 정보</div>
+								<div class="form_group">
+									<div class="input">
+										<input type="tel" name="" id="" title="증명서발급번호 입력" placeholder="증명서발급번호를 입력해주세요." />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<ul class="list_bullet ty3">
+										<li>내국신용장, 구매승인서 등의 발급번호를 입력해주세요.</li>
+										<li>자세한 사항은 국세청(☎ 126)에 문의하시기 바랍니다.</li>
+									</ul>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1 full" />
+
+							<div class="group">
+								<div class="title_text ty1">세금계산서(간이영수증) 정보</div>
+								<div class="form_group">
+									<div class="input_label ty2">거래품목</div>
+									<div class="dropdown ty2" role="button" title="거래품목 선택 목록 보기" onclick="comLayerPopUtil.open('optList');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="input_label ty2">품목 상세구분</div>
+									<div class="dropdown ty2" role="button" title="품목 상세구분 선택 목록 보기" onclick="comLayerPopUtil.open('optList1');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="input_label ty2">합계금액</div>
+
+									<div class="live_input_group">
+										<div class="live_input ty2">
+											<div class="value" aria-live="assertive" role="button" title="합계금액 입력">숫자만 입력</div>
+										</div>
+									</div>
+
+									<div class="input_label ty2 display_flex space_between">
+										공급가액
+										<div class="txt_style ty6">
+											<span class="color ty5">천원</span>
+										</div>
+									</div>
+
+									<div class="live_input_group">
+										<div class="live_input ty2 enter">
+											<div class="value disabled" aria-live="assertive" role="button" aria-disabled="true" title="공급가액 입력">
+												999
+												<span class="unit">원</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="input_label ty2">부가세액</div>
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">자동계산</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">직접 입력</span></button>
+									</div>
+
+									<div class="live_input_group">
+										<div class="live_input ty2 enter mt_12">
+											<div class="value disabled" aria-live="assertive" role="button" aria-disabled="true" title="부가세액 입력">
+												999
+												<span class="unit">원</span>
+											</div>
+										</div>
+									</div>
+									<ul class="list_bullet ty3">
+										<li>공급사업자가 간이과세인 경우 부가가치세는 0원으로 인정되며, 공제받을 수 있는 매입세액으로 인정되지 않습니다.</li>
+										<li>'자동계산' 선택 시 합계금액만 입력하면 부가세액이 자동 계산됩니다.</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- s: 화면 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">등록</button>
+								</div>
+							</div>
+							<!-- e: 화면 하단 고정 버튼 -->
+						</div>
+					</div>
+					<!-- e: step2 자주사용하는거래 -->
+
+					<!-- s: popup -->
+					<div class="bottom_popup_wrap" id="optList" title="거래품목 선택">
+						<div class="bottom_popup">
+							<div class="bottom_popup_header">
+								<h2 class="tit">거래품목 선택</h2>
+								<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList');">닫기</button>
+							</div>
+							<div class="bottom_popup_body">
+								<ul class="select_list ty1" role="listbox">
+									<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+									<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+									<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+									<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bottom_popup_wrap" id="optList1" title="품목 상세구분 선택">
+						<div class="bottom_popup">
+							<div class="bottom_popup_header">
+								<h2 class="tit">품목 상세구분 선택</h2>
+								<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList1');">닫기</button>
+							</div>
+							<div class="bottom_popup_body">
+								<ul class="select_list ty1" role="listbox">
+									<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+									<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+									<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+									<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bottom_popup_wrap" id="optList2" title="은행/증권사 선택">
+						<div class="bottom_popup">
+							<div class="bottom_popup_header">
+								<h2 class="tit">은행/증권사 선택</h2>
+								<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList2');">닫기</button>
+							</div>
+							<div class="bottom_popup_body">
+								<ul class="select_list ty1" role="listbox">
+									<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+									<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+									<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+									<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bottom_popup_wrap" id="popupAccount">
+						<div class="bottom_popup">
+							<div class="bottom_popup_header">
+								<h2 class="tit">계좌선택</h2>
+								<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+							</div>
+
+							<div class="bottom_popup_body">
+								<ul class="select_list ty3" role="listbox">
+									<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+										<div class="item">
+											<div class="item_top">
+												<div class="badge_cont">
+													<span class="badge ty3 colorB5">개인</span>
+													<div class="item_top_text">별칭</div>
+												</div>
+											</div>
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+									<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+										<div class="item">
+											<div class="item_top">
+												<div class="badge_cont">
+													<span class="badge ty3 colorB5">개인</span>
+												</div>
+											</div>
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+									<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+										<div class="item">
+											<div class="item_top">
+												<div class="badge_cont">
+													<span class="badge ty3 colorETC11">기업</span>
+												</div>
+											</div>
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+									<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+										<div class="item">
+											<div class="item_top">
+												<div class="item_top_text">별칭</div>
+											</div>
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+									<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+										<div class="item">
+											<div class="item_bottom">
+												<div class="item_bottom_text">000-000000-00-000</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- e: popup -->
+				</div>
+			</div>
+			<!-- e: 부가세매입_자주사용하는거래 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

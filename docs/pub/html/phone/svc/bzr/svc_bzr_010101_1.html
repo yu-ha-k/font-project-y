@@ -1,0 +1,1799 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+</head>
+<body>
+<div class="wrap"> 
+    <!-- s: 사업자등록서비스 -->
+    <div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap"> 
+        <!-- s: step1 사업자등록서비스 신청 -->
+        <div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="business_registration_intro_wrap">
+                        <div class="txt_style ty6 color ty7">뭐든지 시작이 중요한 법<br>
+                            사업의 첫 시작도 IBK기업은행과 함께!</div>
+                        <div class="txt_style ty2 bs_rs_intro">사업자등록 원스톱 서비스</div>
+                        <button type="button" class="button_business_start" onclick="uf_goStep(2);">서비스 신청 바로가기</button>
+                    </div>
+                    <p class="txt_style ty1">사업개시 전 또는 사업을 시작한 날로부터 <br>
+                        20일 이내 신청해야 해요.</p>
+                    <p class="txt_style ty3 fw_4 mt_8">IBK 기업은행과 함께 시작하세요. <br>
+                        든든한 사업동반자가 되어 드릴게요.</p>
+                    <ul class="icon_step_list ty1 mt_24 business_registration_service">
+                        <li class="order1">
+                            <div class="inner">
+                                <div class="item"> <span class="tit">인증서 &#47; 수수료 없이 간편하게</span> </div>
+                            </div>
+                        </li>
+                        <li class="order2">
+                            <div class="inner">
+                                <div class="item"> <span class="tit">개인사업자 신청 전용</span> </div>
+                            </div>
+                        </li>
+                        <li class="order3">
+                            <div class="inner">
+                                <div class="item"> <span class="tit">간편인증으로 편리하게</span> </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--20250324 버튼수정-->
+                    <div class="btn_area ty1 mt_32">
+                        <button type="button" class="btn s_4 c_1 r_2">서비스 신청결과조회 바로가기</button>
+                    </div>
+                    <!--//20250324 버튼수정--> 
+                </div>
+                
+                <!--20250318 삭제
+						<div class="group">
+							<div class="title_text ty1 mt_32">준비물 안내</div>
+							<ul class="icon_step_list ty1 mt_24 business_checkList">
+								<li class="order1">
+									<div class="inner">
+										<div class="item">
+											<span class="tit">임대차계약서 사본</span>
+											<span class="desc">사업장을 임차한 경우</span>
+										</div>
+									</div>
+								</li>
+								<li class="order2">
+									<div class="inner">
+										<div class="item">
+											<span class="tit">허가&#183;등록&#183;신고증 사본</span>
+											<span class="desc">[인허가 등 사업을 영위하는 경우] <br>
+												허가(등록, 신고) 전에 등록하는 경우에는 허가(등록)신청서 등 사본 또는 사업계획서
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="order3">
+									<div class="inner">
+										<div class="item">
+											<span class="tit">자금출처 명세서</span>
+											<span class="desc">금지금 도&#183;소매업, 액체&#183;기체연로 도&#183;소매업, 재사용 재료 수집 및 판매업, 과세유흥장소 영위자</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+--> 
+                
+                <!--s: 꼭 알아두세요! -->
+                <div class="group">
+                    <div class="acd_wrap accodian_wrap ty3 active mt_32">
+                        <div class="acd_head accodian_head">
+                            <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                        </div>
+                        <div class="acd_cont accodian_cont">
+                            <div class="inner">
+                                <ul class="list_bullet ty1">
+                                    <li>단, 공동사업자, 유흥업소, 중기/화물운송 사업자는 신청 불가(국세청 홈택스에서 직접 신청 필요)</li>
+                                    <li>기업은행은 사업자등록을 대행하는 것이 아니라 예비 창업자들이 쉽고 간편하게 사업자등록을 할 수 있도록 국세청 홈택스에 필요한 정보를 전달합니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--e: 꼭 알아두세요! --> 
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">서비스 신청 바로가기</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step1 사업자등록서비스 신청 --> 
+        
+        <!-- s: step2 약관동의 -->
+        <div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">약관 동의</div>
+                    <p class="agree_page_text">약관을 확인 후 동의해 주세요</p>
+                    <div class="agree_check_group">
+                        <div class="chk_group_wrap">
+                            <div class="agree_check_group_top">
+                                <div class="label all_chk">
+                                    <input type="checkbox" name="" id="5412" class="chk_point_all" />
+                                    <label for="5412" class="checkbox"> <i></i> <span> <span class="ess_text">필수</span> 약관 모두 동의 </span> </label>
+                                </div>
+                            </div>
+                            <div class="agree_check">
+                                <div class="acd_wrap accodian_wrap ty1">
+                                    <div class="acd_cont accodian_cont chk_list">
+                                        <div class="inner" style="display: block">
+                                            <ul class="term_list">
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group05_1" class="chk_point_sub" />
+                                                        <label for="ago_group05_1" class="checkbox small lbl"> <i></i> <span> IBK기업은행 개인정보 수집·이용·제공 동의 <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                    <button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(4);"> <span class="sr_only">IBK기업은행 개인정보 수집·이용·제공 동의</span> 보기 </button>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group05_2" class="chk_point_sub" />
+                                                        <label for="ago_group05_2" class="checkbox small lbl"> <i></i> <span> 국세청 홈택스 개인정보 이용 동의 <br />
+                                                            (IBK 인증서 서비스) <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                    <button type="button" class="btn ty_txt3 line_bttm btn_view"  onclick="uf_goStep(5);"> <span class="sr_only">국세청 홈택스 개인정보 이용 동의</span> 보기 </button>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group05_3" class="chk_point_sub" />
+                                                        <label for="ago_group05_3" class="checkbox small lbl"> <i></i> <span> 국세청 홈택스 제3자 정보제공 동의 <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                    <button type="button" class="btn ty_txt3 line_bttm btn_view"  onclick="uf_goStep(6);"> <span class="sr_only">국세청 홈택스 제3자 정보제공 동의</span> 보기 </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr aria-hidden="true" class="divider ty1 full" />
+                    
+                    <!-- s: 선택 약관 동의 -->
+                    <div class="agree_check_group">
+                        <div class="chk_group_wrap"> 
+                            <!-- 1개 이상일 시 생성 -->
+                            <div class="agree_check_group_top">
+                                <div class="label all_chk">
+                                    <input type="checkbox" name="" id="agree_check_group_top4" class="chk_point_all" />
+                                    <label for="agree_check_group_top4" class="checkbox"> <i></i> <span> <span class="ess_text">선택</span> 약관 모두 동의 </span> </label>
+                                </div>
+                            </div>
+                            <!-- // 1개 이상일 시 생성 -->
+                            
+                            <div class="agree_check tit_ty">
+                                <div class="top">
+                                    <div class="label">
+                                        <input type="checkbox" name="" id="ag_multi10" class="chk_point" />
+                                        <label for="ag_multi10" class="checkbox small"> <i></i> <span> IBK기업은행 마케팅 정보 수신 동의 <span class="ess_mark">선택</span> </span> </label>
+                                    </div>
+                                    <button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(7);"> <span class="sr_only">IBK기업은행 마케팅 정보 수신 동의</span> 보기 </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: 선택 약관 동의 --> 
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step2 약관동의 --> 
+        
+        <!-- s: step3 선택 약관 동의 안내 -->
+        <div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+            <div class="content_wrap">
+                <div class="bottom_popup_wrap active" id="popup1">
+                    <div class="bottom_popup">
+                        <div class="bottom_popup_header">
+                            <h2 class="tit">선택 약관 동의 안내</h2>
+                            <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+                        </div>
+                        <div class="bottom_popup_body">
+                            <p class="popup_msg_txt1"> 선택 약관에 동의하시면 <br />
+                                다양한 혜택과 이벤트, 상품정보를 <br />
+                                확인하실 수 있어요. 동의할까요? </p>
+                        </div>
+                        <div class="bottom_popup_footer ty2">
+                            <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(2);">다음에</button>
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(8);">모두 동의</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step3 선택 약관 동의 안내 --> 
+        
+        <!-- s: step4 IBK기업은행 개인정보 수집·이용·제공 동의 -->
+        <div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">IBK기업은행 개인정보 수집·이용·제공 동의</div>
+                    <p class="txt">내용123123</p>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">동의</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step4 IBK기업은행 개인정보 수집·이용·제공 동의 --> 
+        
+        <!-- s: step5 국세청 홈택스 개인정보 이용 동의  -->
+        <div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">국세청 홈택스 개인정보 이용 동의</div>
+                    <div class="privacy_cont mt_16">
+                        <div class="terms_content">
+                            <p class="terms">“국세청“ 귀중</p>
+                            <p>본인은 “국세청“(이하 ‘기관’이라 합니다)이 제공하는 간편인증서비스(이하 ‘서비스’라 합니다)를 이용하기 위해, 다음과 같이 기관이 본인의 개인정보를 수집/이용하고, 개인정보의 취급을 위탁하는 것에 동의합니다.</p>
+                            <ul class="terms_list">
+                                <li> (1)수집항목
+                                    <ul>
+                                        <li>- 이용자의 성명, 생년월일, 이동전화번호</li>
+                                        <li>- 연계정보(CI), 중복가입확인정보(DI)</li>
+                                        <li>- 이용자가 이용하는 웹사이트 또는 Application 정보, 이용일시</li>
+                                        <li>- 내외국인 여부</li>
+                                        <li>- 가입한 간편인증 사업자</li>
+                                    </ul>
+                                </li>
+                                <li> (2)이용목적
+                                    <ul>
+                                        <li>- 이용자가 웹사이트 또는 Application에 입력한 본인확인 정보의 정확성 여부 확인 (본인확인서비스 제공) 및 본인인증(전자서명)</li>
+                                        <li>- 해당 웹사이트 또는 Application에 연계정보(CI)/중복가입확인정보(DI) 전송</li>
+                                        <li>- 서비스 관련 상담 및 불만 처리 등</li>
+                                        <li>- 이용 웹사이트 또는 Application 정보 등에 대한 분석 및 세분화를 통한, 이용자의 서비스 이용 선호도 분석</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        (3)개인정보의 보유기간 및 이용기간
+                                        <li>- 이용자가 서비스를 이용하는 기간에 한하여 보유 및 이용. 다만, 아래의 경우는 제외</li>
+                                        <li>- 법령에서 정하는 경우 해당 기간까지 보유(상세 사항은 회사의 개인정보취급방침에 기재된 바에 따름)</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        (4)본인확인서비스 제공을 위한 개인정보의 취급위탁
+                                        <li>수탁자 : “카카오, 통신사패스, NHN페이코, 한국정보인증(삼성패스), KB국민은행, 네이버, 신한은행, 토스, 하나은행, NH농협, 뱅크샐러드, 카카오뱅크, 우리은행, 드림시큐리티”</li>
+                                        <li>- 취급위탁 업무 : 본인확인 정보의 정확성 여부 확인(본인확인서비스 제공), 본인인증 또는 전자서명, 연계정보(CI)/중복가입확인 정보(DI) 생성 및 전송, 서비스 관련 상담 및 불만 처리, 휴대폰인증보호 서비스, 이용자의 서비스 이용 선호도 분석정보 제공관련 시스템 구축 및 위탁영업 등 제공관련 시스템 구축 및 위탁영업 등<br>
+                                            <span class="label_desc_text bullet_txt red">※ 수탁자의 상세 개인정보 취급 위탁 내용은 각 수탁자가 정하는 절차와 방법에 따라 수탁자 홈페이지 등에 게시된 수탁자의 개인정보 취급방침 및 제3자 제공 동의 방침 등에 따릅니다.</span> </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        (5)상기 개인정보 수집 및 이용과 취급위탁에 동의하지 않으실 경우, 서비스를 이용하실 수 없습니다.
+                                        <li>
+                                            <p class="desc">* 기관이 제공하는 서비스와 관련된 개인정보의 취급과 관련된 사항은, 기관의 개인정보취급방침(기관 홈페이지 www.hometax.go.kr)에 따릅니다. 본인은 위 내용을 숙지하였으며 이에 동의합니다. <br>
+                                                “카카오, 통신사패스, NHN페이코, 한국정보인증(삼성패스), KB국민은행, 네이버, 신한은행, 토스, 하나은행, NH농협, 뱅크샐러드, 카카오뱅크, 우리은행, 드림시큐리티“ 귀중</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>귀사가 “국세청“으로부터 위탁 받아 제공하는 간편인증서비스와 관련하여 본인의 개인정보를 수집·이용하고자 하는 경우에는 「개인정보보호법」 제15조, 제22조, 제24조에 따라 본인의 동의를 얻어야 합니다. 이에 본인은 귀사가 아래와 같이 본인의 개인정보를 수집·이용하는데 동의합니다.</p>
+                            <ul class="terms_list">
+                                <li> (1)개인정보의 수집 및 이용 목적
+                                    <ul>
+                                        <li>- 홈택스 서비스(회원가입, 로그인, ID/PW찾기, 거래동의 등) 이용을 위한 본인확인, 본인인증 또는 전자서명, 식별확인 업무처리 및 정보제공</li>
+                                        <li>- “국세청“에 이용자 정보를 전송하여 본인확인 및 휴대폰 정보의 일치 여부 확인</li>
+                                        <li>- 휴대폰 사용자 확인을 위한 SMS(또는 LMS) 인증번호 전송</li>
+                                        <li>- 부정 이용 방지 및 수사의뢰</li>
+                                        <li>- 이용자 본인 요청에 의한 본인확인 이력정보 제공, 민원처리, 추후 분쟁조정을 위한 기록보존, 고지사항 전달 등</li>
+                                        <li>- 부가서비스 제공 및 해제(서비스 가입자에 한함)</li>
+                                        <li>- 기타 법률에서 정한 목적</li>
+                                    </ul>
+                                </li>
+                                <li> (2)수집하는 개인정보의 항목
+                                    <ul>
+                                        <li>- 이용자의 휴대폰번호, 성명, 생년월일, 내/외국인 구분</li>
+                                        <li>- 연계정보(CI), 중복가입확인정보(DI) 정보</li>
+                                        <li>- 인증처 및 사이트 URL, 인증일시, IP주소 등</li>
+                                    </ul>
+                                </li>
+                                <li> (3)개인정보의 제공
+                                <li>- 제공 받는자 : 국세청</li>
+                                <li>- 제공 목적 : 간편인증서비스 업무대행(본인확인정보 및 연계정보 전송, 서비스 관련 업무 상담 및 불만처리 등)</li>
+                                <li>- 제공 항목 : 성명, 생년월일, 휴대폰번호, 연계정보(CI)</li>
+                                <li>- 보유 기간 : “제공받는 자”의 이용목적 달성 시 까지 보관하며, 세부사항은 각 사업자의 개인정보처리방침을 따름</li>
+                                </li>
+                                <li> (4)개인정보의 보유 및 이용 기간 <br>
+                                    개인정보는 개인정보의 수집목적 또는 제공받은 목적이 소멸되면 파기됩니다. 단, ‘개인정보보호법’, ‘정보통신망 이용 촉진 및 정보보호 등에 관한 법률’, ‘신용정보의 이용 및 보호에 관한 법률’ 등 기타 관련 법령의 규정에 의하여 법률관계의 확인 등을 이유로 특정한 기간 동안 보유하여야 할 필요가 있을 경우 에는 아래에 정한 기간 동안 보유합니다.
+                                    <ul>
+                                        <li>- 신용정보의 이용 및 보호의 관한 법률에 의거 정보 보존 기간: 3년</li>
+                                        <li>- 계약 또는 청약철회 등에 관한 기록 : 5년</li>
+                                        <li>- 대금결제 및 재화 등의 공급에 관한 기록 : 5년</li>
+                                        <li>- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년</li>
+                                        <li>- 기타 다른 법률의 규정에 의하여 보유가 허용되는 기간</li>
+                                    </ul>
+                                </li>
+                                <li> (5)동의거부권리 및 거부에 따른 불이익 내용
+                                    <ul>
+                                        <li>개인정보 수집·이용 및 제공에 따른 동의는 거부할 수 있으며, 동의 후에도 언제든지 철회 가능합니다. 다만, 동의 거부 시에는 서비스 이용이 제한될 수 있습니다.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">동의</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step5 국세청 홈택스 개인정보 이용 동의  --> 
+        
+        <!-- s: step6 국세청 홈택스 제3자 정보제공 동의  -->
+        <div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">국세청 홈택스 제3자 정보제공 동의 </div>
+                    <div class="privacy_cont mt_16">
+                        <div class="terms_content">
+                            <p>국세청은 정보주체의 동의, 법률에 특별한 규정이 있는 경우 등 개인정보보호법 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</p>
+                            <ul class="terms_list">
+                                <li> 가. 용어의 정의
+                                    <ul>
+                                        <li>1. 연계정보(CI) : 특정 개인을 식별하기 위해 본인확인기관에서 생성한 암호화된 개인식별번호</li>
+                                        <li>2. 인증사업자 : 카카오, NHN페이코, 통신사패스, KB국민은행, 한국정보인증(삼성패스), 신한은행, 네이버, 토스, 하나은행, NH농협, 뱅크샐러드, 카카오뱅크, 우리은행, 드림시큐리티 등 전자서명 서비스를 제공하는 사업자</li>
+                                        <li>3. 본인확인기관 : 코리아크레딧뷰로(KCB) 등 본인확인 서비스를 제공하는 사업자</li>
+                                    </ul>
+                                </li>
+                                <li> 나. 제3자 제공에 관한 사항
+                                    <ul>
+                                        <li>1. 개인정보를 제공받는 자 : 인증사업자, 본인확인기관</li>
+                                        <li>2. 제공받는 자의 개인정보 이용목적 : 간편인증 시 본인확인 또는 전자서명</li>
+                                        <li>3. 제공하는 개인정보 항목 : 주민등록번호(외국인등록번호) 또는 생년월일(로그인 시), 성명, 휴대폰번호</li>
+                                        <li>4. 제공받는 자의 보유 및 이용기간 : 본인확인 또는 전자서명 후 즉시 파기 <br>
+                                            <p>위 개인정보의 제3자 제공 동의를 거부할 수 있습니다. 다만, 관련 홈택스 이용 목적에 따른 서비스의 제한이 있을 수 있습니다.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">동의</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step6 국세청 홈택스 제3자 정보제공 동의  --> 
+        
+        <!-- s: step7 IBK기업은행 마케팅 정보 수신 동의 -->
+        <div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">IBK기업은행 마케팅 정보 수신 동의</div>
+                    <div class="privacy_cont mt_16">
+                        <div class="terms_content">
+                            <p>내용</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">동의</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step7 IBK기업은행 마케팅 정보 수신 동의 --> 
+        
+        <!-- s: step8 간편인증 진행 -->
+        <div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="txt_style ty1">간편 인증</div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty1 mt_32">인증서 선택</div>
+                        <div class="btn_area toggleable ty1" role="radiogroup">
+                            <button type="button" role="radio" aria-checked="true" class="active"><span class="text">카카오</span></button>
+                            <button type="button" role="radio" aria-checked="false"><span class="text">네이버</span></button>
+                            <button type="button" role="radio" aria-checked="true" class=""><span class="text">PASS</span></button>
+                        </div>
+                        <div class="input_label ty1 mt_32">대표자 이름</div>
+                        <div class="input">
+                            <input type="text" name="" id="" title="대표자 이름입력" placeholder="대표자 이름입력" />
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1 mt_32">대표자 주민등록번호</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="생년월일 6자리 입력" placeholder="" />
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after full_value">
+                                <button type="button" aria-label="뒤 7자리" class="keypad_btn"></button>
+                            </div>
+                        </div>
+                        <div class="input_label ty1 mt_32">통신사</div>
+                        <div class="dropdown ty2" role="button" title="통신사 목록보기" onclick="comLayerPopUtil.open('telecom');">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                        <div class="input_label ty1 mt_32">대표자 휴대폰번호</div>
+                        <div class="comp_wrap phone">
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력" />
+                            </div>
+                        </div>
+                        <ul class="list_bullet ty1 mb_24">
+                            <li>휴대폰문자와 이메일로 국세청 정보 수신 동의</li>
+                        </ul>
+                        <div class="btn_area ty1">
+                            <button type="button" class="btn s_4 c_2 r_2">인증 요청하기</button>
+                            <!-- <button type="button" class="btn s_4 c_2 r_2">인증 다시요청</button> --> 
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(2);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(9);">인증 확인</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step8 간편인증 진행 --> 
+        
+        <!-- s: 통신사 선택 팝업 -->
+        <div class="bottom_popup_wrap" id="telecom" title="통신사 선택">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">통신사 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('telecom');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" aria-selected="false">SKT</li>
+                        <li role="option" tabindex="-1" aria-selected="false">KT</li>
+                        <li role="option" tabindex="-1" aria-selected="false">LGU+</li>
+                        <li role="option" tabindex="-1" aria-selected="false">SKT (알뜰폰)</li>
+                        <li role="option" tabindex="-1" aria-selected="false">KT (알뜰폰)</li>
+                        <li role="option" tabindex="-1" aria-selected="false">LGU+ (알뜰폰)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- e: 통신사 선택 팝업 --> 
+        
+        <!-- s: step9 정보 입력 -->
+        <div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="txt_style ty1">정보 입력</div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty1 mt_32">대표자 이메일주소</div>
+                        <div class="comp_wrap email">
+                            <div class="select_domain">
+                                <div class="input">
+                                    <input type="text" name="" id="" class="input_box" value="" title="아이디 입력" placeholder="아이디 입력" />
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                                <span>@</span>
+                                <div class="dropdown ty5" role="button" title="선택" onclick="comLayerPopUtil.open('emailOptList');">
+                                    <div class="dropdown_text">ibk.com</div>
+                                </div>
+                            </div>
+                            <div class="input direct">
+                                <input type="text" name="" id="" title="도메인 직접 입력" placeholder="도메인 직접 입력" />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                        </div>
+                        <ul class="list_bullet ty1">
+                            <li>국세청 정보 수신 동의</li>
+                        </ul>
+                        <div class="input_label ty1"> 사업장 전화번호 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <input type="tel" name="" id="" title="사업장 전화번호 입력" placeholder="사업장 전화번호 입력
+									" />
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1 mt_32"> 자택 전화번호 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <input type="text" name="" id="" title="자택 전화번호 입력" placeholder="자택 전화번호 입력" />
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1 mt_32"> 사업 특성 <em class="ess_text ty1">선택</em> </div>
+                        <ol class="">
+                            <li>
+                                <div class="question fw_5 mb_6">1. 상가 또는 사무실을 빌려서 사용하나요? </div>
+                                <span class="label_desc_text bullet_txt ty2">임대 사업장 정보 입력이 필요해요.</span>
+                                <div class="btn_area ty1 mt_16">
+                                    <div class="radio_button">
+                                        <input type="radio" name="rb01" id="rb0101">
+                                        <label for="rb0101" class="radio"> <i></i> <span class="text">아니요</span> </label>
+                                    </div>
+                                    <div class="radio_button">
+                                        <input type="radio" name="rb01" id="rb0102" checked="">
+                                        <label for="rb0102" class="radio"> <i></i> <span class="text">예</span> </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mt_24">
+                                <div class="question fw_5 mb_6">2. 통신판매를 하실 건가요? (전자상거래, 해외직구대행 등) </div>
+                                <span class="label_desc_text bullet_txt ty2">쇼핑몰 명칭과 도메인 정보가 필요해요.</span>
+                                <div class="btn_area ty1 mt_16">
+                                    <div class="radio_button">
+                                        <input type="radio" name="rb02" id="rb0101">
+                                        <label for="rb0101" class="radio"> <i></i> <span class="text">아니요</span> </label>
+                                    </div>
+                                    <div class="radio_button">
+                                        <input type="radio" name="rb02" id="rb0102" checked="">
+                                        <label for="rb0102" class="radio"> <i></i> <span class="text">예</span> </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mt_24">
+                                <div class="question fw_5 mb_6">3. 관세 관련 우편물을 사업장이 아닌 다른 주소에서 받으시나요?</div>
+                                <span class="label_desc_text bullet_txt ty2">사업장이 아닌 다른 주소지 정보가 필요해요.</span>
+                                <div class="btn_area ty1 mt_16">
+                                    <div class="radio_button">
+                                        <input type="radio" name="rb03" id="rb0101">
+                                        <label for="rb0101" class="radio"> <i></i> <span class="text">아니요</span> </label>
+                                    </div>
+                                    <div class="radio_button">
+                                        <input type="radio" name="rb03" id="rb0102" checked="">
+                                        <label for="rb0102" class="radio"> <i></i> <span class="text">예</span> </label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(8);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(10);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step9 정보 입력 --> 
+        
+        <!-- s: step10 임대 사업장 정보 입력 -->
+        <div id="step10" data-jx-step-no="10" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1"> 임대 사업장 정보 입력 </div>
+                    <ul class="list_bullet ty4">
+                        <li>본인 소유분도 자가면적에 추가해 주세요. </li>
+                    </ul>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty1"> 자가면적 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">㎥</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">평</span></button>
+                            </div>
+                            <div class="comp_wrap with_count">
+                                <div class="count_wrap">
+                                    <div class="input has_value">
+                                        <input type="text" name="" id="" title="숫자 입력" placeholder="숫자 입력">
+                                        <button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+                                    </div>
+                                    <div class="with_count_utils"> <span class="count"> m2 </span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 타가면적 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">㎥</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">평</span></button>
+                            </div>
+                            <div class="comp_wrap with_count">
+                                <div class="count_wrap">
+                                    <div class="input has_value">
+                                        <input type="text" name="" id="" title="숫자 입력" placeholder="숫자 입력">
+                                        <button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+                                    </div>
+                                    <div class="with_count_utils"> <span class="count"> m2 </span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 임대차 추가 </div>
+                        <div class="btn_area ty1">
+                            <button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(11);">추가하기</button>
+                        </div>
+                        
+                        <!-- s : 임대차 추가 완료 -->
+                        <ul class="d_list ty1 mt_16">
+                            <li>
+                                <div class="d_list_l">주민등록번호</div>
+                                <div class="d_list_r">123456-2******</div>
+                            </li>
+                            <li>
+                                <div class="d_list_l">대표자이름</div>
+                                <div class="d_list_r">김기은</div>
+                            </li>
+                            <li>
+                                <div class="d_list_l">부동산 주소</div>
+                                <div class="d_list_r">서울시 중구 을지로 79 04541</div>
+                            </li>
+                            <li>
+                                <div class="d_list_l">계약일자</div>
+                                <div class="d_list_r">2021.01.01</div>
+                            </li>
+                            <li>
+                                <div class="d_list_l">면적</div>
+                                <div class="d_list_r">1,000㎥</div>
+                            </li>
+                        </ul>
+                        <ul class="d_list ty1 mt_16">
+                            <li>
+                                <div class="d_list_l">주민등록번호</div>
+                                <div class="d_list_r">123456-2******</div>
+                            </li>
+                            <li>
+                                <div class="d_list_l">대표자이름</div>
+                                <div class="d_list_r">김기은</div>
+                            </li>
+                            <li>
+                                <div class="d_list_l">부동산 주소</div>
+                                <div class="d_list_r">서울시 중구 을지로 79 04541</div>
+                            </li>
+                            <li>
+                                <div class="d_list_l">계약일자</div>
+                                <div class="d_list_r">2021.01.01</div>
+                            </li>
+                            <li>
+                                <div class="d_list_l">면적</div>
+                                <div class="d_list_r">1,000㎥</div>
+                            </li>
+                        </ul>
+                        <!-- e : 임대차 추가 완료 --> 
+                    </div>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(9);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(13);">다음</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step10 임대 사업장 정보 입력 --> 
+        
+        <!-- s: step11 임대인 정보 입력  -->
+        <div id="step11" data-jx-step-no="11" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="txt_style ty1">임대인 정보 입력</div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty1 mt_32">임대인 구분</div>
+                        <div class="dropdown ty2" role="button" title="임대인 구분 목록보기" onclick="comLayerPopUtil.open('landlordSelect');">
+                            <div class="dropdown_text">임대인 구분 선택</div>
+                        </div>
+                        <div class="input_label ty1 mt_32">임대인 주민등록번호</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="생년월일 6자리 입력" placeholder="" />
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after full_value">
+                                <button type="button" aria-label="뒤 7자리" class="keypad_btn"></button>
+                            </div>
+                        </div>
+                        <div class="input_label ty1 mt_32">임대인 이름</div>
+                        <div class="input">
+                            <input type="text" name="" id="" value="" title="임대인 이름 입력" placeholder="임대인 이름 입력">
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1 mt_32">사업자등록번호</div>
+                        <div class="comp_wrap business_num">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+                        </div>
+                        <div class="comp_wrap with_count with_btn ">
+                            <button type="button" class="btn s_4 c_2 r_2">확인하기</button>
+                        </div>
+                        <div class="input_label ty1 mt_32">상호(법인명)</div>
+                        <div class="input">
+                            <input type="text" name="" id="" value="" title="상호(법인명) 입력" placeholder="" disabled>
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1 mt_32">법인등록번호</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="" name="" id="" title="" placeholder="" />
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after full_value">
+                                <button type="button" aria-label="7자리" class="keypad_btn"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(10);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(12);">다음</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step11 임대인 정보 입력  --> 
+        
+        <!-- s: 임대인 구분 선택 팝업 -->
+        <div class="bottom_popup_wrap" id="landlordSelect" title="임대인 구분 선택">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">임대인 구분 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('landlordSelect');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" aria-selected="false">주민등록번호</li>
+                        <li role="option" tabindex="-1" aria-selected="false">사업자등록번호</li>
+                        <li role="option" tabindex="-1" aria-selected="false">법인등록번호</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- e: 임대인 구분 선택 팝업 --> 
+        
+        <!-- s: step12 임대인 정보 입력  -->
+        <div id="step12" data-jx-step-no="12" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="txt_style ty1">임대차 정보 입력</div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty1 mt_32">부동산 소재지</div>
+                        <div class="comp_wrap address">
+                            <div class="input has_search">
+                                <input type="text" name="" id="" value="" title="우편번호 입력" placeholder="우편번호">
+                                <!-- 우편번호 클릭시 주소찾기 address_tab 이동  -->
+                                <button type="button" class="search">검색</button>
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="" id="" value="" title="도로명주소 입력" placeholder="도로명주소">
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="" id="" value="" title="기타주소" placeholder="기타주소">
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                        </div>
+                        <div class="txt_style ty1 mt_32">계약 정보 입력</div>
+                        <div class="input_label ty1 mt_32">계약일자</div>
+                        <div class="from_to">
+                            <div class="input">
+                                <input type="text" name="" id="" title="계약일자 입력" placeholder="계약일자 입력" />
+                                <button type="button" class="btn calendar" title="계약일자 선택" onclick="comLayerPopUtil.open('cal02');"></button>
+                            </div>
+                        </div>
+                        <div class="input_label ty1 mt_32">계약기간</div>
+                        <div class="comp_wrap from_to">
+                            <div class="input">
+                                <input type="text" name="" id="" title="시작일 입력" placeholder="계약시작일" />
+                                <button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup1_1');"></button>
+                            </div>
+                            <span>~</span>
+                            <div class="input">
+                                <input type="text" name="" id="" title="마지막일 입력" placeholder="계약종료일" />
+                                <button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup1_1');"></button>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> (전세)보증금 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <input type="text" name="" id="" value="" title="(전세)보증금 입력" placeholder="(전세)보증금 입력">
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1"> 월세(차임) <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <input type="text" name="" id="" value="" title="월세(차임) 입력" placeholder="월세(차임) 입력">
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1"> 임대인 전화 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <input type="text" name="" id="" value="" title="숫자만 입력" placeholder="">
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1">면적</div>
+                        <div class="input">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">㎥</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">평</span></button>
+                            </div>
+                            <div class="comp_wrap with_count">
+                                <div class="count_wrap">
+                                    <div class="input has_value">
+                                        <input type="text" name="" id="" title="숫자 입력" placeholder="숫자 입력">
+                                        <button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+                                    </div>
+                                    <div class="with_count_utils"> <span class="count"> m2 </span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(10);">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(10);">추가</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step12 임대인 정보 입력  --> 
+        
+        <!-- s: cal02 계약일자 선택 팝업 -->
+        <div class="bottom_popup_wrap" id="cal02">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">계약일자 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('cal02');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+                        <div class="calendar_select_wrap">
+                            <div class="calendar_select">
+                                <button id="preYear" type="button" class="btn_prev" title="이전 년도 입력"> <span class="t_hidden">이전 년도</span> </button>
+                                <span> <em id="year">2024</em> 년 </span>
+                                <button id="nextYear" type="button" class="btn_next" title="다음 년도 입력"> <span class="t_hidden">다음 년도</span> </button>
+                            </div>
+                            <div class="calendar_select">
+                                <button id="preMon" type="button" class="btn_prev" title="이전 달 입력"> <span class="t_hidden">이전 달</span> </button>
+                                <span> <em id="mon">5</em> 월 </span>
+                                <button id="nextMon" type="button" class="btn_next" title="다음 달 입력"> <span class="t_hidden">다음 달</span> </button>
+                            </div>
+                        </div>
+                        <div class="wrap_calendar">
+                            <table class="calendar weekday">
+                                <caption class="hidden">
+                                상세기간 달력
+                                </caption>
+                                <colgroup>
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="sun">일</th>
+                                        <th scope="col">월</th>
+                                        <th scope="col">화</th>
+                                        <th scope="col">수</th>
+                                        <th scope="col">목</th>
+                                        <th scope="col">금</th>
+                                        <th scope="col" class="sat">토</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="btn_prev"><em class="hidden">이전달</em> 28 </td>
+                                        <td class="btn_prev"><em class="hidden">이전달</em> 29 </td>
+                                        <td class="btn_prev"><em class="hidden">이전달</em> 30 </td>
+                                        <td><button type="button">1</button></td>
+                                        <td><button type="button">2</button></td>
+                                        <td><button type="button">3</button></td>
+                                        <td class="sat"><em class="hidden">휴일</em>
+                                            <button type="button">4</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sun"><em class="hidden">휴일</em>
+                                            <button type="button">5</button></td>
+                                        <td><button type="button">6</button></td>
+                                        <td><button type="button">7</button></td>
+                                        <td><button type="button">8</button></td>
+                                        <td><button type="button">9</button></td>
+                                        <td><button type="button">10</button></td>
+                                        <td class="sat"><em class="hidden">휴일</em>
+                                            <button type="button">11</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sun"><em class="hidden">휴일</em>
+                                            <button type="button">12</button></td>
+                                        <td><button type="button">13</button></td>
+                                        <td><button type="button">14</button></td>
+                                        <td><button type="button">15</button></td>
+                                        <td><button type="button">16</button></td>
+                                        <td><button type="button">17</button></td>
+                                        <td class="sat"><em class="hidden">휴일</em>
+                                            <button type="button">18</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sun"><em class="hidden">휴일</em>
+                                            <button type="button">19</button></td>
+                                        <td><button type="button">20</button></td>
+                                        <td class="today"><button type="button" title="오늘 날짜">21</button></td>
+                                        <td><button type="button">22</button></td>
+                                        <td class="on term"><button type="button" title="선택된 날짜">23</button></td>
+                                        <td class="off"><button type="button">24</button></td>
+                                        <td class="off"><em class="hidden">휴일</em>
+                                            <button type="button">25</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="off"><em class="hidden">휴일</em>
+                                            <button type="button">26</button></td>
+                                        <td class="off"><button type="button">27</button></td>
+                                        <td class="off"><button type="button">28</button></td>
+                                        <td class="off"><button type="button">29</button></td>
+                                        <td class="off"><button type="button">30</button></td>
+                                        <td class="off"><button type="button">31</button></td>
+                                        <td class="btn_next"><em class="hidden">다음달</em> 1 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: cal02 계약일자 선택 팝업 --> 
+        
+        <!-- s: popup1_1 계약기간 선택 팝업 -->
+        <div class="bottom_popup_wrap" id="popup1_1">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">달력</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1_1');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+                        <div class="calendar_select_wrap">
+                            <div class="calendar_select">
+                                <button id="preYear" type="button" class="btn_prev" title="이전 년도"> <span class="t_hidden">이전 년도</span> </button>
+                                <span> <em id="year">2024</em> 년 </span>
+                                <button id="nextYear" type="button" class="btn_next" title="다음 년도"> <span class="t_hidden">다음 년도</span> </button>
+                            </div>
+                            <div class="calendar_select">
+                                <button id="preMon" type="button" class="btn_prev" title="이전 달"> <span class="t_hidden">이전 달</span> </button>
+                                <span> <em id="mon">5</em> 월 </span>
+                                <button id="nextMon" type="button" class="btn_next" title="다음 달"> <span class="t_hidden">다음 달</span> </button>
+                            </div>
+                        </div>
+                        <div class="wrap_calendar">
+                            <table class="calendar weekday">
+                                <caption class="hidden">
+                                상세기간 달력
+                                </caption>
+                                <colgroup>
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                <col style="width: 14.28%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="sun">일</th>
+                                        <th scope="col">월</th>
+                                        <th scope="col">화</th>
+                                        <th scope="col">수</th>
+                                        <th scope="col">목</th>
+                                        <th scope="col">금</th>
+                                        <th scope="col" class="sat">토</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="btn_prev"><em class="hidden">이전달</em> 28 </td>
+                                        <td class="btn_prev"><em class="hidden">이전달</em> 29 </td>
+                                        <td class="btn_prev"><em class="hidden">이전달</em> 30 </td>
+                                        <td><button type="button">1</button></td>
+                                        <td><button type="button">2</button></td>
+                                        <td><button type="button">3</button></td>
+                                        <td class="sat"><em class="hidden">휴일</em>
+                                            <button type="button">4</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sun"><em class="hidden">휴일</em>
+                                            <button type="button">5</button></td>
+                                        <td><button type="button">6</button></td>
+                                        <td><button type="button">7</button></td>
+                                        <td><button type="button">8</button></td>
+                                        <td><button type="button">9</button></td>
+                                        <td><button type="button">10</button></td>
+                                        <td class="sat"><em class="hidden">휴일</em>
+                                            <button type="button">11</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sun"><em class="hidden">휴일</em>
+                                            <button type="button">12</button></td>
+                                        <td><button type="button">13</button></td>
+                                        <td><button type="button">14</button></td>
+                                        <td><button type="button">15</button></td>
+                                        <td><button type="button">16</button></td>
+                                        <td><button type="button">17</button></td>
+                                        <td class="sat"><em class="hidden">휴일</em>
+                                            <button type="button">18</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="sun"><em class="hidden">휴일</em>
+                                            <button type="button">19</button></td>
+                                        <td><button type="button">20</button></td>
+                                        <td class="today"><button type="button" title="오늘 날짜">21</button></td>
+                                        <td><button type="button">22</button></td>
+                                        <td class="on term"><button type="button" title="선택된 날짜">23</button></td>
+                                        <td class="off"><button type="button">24</button></td>
+                                        <td class="off"><em class="hidden">휴일</em>
+                                            <button type="button">25</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="off"><em class="hidden">휴일</em>
+                                            <button type="button">26</button></td>
+                                        <td class="off"><button type="button">27</button></td>
+                                        <td class="off"><button type="button">28</button></td>
+                                        <td class="off"><button type="button">29</button></td>
+                                        <td class="off"><button type="button">30</button></td>
+                                        <td class="off"><button type="button">31</button></td>
+                                        <td class="btn_next"><em class="hidden">다음달</em> 1 </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: popup1_1 계약기간 선택 팝업 --> 
+        
+        <!-- s: step13 통신판매 정보 입력 -->
+        <div id="step13" data-jx-step-no="13" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group ">
+                    <div class="title_text ty1"> 통신판매 정보 입력 </div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty1 mt_32">쇼핑몰 명칭</div>
+                        <div class="input">
+                            <input type="text" name="" id="" title="쇼핑몰 명칭 입력" placeholder="쇼핑몰 명칭 입력" />
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1 mt_32">쇼핑몰 도메인</div>
+                        <div class="input">
+                            <input type="text" name="" id="" title="쇼핑몰 도메인 입력" placeholder="쇼핑몰 도메인 입력" />
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                    </div>
+                    <div class="btn_area ty1 mt_20">
+                        <button type="button" class="btn s_4 c_2 r_2">추가하기</button>
+                    </div>
+                    <div class="mt_16">
+                        <div class="btn_area business_registration_delete">
+                            <button type="button" class="btn s_2 c_1 r_3">삭제</button>
+                        </div>
+                        <ul class="d_list ty1 ">
+                            <li>
+                                <div class="d_list_l">쇼핑몰 명칭</div>
+                                <div class="d_list_r">친절한쇼핑몰</div>
+                            </li>
+                            <li>
+                                <div class="d_list_l">쇼핑몰 명칭</div>
+                                <div class="d_list_r">친절한쇼핑몰</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(10);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(14);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step13 통신판매 정보 입력 --> 
+        
+        <!-- s: step14 우편물 수령주소 등록 -->
+        <div id="step14" data-jx-step-no="14" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group ">
+                    <div class="title_text ty1"> 국세 관련 우편물 받을 주소 등록 </div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty1 mt_32">서류받을 주소</div>
+                        <div class="comp_wrap address">
+                            <div class="input has_search">
+                                <input type="text" name="" id="" value="" title="우편번호 입력" placeholder="우편번호">
+                                <!-- 우편번호 클릭시 주소찾기 address_tab 이동  -->
+                                <button type="button" class="search">검색</button>
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="" id="" value="" title="주소정보 입력" placeholder="주소입력">
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="" id="" value="" title="상세주소 입력" placeholder="상세주소 입력">
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                        </div>
+                        <div class="comp_wrap float_num">
+                            <div class="front">
+                                <div class="input">
+                                    <input type="tel" name="" id="" title="건물명 입력" placeholder="건물명">
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                            </div>
+                            <span class="dot"></span>
+                            <div class="back">
+                                <div class="input">
+                                    <input type="tel" name="" id="" title="동/층/호 입력" placeholder="동/층/호">
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comp_wrap address">
+                            <div class="input">
+                                <input type="text" name="" id="" value="" title="기타주소 입력" placeholder="기타주소">
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(11);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(15);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step14 우편물 수령주소 등록 --> 
+        
+        <!-- s: step15 사업장 정보 입력 -->
+        <div id="step15" data-jx-step-no="15" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group ">
+                    <div class="title_text ty1"> 사업장 정보 입력 </div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty1 mt_32">상호명</div>
+                        <div class="input">
+                            <input type="text" name="" id="" title="상호명 입력" placeholder="상호명 입력" />
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty1 mt_32">개업일자</div>
+                        <div class="from_to">
+                            <div class="input">
+                                <input type="text" name="" id="" title="개업일자 입력" value="" placeholder="개업일자 입력" />
+                                <button type="button" class="btn calendar" title="개업일자 선택" onclick="comLayerPopUtil.open('cal02');"></button>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 종업원수 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <div class="comp_wrap with_count">
+                                <div class="count_wrap">
+                                    <div class="input has_value">
+                                        <input type="text" name="" id="" title="숫자만 입력" placeholder="숫자만 입력">
+                                        <button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+                                    </div>
+                                    <div class="with_count_utils"> <span class="count"> 명 </span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 자기자금 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <div class="comp_wrap with_count">
+                                <div class="count_wrap">
+                                    <div class="input has_value">
+                                        <input type="text" name="" id="" title="숫자만 입력" placeholder="숫자만 입력">
+                                        <button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+                                    </div>
+                                    <div class="with_count_utils"> <span class="count"> 원 </span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 타인자금 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <div class="comp_wrap with_count">
+                                <div class="count_wrap">
+                                    <div class="input has_value">
+                                        <input type="text" name="" id="" title="숫자만 입력" placeholder="숫자만 입력">
+                                        <button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+                                    </div>
+                                    <div class="with_count_utils"> <span class="count"> 원 </span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 사업장면적 <em class="ess_text ty1">선택</em> </div>
+                        <div class="input">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">㎥</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">평</span></button>
+                            </div>
+                            <div class="comp_wrap with_count">
+                                <div class="count_wrap">
+                                    <input type="text" name="" id="" title="숫자 입력" placeholder="숫자 입력" />
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1 mt_32">사업장 주소</div>
+                        <div class="comp_wrap address">
+                            <div class="input has_search">
+                                <input type="text" name="" id="" value="" title="우편번호 입력" placeholder="우편번호">
+                                <!-- 우편번호 클릭시 주소찾기 address_tab 이동  -->
+                                <button type="button" class="search">검색</button>
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="" id="" value="" title="주소정보 입력" placeholder="주소입력">
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="" id="" value="" title="상세주소 입력" placeholder="상세주소 입력">
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                        </div>
+                        <div class="comp_wrap float_num">
+                            <div class="front">
+                                <div class="input">
+                                    <input type="tel" name="" id="" title="건물명 입력" placeholder="건물명">
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                            </div>
+                            <span class="dot"></span>
+                            <div class="back">
+                                <div class="input">
+                                    <input type="tel" name="" id="" title="동/층/호 입력" placeholder="동/층/호">
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comp_wrap address">
+                            <div class="input">
+                                <input type="text" name="" id="" value="" title="기타주소 입력" placeholder="기타주소">
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                        </div>
+                        <div class="input_label ty1 mt_32">사업자 유형</div>
+                        <div class="input">
+                            <div class="btn_area ty1">
+                                <div class="radio_button">
+                                    <input type="radio" name="rb01" id="rb0101">
+                                    <label for="rb0101" class="radio"> <i></i> <span class="text">일반사업자</span> </label>
+                                </div>
+                                <div class="radio_button">
+                                    <input type="radio" name="rb01" id="rb0102" checked="">
+                                    <label for="rb0102" class="radio"> <i></i> <span class="text">간이사업자</span> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 간이과세 포기 신고 여부 </div>
+                        <ul class="list_dash">
+                            <li>해당 사항을 동의하면 간이과세 포기신고서를 제출하는 것으로 처리돼요.</li>
+                            <li>간이과세 적용요건이 되어도 일반과세자로 남게 되니 주의하세요! <br>
+                                (부가가치세법 제70조 및 동법시행령 116조)</li>
+                        </ul>
+                        <div class="input mt_16">
+                            <div class="btn_area ty1">
+                                <div class="radio_button">
+                                    <input type="radio" name="rb02" id="rb0103">
+                                    <label for="rb0103" class="radio"> <i></i> <span class="text">아니요</span> </label>
+                                </div>
+                                <div class="radio_button">
+                                    <input type="radio" name="rb02" id="rb0104" checked="">
+                                    <label for="rb0104" class="radio"> <i></i> <span class="text">예</span> </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(14);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(16);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step15 사업장 정보 입력 --> 
+        
+        <!-- s: step16 업종 정보 입력 -->
+        <div id="step16" data-jx-step-no="16" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group ">
+                    <div class="title_text ty1"> 업종 정보 입력 </div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty1"> 업종 구분 </div>
+                        <div class="btn_area ty1">
+                            <button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(17);">추가하기</button>
+                        </div>
+                        <div class="mt_16">
+                            <div class="btn_area business_registration_delete">
+                                <button type="button" class="btn s_2 c_1 r_3">삭제</button>
+                            </div>
+                            <ul class="d_list ty1 mt_16">
+                                <li>
+                                    <div class="d_list_l">업종구분</div>
+                                    <div class="d_list_r">주</div>
+                                </li>
+                                <li>
+                                    <div class="d_list_l">업종코드</div>
+                                    <div class="d_list_r">523988</div>
+                                </li>
+                                <li>
+                                    <div class="d_list_l">업태명</div>
+                                    <div class="d_list_r">도매 및 소매업</div>
+                                </li>
+                                <li>
+                                    <div class="d_list_l">업종명</div>
+                                    <div class="d_list_r">화초 및 식물 소매업</div>
+                                </li>
+                                <li>
+                                    <div class="d_list_l">소비자상대업종</div>
+                                    <div class="d_list_r">여</div>
+                                </li>
+                                <li>
+                                    <div class="d_list_l">현금영수증<br>
+                                        의무발행업종</div>
+                                    <div class="d_list_r">부</div>
+                                </li>
+                                <li>
+                                    <div class="d_list_l">산업 분류코드</div>
+                                    <div class="d_list_r">(47851) 화초 및 식물</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="input_label ty1"> 제출서류 안내 </div>
+                        <div class="btn_area ty1">
+                            <button type="button" class="btn s_4 c_2 r_2" onclick="comLayerPopUtil.open('fullpopup1');">제출서류 확인하기</button>
+                        </div>
+                        <div class="input_label ty1 mt_32"> 추가 설명 <em class="ess_text ty1">선택</em> </div>
+                        <textarea rows="6" placeholder="실제 사업에 대한 추가설명이 필요한 경우 내용을 입력해 주세요." aria-label="아이디어 제안 내용 입력" class="w_100p"></textarea>
+                        <div class="input_label ty1"> 인허가 사업여부 </div>
+                        <div class="input">
+                            <div class="btn_area ty1">
+                                <div class="radio_button">
+                                    <input type="radio" name="rb01" id="rb0101">
+                                    <label for="rb0101" class="radio"> <i></i> <span class="text">아니요</span> </label>
+                                </div>
+                                <div class="radio_button">
+                                    <input type="radio" name="rb01" id="rb0102" checked="">
+                                    <label for="rb0102" class="radio"> <i></i> <span class="text">예</span> </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 의제주류 면허신청 </div>
+                        <ul class="list_bullet ty1 mt_0">
+                            <li>의제판매업(일반소매) : 백화점, 슈퍼마켓, 편의점 또는 이와 유사한 상점에서 주류를 소매하는 자</li>
+                            <li>의제판매업(음식점) : 식품위생법에 따라 영업신고를 한 일반음식점영업자</li>
+                        </ul>
+                        <div class="dropdown ty2 mt_16" role="button" title="의제주류 면허신청 선택" onclick="comLayerPopUtil.open('LiquorLicenseSelect');">
+                            <div class="dropdown_text">의제주류 면허신청 선택</div>
+                        </div>
+                        <div class="input_label ty1"> 개별소비세 해당여부 </div>
+                        <ul class="list_bullet ty1 mt_0">
+                            <li>개별소비세는 특정한 물품, 특정한 장소 입장행위, 특정한 장소에서의 유흥음식행위 및 특정한 장소에서의 영업행위에 대하여 부과돼요. </li>
+                        </ul>
+                        <div class="dropdown ty2 mt_10" role="button" title="개별소비세 해당여부 선택" onclick="comLayerPopUtil.open('applicabilityConsumptionSelect');">
+                            <div class="dropdown_text">개별소비세 해당여부 선택</div>
+                        </div>
+                    </div>
+                    
+                    <!-- s: 화면 하단 고정 버튼 -->
+                    <div class="bottom_btn_area">
+                        <div class="btn_area ty1">
+                            <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(15);">이전</button>
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(19);">다음</button>
+                        </div>
+                    </div>
+                    <!-- e: 화면 하단 고정 버튼 --> 
+                </div>
+            </div>
+        </div>
+        <!-- e: step16 업종 정보 입력 --> 
+        
+        <!-- s: 의제주류 면허신청 팝업 -->
+        <div class="bottom_popup_wrap" id="LiquorLicenseSelect" title="의제주류 면허신청">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">의제주류 면허신청</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('LiquorLicenseSelect');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" aria-selected="false">해당 없음</li>
+                        <li role="option" tabindex="-1" aria-selected="false">의제판매업(일반소매)</li>
+                        <li role="option" tabindex="-1" aria-selected="false">의제판매업(유흥음식점) </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- e: 의제주류 면허신청 팝업 --> 
+        
+        <!-- s: 개별소비세 해당여부 팝업 -->
+        <div class="bottom_popup_wrap" id="applicabilityConsumptionSelect" title="개별소비세 해당여부">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">개별소비세 해당여부 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('applicabilityConsumptionSelect');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" aria-selected="false">해당 없음</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세물품제조</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세물품판매</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세장소</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세유흥장소</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세유흥장소및과세장소</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세물품제조및판매</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세유흥장소및과세물품판매</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세장소</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세유흥장소</li>
+                        <li role="option" tabindex="-1" aria-selected="false">과세영업장소</li>
+                        <li role="option" tabindex="-1" aria-selected="false">담배물품</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- e: 개별소비세 해당여부 팝업 --> 
+        
+        <!-- s: 제출서류 확인하기 팝업 -->
+        <div class="full_popup_wrap" id="fullpopup1">
+            <div class="content_wrap ty4">
+                <div class="group">
+                    <div class="bg_box ty1 mb_24">
+                        <ul class="list_bullet ty2">
+                            <li>인허가사업 업종에 해당하는 제출서류와 근거법령 등을 확인할 수 있어요.</li>
+                            <li>인허가 사업은 아래 제출서류를 꼭 첨부해 주세요.(미제출 시 사업자등록 처리가 지연될 수 있어요)</li>
+                        </ul>
+                    </div>
+                    <div class="tbl ty2">
+                        <table>
+                            <caption>
+                            캡션 필수 입력
+                            </caption>
+                            <colgroup>
+                            <col style="width: 100px">
+                            <col style="width: auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="ta_l" scope="row">주업종코드</th>
+                                    <td class="ta_r">154901</td>
+                                </tr>
+                                <tr>
+                                    <th class="ta_l" scope="row">부업종코드</th>
+                                    <td class="ta_r">154902, 123456, 123456, 123456 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr aria-hidden="true" class="divider ty1 full" />
+                    <div class="title_text ty1"> 제출서류 목록 </div>
+                    <ul class="d_list ty1 mb_16">
+                        <li>
+                            <div class="d_list_l">제출서류</div>
+                            <div class="d_list_r">
+                                <button type="button" class="fw_5"> <span class="color ty3">영업신고증</span> </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d_list_l">업종코드</div>
+                            <div class="d_list_r">154901</div>
+                        </li>
+                        <li>
+                            <div class="d_list_l">적용업종명</div>
+                            <div class="d_list_r">즉석판매제조가공업</div>
+                        </li>
+                        <li>
+                            <div class="d_list_l">구분</div>
+                            <div class="d_list_r">신고</div>
+                        </li>
+                        <li>
+                            <div class="d_list_l">근거법령</div>
+                            <div class="d_list_r">식품위생법제27조</div>
+                        </li>
+                        <li>
+                            <div class="d_list_l">접수기관</div>
+                            <div class="d_list_r">시,군,구</div>
+                        </li>
+                        <li>
+                            <div class="d_list_l">민원사무명</div>
+                            <div class="d_list_r">식품영업신고</div>
+                        </li>
+                        <li>
+                            <div class="d_list_l">비고</div>
+                            <div class="d_list_r"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" id="btnComErrorConfirm" onclick="comLayerPopUtil.close('fullpopup1');">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 제출서류 확인하기 팝업 --> 
+        
+        <!-- s: step17 업종 정보 검색 -->
+        <div id="step17" data-jx-step-no="17" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group ">
+                    <div class="title_text ty1"> 업종코드 또는 업종으로 검색해 주세요. </div>
+                    <div class="input has_search">
+                        <input type="text" name="" id="" placeholder="주요 키워드 입력" onclick="uf_goStep(16);">
+                        <button type="button" class="search" onclick="uf_goStep(16);">검색</button>
+                        <button type="button" class="del">텍스트삭제</button>
+                    </div>
+                    <!-- 검색결과 없을경우 -->
+                    <div class="no_result_msg">
+                        <div class="msg">검색된 내용이 없어요.</div>
+                        <div class="ps">다른 키워드로 검색해보세요.</div>
+                    </div>
+                    <div class="group mt_24">
+                        <div class="title_text ty1">총 20 건</div>
+                        <div class="tbl ty2">
+                            <table>
+                                <caption>
+                                Royal+ Blue 대상 우대 서비스 내역
+                                </caption>
+                                <colgroup>
+                                <col style="width: auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td class="ta_l"><button type="button" class="ta_l w_100p" onclick="comLayerPopUtil.open('popup2');">
+                                            <div class="title_text ty3">제조업 154901</div>
+                                            기타 식료품 | 커피가공업 </button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="btn_area ty1 more">
+                            <button type="button" class="btn s_2 c_1 r_1"><span class="text">더보기</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step17 업종 정보 검색 --> 
+        
+        <!-- s: popup2 업종 상세정보 팝업 -->
+        <div class="bottom_popup_wrap " id="popup2">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">업종 상세정보</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+                </div>
+                <div class="bottom_popup_body pt_0">
+                    <div class="bg_box ty1">
+                        <div class="title_text ty3">업종 적용범위 및 기준 </div>
+                        커피 가공품, 커피를 함유하는 커피 대용품 및 농축물 생산과 이들을 재료로 하는 조제식품을 제조하는 산업활동을 말한다. <br>
+                        (예시) <br>
+                        - 볶은 커피 생산<br>
+                        - 카페인 제거 커피 생산 <br>
+                        - 커피 농축물 생산 <br>
+                        - 커피 대용품 제조(커피 함유한 것) <br>
+                        (제외)
+                        - 캔커피(음료) 제조)155402 <br>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('popup2'); uf_goStep(17);">부업종 등록</button>
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup2'); uf_goStep(17);">주업종 등록</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: popup2 업종 상세정보 팝업 --> 
+        
+        <!-- s: step18 업종 정보 검색 -->
+        <div id="step18" data-jx-step-no="18" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group ">
+                    <div class="title_text ty1"> 업종코드 또는 업종으로 검색해 주세요. </div>
+                    <div class="input has_search">
+                        <input type="text" name="" id="" placeholder="주요 키워드 입력" onclick="uf_goStep(16);">
+                        <button type="button" class="search" onclick="uf_goStep(16);">검색</button>
+                        <button type="button" class="del">텍스트삭제</button>
+                    </div>
+                    <!-- 검색결과 없을경우 -->
+                    <div class="no_result_msg">
+                        <div class="msg">검색된 내용이 없어요.</div>
+                        <div class="ps">다른 키워드로 검색해보세요.</div>
+                    </div>
+                    <div class="group mt_24">
+                        <div class="title_text ty1">총 20 건</div>
+                        <div class="tbl ty2">
+                            <table>
+                                <caption>
+                                Royal+ Blue 대상 우대 서비스 내역
+                                </caption>
+                                <colgroup>
+                                <col style="width: auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td class="ta_l"><button type="button" class="ta_l w_100p" onclick="comLayerPopUtil.open('popup2');">
+                                            <div class="title_text ty3">제조업 154901</div>
+                                            기타 식료품 | 커피가공업 </button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="btn_area ty1 more">
+                            <button type="button" class="btn s_2 c_1 r_1"><span class="text">더보기</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step18 업종 정보 검색 --> 
+        
+        <!-- s: step19 서류 제출 -->
+        <div id="step19" data-jx-step-no="19" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group ">
+                    <div class="txt_style ty1">서류 제출</div>
+                    <div class="bg_box ty1 mb_24">
+                        <ul class="list_bullet ty2">
+                            <li><span class="color ty3">PDF파일</span>, 이미지 파일(<span class="color ty3">JPG, PNG, GIF, TIF, BMP</span>)만 제출할 수 있어요.</li>
+                            <li>파일은 최대 10건까지, 파일당 용량은 5MB 이하로만 제출할 수 있어요.</li>
+                        </ul>
+                    </div>
+                    <hr aria-hidden="true" class="divider ty1 full" />
+                    <div class="txt_style ty1">첨부 서류</div>
+                    <ul class="d_list ty7 mt_16">
+                        <li> <span class="d_list_l"> [공통] 등록이나 허가업종 영위 시 그 허가(신고증) 사본 또는 사업계획서 </span> <span class="d_list_r">
+                            <div class="submit_chk">
+                                <button type="button" class="btn btn s_2 r_1 c_1">파일찾기</button>
+                            </div>
+                            </span> </li>
+                        <li> <span class="d_list_l"> 기타 </span> <span class="d_list_r">
+                            <div class="submit_chk"> 
+                                <!-- 제출완료 시, end 수정 --> 
+                                <span class="state end">제출완료</span> </div>
+                            </span> </li>
+                    </ul>
+                    <hr aria-hidden="true" class="divider ty1 full" />
+                    <div class="txt_style ty1 mt_24">제출파일 목록
+                        <button type="button" class="btn s_2 c_1 r_3 f_right">삭제</button>
+                    </div>
+                    <div class="tbl ty2 mt_16">
+                        <table>
+                            <caption>
+                            캡션 필수 입력
+                            </caption>
+                            <colgroup>
+                            <col style="width: 2.6rem">
+                            <col style="width: 2.6rem">
+                            <col style="width: auto">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"> <div class="label">
+                                            <input type="checkbox" name="" id="chkedAll" />
+                                            <label for="chkedAll" class="checkbox"> <i></i> </label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">NO</th>
+                                    <th scope="col">파일명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ta_c"><div class="label">
+                                            <input type="checkbox" name="" id="chkedAll" />
+                                            <label for="chkedAll" class="checkbox"> <i></i> </label>
+                                        </div></td>
+                                    <td class="ta_c">1</td>
+                                    <td class="ta_l">허가·등록·신고증 사본_1111.pdf</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(16);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(20);">서류 제출</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step19 서류 제출 --> 
+        
+        <!-- s: step20 신청완료 -->
+        <div id="step20" data-jx-step-no="20" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group ">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        사업자등록 원스톱 서비스를 신청했어요 </div>
+                    <ul class="d_list ty1 mb_16">
+                        <li>
+                            <div class="d_list_l">상호명</div>
+                            <div class="d_list_r">가나다라</div>
+                        </li>
+                        <li>
+                            <div class="d_list_l">접수번호</div>
+                            <div class="d_list_r">123456</div>
+                        </li>
+                    </ul>
+                    <ul class="list_bullet ty2 mb_24">
+                        <li>사업자등록 신청 정보를 국세청에 안전하게 전달했어요.</li>
+                        <li>신청 후 1~3일 내로 사업자등록 신청 결과가 문자로 발송될 예정이예요.</li>
+                        <li>취소 및 변경사항이 있을 경우 국세청 홈텍스에서 직접 처리하셔야 해요.</li>
+                    </ul>
+                    
+                    <!-- s: 화면 하단 고정 버튼 -->
+                    <div class="bottom_btn_area">
+                        <div class="btn_area ty1">
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">메인화면으로 이동</button>
+                        </div>
+                    </div>
+                    <!-- e: 화면 하단 고정 버튼 --> 
+                </div>
+            </div>
+        </div>
+        <!-- e: step20 신청완료 --> 
+        
+    </div>
+    <!-- e: 사업자등록서비스 --> 
+</div>
+<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+</body>
+</html>

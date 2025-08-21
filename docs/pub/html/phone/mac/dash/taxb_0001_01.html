@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+    <meta charset="UTF-8">
+    <title>세금계산서</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no"> <!-- IOS 앱에서 숫자 전화번호 인식 막기-->
+    <link rel="stylesheet"         href="../resource/css/basic.css?2019020904" type="text/css">
+    <script type="text/javascript" src="../resource/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../resource/js/_kking_app.js"></script>
+    <script type="text/javascript" src="../resource/js/jnut.formatter.js?2019031204"></script>
+    <script type="text/javascript" src="../resource/js/nativeBridge.js"></script>
+    <script type="text/javascript" src="../resource/js/jnut.js"></script>
+    <script type="text/javascript" src="../resource/js/back.js?2019013001"></script>
+    <script type="text/javascript" src="../resource/js/attr.mgr.js?2019020902"></script>
+    <script type="text/javascript" src="../resource/js/data.jns.js?2018122702"></script>
+    <script type="text/javascript" src="../resource/js/data.jns.fns.js?2019030402"></script>
+    <script type="text/javascript" src="../resource/js/data.href.js"></script>
+    <script type="text/javascript" src="../resource/js/data.enter.js"></script>
+    <script type='text/javascript' src='../resource/js/class.asel.js?201812051101'></script>
+    <script type="text/javascript" src="../resource/js/class.auto.hypen.js"></script>
+    <script type="text/javascript" src="../resource/js/class.modal.js"></script>
+    <script type="text/javascript" src="../resource/js/class.slider.js?2018013101"></script>
+    <script type="text/javascript" src="../resource/js/class.size-chart.js?2019021504"></script>
+    <script type="text/javascript" src="../resource/js/class.table.js"></script>
+    <script type="text/javascript" src="../resource/js/class.calendar.js?2019020802"></script>
+    <script type="text/javascript" src="../resource/js/class.tab.js"></script>
+    <script type="text/javascript" src="../resource/js/class.list.js"></script>
+    <script type="text/javascript" src="../resource/js/class.down.arrow.js"></script>
+    <script type="text/javascript" src="../resource/js/class.scroll.js"></script>
+    <script type="text/javascript" src="../resource/js/class.alert.js"></script>
+    <script type="text/javascript" src="../resource/js/class.hider.js"></script>
+    <script type="text/javascript" src="../resource/js/class.select.js"></script>
+    <script type="text/javascript" src="../resource/js/class.incNum.js"></script>
+    <script type="text/javascript" src="../resource/js/data.radio.js"></script>
+    <script type="text/javascript" src="../resource/js/data.chart.js?2019013010"></script>
+    <script type="text/javascript" src="../resource/js/chart.js"></script>
+    <script type="text/javascript" src="../resource/js/class.data.js"></script>
+    <script type="text/javascript" src="../resource/js/pack.unsel.date.js"></script> <!-- 날짜 직접 입력시 버튼 unselect -->
+	<script type="text/javascript" src="../resource/js/pack.arrow.toggle.js"></script> <!-- 검색버튼 화살표 Toggle -->
+</head>
+<body>
+   <header class="bg b-white z5 hide">
+        <div class="row no-mb">
+            <div class="col s10">
+                <div class=" icon-arrow fl mr20" data-jns="app://exit">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span class="text title">세금계산서</span>
+            </div>
+            <div class="col s02 lh60 pos-re mt05" tabindex="0" role="button">
+                <div class="hamburger" data-jns="app://openMenu" data-jne="touchend">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="text smaller t-right">전체메뉴</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+    
+        <div class='hide'> 
+            <!-- 매출 -->
+            <!-- <div class='hide exec_taxb00102_e' data-jns="mac://com/com_0001_00" data-jno-root=".tab-01" data-jng=".year_2" data-jns-next='.taxb00102_svc'></div>     -->
+            <!-- 매입 -->    
+            <!-- <div class='hide exec_taxb00101_e' data-jns="mac://com/com_0001_00" data-jno-root=".tab-02" data-jng=".year_1" data-jns-next='.taxb00101_svc'></div> 	 -->
+            
+            <!-- <div class="hide taxb00102_svc" data-jns='mac://dash/taxb_0001_02_01' data-jno-root='.tab-01' data-jng='.year_2' data-jns-next='SEL_KEY:.goToSlide1'></div>
+            <div class="hide taxb00101_svc" data-jns='mac://dash/taxb_0001_01_01' data-jno-root='.tab-02' data-jng='.year_1' data-jns-next='SEL_KEY:.goToSlide2'></div> -->
+
+            <div class='goToSlide1'     data-jns='fn://ui/gotoSlidePage' data-target-slider='.slider-tax01' data-frm-data='.year_2.in-year'     data-cmp-data='.CMP_YM'></div>
+            <div class='goToSlide2'     data-jns='fn://ui/gotoSlidePage' data-target-slider='.slider-tax02' data-frm-data='.year_1.in-year'     data-cmp-data='.CMP_YM'></div>
+        </div>
+
+        <div class=""></div>
+        <div class="tab type-a">
+            <div class="tab-head">
+                <div class="col s06 text normal taxb01 exec_taxb00102" data-jns='fn://ui/executeOnlyOnce'	data-jns-target='.exec_taxb00102_e' data-tab=".tab-01">매출</div>
+                <div class="col s06 text normal taxb02 exec_taxb00101" data-jns='fn://ui/executeOnlyOnce'	data-jns-target='.exec_taxb00101_e' data-tab=".tab-02">매입</div>
+            </div>
+            <div class="tab-body pl00 pr00">
+                <!-- 매출 body-->
+                <div class="tab-01">
+                    <div class=" pb10">
+                        <div class="row mb10 flexbox IP4flex-end">
+                            <div class="col s05"></div>
+                            <div class="col s03 text t-center bold normal s-transp h35 pos-re">
+                                <!-- <select class="text normal select w100 year_2 CMP_YY" data-jno="YEAR_LIST" data-jno-root='.tab-01' data-jne="change" data-jns="mac://dash/taxb_0001_02_01" data-jni="YEAR_LIST" data-jng=".year_2"></select> -->
+                                <select class="text normal select w100 year_2">
+                                    <option selected>2019년</option>
+                                    <option>2018년</option>
+                                    <option>2017년</option>
+                                    <option>2016년</option>
+                                    <option>2015년</option>
+                                    <option>2014년</option>
+                                </select>
+                            </div> 
+                            <div class="col s04">
+                                <div class="w60 fr bordern radius06 lh30 text t-center small" data-jns="fn://ui/onlyOneClick" data-jns-next="!ONLY_ONE_CLICK:.set-polling-01">
+                                    <span class="icon-setting-n"></span>설정
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="pos-re h250 overh">
+                            <span class="slider-prev pos-ab l10 z1 t50p ele-slider-prev" data-jns="fn://ui/sliderPrev" data-slider-target=".slider-tax01"></span>
+                            <span class="slider-next pos-ab r10 z1 t50p ele-slider-next" data-jns="fn://ui/sliderNext" data-slider-target=".slider-tax01"></span>
+                            <div class="slider-tax01-list" data-jne='change' data-jns-element='.slider-tax01' data-jns='fn://ui/sliderChgBtn' data-slider-prev='.ele-slider-prev' data-slider-next='.ele-slider-next'>
+                                <div class="slider overh slider-tax01">
+                                    <div class="list taxb_slide hauto" data-jno="SLIDE">
+                                        <!-- <div class="hide">  -->
+                                        <div>
+                                            <!-- <div class="hide" data-row="CHART_FLAG" data-jnf="hider"> -->
+                                            <div class="" data-row="CHART_FLAG" data-jnf="hider">
+                                                <div class="row text semi-normal">  
+                                                    <span class="hide input_text CMP_YM" data-row="ISS_YMD" data-jni="ISS_YMD" data-jnf="strYYYYMMFromStr"></span>
+                                                    <span class="text semi-normal" data-row="ISS_YMD" data-jnf="strSELYYMMFromStr"></span>
+                                                    2019-02 매출
+                                                </div>
+                                                
+                                                <div class="e-data h150 w150 mg-auto" data-jno="pie-chart2" data-chart-color="dflt" data-chart-opt="onlyDoughnut" data-chart="doughnut"></div>
+
+                                                <div class="row">
+                                                    <div class="col s06 lh25">
+                                                        <p>
+                                                            <span class="row-bank mr05 bg b-berry"></span>
+                                                            <span class="text t-ellipse t-left" >미래인**</span>
+                                                            <span class="text bold normal inline-block"  >43%</span>
+                                                        </p>
+                                                        <p>
+                                                            <span class="row-bank mr05 bg b-grape" ></span>
+                                                            <span class="text t-ellipse t-left">하나***</span>
+                                                            <span class="text bold normal inline-block">20%</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col s06 lh25 text t-right">
+                                                        <p>
+                                                            <span class="row-bank mr05 bg b-emerald"></span>
+                                                            <span class="text t-ellipse t-left" >개발자***</span>
+                                                            <span class="text bold normal inline-block" >20%</span>
+                                                        </p>
+                                                        <p>
+                                                            <span class="row-bank mr05 bg b-coral" ></span>
+                                                            <span class="text t-ellipse t-left" >케이****</span>
+                                                            <span class="text bold normal inline-block" >17%</span>
+                                                        </p>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            <div class="hide" data-row="CHART_FLAG" data-jnf="rvsHider" > 
+                                                <div class="row text semi-normal" >
+                                                    <span class="" data-row="ISS_YMD" data-jnf="strSELYYMMFromStr"></span> 매출
+                                                </div>
+                                                <div class="ml20 mr20 bg b-lnavy pt30 pb30 h150">
+                                                    <p class="text t-center lh60 mt20"><span class="evticon icon-exclamation-mark"></span></p>
+                                                    <p class="text t-lnavy lh20 t-center pb20">해당 월은 조회내역이 없습니다.</p>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb20">
+                        <div class="col s12">
+                            <button class="modal no-close alpha_btn s_3 c_2 r_2 search_btn01 search_btn" data-jns="element://.search_condition01">
+                                <!-- <div class="inquiry_btn_open" data-jns="element://.search_btn_close"></div> -->
+                                <span class="icon-reading-sm mr05"></span>검색<span class="icon-down-b ml10 icon-search_condition01"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- <div class="inquiry_btn_open" data-jns="element://.search_btn_close" data-jns-next=".inquiry_btn"></div> -->
+                    <div class="modal hide search_condition01 ttob nclear">
+                    		<div class='hide modal-close search_condition01_close'></div>
+                        <div class="row mb05 mt05">
+                            <div class="col s12">조회구분</div>
+                        </div>                        
+                        <div class="asel asel-only taxb-inp01 input_text2" >
+                            <div class="flexbox row btn-area mt05 mb00 text t-center pos-re">
+                                <div data-value="0" class="aio asel-target flex-btn03 selected">전체</div>
+                                <div data-value="1" class="aio asel-target flex-btn03">품목</div>
+                                <div data-value="2" class="aio asel-target flex-btn03">공급받는자</div>
+                            </div>
+                        </div>
+                        <div class="row mb05 mt15">
+                            <div class="col s12">검색어 입력</div>
+                        </div>
+                        <div class="row col s12 mb10 h40 pos-re">
+                            <input type="text" class="text t-dark-gray in10 data-inquiry evticon icon-search-tbox input_text taxb-inp01" data-jni="INPUT_TEXT" placeholder="검색어를 입력하세요">
+                            <div class="pos-ab r20 t10">
+                                <span class="pos-ab r10 t0"><img src="../asset/img/icon-reading.png" height="17px"></span>
+                            </div>
+                        </div>
+                        <div class="row mb05 mt15">
+                            <div class="col s12">조회기간</div>
+                        </div>
+                        <div class="row flexbox mb10">
+                            <span class="border-box inline-block pos-re w100p">
+                                <input type="text" class="in10 h40 lh40 text type t-dark-gray taxb-inp01 start_day cal-input1 next_grp01 autoHypen" value="2018-08-21" maxlength="10" />
+                                <button class="btn-icon-cal dateInput" ></button>
+                            </span>
+                            <span class="border-box inline-block pos-re ml05 w100p">
+                                <input type="text" class="in10 h40 lh40 fr text type t-dark-gray taxb-inp01 ml05 w97p end_day cal-input2 next_grp01 autoHypen" value="2019-02-21" maxlength="10" />
+                                <button class="btn-icon-cal dateInput" ></button>
+                            </span>
+                        </div> 
+                        <div class="asel asel-only taxb-inp01 next_grp01" >
+                            <div class="row flexbox ibkt-btn-svc text t-center small mb10">
+                                <div class="asel-target mr05 sm-btn" 			>최근20건</div>
+                                <div class="asel-target mr05 sm-btn radius03" 	>당일</div>
+                                <div class="asel-target mr05 sm-btn radius03" 	>3일</div>
+                                <div class="asel-target mr05 sm-btn radius03" 	>1개월</div>
+                                <div class="asel-target sm-btn radius03 selected">6개월</div> 
+                            </div>
+                            <!-- <div class="row col s12 dot text small t-dark-gray mb10">조회가능기간 : 2014년~현재(1년 단위)</div> -->
+                            <div class='row mb30'>
+                                <div class='col s12'>
+                                    <button class="btn skyblue text inquiry_btn radius03 bold taxb01_search_btn" data-jns="element://.search_btn01" >조회</button>
+                                </div>
+                            </div>  
+                        </div> 
+                    </div>
+
+                    
+                    <div class='hide list-next-chk' data-target-list='.more01' data-jno='FRIST_CHK' data-jnf='listAppender'></div> 
+                    <div class="mt10"> 
+                        <div class="list more02">
+                            <div class="bg b-white-gray underline upperline lh50">
+                                <div class="row no-mg bold text">2019년 2월</div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0002_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0002_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0002_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                        </div>
+                        <div class="list more02">
+                            <div class="bg b-white-gray underline  lh50">
+                                <div class="row no-mg bold text">2019년 1월</div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0002_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0002_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0002_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                        </div>
+                        <!----------------- Paging Button ------------->
+                        <div class="row mt20 mb20" >
+                            <div class="col s12">
+                                <button class="btn line text bold radius03 search_btn lh30 moreList01" > 
+                                    더보기
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hide" data-jnf="nullHider" data-jno="AMSL_LIST">
+                            <div class="ml20 mr20 bg b-lnavy">
+                                <p class="text t-center lh60"><span class="icon-exclamation-mark"></span></p>
+                                <p class="text t-lnavy lh20 t-center pb20">조회된 내역이 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 매입 body -->
+                <div class="tab-02 hide">
+                    <div class="pb10">
+                        <div class="row mb10 flexbox IP4flex-end">
+                            <div class="col s05"></div>
+                            <div class="col s03 text t-center bold normal s-transp h35 pos-re">
+                                <!-- <select class="text normal select w100 year_1" data-jno="YEAR_LIST" data-jne="change" data-jns="mac://dash/taxb_0001_01_01" data-jno-root='.tab-02' data-jni="YEAR_LIST" data-jng=".year_1" ></select> -->
+                                <select class="text normal select w100 year_2">
+                                    <option selected>2019년</option>
+                                    <option>2018년</option>
+                                    <option>2017년</option>
+                                    <option>2016년</option>
+                                    <option>2015년</option>
+                                    <option>2014년</option>
+                                </select>
+                            </div>
+                            <div class="col s04">
+                                <div class="w60 fr bordern radius06 lh30 text t-center small"  data-jns="fn://ui/onlyOneClick" data-jns-next="!ONLY_ONE_CLICK:.set-polling-02">
+                                    <span class="evticon icon-setting-n"></span>설정
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="overh pos-re h250">
+                            <span class="slider-prev pos-ab l10 z1 t50p ele-slider2-prev" data-jns="fn://ui/sliderPrev" data-slider-target=".slider-tax02"></span>
+                            <span class="slider-next pos-ab r10 z1 t50p ele-slider2-next" data-jns="fn://ui/sliderNext" data-slider-target=".slider-tax02"></span>
+                            <div class="slider-tax02-list" data-jne='change' data-jns-element='.slider-tax02' data-jns='fn://ui/sliderChgBtn' data-slider-prev='.ele-slider2-prev' data-slider-next='.ele-slider2-next'>
+                                <div class="slider overh slider-tax02">
+                                    <div class="list taxb_slide hauto"  data-jno="SLIDE" >
+                                        <div class="">
+                                            <div class="hide"  data-row="CHART_FLAG" data-jnf="hider">
+                                                <div class="row text semi-normal">
+                                                    <span class="hide" data-jni="FILTER">EQUAL</span>
+                                                    <span class="hide input_text CMP_YM" data-row="ISS_YMD" data-jni="ISS_YMD" data-jnf="strYYYYMMFromStr"></span>
+                                                    <span class="text semi-normal" data-row="ISS_YMD" data-jnf="strSELYYMMFromStr"></span>
+                                                    2019-01 매입
+                                                </div>
+                                                <div class="e-data h150 w150 mg-auto" data-row="CHART" data-chart-color="dflt" data-chart-opt="onlyDoughnut" data-chart="doughnut"></div>
+                                                <div class="row">
+                                                    <div class="col s06 lh25">
+                                                        <p>
+                                                            <span class="row-bank mr05" data-row="CHART_COLOR_0" data-jnf="labelColor"></span>
+                                                            <span class="text t-ellipse t-left t-left" data-row="CHART_NM_0"></span>
+                                                            <span class="text bold normal inline-block w40" data-row="CHART_VAL_0"></span>
+                                                        </p>
+                                                        <p>
+                                                            <span class="row-bank mr05" data-row="CHART_COLOR_2" data-jnf="labelColor"></span>
+                                                            <span class="text t-ellipse t-left t-left" data-row="CHART_NM_2"></span>
+                                                            <span class="text bold normal inline-block w40" data-row="CHART_VAL_2"></span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col s06 lh25 text t-right">
+                                                        <p>
+                                                            <span class="row-bank mr05" data-row="CHART_COLOR_1" data-jnf="labelColor"></span>
+                                                            <span class="text t-ellipse t-left t-left" data-row="CHART_NM_1"></span>
+                                                            <span class="text bold normal inline-block w40" data-row="CHART_VAL_1"></span>
+                                                        </p>
+                                                        <p>
+                                                            <span class="row-bank mr05" data-row="CHART_COLOR_3" data-jnf="labelColor"></span>
+                                                            <span class="text t-ellipse t-left t-left" data-row="CHART_NM_3"></span>
+                                                            <span class="text bold normal inline-block w40" data-row="CHART_VAL_3"></span>
+                                                        </p>
+                                                    </div>
+                                                </div>      
+                                            </div>    
+                                            <div class="" data-row="CHART_FLAG" data-jnf="rvsHider" > 
+                                                <div class="row text semi-normal" >
+                                                    <span class="" data-row="ISS_YMD" data-jnf="strSELYYMMFromStr"></span> 2019-01 매입
+                                                </div>
+                                                <div class="ml20 mr20 bg b-lnavy pt30 pb30 h150">
+                                                    <p class="text t-center lh60 mt20"><span class="evticon icon-exclamation-mark"></span></p>
+                                                    <p class="text t-lnavy lh20 t-center pb20">해당 월은 조회내역이 없습니다.</p>
+                                                </div>
+                                            </div>                 
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="row mb20">
+                        <div class="col s12">
+                            <button class="modal no-close btn line text bold radius12 search_btn02 search_btn lh30 " data-jns="element://.search_condition02">
+                                <!-- <div class="inquiry_btn_open" data-jns="element://.search_btn_close"></div> -->
+                                <span class="evticon icon-reading-sm mr05"></span>검색<span class="evticon icon-down-b  icon-search_condition02 ml10"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- <div class="inquiry_btn_open" data-jns="element://.search_btn_close" data-jns-next=".inquiry_btn"></div> -->
+                    <div class="modal hide search_condition02 ttob nclear">
+                    		<div class='hide modal-close search_condition02_close' data-jns="fn://ui/removeClass" data-jng='.search_condition02_close' data-jni='.icon-search_condition02'>icon-up-b</div>
+                        <div class="row mb05 mt05">
+                            <div class="col s12">조회구분</div>
+                        </div>
+                        <div class="asel asel-only taxb-inp02 input_text" data-jni="KEY" data-jno="KEY">
+                            <div class="flexbox row btn-area mt05 mb00 text t-center pos-re">
+                                <div data-value="0" class="aio asel-target flex-btn03 selected">전체</div>
+                                <div data-value="1" class="aio asel-target flex-btn03">품목</div>
+                                <div data-value="2" class="aio asel-target flex-btn03">공급자</div>
+                            </div>
+                        </div> 
+                        <div class="row mb05 mt15">
+                            <div class="col s12">검색어 입력</div>
+                        </div>
+                        <div class="row col s12 mb10 h40 pos-re">
+                            <input type="text" class="text t-dark-gray in10 data-inquiry evticon icon-search-tbox input_text taxb-inp02" data-jni="INPUT_TEXT" placeholder="검색어를 입력하세요">
+                            <div class="pos-ab r20 t10">
+                                <span class="pos-ab r10 t0"><img src="../resource/img/icon-reading.png" height="17px"></span>
+                            </div>
+                        </div>
+                        <div class="row mb05 mt15">
+                            <div class="col s12">조회기간</div>
+                        </div>
+                        <div class="row flexbox mb10">
+                            <span class="border-box inline-block pos-re w100p">
+                                <input type="text" class="radius12 in10 h40 lh40 text type t-dark-gray taxb-inp02 start_day cal-input3 autoHypen" maxlength="10" data-jni="STR_YMD" data-jno="STR_YMD" data-jnf="strYYYYMMDDFromStr"/>
+                                <button class="btn-icon-cal dateInput" data-calendar-target=".cal-input3"></button>
+                            </span>
+                            <span class="border-box inline-block pos-re ml05 w100p">
+                                <input type="text" class="radius12 in10 h40 lh40 fr text type t-dark-gray taxb-inp02 ml05 w97p end_day cal-input4  autoHypen" maxlength="10" data-jni="END_YMD" data-jno="END_YMD" data-jnf="strYYYYMMDDFromStr"/>
+                                <button class="btn-icon-cal dateInput" data-calendar-target=".cal-input4" ></button>
+                            </span>
+                        </div> 
+                        <div class="asel asel-only taxb-inp02" data-jni="MSRN" data-jno="MSRN">
+                            <div class="row flexbox ibkt-btn-svc text t-center small mb10">
+                                <!-- <div class="asel-target mr05 sm-btn" 				data-jns-spread="true"   data-value="1" data-jns="mac://dash/ibkt_0001_01_04" data-jng=".msrn1">최근20건</div>
+                                <div class="asel-target mr05 sm-btn radius03" 		data-jns-spread="true"   data-value="2" data-jns="mac://dash/ibkt_0001_01_04" data-jng=".msrn2">당일</div>
+                                <div class="asel-target mr05 sm-btn radius03" 		data-jns-spread="true"   data-value="3" data-jns="mac://dash/ibkt_0001_01_04" data-jng=".msrn3">3일</div>
+                                <div class="asel-target mr05 sm-btn radius03" 		data-jns-spread="true"   data-value="4" data-jns="mac://dash/ibkt_0001_01_04" data-jng=".msrn4">1개월</div>
+                                <div class="asel-target sm-btn radius03 selected"	data-jns-spread="true"   data-value="5" data-jns="mac://dash/ibkt_0001_01_04" data-jng=".msrn5"  data-jns-onload>6개월</div> -->
+
+                                <div class="hide msrn1" data-jni="MSRN">1</div>
+                                <div class="hide msrn2" data-jni="MSRN">2</div>
+                                <div class="hide msrn3" data-jni="MSRN">3</div>
+                                <div class="hide msrn4" data-jni="MSRN">4</div>
+                                <div class="hide msrn5" data-jni="MSRN">5</div>
+                            </div>
+                            <!-- <div class="row col s12 dot text small t-dark-gray mb10">조회가능기간 : 2014년~현재(1년 단위)</div> -->
+                            <div class='row mb30'>
+                                <div class='col s12'>
+                                    <div class="hide" data-jns-element=".taxb02_search_btn" data-jns="element://.modal-load" data-jns-next=".search_btn02"></div> 
+                                    <!-- <button class="btn skyblue text inquiry_btn radius12 bold taxb02_search_btn" data-jns="mac://dash/taxb_0001_01_03" data-jng=".taxb-inp02"  data-jns-next=".modal-load-close">조회</button> -->
+                                    <button class="btn skyblue text inquiry_btn radius12 bold taxb02_search_btn" data-jng=".taxb-inp02"  data-jns-next=".modal-load-close">조회</button>
+                                </div>
+                            </div>  
+                        </div>  
+                    </div>
+                    <div class='hide list-next-chk' data-target-list='.more02' data-jno='FRIST_CHK' data-jnf='listAppender'></div>
+                    <div class="mt10"> 
+                        <div class="list more02">
+                            <div class="bg b-white-gray underline upperline lh50">
+                                <div class="row no-mg bold text">2019년 2월</div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0001_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0001_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0001_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                        </div>
+                        <div class="list more02">
+                            <div class="bg b-white-gray underline  lh50">
+                                <div class="row no-mg bold text">2019년 1월</div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0001_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0001_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                            <div class="underline lh30" data-jns="element://.taxb_0001_02">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급자</div>
+                                    <div class="col s07 text t-right buy_detail">기업******</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s07 text t-right">사무용품</div>
+                                    <div class="col s01 text t-right">
+                                        <div class="evticon icon-small-more"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s07 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                    <div class="col s01"></div>
+                                </div>
+                                <div class="buy_detail hide" data-row="ELCR_TXBL_ISS_SRN" data-jni="ELCR_TXBL_ISS_SRN"></div>
+                            </div>
+                        </div>
+                        <!----------------- Paging Button ------------->
+                        <div class="row mt20 mb20" >
+                            <div class="col s12">
+                                <button class="btn line text bold radius03 search_btn lh30 moreList01" > 
+                                    더보기
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hide" data-jnf="nullHider" data-jno="AMSL_LIST">
+                            <div class="ml20 mr20 bg b-lnavy">
+                                <p class="text t-center lh60"><span class="icon-exclamation-mark"></span></p>
+                                <p class="text t-lnavy lh20 t-center pb20">조회된 내역이 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--------------------- taxb_0002_02 세금계산서 매출 상세 ------------------------>
+        <div class="modal layer rtol no-close hide taxb_0002_02 w100p scroll-lock overys overxt">
+           <!--  <header class="bg b-white">
+                <div class="row no-mb">
+                    <div class="col s10">
+                        <div class="evticon icon-arrow fl mr20 modal-btn modal-close" data-jns="fn://ui/resetAsel">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="text title">세금계산서</span>
+                    </div>
+                    <div class="col s02 lh60 pos-re mt05">
+                        <div class="hamburger" data-jns="app://openMenu" data-jne="touchstart">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text smaller t-right">전체메뉴</p>
+                    </div>
+                </div>
+            </header> -->
+            <div class="h60"></div>
+            <div class="asel t-wrap">
+                <div class="asel-target selected">
+                    <div class="gray-tit-wrap underline tg row mb00" data-jno="SHOW_ASEL" data-jnf="aselSelected">
+                        <div class="col s11 bold">매출 세금계산서</div>
+                        <div class="col s01 text t-right toggle-down">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_01 lh30 tg_con no-close ttob">
+                        <div class="row mt10 mb00">
+                            <div class="col s04">발행일</div>
+                            <div class="col s08 text t-right">2019.02.16(수)</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">공급받는자</div>
+                            <div class="col s08 text t-right">기업*****</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">품목</div>
+                            <div class="col s08 text t-right">사무용품</div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col s04">금액</div>
+                            <div class="col s08 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="asel t-wrap resetSelected">
+                <div class="asel-target">
+                    <div class="gray-tit-wrap underline tg row mb00 mt-1">
+                        <div class="col s11 bold">품목</div>
+                        <div class="col s01 text t-right toggle-down hide" data-jnf="notNullHider"  data-jno="LSAR_LIST">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_02 lh30 tg_con no-close ttob">
+                        <div class="list">
+                            <div class="underline">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">일자</div>
+                                    <div class="col s08 text t-right">2019.02.16(수)</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s08 text t-right">사무용품</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">규격</div>
+                                    <div class="col s08 text t-right">-</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">수량</div>
+                                    <div class="col s08 text t-right">50</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">단가</div>
+                                    <div class="col s08 text t-right"><span class="bold text normal">50,000</span> 원</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">공급가액</div>
+                                    <div class="col s08 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">세액</div>
+                                    <div class="col s08 text t-right"><span class="bold text normal">2,550,000</span> 원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="asel t-wrap resetSelected">
+                <div class="asel-target">
+                    <div class="gray-tit-wrap underline tg row mb00 mt-1">
+                        <div class="col s11 bold">공급자</div>
+                        <div class="col s01 text t-right toggle-down">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_03 lh30 tg_con no-close ttob">
+                        <div class="row mt10 mb00">
+                            <div class="col s04">사업자번호</div>
+                            <div class="col s08 text t-right">1**-**-****</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">상호(법인명)</div>
+                            <div class="col s08 text t-right">현성유통</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">대표자성명</div>
+                            <div class="col s08 text t-right">홍길동</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">사업장주소</div>
+                            <div class="col s08 text t-right">서울시 종로구 을지로 2가 12</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">업태</div>
+                            <div class="col s08 text t-right">도소매</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">종목</div>
+                            <div class="col s08 text t-right">사무용품소매업</div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col s04">이메일</div>
+                            <div class="col s08 text t-right">vee***@naver.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="asel t-wrap resetSelected">
+                <div class="asel-target">
+                    <div class="gray-tit-wrap underline tg row mb00 mt-1">
+                        <div class="col s11 bold">공급받는자</div>
+                        <div class="col s01 text t-right toggle-down">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_04 lh30 tg_con no-close ttob">
+                        <div class="row mt10 mb00">
+                            <div class="col s04">사업자번호</div>
+                            <div class="col s08 text t-right" >123-**-***23</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">상호(법인명)</div>
+                            <div class="col s08 text t-right">나라문구</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">대표자성명</div>
+                            <div class="col s08 text t-right">기은센</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">사업장주소</div>
+                            <div class="col s08 text t-right">서울시 관악구 행운동 22</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">업태</div>
+                            <div class="col s08 text t-right">도매</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">종목</div>
+                            <div class="col s08 text t-right">사무용품소매업</div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col s04">이메일</div>
+                            <div class="col s08 text t-right">evee**@naver.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="asel t-wrap">
+                <div class="asel-target selected">
+                    <div class="gray-tit-wrap underline tg row mb00 mt-1" data-jno="SHOW_ASEL" data-jnf="aselSelected">
+                        <div class="col s11 bold"><span class="bold" data-jno="BUYR_FRM"></span> 최근 매출내역</div>
+                        <div class="col s01 text t-right toggle-down">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_05 lh30 tg_con no-close ttob">
+                        <div class="list" > 
+                            <div class="bg b-white-gray lh50 YMD ">
+                                <div class="row no-mg bold text">2018년 12월</div>
+                            </div>
+                            <div class="underline lh30">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급받는자</div>
+                                    <div class="col s08 text t-right">미래산업</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04"> 품목</div>
+                                    <div class="col s08 text t-right" >사무용품</div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s08 text t-right"><span class="bold text normal">3,000,500</span>
+                                        원</div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------- taxb_0001_02 세금계산서 매입 상세 ------------------------>
+        <div class="modal layer rtol no-close hide taxb_0001_02 w100p scroll-lock overys">
+           <!--  <header class="bg b-white">
+                <div class="row no-mb">
+                    <div class="col s10">
+                        <div class="icon-arrow fl mr20 modal-btn modal-close"  data-jns="fn://ui/resetAsel">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="text title">세금계산서</span>
+                    </div>
+                    <div class="col s02 lh60 pos-re mt05">
+                        <div class="hamburger" data-jns="app://openMenu" data-jne="touchend">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <p class="text smaller t-right">전체메뉴</p>
+                    </div>
+                </div>
+            </header> -->
+            <div class="h60"></div>
+            <div class="t-wrap asel">
+                <div class="asel-target">
+                    <div class="gray-tit-wrap underline tg row mb00 pos-re" data-jno="SHOW_ASEL" data-jnf="aselSelected">
+                        <div class="col s11 bold">매입 세금계산서</div>
+                        <div class="col s01 text t-right toggle-down">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_01 lh30 tg_con no-close ttob">
+                        <div class="row mt10 mb00">
+                            <div class="col s04">발행일</div>
+                            <div class="col s08 text t-right">2019.02.16(수)</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">공급자</div>
+                            <div class="col s08 text t-right">기업*****</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">품목</div>
+                            <div class="col s08 text t-right">사무용품</div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col s04">금액</div>
+                            <div class="col s08 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="t-wrap asel resetSelected">
+                <div class="asel-target">
+                    <div class="gray-tit-wrap underline tg row mb00 mt-1">
+                        <div class="col s11 bold">품목</div>
+                        <div class="col s01 text t-right toggle-down hide" data-jnf="notNullHider"  data-jno="LSAR_LIST">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_02 lh30 tg_con no-close ttob">
+                        <div class="list">
+                            <div class="underline">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">일자</div>
+                                    <div class="col s08 text t-right">2019.02.16(수)</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">품목</div>
+                                    <div class="col s08 text t-right">사무용품</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">규격</div>
+                                    <div class="col s08 text t-right">-</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">수량</div>
+                                    <div class="col s08 text t-right">50</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">단가</div>
+                                    <div class="col s08 text t-right"><span class="bold text normal">50,000</span> 원</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04">공급가액</div>
+                                    <div class="col s08 text t-right"><span class="bold text normal">2,500,000</span> 원</div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">세액</div>
+                                    <div class="col s08 text t-right"><span class="bold text normal">2,550,000</span> 원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="t-wrap asel resetSelected">
+                <div class="asel-target">
+                    <div class="gray-tit-wrap underline tg row mb00 mt-1">
+                        <div class="col s11 bold">공급자</div>
+                        <div class="col s01 text t-right toggle-down">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_03 lh30 tg_con no-close ttob">
+                        <div class="row mt10 mb00">
+                            <div class="col s04">사업자번호</div>
+                            <div class="col s08 text t-right">1**-**-****</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">상호(법인명)</div>
+                            <div class="col s08 text t-right">현성유통</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">대표자성명</div>
+                            <div class="col s08 text t-right">홍길동</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">사업장주소</div>
+                            <div class="col s08 text t-right">서울시 종로구 을지로 2가 12</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">업태</div>
+                            <div class="col s08 text t-right">도소매</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">종목</div>
+                            <div class="col s08 text t-right">사무용품소매업</div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col s04">이메일</div>
+                            <div class="col s08 text t-right">vee***@naver.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="t-wrap asel resetSelected">
+                <div class="asel-target">
+                    <div class="gray-tit-wrap underline tg row mb00 mt-1">
+                        <div class="col s11 bold">공급받는자</div>
+                        <div class="col s01 text t-right toggle-down">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_04 lh30 tg_con no-close ttob">
+                        <div class="row mt10 mb00">
+                            <div class="col s04">사업자번호</div>
+                            <div class="col s08 text t-right" >123-**-***23</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">상호(법인명)</div>
+                            <div class="col s08 text t-right">나라문구</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">대표자성명</div>
+                            <div class="col s08 text t-right">기은센</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">사업장주소</div>
+                            <div class="col s08 text t-right">서울시 관악구 행운동 22</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">업태</div>
+                            <div class="col s08 text t-right">도매</div>
+                        </div>
+                        <div class="row mb00">
+                            <div class="col s04">종목</div>
+                            <div class="col s08 text t-right">사무용품소매업</div>
+                        </div>
+                        <div class="row mb10">
+                            <div class="col s04">이메일</div>
+                            <div class="col s08 text t-right">evee**@naver.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="t-wrap asel">
+                <div class="asel-target">
+                    <div class="gray-tit-wrap underline tg row mb00 mt-1"  data-jno="SHOW_ASEL" data-jnf="aselSelected">
+                        <div class="col s11 bold"><span class="bold" data-jno="SPLR_FRM"></span> 최근 매입내역</div>
+                        <div class="col s01 text t-right toggle-down">
+                            <p class="evticon"></p>
+                        </div>
+                    </div>
+                    <div class="tax01_05 lh30 tg_con no-close ttob">
+                        <div class="list" > 
+                            <div class="bg b-white-gray lh50 YMD ">
+                                <div class="row no-mg bold text">2018년 12월</div>
+                            </div>
+                            <div class="underline lh30">
+                                <div class="row mt10 mb00">
+                                    <div class="col s04">공급자</div>
+                                    <div class="col s08 text t-right">미래산업</div>
+                                </div>
+                                <div class="row mb00">
+                                    <div class="col s04"> 품목</div>
+                                    <div class="col s08 text t-right" >사무용품</div>
+                                </div>
+                                <div class="row mb10">
+                                    <div class="col s04">금액</div>
+                                    <div class="col s08 text t-right"><span class="bold text normal">3,000,500</span>
+                                        원</div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------ Layer Info Service--------------->
+    <input class="setting_layerInfo hide" data-jni="url" value="mac/masu/masu_0001_01.html?onload=.taxbSetMove&exit=true">
+    <div class="setting_layerInfo hide" data-jni="action_code">6001</div> 
+    <div class="setting_layerInfo hide" data-jni="menu_id">mac_lnk_03</div>
+    <div class="setting_layerInfo hide" data-jni="t_menu_id">mac_alt_040101</div>
+    <div class="modal sessionAlert no-close modal-lock w100p hide modal-align antiscroll under-bg">
+        <div class="pop-alert overh">
+
+            <div class="layer_popup_body">
+                <div class="row">
+                    <div class="col s12"></div>
+                </div>
+                <div class="row">
+                    <div class="col s12 lh25 text t-center">
+                        <div class="text title super t-skyblue lh60">ⓘ</div>
+                        <div class="sessionErrMSg"></div>
+                    </div>
+                </div>
+                <div class="row mb00">
+                    <div class="col s12"></div>
+                </div>
+            </div>
+            <div class="layer_popup_footer">
+                <div class="hide sessionEndCall" data-jni="type">sessionOutWithAlert</div>
+				<div class="alpha_btn s_5 c_3 r_2 modal-btn modal-close" tabindex="0" role="button" data-jng=".sessionEndCall" data-jns="app://exit">
+					<span class="btn_text">확인</span>
+				</div>
+            </div>
+
+
+            <!-- <div class="bg b-white">
+                <div class="row">
+                    <div class="col s12"></div>
+                </div>
+                <div class="row">
+                    <div class="col s12 lh25 text t-center">
+                        <div class="text title super t-skyblue lh60">ⓘ</div>
+                        <div class="sessionErrMSg"></div>
+                    </div>
+                </div>
+                <div class="row mb00">
+                    <div class="col s12"></div>
+                </div>
+            </div>
+            <div class="hide sessionEndCall" data-jni="type">sessionOutWithAlert</div>
+            <div class="h50 bg b-skyblue t-white t-center lh50 modal-btn modal-close text lh normal" data-jng=".sessionEndCall" data-jns="app://exit">확인</div> -->
+        </div>
+    </div>
+    <div class="modal versionAlert no-close modal-lock w100p hide modal-align antiscroll under-bg">
+        <div class="pop-alert overh">
+
+            <div class="layer_popup_body">
+                <div class="row">
+                    <div class="col s12"></div>
+                </div>
+                <div class="row">
+                    <div class="col s12 lh25 text t-center">
+                        <div class="text title super t-skyblue lh60">ⓘ</div>
+                        <div class="versionErrMsg"></div>
+                    </div>
+                </div>
+                <div class="row mb00">
+                    <div class="col s12"></div>
+                </div>
+            </div>
+            <div class="layer_popup_footer">
+                <div class="hide versionErrCall" data-jni="type">versionErrMsg</div>
+				<div class="alpha_btn s_5 c_3 r_2 modal-close" tabindex="0" role="button" data-jng=".versionErrCall" data-jns="app://goToStore">
+					<span class="btn_text">확인</span>
+				</div>
+            </div>
+
+
+            <!-- <div class="bg b-white">
+                <div class="row">
+                    <div class="col s12"></div>
+                </div>
+                <div class="row">
+                    <div class="col s12 lh25 text t-center">
+                        <div class="text title super t-skyblue lh60">ⓘ</div>
+                        <div class="versionErrMsg"></div>
+                    </div>
+                </div>
+                <div class="row mb00">
+                    <div class="col s12"></div>
+                </div>
+            </div>
+            <div class="hide versionErrCall" data-jni="type">versionErrMsg</div>
+            <div class="h50 bg b-skyblue t-white t-center lh50 modal-close text lh normal" data-jng=".versionErrCall" data-jns="app://goToStore">확인</div> -->
+        </div>
+    </div> 
+
+    <div class="modal-load modal hide no-close antiscroll">
+		<div class="loading">
+            <div class="lds-spinner">
+				<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+			</div>
+            <p>처리중입니다.<br>잠시만 기다려주세요.</p>
+        </div>
+        <div class="modal-close modal-load-close"></div>
+    </div>  
+
+    <!-- 이전페이지에서 넘어오는 값들 -->
+    <div class='hide'>
+        <div class='in-year year_2'         data-jno='GO_YM1' data-jni='SEL_YM'></div>      <!-- 매출 -->
+        <div class='in-year year_2 year_y2' data-jno='GO_YY1' data-jni='SEL_YEAR'></div>    <!-- 매출 연도 -->
+        <div class='in-year year_1'         data-jno='GO_YM2' data-jni='SEL_YM'></div>      <!-- 매입 --> 
+        <div class='in-year year_1 year_y1' data-jno='GO_YY2' data-jni='SEL_YEAR'></div>    <!-- 매입 연도 -->
+    </div>
+ 
+    <div class="hide year_2" data-jni="YEAR_CNT">5</div> 
+    <div class="hide year_1" data-jni="YEAR_CNT">5</div> 
+    <!-- <div class="hide taxb_svc_list" data-jns="mac://dash/taxb_0001_01_03" data-jns-next=".cashOut_list" data-jns-onload></div>
+    <div class="hide cashOut_list" data-jns="mac://dash/taxb_0001_01_01" data-jno-root=".tab-02" data-jns-next=".cashIn_list"></div>
+    <div class="hide cashIn_list"   data-jns="mac://dash/taxb_0001_02_03" data-jno-root=".tab-01"></div> -->
+
+    <!-------------------- 세금계산서 매출 Polling----------------->
+    <!-- 
+	<div class="hide set-polling-01"       data-jns="app://alphaBriefingToDetailView"   data-jng=".setting_layerInfo" data-jns-next=".set-polling-step0"></div>
+	<div class="hide set-polling-step0"    data-jns="mac://com/com_0003_01"             data-jns-next=".set-polling-step1" data-jng='.set-polling-step0'  data-jni='POLLING'>Y</div>
+	<div class="hide set-polling-step1"    data-jns="sleep://2000"                      data-jns-next=".set-polling-step2"></div>
+	<div class='hide set-polling-step2'    data-jns="mac://com/com_0003_01"             data-jns-next='POLLING:.set-polling-step1,!POLLING:.exec_taxb00102'  data-jno='POLLING'></div>
+     -->
+    <!-------------------- 세금계산서 매입 Polling----------------->
+    <!-- 
+	<div class="hide set-polling-02"       data-jns="app://alphaBriefingToDetailView"   data-jng=".setting_layerInfo" data-jns-next=".set-polling-step3"></div>
+	<div class="hide set-polling-step3"    data-jns="mac://com/com_0003_01"             data-jns-next=".set-polling-step4" data-jng='.set-polling-step0'  data-jni='POLLING'>Y</div>
+	<div class="hide set-polling-step4"    data-jns="sleep://2000"                      data-jns-next=".set-polling-step5"></div>
+	<div class='hide set-polling-step5'    data-jns="mac://com/com_0003_01"             data-jns-next='POLLING:.set-polling-step4,!POLLING:.exec_taxb00101' data-jno='POLLING'></div>
+     -->
+     <!-- 이것은 차트 샘플 데이터 -->
+    <div class="hide" data-jns="sleep://200" data-jns-next=".draw-chart" data-jns-onload=""></div>
+	<div class="hid draw-chart" data-jns="fn://data/smpl2"></div>
+</body>
+
+</html>

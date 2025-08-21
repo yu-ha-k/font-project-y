@@ -1,0 +1,1576 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+</head>
+<body>
+<div class="wrap"> 
+    <!-- 해외IP차단 -->
+    <div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap"> 
+        
+        <!-- s: step1 -->
+        <div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">고객정보확인</div>
+                </div>
+                <div class="group">
+                    <div class="form_group">
+                        <div class="input_label ty1"> 이용자번호</div>
+                        <div class="dropdown ty2" role="button" title="이용자번호 목록 보기" onclick="comLayerPopUtil.open('optlist');">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <div class="title_text ty3">해외IP차단 여부</div>
+                    <ul class="d_list ty2">
+                        <li> <span class="d_list_l">고객명</span> <span class="d_list_r">담초코(민)</span> </li>
+                        <li> <span class="d_list_l">해외IP 차단 등록여부</span> <span class="d_list_r">이용자번호를 선택해 주세요.</span> 
+                            <!--<span class="d_list_r">미등록상태입니다.</span>--> 
+                            <!--<span class="d_list_r">해외IP 차단신청이 등록되어 있습니다.</span>--> 
+                        </li>
+                    </ul>
+                </div>
+                <!--해외IP 차단신청이 등록된 이용자 선택 시, 준비물 안내 노출-->
+                <div class="group mt_32">
+                    <div class="title_text ty1">준비물 안내</div>
+                    <ul class="icon_step_list ty1 digital_otp_list">
+                        <li class="order1">
+                            <div class="inner">
+                                <div class="item"> <span class="desc">대표자 본인명의 휴대폰</span> </div>
+                            </div>
+                        </li>
+                        <li class="order2">
+                            <div class="inner">
+                                <div class="item"> <span class="desc"> 신분증 <br>
+                                    (주민등록증 또는 운전면허증) </span> </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--//해외IP 차단신청이 등록된 이용자 선택 시, 준비물 안내 노출--> 
+                <!--꼭 알아두세요 여건삭제
+                <div class="group mt_32">
+                    <div class="acd_wrap accodian_wrap ty3 active">
+                        <div class="acd_head accodian_head">
+                            <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                        </div>
+                        <div class="acd_cont accodian_cont">
+                            <div class="inner">
+                                <ul class="list_bullet ty1">
+                                    <li>해외IP 차단 서비스를 이용하면 해외에서 인터넷뱅킹 이용을 제한할 수 있습니다.</li>
+                                    <li>해외IP 차단 서비스 신청 후에는 해외IP로 인터넷뱅킹 로그인 시 접속이 차단됩니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+--> 
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1"> 
+                        <!--<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(811);">등록하기</button>-->
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(800);">해제하기</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step1 --> 
+        <!-- s: step800 이용자정보확인 -->
+        <div id="step800" data-jx-step-no="800" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">이용자 정보 확인</div>
+                </div>
+                <div class="group">
+                    <div class="title_text ty3">이용자 정보</div>
+                    <ul class="d_list ty2">
+                        <li> <span class="d_list_l">이용자번호</span> <span class="d_list_r">000-00000(사용자)</span> </li>
+                        <li> <span class="d_list_l">고객명</span> <span class="d_list_r">담초코(민)</span> </li>
+                        <li> <span class="d_list_l">현재 해외IP 차단 </span> <span class="d_list_r">해외IP차단 등록</span> </li>
+                    </ul>
+                </div>
+                <div class="group mt_32">
+                    <div class="acd_wrap accodian_wrap ty3 active">
+                        <div class="acd_head accodian_head">
+                            <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                        </div>
+                        <div class="acd_cont accodian_cont">
+                            <div class="inner">
+                                <ul class="list_bullet ty1">
+                                    <li>해외IP 차단 해제 후 해외IP로 스마트/인터넷뱅킹을 이용할 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(811);">해제하기</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step800 이용자정보확인 --> 
+        <!-- s: MO 인증 팝업 -->
+        <div id="step811" data-jx-step-no="811" data-jx-effect="slide" style="">
+            <div class="content_wrap">
+                <div class="bottom_popup_wrap active" id="phonePopup41">
+                    <div class="bottom_popup">
+                        <div class="bottom_popup_header">
+                            <h2 class="tit">휴대폰인증 메시지 보내기</h2>
+                            <button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup41');">닫기</button>
+                        </div>
+                        <div class="bottom_popup_body">
+                            <div class="cert_msg_send"> <strong> 고객님이 사용하는 휴대폰이 <br>
+                                맞는지 확인할게요. </strong> 아래 화면에 입력된 문자 내용을 그대로 보내주세요. <br>
+                                고객님의 휴대폰이 아니시면 아래 다른 방법 <br>
+                                (인증서)으로 인증 을 선택해 주세요 </div>
+                            <div class="btn_area tyTxt mt_24">
+                                <button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(803);">다른 방법(인증서)으로 인증</button>
+                            </div>
+                            <div class="cert_msg_guideimg"> <img src="../../../../img/common/cert/img_cert_mo_guide.png" alt="본인인증을 하기 위해 문자메시지를 발송하는 예시화면 입니다. 보내는 메시지는 은행에서 지정한 특정한 문자열 입니다."> </div>
+                            <div class="bg_box ty1">
+                                <ul class="list_bullet ty1">
+                                    <li>이용 중인 통신요금제에 따라 문자 발송 비용이 발생할 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom_popup_footer">
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('phonePopup21');">보내기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: MO 인증 팝업 --> 
+        <!-- s: 휴대폰 본인 인증 약관 -->
+        <div class="bottom_popup_wrap" id="phonePopup21" aria-hidden="true">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">약관동의</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup21');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="agree_check_group">
+                        <div class="chk_group_wrap">
+                            <div class="agree_check tit_ty">
+                                <div class="top chk_middle">
+                                    <div class="label">
+                                        <input type="checkbox" name="" id="phone_ago_group1" class="chk_point_all">
+                                        <label for="phone_ago_group" class="checkbox"> <i></i> <span> 약관 모두 동의 <span class="ess_mark">필수</span> </span> </label>
+                                    </div>
+                                </div>
+                                <div class="inner">
+                                    <ul class="term_list">
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk11" class="chk_point_sub">
+                                                <label for="phone_chk11" class="checkbox small lbl"> <i></i> <span> 서비스 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">서비스 이용약관</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk21" class="chk_point_sub">
+                                                <label for="phone_chk21" class="checkbox small lbl"> <i></i> <span> 통신사 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">통신사 이용약관</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk31" class="chk_point_sub">
+                                                <label for="phone_chk31" class="checkbox small lbl"> <i></i> <span> 개인정보 수집 이용 위탁 동의서 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">개인정보 수집 이용 위탁 동의서</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk41" class="chk_point_sub">
+                                                <label for="phone_chk41" class="checkbox small lbl"> <i></i> <span> 고유식별 정보처리 동의서 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">고유식별 정보처리 동의서</span> 보기 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('phonePopup21'); uf_goStep(812);">다음</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 휴대폰 본인 인증 약관 --> 
+        <!-- s: 정보입력 (휴대폰인증) -->
+        <div id="step812" data-jx-step-no="812" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <div class="txt_style ty1">휴대폰 본인 인증</div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty2">이름</div>
+                        <div class="input">
+                            <input type="text" name="" id="" title="이름 입력">
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty2">사업자등록번호</div>
+                        <div class="comp_wrap business_num">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력">
+                            </div>
+                            <span>-</span>
+                            <button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+                        </div>
+                        
+                        <!-- 주민등록번호 뒷자리 7개 모두 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호(모두입력)</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after full_value">
+                                <button type="button" aria-label="주민등록번호 뒤 7자리 입력" class="keypad_btn"></button>
+                            </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 7개 모두 받는 경우 --> 
+                        
+                        <!-- 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호(첫번째만 입력, button)</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after">
+                                <button type="button" aria-label="주민등록번호 뒷자리 1번째번호 입력" class="keypad_btn"></button>
+                                <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 1개만 받는 경우 --> 
+                        
+                        <!-- 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호(첫번째만 입력, input)</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after">
+                                <div class="input no_del">
+                                    <input type="tel" maxlength="1" name="" id="" class="letter" title="주민등록번호 뒷자리 1번째번호 입력">
+                                </div>
+                                <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        
+                        <div class="input_label ty2">휴대폰번호</div>
+                        <div class="comp_wrap phone">
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력">
+                            </div>
+                        </div>
+                        <div class="input_label ty2">통신사</div>
+                        <div class="dropdown ty2" role="button" title="통신사 목록보기" onclick="comLayerPopUtil.open('telecom');">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                        <div class="btn_area ty1 mt_16">
+                            <button type="button" class="btn s_4 c_2 r_2">인증번호 요청하기</button>
+                        </div>
+                        <div class="btn_area ty1 mt_16">
+                            <button type="button" class="btn s_4 c_2 r_2">인증번호 다시요청</button>
+                        </div>
+                        <div class="input_label ty2">인증번호</div>
+                        <div class="comp_wrap with_count">
+                            <div class="count_wrap">
+                                <div class="input">
+                                    <input type="text" name="" id="" title="인증번호 숫자 6자리 입력" placeholder="숫자 6자리 입력">
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                                <div class="with_count_utils"> <span class="count"> <span class="hidden">남은시간 :</span> 29:15 </span> </div>
+                            </div>
+                        </div>
+                        <div class="btn_area tyTxt mt_24">
+                            <button type="button" class="btn ty_txt2 line_bttm" onclick="comLayerPopUtil.open('phonePopup1')">다른 방법(인증서)으로 인증</button>
+                        </div>
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>휴대폰 본인인증은 대표자 명의 휴대폰으로만 할 수 있습니다.</li>
+                                        <li>IBK기업은행에 등록된 휴대폰이 있고 현재 이용중인 휴대폰번호와 다른 경우, IBK고객센터(1566-2566) 또는 가까운 영업점에서 변경해주세요.</li>
+                                        <li>단, IBK고객센터에서 수정할 경우, 전자금융사기예방을 위해 정보수정 7일 후부터 대출을 신청할 수 있습니다.</li>
+                                        <li>법인폰은 각 통신사별 법인폰 본인인증서비스를 등록하면 휴대폰 본인확인을 할 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(601);">인증번호 확인</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: 정보입력 (휴대폰인증) --> 
+        <!-- s: 다른 본인인증 방법 선택 -->
+        <div class="bottom_popup_wrap" id="phonePopup1" aria-hidden="true">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">다른 본인인증 방법 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup1');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="select_cert clickable" role="radiogroup">
+                        <button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_lock"><span class="text">공동인증서</span></button>
+                        <button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_cloud"><span class="text">금융인증서</span></button>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('phonePopup5');">다음</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 다른 본인인증 방법 선택 --> 
+        <!-- s: 휴대폰 본인 인증 약관 -->
+        <div class="bottom_popup_wrap" id="phonePopup5" aria-hidden="true">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">약관동의</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup5');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="agree_check_group">
+                        <div class="chk_group_wrap">
+                            <div class="agree_check tit_ty">
+                                <div class="top chk_middle">
+                                    <div class="label">
+                                        <input type="checkbox" name="" id="phone_ago_group" class="chk_point_all">
+                                        <label for="phone_ago_group" class="checkbox"> <i></i> <span> 약관 모두 동의 <span class="ess_mark">필수</span> </span> </label>
+                                    </div>
+                                </div>
+                                <div class="inner">
+                                    <ul class="term_list">
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk1" class="chk_point_sub">
+                                                <label for="phone_chk1" class="checkbox small lbl"> <i></i> <span> 서비스 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">서비스 이용약관</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk2" class="chk_point_sub">
+                                                <label for="phone_chk2" class="checkbox small lbl"> <i></i> <span> 통신사 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">통신사 이용약관</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk3" class="chk_point_sub">
+                                                <label for="phone_chk3" class="checkbox small lbl"> <i></i> <span> 개인정보 수집 이용 위탁 동의서 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">개인정보 수집 이용 위탁 동의서</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk4" class="chk_point_sub">
+                                                <label for="phone_chk4" class="checkbox small lbl"> <i></i> <span> 고유식별 정보처리 동의서 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">고유식별 정보처리 동의서</span> 보기 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('phonePopup1'); comLayerPopUtil.close('phonePopup5'); comLayerPopUtil.close('phonePopup2'); uf_goStep(804);">다음</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 휴대폰 본인 인증 약관 --> 
+        <!-- s: 공동인증서 인증 - 정보입력 (본인인증) -->
+        <div id="step804" data-jx-step-no="804" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <div class="txt_style ty1">본인인증</div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty2">이름</div>
+                        <div class="input">
+                            <input type="text" name="" id="" title="이름 입력" placeholder="이름 입력">
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty2">사업자등록번호</div>
+                        <div class="comp_wrap business_num">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력">
+                            </div>
+                            <span>-</span>
+                            <button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+                        </div>
+                        
+                        <!-- 주민등록번호 뒷자리 7개 모두 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" placeholder="생년월일 6자리">
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after full_value">
+                                <button type="button" aria-label="주민등록번호 뒤 7자리 입력" class="keypad_btn"></button>
+                            </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 7개 모두 받는 경우 --> 
+                        
+                        <!-- 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" placeholder="생년월일 6자리">
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after">
+                                <button type="button" aria-label="주민등록번호 뒷자리 1번째번호 입력" class="keypad_btn"></button>
+                                <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        
+                        <div class="input_label ty2">휴대폰번호</div>
+                        <div class="comp_wrap phone">
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력">
+                            </div>
+                        </div>
+                        <div class="btn_area tyTxt mt_24">
+                            <button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(803);">다른 방법으로 인증</button>
+                        </div>
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>본인인증은 대표자 개인명의 인증서로만 할 수 있습니다.</li>
+                                        <li>스마트폰에 이용가능한 인증서가 등록된 경우에만 본인인증을 할 수 있습니다.</li>
+                                        <li>공동인증서가 등록되지 않은 경우 [인증센터]에서 인증서를 발급받거나 타행/타기관 인증서 등록 후 이용해 주세요.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(805);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: 공동인증서 인증 - 정보입력 (본인인증) --> 
+        <!-- s: 본인인증 - 공동인증서 -->
+        <div id="step805" data-jx-step-no="805" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <div class="id_veri">
+                        <div class="txt_style ty1">공동인증서</div>
+                        <p class="desc">공동인증서를 선택 후 본인인증을 해주세요</p>
+                        <ul class="space_list_ty1">
+                            <!-- s: 인증서 만료 전 -->
+                            <li>
+                                <div class="cert_item_wrap">
+                                    <div class="cert_item" id="phone_chk98_content"> <a href="#" role="button" class="block" onclick="uf_goStep(806);">
+                                        <div class="name">홍길동</div>
+                                        <div class="info_wrap">
+                                            <div class="info">
+                                                <div class="tit">용도/발급기관</div>
+                                                <div class="txt">은행개인·금융결재원</div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="tit">만료일</div>
+                                                <div class="txt"> 2017.06.17 <span class="color ty4">(만료 2547일전)</span> </div>
+                                            </div>
+                                        </div>
+                                        </a> </div>
+                                </div>
+                            </li>
+                            <!-- e: 인증서 만료 전 --> 
+                            <!-- s: 인증서 만료 후 -->
+                            <li>
+                                <div class="cert_item_wrap">
+                                    <div class="cert_item disabled" id="phone_chk98_content"> <a href="#" role="button" class="block" aria-disabled="true" tabindex="-1">
+                                        <div class="badge_cont"> <span class="badge ty3 colorB1">만료</span> </div>
+                                        <div class="name">홍길동</div>
+                                        <div class="info_wrap">
+                                            <div class="info">
+                                                <div class="tit">용도/발급기관</div>
+                                                <div class="txt">은행개인·금융결재원</div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="tit">만료일</div>
+                                                <div class="txt">2017.06.17</div>
+                                            </div>
+                                        </div>
+                                        </a> </div>
+                                </div>
+                            </li>
+                            <!-- e: 인증서 만료 후 -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom_btn_area ty4">
+                    <div class="bottom_btn_area_box">
+                        <div class="btn_area tyTxt">
+                            <button type="button" class="btn ty_txt2 link_ty1">인증서 가져오기</button>
+                            <button type="button" class="btn ty_txt2 link_ty1">다른기관 인증서 등록하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 본인인증 - 공동인증서 --> 
+        <!-- s: 본인인증 - 금융인증서 -->
+        <div id="step806" data-jx-step-no="806" data-jx-effect="slide" style="">
+            <div class="content_wrap ty4" aria-hidden="false">
+                <div class="group">
+                    <div class="id_veri">
+                        <div class="id_veri_head">
+                            <div class="id_veri_head_title">금융인증서</div>
+                            <p class="id_veri_head_desc">본인인증을 해주세요</p>
+                        </div>
+                        <div class="id_veri_cert">
+                            <button type="button" class="btn s_3 c_1 r_3" onclick="uf_goStep(601);">본인인증</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_btn_area ty4">
+                    <div class="bottom_btn_area_box">
+                        <div class="btn_area tyTxt">
+                            <button type="button" class="btn ty_txt2 line_bttm">인증센터 바로가기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 본인인증 - 금융인증서 --> 
+        <!-- s: 인증방법 선택 -->
+        <div id="step601" data-jx-step-no="601" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <div class="ocr_wrap">
+                        <div class="txt_style ty1"> 신분증 인증 방법을 <br>
+                            선택해 주세요 </div>
+                        <ul class="cert_ctr mt_16">
+                            <li> <a href="#" role="button" class="block" onclick="uf_goStep(602);">
+                                <div class="icon certificate_common"></div>
+                                <div class="txt"> 주민등록증 <br>
+                                    운전면허증 촬영 </div>
+                                </a> </li>
+                            <li> <a href="#" role="button" class="block" onclick="comLayerPopUtil.open('ocrPopup1');">
+                                <div class="icon certificate_mobile"></div>
+                                <div class="txt"> 모바일 <br>
+                                    운전면허증 </div>
+                                </a> </li>
+                        </ul>
+                        
+                        <!--s: 꼭 알아두세요! -->
+                        <div class="caution">
+                            <div class="acd_wrap accodian_wrap ty3 active">
+                                <div class="acd_head accodian_head">
+                                    <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="list_bullet ty1">
+                                            <li>신분증 촬영을 이용하실 경우 실물 주민등록증 또는 운전면허증을 소지하셔야 합니다.</li>
+                                            <li>안드로이드폰에서 신분증 제출을 이용하실 경우 삼성월렛앱 또는 모바일 신분증앱에 유효한 모바일 운전면허증이 발급되어 있어야 합니다. 단, 아이폰(IOS)은 모바일 이용 가능합니다</li>
+                                            <li>모바일 운전면허증 발급은 운전면허시험장 또는 경찰서 민원실에서 신청하시면 됩니다</li>
+                                            <li>모바일 신분증앱은 안드로이드 7, IOS 14 이상 버전에서 이용 가능합니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--e: 꼭 알아두세요! --> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 인증방법 선택 --> 
+        <!-- s: 정보확인 -->
+        <div id="step602" data-jx-step-no="602" data-jx-effect="slide" style="display: none;">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <div class="ocr_wrap">
+                        <h4 class="title_text ty1">신분증 정보 확인</h4>
+                        <div class="ocr_wrap_photo"> <img src="../../../../img/common/cert/img_cert_identification.png" alt="촬영된 신분증 사진"> </div>
+                        <div class="form_group">
+                            <div class="input_label ty2">이름</div>
+                            <div class="input no_del">
+                                <input type="text" name="" id="" value="홍길동" title="이름 입력" readonly="">
+                            </div>
+                            <div class="input_label ty2">주민등록번호</div>
+                            <div class="comp_wrap birth disabled">
+                                <div class="input no_del">
+                                    <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" readonly="" placeholder="생년월일 6자리">
+                                </div>
+                                <span>-</span>
+                                <div class="birth_after full_value">
+                                    <div class="input no_del">
+                                        <input type="text" name="" id="" value="1******" title="주민등록번호 뒤 7자리 입력" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input_label ty2">운전면허번호</div>
+                            <div class="comp_wrap license">
+                                <div class="input license_sp4">
+                                    <div class="dropdown ty2 active" role="button" title="지역명 선택 목록 보기" onclick="comLayerPopUtil.open('popup5');">
+                                        <div class="dropdown_text">서울99</div>
+                                    </div>
+                                </div>
+                                <div class="input license_sp2">
+                                    <input type="number" name="" id="" title="면허번호 두번째 2자리 입력" value="99" placeholder="2자리">
+                                </div>
+                                <span>-</span>
+                                <div class="input license_sp3">
+                                    <input type="number" name="" id="" title="면허번호 세번째 앞3자리 입력" value="999" placeholder="3자리">
+                                </div>
+                                <div class="input license_sp3">
+                                    <button type="button" aria-label="면허번호 세번째 뒤3자리 입력" class="keypad_btn"> <span class="marking_wrap"> <span class="marking"></span> <span class="marking"></span> <span class="marking"></span> </span> </button>
+                                </div>
+                                <span>-</span>
+                                <div class="input license_sp2">
+                                    <button type="button" aria-label="면허번호 마지막 2자리 입력" class="keypad_btn"> <span class="marking_wrap"> <span class="marking"></span> <span class="marking"></span> </span> </button>
+                                </div>
+                            </div>
+                            <div class="comp_wrap license mt_24">
+                                <div class="input license_sp4">
+                                    <div class="dropdown ty2 active" role="button" title="지역명 선택 목록 보기" onclick="comLayerPopUtil.open('popup5');">
+                                        <div class="dropdown_text">서울99</div>
+                                    </div>
+                                </div>
+                                <div class="input license_sp2">
+                                    <input type="number" name="" id="" title="면허번호 두번째 2자리 입력" placeholder="2자리">
+                                </div>
+                                <span>-</span>
+                                <div class="input license_sp3">
+                                    <input type="number" name="" id="" title="면허번호 세번째 앞3자리 입력" placeholder="3자리">
+                                </div>
+                                <div class="input license_sp3">
+                                    <button type="button" aria-label="면허번호 세번째 뒤3자리 입력" class="keypad_btn"> <span class="marking_wrap">3자리</span> </button>
+                                </div>
+                                <span>-</span>
+                                <div class="input license_sp2">
+                                    <button type="button" aria-label="면허번호 마지막 2자리 입력" class="keypad_btn"> <span class="marking_wrap">2자리</span> </button>
+                                </div>
+                            </div>
+                            <div class="input_label ty2">발급일자</div>
+                            <div class="input">
+                                <input type="tel" name="" id="" value="2016.01.01" title="발급일자 입력">
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">다시 촬영</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('ocrPopup2');">다음</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 정보확인 --> 
+        <!-- s: 팝업 모바일 운전면허증 안내 -->
+        <div class="bottom_popup_wrap" id="ocrPopup1">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">모바일 운전면허증 안내</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('ocrPopup1');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="popup_msg_txt1"> 행정안전부에서 제공하는 <br>
+                        모바일 신분증 앱을 설치하고 <br>
+                        등록한 고객님만 이용이 가능합니다. </div>
+                </div>
+                <div class="bottom_popup_footer ty2">
+                    <button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('ocrPopup1');">취소</button>
+                    <button type="button" class="btn s_5 c_3 r_2">모바일 신분증 제출</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 팝업 모바일 운전면허증 안내 --> 
+        <!-- s: 신분증 정보 확인 안내 -->
+        <div class="bottom_popup_wrap" id="ocrPopup2">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">신분증 정보 확인 안내</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('ocrPopup2');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="popup_msg_txt1"> 화면에 표시된 신분증 정보와 <br>
+                        실제 신분증에 표시된 정보가 <br>
+                        일치하는지 확인 하셨나요? </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_1 r_2">다시 확인</button>
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('ocrPopup2'); uf_goStep(701)">일치함</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 신분증 정보 확인 안내 --> 
+        <!-- s: 스크래핑 안내 -->
+        <div id="step701" data-jx-step-no="701" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <div class="scraping_wrap">
+                        <div class="title_text ty1">국세청 홈텍스 정보 조회</div>
+                        <ul class="scraping_info_list">
+                            <li class="item ty1">공동인증서 또는 금융인증서를 준비해 주세요.</li>
+                            <li class="item ty2">홈택스 회원가입을 해주세요.</li>
+                        </ul>
+                        <div class="bg_box ty1">
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small active">
+                                    <button type="button" title="조회하는 정보 내용 상세보기" aria-expanded="true" class="acd_btn"> <span class="title"> <span class="left">조회하는 정보</span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner" style="display: block">
+                                        <ul class="list_bullet ty1">
+                                            <li>사업자 휴폐업 정보</li>
+                                            <li>공동대표자 여부</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(702);">다음</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 스크래핑 안내 --> 
+        <!-- s: 조회방법 선택 - 공동인증서, 금융인증서 선택 시 -->
+        <div id="step702" data-jx-step-no="702" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <div class="title_text ty1">조회방법 선택</div>
+                    <div class="select_cert clickable" role="radiogroup">
+                        <button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_lock"><span class="text">공동인증서</span></button>
+                        <button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_cloud"><span class="text">금융인증서</span></button>
+                        <!--<button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_hometax"><span class="text">홈택스 로그인</span></button>--> 
+                    </div>
+                    <div class="scraping_join_box">
+                        <p class="scraping_join_box_text">홈택스 회원만 정보 조회를 할 수 있어요. 홈텍스 회원이 아닌 경우 회원가입을 해주세요.</p>
+                        <div class="btn_area"> <a href="#" target="_blank" class="btn s_2 c_1 r_3" title="새창열기">홈택스 회원가입</a> </div>
+                    </div>
+                    <div class="scraping_opt_select"> 
+                        <!--
+								<div class="title_text ty1">인증서 종류를 선택해 주세요</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">개인용 인증서</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">사업자용 인증서</span></button>
+								</div>
+-->
+                        <div class="title_text ty1">홈택스에 인증서를 등록하셨나요?</div>
+                        <div class="btn_area clickable ty1" role="radiogroup">
+                            <button type="button" disabled="" role="radio" aria-checked="false"><span class="text">예</span></button>
+                            <button type="button" disabled="" role="radio" aria-checked="false"><span class="text">아니오</span></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('scraping_popup3');">다음</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: 조회방법 선택 - 공동인증서, 금융인증서 선택 시 --> 
+        <!-- s:정보조회 위임 동의 팝업 -->
+        <div class="bottom_popup_wrap" id="scraping_popup3" aria-hidden="true">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">정보조회 위임 동의</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('scraping_popup3');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="label label_box more_add">
+                        <input type="checkbox" name="" id="scraping_ag01">
+                        <label for="scraping_ag01" class="checkbox"> <i></i> <span>고객정보조회 위임 동의</span> </label>
+                        <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">고객정보조회 위임 동의</span> 보기 </button>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('scraping_popup3'); uf_goStep(705);">다음</button>
+                </div>
+            </div>
+        </div>
+        <!-- e:정보조회 위임 동의 팝업 --> 
+        <!-- s: 홈텍스 인증서 등록 -->
+        <div id="step705" data-jx-step-no="705" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <ul class="space_list_ty1">
+                        <!-- s: 인증서 만료 전 -->
+                        <li>
+                            <div class="cert_item_wrap">
+                                <div class="cert_item" id="phone_chk98_content"> <a href="#" role="button" class="block" onclick="uf_goStep(806);">
+                                    <div class="name">홍길동</div>
+                                    <div class="info_wrap">
+                                        <div class="info">
+                                            <div class="tit">용도/발급기관</div>
+                                            <div class="txt">은행개인·금융결재원</div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="tit">만료일</div>
+                                            <div class="txt"> 2017.06.17 <span class="color ty4">(만료 2547일전)</span> </div>
+                                        </div>
+                                    </div>
+                                    </a> </div>
+                            </div>
+                        </li>
+                        <!-- e: 인증서 만료 전 --> 
+                        <!-- s: 인증서 만료 후 -->
+                        <li>
+                            <div class="cert_item_wrap">
+                                <div class="cert_item disabled" id="phone_chk98_content"> <a href="#" role="button" class="block" aria-disabled="true" tabindex="-1">
+                                    <div class="badge_cont"> <span class="badge ty3 colorB1">만료</span> </div>
+                                    <div class="name">홍길동</div>
+                                    <div class="info_wrap">
+                                        <div class="info">
+                                            <div class="tit">용도/발급기관</div>
+                                            <div class="txt">은행개인·금융결재원</div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="tit">만료일</div>
+                                            <div class="txt">2017.06.17</div>
+                                        </div>
+                                    </div>
+                                    </a> </div>
+                            </div>
+                        </li>
+                        <!-- e: 인증서 만료 후 -->
+                    </ul>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(706);">등록하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 홈텍스 인증서 등록 --> 
+        <!-- s: 로딩-->
+        <div id="step708" data-jx-step-no="708" data-jx-effect="slide" style="display: none;">
+            <div class="content_wrap ty4" aria-hidden="false">
+                <div class="icon_info_group">
+                    <div class="icon lottie">
+                        <lottie-player src="../../../../lottie/lottie_case7.json" background="transparent" speed="1" loop=""></lottie-player>
+                    </div>
+                    <div class="tit"> 정보를 조회하고 있어요 <br>
+                        잠시만 기다려 주세요. </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 로딩--> 
+        <!-- s: 조회완료 -->
+        <div id="step706" data-jx-step-no="706" data-jx-effect="slide" style="display: none;">
+            <div class="content_wrap ty4" aria-hidden="false">
+                <div class="group">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        정보 조회가 <br>
+                        완료 되었어요 </div>
+                    <div class="scraping_result_wrap">
+                        <div class="title_text ty1">국세청 홈텍스</div>
+                        <ul class="d_list ty1">
+                            <li> <span class="d_list_l">휴페업조회</span> <span class="d_list_r"> <span class="ico_txt ty2 complete">완료</span> </span> </li>
+                            <li> <span class="d_list_l">조회업무/서식명</span> <span class="d_list_r"> <span class="ico_txt ty2 complete">완료</span> </span> </li>
+                            <li> <span class="d_list_l">소득금액증명원</span> <span class="d_list_r"> <span class="ico_txt ty2 complete">완료</span> </span> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1"> 
+                        <!-- <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(707);">다음</button> -->
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(501)">다음</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 조회완료 --> 
+        <!-- s: 계좌인증(공통) -->
+        <div id="step501" data-jx-step-no="501" data-jx-effect="slide" style="">
+            <div class="content_wrap" aria-hidden="false">
+                <div class="tab_list ty1" role="tablist">
+                    <button type="button" role="tab" aria-selected="true" class="active">IBK기업은행</button>
+                    <button type="button" role="tab" aria-selected="false">다른 금융사</button>
+                </div>
+                <div class="tab_cont active pt_24" role="tabpanel" aria-expanded="true">
+                    <div class="group">
+                        <div class="account_veri">
+                            <div class="form_group">
+                                <div class="input_label ty2">인증계좌</div>
+                                <div class="dropdown ty2" role="button" title="인증계좌 선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+                                    <div class="dropdown_text">계좌를 선택하세요</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group"> 
+                        <!-- s: 꼭 알아두세요! --> 
+                        <!-- s: 개인용 노출 문구 -->
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>개인명의 계좌번호를 입력하면 본인 확인을 위해 해당 계좌번호로 1원을 입금해 드립니다.</li>
+                                        <li>계좌정보를 확인 후 [1원 입금 요청하기]를 눌러 주세요.</li>
+                                        <li>계좌인증은 1일 5회까지 할 수 있습니다.</li>
+                                        <li>계좌인증 도중 앱을 종료하면 처음부터 다시 진행해야 합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: 개인용 노출 문구 --> 
+                        
+                        <!-- s: 법인용 노출 문구 -->
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>법인명의 계좌번호를 입력하면 본인 확인을 위해 해당 계좌번호로 1원을 입금해 드립니다.</li>
+                                        <li>계좌정보를 확인 후 [1원 입금 요청하기]를 눌러 주세요.</li>
+                                        <li>계좌인증은 1일 5회까지 할 수 있습니다.</li>
+                                        <li>계좌인증 도중 앱을 종료하면 처음부터 다시 진행해야 합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: 법인용 노출 문구 --> 
+                        <!-- e: 꼭 알아두세요! --> 
+                    </div>
+                    <div class="bottom_btn_area">
+                        <div class="btn_area ty2">
+                            <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('accountPopup2');">다음</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab_cont pt_24" role="tabpanel" aria-expanded="false">
+                    <div class="group">
+                        <div class="account_veri">
+                            <div class="form_group">
+                                <div class="input_label ty2">계좌정보</div>
+                                <div class="input">
+                                    <input type="text" name="" id="" title="계좌번호 입력" placeholder="계좌번호 입력">
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                                <div class="dropdown ty2" role="button" title="기관 선택 목록 보기" onclick="comLayerPopUtil.open('accountPopup1');">
+                                    <div class="dropdown_text">기관 선택</div>
+                                </div>
+                                <div class="btn_area ty4">
+                                    <button type="button" class="btn badge ty2" onclick="uf_goStep(4);"> <span class="ico_box ty3 ico_bank_031"></span> 대구 </button>
+                                    <button type="button" class="btn badge ty2" onclick="uf_goStep(4);"> <span class="ico_box ty3 ico_bank_011"></span> NH농협 </button>
+                                    <button type="button" class="btn badge ty2" onclick="uf_goStep(4);"> <span class="ico_box ty3 ico_bank_090"></span> 카카오뱅크 </button>
+                                    <button type="button" class="btn badge ty2" onclick="uf_goStep(4);"> <span class="ico_box ty3 ico_bank_031"></span> 대구 000-00000-00-00000 </button>
+                                </div>
+                                <div class="btn_area ty1 confirm">
+                                    <button type="button" class="btn s_4 c_2 r_2" disabled="">1원 입금 요청하기</button>
+                                </div>
+                                <!-- s: 은행 선택, 계좌번호 입력 완료되면 버튼 활성화 -->
+                                <div class="btn_area ty1 confirm">
+                                    <button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(503);">1원 송금 다시요청</button>
+                                </div>
+                                <!-- e: 은행 선택, 계좌번호 입력 완료되면 버튼 활성화 --> 
+                            </div>
+                            <div class="btn_area tyTxt">
+                                <button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(401);">얼굴인증으로 변경하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group"> 
+                        <!-- s: 꼭 알아두세요! --> 
+                        <!-- s: 개인용 노출 문구 -->
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>개인명의 계좌번호를 입력하면 본인 확인을 위해 해당 계좌번호로 1원을 입금해 드립니다.</li>
+                                        <li>계좌정보를 확인 후 [1원 입금 요청하기]를 눌러 주세요.</li>
+                                        <li>계좌인증은 1일 5회까지 할 수 있습니다.</li>
+                                        <li>계좌인증 도중 앱을 종료하면 처음부터 다시 진행해야 합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: 개인용 노출 문구 --> 
+                        
+                        <!-- s: 법인용 노출 문구 -->
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>법인명의 계좌번호를 입력하면 본인 확인을 위해 해당 계좌번호로 1원을 입금해 드립니다.</li>
+                                        <li>계좌정보를 확인 후 [1원 입금 요청하기]를 눌러 주세요.</li>
+                                        <li>계좌인증은 1일 5회까지 할 수 있습니다.</li>
+                                        <li>계좌인증 도중 앱을 종료하면 처음부터 다시 진행해야 합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e: 법인용 노출 문구 --> 
+                        <!-- e: 꼭 알아두세요! --> 
+                    </div>
+                    <div class="bottom_btn_area">
+                        <div class="btn_area ty2">
+                            <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('accountPopup2');">다음</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 계좌인증(공통) --> 
+        <!-- s: 계좌정보 팝업 -->
+        <div class="bottom_popup_wrap" id="popupAccount" aria-hidden="true">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">계좌정보</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty3" role="listbox">
+                        <li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorB5">개인</span>
+                                        <div class="item_top_text">별칭</div>
+                                    </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorB5">개인</span> </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorETC11">기업</span> </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="item_top_text">별칭</div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- e: 계좌정보 팝업 --> 
+        <!-- s: 은행 선택 팝업 -->
+        <div class="bottom_popup_wrap" id="accountPopup1" aria-hidden="true">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">기관 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('accountPopup1');">닫기</button>
+                </div>
+                <div class="bottom_popup_body agency_select_popup">
+                    <div class="agency_select_wrap">
+                        <div class="agency_select_wrap_title">은행</div>
+                        <ul class="agency_select_list" role="listbox">
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000"></div>
+                                <span class="name">기본</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_003"></div>
+                                <span class="name">기업은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_004"></div>
+                                <span class="name">국민은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_020"></div>
+                                <span class="name">우리은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_088"></div>
+                                <span class="name">신한은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_081"></div>
+                                <span class="name">하나은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_011"></div>
+                                <span class="name">농협은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_012"></div>
+                                <span class="name">지역농축협</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_023"></div>
+                                <span class="name">SC은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_027"></div>
+                                <span class="name">한국씨티은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_071"></div>
+                                <span class="name">우체국</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_039"></div>
+                                <span class="name">경남은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_034"></div>
+                                <span class="name">광주은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_031"></div>
+                                <span class="name">iM[구 대구은행]</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_055"></div>
+                                <span class="name">도이치</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_032"></div>
+                                <span class="name">부산은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_064"></div>
+                                <span class="name">산림조합</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_002"></div>
+                                <span class="name">산업은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_050"></div>
+                                <span class="name">저축은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_045"></div>
+                                <span class="name">새마을금고</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_007"></div>
+                                <span class="name">수협</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_048"></div>
+                                <span class="name">신협</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_037"></div>
+                                <span class="name">전북은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_035"></div>
+                                <span class="name">제주은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_060"></div>
+                                <span class="name">BOA</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_054"></div>
+                                <span class="name">HSBC</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_057"></div>
+                                <span class="name">JP모간</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_062"></div>
+                                <span class="name">중국공상은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_061"></div>
+                                <span class="name">BNP파리바</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_067"></div>
+                                <span class="name">중국건설은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_063"></div>
+                                <span class="name">중국은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_090"></div>
+                                <span class="name">카카오뱅크</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_089"></div>
+                                <span class="name">케이뱅크</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_092"></div>
+                                <span class="name">토스뱅크</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0B9"></div>
+                                <span class="name">AMEX</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0A4"></div>
+                                <span class="name">MELLAT</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0C4"></div>
+                                <span class="name">중국은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0B7"></div>
+                                <span class="name">교통은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0C2"></div>
+                                <span class="name">BANK OF NEW YORK</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_059"></div>
+                                <span class="name">MUFG은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0B8"></div>
+                                <span class="name">BARCLAYS</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0A8"></div>
+                                <span class="name">BNP PARIBAS</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0A6"></div>
+                                <span class="name">CALYON</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0C6"></div>
+                                <span class="name">건설은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0A3"></div>
+                                <span class="name">인도</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0C5"></div>
+                                <span class="name">공상은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0B6"></div>
+                                <span class="name">ING</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0C1"></div>
+                                <span class="name">JP MORGAN</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0A1"></div>
+                                <span class="name">미즈호</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0C3"></div>
+                                <span class="name">PAKISTAN</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0B5"></div>
+                                <span class="name">OCBC</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0A7"></div>
+                                <span class="name">SOCIETE GENERALE</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0A2"></div>
+                                <span class="name">스미토모미쯔이</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_008"></div>
+                                <span class="name">수출입은행</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0A5"></div>
+                                <span class="name">UBAF</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_0A9"></div>
+                                <span class="name">UBS</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_056"></div>
+                                <span class="name">ABN암로은행</span> </li>
+                        </ul>
+                        <div class="agency_select_wrap_title">국세/지방세</div>
+                        <ul class="agency_select_list" role="listbox">
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_government"></div>
+                                <span class="name">국세</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_government"></div>
+                                <span class="name">국고금</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_government"></div>
+                                <span class="name">지방세입</span> </li>
+                        </ul>
+                        <div class="agency_select_wrap_title">증권사</div>
+                        <ul class="agency_select_list" role="listbox">
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_261"></div>
+                                <span class="name">교보증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_267"></div>
+                                <span class="name">대신증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_238"></div>
+                                <span class="name">미래에셋</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_279"></div>
+                                <span class="name">DB금융투자</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_209"></div>
+                                <span class="name">유안타증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_287"></div>
+                                <span class="name">메리츠증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_290"></div>
+                                <span class="name">부국증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_240"></div>
+                                <span class="name">삼성증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_291"></div>
+                                <span class="name">신영증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_278"></div>
+                                <span class="name">신한투자증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_247"></div>
+                                <span class="name">NH투자증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_280"></div>
+                                <span class="name">유진투자증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_265"></div>
+                                <span class="name">LS증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_264"></div>
+                                <span class="name">키움증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_270"></div>
+                                <span class="name">하나증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_262"></div>
+                                <span class="name">아이엠증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_243"></div>
+                                <span class="name">한국투자</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_269"></div>
+                                <span class="name">한화투자증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_218"></div>
+                                <span class="name">KB증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_263"></div>
+                                <span class="name">현대차증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_292"></div>
+                                <span class="name">케이프투자증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_289"></div>
+                                <span class="name">NH농협증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_266"></div>
+                                <span class="name">SK증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_288"></div>
+                                <span class="name">카카오페이증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_224"></div>
+                                <span class="name">BNK투자증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_225"></div>
+                                <span class="name">IBK투자증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_227"></div>
+                                <span class="name">다올투자증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_221"></div>
+                                <span class="name">상상인증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_294"></div>
+                                <span class="name">우리투자증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_271"></div>
+                                <span class="name">토스증권</span> </li>
+                            <li role="option" tabindex="-1">
+                                <div class="ico_box ty1 ico_bank_000 ico_bank_C4"></div>
+                                <span class="name">이베스트투자증권</span> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 은행 선택 팝업 --> 
+        <!-- s: 인증번호 확인 팝업 -->
+        <div class="bottom_popup_wrap" id="accountPopup2" aria-hidden="true">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">인증번호 입력</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('accountPopup2');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="account_veri">
+                        <div class="input">
+                            <button type="button" class="input_button" aria-label="인증번호 숫자 4자리 입력">숫자 4자리 입력</button>
+                        </div>
+                        <div class="account_veri_guide"> <img src="../../../../img/common/account/img_account_guide.png" alt="고객님 계좌에 1원과 인증번호를 보내드렸어요 전달받은 숫자 4자리를 확인하세요"> </div>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('accountPopup2'); uf_goStep(3)">인증번호 확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 인증번호 확인 팝업 --> 
+        
+        <!-- s: step3 -->
+        <div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">이용자 정보 확인</div>
+                </div>
+                <div class="group">
+                    <div class="title_text ty3">이용자 정보</div>
+                    <ul class="d_list ty2">
+                        <li> <span class="d_list_l">이용자번호</span> <span class="d_list_r"> <span class="no">00000000</span> <span class="txt">(관리자)</span> </span> </li>
+                        <li> <span class="d_list_l">고객명</span> <span class="d_list_r">담초코(민)</span> </li>
+                        <li> <span class="d_list_l">현재 해외 IP차단</span> <span class="d_list_r">해외IP 차단 등록</span> </li>
+                    </ul>
+                    <div class="acd_wrap accodian_wrap ty3 active">
+                        <div class="acd_head accodian_head">
+                            <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                        </div>
+                        <div class="acd_cont accodian_cont">
+                            <div class="inner">
+                                <ul class="list_bullet ty1">
+                                    <li>해외IP 차단 해제 후 해외IP로 스마트/인터넷뱅킹을 이용할 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">해제하기</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step3 --> 
+        
+        <!-- s: step4 -->
+        <div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+            <div class="content_wrap ty4">
+                <div class="group">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        해외IP 차단을 해제했어요 </div>
+                    <ul class="d_list ty1 mt_40">
+                        <li> <span class="d_list_l">이용자번호</span> <span class="d_list_r"> <span class="no">00000000</span> <span class="txt">(관리자)</span> </span> </li>
+                        <li> <span class="d_list_l">고객명</span> <span class="d_list_r">담초코(민)</span> </li>
+                        <li> <span class="d_list_l">해외IP차단 등록여부</span> <span class="d_list_r">해외IP차단 해제</span> </li>
+                    </ul>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step4 --> 
+        
+        <!-- s: Popup -->
+        <div class="bottom_popup_wrap" id="optlist" title="이용자번호">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">이용자번호</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- e: Popup --> 
+    </div>
+</div>
+
+<!--**퍼블용** 데모확인 로티 구동 스크립트--> 
+<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script> 
+<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+</body>
+</html>

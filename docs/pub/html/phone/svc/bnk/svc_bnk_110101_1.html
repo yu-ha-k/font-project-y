@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 약관동의 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">약관동의</div>
+							<p class="txt">기업스마트뱅킹 사용을 위해 관리자가 스마트뱅킹에 가입해 주세요</p>
+							<p class="txt txt_style ty7 mt_8">
+								※ 관리자 인증서 및 OTP를 준비해 주세요.
+								<br />
+								※ 영업점에서 디지털OTP를 발급한 경우 [뱅킹 관리 > 디지털OTP > 등록(영업점 발급고객)]에서 등록 후 디지털OTP를 사용할 수 있습니다.
+							</p>
+
+							<div class="agree_check_group chk_group_wrap">
+								<!-- 1개 이상일 시 생성 -->
+								<div class="agree_check_group_top">
+									<div class="label all_chk">
+										<input type="checkbox" name="" id="agree_check_group_top" class="chk_point_all" />
+										<label for="agree_check_group_top" class="checkbox">
+											<i></i>
+											<span>필수 약관 모두 동의</span>
+										</label>
+									</div>
+								</div>
+								<div class="agree_check">
+									<div class="acd_wrap accodian_wrap ty1">
+										<div class="acd_head accodian_head check_as_all active chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="cag00" class="chk_point" />
+												<label for="cag00" class="checkbox">
+													<i></i>
+													<span>
+														모두 동의합니다.
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+										</div>
+
+										<div class="acd_cont accodian_cont chk_list">
+											<div class="inner" style="display: block">
+												<ul class="term_list">
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="cag01" class="chk_point_sub" />
+															<label for="cag01" id="btn_cag01" class="checkbox small lbl">
+																<i></i>
+																<span>전자금융거래 기본약관</span>
+															</label>
+														</div>
+														<a href="javascript:void(0);" class="btn ty_txt3 line_bttm btn_view">보기</a>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="cag02" class="chk_point_sub" />
+															<label for="cag02" id="btn_cag02" class="checkbox small lbl">
+																<i></i>
+																<span>전자금융서비스 이용약관</span>
+															</label>
+														</div>
+														<a href="javascript:void(0);" class="btn ty_txt3 line_bttm btn_view">보기</a>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="cag03" class="chk_point_sub" />
+															<label for="cag03" id="btn_cag03" class="checkbox small lbl">
+																<i></i>
+																<span>기업인터넷뱅킹 이용약관</span>
+															</label>
+														</div>
+														<a href="javascript:void(0);" class="btn ty_txt3 line_bttm btn_view">보기</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="txt mt_24">위 내용을 충분히 확인 후 동의하고, 이에 따라 기업스마트뱅킹 가입을 신청합니다.</p>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 약관동의 -->
+
+				<!-- s: step2 정보입력 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 기본정보 -->
+						<div class="group">
+							<div class="title_text ty1">정보입력</div>
+							<div class="form_group">
+								<div class="input_label ty1">
+									사업자등록번호
+									<span class="ess_text ty1">필수</span>
+								</div>
+
+								<div class="comp_wrap business_num">
+									<div class="input no_del">
+										<input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" />
+									</div>
+									<span>-</span>
+									<button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+								</div>
+
+								<div class="input_label ty1">
+									계좌번호
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="tel" name="" id="" title="계좌번호 입력" placeholder="-없이 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<!-- e: 기본정보 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 관리직원 번호 -->
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">
+									관리직원 번호
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="comp_wrap">
+									<div class="dropdown ty2" role="button" title="관리직원 번호 목록 보기" onclick="comLayerPopUtil.open('optlist1');">
+										<div class="dropdown_text">관리직원 번호</div>
+									</div>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>상품 관리직원이 있을 경우 입력해 주세요.</li>
+								</ul>
+							</div>
+						</div>
+						<!-- e: 관리직원 번호 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 유의사항 -->
+						<div class="group">
+							<ul class="list_bullet ty1 mt_16">
+								<li>스마트뱅킹 가입은 관리자만 할 수 있습니다. 기타 사용자는 스마트뱅킹에 가입된 관리자가 기업인터넷/스마트뱅킹 접속 후 [뱅킹 관리 > 스마트뱅킹 등록/해지]에서 해당 사용자를 등록한 경우 이용할 수 있습니다.</li>
+							</ul>
+						</div>
+						<!-- e: 유의사항 -->
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 정보입력 -->
+
+				<!-- s: step3 이용자 선택 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">이용자 선택</div>
+							<div class="title_text ty1">이용자 목록</div>
+							<ul class="space_list_ty1 mt_16">
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(4);">
+											<div class="card_item_info">
+												<div class="txt_style ty9">항상공주봄자정수고무홍보</div>
+											</div>
+
+											<div class="card_item_sub_info line">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">이용자번호</span>
+													</span>
+													<span class="line_right">
+														<span class="u_no">48811111</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">이용자구분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">사용자</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">OTP 일련번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">123456789</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">가입일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2021-03-26</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(4);">
+											<div class="card_item_info">
+												<div class="txt_style ty9">항상공주봄자정수고무홍보</div>
+											</div>
+
+											<div class="card_item_sub_info line">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">이용자번호</span>
+													</span>
+													<span class="line_right">
+														<span class="u_no">48811111</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">이용자구분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">사용자</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">OTP 일련번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">123456789</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">가입일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2021-03-26</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+
+								<li>
+									<div class="no_result_msg">거래내역이 없습니다.</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: step3 이용자 선택 -->
+
+				<!-- s: step4 정보확인 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보확인</div>
+							<div class="group_item ty1">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">창도</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이용자번호</span>
+										</span>
+										<span class="line_right">
+											<span class="u_no">11111111</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이용자명</span>
+										</span>
+										<span class="line_right">
+											<span class="u_name">홍길동</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이용자구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">관리자</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">OTP 일련번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">52836025</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<ul class="list_bullet ty1 mt_16">
+								<li>스마트뱅킹 가입은 관리자만 할 수 있습니다. 기타 사용자는 스마트뱅킹에 가입된 관리자가 기업인터넷/스마트뱅킹 접속 후 [뱅킹 관리 > 스마트뱅킹 등록/해지]에서 해당 사용자를 등록한 경우 이용할 수 있습니다.</li>
+							</ul>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty2">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(3);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">실행</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 정보확인 -->
+
+				<!-- s: step5 가입완료 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								스마트뱅킹에 가입했어요
+							</div>
+
+							<ul class="d_list ty1 mt_32">
+								<li>
+									<span class="d_list_l">사업자명</span>
+									<span class="d_list_r">
+										<span class="txt">창도</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">이용자번호</span>
+									<span class="d_list_r">
+										<span class="u_no">111111</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">이용자명</span>
+									<span class="d_list_r">
+										<span class="u_name">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">이용자구분</span>
+									<span class="d_list_r">
+										<span class="txt">관리자</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">OTP 일련번호</span>
+									<span class="d_list_r">
+										<span class="txt">52836025</span>
+									</span>
+								</li>
+							</ul>
+							<ul class="list_bullet ty1 mt_16">
+								<li>스마트뱅킹 가입은 관리자만 할 수 있습니다. 기타 사용자는 스마트뱅킹에 가입된 관리자가 기업인터넷/스마트뱅킹 접속 후 [뱅킹 관리 > 스마트뱅킹 등록/해지]에서 해당 사용자를 등록한 경우 이용할 수 있습니다.</li>
+							</ul>
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2">확인</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+					</div>
+				</div>
+				<!-- e: step5 가입완료 -->
+
+				<!-- s: popup -->
+				<div class="bottom_popup_wrap" id="optlist1" title="관리직원 번호">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">관리직원 번호</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

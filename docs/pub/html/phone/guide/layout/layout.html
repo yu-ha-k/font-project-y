@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<style>
+				.xxxx {
+					height: 12.5rem;
+					margin: 3.125rem 0;
+					background-color: blue;
+				}
+				.xxxx.dmp {
+					margin-top: auto;
+				}
+			</style>
+
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap flex_case">
+						<div class="container">
+							<div class="tab_list ty2 sticky" role="tablist">
+								<button type="button" role="tab" aria-selected="true" class="active">계좌번호</button>
+								<button type="button" role="tab" aria-selected="false">내 이체함</button>
+							</div>
+							<div class="group xxxx"></div>
+							<div class="group xxxx"></div>
+							<div class="group dmp xxxx"></div>
+						</div>
+
+						<div class="bottom_btn_area">
+							<div class="btn_area ty2">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(3);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+					</div>
+
+					<button type="button" onclick="uf_goStep(2);">다음화면이동</button>
+				</div>
+
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					cont 2
+					<button type="button" onclick="uf_goStep(1);">이전화면이동</button>
+				</div>
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

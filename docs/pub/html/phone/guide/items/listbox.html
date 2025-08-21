@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap">
+				<div class="cont_wrap">
+					<h4 class="guide_h4">select_list ty1</h4>
+					<ul class="select_list ty1" role="listbox">
+						<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+						<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+						<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+						<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+					</ul>
+
+					<h4 class="guide_h4">select_list ty2 - 교체필요 - bottom_bank.hbs</h4>
+					<ul class="select_list ty2">
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_001"></div>
+							<span class="name">한국은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_002"></div>
+							<span class="name">산업은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_003"></div>
+							<span class="name">기업은행</span>
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">select_list ty2 - 교체필요</h4>
+					<ul class="select_list ty2 open_bank_list">
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_003"></div>
+							<span class="name">기업은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_002"></div>
+							<span class="name">산업은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_004"></div>
+							<span class="name">국민은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_007"></div>
+							<span class="name">수협</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_020"></div>
+							<span class="name">우리은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_023"></div>
+							<span class="name">SC제일</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_027"></div>
+							<span class="name">한국씨티은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_031"></div>
+							<span class="name">대구은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_032"></div>
+							<span class="name">부산은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_034"></div>
+							<span class="name">광주은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_035"></div>
+							<span class="name">제주은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_037"></div>
+							<span class="name">전북은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_039"></div>
+							<span class="name">경남은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_081"></div>
+							<span class="name">KEB하나은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_088"></div>
+							<span class="name">신한은행</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_090"></div>
+							<span class="name">카카오뱅크</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_089"></div>
+							<span class="name">케이뱅크</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_011"></div>
+							<span class="name">농협은행</span>
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">select_list ty3 - li &lt;-&gt; div</h4>
+					<ul class="select_list ty3 mt_24" role="listbox">
+						<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+							<div class="item">
+								<div class="item_top">
+									<div class="ico_box ty3 ico_bank_003"></div>
+									<div class="item_top_text">기업 000-000000-00-000</div>
+								</div>
+								<div class="item_bottom">
+									<div class="item_bottom_text">IBK기업 000-000000-00-000</div>
+								</div>
+							</div>
+						</li>
+						<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+							<div class="item">
+								<div class="item_top">
+									<div class="ico_box ty3 ico_bank_003"></div>
+									<div class="item_top_text">기업 000-000000-00-000 기업 000-000000-00-000 기업 000-000000-00-000</div>
+								</div>
+								<div class="item_bottom">
+									<span class="badge ty3 colorB5">개인</span>
+									<div class="item_bottom_text">IBK기업 000-000000-00-000 IBK기업 000-000000-00-000</div>
+									<span class="main_trans">주거래 통장</span>
+								</div>
+							</div>
+						</li>
+						<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+							<div class="item">
+								<div class="item_top">
+									<div class="ico_box ty3 ico_bank_003"></div>
+									<div class="item_top_text">기업 000-000000-00-000 기업 000-000000-00-000 기업 000-000000-00-000</div>
+								</div>
+								<div class="item_bottom">
+									<span class="badge ty3 colorB5">개인</span>
+									<div class="item_bottom_text">IBK기업 000-000000-00-000 IBK기업 000-000000-00-000</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">select_list ty4 - dropdown의 경우 rolelist 처리와 role option 처리 필요</h4>
+					<ul class="select_list ty4" role="listbox">
+						<li role="option" tabindex="-1">
+							<div class="ico_box ty1 ico_bank_001"></div>
+							<span class="name">
+								<span class="bank_name">한국</span>
+								<span class="accouont_no">10023654588636</span>
+								<span class="txt">보통예금</span>
+							</span>
+						</li>
+						<li role="option" tabindex="-1">
+							<div class="ico_box ty1 ico_bank_002"></div>
+							<span class="name">
+								<span class="bank_name">산업</span>
+								<span class="accouont_no">10023654588636</span>
+								<span class="txt">보통예금</span>
+							</span>
+						</li>
+						<li role="option" tabindex="-1">
+							<div class="ico_box ty1 ico_bank_004"></div>
+							<span class="name">
+								<span class="bank_name">국민</span>
+								<span class="accouont_no">10023654588636</span>
+								<span class="txt">보통예금</span>
+							</span>
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">select_list ty4</h4>
+					<ul class="select_list ty4">
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_003"></div>
+							<span class="name">
+								<strong class="account_no">10023654588636</strong>
+								<span class="txt">보통예금</span>
+							</span>
+						</li>
+						<li role="button">
+							<div class="ico_box ty1 ico_bank_003"></div>
+							<span class="name">
+								<strong class="account_no">10023654588636</strong>
+								<span class="txt">보통예금(IBK평생주거래기업통장)</span>
+							</span>
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">select_list ty5 - 체크박스는 role="button"이 아님</h4>
+					<ul class="select_list ty5">
+						<li>
+							<input type="checkbox" id="ex1" class="checkbox" />
+							<label for="ex1" class="checkbox_label">
+								<span class="ico_box ty1 ico_bank_001"></span>
+								<span class="name">
+									<span class="bank_name">한국</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ex2" class="checkbox" />
+							<label for="ex2" class="checkbox_label">
+								<span class="ico_box ty1 ico_bank_002"></span>
+								<span class="name">
+									<span class="bank_name">산업</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ex3" class="checkbox" />
+							<label for="ex3" class="checkbox_label">
+								<span class="ico_box ty1 ico_bank_004"></span>
+								<span class="name">
+									<span class="bank_name">국민</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ex4" class="checkbox" />
+							<label for="ex4" class="checkbox_label">
+								<span class="ico_box ty1 ico_bank_007"></span>
+								<span class="name">
+									<span class="bank_name">수협</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ex5" class="checkbox" />
+							<label for="ex5" class="checkbox_label">
+								<span class="ico_box ty1 ico_bank_008"></span>
+								<span class="name">
+									<span class="bank_name">수출입</span>
+									<span class="accouont_no">10023654588636</span>
+									<span class="txt">보통예금</span>
+								</span>
+							</label>
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">select_list ty6</h4>
+					<ul class="select_list ty6">
+						<li>
+							<button type="button" class="link block" role="link">
+								즉시이체
+								<span class="hidden">해당화면 이동</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="link block" role="link">
+								거래내역조회
+								<span class="hidden">해당화면 이동</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="link block" role="link">
+								간편송금
+								<span class="hidden">해당화면 이동</span>
+							</button>
+						</li>
+						<li>
+							<button type="button" class="link block" role="link">
+								급여이체
+								<span class="hidden">해당화면 이동</span>
+							</button>
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">select_list ty8</h4>
+					<ul class="select_list ty8" role="listbox">
+						<li role="option" tabindex="-1" class="active" aria-selected="true">
+							<span>선택해주세요</span>
+						</li>
+						<li role="option" tabindex="-1" aria-selected="false">
+							<span>10103</span>
+							<span>사후송금방식 통관수입대금지급</span>
+						</li>
+						<li role="option" tabindex="-1" aria-selected="false">
+							<span>10206</span>
+							<span>사후송금방식 무통관수입(국내인수수입)대금지급</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>

@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap">
+				<div class="cont_wrap">
+					<h4 class="guide_h4">space_list_ty1 : 상하 간격 16px</h4>
+
+					<ul class="space_list_ty1">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty2 : 상하 간격 32px / 중간 border</h4>
+					<ul class="space_list_ty2">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty3 : 상하 간격 24px / 마지막은 하단 여백 없음 / 중간 border</h4>
+					<ul class="space_list_ty3">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty3 border_add_case1 : 마지막 보더 추가</h4>
+					<ul class="space_list_ty3 border_add_case1">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty3 : 상하 간격 24px / 마지막은 하단 여백 없음 / 중간 border</h4>
+					<div class="title_text ty1">타이틀이 있는 경우</div>
+					<ul class="space_list_ty3">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty4 : 상하 간격 0 / 상/하단 border</h4>
+					<ul class="space_list_ty4">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li class="none">
+							<div class="no_result_msg">
+								<div class="msg">검색 결과가 없습니다.</div>
+							</div>
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty5 : 상하 간격 24px / border 없음</h4>
+					<ul class="space_list_ty5">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty6 : 상하 간격 40px</h4>
+					<ul class="space_list_ty6">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty7 : 상하 없음 / 상단 border 없음</h4>
+					<ul class="space_list_ty7">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty8 : 하단 여백 24 하단 border 만 존재</h4>
+					<ul class="space_list_ty8">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty9 : 상단 여백 32</h4>
+					<ul class="space_list_ty9">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty10 : 상단 여백 12</h4>
+					<ul class="space_list_ty10">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+
+					<h4 class="guide_h4">space_list_ty11 : 상하단 여백 24 border / 첫번째 li pt 12</h4>
+					<ul class="space_list_ty11">
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+						<li>
+							content
+							<br />
+							content
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>

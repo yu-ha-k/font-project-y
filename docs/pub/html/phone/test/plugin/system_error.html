@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 시스템 점검 안내 -->
+				<!-- 전체팝업 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="system_error">
+								<div class="ico_txt ty1 lottie_case1">
+									<div class="lottie_box">
+										<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+									</div>
+									시스템 정기점검 중입니다.
+									<div class="note_cmt">잠시 후 다시 이용해 주세요</div>
+								</div>
+								<div class="system_error_remain">
+									서비스 재개 예상시간
+									<span class="system_error_remain_time">03:00</span>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">버튼명</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- 전체팝업 -->
+				<!-- e: 시스템 점검 안내 -->
+
+				<!-- s: 장애 안내 -->
+				<!-- 전체팝업 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="system_error">
+								<div class="ico_txt ty1 lottie_case1">
+									<div class="lottie_box">
+										<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+									</div>
+									일시적인 장애가 발생하여
+									<br />
+									이용이 지연되고 있습니다.
+									<div class="note_cmt">잠시 후 다시 이용해 주시기 바랍니다.</div>
+								</div>
+								<div class="system_error_remain">
+									복구 예상시간
+									<span class="system_error_remain_time">03:00</span>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- 전체팝업 -->
+				<!-- e: 장애 안내 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

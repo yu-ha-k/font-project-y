@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>join</title>
+  <link rel="stylesheet" href="../resource/css/basic.css?2019021301" type="text/css">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no"> <!-- IOS 앱에서 숫자 전화번호 인식 막기-->
+  <script type='text/javascript' src='../resource/js/jquery-3.2.1.js'></script>
+  <script type='text/javascript' src='../resource/js/_kking_app.js'></script>
+  <script type='text/javascript' src='../resource/js/jnut.js'></script>
+  <script type='text/javascript' src='../resource/js/jnut.formatter.js?2019021301'></script>
+  <script type="text/javascript" src="../resource/js/nativeBridge.js"></script>
+  <script type='text/javascript' src='../resource/js/attr.mgr.js'></script>
+  <script type='text/javascript' src='../resource/js/data.jns.js'></script>
+  <script type='text/javascript' src='../resource/js/data.jns.fns.js'></script>
+  <script type='text/javascript' src='../resource/js/data.href.js'></script>
+  <script type='text/javascript' src='../resource/js/data.enter.js'></script>
+  <script type='text/javascript' src='../resource/js/class.asel.js'></script>
+  <script type='text/javascript' src='../resource/js/class.modal.js'></script>
+  <script type="text/javascript" src="../resource/js/class.anti.scroll.js"></script>
+  <script type='text/javascript' src='../resource/js/class.table.js'></script>
+  <script type='text/javascript' src='../resource/js/class.tab.js'></script>
+  <script type='text/javascript' src='../resource/js/class.slider.js'></script>
+  <script type='text/javascript' src='../resource/js/class.list.js'></script>
+  <script type='text/javascript' src='../resource/js/class.alert.js'></script>
+  <script type='text/javascript' src='../resource/js/class.hider.js'></script>
+  <script type='text/javascript' src='../resource/js/class.select.js'></script>
+  <script type='text/javascript' src='../resource/js/class.incNum.js'></script>
+  <script type='text/javascript' src='../resource/js/data.radio.js'></script>
+  <script type='text/javascript' src='../resource/js/data.check.js'></script>
+  <script type='text/javascript' src='../resource/js/chart.js'></script>
+  <script type='text/javascript' src='../resource/js/data.chart.js'></script>
+  <script type='text/javascript' src='../resource/js/data.format.js'></script>
+  <script type='text/javascript' src='../resource/js/class.data.js'></script>
+  <script type='text/javascript' src='../resource/js/back.js'></script>
+
+</head>
+
+<body>
+  <header class="hide">
+    <div class="row no-mb">
+      <div class="col s10">
+        <div class="icon-arrow fl mr20" data-jns="app://exit">
+          <span></span> <span></span> <span></span>
+        </div>
+        <span class="text title">서비스 해지</span>
+      </div>
+      <div class="col s02 lh60 pos-re mt05" data-jns="app://openMenu" tabindex="0" role="button">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="text smaller t-right">전체메뉴</p>
+      </div>
+    </div>
+  </header>
+  <div class="service_out">
+    <div class="bg b-white pb40">
+      <div class="row pb15 pt15 underline mb00">
+        <div class="col s12 text t-center bold t-left">서비스 가입내역</div>
+      </div>
+      <div class="row pb15 pt15 underline mb00">
+        <div class="col s06 text t-center  t-left lh20">이용자명</div>
+        <div class="col s06 text t-center t-right lh20" data-jno="NAME"></div>
+      </div>
+      <div class="row pb15 pt15 underline mb00">
+        <div class="col s06 text t-center t-left lh20">서비스가입명</div>
+        <div class="col s06 text t-center t-right lh20">IBK 기업자산관리</div>
+      </div>
+      <div class="row pb15 pt15 underline mb00">
+        <div class="col s06 text t-center t-left lh20">서비스등록일</div>
+        <div class="col s06 text t-center t-right lh20" data-jno="YMD" data-jnf="strYYYYMMDDFromStr"></div>
+      </div>
+      <div class="row mb00"></div>
+      <div class="row footer">
+
+        <div class="alpha_bottom_btn_area">
+          <div class="alpha_btn_area">
+            <!-- <div class="col s12 btn alpha_btn s_5 c_3 r_2 w100p" tabindex="0" role="button" data-jns="app://wizvera" data-jng=".groupByCertList" data-jns-next=".service_out_cert"> -->
+            <div class="col s12 btn alpha_btn s_5 c_3 r_2 w100p" tabindex="0" role="button" data-jns="element://.service_out_check">
+              <span class="btn_text">서비스 해지</span>
+              <div class="hide groupByCertList" data-jni="type">certGetAllList</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------------- certAllListToAlphaBriefing을 호출하여 그린 인증서 리스트 조회 화면 -------------------->
+  <div class="service_out_cert hide modal rtol layer scroll-lock no-close overys">
+    <header class="hide">
+      <div class="row no-mb ml10 mr10">
+        <div class="col s10">
+          <div class="icon-arrow fl mr20 modal-close service_out_close">
+            <span></span> <span></span> <span></span>
+          </div>
+          <span class="text title">서비스 해지</span>
+        </div>
+        <div class="col s02 lh60 pos-re mt05" data-jns="app://openMenu">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="text smaller t-right">전체메뉴</p>
+        </div>
+      </div>
+    </header>
+    <div class="bg b-full-gray">
+      <div class="mt05 list" data-jno="cert_list">
+        <div class="underline cert-cm-wrap pos-re hide bg b-white">
+          <!-- 					<div class="pos-re w100p border-box modal-close overh flexbox middle" data-jns="app://signWithCertificateToAlphaBriefing" data-jng="this/.outCertList" data-jns-next=".equalCertCheck"> -->
+          <!-- 					<div class="pos-re w100p border-box modal-close overh flexbox middle" data-jns="app://signWithCertificate" data-jng="this/.outCertList" data-jns-next=".equalCertCheck"> -->
+          <div class="pos-re w100p border-box modal-close overh flexbox middle" data-jns="app://wizvera"
+            data-jng="this/.outCertList" data-jns-next=".equalCertCheck">
+            <div class="pos-ab">
+              <!-- 							<div class="icon-cert" data-jnf="certStatusImg" data-row="sm_cert_status"></div> -->
+              <!-- 							<span class="cert-condition pos-ab r0 b0" data-row="sm_cert_status" data-jnf="certStatus"></span>  -->
+              <div class="icon-cert" data-row="sm_cert_to_date" data-jnf="certStatusImg"></div>
+              <span class="cert-condition pos-ab r0 b0" data-row="sm_cert_to_date" data-jnf="certStatus"></span>
+            </div>
+            <div class="pl80">
+              <p class="lh30 bold ellipsis" data-row="sm_cert_display_cn"></p>
+              <div class="lh20">
+                <p class="text t-dark-gray mr05 small fl">발급자</p>
+                <p class=" ellipsis text small" data-row="sm_cert_display_issuer_cn"></p>
+              </div>
+              <div class="clear lh20">
+                <p class="text t-dark-gray mr05 small fl">만료일</p>
+                <p class=" ellipsis text small" data-row="sm_cert_to_date" data-jnf="expireYYYYMMDDred"></p>
+                <p class=" ellipsis hide" data-row="sm_cert_to_date"></p> <!-- Formatter 적용 안한 데이터 값을 넣어줘야함-->
+                <p class=" ellipsis hide text small t-dred clear" data-row="sm_cert_to_date"
+                  data-jnf="expireYYYYMMDDText"></p>
+              </div>
+            </div>
+            <div class="hide outCertList" data-jni="type">signWithCertificateToAlphaBriefing</div>
+            <div class="hide outCertList" data-jni="sm_cert_display_cn" data-row="sm_cert_display_cn"></div>
+            <div class="hide outCertList" data-jni="sm_cert_display_issuer_cn" data-row="sm_cert_display_issuer_cn">
+            </div>
+            <div class="hide outCertList" data-jni="sm_cert_from_date" data-row="sm_cert_from_date"></div>
+            <div class="hide outCertList" data-jni="sm_cert_policy_id" data-row="sm_cert_policy_id"></div>
+            <div class="hide outCertList" data-jni="sm_cert_serial" data-row="sm_cert_serial"></div>
+            <div class="hide outCertList" data-jni="sm_cert_status" data-row="sm_cert_status"></div>
+            <div class="hide outCertList" data-jni="sm_cert_subject_rdn" data-row="sm_cert_subject_rdn"></div>
+            <div class="hide outCertList" data-jni="sm_cert_to_date" data-row="sm_cert_to_date"></div>
+            <!--- 가입시에만 join-Y, setting-N 나머지는 join-N,settiing-Y -->
+            <div class="hide outCertList" data-jni="alphabriefing_join_yn">N</div> <!-- 공인인증서 사인 데이터 전달 여부 -->
+            <div class="hide outCertList" data-jni="alphabriefing_setting_yn">Y</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="equalCertCheck" data-jns="mac://join/join_0001_01_02" data-jng=".certObjInput" data-jns-next="CERT_CONF_YN:.out_bridge,!CERT_CONF_YN:.notEqualPopup"></div> -->
+  <div class="out_bridge" data-jns="element://.modal-load" data-jns-next=".next01"></div>
+  <!-- 해지 시키는 서비스 -->
+  <!-- <div class="next01" data-jns="mac://join/join_0011_01_02" data-jng=".certObjInput" data-jns-next=".out_loadingOff"> -->
+  </div>
+  <div class="out_loadingOff" data-jns="element://.modal-load-close" data-jns-next=".service_out_check"></div>
+
+  <div class="data certObjInput" data-jni="keyObject" data-jno="key_data"></div>
+  <div class="data certObjInput" data-jni="encObject" data-jno="_encryptdata"></div>
+  <div class="data certObjInput" data-jni="disObject" data-jno="display"></div>
+  <div class="data certObjInput" data-jni="enddate" data-jno="todate"></div>
+  <div class="data certObjInput" data-jni="cninfo" data-jno="issuercn"></div>
+  <div class="data certObjInput" data-jni="certObject" data-jno="cert_data"></div>
+  <div class="data certObjInput" data-jni="subject_rdn" data-jno="subject_rdn"></div>
+
+  <div class="modal no-close service_out_check hide layer scroll-lock">
+    <div class="modal-close service_out_check_close" data-jns="app://exit"></div>
+    <div class="bg b-white pt60 pb40">
+      <div class="h50"></div>
+      <div class="row mb00">
+        <div class="col s04"></div>
+        <div class="col s04">
+          <div class="complete"></div>
+        </div>
+        <div class="col s04"></div>
+      </div>
+      <div class="row mb00">
+        <div class="col s04"></div>
+        <div class="col s04 text t-center normal bold pt10">해지완료</div>
+        <div class="col s04"></div>
+      </div>
+      <div class="row h50 mb00 underline "></div>
+      <div class="row pb15 pt15 underline mb00">
+        <div class="col s06 text t-center t-left lh20">이용자명</div>
+        <div class="col s06 text t-center t-right lh20" data-jno="NAME"></div>
+      </div>
+      <div class="row pb15 pt15 underline mb00">
+        <div class="col s06 text t-center t-left lh20">서비스가입명</div>
+        <div class="col s06 text t-center t-right lh20">IBK 기업자산관리</div>
+      </div>
+      <div class="row pb15 pt15 underline mb00">
+        <div class="col s06 text t-center t-left lh20">서비스해지일</div>
+        <div class="col s06 text t-center t-right lh20" data-jno="YMD" data-jnf="strYYYYMMDDFromStr"></div>
+      </div>
+      <footer>
+        <div class="alpha_bottom_btn_area">
+          <div class="alpha_btn_area">
+            <div class="col s12 btn alpha_btn s_5 c_3 r_2 w100p" tabindex="0" role="button" data-jns="app://exit">
+              <span class="btn_text">확인</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+					<div class="col s12 bg b-skyblue text t-white normal t-center" data-jns="app://exit">확인</div>
+				</div> -->
+      </footer>
+    </div>
+  </div>
+  <div class="underpop hide modal w100p no-close pop_joined_Y antiscroll">
+    <div class="hide modal-close pop_joined_Y_close"></div>
+    <div class='pop-alert overh'>
+
+      <div class="layer_popup_body">
+        <div class="lh25 text t-center">
+          가입되지 않은 서비스입니다.
+        </div>
+      </div>
+      <div class="layer_popup_footer">
+        <div class="alpha_btn s_5 c_3 r_2" tabindex="0" role="button" data-jns="app://openMenu"
+          data-jng="parent/.goJoinParam">
+          <span class="btn_text">확인</span>
+        </div>
+        <div class="hide goJoinParam" data-jni="actionCode">5009</div>
+        <div class="hide goJoinParam" data-jni="menuId">mac_alt_010101</div>
+        <div class="hide goJoinParam" data-jni="param"></div>
+      </div>
+
+      <!-- <div class=" bg b-white">
+				<div class="row h10"></div>
+				<div class="row pt20 mb20 h20 lh20 pt10 ">
+					<div class="col s12 text t-center">
+						<p>가입되지 않은 서비스입니다.</p>
+					</div>
+				</div>
+				<div class="h10"></div>
+			</div>
+			<div class="row no-mg no-pd"> -->
+      <!-- 				<div class="col s12 btn text pop-leri text normal" data-jns="element://.pop_joined_Y_close" data-href="/mac/join/join_0001_01.html">확인</div> -->
+      <!-- <div class="col s12 btn text pop-leri text normal" data-jns="app://openMenu" data-jng="parent/.goJoinParam">확인</div>
+	            <div class="hide goJoinParam" data-jni="actionCode">5009</div>
+				<div class="hide goJoinParam" data-jni="menuId">mac_alt_010101</div>
+				<div class="hide goJoinParam" data-jni="param"></div>
+			</div> -->
+    </div>
+  </div>
+  <!-- <div data-jns-onload data-jns="mac://join/join_0011_01_01" data-jns-next="!JOIN_YN:.pop_joined_Y"></div> -->
+
+  <div class="modal sessionAlert no-close modal-lock w100p hide modal-align antiscroll under-bg">
+    <div class="pop-alert overh">
+
+      <div class="layer_popup_body">
+        <div class="row">
+          <div class="col s12"></div>
+        </div>
+        <div class="row">
+          <div class="col s12 lh25 text t-center">
+            <div class="text title super t-skyblue lh60">ⓘ</div>
+            <div class="sessionErrMSg"></div>
+          </div>
+        </div>
+        <div class="row mb00">
+          <div class="col s12"></div>
+        </div>
+      </div>
+      <div class="layer_popup_footer">
+        <div class="alpha_btn s_5 c_3 r_2" tabindex="0" role="button" data-jns="element://.pop_exceed_resp_Y_close"
+          data-jns-next=".update_acct">
+          <span class="btn_text">확인</span>
+        </div>
+      </div>
+
+      <div class="bg b-white">
+        <div class="row">
+          <div class="col s12"></div>
+        </div>
+        <div class="row">
+          <div class="col s12 lh25 text t-center">
+            <div class="text title super t-skyblue lh60">ⓘ</div>
+            <div class="sessionErrMSg"></div>
+          </div>
+        </div>
+        <div class="row mb00">
+          <div class="col s12"></div>
+        </div>
+      </div>
+      <div class="hide sessionEndCall" data-jni="type">sessionOutWithAlert</div>
+      <div class="h50 bg b-skyblue t-white t-center lh50 modal-btn modal-close text lh normal"
+        data-jng=".sessionEndCall" data-jns="app://exit">확인</div>
+    </div>
+  </div>
+
+  <div class="modal versionAlert no-close modal-lock w100p hide modal-align antiscroll under-bg">
+    <div class="pop-alert overh">
+
+      <div class="layer_popup_body">
+        <div class="row">
+          <div class="col s12"></div>
+        </div>
+        <div class="row">
+          <div class="col s12 lh25 text t-center">
+            <div class="text title super t-skyblue lh60">ⓘ</div>
+            <div class="versionErrMsg"></div>
+          </div>
+        </div>
+        <div class="row mb00">
+          <div class="col s12"></div>
+        </div>
+      </div>
+      <div class="layer_popup_footer">
+        <div class="hide versionErrCall" data-jni="type">versionErrMsg</div>
+        <div class="alpha_btn s_5 c_3 r_2 modal-close" tabindex="0" role="button" data-jng=".versionErrCall"
+          data-jns="app://goToStore">
+          <span class="btn_text">확인</span>
+        </div>
+      </div>
+
+      <!-- <div class="bg b-white">
+                <div class="row">
+                    <div class="col s12"></div>
+                </div>
+                <div class="row">
+                    <div class="col s12 lh25 text t-center">
+                        <div class="text title super t-skyblue lh60">ⓘ</div>
+                        <div class="versionErrMsg"></div>
+                    </div>
+                </div>
+                <div class="row mb00">
+                    <div class="col s12"></div>
+                </div>
+            </div>
+            <div class="hide versionErrCall" data-jni="type">versionErrMsg</div>
+            <div class="h50 bg b-skyblue t-white t-center lh50 modal-close text lh normal" data-jng=".versionErrCall" data-jns="app://goToStore">확인</div> -->
+    </div>
+  </div>
+  <div class="underpop modal hide w100p no-close notEqualPopup antiscroll">
+    <div class='pop-alert overh'>
+
+      <div class="layer_popup_body">
+        <div class="lh25 text t-center">
+          <p>로그인 하신 인증서로만 해지가 가능합니다.</p>
+          <p>인증서를 확인해주십시오.</p>
+        </div>
+      </div>
+      <div class="layer_popup_footer">
+        <div class="alpha_btn s_5 c_3 r_2 modal-close" tabindex="0" role="button">
+          <span class="btn_text">확인</span>
+        </div>
+      </div>
+
+      <!-- <div class='bg b-white'>
+                <div class="row pt30 pb20 lh50 mb00">
+                    <div class="col s12 text t-center lh20">
+						<p>로그인 하신 인증서로만 해지가 가능합니다.</p>
+						<p>인증서를 확인해주십시오.</p>
+					</div>
+                </div>
+            </div>
+            <div class="row no-mg no-pd">
+                <div class="col s12 btn text semi-normal pop-leri modal-close">확인</div>
+            </div> -->
+    </div>
+  </div>
+  <div class="modal-load hide modal no-close antiscroll">
+    <div class="loading">
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p>처리중입니다.<br>잠시만 기다려주세요.</p>
+    </div>
+    <div class="modal-close modal-load-close"></div>
+  </div>
+
+
+  <!---------------------------- 점검 중 팝업-------------------------->
+  <div class="underpop modal w100p no-close antiscroll hide pop_system_check">
+    <div class="hide modal-close pop_joined_Y_close"></div>
+    <div class="pop-alert overh">
+
+      <div class="layer_popup_body">
+        <div class="lh25 text t-center">
+          <p>서버작업으로 인하여 서비스가 일시 중단됩니다.<br>
+            이용에 불편을 드려 죄송합니다.<br><br>
+            - 중단일시 : 10월17일(일) 00:00 ~ 01:00(1시간)<br><br>
+            ※중단시간은 해당기관의 작업상황에 따라 다소 변경될 수 있습니다.</p>
+        </div>
+      </div>
+      <div class="layer_popup_footer">
+        <div class="alpha_btn s_5 c_3 r_2 btnExit" tabindex="0" role="button" data-jns="app://exit">
+          <span class="btn_text">확인</span>
+        </div>
+      </div>
+
+      <!-- <div class="bg b-white">
+                <div class="row pt30 pb30 mb00 lh20">
+                    <div class="col s12 text t-center"> 
+                        <p>서버작업으로 인하여 서비스가 일시 중단됩니다.<br>
+                        	이용에 불편을 드려 죄송합니다.<br><br>
+                        	- 중단일시 : 10월17일(일) 00:00 ~ 01:00(1시간)<br><br>
+                        	※중단시간은 해당기관의 작업상황에 따라 다소 변경될 수 있습니다.</p>
+                    </div>
+                </div>  
+            </div>
+            <div class="row no-mg no-pd">
+                <div class="col s12 btn text pop-leri text normal btnExit" data-jns="app://exit">확인</div>
+            </div> -->
+    </div>
+  </div>
+  <script>
+    function uf_back() {
+
+      if (!$('.pop_system_check').hasClass('hide')) {
+        $('.btnExit').click();
+      }
+      else {
+        window._app.bcbk();
+      }
+    }
+    var tmpDate = new Date();
+    if (tmpDate > new Date('2021-10-17 00:00:00') && tmpDate < new Date('2021-10-17 01:00:00')) {
+      $(".pop_system_check").removeClass('hide');
+    }
+  </script>
+</body>
+
+
+
+</html>

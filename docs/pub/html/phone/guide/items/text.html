@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap">
+				<div class="cont_wrap">
+					<style>
+						.guidefont {
+							font-size: 1.5rem;
+						}
+					</style>
+					<h1 class="guide_h1">Font</h1>
+					<h4 class="guide_h4">Pretendard Font</h4>
+					<p class="guidefont fw_4">Pretendard weight Regular 400</p>
+					<p class="guidefont fw_5">Pretendard weight Medium 500</p>
+					<p class="guidefont fw_6">Pretendard weight SemiBold 600</p>
+					<p class="guidefont fw_7">Pretendard weight Bold 700</p>
+
+					<h4 class="guide_h4 font_ibk">IBK Font</h4>
+					<p class="guidefont font_ibk fw_3">IBKDreamMobile weight 300</p>
+					<p class="guidefont font_ibk fw_5">IBKDreamMobile weight 500</p>
+
+					<h4 class="guide_h4">타이틀 스타일 - 기본 하단 간격 정의 있음</h4>
+					<div class="stepper_tit">.stepper_tit : 700 / 18 / 26 - 하단여백 : 8px / color : #5a5e6c</div>
+					<h1 class="title_text ty1">.title_text.ty1 : 700 / 18 / 26 - 하단여백 : 16px</h1>
+					<h1 class="title_text ty1">.title_text.ty2 : 700 / 18 / 24 - 하단여백 : 16px - 폐기</h1>
+					<h1 class="title_text ty3">.title_text.ty3 : 700 / 16 / 24 - 하단여백 : 12px</h1>
+					<h1 class="title_text ty4">.title_text.ty4 : 700 / 12 / 16 - 하단여백 : 0px</h1>
+					<h1 class="title_text ty4 with_btn">
+						.title_text.ty4 : 700 / 12 / 16 - 하단여백 : 0px
+						<button type="button" class="btn s_1 c_1 r_1">오른쪽 버튼</button>
+					</h1>
+
+					<h4 class="guide_h4">일반 문구 관련 - 기본 하단 간격 정의 없음</h4>
+					<div class="txt_style ty1">
+						.txt_style.ty1 : 문구입니다.
+						<br />
+						700 / 18 / 26
+					</div>
+					<br />
+					<div class="txt_style ty2">
+						.txt_style.ty2 : 문구입니다.
+						<br />
+						700 / 16 / 24
+					</div>
+					<br />
+					<div class="txt_style ty3">
+						.txt_style.ty3 : 문구입니다.
+						<br />
+						600 / 16 / 24
+					</div>
+					<br />
+					<div class="txt_style ty4">
+						.txt_style.ty4 : 문구입니다.
+						<br />
+						700 / 12 / 16
+					</div>
+					<br />
+					<div class="txt_style ty5">
+						.txt_style.ty5 : 문구입니다.
+						<br />
+						700 / 12 / 16 / color #737684
+					</div>
+					<br />
+					<div class="txt_style ty6">
+						.txt_style.ty6 : 문구입니다.
+						<br />
+						500 / 14 / 20 / color #5a5e6c
+					</div>
+					<br />
+					<div class="txt_style ty7">
+						.txt_style.ty7 : 문구입니다.
+						<br />
+						400 / 14 / 20 / color #101116
+					</div>
+					<br />
+					<div class="txt_style ty8">
+						.txt_style.ty8 : 문구입니다.
+						<br />
+						700 / 13 / 20 / color #101116
+					</div>
+					<br />
+					<div class="txt_style ty9">
+						.txt_style.ty9 : 문구입니다.
+						<br />
+						700 / 16 / 24 / color #454855
+					</div>
+					<br />
+					<div class="txt_style ty10">
+						.txt_style.ty10 : 문구입니다.
+						<br />
+						500 / 14 / 20 / color #454855
+					</div>
+					<br />
+					<div class="txt_style ty11">
+						.txt_style.ty11 : 문구입니다.
+						<br />
+						400 / 16 / 24 / color #101116
+					</div>
+					<br />
+					<div class="txt_style ty12">
+						.txt_style.ty12 : 문구입니다.
+						<br />
+						400 / 13 / 18 / color #454855
+					</div>
+					<br />
+					<div class="txt_style ty13">
+						.txt_style.ty13 : 문구입니다.
+						<br />
+						700 / 22 / 32 / color #101116
+					</div>
+					<br />
+					<div class="txt_style ty14">
+						.txt_style.ty14 : 문구입니다.
+						<br />
+						700 / 14 / 20 / color #101116
+					</div>
+					<br />
+					<div class="txt_style ty15">
+						.txt_style.ty15 : 문구입니다.
+						<br />
+						700 / 13 / 20 / color #5a5e6c
+					</div>
+
+					<h4 class="guide_h4">폰트 Color - 정의 필요</h4>
+					<p class="color ty1">color ty1 / Color : #c85000</p>
+					<p class="color ty2">color ty2 / Color : #1654d1</p>
+					<p class="color ty3">color ty3 / Color : #2873e3</p>
+					<p class="color ty4">color ty4 / Color : #e32502</p>
+					<p class="color ty5">color ty5 / Color : #737684</p>
+					<p class="color ty6">color ty6 / Color : #5a5e6c</p>
+					<p class="color ty7">color ty7 / Color : #30323b</p>
+					<p class="color ty8">color ty8 / Color : #101116</p>
+
+					<p class="color ty9">color ty9 / Color : #b70b0c</p>
+					<p class="color ty10">color ty10 / Color : #c83000</p>
+					<p class="color ty11">color ty11 / Color : #008133</p>
+					<p class="color ty12">color ty12 / Color : #007981</p>
+					<p class="color ty13">color ty13 / Color : #0c57c6</p>
+
+					<h4 class="guide_h4">보조문구 - txt_caution</h4>
+					<div class="txt_caution">보조문구입니다. #454855 / 13 / 20</div>
+
+					<h4 class="guide_h4">bullet 문구 관련</h4>
+					<div class="bullet_txt ty1">.bullet_txt.ty1 : 문구입니다.</div>
+					<div class="bullet_txt ty2">.bullet_txt.ty2 : 문구입니다.</div>
+					<div class="bullet_txt ty3">.bullet_txt.ty3 : 문구입니다.</div>
+					<div class="bullet_txt ty4">.bullet_txt.ty4 : 문구입니다.</div>
+
+					<h4 class="guide_h4">말줄임 - 1줄</h4>
+					<p class="line_climp_1">1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄 말줄임 - 1줄</p>
+
+					<h4 class="guide_h4">말줄임 - 2줄</h4>
+					<p class="line_climp_2">2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄 말줄임 - 2줄</p>
+
+					<h4 class="guide_h4">아이콘 문구 관련 - 처리결과 - lottie 적용 케이스 - 성공</h4>
+					<div class="ico_txt ty1 lottie_case1">
+						<div class="lottie_box">
+							<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+						</div>
+						.ico_txt.ty1 완료문구. - 완료페이지에 사용 - 교체 예정 lottie
+						<div class="note_cmt">보조문구</div>
+					</div>
+
+					<h4 class="guide_h4">아이콘 문구 관련 - 처리결과 - lottie 적용 케이스 - 실패</h4>
+					<div class="ico_txt ty1 lottie_case1">
+						<div class="lottie_box">
+							<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+						</div>
+						.ico_txt.ty1 완료문구. - 완료페이지에 사용 - 교체 예정 lottie
+						<div class="note_cmt">보조문구</div>
+					</div>
+
+					<h4 class="guide_h4">아이콘 문구 관련 - 처리결과</h4>
+					<div class="ico_txt ty1 lottie_case1">
+						<div class="lottie_box">
+							<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+						</div>
+						.ico_txt.ty1 완료문구. - 완료페이지에 사용 - 교체 예정 lottie
+						<div class="note_cmt">보조문구</div>
+					</div>
+					<ul class="list_bullet ty1">
+						<li>sfdsd</li>
+						<li>sfdsd</li>
+					</ul>
+					<div class="ico_txt ty1 lottie_case1">
+						<div class="lottie_box">
+							<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+						</div>
+						.ico_txt.ty1.fail 완료문구. - 완료페이지에 사용
+						<div class="note_cmt">보조문구</div>
+					</div>
+					<div class="ico_txt ty1 lottie_case1">
+						<div class="lottie_box">
+							<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+						</div>
+						.ico_txt.ty1.fail.red 오류문구. - 오류페이지에 사용 - 교체 예정 lottie
+						<div class="note_cmt">보조문구</div>
+					</div>
+					<div class="ico_txt ty1 info">
+						.ico_txt.info info문구. - 완료페이지에 사용
+						<div class="note_cmt">보조문구</div>
+					</div>
+					<br />
+					<div class="ico_txt ty3">아이콘 추후 적용 예정</div>
+
+					<h4 class="guide_h4">
+						아이콘 문구 관련 - 안내
+						<br />
+						(구 cert_info, icon 80px)
+					</h4>
+					<div class="icon_info_group">
+						<div class="icon internal_control_center"></div>
+						<div class="tit">안내문구</div>
+						<div class="txt">보조문구</div>
+					</div>
+
+					<h4 class="guide_h4">아이콘 문구 관련 - 안내 lottie</h4>
+					<div class="icon_info_group">
+						<div class="icon lottie">
+							<lottie-player src="../../../../lottie/Loading.json" background="transparent" speed="1"></lottie-player>
+						</div>
+						<div class="tit">안내문구</div>
+						<div class="txt">보조문구</div>
+					</div>
+
+					<h4 class="guide_h4">아이콘 문구 관련 - 툴팁</h4>
+					<div class="icon_info_group tooltip">
+						<div class="favorite_tooltip visible">고객님에게 딱 맞는 인증서를 찾았어요</div>
+						<div class="icon internal_control_center"></div>
+						<div class="subtxt">개인인증서로 기업스마트뱅킹까지 편리하게</div>
+						<div class="tit">안내문구</div>
+						<div class="txt">보조문구</div>
+					</div>
+
+					<h4 class="guide_h4">
+						아이콘 문구 관련 - ty1
+						<br />
+						(카드혜택 등, icon 세로 170px)
+					</h4>
+					<div class="icon_info_group ty1">
+						<div class="tit">안내문구</div>
+						<div class="txt">보조문구</div>
+						<div class="icon tax_payment_information"></div>
+					</div>
+
+					<!-- <h4 class="guide_h4">아이콘 문구 관련 - ty2<br>(대출상품안내 등, icon 세로 170px)</h4>
+          <div class="icon_info_group ty2">
+            <div class="tit">안내문구</div>
+            <div class="subtxt">안내문구</div>
+            <div class="icon ione_business_service_join"></div>
+          </div> -->
+
+					<h4 class="guide_h4">아이콘 문구 관련 - 증감</h4>
+					<span class="ico_txt ty2 complete">완료</span>
+					<br />
+					<span class="ico_txt ty2 fail">실패</span>
+					<br />
+
+					<h4 class="guide_h4">없음 문구 - 공통(Default) - 리스트에 사용 - 상하간격 차이</h4>
+					<div class="no_result_msg">
+						<div class="msg">계좌정보가 없습니다.(default)</div>
+						<div class="ps">계좌번호 직접입력을 통해 계좌 등록해 주세요.</div>
+						<div class="btn_area center">
+							<button type="button" class="btn s_3 c_1 r_3 join"><span class="text">오픈뱅킹 가입하기</span></button>
+						</div>
+						<div class="ps_box">
+							알림 메시지
+							<br />
+							알림 메시지
+						</div>
+					</div>
+
+					<h4 class="guide_h4">없음 문구 - ty1</h4>
+					<div class="no_result_msg ty1">
+						<div class="msg">계좌정보가 없습니다.(ty1)</div>
+						<div class="ps">계좌번호 직접입력을 통해 계좌 등록해 주세요.</div>
+					</div>
+
+					<script>
+						// lottie-player 실행
+						const stepLottiePlayers = document.querySelectorAll("lottie-player");
+						stepLottiePlayers.forEach(player => {
+							player.play();
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>

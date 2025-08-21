@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 고객지원_고객정보관리 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 입력확인 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">입력확인</div>
+							<div class="title_text ty1">거래내역 수신정보</div>
+							<div class="form_group">
+								<div class="input_label ty2">휴대폰번호</div>
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력" />
+									</div>
+								</div>
+								<div class="label">
+									<input type="checkbox" name="" id="chk1" />
+									<label for="chk1" class="checkbox small mt_12">
+										<i></i>
+										<span>거래내역 문자메시지 수신 동의</span>
+									</label>
+								</div>
+
+								<div class="input_label ty2">이메일</div>
+								<div class="comp_wrap email">
+									<div class="select_domain">
+										<div class="input">
+											<input type="text" name="" id="" class="input_box" value="ibk1234" title="이메일 사용자 이름 입력" placeholder="이메일" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+										<span>@</span>
+										<div class="dropdown ty5" role="button" title="도메인 선택 목록 보기" onclick="comLayerPopUtil.open('emailOptList');">
+											<div class="dropdown_text">ibk.com</div>
+										</div>
+									</div>
+									<div class="input direct">
+										<input type="text" name="" id="" title="도메인 직접 입력" placeholder="도메인 직접 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+								<div class="label">
+									<input type="checkbox" name="" id="chk2" />
+									<label for="chk2" class="checkbox small mt_12">
+										<i></i>
+										<span>거래내역 이메일 수신 동의</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>안심이체 서비스에 필요한 정보를 조회 또는 변경할 수 있습니다.</li>
+											<li>이메일 및 문자메시지 안내는 안심이체 진행 상황에 따라 고객님에게 발송됩니다.</li>
+											<li>안심이체 서비스에서 발송하는 이메일 및 문자메시지를 받을 연락처를 변경할 수 있습니다.</li>
+											<li>이메일 및 문자메시지를 받지 않으려면 ‘수신 동의’ 체크박스를 해제하고 [변경하기]를 눌러주세요.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">변경하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 입력확인 -->
+
+				<!-- s: step2 정보변경완료 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								고객님 정보를
+								<br />
+								변경했어요
+							</div>
+						</div>
+
+						<div class="group mt_40">
+							<div class="title_text ty1">거래내역 정보</div>
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">휴대폰번호</span>
+									<span class="d_list_r">
+										<span class="txt">000-0000-0000</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">휴대폰번호 수신동의</span>
+									<span class="d_list_r">
+										<span class="txt">설정</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">이메일</span>
+									<span class="d_list_r">
+										<span class="txt">abc@abc.com</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">이메일 수신동의</span>
+									<span class="d_list_r">
+										<span class="txt">설정</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 정보변경완료 -->
+			</div>
+			<!-- e: 고객지원_고객정보관리 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

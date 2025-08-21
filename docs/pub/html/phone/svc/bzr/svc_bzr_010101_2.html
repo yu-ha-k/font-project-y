@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 사업자등록서비스 신청조회 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 사업자등록서비스 신청 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">
+								간편인증
+							</div>
+							<ul class="list_bullet ty4">
+								<li>신청하신 대표자 이름과 휴대폰번호를 입력해 주세요.</li>
+								<li>IBK기업은행에서는 사업자등록 원스톱 서비스 신청일로부터 1달만 조회 가능해요. 그 이후는 국세청 홈택스에서 조회해 주세요.</li>
+							</ul>
+							
+							<div class="form_group mt_24">
+								<div class="input_label ty1 mt_32">
+									인증서 선택
+								</div>
+								<div class="btn_area toggleable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">카카오톡</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">네이버</span></button>
+									<button type="button" role="radio" aria-checked="true" class=""><span class="text">PASS</span></button>
+								</div>
+							
+								<div class="input_label ty1 mt_32">대표자 이름</div>
+								<div class="input">
+									<input type="text" name="" id="" title="대표자 이름 입력" placeholder="대표자 이름 입력" />
+									<button type="button" class="del">텍스트삭제</button>
+								</div>		
+								
+								<div class="input_label ty1 mt_32">대표자 주민등록번호</div>
+								<div class="comp_wrap birth">
+									<div class="input no_del">
+										<input type="tel" maxlength="6" name="" id="" title="생년월일 6자리 입력" placeholder="" />
+									</div>
+									<span>-</span>
+									<div class="birth_after full_value">
+										<button type="button" aria-label="뒤 7자리" class="keypad_btn"></button>
+									</div>
+								</div>
+								
+								<div class="input_label ty1 mt_32">통신사</div>
+								<div class="dropdown ty2" role="button" title="통신사 목록보기" onclick="comLayerPopUtil.open('telecom');">
+									<div class="dropdown_text">선택</div>
+								</div>
+								
+								<div class="input_label ty1 mt_32">대표자 휴대폰번호</div>
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력" />
+									</div>
+								</div>
+								
+								<div class="btn_area ty1 mt_20">
+									<button type="button" class="btn s_4 c_2 r_2">인증 요청하기
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">인증 확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 사업자등록서비스 신청 -->
+				 			
+				<!-- s: 통신사 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="telecom" title="통신사 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">통신사 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('telecom');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" aria-selected="false">SKT</li>
+								<li role="option" tabindex="-1" aria-selected="false">KT</li>
+								<li role="option" tabindex="-1" aria-selected="false">LGU+</li>
+								<li role="option" tabindex="-1" aria-selected="false">SKT (알뜰폰)</li>
+								<li role="option" tabindex="-1" aria-selected="false">KT (알뜰폰)</li>
+								<li role="option" tabindex="-1" aria-selected="false">LGU+ (알뜰폰)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 통신사 선택 팝업 -->
+				 
+				<!-- s: step2 조회결과 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<!-- 사업자등록서비스 신청조회 - 조회결과(다건/목록) 상단에 셀렉트 박스 노출 -->
+							<div class="dropdown ty2 mb_16" role="button" title="선택" onclick="comLayerPopUtil.open('businesslistSelect');">
+								<div class="dropdown_text">선택</div>
+							</div>
+							<div class="btn_area ty1 mb_32">
+								<button type="button" class="btn s_4 c_1 r_2">조회</button>
+							</div>
+							
+							<!-- 사업자 등록 신청건이 진행중인 경우 -->
+							<div class="title_text ty1 pb_0 mb_8"> 
+								현재 국세청에서 사업자 등록이 <span class="color ty2">진행중</span>이에요.
+							</div>
+							<div class="title_text ty3 fw_4 pb_0 mb_16">
+								조금만 기다려주세요. 
+							</div>
+							
+							<!-- 사업자 등록 신청건이 완료인 경우 -->
+							<div class="title_text ty1 pb_0 mb_8"> 
+								국세청에 사업자 등록이 <span class="color ty2">완료</span>되었어요.
+							</div>
+							<div class="title_text ty3 fw_4 pb_0 mb_16">
+								사업의 첫 시작을 축하드려요! 
+							</div>
+							<ul class="d_list ty1">
+								<li>
+									<div class="d_list_l">접수번호</div>
+									<div class="d_list_r">12345678</div>
+								</li>
+								<li>
+									<div class="d_list_l">접수일</div>
+									<div class="d_list_r">2024-12-23</div>
+								</li>
+								<li>
+									<div class="d_list_l">상호명</div>
+									<div class="d_list_r">명동공방</div>
+								</li>
+								<li>
+									<div class="d_list_l">처리상태</div>
+									<div class="d_list_r">진행중</div>
+								</li>
+							</ul>
+							
+							<button type="button" class="btn s_4 c_2 r_2 mt_16 w_100p">사업자등록증 확인하기 </button>
+							
+							<div class="mt_32">
+								<img src="" alt="">
+								<img src="../../../../img/svc/img_svc_bzr_010102_1_01.png" alt="" />
+								<div class="sr_only">
+									<div class="txt_style ty1 mb_8">
+										이제 <span class="point">우리회사 통장</span>을 <br>만들어 볼까요?
+									</div>
+									<div class="txt_style ty7 fw_5">실적 상관없이, 금액 상관없이,<br>타행이체 자동이체 <span class="point">수수료 전액면제</span></div>
+								</div>
+							</div>
+							
+							<div class="mt_64 ta_c mb_32">
+								<button type="button" class="underline color ty6 txt_style ty7 fw_6" onclick="uf_goStep(3);">마케팅활용 동의철회</button>
+							</div>
+						</div>
+						
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<!-- <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">메인화면으로 이동</button> -->
+								<button type="button" class="btn s_5 c_3 r_2">계좌개설 하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 조회결과 -->
+										
+				<!-- s: 사업자등록서비스 신청조회 다견 목록 팝업 -->
+				<div class="bottom_popup_wrap" id="businesslistSelect" title="선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('businesslistSelect');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" aria-selected="false">상호명
+									<span class="f_right">
+										접수일
+									</span>
+								</li>
+								<li role="option" tabindex="-1" aria-selected="false">명동교자
+									<span class="f_right">
+										2024-12-23
+									</span>	
+								</li>
+								<li role="option" tabindex="-1" aria-selected="false">명동제과
+									<span class="f_right">
+										2024-12-23
+									</span>	
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사업자등록서비스 신청조회 다견 목록 팝업 -->
+				 
+				<!-- s: step3 마케팅활용 동의철회 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">
+								마케팅활용 동의철회
+							</div>
+							
+							<div class="title_text ty3">
+								마케팅활용 동의철회 시 IBK기업은행에서 제공하는 혜택 및 이벤트 안내를 받으실 수 없어요.
+							</div>
+							<div class="txt_style ty11">사업자등록 원스톱 서비스 관련 마케팅활용 동의를 철회하시나요?</div>
+						</div>
+						
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(2);">이전</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">철회하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 조회결과 -->
+				 
+				<!-- s: step4 마케팅활용동의 처리결과 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+								
+							<!-- s : 마케팅 활용동의 철회 처리 성공  -->
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								사업자등록 원스톱 서비스 관련<br>
+								마케팅 활용동의를 철회했어요
+							</div>
+							<div class="title_text ty1">처리결과</div>
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l flex_r">마케팅활용동의(사업자등록서비스 관련)</span>
+									<span class="d_list_r">미동의</span>
+								</li>
+							</ul>
+							<!-- e : 마케팅 활용동의 철회 처리 성공  -->
+							
+							<!-- s : 마케팅 활용동의 미동의 안내  -->
+							<div class="ico_txt ty1 info">현재 사업자등록 원스톱 서비스 관련 <br>마케팅 활용에 미동의 되어있어요</div>
+							<!-- e : 마케팅 활용동의 미동의 안내  -->
+							
+							<!-- s: 화면 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+								</div>
+							</div>
+							<!-- e: 화면 하단 고정 버튼 -->
+						</div>
+					</div>
+				</div>
+				<!-- e: step4 조회결과 -->
+			</div>
+			<!-- e: 마케팅활용 동의철회 -->
+		</div>
+			
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+	</body>
+</html>

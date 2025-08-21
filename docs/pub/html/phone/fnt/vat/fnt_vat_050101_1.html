@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 계좌전환 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 계약서류제공및설명의무안내 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">계약서류 제공 및 설명의무 안내</div>
+							<div class="txt_style ty2 fw_4">
+								금융회사는 「금융소비자 보호에 관한 법률」에 따라 설명의무 이행 대상에 해당하는지 적합성을 확인하고 예금상품의 중요한 사항을 소비자가 이해할 수 있도록 충분히 설명해야 합니다.
+								<br />
+								금융회사는 계약을 체결하는 경우 지체 없이 계약서류를 제공해야 합니다.
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">서류 안내방법</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">이메일</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">카카오 알림톡</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">문자</span></button>
+								</div>
+
+								<div class="input_label ty1">이메일 주소</div>
+								<div class="comp_wrap email">
+									<div class="select_domain">
+										<div class="input">
+											<input type="text" name="" id="" class="input_box" value="ibk1234" title="이메일 사용자 이름 입력" placeholder="이메일" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+										<span>@</span>
+										<div class="dropdown ty5" role="button" title="도메인 선택 목록 보기" onclick="comLayerPopUtil.open('emailOptList');">
+											<div class="dropdown_text">ibk.com</div>
+										</div>
+									</div>
+									<div class="input direct">
+										<input type="text" name="" id="" title="도메인 직접 입력" placeholder="도메인 직접 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+
+								<div class="input_label ty1">휴대폰번호</div>
+								<div class="input">
+									<input type="text" name="" id="" title="휴대폰번호 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">금용소비자 유형</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">전문금융 소비자</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">법인/조합 등 단체</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>방법을 선택하지 않을 경우 이메일로 계약서류를 발송합니다.</li>
+											<li>이메일 주소나 휴대폰번호가 바뀐 경우 변경해 주세요.</li>
+											<li>카카오 알림톡으로 발송할 수 없는 경우 문자로 계약서류를 발송합니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 계약서류제공및설명의무안내 -->
+
+				<!-- s: step2 계좌선택 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">계좌선택</div>
+							<div class="title_text ty1">전환대상계좌선택</div>
+							<div class="form_group space_updown_group">
+								<div class="input_label ty2 fw_7">조회기간</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active">
+										<span class="text">
+											일반계좌
+											<span class="ico tobe">에서</span>
+											전용계좌
+										</span>
+									</button>
+									<button type="button" role="radio" aria-checked="false">
+										<span class="text">
+											전용계좌
+											<span class="ico tobe">에서</span>
+											일반계좌
+										</span>
+									</button>
+								</div>
+
+								<!-- s: 일반에서 전용 -->
+								<div class="space_updown">
+									<div class="input_label ty2 fw_7">계좌번호</div>
+									<div class="dropdown ty2" role="button" title="계좌번호 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="input_label ty2 fw_7">전환할 상품</div>
+									<div class="dropdown ty2" role="button" title="전환할 상품 선택 목록 보기" onclick="comLayerPopUtil.open('optList');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="input_label ty2 fw_7">사업자등록번호</div>
+									<div class="input">
+										<input type="text" name="" id="" value="000-00-00000" disabled />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+								<!-- e: 일반에서 전용 -->
+
+								<!-- s: 전용에서 일반 -->
+								<div class="space_updown">
+									<div class="input_label ty2 fw_7">계좌번호</div>
+									<div class="dropdown ty2" role="button" title="계좌번호 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="input_label ty2 fw_7">전환할 상품</div>
+									<div class="dropdown ty2" role="button" title="전환할 상품 선택 목록 보기" onclick="comLayerPopUtil.open('optList');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="input_label ty2 fw_7">사업자등록번호</div>
+									<div class="input">
+										<input type="text" name="" id="" value="000-00-00000" disabled />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+								<!-- e: 전용에서 일반 -->
+							</div>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>IBK평생주거래기업통장, IBK맛집통장 및 현재 판매중단된 상품을 전용계좌로 전환 시, 기존 상품으로 다시 전환할 수 없습니다.</li>
+											<li>기존 상품(IBK평생주거래기업통장, 기업섬김통장, IBK맛집통장 등) 우대혜택(타행이체 수수료 면제 및 우대금리 등)을 제공받는 계좌를 전용계좌로 전환 시, 기존 우대혜택을 제공받을 수 없습니다.</li>
+											<li>기존에 거래했던 계좌(보통예금, 기업자유예금)를 IBK부가가치세 매입자 납부전용통장으로 전환할 수 있습니다.</li>
+
+											<li>금&middot;스크랩 등의 전용계좌 전환은 영업점, 기업인터넷뱅킹, i-ONE뱅크 기업 앱에서 할 수 있습니다.</li>
+
+											<li>간이과세업자는 사업자등록증과 신분증을 가지고 가까운 IBK기업은행 영업점을 방문해 계좌전환 또는 가입할 수 있습니다.</li>
+											<li>당일 신규계좌는 전환할 수 없습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 계좌선택 -->
+
+				<!-- s: step3 약관동의 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">약관동의</div>
+							<div class="title_text ty1">상품설명서 및 약관</div>
+							<div class="title_text ty3 fw_7">약관확인</div>
+							<div class="txt_style ty2 fw_4">핵심설명서와 상품설명서 교부 및 주요내용에 대한 설명을 핵심설명서와 상품설명서 파일 게시로 대신합니다. 이에 동의 시 아래 동의 체크박스를 선택해 주세요.</div>
+							<div class="label">
+								<input type="checkbox" name="" id="chk1" />
+								<label for="chk1" class="checkbox small mt_16">
+									<i></i>
+									<span>상품설명서(또는 핵심설명서)에 대한 내용확인 및 수령에 동의함</span>
+								</label>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<div class="agree_check_group_top">
+										<div class="label all_chk">
+											<input type="checkbox" name="" id="agree_check_group_top4" class="chk_point_all" />
+											<label for="agree_check_group_top4" class="checkbox">
+												<i></i>
+												<span>
+													<span class="ess_text">필수</span>
+													약관 모두 동의
+												</span>
+											</label>
+										</div>
+									</div>
+
+									<div class="agree_check">
+										<ul class="term_list">
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group04_1" class="chk_point_sub" />
+													<label for="ago_group04_1" class="checkbox small lbl">
+														<i></i>
+														<span>
+															입출금이 자유로운 예금 약관
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">입출금이 자유로운 예금 약관</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group04_2" class="chk_point_sub" />
+													<label for="ago_group04_2" class="checkbox small lbl">
+														<i></i>
+														<span>
+															예금거래 기본 약관
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">예금거래 기본 약관</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group04_3" class="chk_point_sub" />
+													<label for="ago_group04_3" class="checkbox small lbl">
+														<i></i>
+														<span>
+															IBK부가가치세 매입자납부 전용통장 특약
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">IBK부가가치세 매입자납부 전용통장 특약</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group04_4" class="chk_point_sub" />
+													<label for="ago_group04_4" class="checkbox small lbl">
+														<i></i>
+														<span>
+															IBK부가가치세 매입자납부 전용통장 상품설명서
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">IBK부가가치세 매입자납부 전용통장 상품설명서</span>
+													보기
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">예금상품에 대한 중요한 사항을 충분히 설명받고 이해하셨습니까?</div>
+							<ul class="list_bullet ty4">
+								<li>상품의 내용(계약기간, 이자의 지급시기 및 지급제한사유)</li>
+								<li>이자율(수익률, 중도해지 이자율, 만기해지 이자율, 만기 후 이자율 및 각 이자율에 대한 산출 근거 포함), 수수료 등 부대비용, 계약해지 시 불이익, 계좌이체 제한 등 거래제한 사항</li>
+								<li>계약의 해제·해지, 위법계약해지권, 민원처리 절차 및 분쟁조정, 예금자보호 여부 및 그 내용</li>
+								<li>(연계·제휴서비스 제공 상품인 경우) 내용, 제공받을 수 있는 요건, 제공기간, 이행책임, 변경 시 변경내용 및 그 사유 등을 사전에 알린다는 사실 및 알리는 방법</li>
+							</ul>
+							<div class="label">
+								<input type="checkbox" name="" id="chk2" />
+								<label for="chk2" class="checkbox small mt_16">
+									<i></i>
+									<span>
+										본인의 의사에 따라 작성했습니다.
+										<br />
+										동 예금상품 계약서(예금상품 가입권유 확인서 겸용) (고객 교부용)를 제공받았음을 확인합니다.
+									</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 약관동의 -->
+
+				<!-- s: step4 정보확인 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보확인</div>
+							<div class="title_text ty1">전환대상계좌 확인</div>
+							<div class="title_text ty3">계좌확인</div>
+							<div class="d_list ty3">
+								<p class="line" role="text">
+									<span class="d_list_l">계좌전환유형</span>
+									<span class="d_list_r">
+										<span class="txt">일반계좌에서 전용계좌</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">계좌번호</span>
+									<span class="d_list_r">
+										<span class="account_no">000-00000-00-000</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">전환하실 상품</span>
+									<span class="d_list_r">
+										<span class="txt">BK부가세매입자납부_금거래계좌</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">사업자등록번호</span>
+									<span class="d_list_r">
+										<span class="txt">000-00-00000</span>
+									</span>
+								</p>
+							</div>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>IBK평생주거래기업통장, IBK맛집통장 및 현재 판매중단된 상품을 전용계좌로 전환 시, 기존 상품으로 다시 전환할 수 없습니다.</li>
+											<li>기존 상품(IBK평생주거래기업통장, 기업섬김통장, IBK맛집통장 등) 우대혜택(타행이체 수수료 면제 및 우대금리 등)을 제공받는 계좌를 전용계좌로 전환 시, 기존 우대혜택을 제공받을 수 없습니다.</li>
+											<li>기존에 거래했던 계좌(보통예금, 기업자유예금)를 IBK부가가치세 매입자 납부전용통장으로 전환할 수 있습니다.</li>
+
+											<li>금&middot;스크랩 등의 전용계좌 전환은 영업점, 기업인터넷뱅킹, i-ONE뱅크 기업 앱에서 할 수 있습니다.</li>
+
+											<li>간이과세업자는 사업자등록증과 신분증을 가지고 가까운 IBK기업은행 영업점을 방문해 계좌전환 또는 가입할 수 있습니다.</li>
+											<li>당일 신규계좌는 전환할 수 없습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">전환하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 정보확인 -->
+
+				<!-- s: step5 계좌전환 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								계좌를 전환했어요
+							</div>
+						</div>
+
+						<div class="group mt_40">
+							<div class="acd_wrap accodian_wrap ty2 etc2">
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">계좌전환유형</span>
+												<span class="d_list_r">
+													<span class="txt">일반계좌에서 전용계좌</span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">계좌번호</span>
+												<span class="d_list_r">
+													<span class="account_no">000-000000-00-000</span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">전환할 상품</span>
+												<span class="d_list_r">
+													<span class="txt">IBK부가세매입자납부_금거래계좌</span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">사업자등록번호</span>
+												<span class="d_list_r">
+													<span class="txt">000-00-00000</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="acd_head accodian_head">
+									<button type="button" title="컨텐츠내용 상세보기" aria-expanded="false" class="acd_btn">
+										<span class="title">더보기</span>
+										<span class="title sub">접기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 계좌전환 -->
+
+				<!-- s: popup -->
+				<!-- 계좌 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- // 계좌 선택 팝업 -->
+
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">알림</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="popup_msg_txt1">해당 계좌는 전환할 수 없습니다.</div>
+							<div class="acd_wrap accodian_wrap ty2 etc1 active">
+								<div class="acd_cont accodian_cont mt_40">
+									<div class="inner" style="display: block">
+										<div class="bg_box ty4">오류코드 : ABCDE0000000234 계정처리오류</div>
+									</div>
+								</div>
+
+								<div class="acd_head accodian_head active">
+									<button type="button" title="컨텐츠내용 상세보기" aria-expanded="true" class="acd_btn">
+										<span class="title">더보기</span>
+										<span class="title sub">접기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup1');">확인</button>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popup2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">이메일 변경 안내</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="popup_msg_txt1">qwe123@도메인</div>
+							<div class="popup_msg_txt2">
+								위와 같이 이메일을 변경했어요.
+								<br />
+								계약 후 변경된 이메일로 관련 서류를 보내드릴게요.
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('popup2');">아니오</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup2');">예</button>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popup3">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">휴대폰번호 변경 안내</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup3');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="popup_msg_txt1">010-1234-567팔</div>
+							<div class="popup_msg_txt2">
+								위와 같이 휴대폰번호를 변경헀어요.
+								<br />
+								계약 후 변경된 휴대폰번호로 관련 서류를 보내드릴게요.
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('popup3');">아니오</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup3');">예</button>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="optList" title="전환할 상품 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">전환할 상품 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+			<!-- e: 계좌전환 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap"> 
+        <!-- s: Home > 알림함 > 알림 설정 -->
+        <div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1"> 잊으면 안 되는 중요한 금융업무와 <br />
+                        다양한 혜택 정보를 알려드려요! </div>
+                    <div class="notice_setting_list"> 
+                        <!-- s: 전체 push일 때 all 수정 -->
+                        <div class="item all"> 
+                            <!-- e: 전체 push일 때 all 수정 -->
+                            <div class="top">
+                                <div class="txt">
+                                    <div class="tit">전체 푸시</div>
+                                </div>
+                                <label class="checkbox_switch">
+                                    <input type="checkbox" checked />
+                                    <i></i> </label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="top">
+                                <div class="txt">
+                                    <div class="tit">입출금 푸시</div>
+                                </div>
+                                <label class="checkbox_switch ty2">
+                                    <input type="checkbox" />
+                                    <i></i> </label>
+                            </div>
+                            <div class="inner">
+                                <ul class="link_list">
+                                    <li>
+                                        <div class="top"> <span class="tit">입출금 알림계좌 설정</span> <a onclick="uf_goStep(4);" class="btn link_ty1">3개</a> </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="top">
+                                <div class="txt">
+                                    <div class="tit">카드승인 푸시</div>
+                                </div>
+                                <label class="checkbox_switch ty2">
+                                    <input type="checkbox" />
+                                    <i></i> </label>
+                            </div>
+                            <div class="inner">
+                                <ul class="link_list">
+                                    <li>
+                                        <div class="top"> <span class="tit">기업카드 승인 알림 설정</span> <a onclick="uf_goStep(6);" class="btn link_ty1">5개</a> </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="top">
+                                <div class="txt">
+                                    <div class="tit">금융스케쥴 푸시</div>
+                                </div>
+                                <label class="checkbox_switch ty2">
+                                    <input type="checkbox" />
+                                    <i></i> </label>
+                            </div>
+                            <div class="inner">
+                                <ul class="link_list">
+                                    <li>
+                                        <div class="top">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="chk3_1" />
+                                                <label for="chk3_1" class="checkbox ty_chk_right"> <i></i> <span>예금&middot;카드</span> </label>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">예금만기일과 카드결제금액, 금리승인 등을 알려드려요.</div>
+                                    </li>
+                                    <li>
+                                        <div class="top">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="chk3_2" />
+                                                <label for="chk3_2" class="checkbox ty_chk_right"> <i></i> <span>대출</span> </label>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">대출이자와 심사완료 등을 알려드려요.</div>
+                                    </li>
+                                    <li>
+                                        <div class="top">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="chk3_3" />
+                                                <label for="chk3_3" class="checkbox ty_chk_right"> <i></i> <span>외환</span> </label>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">해외에서 들어오는 외화송금 등을 알려드려요.</div>
+                                    </li>
+                                    <li>
+                                        <div class="top">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="chk3_4" />
+                                                <label for="chk3_4" class="checkbox ty_chk_right"> <i></i> <span>뱅킹관리</span> </label>
+                                            </div>
+                                        </div>
+                                        <div class="bottom">인증서발급과 이상로그인 등 내부통제 알림, 영업점에서 보내주는 알림 등을 알려드려요.</div>
+                                    </li>
+                                    <li>
+                                        <div class="top"> <a onclick="uf_goStep(9);" class="btn link_ty1 full">이용자별 알림 설정</a> </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="top">
+                                <div class="txt">
+                                    <div class="tit">혜택</div>
+                                </div>
+                                <label class="checkbox_switch ty2">
+                                    <input type="checkbox" />
+                                    <i></i> </label>
+                            </div>
+                            <div class="bottom">
+                                <p class="desc"> 다양한 이벤트와 혜택, 금융상품 정보를 <br />
+                                    받을 수 있어요. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: Home > 알림함 > 알림 설정 --> 
+        
+        <!-- s: Home > 알림함 > 알림 설정 - 입출금 알림 계좌(계좌있음) -->
+        <div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">입출금 알림이 설정된 계좌 목록 입니다.</div>
+                    <div class="label">
+                        <input type="checkbox" name="" id="chk2" />
+                        <label for="chk2" class="checkbox"> <i></i> <span>고액이체 알림 받음</span> </label>
+                    </div>
+                    <hr aria-hidden="true" class="divider ty4" />
+                    <ul class="space_list_ty1">
+                        <li>
+                            <div class="card_item close_add">
+                                <div class="card_item_sub_data card_item_info">
+                                    <div class="data_case"> <span class="badge_cont align_center"> <span class="badge ty3 colorB5">개인</span> <span class="txt1">개인사업자통장</span> </span> </div>
+                                    <div class="txt2"> <span class="bank_name">기업</span> <span class="account_no">000-000000-00-000</span> </div>
+                                </div>
+                                <button type="button" class="btn ico_ty2 card_item_delete"><span class="blind">삭제</span></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card_item close_add">
+                                <div class="card_item_sub_data card_item_info">
+                                    <div class="data_case"> <span class="badge_cont align_center"> <span class="badge ty3 colorB5">개인</span> <span class="txt1">개인사업자통장</span> </span> </div>
+                                    <div class="txt2"> <span class="bank_name">기업</span> <span class="account_no">000-000000-00-000</span> </div>
+                                </div>
+                                <button type="button" class="btn ico_ty2 card_item_delete"><span class="blind">삭제</span></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">계좌 추가</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home > 알림함 > 알림 설정 - 입출금 알림 계좌(계좌있음) --> 
+        
+        <!-- s: Home > 알림함 > 알림 설정 - 입출금 알림 계좌(계좌없음) -->
+        <div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+            <div class="content_wrap ty4">
+                <div class="group">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        입출금 알림 받을 계좌를 <br />
+                        추가해 주세요 </div>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">계좌 추가</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home > 알림함 > 알림 설정 - 입출금 알림 계좌(계좌없음) --> 
+        
+        <!-- s: Home > 알림함 > 알림 설정 - 입출금 알림 등록 -->
+        <div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1"> 알림 받으실 계좌를 선택해 주세요 </div>
+                    <div class="form_group">
+                        <div class="input_label ty1">계좌선택</div>
+                        <div class="dropdown ty2" role="button" title="계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                        <!--20250312 여건삭제
+								<div class="input_label ty1">알림항목</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">입금</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">출금</span></button>
+								</div>
+--> 
+                    </div>
+                </div>
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">저장</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home > 알림함 > 알림 설정 - 입출금 알림 등록 --> 
+        
+        <!-- s: Home > 알림함 > 알림 설정 - 고액이체 알림 설정 -->
+        <div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1"> 고액 이체가 발생하면 주의하실 수 <br />
+                        있도록 입출금 알림에 ‘고액’ 이라고 <br />
+                        표시해 드릴게요 </div>
+                    <div class="form_group">
+                        <div class="input_label ty1">고액이체 표시할 최소 금액</div>
+                        <div class="live_input_group">
+                            <div class="live_input ty2">
+                                <div class="value" aria-live="assertive" role="button" title="고액이체 표시할 최소 금액 입력">최소 1백만원 이상 입력</div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list_bullet ty3 mt_8">
+                        <li>1백만원 이상 백만원 단위로 입력해 주세요</li>
+                    </ul>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">저장</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home > 알림함 > 알림 설정 - 고액이체 알림 설정 --> 
+        
+        <!-- s: Home > 알림함 > 알림 설정 - 승인 알림 카드 목록(카드있음) -->
+        <div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">승인 알림이 설정된 카드 목록 입니다.</div>
+                    <ul class="space_list_ty1">
+                        <li>
+                            <div class="card_item close_add">
+                                <div class="card_item_sub_data card_item_info">
+                                    <div class="txt2"> <span class="card_no">0000-00**-****-0000</span> </div>
+                                </div>
+                                <button type="button" class="btn ico_ty2 card_item_delete"><span class="blind">삭제</span></button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card_item close_add">
+                                <div class="card_item_sub_data card_item_info">
+                                    <div class="txt2"> <span class="card_no">0000-00**-****-0000</span> </div>
+                                </div>
+                                <button type="button" class="btn ico_ty2 card_item_delete"><span class="blind">삭제</span></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(8);">카드 추가</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home > 알림함 > 알림 설정 - 승인 알림 카드 목록(카드있음) --> 
+        
+        <!-- s: Home > 알림함 > 알림 설정 - 승인 알림 카드 목록(카드없음) -->
+        <div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+            <div class="content_wrap ty4">
+                <div class="group">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        승인 알림 받을 카드를 <br />
+                        추가해 주세요 </div>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(9);">카드 추가</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home > 알림함 > 알림 설정 - 승인 알림 카드 목록(카드없음) --> 
+        
+        <!-- s: Home > 알림함 > 알림 설정 - 알림 카드 수정 -->
+        <div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1"> 알림 받으실 카드를 <br />
+                        선택해 주세요 </div>
+                    <div class="form_group">
+                        <div class="input_label ty1">카드선택</div>
+                        <div class="dropdown ty2" role="button" title="카드선택 목록 보기" onclick="comLayerPopUtil.open('optList');">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">저장</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home > 알림함 > 알림 설정 - 알림 카드 수정 --> 
+        
+        <!-- s: Home > 알림함 > 알림 설정 - 이용자별 알림 설정 -->
+        <div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1"> 직원 이용자가 볼 수 있는 알림을 <br />
+                        설정해 주세요. </div>
+                    <div class="form_group">
+                        <div class="input_label ty1">이용자</div>
+                        <div class="dropdown ty2" role="button" title="이용자 선택 목록 보기">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                    </div>
+                    
+                    <!-- s: 이용자 선택 전 -->
+                    <div class="no_result_msg">
+                        <div class="msg">이용자를 선택해 주세요</div>
+                    </div>
+                    <!-- e: 이용자 선택 전 --> 
+                    
+                    <!-- s: 이용자 선택 후 -->
+                    <div class="label">
+                        <input type="checkbox" name="" id="chk3" />
+                        <label for="chk3" class="checkbox mt_24"> <i></i> <span>전체선택</span> </label>
+                    </div>
+                    <hr aria-hidden="true" class="divider ty4" />
+                    <div class="form_group">
+                        <div class="input_label ty1">금융스케쥴 알림 설정</div>
+                        <ul class="space_list_ty1">
+                            <li>
+                                <div class="label">
+                                    <input type="checkbox" name="" id="chk4_1" />
+                                    <label for="chk4_1" class="checkbox small"> <i></i> <span>예금·카드</span> </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="label">
+                                    <input type="checkbox" name="" id="chk4_2" />
+                                    <label for="chk4_2" class="checkbox small"> <i></i> <span>대출</span> </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="label">
+                                    <input type="checkbox" name="" id="chk4_3" />
+                                    <label for="chk4_3" class="checkbox small"> <i></i> <span>외환</span> </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="label">
+                                    <input type="checkbox" name="" id="chk4_4" />
+                                    <label for="chk4_4" class="checkbox small"> <i></i> <span>뱅킹관리</span> </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- e: 이용자 선택 후 -->
+                    
+                    <div class="bg_box ty1 mt_32">
+                        <ul class="list_bullet ty1">
+                            <li>직원 이용자도 예금/대출/외환에 대한 정보를 확인할 수 있으니 주의하여 권한을 설정해주세요.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">저장</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home > 알림함 > 알림 설정 - 이용자별 알림 설정 --> 
+        
+        <!-- s: Home > 알림함 > 알림 설정 - 이용자 선택 --> 
+        <!-- s: 전체팝업 -->
+        <div id="step10" data-jx-step-no="10" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">이용자를 선택해 주세요</div>
+                    <ul class="space_list_ty5 mt_12">
+                        <li>
+                            <div class="label">
+                                <input type="radio" name="name2" id="radio2_1" />
+                                <label for="radio2_1" class="radio"> <i></i> <span>홍길동(000000000)</span> </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="label">
+                                <input type="radio" name="name2" id="radio2_2" />
+                                <label for="radio2_2" class="radio"> <i></i> <span>홍길동(000000000)</span> </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2">선택</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: 전체팝업 --> 
+        <!-- e: Home > 알림함 > 알림 설정 - 이용자 선택 --> 
+        
+        <!-- s: Popup --> 
+        
+        <!-- s: 최초 진입 시 노출 팝업 -->
+        <div class="bottom_popup_wrap" id="first">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">금융정보 알림 안내</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('first');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <p class="popup_msg_txt1"> 혜택 알림에 동의하시면 <br />
+                        다양한 금융상품, 서비스와 <br />
+                        이벤트 정보를 받으실 수 있어요, <br />
+                        동의 하시겠어요? </p>
+                    <!-- <p class="popup_msg_txt5 ta_c">알림설정 화면에서 변경 가능합니다</p> --> 
+                </div>
+                <div class="bottom_popup_footer ty2">
+                    <button type="button" class="btn s_5 c_1 r_2">다음에</button>
+                    <button type="button" class="btn s_5 c_3 r_2">푸시 알림받기</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 최초 진입 시 노출 팝업 --> 
+        
+        <!-- s: 마케팅활용동의 안내 -->
+        <div class="bottom_popup_wrap" id="marketing">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">마케팅활용동의 안내</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('marketing');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <p class="popup_msg_txt1"> 다양한 혜택정보에 대한 푸시 알림을 <br />
+                        받으시려면 ‘마케팅활용동의’를 <br />
+                        먼저 진행해 주세요 </p>
+                </div>
+                <div class="bottom_popup_footer ty2">
+                    <button type="button" class="btn s_5 c_1 r_2">다음에</button>
+                    <button type="button" class="btn s_5 c_3 r_2">동의하기</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 마케팅활용동의 안내 --> 
+        
+        <!-- 카드 선택 팝업 -->
+        <div class="bottom_popup_wrap" id="optList">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">알림카드 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty3" role="listbox">
+                        <li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorB5">개인</span>
+                                        <div class="item_top_text">별칭</div>
+                                    </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorB5">개인</span> </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorETC11">기업</span> </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="item_top_text">별칭</div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // 카드 선택 팝업 --> 
+        
+        <!-- 계좌 선택 팝업 -->
+        <div class="bottom_popup_wrap" id="popupAccount">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">알림계좌 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty3" role="listbox">
+                        <li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorB5">개인</span>
+                                        <div class="item_top_text">별칭</div>
+                                    </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorB5">개인</span> </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorETC11">기업</span> </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="item_top_text">별칭</div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // 계좌 선택 팝업 -->
+        
+        <div class="bottom_popup_wrap" id="timeselect">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">통지제외시간</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('timeselect');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" class="active" aria-selected="true">1시</li>
+                        <li role="option" aria-selected="false">2시</li>
+                        <li role="option" aria-selected="false">3시</li>
+                        <li role="option" aria-selected="false">4시</li>
+                        <li role="option" aria-selected="false">5시</li>
+                        <li role="option" aria-selected="false">6시</li>
+                        <li role="option" aria-selected="false">7시</li>
+                        <li role="option" aria-selected="false">8시</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- e: Popup --> 
+    </div>
+</div>
+
+<!--**퍼블용** 데모확인 로티 구동 스크립트--> 
+<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script> 
+<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+</body>
+</html>
