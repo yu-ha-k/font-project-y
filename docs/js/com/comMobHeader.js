@@ -137,6 +137,6 @@ includeJs("com/comMobValidation.js");
 includeJs("com/comUi.js");
 
 // (필요하면) pub 전용 JS 로드 예시
-includeJs("pub/js/com/comUi_temp_font_lg.js");
+includeJs("comUi_temp_font_lg.js");
 
 var _isBreak = false;
