@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 서비스가입/조회 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 서비스가입전 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="icon_info_group">
+								<div class="icon delay_transfer_service"></div>
+								<div class="tit">지연이체 서비스란?</div>
+								<div class="txt">계좌이체 시 고객이 이체신청을 하는 시점부터 3~5시간이 지난 후 이체되는 서비스입니다.</div>
+							</div>
+						</div>
+
+						<div class="group mt_40">
+							<div class="title_text ty1">서비스 특징</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대상고객</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">개인사업자, 법인</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이용시간</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">08:00~16:00</span>
+											<span class="sub_info_txt">
+												<span class="desc_txt">(토/일/공휴일 제외)</span>
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">유의사항을 모두 확인하세요.</div>
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<div class="agree_check_group_top">
+										<div class="label all_chk">
+											<input type="checkbox" name="" id="54" class="chk_point_all" />
+											<label for="54" class="checkbox">
+												<i></i>
+												<span>모두 확인했음</span>
+											</label>
+										</div>
+									</div>
+
+									<div class="agree_check">
+										<div class="acd_wrap accodian_wrap ty1">
+											<div class="acd_head accodian_head check_as_all active chk_middle">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group04" class="chk_point" />
+													<label for="ago_group04" class="checkbox">
+														<i></i>
+														<span>
+															즉시 이체가 되는 거래(예외거래)
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" aria-label="즉시 이체가 되는 거래(예외거래) 목록보기" aria-expanded="true" class="acd_btn box_ty"></button>
+											</div>
+											<div class="acd_cont accodian_cont chk_list">
+												<div class="inner" style="display: block">
+													<ul class="list_bullet ty3 pl_32">
+														<li>고객 본인명의 IBK기업은행 계좌로 이체</li>
+														<li class="mt_16">고객이 지정한 일정금액 이하로 이체</li>
+														<li class="mt_16">고객이 지정한 입금계좌로 이체</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="agree_check">
+										<div class="acd_wrap accodian_wrap ty1">
+											<div class="acd_head accodian_head check_as_all active chk_middle">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group05" class="chk_point" />
+													<label for="ago_group05" class="checkbox">
+														<i></i>
+														<span>
+															지연이체 유의사항
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" aria-label="지연이체 유의사항 목록보기" aria-expanded="true" class="acd_btn box_ty"></button>
+											</div>
+											<div class="acd_cont accodian_cont chk_list">
+												<div class="inner" style="display: block">
+													<ul class="list_bullet ty3 pl_32">
+														<li>이체신청 후 거래 취소는 이체실행 예정시각 최소 30분 전에 신청해야 합니다.</li>
+														<li class="mt_16">이체거래 취소는 이체를 신청한 채널과 영업점에서만 할 수 있습니다.</li>
+														<li class="mt_16">서비스 변경 및 해지는 영업점에서만 할 수 있습니다.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">서비스 가입하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 서비스가입전 -->
+
+				<!-- s: step2 정보입력 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty1">정보입력</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty5">
+								<div class="acd_head accodian_head">
+									<button type="button" title="예외계좌 목록보기" aria-expanded="false" class="acd_btn">
+										<div class="left">
+											<span class="title">예외계좌</span>
+										</div>
+										<div class="right">
+											<div class="txt_style ty2">0원(0건)</div>
+										</div>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="space_list_ty1">
+											<li>
+												<div class="card_item close_add">
+													<div class="acount_item ty4">
+														<div class="ico_box ty1 ico_bank_003"></div>
+														<div class="item">
+															<div class="item_top">정다운</div>
+															<div class="item_bottom">기업 000-00000-00-000</div>
+														</div>
+													</div>
+													<button type="button" class="btn ico_ty2 card_item_delete"><span class="blind">삭제</span></button>
+												</div>
+											</li>
+											<li>
+												<div class="card_item close_add">
+													<div class="acount_item ty4">
+														<div class="ico_box ty1 ico_bank_003"></div>
+														<div class="item">
+															<div class="item_top">정다운</div>
+															<div class="item_bottom">기업 000-00000-00-000</div>
+														</div>
+													</div>
+													<button type="button" class="btn ico_ty2 card_item_delete"><span class="blind">삭제</span></button>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">예외금액 정보</div>
+							<div class="title_text ty3 fw_7">예외금액 설정</div>
+
+							<div class="live_input_group">
+								<div class="live_input ty2">
+									<div class="value" aria-live="assertive" role="button" title="예외금액 입력">숫자만 입력</div>
+								</div>
+							</div>
+							<ul class="list_bullet ty1 mt_8">
+								<li>최대 100만원까지 설정할 수 있습니다</li>
+							</ul>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">예외계좌 정보</div>
+							<div class="title_text ty3 fw_7">예외은행</div>
+							<div class="dropdown ty2" role="button" title="은행/증권사 선택 목록 보기" onclick="comLayerPopUtil.open('optList');">
+								<div class="dropdown_text">은행/증권사 선택</div>
+							</div>
+
+							<div class="btn_area ty1 mt_16">
+								<button type="button" class="btn s_2 c_1 r_1">최근</button>
+								<button type="button" class="btn s_2 c_1 r_1">자주쓰는</button>
+								<button type="button" class="btn s_2 c_1 r_1">내계좌</button>
+							</div>
+
+							<div class="title_text ty1 mt_24">예외계좌번호</div>
+							<div class="input">
+								<input type="text" name="" id="" title="예외계좌번호 입력" placeholder="숫자만 입력" />
+
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+							<ul class="list_bullet ty1 mt_8">
+								<li>최대 15개까지 지정할 수 있습니다.</li>
+							</ul>
+
+							<div class="btn_area ty1 mt_24">
+								<button type="button" class="btn s_4 c_2 r_2">예외계좌 추가하기</button>
+							</div>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>서비스 가입 시 지연시간, 지연이체 예외금액 및 입금계좌를 설정할 수 있습니다.</li>
+											<li>서비스 변경 및 해지는 영업점에서만 할 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 정보입력 -->
+
+				<!-- s: step3 자주쓰는입금계좌 -->
+				<!-- s: 전체팝업 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="input has_search">
+								<input type="text" name="" id="" placeholder="계좌관리명 입력 후 검색" />
+
+								<button type="button" class="search">검색</button>
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<ul class="select_list ty3" role="listbox">
+								<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true" onclick="uf_goStep(6);">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">개인법인통장(수지동천)</div>
+										</div>
+										<div class="item_top">
+											<div class="ico_box ty3 ico_bank_003"></div>
+											<div class="item_top_text">기업 000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false" onclick="uf_goStep(6);">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">개인법인통장(수지동천)</div>
+										</div>
+										<div class="item_top">
+											<div class="ico_box ty3 ico_bank_003"></div>
+											<div class="item_top_text">기업 000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="no_result_msg">
+										<div class="msg">찾으시는 계좌가 없습니다</div>
+									</div>
+								</li>
+								<li>
+									<div class="no_result_msg">
+										<div class="msg">자주쓰는 계좌가 없습니다</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_2 c_1 r_1">자주쓰는 입금계좌 관리</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: step3 자주쓰는입금계좌 -->
+
+				<!-- s: step4 최근입금계좌 -->
+				<!-- s: 전체팝업 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="input has_search">
+								<input type="text" name="" id="" placeholder="수취인명 입력 후 검색" />
+
+								<button type="button" class="search">검색</button>
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<ul class="space_list_ty5">
+								<li>
+									<a href="#" role="button" class="block">
+										<div class="card_item">
+											<div class="acount_item ty4">
+												<div class="ico_box ty3 ico_bank_003"></div>
+												<div class="item">
+													<div class="item_top">기업은행 030-0939-9501010</div>
+												</div>
+											</div>
+											<div class="card_item_info">
+												<div class="txt6">김기업</div>
+												<div class="txt6">2022-10-12</div>
+											</div>
+										</div>
+									</a>
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_2 c_1 r_1">자주쓰는 입급계좌 관리</button>
+									</div>
+								</li>
+								<li>
+									<a href="#" role="button" class="block">
+										<div class="card_item">
+											<div class="acount_item ty4">
+												<div class="ico_box ty3 ico_bank_003"></div>
+												<div class="item">
+													<div class="item_top">기업은행 030-0939-9501010</div>
+												</div>
+											</div>
+											<div class="card_item_info">
+												<div class="txt6">김기업</div>
+												<div class="txt6">2022-10-12</div>
+											</div>
+										</div>
+									</a>
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_2 c_1 r_1">자주쓰는 입급계좌 관리</button>
+									</div>
+								</li>
+								<li>
+									<div class="no_result_msg">
+										<div class="msg">찾으시는 계좌가 없습니다</div>
+									</div>
+								</li>
+								<li>
+									<div class="no_result_msg">
+										<div class="msg">최근 입금계좌가 없습니다</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: step4 최근입금계좌 -->
+
+				<!-- s: step6 정보확인 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보확인</div>
+							<div class="title_text ty1">예외금액</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">예외금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">999</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">예외계좌</div>
+							<ul class="space_list_ty1">
+								<li>
+									<div class="group_item">
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">예금주명</span>
+												</span>
+												<span class="line_right">
+													<span class="txt">김기업</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">은행명</span>
+												</span>
+												<span class="line_right">
+													<span class="ico_box ico_bank_003"></span>
+													<span class="bank_name">IBK기업</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">계좌번호</span>
+												</span>
+												<span class="line_right">
+													<span class="account_no">000-00000-00-000</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="group_item">
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">예금주명</span>
+												</span>
+												<span class="line_right">
+													<span class="txt">김기업</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">은행명</span>
+												</span>
+												<span class="line_right">
+													<span class="ico_box ico_bank_003"></span>
+													<span class="bank_name">IBK기업</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">계좌번호</span>
+												</span>
+												<span class="line_right">
+													<span class="account_no">000-00000-00-000</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(7);">신청하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step6 정보확인 -->
+
+				<!-- s: step7 서비스가입완료 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								지연이체 서비스를
+								<br />
+								가입했어요
+							</div>
+						</div>
+
+						<div class="acd_wrap accodian_wrap ty2 etc2 mt_40">
+							<div class="acd_cont accodian_cont">
+								<div class="inner">
+									<div class="group">
+										<div class="title_text ty1">지연이체정보</div>
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">예외금액</span>
+												<span class="d_list_r">
+													<span class="money">85,676,100</span>
+													<span class="txt_unit">원</span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">예외계좌</span>
+												<span class="d_list_r">
+													<span class="count">2</span>
+													<span class="txt_unit">건</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+
+									<div class="group mt_32">
+										<div class="title_text ty1">예외계좌정보</div>
+										<ul class="space_list_ty5">
+											<li>
+												<div class="d_list ty1">
+													<p class="line" role="text">
+														<span class="d_list_l">예금주명</span>
+														<span class="d_list_r">
+															<span class="txt">정다운</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="d_list_l">은행명</span>
+														<span class="d_list_r">
+															<span class="ico_box ico_bank_003"></span>
+															<span class="bank_name">IBK기업</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="d_list_l">계좌번호</span>
+														<span class="d_list_r">
+															<span class="account_no">000-00000-00-000</span>
+														</span>
+													</p>
+												</div>
+											</li>
+											<li>
+												<div class="d_list ty1">
+													<p class="line" role="text">
+														<span class="d_list_l">예금주명</span>
+														<span class="d_list_r">
+															<span class="txt">정다운</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="d_list_l">은행명</span>
+														<span class="d_list_r">
+															<span class="ico_box ico_bank_003"></span>
+															<span class="bank_name">IBK기업</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="d_list_l">계좌번호</span>
+														<span class="d_list_r">
+															<span class="account_no">000-00000-00-000</span>
+														</span>
+													</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="acd_head accodian_head">
+								<button type="button" title="지연이체정보 및 예외계좌정보 상세보기" aria-expanded="true" class="acd_btn">
+									<span class="title">더보기</span>
+									<span class="title sub">접기</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(8);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step7 서비스가입완료 -->
+
+				<!-- s: step8 서비스가입후 -->
+				<div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="icon_info_group">
+								<div class="icon delay_transfer_service_confirm"></div>
+								<div class="tit">
+									김기업님의
+									<br />
+									지연이체 신청내역이에요
+								</div>
+							</div>
+						</div>
+
+						<div class="group mt_40">
+							<div class="title_text ty1">지연이체 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">예외금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">999</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">예외계좌</span>
+										</span>
+										<span class="line_right">
+											<span class="count">2</span>
+											<span class="txt_unit">건</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">예외계좌목록</div>
+							<ul class="space_list_ty1">
+								<li>
+									<div class="group_item">
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">예금주명</span>
+												</span>
+												<span class="line_right">
+													<span class="txt">김기업</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">은행명</span>
+												</span>
+												<span class="line_right">
+													<span class="ico_box ico_bank_003"></span>
+													<span class="bank_name">IBK기업</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">계좌번호</span>
+												</span>
+												<span class="line_right">
+													<span class="account_no">000-00000-00-000</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="group_item">
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">예금주명</span>
+												</span>
+												<span class="line_right">
+													<span class="txt">김기업</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">은행명</span>
+												</span>
+												<span class="line_right">
+													<span class="ico_box ico_bank_003"></span>
+													<span class="bank_name">IBK기업</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">계좌번호</span>
+												</span>
+												<span class="line_right">
+													<span class="account_no">000-00000-00-000</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>여러 건 이체 시에는 무조건 지연이체됩니다.</li>
+											<li>서비스 변경 및 해지는 영업점에서만 할 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step8 서비스가입후 -->
+
+				<!-- s: popup -->
+				<div class="bottom_popup_wrap" id="optList" title="은행/증권사 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">은행/증권사 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+			<!-- e: 서비스가입/조회 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

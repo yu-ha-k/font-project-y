@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: IBK인증서 폐기 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 정보확인 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">인증서 정보</div>
+							<div class="title_text ty1">사업자 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-00-00000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">김기업</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="group mt_40">
+							<div class="title_text ty1">출금계좌번호</div>
+							<div class="input">
+								<input type="text" name="" id="" title="IBK기업은행 출금계좌 입력" placeholder="IBK기업은행 계좌 입력" />
+
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+							<ul class="list_bullet ty1">
+								<li>평생계좌번호는 출금계좌번호로 사용할 수 없습니다.</li>
+								<li>위 출금계좌에서 인증서 수수료가 출금됩니다.</li>
+							</ul>
+						</div>
+
+						<div class="group mt_40">
+							<div class="title_text ty1">인증서 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">인증서 용도</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">IBK인증서 기업-기업은행용(관리자)</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">유효기간</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												1년 (
+												<span class="date">2021-03-25</span>
+												~
+												<span class="date">2021-03-25</span>
+												)
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">이전</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 정보확인 -->
+
+				<!-- s: step2 변경완료 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								IBK인증서를
+								<br />
+								폐기했어요
+								<!-- IBK인증서 폐기 및 수수료<br> 환급을 완료했어요 -->
+							</div>
+							<ul class="list_bullet ty4">
+								<!-- <li>IBK인증서를 다시 발급하려면 [인증센터> IBK인증서 > 인증서 발급/재발급]을 이용해 주세요.</li> -->
+								<li>문의 : IBK고객센터(1566-2566/내선 515)</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 변경완료 -->
+			</div>
+			<!-- e: IBK인증서 폐기 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

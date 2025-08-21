@@ -1,0 +1,1401 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 승인대기목록 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="true" class="active">승인 대기</button>
+							<button type="button" role="tab" aria-selected="false">승인 완료조회</button>
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true">
+							<div class="group">
+								<ul class="space_list_ty2 mt_24">
+									<!-- 이체한도설정 -->
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">이체한도설정</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">김기은(123456789)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-11-03 11:00:01</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<!-- // 이체한도설정 -->
+
+									<!-- 결재선 등록/지정 -->
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(3);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">결재선 등록/지정</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">김기은(123456789)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-11-03 11:00:01</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<!-- // 결재선 등록/지정 -->
+
+									<!-- 대직자 등록 -->
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(4);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">대직자 등록</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">김기은(123456789)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-11-03 11:00:01</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<!-- // 대직자 등록 -->
+
+									<!-- 대직자 등록 중복 -->
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(7);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">대직자 등록 중복</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">김기은(123456789)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-11-03 11:00:01</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<!-- // 대직자 등록 중복 -->
+
+									<!-- 대직자 등록 결재자 중복 -->
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(8);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">대직자 등록 결재자 중복</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">김기은(123456789)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-11-03 11:00:01</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<!-- // 대직자 등록 결재자 중복 -->
+
+									<!-- 대직자 등록 대직자 중복 -->
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(9);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">대직자 등록 대직자 중복</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">김기은(123456789)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-11-03 11:00:01</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<!-- // 대직자 등록 대직자 중복 -->
+
+									<!-- 대직자 등록 재확인 -->
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(10);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">대직자 등록 재확인</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">김기은(123456789)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-11-03 11:00:01</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<!-- // 대직자 등록 재확인 -->
+								</ul>
+							</div>
+						</div>
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group mt_24">
+								<div class="title_text ty1">조회구분 선택</div>
+								<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+									<div class="dropdown_text">전체・전체・당일</div>
+								</div>
+							</div>
+
+							<!-- 조회불가 시 -->
+							<div class="no_result_msg">
+								<div class="msg">
+									조회 결과가 없습니다.
+									<br />
+									다시 검색해 주세요.
+								</div>
+							</div>
+							<!-- 조회내역 -->
+							<div class="group">
+								<div class="bg_box ty1 mt_16">
+									<ul class="list_bullet ty1">
+										<li>조회일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<ul class="space_list_ty2">
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(13);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">결재선 등록/지정</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">처리 일시</span>
+														<span class="d_list_r">2023-03-15 11:19:08</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인 상태</span>
+														<span class="d_list_r">승인</span>
+													</li>
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">보조관리자(08206514)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-12-06 10:25:02</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(14);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">대직자 등록</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">처리 일시</span>
+														<span class="d_list_r">2023-03-15 11:19:08</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인 상태</span>
+														<span class="d_list_r">승인</span>
+													</li>
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">보조관리자(08206514)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-12-06 10:25:02</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(12);">
+											<div class="group_item link">
+												<div class="group_item_info">
+													<div class="txt3">이체한도 설정</div>
+												</div>
+												<ul class="d_list ty2">
+													<li>
+														<span class="d_list_l">처리 일시</span>
+														<span class="d_list_r">2023-03-15 11:19:08</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인 상태</span>
+														<span class="d_list_r">승인</span>
+													</li>
+													<li>
+														<span class="d_list_l">이용자</span>
+														<span class="d_list_r">보조관리자(08206514)</span>
+													</li>
+													<li>
+														<span class="d_list_l">승인요청일시</span>
+														<span class="d_list_r">2023-12-06 10:25:02</span>
+													</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="group">
+								<div class="btn_area ty1 mt_32">
+									<button type="button" class="btn s_2 c_1 r_2">더보기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 -->
+
+				<!-- 승인 대기 -->
+
+				<!-- s: step2 / 이체한도 설정 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">이체한도 설정</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">승인요청일시</span>
+									<span class="d_list_r">2023-11-03 11:00:11</span>
+								</li>
+								<li>
+									<span class="d_list_l">이용자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+								<li>
+									<span class="d_list_l">상태</span>
+									<span class="d_list_r">정상</span>
+								</li>
+								<li>
+									<span class="d_list_l">부서명</span>
+									<span class="d_list_r">총무팀</span>
+								</li>
+								<li>
+									<span class="d_list_l">직위</span>
+									<span class="d_list_r">과장</span>
+								</li>
+								<li>
+									<span class="d_list_l">급여상세 조회권한</span>
+									<span class="d_list_r">있음</span>
+								</li>
+								<li>
+									<span class="d_list_l">1회 이체(전결)한도</span>
+									<span class="d_list_r">000,000원</span>
+								</li>
+								<li>
+									<span class="d_list_l">1일 이체(전결)한도</span>
+									<span class="d_list_r">000,000원</span>
+								</li>
+							</ul>
+
+							<div class="btn_area ty1 mt_32">
+								<button type="button" class="btn s_2 c_1 r_2 w_full" onclick="uf_goStep(1);">목록</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(5);">반송</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">승인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: step2 -->
+
+				<!-- s: step3 / 결재선 등록/지정 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">결재선 등록/지정</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">승인요청일시</span>
+									<span class="d_list_r">2023-11-03 11:00:11</span>
+								</li>
+								<li>
+									<span class="d_list_l">이용자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">다단계 결재방식</div>
+							<div class="bullet_txt ty2">병렬식(결재순서에 관계없이)</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">일반업무</div>
+							<div class="txt_style ty3">다단계결재</div>
+							<ul class="d_list ty2 mt_16">
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자1</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자2</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김기업</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자3</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자4</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">활동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자5</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">실행자</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">B2B 전자결재업무</div>
+							<div class="txt_style ty3">다단계결재</div>
+							<ul class="d_list ty2 mt_16">
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자1</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자2</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김기업</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자3</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자4</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">활동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자5</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">실행자</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">외환업무</div>
+							<div class="txt_style ty3">다단계결재</div>
+							<ul class="d_list ty2 mt_16">
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자1</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자2</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김기업</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자3</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자4</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">활동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자5</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">실행자</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">공과금업무</div>
+							<div class="txt_style ty3">다단계결재</div>
+							<ul class="d_list ty2 mt_16">
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자1</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자2</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김기업</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자3</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자4</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">활동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자5</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">실행자</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="group mt_32">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_2 c_1 r_2 w_full" onclick="uf_goStep(1);">목록</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(5);">반송</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">승인</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: step3 -->
+
+				<!-- s: step4 / 대직자 등록 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">대직자 등록</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">승인요청일시</span>
+									<span class="d_list_r">
+										2023-11-03 ~
+										<br />
+										2023-11-05
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">결재자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직기간</span>
+									<span class="d_list_r">
+										2023-11-03 ~
+										<br />
+										2023-11-05
+									</span>
+								</li>
+							</ul>
+						</div>
+						<div class="group mt_32">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_2 c_1 r_2 w_full" onclick="uf_goStep(1);">목록</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(5);">반송</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">승인</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: step4 -->
+
+				<!-- s: step5 / 권한 반송 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								권한설정 요청을 반송했어요
+								<div class="note_cmt">보조관리자에게 반송했어요.</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 -->
+
+				<!-- s: step6 / 권한 승인 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								권한설정 요청을 승인했어요
+								<div class="note_cmt">
+									보조관리자 권한 설정 승인내역은
+									<br />
+									[승인완료 조회]에서 확인해 주세요.
+								</div>
+							</div>
+						</div>
+
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: step6 -->
+
+				<!-- s: step7 / 대직자 등록 중복 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">대직자 등록</div>
+							<ul class="list_bullet ty1">
+								<li>승인 요청한 대직기간 안에 A(12345)님의 대직자가 등록된 기간이 있습니다.</li>
+								<li>
+									<span class="color ty3">반송처리</span>
+									해주세요.
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">기존 등록된 대직정보</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">대직기간</span>
+									<span class="d_list_r">
+										2023-11-03 ~
+										<br />
+										2023-11-05
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">승인 요청한 대직정보</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">대직기간</span>
+									<span class="d_list_r">
+										2023-11-03 ~
+										<br />
+										2023-11-05
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">목록</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">반송</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: step7 -->
+
+				<!-- s: step8 / 대직자 등록 결재자 중복 -->
+				<div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">대직자 등록 중복</div>
+							<ul class="list_bullet ty1">
+								<li>A(12345)님은 이미 대직자로 등록되어 있어요.</li>
+								<li>
+									대직자 등록을
+									<span class="color ty3">반송</span>
+									해 주세요.
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">기존 등록된 대직정보</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">결재자</span>
+									<span class="d_list_r">A(12345)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직자</span>
+									<span class="d_list_r color ty3">사용자(00152805)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직기간</span>
+									<span class="d_list_r">
+										2023-11-03 ~
+										<br />
+										2023-11-05
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">승인 요청한 대직정보</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">결재자</span>
+									<span class="d_list_r color ty3">A(12345)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직기간</span>
+									<span class="d_list_r">
+										2023-11-03 ~
+										<br />
+										2023-11-05
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">목록</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">반송</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: step8 -->
+
+				<!-- s: step9 / 대직자 등록 대직자 중복 -->
+				<div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">대직자 등록 중복</div>
+							<ul class="list_bullet ty1">
+								<li>승인 요청한 대직기간 안에 A(12345)님이 등록하려는 대직자가 이미 등록된 기간이 있어요.</li>
+								<li>
+									<span class="color ty3">반송처리</span>
+									해주세요.
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">기존 등록된 대직정보</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">결재자</span>
+									<span class="d_list_r color ty3">A(12345)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직기간</span>
+									<span class="d_list_r">
+										2023-11-03 ~
+										<br />
+										2023-11-05
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">승인 요청한 대직정보</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">결재자</span>
+									<span class="d_list_r">A(12345)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직자</span>
+									<span class="d_list_r color ty3">사용자(00152805)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직기간</span>
+									<span class="d_list_r">
+										2023-11-03 ~
+										<br />
+										2023-11-05
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">목록</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">반송</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: step9 -->
+
+				<!-- s: step10 / 대직자 등록 재확인 -->
+				<div id="step10" data-jx-step-no="10" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">대직자 등록 재확인</div>
+							<ul class="list_bullet ty1">
+								<li>대직기간을 확인해 주세요. 대직 시작일이 오늘보다 과거일이에요.</li>
+								<li>
+									대직자 등록을
+									<span class="color ty3">반송</span>
+									해 주세요.
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">승인 요청한 대직정보</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">대직기간</span>
+									<span class="d_list_r">
+										2023-11-03 ~
+										<br />
+										2023-11-05
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">목록</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">반송</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: step10 -->
+
+				<!-- 승인 완료조회 -->
+
+				<!-- s: 이체한도 설정 -->
+				<div id="step12" data-jx-step-no="12" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">이체한도 설정</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">승인상태</span>
+									<span class="d_list_r">반송(반려)</span>
+								</li>
+								<li>
+									<span class="d_list_l">처리일시</span>
+									<span class="d_list_r">2023-12-27 11:19:08</span>
+								</li>
+								<li>
+									<span class="d_list_l">승인요청일시</span>
+									<span class="d_list_r">2023-12-27 11:19:08</span>
+								</li>
+								<li>
+									<span class="d_list_l">이용자</span>
+									<span class="d_list_r">혼자야(00152077)</span>
+								</li>
+								<li>
+									<span class="d_list_l">상태</span>
+									<span class="d_list_r">정상</span>
+								</li>
+								<li>
+									<span class="d_list_l">부서명</span>
+									<span class="d_list_r">총무팀</span>
+								</li>
+								<li>
+									<span class="d_list_l">직위</span>
+									<span class="d_list_r">과장</span>
+								</li>
+								<li>
+									<span class="d_list_l">급여상세 조회권한</span>
+									<span class="d_list_r">있음</span>
+								</li>
+								<li>
+									<span class="d_list_l">1회 이체(전결)한도</span>
+									<span class="d_list_r">000,000원</span>
+								</li>
+								<li>
+									<span class="d_list_l">1일 이체(전결)한도</span>
+									<span class="d_list_r">000,000원</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 이체한도 설정 -->
+
+				<!-- s: 결재선 등록/지정 -->
+				<div id="step13" data-jx-step-no="13" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">결재선 등록/지정</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">승인상태</span>
+									<span class="d_list_r">반송(반려)</span>
+								</li>
+								<li>
+									<span class="d_list_l">처리일시</span>
+									<span class="d_list_r">2023-03-15 11:19:08</span>
+								</li>
+								<li>
+									<span class="d_list_l">승인요청일시</span>
+									<span class="d_list_r">2023-11-03 11:00:11</span>
+								</li>
+								<li>
+									<span class="d_list_l">이용자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">다단계 결재방식</div>
+							<div class="bullet_txt ty2">직렬식(결재순서에 따라)</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">일반업무</div>
+							<div class="txt_style ty3">다단계결재</div>
+							<ul class="d_list ty2 mt_16">
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자1</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자2</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김기업</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자3</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자4</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">활동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자5</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">실행자</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">B2B 전자결재업무</div>
+							<div class="txt_style ty3">다단계결재</div>
+							<ul class="d_list ty2 mt_16">
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자1</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자2</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김기업</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자3</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자4</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">활동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자5</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">실행자</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">외환업무</div>
+							<div class="txt_style ty3">다단계결재</div>
+							<ul class="d_list ty2 mt_16">
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자1</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자2</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김기업</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자3</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자4</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">활동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자5</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">실행자</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">공과금업무</div>
+							<div class="txt_style ty3">다단계결재</div>
+							<ul class="d_list ty2 mt_16">
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자1</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자2</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김기업</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자3</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자4</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">활동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">결재자5</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">김관리(12345678)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="badge ty3 colorD1 fw_7">실행자</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt_style ty6">
+											2022-04-20 ~
+											<br />
+											2022-04-22
+										</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 결재선 등록/지정 -->
+
+				<!-- s: 대직자 등록 -->
+				<div id="step14" data-jx-step-no="14" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">대직자 등록</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">승인상태</span>
+									<span class="d_list_r">반송(반려)</span>
+								</li>
+								<li>
+									<span class="d_list_l">처리일시</span>
+									<span class="d_list_r">2023-07-06 18:01:11</span>
+								</li>
+								<li>
+									<span class="d_list_l">승인요청일시</span>
+									<span class="d_list_r">2023-07-06 18:01:11</span>
+								</li>
+								<li>
+									<span class="d_list_l">결재자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직자</span>
+									<span class="d_list_r">사용자(00152805)</span>
+								</li>
+								<li>
+									<span class="d_list_l">대직기간</span>
+									<span class="d_list_r">
+										2023-07-06 ~
+										<br />
+										203-07-07
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 대직자 등록 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 고객지원_판매물품관리 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 판매물품관리 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="true" class="active">판매물품 조회</button>
+							<button type="button" role="tab" aria-selected="false">판매물품 등록</button>
+						</div>
+
+						<!-- s: 판매물품조회tab -->
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open1">
+							<div class="group mt_16">
+								<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+									<div class="dropdown_text">낮은가격순 · 물품명</div>
+								</div>
+							</div>
+							<div class="group">
+								<ul class="space_list_ty1">
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+												<div class="card_item_info">
+													<div class="txt1">물품명</div>
+													<div class="txt2">판매물품이름</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">판매가</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">판매종료일</span>
+														</span>
+														<span class="line_right">
+															<span class="date">2024.05.05</span>
+														</span>
+													</p>
+												</div>
+											</a>
+											<div class="btn_area ty1">
+												<button type="button" class="btn s_4 c_2 r_2">판매물품 주소(URL) 복사하기</button>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+												<div class="card_item_info">
+													<div class="txt1">물품명</div>
+													<div class="txt2">판매물품이름</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">판매가</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">판매종료일</span>
+														</span>
+														<span class="line_right">
+															<span class="date color ty4">2024.05.05</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="no_result_msg">
+											<div class="msg">조회할 판매물품이 없습니다</div>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_area mt_12">
+									<button type="button" class="btn more"><span class="text">더보기</span></button>
+								</div>
+							</div>
+						</div>
+						<!-- e: 판매물품조회tab -->
+
+						<!-- s: 판매물품등록tab -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="form_group">
+									<div class="input_label ty2">물품명</div>
+									<div class="input">
+										<input type="text" name="" id="" title="물품명 입력" placeholder="직접 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty2">판매종료일</div>
+									<div class="from_to">
+										<div class="input">
+											<input type="text" name="" id="" title="판매종료일 입력" />
+											<button type="button" class="btn calendar" title="달력으로 판매종료일 선택" onclick="comLayerPopUtil.open('cal01');"></button>
+										</div>
+									</div>
+
+									<div class="input_label ty2 display_flex space_between">
+										판매가
+										<div class="txt_style ty6">
+											<span class="color ty5">일천원</span>
+										</div>
+									</div>
+
+									<div class="live_input_group">
+										<div class="live_input ty2">
+											<div class="value" aria-live="assertive" role="button" title="판매가 금액 입력">숫자만 입력</div>
+										</div>
+									</div>
+
+									<div class="input_label ty2">판매자계좌</div>
+									<div class="acount_item_select ty1">
+										<div class="acount_item ty3" role="button" title="계좌선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<span class="txt_style ty6 fw_4">IBK간편한통장(별명1줄)</span>
+											</div>
+
+											<div class="acount_item ty5">
+												<div class="ico_box ty5 ico_bank_003"></div>
+												<div class="item">
+													<div class="item_top">
+														<span class="bank_name">기업은행</span>
+														<span class="ac_num">000-000000-00-000</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="input_label ty2">판매자 휴대폰번호</div>
+									<div class="comp_wrap phone">
+										<div class="input no_del">
+											<input type="tel" name="" id="" title="판매자 휴대폰번호 앞 3자리 입력" />
+										</div>
+										<span>-</span>
+										<div class="input no_del">
+											<input type="tel" name="" id="" title="판매자 휴대폰번호 가운데 4자리 입력" />
+										</div>
+										<span>-</span>
+										<div class="input no_del">
+											<input type="tel" name="" id="" title="판매자 휴대폰번호 뒤 4자리 입력" />
+										</div>
+									</div>
+
+									<div class="input_label ty2">판매자 이메일</div>
+									<div class="comp_wrap email">
+										<div class="select_domain">
+											<div class="input">
+												<input type="text" name="" id="" class="input_box" value="ibk1234" title="이메일 사용자 이름 입력" placeholder="이메일" />
+
+												<button type="button" class="del">텍스트삭제</button>
+											</div>
+											<span>@</span>
+											<div class="dropdown ty5" role="button" title="도메인 선택 목록 보기" onclick="comLayerPopUtil.open('emailOptList');">
+												<div class="dropdown_text">ibk.com</div>
+											</div>
+										</div>
+										<div class="input direct">
+											<input type="text" name="" id="" title="도메인 직접 입력" placeholder="도메인 직접 입력" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+									</div>
+
+									<div class="input_label ty2">비고</div>
+									<div class="input">
+										<input type="text" name="" id="" title="비고 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- s: 화면 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('popup2');">물품 등록하기</button>
+								</div>
+							</div>
+							<!-- e: 화면 하단 고정 버튼 -->
+						</div>
+						<!-- e: 판매물품등록tab -->
+					</div>
+				</div>
+				<!-- e: step1 판매물품관리 -->
+
+				<!-- s: step2 판매물품상세 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">판매물품 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">물품명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">판매물품이름</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">등록일시</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021.03.25</span>
+											<span class="time">00:00:00</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판매종료일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021.03.25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판매가</span>
+										</span>
+										<span class="line_right">
+											<span class="money">495,445,560</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">비고</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">-</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판매물품 주소(URL)</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">https://www.ibk.co.kr</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="btn_area ty1 mt_24">
+								<button type="button" class="btn s_4 c_2 r_2">판매물품 주소(URL) 복사하기</button>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">판매자정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판매자 계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name">기업</span>
+											<span class="account_no">000-00000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판매자 휴대폰번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-0000-0000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판매자 이메일</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">abc@email.com</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="btn_area ty1 mt_24">
+								<button type="button" class="btn s_4 c_1 r_2">삭제</button>
+								<button type="button" class="btn s_4 c_1 r_2" onclick="uf_goStep(3);">변경하기</button>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">목록</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 판매물품상세 -->
+
+				<!-- s: step3 판매물품수정 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">판매물품 정보</div>
+							<div class="form_group">
+								<div class="input_label ty2">물품명</div>
+								<div class="input">
+									<input type="text" name="" id="" title="물품명 입력" placeholder="직접 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">판매종료일</div>
+								<div class="from_to">
+									<div class="input">
+										<input type="text" name="" id="" title="판매종료일 입력" />
+										<button type="button" class="btn calendar" title="달력으로 판매종료일 선택" onclick="comLayerPopUtil.open('cal01');"></button>
+									</div>
+								</div>
+
+								<div class="input_label ty2 display_flex space_between">
+									판매가
+									<div class="txt_style ty6">
+										<span class="color ty5">일천원</span>
+									</div>
+								</div>
+
+								<div class="live_input_group">
+									<div class="live_input ty2">
+										<div class="value" aria-live="assertive" role="button" title="판매가 금액 입력">숫자만 입력</div>
+									</div>
+								</div>
+
+								<div class="input_label ty2">판매물품 주소(URL)</div>
+								<div class="input">
+									<input type="text" name="" id="" title="판매물품 주소 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="btn_area ty1 confirm">
+									<button type="button" class="btn s_4 c_2 r_2">판매물품 주소(URL) 복사하기</button>
+								</div>
+
+								<div class="input_label ty2">판매자계좌</div>
+								<div class="acount_item_select ty1">
+									<div class="acount_item ty3" role="button" title="계좌선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="badge_cont">
+											<span class="badge ty3 colorB5">개인</span>
+											<span class="txt_style ty6 fw_4">IBK간편한통장(별명1줄)</span>
+										</div>
+
+										<div class="acount_item ty5">
+											<div class="ico_box ty5 ico_bank_003"></div>
+											<div class="item">
+												<div class="item_top">
+													<span class="bank_name">기업은행</span>
+													<span class="ac_num">000-000000-00-000</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="input_label ty2">판매자 휴대폰번호</div>
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="판매자 휴대폰번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="판매자 휴대폰번호 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="판매자 휴대폰번호 뒤 4자리 입력" />
+									</div>
+								</div>
+
+								<div class="input_label ty2">판매자 이메일</div>
+								<div class="comp_wrap email">
+									<div class="select_domain">
+										<div class="input">
+											<input type="text" name="" id="" class="input_box" value="ibk1234" title="이메일 사용자 이름 입력" placeholder="이메일" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+										<span>@</span>
+										<div class="dropdown ty5" role="button" title="도메인 선택 목록 보기" onclick="comLayerPopUtil.open('emailOptList');">
+											<div class="dropdown_text">ibk.com</div>
+										</div>
+									</div>
+									<div class="input direct">
+										<input type="text" name="" id="" title="도메인 직접 입력" placeholder="도메인 직접 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+
+								<div class="input_label ty2">비고</div>
+								<div class="input">
+									<input type="text" name="" id="" title="비고 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(2);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">변경하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 판매물품수정 -->
+
+				<!-- s: popup -->
+				<!-- s: 조건설정 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회구분</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<h3 class="input_label ty1">거래구분</h3>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">등록일순</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">낮은가격순</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">높은가격순</span></button>
+								</div>
+								<h3 class="input_label ty1">물품명</h3>
+								<div class="input">
+									<input type="text" name="" id="" title="물품명 입력" placeholder="직접 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조건설정 -->
+
+				<!-- s: 출금계좌 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 출금계좌 선택 팝업 -->
+
+				<div class="bottom_popup_wrap" id="popup2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">판매물품 주소(URL)</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<div class="input">
+									<input type="text" name="" id="" value="https://abc.com" title="판매물품 주소 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="btn_area ty1 confirm">
+									<button type="button" class="btn s_4 c_2 r_2">URL 복사</button>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup2');">목록</button>
+						</div>
+					</div>
+				</div>
+				<!-- s: 판매종료일 -->
+				<div class="bottom_popup_wrap" id="cal01">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">판매종료일</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('cal01');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+								<div class="calendar_select_wrap">
+									<div class="calendar_select">
+										<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+											<span class="t_hidden">이전 년도</span>
+										</button>
+										<span>
+											<em id="year">2024</em>
+											년
+										</span>
+										<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+											<span class="t_hidden">다음 년도</span>
+										</button>
+									</div>
+									<div class="calendar_select">
+										<button id="preMon" type="button" class="btn_prev" title="이전 달">
+											<span class="t_hidden">이전 달</span>
+										</button>
+										<span>
+											<em id="mon">5</em>
+											월
+										</span>
+										<button id="nextMon" type="button" class="btn_next" title="다음 달">
+											<span class="t_hidden">다음 달</span>
+										</button>
+									</div>
+								</div>
+								<div class="wrap_calendar">
+									<table class="calendar weekday">
+										<caption class="hidden">상세기간 달력</caption>
+										<colgroup>
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="sun">일</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col" class="sat">토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													28
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													29
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													30
+												</td>
+												<td>
+													<button type="button">1</button>
+												</td>
+												<td>
+													<button type="button">2</button>
+												</td>
+												<td>
+													<button type="button">3</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">4</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">5</button>
+												</td>
+												<td>
+													<button type="button">6</button>
+												</td>
+												<td>
+													<button type="button">7</button>
+												</td>
+												<td>
+													<button type="button">8</button>
+												</td>
+												<td>
+													<button type="button">9</button>
+												</td>
+												<td>
+													<button type="button">10</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">11</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">12</button>
+												</td>
+												<td>
+													<button type="button">13</button>
+												</td>
+												<td>
+													<button type="button">14</button>
+												</td>
+												<td>
+													<button type="button">15</button>
+												</td>
+												<td>
+													<button type="button">16</button>
+												</td>
+												<td>
+													<button type="button">17</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">18</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">19</button>
+												</td>
+												<td>
+													<button type="button">20</button>
+												</td>
+												<td class="today">
+													<button type="button" title="오늘 날짜">21</button>
+												</td>
+												<td>
+													<button type="button">22</button>
+												</td>
+												<td class="on term">
+													<button type="button" title="선택된 날짜">23</button>
+												</td>
+												<td class="off">
+													<button type="button">24</button>
+												</td>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">25</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">26</button>
+												</td>
+												<td class="off">
+													<button type="button">27</button>
+												</td>
+												<td class="off">
+													<button type="button">28</button>
+												</td>
+												<td class="off">
+													<button type="button">29</button>
+												</td>
+												<td class="off">
+													<button type="button">30</button>
+												</td>
+												<td class="off">
+													<button type="button">31</button>
+												</td>
+												<td class="btn_next">
+													<em class="hidden">다음달</em>
+													1
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 판매종료일 -->
+				<!-- e: popup -->
+
+				<!-- e: popup -->
+			</div>
+			<!-- e: 고객지원_판매물품관리 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 전체 미결제금액 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty2">
+						<div class="group">
+							<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+								<div class="dropdown_text">23.02.01~24.02.06 · 입출금 · 최근순 · 전체</div>
+							</div>
+						</div>
+
+						<div class="group">
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">조회기준일</span>
+									<span class="d_list_r">
+										<span class="date">2024.06.13</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">결제예정일</span>
+									<span class="d_list_r">
+										<span class="date">2024.06.13</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">전체 미결제금액</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">국내 일시불</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										국내 단기카드대출
+										<br />
+										(현금서비스)
+									</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">할부</span>
+									<span class="d_list_r">
+										<span class="money">0</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">해외 일시불</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										해외 단기카드대출
+										<br />
+										(현금서비스)
+									</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										일부결제금액이월(리볼빙)
+										<br />
+										국내 일시불
+									</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										일부결제금액이월
+										<br />
+										국내 단기카드대출
+									</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										일부결제금액이월(리볼빙)
+										<br />
+										해외 일시불
+									</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										일부결제금액이월
+										<br />
+										해외 단기카드대출
+									</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										일부결제금액이월(리볼빙)
+										<br />
+										해외
+									</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">연회비</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">참! 좋은 장기카드대출(카드론)</span>
+									<span class="d_list_r">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+							</ul>
+							<ul class="d_list ty1 mt_16">
+								<li>
+									<span class="d_list_l">총 미결제금액</span>
+									<span class="d_list_r">
+										<span class="money color ty3">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 -->
+
+				<!-- s: Popup -->
+				<!-- 조건설정 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조건설정</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<h3 class="input_label ty1">조회 구분</h3>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">사업장번호</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">카드번호</span></button>
+								</div>
+
+								<!-- 사업장번호 선택 시 -->
+								<h3 class="input_label ty1">사업장번호</h3>
+								<div class="dropdown ty2" role="button" title="사업장번호 목록보기" onclick="comLayerPopUtil.open('placelist');">
+									<div class="dropdown_text">123-45-67890</div>
+								</div>
+
+								<ul class="list_bullet ty1">
+									<li>결제예정금액은 청구작업이 완료되지 않은 예정금액으로서 실제 청구되는 금액과 다를 수 있습니다.</li>
+								</ul>
+
+								<!-- 카드번호 선택 시 -->
+								<h3 class="input_label ty1">카드 선택</h3>
+								<div class="dropdown ty2" role="button" title="카드 선택 목록보기" onclick="comLayerPopUtil.open('cardlist');">
+									<div class="dropdown_text">1234-****-9999-1234 카드별명</div>
+								</div>
+
+								<ul class="list_bullet ty1">
+									<li class="color ty4">카드번호로 조회 시, 해당 카드번호가 포함된 사업장 명세서가 조회됩니다.</li>
+									<li>결제예정금액은 청구작업이 완료되지 않은 예정금액으로서 실제 청구되는 금액과 다를 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="cardlist" title="카드 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">카드 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('cardlist');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">참! 좋은 Biz카드(대한항공)</div>
+										<div class="item_bottom">4140-****-****-3915</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false" aria-disabled="true">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-4996</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-5941</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1923</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1931</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1949</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1956</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="placelist" title="사업장번호">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">사업장번호</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('placelist');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">00001 담초코(민)</div>
+										<div class="item_bottom">9430-****-****-5970</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false" aria-disabled="true">
+									<div class="item">
+										<div class="item_top">00001 담초코(민)</div>
+										<div class="item_bottom">9430-****-****-7926</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">00001 담초코(민)</div>
+										<div class="item_bottom">9430-****-****-2948</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">00001 담초코(민)</div>
+										<div class="item_bottom">9430-****-****-8940</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

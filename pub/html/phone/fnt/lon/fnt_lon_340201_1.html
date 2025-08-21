@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 자영업자체인지업약정실행 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 진행상황조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1 active">
+								<div class="acd_head accodian_head small active">
+									<button type="button" title="대출정보 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">
+											<span class="left">대출정보</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner mt_16" style="display: block">
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">진행상태</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">신청완료</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">상품명</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">자영업자 체인지업</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">진행상황</div>
+							<ol class="loan_step loan_step_changeup" role="img" aria-label="총 3단계 중 현재 2단계 심사진행 중">
+								<li class="order1">
+									<div class="icon"></div>
+									<div class="txt">신청완료</div>
+								</li>
+								<li class="order2 on">
+									<div class="icon"></div>
+									<div class="txt">심사진행 중</div>
+									<span class="sr_only">현재선택</span>
+								</li>
+								<li class="order3">
+									<div class="icon"></div>
+									<div class="txt">심사완료</div>
+								</li>
+							</ol>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>심사 결과는 최대 2주 소요됩니다.</li>
+											<li>본부담당자가 심사에 필요한 서류를 요청할 수 있으며, 서류 미제출시 심사가 지연될 수 있습니다.</li>
+											<li>심사 결과에 따라 지원이 어려울 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">목록</button>
+								<!-- <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">심사결과 확인하기</button> -->
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 진행상황조회 -->
+
+				<!-- s: step2 심사결과확인 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty2 fw_4">자영업자 체인지업에 대한 심사가 완료되었습니다.</div>
+						</div>
+
+						<div class="group mt_24">
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-00-00000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기업명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">가나상사</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">홍길동</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지원기간</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">2025.12.31까지</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지원내용</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												지원기간 내 만기연장
+												<br />
+												금리: 연 3.0% 이내
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">경영목표</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												2024년 7억1,000만원
+												<br />
+												2024년 8억2,000만원
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">경영정상화 방안</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												고정비절감
+												<br />
+												기타(추후상담)
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 심사결과확인 -->
+
+				<!-- s: step7 신청불가 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								신청 불가
+								<div class="note_cmt">자영업자 체인지업 신청이 불가합니다.</div>
+							</div>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>고객님은 자영업자 체인지업 대상이 아닙니다.</li>
+											<li>고객님께서 거래하시는 대출 영업점에 방문하여 상담하시기 바랍니다.</li>
+											<li>자세한 사항은 IBK고객센터(1588-2588)로 문의하시기 바랍니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step7 신청불가 -->
+
+				<!-- s: step3 정보제공동의 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty2 fw_4">대출 기간연장 약정신청을 위해 아래 내용을 충분히 이해하신 후 동의하시기 바랍니다.</div>
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<div class="agree_check_group_top">
+										<div class="label all_chk">
+											<input type="checkbox" name="" id="agree_check_group_top3" class="chk_point_all" />
+											<label for="agree_check_group_top3" class="checkbox">
+												<i></i>
+												<span>
+													<span class="ess_text">필수</span>
+													약관 모두 동의
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="ago_group03_1" class="chk_point" />
+												<label for="ago_group03_1" class="checkbox small">
+													<i></i>
+													<span>
+														개인(신용)정보 수집·이용 및 제공 관련 고객 권리 안내문
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+											<button type="button" class="btn ty_txt3 line_bttm btn_view">
+												<span class="sr_only">개인(신용)정보 수집·이용 및 제공 관련 고객 권리 안내문</span>
+												보기
+											</button>
+										</div>
+									</div>
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="ago_group03_2" class="chk_point" />
+												<label for="ago_group03_2" class="checkbox small">
+													<i></i>
+													<span>
+														개인(신용)정보 조회 동의서
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+											<button type="button" class="btn ty_txt3 line_bttm btn_view">
+												<span class="sr_only">개인(신용)정보 조회 동의서</span>
+												보기
+											</button>
+										</div>
+										<ul class="list_bullet ty5 mt_20">
+											<li>개인(신용)정보 수집·이용,제공,동의</li>
+											<li>고유식별정보 수집·이용,제공,조회 동의</li>
+										</ul>
+									</div>
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="ago_group03_3" class="chk_point" />
+												<label for="ago_group03_3" class="checkbox small">
+													<i></i>
+													<span>
+														개인(신용)정보 수집·이용 동의서(비여신)
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+											<button type="button" class="btn ty_txt3 line_bttm btn_view">
+												<span class="sr_only">개인(신용)정보 수집·이용 동의서(비여신)</span>
+												보기
+											</button>
+										</div>
+										<ul class="list_bullet ty5 mt_20">
+											<li>개인(신용)정보 수집·이용,제공,동의</li>
+											<li>고유식별정보 수집·이용,제공,조회 동의</li>
+										</ul>
+									</div>
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="ago_group03_4" class="chk_point" />
+												<label for="ago_group03_4" class="checkbox small">
+													<i></i>
+													<span>
+														개인(신용)정보 수집·이용 및 제공 동의서(여신금융거래)
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+											<button type="button" class="btn ty_txt3 line_bttm btn_view">
+												<span class="sr_only">개인(신용)정보 수집·이용 및 제공 동의서(여신금융거래)</span>
+												보기
+											</button>
+										</div>
+										<ul class="list_bullet ty5 mt_20">
+											<li>개인(신용)정보 수집·이용,제공,동의</li>
+											<li>고유식별정보 수집·이용,제공,조회 동의</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 정보제공동의 -->
+
+				<!-- s: step4 입력확인 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty2 fw_4">
+								본 자영업자 체인지업 신청정보는
+								<strong>약정을 완료한 이후에는 취소/변경이 불가</strong>
+								하오니 주요항목에 대해 다시 한 번 명확히 확인하신 후 약정하시기 바랍니다.
+							</div>
+							<div class="group_item mt_24">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청일자</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2024-11-11</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기업명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">가나상사</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">홍길동</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">제도명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">자영업자체인지업</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-00-00000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지원기간</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2025.12.31까지</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지원내용</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												지원기간 내 만기연장
+												<br />
+												금리: 연 3.0% 이내
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">경영목표</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												2024년 7억1,000만원
+												<br />
+												2024년 8억2,000만원
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">경영정상화 방안</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												고정비절감
+												<br />
+												기타(추후상담)
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="label">
+								<input type="checkbox" name="" id="agc_chk_c_1" />
+								<label for="agc_chk_c_1" class="checkbox">
+									<i></i>
+									<span>통지 동의</span>
+									<span class="label_desc_text bullet_txt ty1">자영업자 체인지업 만기 도래 시 만기도래사실에 대한 통지</span>
+									<span class="label_desc_text bullet_txt ty1">자영업자 체인지업 실행 시 실행사실에 대한 통지</span>
+								</label>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="txt_style ty2 fw_4">약정서 내용을 확인 해 주세요.</div>
+							<div class="agree_check_group">
+								<div class="agree_check tit_ty">
+									<div class="top">
+										<div class="label">
+											<input type="checkbox" name="" id="ag_multi01" />
+											<label for="ag_multi01" class="checkbox">
+												<i></i>
+												<span>여신거래특별약정서</span>
+											</label>
+										</div>
+										<button type="button" class="btn ty_txt3 line_bttm btn_view">
+											<span class="sr_only">여신거래특별약정서</span>
+											보기
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">약정하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 입력확인 -->
+
+				<!-- s: step5 약정완료 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								자영업자 체인지업
+								<br />
+								약정 신청 완료
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">제도명</span>
+									<span class="d_list_r">자영업자 체인지업</span>
+								</li>
+								<li>
+									<span class="d_list_l">사업자등록번호</span>
+									<span class="d_list_r">000-00-00000</span>
+								</li>
+								<li>
+									<span class="d_list_l">기업명</span>
+									<span class="d_list_r">가나상사</span>
+								</li>
+								<li>
+									<span class="d_list_l">대표자명</span>
+									<span class="d_list_r">홍길동</span>
+								</li>
+								<li>
+									<span class="d_list_l">지원기간</span>
+									<span class="d_list_r">2024.11.11까지</span>
+								</li>
+								<li>
+									<span class="d_list_l">지원내용</span>
+									<span class="d_list_r">
+										지원기간 내 만기연장
+										<br />
+										금리: 연 3.0% 이내
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">경영목표</span>
+									<span class="d_list_r">
+										2024년 7억1,000만원
+										<br />
+										2024년 8억2,000만원
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">경영정상화 방안</span>
+									<span class="d_list_r">
+										고정비절감
+										<br />
+										기타(추후상담)
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 약정완료 -->
+
+				<!-- s: step6 결재함 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty1">자영업자 체인지업 신청</div>
+							<div class="group_item mt_16">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-00-00000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기업명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">가나상사</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">홍길동</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지원기간</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2025.12.31까지</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지원내용</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												지원기간 내 만기연장
+												<br />
+												금리: 연 3.0% 이내
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">경영목표</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												2024년 7억1,000만원
+												<br />
+												2024년 8억2,000만원
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">경영정상화 방안</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">
+												고정비절감
+												<br />
+												기타(추후상담)
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">목록</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step6 결재함 -->
+			</div>
+			<!-- e: 자영업자체인지업약정실행 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

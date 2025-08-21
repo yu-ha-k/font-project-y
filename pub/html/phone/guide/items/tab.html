@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap content_wrap">
+				<div class="cont_wrap">
+					<h1 class="guide_h1">탭메뉴</h1>
+
+					<p>- tab_list와 제어할 tab_cont는 서로 이웃(sibling) 관계에 있어야함</p>
+					<p>- tab_list와 tab_cont 사이에 다른 내용이 있어도 무관하지만, tab_cont는 반드시 tab_list보다 뒤에 배치되어야함</p>
+
+					<h4 class="guide_h4" style="background-color: rgb(148, 149, 255)">(개발전용) tab case - data 추적</h4>
+					<div class="tab_list ty1" role="tablist">
+						<button type="button" role="tab" data-opentab="open1" aria-selected="true" class="active">Tab 1</button>
+						<button type="button" role="tab" data-opentab="open2" aria-selected="false">Tab 2</button>
+						<button type="button" role="tab" data-opentab="open3" aria-selected="false">Tab 3</button>
+					</div>
+
+					<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open1">data - open tab 1</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open2">data - open tab 2</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open3">data - open tab 3</div>
+
+					<h4 class="guide_h4" style="background-color: rgb(148, 149, 255)">(개발전용) 공통 - 탭 show / hide 클릭 이벤트 불필요한 경우 적용 [ not_event ] class 적용</h4>
+					<div class="tab_list ty1 not_event" role="tablist">
+						<button type="button" role="tab" aria-selected="true" class="active">Tab 1</button>
+						<button type="button" role="tab" aria-selected="false">Tab 2</button>
+						<button type="button" role="tab" aria-selected="false">Tab 3</button>
+					</div>
+
+					<h4 class="guide_h4">case 1</h4>
+					<div class="tab_list ty1" role="tablist">
+						<button type="button" role="tab" aria-selected="true" class="active">Tab 1</button>
+						<button type="button" role="tab" aria-selected="false">Tab 2</button>
+						<button type="button" role="tab" aria-selected="false">
+							Tab 3
+							<span class="new">새 글</span>
+						</button>
+					</div>
+					<div class="tab_cont active" role="tabpanel" aria-expanded="true">data - open tab 1</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 2</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 3</div>
+
+					<h4 class="guide_h4">case 2 - 레이블</h4>
+					<div class="tab_list ty1" role="tablist">
+						<button type="button" role="tab" aria-selected="false">
+							레이블
+							<span class="num">0</span>
+						</button>
+						<button type="button" role="tab" aria-selected="true" class="active">
+							레이블
+							<span class="num">0</span>
+						</button>
+						<button type="button" role="tab" aria-selected="false">
+							레이블
+							<span class="num">0</span>
+							<span class="new">새 글</span>
+						</button>
+					</div>
+					<div class="tab_cont active" role="tabpanel" aria-expanded="true">data - open tab 1</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 2</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 3</div>
+
+					<h4 class="guide_h4">case 3 - 가로스크롤</h4>
+					<div class="tab_list_scroll_wrap">
+						<div class="tab_list ty1 scrollable" role="tablist">
+							<button type="button" role="tab">
+								레이블1
+								<span class="num">0</span>
+							</button>
+							<button type="button" role="tab" class="active">
+								레이블2
+								<span class="num">0</span>
+							</button>
+							<button type="button" role="tab">
+								레이블3
+								<span class="num">0</span>
+							</button>
+							<button type="button" role="tab">
+								레이블4
+								<span class="num">0</span>
+							</button>
+							<button type="button" role="tab">
+								레이블5
+								<span class="num">0</span>
+							</button>
+							<button type="button" role="tab">
+								레이블6
+								<span class="num">0</span>
+							</button>
+						</div>
+					</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 1</div>
+					<div class="tab_cont active" role="tabpanel" aria-expanded="true">data - open tab 2</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 3</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 4</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 5</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 6</div>
+
+					<h1 class="guide_h1">Tablist ty2 (이체)</h1>
+					<div class="tab_list ty2" role="tablist">
+						<button type="button" role="tab" aria-selected="true" class="active">은행</button>
+						<button type="button" role="tab" aria-selected="false">증권사</button>
+					</div>
+					<div class="tab_cont active" role="tabpanel" aria-expanded="true">data - open tab 은행</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open tab 증권사</div>
+
+					<h1 class="guide_h1">Tablist ty3 (이용시간 - svc_cus_060101_1)</h1>
+					<div class="tab_list ty3" role="tablist">
+						<button type="button" role="tab" aria-selected="false">조회</button>
+						<button type="button" role="tab" aria-selected="true" class="active">이체</button>
+						<button type="button" role="tab" aria-selected="false">뱅킹업무</button>
+					</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open 조회</div>
+					<div class="tab_cont active" role="tabpanel" aria-expanded="true">data - open 이체</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open 뱅킹업무</div>
+
+					<h1 class="guide_h1">Tablist ty4</h1>
+					<div class="tab_list ty4" role="tablist">
+						<button type="button" role="tab" aria-selected="false">조회</button>
+						<button type="button" role="tab" aria-selected="true" class="active">이체</button>
+						<button type="button" role="tab" aria-selected="false">뱅킹업무</button>
+					</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open 조회</div>
+					<div class="tab_cont active" role="tabpanel" aria-expanded="true">data - open 이체</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open 뱅킹업무</div>
+
+					<h1 class="guide_h1">Tablist ty5 (아이디어 제안)</h1>
+					<div class="tab_list ty5" role="tablist">
+						<button type="button" role="tab" aria-selected="true" class="active">접수</button>
+						<button type="button" role="tab" aria-selected="false">조회</button>
+					</div>
+					<div class="tab_cont active" role="tabpanel" aria-expanded="true">data - open 접수</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false">data - open 조회</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>

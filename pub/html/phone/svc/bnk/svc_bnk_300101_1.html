@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap"> 
+        <!-- s: Home>뱅킹관리>1인증서 1기기 서비스>안내 -->
+        
+        <div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+            <div class="content_wrap ty4">
+                <div class="group myphone">
+                    <div class="icon_info_group">
+                        <div class="icon myphone_registration_service"></div>
+                        <div class="tit"> 복잡한 인증절차 없이 <br />
+                            쉽고 빠른 내폰등록 서비스 </div>
+                    </div>
+                    <div class="icon_step_list ty2 mt_40 myphone_cert">
+                        <div class="order1">
+                            <div class="inner">
+                                <div class="item"> <span class="tit">이체 절차가 더 간편해져요</span>
+                                    <ul class="list_bullet ty2">
+                                        <li>계좌비밀번호만 입력하면 이체 완료 OTP나 인증서 비밀번호를 입력하지 않아도 최대 1천만원 까지 간편하게 자금을 이체할 수 있어요.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order2">
+                            <div class="inner">
+                                <div class="item"> <span class="tit">개인스마트뱅킹으로 바로 이동할 수 있어요</span>
+                                    <ul class="list_bullet ty2">
+                                        <li>기업스마트뱅킹을 이용하다가 개인스마트뱅킹을 보고 싶은 경우 전환하기 기능을 선택하면 자동으로 로그인하여 편리하게 이용할 수 있어요</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order3">
+                            <div class="inner">
+                                <div class="item"> <span class="tit">서비스 가입 대상</span>
+                                    <ul class="list_bullet ty2">
+                                        <li>관리자만 서비스 가입 및 이용이 가능합니다.(개인/법인)</li>
+                                        <li>개인스마트뱅킹 연동 기능은 개인스마트뱅킹/인터넷뱅킹 가입자만 이용할 수 있습니다</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('phonePopup2');">가입하기</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+                <!-- s: 가입자는 서비스 가입 버튼으로 출력 --> 
+                <!-- 
+              <div class="bottom_btn_area">
+                <div class="btn_area ty2">
+                  <button type="button" class="btn s_5 c_1 r_2">해지</button>
+                  <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(801);">가입하기</button>
+                </div>
+              </div>
+               --> 
+                <!-- e: 가입자는 서비스 가입 버튼으로 출력 --> 
+            </div>
+        </div>
+        
+        <!-- e: Home>뱅킹관리>1인증서 1기기 서비스>안내 --> 
+        
+        <!-- s: 공통>본인 인증>휴대폰인증 --> 
+        <!-- s: MO 인증 팝업 -->
+        <div id="step801" data-jx-step-no="801" data-jx-effect="slide">
+            <div class="content_wrap">
+                <div class="bottom_popup_wrap active" id="phonePopup4">
+                    <div class="bottom_popup">
+                        <div class="bottom_popup_header">
+                            <h2 class="tit">휴대폰인증 메시지 보내기</h2>
+                            <button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup4');">닫기</button>
+                        </div>
+                        <div class="bottom_popup_body">
+                            <div class="cert_msg_send"> <strong> 고객님이 사용하는 휴대폰이 <br />
+                                맞는지 확인할게요. </strong> 아래 화면에 입력된 문자 내용을 그대로 보내주세요. <br />
+                                고객님의 휴대폰이 아니시면 아래 다른 방법 <br />
+                                (인증서)으로 인증 을 선택해 주세요 </div>
+                            <div class="btn_area tyTxt mt_24">
+                                <button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(803);">다른 방법(인증서)으로 인증</button>
+                            </div>
+                            <div class="cert_msg_guideimg"> <img src="../../../../img/common/cert/img_cert_mo_guide.png" alt="본인인증을 하기 위해 문자메시지를 발송하는 예시화면 입니다. 보내는 메시지는 은행에서 지정한 특정한 문자열 입니다." /> </div>
+                            <div class="bg_box ty1">
+                                <ul class="list_bullet ty1">
+                                    <li>이용 중인 통신요금제에 따라 문자 발송 비용이 발생할 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom_popup_footer">
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('phonePopup2');">보내기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: MO 인증 팝업 --> 
+        
+        <!-- s: 정보입력 (휴대폰인증) -->
+        <div id="step802" data-jx-step-no="802" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="txt_style ty1">휴대폰 본인 인증</div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty2">이름</div>
+                        <div class="input">
+                            <input type="text" name="" id="" title="이름 입력" />
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty2">사업자등록번호</div>
+                        <div class="comp_wrap business_num">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+                        </div>
+                        
+                        <!-- 주민등록번호 뒷자리 7개 모두 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호(모두입력)</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after full_value">
+                                <button type="button" aria-label="주민등록번호 뒤 7자리 입력" class="keypad_btn"></button>
+                            </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 7개 모두 받는 경우 --> 
+                        
+                        <!-- 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호(첫번째만 입력, button)</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after">
+                                <button type="button" aria-label="주민등록번호 뒷자리 1번째번호 입력" class="keypad_btn"></button>
+                                <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 1개만 받는 경우 --> 
+                        
+                        <!-- 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호(첫번째만 입력, input)</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after">
+                                <div class="input no_del">
+                                    <input type="tel" maxlength="1" name="" id="" class="letter" title="주민등록번호 뒷자리 1번째번호 입력" />
+                                </div>
+                                <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        
+                        <div class="input_label ty2">휴대폰번호</div>
+                        <div class="comp_wrap phone">
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력" />
+                            </div>
+                        </div>
+                        <div class="input_label ty2">통신사</div>
+                        <div class="dropdown ty2" role="button" title="통신사 목록보기" onclick="comLayerPopUtil.open('telecom');">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                        <div class="btn_area ty1 mt_16">
+                            <button type="button" class="btn s_4 c_2 r_2">인증번호 요청하기</button>
+                        </div>
+                        <div class="btn_area ty1 mt_16">
+                            <button type="button" class="btn s_4 c_2 r_2">인증번호 다시요청</button>
+                        </div>
+                        <div class="input_label ty2">인증번호</div>
+                        <div class="comp_wrap with_count">
+                            <div class="count_wrap">
+                                <div class="input">
+                                    <input type="text" name="" id="" title="인증번호 숫자 6자리 입력" placeholder="숫자 6자리 입력" />
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                                <div class="with_count_utils"> <span class="count"> <span class="hidden">남은시간 :</span> 29:15 </span> </div>
+                            </div>
+                        </div>
+                        
+                        <!--250513 다른방법으로 인증 삭제
+								<div class="btn_area tyTxt mt_24">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(803);">다른 방법(인증서)으로 인증</button>
+								</div>
+-->
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>휴대폰 본인인증은 대표자 명의 휴대폰으로만 할 수 있습니다.</li>
+                                        <li>IBK기업은행에 등록된 휴대폰이 있고 현재 이용중인 휴대폰번호와 다른 경우, IBK고객센터(1566-2566) 또는 가까운 영업점에서 변경해주세요.</li>
+                                        <li>단, IBK고객센터에서 수정할 경우, 전자금융사기예방을 위해 정보수정 7일 후부터 대출을 신청할 수 있습니다.</li>
+                                        <li>법인폰은 각 통신사별 법인폰 본인인증서비스를 등록하면 휴대폰 본인확인을 할 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3)">인증번호 확인</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: 정보입력 (휴대폰인증) --> 
+        
+        <!-- s: 본인인증 방법 선택 --> 
+        <!-- e: 본인인증 방법 선택 --> 
+        
+        <!-- s: 공동인증서 인증 - 정보입력 (본인인증) -->
+        <div id="step804" data-jx-step-no="804" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="txt_style ty1">본인인증</div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty2">이름</div>
+                        <div class="input">
+                            <input type="text" name="" id="" title="이름 입력" placeholder="이름 입력" />
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <div class="input_label ty2">사업자등록번호</div>
+                        <div class="comp_wrap business_num">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+                        </div>
+                        
+                        <!-- 주민등록번호 뒷자리 7개 모두 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" placeholder="생년월일 6자리" />
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after full_value">
+                                <button type="button" aria-label="주민등록번호 뒤 7자리 입력" class="keypad_btn"></button>
+                            </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 7개 모두 받는 경우 --> 
+                        
+                        <!-- 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        <div class="input_label ty2">주민등록번호</div>
+                        <div class="comp_wrap birth">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" placeholder="생년월일 6자리" />
+                            </div>
+                            <span>-</span>
+                            <div class="birth_after">
+                                <button type="button" aria-label="주민등록번호 뒷자리 1번째번호 입력" class="keypad_btn"></button>
+                                <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> <span class="masking"></span> </div>
+                        </div>
+                        <!-- // 주민등록번호 뒷자리 1개만 받는 경우 -->
+                        
+                        <div class="input_label ty2">휴대폰번호</div>
+                        <div class="comp_wrap phone">
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력" />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력" />
+                            </div>
+                        </div>
+                        <div class="btn_area tyTxt mt_24">
+                            <button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(803);">다른 방법으로 인증</button>
+                        </div>
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>본인인증은 대표자 개인명의 인증서로만 할 수 있습니다.</li>
+                                        <li>스마트폰에 이용가능한 인증서가 등록된 경우에만 본인인증을 할 수 있습니다.</li>
+                                        <li>공동인증서가 등록되지 않은 경우 [인증센터]에서 인증서를 발급받거나 타행/타기관 인증서 등록 후 이용해 주세요.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: 공동인증서 인증 - 정보입력 (본인인증) --> 
+        
+        <!-- s: 본인인증 - 공동인증서 --> 
+        <!-- 전체팝업 -->
+        <div id="step805" data-jx-step-no="805" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="id_veri">
+                        <div class="txt_style ty1">공동인증서</div>
+                        <p class="desc">공동인증서를 선택 후 본인인증을 해주세요</p>
+                        <ul class="space_list_ty1">
+                            <!-- s: 인증서 만료 전 -->
+                            <li>
+                                <div class="cert_item_wrap">
+                                    <div class="cert_item" id="phone_chk98_content"> <a href="#" role="button" class="block" onclick="uf_goStep(806);">
+                                        <div class="name">홍길동</div>
+                                        <div class="info_wrap">
+                                            <div class="info">
+                                                <div class="tit">용도/발급기관</div>
+                                                <div class="txt">은행개인&middot;금융결재원</div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="tit">만료일</div>
+                                                <div class="txt"> 2017.06.17 <span class="color ty4">(만료 2547일전)</span> </div>
+                                            </div>
+                                        </div>
+                                        </a> </div>
+                                </div>
+                            </li>
+                            <!-- e: 인증서 만료 전 --> 
+                            <!-- s: 인증서 만료 후 -->
+                            <li>
+                                <div class="cert_item_wrap">
+                                    <div class="cert_item disabled" id="phone_chk98_content"> <a href="#" role="button" class="block" aria-disabled="true" tabindex="-1">
+                                        <div class="badge_cont"> <span class="badge ty3 colorB1">만료</span> </div>
+                                        <div class="name">홍길동</div>
+                                        <div class="info_wrap">
+                                            <div class="info">
+                                                <div class="tit">용도/발급기관</div>
+                                                <div class="txt">은행개인&middot;금융결재원</div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="tit">만료일</div>
+                                                <div class="txt">2017.06.17</div>
+                                            </div>
+                                        </div>
+                                        </a> </div>
+                                </div>
+                            </li>
+                            <!-- e: 인증서 만료 후 -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom_btn_area ty4">
+                    <div class="bottom_btn_area_box">
+                        <div class="btn_area tyTxt">
+                            <button type="button" class="btn ty_txt2 link_ty1">인증서 가져오기</button>
+                            <button type="button" class="btn ty_txt2 link_ty1">다른기관 인증서 등록하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 전체팝업 --> 
+        <!-- e: 본인인증 - 공동인증서 --> 
+        
+        <!-- s: 본인인증 - 금융인증서 -->
+        <div id="step806" data-jx-step-no="806" data-jx-effect="slide">
+            <div class="content_wrap ty4">
+                <div class="group">
+                    <div class="id_veri">
+                        <div class="id_veri_head">
+                            <div class="id_veri_head_title">금융인증서</div>
+                            <p class="id_veri_head_desc">본인인증을 해주세요</p>
+                        </div>
+                        <div class="id_veri_cert">
+                            <button type="button" class="btn s_3 c_1 r_3" onClick="uf_goStep(3);">본인인증</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_btn_area ty4">
+                    <div class="bottom_btn_area_box">
+                        <div class="btn_area tyTxt">
+                            <button type="button" class="btn ty_txt2 line_bttm">인증센터 바로가기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 본인인증 - 금융인증서 --> 
+        
+        <!-- s: 팝업 -->
+        <div class="bottom_popup_wrap" id="telecom" title="통신사 선택">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">통신사 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('telecom');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" aria-selected="false">SKT</li>
+                        <li role="option" tabindex="-1" aria-selected="false">KT</li>
+                        <li role="option" tabindex="-1" aria-selected="false">LGU+</li>
+                        <li role="option" tabindex="-1" aria-selected="false">SKT (알뜰폰)</li>
+                        <li role="option" tabindex="-1" aria-selected="false">KT (알뜰폰)</li>
+                        <li role="option" tabindex="-1" aria-selected="false">LGU+ (알뜰폰)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- s: 다른 본인인증 방법 선택 -->
+        <div class="bottom_popup_wrap" id="phonePopup1">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">다른 본인인증 방법 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup1');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="select_cert clickable" role="radiogroup">
+                        <button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_lock"><span class="text">공동인증서</span></button>
+                        <button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_cloud"><span class="text">금융인증서</span></button>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('phonePopup5');">다음</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 다른 본인인증 방법 선택 --> 
+        
+        <!-- s: 휴대폰 본인 인증 약관 -->
+        <div class="bottom_popup_wrap" id="phonePopup2">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">약관동의</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup2');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="agree_check_group">
+                        <div class="chk_group_wrap">
+                            <div class="agree_check tit_ty">
+                                <div class="top chk_middle">
+                                    <div class="label">
+                                        <input type="checkbox" name="" id="phone_ago_group" class="chk_point_all" />
+                                        <label for="phone_ago_group" class="checkbox"> <i></i> <span> 약관 모두 동의 <span class="ess_mark">필수</span> </span> </label>
+                                    </div>
+                                </div>
+                                <div class="inner">
+                                    <ul class="term_list">
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk1" class="chk_point_sub" />
+                                                <label for="phone_chk1" class="checkbox small lbl"> <i></i> <span> 서비스 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">서비스 이용약관</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk2" class="chk_point_sub" />
+                                                <label for="phone_chk2" class="checkbox small lbl"> <i></i> <span> 통신사 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">통신사 이용약관</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk3" class="chk_point_sub" />
+                                                <label for="phone_chk3" class="checkbox small lbl"> <i></i> <span> 개인정보 수집 이용 위탁 동의서 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">개인정보 수집 이용 위탁 동의서</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk4" class="chk_point_sub" />
+                                                <label for="phone_chk4" class="checkbox small lbl"> <i></i> <span> 고유식별 정보처리 동의서 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">고유식별 정보처리 동의서</span> 보기 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('phonePopup2'); uf_goStep(802);">다음</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 휴대폰 본인 인증 약관 --> 
+        
+        <!-- s: 공동인증서 인증/금융인증서 인증 약관 -->
+        <div class="bottom_popup_wrap" id="phonePopup3">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">약관동의</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup3');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="chk_group_wrap">
+                        <div class="agree_check">
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head check_as_all active chk_middle">
+                                    <div class="label">
+                                        <input type="checkbox" name="" id="phone_chk10" class="chk_point" />
+                                        <label for="phone_chk10" class="checkbox"> <i></i> <span> 약관 모두 동의 <span class="ess_mark">필수</span> </span> </label>
+                                    </div>
+                                    <button type="button" aria-label="필수 약관동의 목록보기" aria-expanded="true" class="acd_btn box_ty"></button>
+                                </div>
+                                <div class="acd_cont accodian_cont chk_list">
+                                    <div class="inner" style="display: block">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="phone_chk11" class="chk_point_sub" />
+                                                    <label for="phone_chk11" class="checkbox small lbl"> <i></i> <span> 개인정보 수집 및 이용 동의 <span class="ess_mark">필수</span> </span> </label>
+                                                </div>
+                                                <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">개인정보 수집 및 이용 동의</span> 보기 </button>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="phone_chk12" class="chk_point_sub" />
+                                                    <label for="phone_chk12" class="checkbox small lbl"> <i></i> <span> 고유식별정보 수집 및 이용 동의 <span class="ess_mark">필수</span> </span> </label>
+                                                </div>
+                                                <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">고유식별정보 수집 및 이용 동의</span> 보기 </button>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="phone_chk13" class="chk_point_sub" />
+                                                    <label for="phone_chk13" class="checkbox small lbl"> <i></i> <span> 개인정보 제3자 제공 동의(유효성검증) <span class="ess_mark">필수</span> </span> </label>
+                                                </div>
+                                                <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">개인정보 제3자 제공 동의(유효성검증)</span> 보기 </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2">다음</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 공동인증서 인증/금융인증서 인증 약관 --> 
+        
+        <!-- s: 휴대폰 본인 인증 약관 -->
+        <div class="bottom_popup_wrap" id="phonePopup5">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">약관동의</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup5');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="agree_check_group">
+                        <div class="chk_group_wrap">
+                            <div class="agree_check tit_ty">
+                                <div class="top chk_middle">
+                                    <div class="label">
+                                        <input type="checkbox" name="" id="phone_ago_group" class="chk_point_all" />
+                                        <label for="phone_ago_group" class="checkbox"> <i></i> <span> 약관 모두 동의 <span class="ess_mark">필수</span> </span> </label>
+                                    </div>
+                                </div>
+                                <div class="inner">
+                                    <ul class="term_list">
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk1" class="chk_point_sub" />
+                                                <label for="phone_chk1" class="checkbox small lbl"> <i></i> <span> 서비스 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">서비스 이용약관</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk2" class="chk_point_sub" />
+                                                <label for="phone_chk2" class="checkbox small lbl"> <i></i> <span> 통신사 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">통신사 이용약관</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk3" class="chk_point_sub" />
+                                                <label for="phone_chk3" class="checkbox small lbl"> <i></i> <span> 개인정보 수집 이용 위탁 동의서 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">개인정보 수집 이용 위탁 동의서</span> 보기 </button>
+                                        </li>
+                                        <li class="item">
+                                            <div class="label">
+                                                <input type="checkbox" name="" id="phone_chk4" class="chk_point_sub" />
+                                                <label for="phone_chk4" class="checkbox small lbl"> <i></i> <span> 고유식별 정보처리 동의서 <span class="ess_mark">필수</span> </span> </label>
+                                            </div>
+                                            <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">고유식별 정보처리 동의서</span> 보기 </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('phonePopup1'); comLayerPopUtil.close('phonePopup5'); comLayerPopUtil.close('phonePopup2'); uf_goStep(804);">다음</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 휴대폰 본인 인증 약관 --> 
+        
+        <!-- e: 팝업 --> 
+        <!-- e: 공통>본인 인증>휴대폰인증 --> 
+        
+        <!-- s: Home>뱅킹관리>1인증서 1기기 서비스>서비스 가입>서비스 설정(개인사업자) -->
+        <div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+            <div class="content_wrap ty4">
+                <div class="group">
+                    <div class="cert_service">
+                        <div class="icon_info_group">
+                            <div class="icon myphone_registration_service_limit"></div>
+                            <div class="txt"> 이체한도를 설정하고 <br />
+                                개인 스마트 연동 기능 사용여부를 <br />
+                                선택해 주세요 </div>
+                        </div>
+                        <div class="group_item mt_32">
+                            <div class="group_item_detail">
+                                <p class="line" role="text"> <span class="line_left"> <span class="tit">간편 이체한도</span> </span> <span class="line_right"> <span class="txt">최대 1천만원</span> </span> </p>
+                            </div>
+                        </div>
+                        <div class="cert_service_price">
+                            <div class="live_input_group">
+                                <div class="live_input ty2 alert">
+                                    <div class="value" aria-live="assertive" role="button" title="간편이체 한도 금액 입력"> 1,000 <span class="unit">원</span> </div>
+                                </div>
+                                <div class="live_input_msg">오류메시지</div>
+                            </div>
+                            <div class="input_range mt_24">
+                                <input type="range" name="" id="" min="0" max="10000000" step="" value="1000000" title="이체한도 범위설정" />
+                            </div>
+                        </div>
+                        <div class="form_group mt_32">
+                            <div class="input_label ty1">개인스마트뱅킹 연동 기능</div>
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">사용 안함</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">사용</span></button>
+                            </div>
+                        </div>
+                        <div class="agree_check tit_ty mt_32">
+                            <div class="top">
+                                <div class="label">
+                                    <input type="checkbox" name="" id="cag10" />
+                                    <label for="cag10" class="checkbox small"> <i></i> <span>스마트폰 기기 정보 수집에 동의합니다.</span> </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">저장</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home>뱅킹관리>1인증서 1기기 서비스>서비스 가입>서비스 설정(개인사업자) --> 
+        
+        <!-- s: Home>뱅킹관리>1인증서 1기기 서비스>가입 완료 -->
+        <div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+            <div class="content_wrap">
+                <div class="group">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        가입 완료
+                        <div class="note_cmt">내폰등록서비스를 가입했어요.</div>
+                    </div>
+                </div>
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2">확인</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: Home>뱅킹관리>1인증서 1기기 서비스>가입 완료 --> 
+        
+        <!-- Home>뱅킹관리>내폰등록서비스>서비스 해지>해지 완료 -->
+        <div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+            <div class="content_wrap">
+                <div class="group">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        해지 완료
+                        <div class="note_cmt">내폰등록서비스를 해지했어요.</div>
+                    </div>
+                </div>
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2">확인</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- Home>뱅킹관리>내폰등록서비스>서비스 해지>해지 완료 --> 
+        
+        <!-- Home>뱅킹관리>내폰등록서비스>설정 관리>변경 완료 -->
+        <div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+            <div class="content_wrap">
+                <div class="group">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        변경 완료
+                        <div class="note_cmt">설정 변경이 완료 되었어요.</div>
+                    </div>
+                </div>
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">메인으로 이동</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- Home>뱅킹관리>내폰등록서비스>설정 관리>변경 완료 --> 
+    </div>
+</div>
+
+<!--**퍼블용** 데모확인 로티 구동 스크립트--> 
+<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script> 
+<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+</body>
+</html>

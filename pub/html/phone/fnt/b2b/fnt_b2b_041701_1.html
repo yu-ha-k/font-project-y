@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 교부량 조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty2 in_control_center">
+						<div class="group">
+							<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+								<div class="dropdown_text">입출금 · 최근순 · 전체</div>
+							</div>
+						</div>
+						<div class="group">
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>조회일시 : 2017-09-20 18:14:55</li>
+								</ul>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 교부량 -->
+						<div class="group">
+							<div class="title_text ty1">교부량</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">적정교부량</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">7건</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">3개월 평균사용량</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1건</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">전자어음발행 가능수량</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1건</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 교부량 -->
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<ul class="list_bullet ty1">
+								<li>
+									교부량 추가신청은 [교부량 추가신청]에서 해주세요
+									<br />
+									<button type="button" class="btn ty_txt4 line_bttm color ty6">바로가기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 교부량 조회 -->
+
+				<!-- s: popup -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조건설정</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<div class="input_label ty1">발행인 실명번호</div>
+								<div class="input">
+									<input type="text" name="" id="" value="001065730" title="발행인 실명번호 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">계좌번호</div>
+								<div class="dropdown ty2" role="button" title="당좌계좌 목록 보기" onclick="comLayerPopUtil.open('popupAccount_old');">
+									<div class="dropdown_text">선택</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- s: 고객 안내사항 바텀시트 -->
+				<div class="bottom_popup_wrap" id="popupNotice">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">고객안내사항</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupNotice');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							IBK인증서로는
+							<strong>전자어음/전자채권</strong>
+							거래를 이용하실 수 없습니다.
+							<strong>공동/금융인증서를 사용</strong>
+							하여 거래해주시길 바랍니다.
+							<div class="label">
+								<input type="checkbox" name="" id="chk1" />
+								<label for="chk1" class="checkbox small mt_16">
+									<i></i>
+									<span>3일 동안 열지않기</span>
+								</label>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 고객 안내사항 바텀시트-->
+
+				<!-- s: popup -->
+				<div class="bottom_popup_wrap" id="popupAccount_old">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount_old');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popup5">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">기관 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup5');">닫기</button>
+						</div>
+						<div class="bottom_popup_body agency_select_popup">
+							<div class="agency_select_wrap">
+								<div class="agency_select_wrap_title">은행</div>
+								<ul class="agency_select_list" role="listbox">
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000"></div>
+										<span class="name">기본</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_003"></div>
+										<span class="name">기업은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_004"></div>
+										<span class="name">국민은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_020"></div>
+										<span class="name">우리은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_088"></div>
+										<span class="name">신한은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_081"></div>
+										<span class="name">하나은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_011"></div>
+										<span class="name">농협은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_012"></div>
+										<span class="name">지역농축협</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_023"></div>
+										<span class="name">SC은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_027"></div>
+										<span class="name">한국씨티은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_071"></div>
+										<span class="name">우체국</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_039"></div>
+										<span class="name">경남은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_034"></div>
+										<span class="name">광주은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_031"></div>
+										<span class="name">iM[구 대구은행]</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_055"></div>
+										<span class="name">도이치</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_032"></div>
+										<span class="name">부산은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_064"></div>
+										<span class="name">산림조합</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_002"></div>
+										<span class="name">산업은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_050"></div>
+										<span class="name">저축은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_045"></div>
+										<span class="name">새마을금고</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_007"></div>
+										<span class="name">수협</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_048"></div>
+										<span class="name">신협</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_037"></div>
+										<span class="name">전북은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_035"></div>
+										<span class="name">제주은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_060"></div>
+										<span class="name">BOA</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_054"></div>
+										<span class="name">HSBC</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_057"></div>
+										<span class="name">JP모간</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_062"></div>
+										<span class="name">중국공상은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_061"></div>
+										<span class="name">BNP파리바</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_067"></div>
+										<span class="name">중국건설은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_063"></div>
+										<span class="name">중국은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_090"></div>
+										<span class="name">카카오뱅크</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_089"></div>
+										<span class="name">케이뱅크</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_092"></div>
+										<span class="name">토스뱅크</span>
+									</li>
+
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B9"></div>
+										<span class="name">AMEX</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A4"></div>
+										<span class="name">MELLAT</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C4"></div>
+										<span class="name">중국은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B7"></div>
+										<span class="name">교통은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C2"></div>
+										<span class="name">BANK OF NEW YORK</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_059"></div>
+										<span class="name">MUFG은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B8"></div>
+										<span class="name">BARCLAYS</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A8"></div>
+										<span class="name">BNP PARIBAS</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A6"></div>
+										<span class="name">CALYON</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C6"></div>
+										<span class="name">건설은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A3"></div>
+										<span class="name">인도</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C5"></div>
+										<span class="name">공상은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B6"></div>
+										<span class="name">ING</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C1"></div>
+										<span class="name">JP MORGAN</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A1"></div>
+										<span class="name">미즈호</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C3"></div>
+										<span class="name">PAKISTAN</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B5"></div>
+										<span class="name">OCBC</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A7"></div>
+										<span class="name">SOCIETE GENERALE</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A2"></div>
+										<span class="name">스미토모미쯔이</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_008"></div>
+										<span class="name">수출입은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A5"></div>
+										<span class="name">UBAF</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A9"></div>
+										<span class="name">UBS</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_056"></div>
+										<span class="name">ABN암로은행</span>
+									</li>
+								</ul>
+
+								<div class="agency_select_wrap_title">국세/지방세</div>
+								<ul class="agency_select_list" role="listbox">
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_government"></div>
+										<span class="name">국세</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_government"></div>
+										<span class="name">국고금</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_government"></div>
+										<span class="name">지방세입</span>
+									</li>
+								</ul>
+
+								<div class="agency_select_wrap_title">증권사</div>
+								<ul class="agency_select_list" role="listbox">
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_261"></div>
+										<span class="name">교보증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_267"></div>
+										<span class="name">대신증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_238"></div>
+										<span class="name">미래에셋</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_279"></div>
+										<span class="name">DB금융투자</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_209"></div>
+										<span class="name">유안타증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_287"></div>
+										<span class="name">메리츠증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_290"></div>
+										<span class="name">부국증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_240"></div>
+										<span class="name">삼성증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_291"></div>
+										<span class="name">신영증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_278"></div>
+										<span class="name">신한투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_247"></div>
+										<span class="name">NH투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_280"></div>
+										<span class="name">유진투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_265"></div>
+										<span class="name">LS증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_264"></div>
+										<span class="name">키움증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_270"></div>
+										<span class="name">하나증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_262"></div>
+										<span class="name">아이엠증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_243"></div>
+										<span class="name">한국투자</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_269"></div>
+										<span class="name">한화투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_218"></div>
+										<span class="name">KB증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_263"></div>
+										<span class="name">현대차증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_292"></div>
+										<span class="name">케이프투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_289"></div>
+										<span class="name">NH농협증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_266"></div>
+										<span class="name">SK증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_288"></div>
+										<span class="name">카카오페이증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_224"></div>
+										<span class="name">BNK투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_225"></div>
+										<span class="name">IBK투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_227"></div>
+										<span class="name">다올투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_221"></div>
+										<span class="name">상상인증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_294"></div>
+										<span class="name">우리투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_271"></div>
+										<span class="name">토스증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_C4"></div>
+										<span class="name">이베스트투자증권</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- s: 달력 -->
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

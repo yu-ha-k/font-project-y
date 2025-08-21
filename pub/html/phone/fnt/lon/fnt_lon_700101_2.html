@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3 lon_calcul">
+						<div class="group">
+							<!-- s: 입력 목록 -->
+							<div class="form_group">
+								<ul class="space_list_ty1">
+									<li class="item">
+										<h4 class="input_label ty1">대출금액(원)</h4>
+
+										<div class="live_input_group">
+											<div class="live_input ty2">
+												<div class="value" aria-live="assertive" role="button" title="대출금액 입력">숫자만 입력</div>
+											</div>
+										</div>
+									</li>
+									<li class="item">
+										<h4 class="input_label ty1">대출기간</h4>
+
+										<div class="comp_wrap">
+											<div class="btn_area clickable ty1">
+												<button type="button" role="radio" aria-checked="true" class="active"><span class="text">년</span></button>
+												<button type="button" role="radio" aria-checked="false"><span class="text">개월</span></button>
+											</div>
+										</div>
+										<div class="comp_wrap with_txt">
+											<div class="input">
+												<input type="text" name="" id="" title="대출기간 개월수 입력" />
+
+												<button type="button" class="del">텍스트삭제</button>
+											</div>
+											<span class="txt">개월</span>
+										</div>
+									</li>
+									<li class="item">
+										<h4 class="input_label ty1">상환방법</h4>
+
+										<div class="comp_wrap">
+											<div class="dropdown ty2" role="button" title="상환방법 목록보기" onclick="comLayerPopUtil.open('optlist');">
+												<div class="dropdown_text">선택</div>
+											</div>
+										</div>
+									</li>
+									<li class="item">
+										<h4 class="input_label ty1">대출금리</h4>
+										<div class="comp_wrap with_txt">
+											<div class="input">
+												<input type="text" name="" id="" title="대출금리 숫자만 입력" />
+
+												<button type="button" class="del">텍스트삭제</button>
+											</div>
+											<span class="txt">%</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- e: 입력 목록 -->
+							<!-- s: 계산 버튼 -->
+							<div class="btn_area ty1 mt_24">
+								<button type="button" class="btn s_5 c_3 r_2">계산하기</button>
+							</div>
+							<!-- e: 계산 버튼 -->
+							<!-- s: 계산 결과 -->
+							<ul class="d_list ty1 calcul_result mt_40">
+								<li>
+									<div class="d_list_l">대출원금</div>
+									<div class="d_list_r">
+										<span class="money">12,000,000</span>
+										<span class="txt_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="d_list_l">총 대출이자</div>
+									<div class="d_list_r">
+										<span class="money">563</span>
+										<span class="txt_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="d_list_l">총 상환금액</div>
+									<div class="d_list_r">
+										<span class="money">2,000,563</span>
+										<span class="txt_unit">원</span>
+									</div>
+								</li>
+								<li>
+									<div class="d_list_l">1회차 월 상환금액</div>
+									<div class="d_list_r">
+										<span class="money">12,456,78</span>
+										<span class="txt_unit">원</span>
+									</div>
+								</li>
+							</ul>
+							<div class="ta_r mt_8">
+								<a href="#" class="btn ty_txt3 color ty5 line_bttm" title="링크를 누르면 이동합니다."><span class="">월별 상환금액 전체보기</span></a>
+							</div>
+							<!-- e: 계산 결과 -->
+							<!-- s: 유의사항 -->
+							<ul class="list_bullet ty1 mt_8">
+								<li>이자는 월 단위로 계산되며, 1일 단위로 계산하는 실질 이자와는 차이가 있을 수 있습니다.(소수점 이하는 절사)</li>
+								<li>분할상환의 경우, 원금상환기준일은 대출을 실행한 날짜로 상환주기는 매월로 가정해 계산합니다.</li>
+							</ul>
+							<!-- e: 유의사항 -->
+						</div>
+					</div>
+				</div>
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="optlist" title="상환방법">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">상환방법</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

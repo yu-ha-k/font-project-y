@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 외화정기예금 자동재예치 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 가입내역 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">계좌선택</div>
+
+							<div class="tab_list ty4" role="tablist">
+								<button type="button" role="tab" aria-selected="true" class="active">등록</button>
+								<button type="button" role="tab" aria-selected="false">해지</button>
+							</div>
+							<!-- s: 등록 -->
+							<div class="tab_cont active" role="tabpanel" aria-expanded="true">
+								<div class="group mt_24">
+									<div class="form_group">
+										<div class="input_label ty1">
+											자동재예치 등록 계좌선택
+											<span class="ess_text ty1">필수</span>
+										</div>
+										<div class="dropdown ty2" role="button" title="자동재예치 등록 계좌선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+											<div class="dropdown_text">전체</div>
+										</div>
+
+										<div class="input_label ty1">
+											회차선택
+											<span class="ess_text ty1">필수</span>
+										</div>
+										<div class="dropdown ty2" role="button" title="회차선택 목록보기" onclick="comLayerPopUtil.open('optList');">
+											<div class="dropdown_text">전체</div>
+										</div>
+
+										<div class="input_label ty1">선택 된 회차 정보</div>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">회차</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">10001</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">통화</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">999</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">신규일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2024-11-11</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">만기일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2024-11-11</span>
+													</span>
+												</p>
+											</div>
+										</div>
+
+										<div class="input_label ty1">
+											자동재예치 기간 설정
+											<span class="ess_text ty1">필수</span>
+										</div>
+										<div class="comp_wrap from_to">
+											<div class="input">
+												<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+												<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('');"></button>
+											</div>
+											<span>~</span>
+											<div class="input">
+												<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+												<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('');"></button>
+											</div>
+										</div>
+										<ul class="list_bullet ty3 mt_8">
+											<li>신규계약일로부터 최대 5년까지 자동재예치가 가능합니다.</li>
+											<li>만기일 기준 5영업일 전까지 신청 가능합니다.</li>
+										</ul>
+
+										<div class="input_label ty1">
+											자동재예치 필수확인사항
+											<span class="ess_text ty1">필수</span>
+										</div>
+										<div class="txt_style ty7">아래의 내용을 모두 확인하신 후 체크하시기 바랍니다.</div>
+										<div class="agree_check_group">
+											<div class="chk_group_wrap">
+												<div class="agree_check">
+													<div class="acd_wrap accodian_wrap ty1">
+														<div class="acd_head accodian_head check_as_all chk_middle active">
+															<div class="label">
+																<input type="checkbox" name="" id="ago_group01" class="chk_point" />
+																<label for="ago_group01" class="checkbox">
+																	<i></i>
+																	<span>
+																		전체 동의
+
+																		<span class="ess_mark">필수</span>
+																	</span>
+																</label>
+															</div>
+															<button type="button" aria-label="필수 약관동의 목록보기" aria-expanded="true" class="acd_btn box_ty"></button>
+														</div>
+														<div class="acd_cont accodian_cont chk_list">
+															<div class="inner" style="display: block">
+																<ul class="list_bullet ty2 pl_32">
+																	<li>대상계좌에 압류 및 지급정지 등 출금제한 사유가 있거나 만기일 전 해지하는 경우 등 자동재예치가 불가한 사유 발생 시 만기일에 재예치 되지 않음을 동의합니다.</li>
+																	<li>본인은 이 예금 가입 시 약관에서 정한 계약기간 자동 재예치 관련 내용을 잘 이해하였으며, 이 예금의 자동재예치 최종 회차까지 계약기간을 자동으로 연장하는데 이의가 없음을 동의합니다.</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- s: 꼭 알아두세요! -->
+								<div class="group">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>자동재예치시간은 최초 계약시점의 계약기간과 동일하게 적용됩니다.</li>
+													<li>자동재예치의 기간 변경 시 해지 후 재등록 바랍니다.</li>
+													<li>자동재예치 시 이율은 갱신일 기준 고시이율을 적용합니다. 자세한 이율은 홈페이지를 참고하시기 바랍니다.</li>
+													<li>그 외 자세한 사항은 상품설명서와 외화예금거래기본약관을 참고하시기 바랍니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- e: 꼭 알아두세요! -->
+
+								<!-- s: 하단 고정 버튼 -->
+								<div class="bottom_btn_area">
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+									</div>
+								</div>
+								<!-- e: 하단 고정 버튼 -->
+							</div>
+							<!-- e: 등록 -->
+
+							<!-- s: 해지 -->
+							<div class="tab_cont" role="tabpanel" aria-expanded="false">
+								<div class="group mt_24">
+									<div class="form_group">
+										<div class="input_label ty1">
+											자동재예치 해지 계좌선택
+											<span class="ess_text ty1">필수</span>
+										</div>
+										<div class="dropdown ty2" role="button" title="자동재예치 해지 계좌선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+											<div class="dropdown_text">전체</div>
+										</div>
+
+										<div class="input_label ty1">
+											회차선택
+											<span class="ess_text ty1">필수</span>
+										</div>
+										<div class="dropdown ty2" role="button" title="회차선택 목록보기" onclick="comLayerPopUtil.open('optList');">
+											<div class="dropdown_text">전체</div>
+										</div>
+
+										<div class="input_label ty1">선택 된 회차 정보</div>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">회차</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">10001</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">통화</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">999</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">신규일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2024-11-11</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">만기일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2024-11-11</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- s: 꼭 알아두세요! -->
+								<div class="group">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>자동재예치시간은 최초 계약시점의 계약기간과 동일하게 적용됩니다.</li>
+													<li>자동재예치의 기간 변경 시 해지 후 재등록 바랍니다.</li>
+													<li>자동재예치 시 이율은 갱신일 기준 고시이율을 적용합니다. 자세한 이율은 홈페이지를 참고하시기 바랍니다.</li>
+													<li>그 외 자세한 사항은 상품설명서와 외화예금거래기본약관을 참고하시기 바랍니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- e: 꼭 알아두세요! -->
+
+								<!-- s: 하단 고정 버튼 -->
+								<div class="bottom_btn_area">
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">다음</button>
+									</div>
+								</div>
+								<!-- e: 하단 고정 버튼 -->
+							</div>
+							<!-- e: 해지 -->
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 가입내역 -->
+
+				<!-- s: step3 신청정보확인 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">입력확인</div>
+
+							<!-- <div class="title_text ty1">입력확인</div> -->
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"><span class="color ty2">등록</span></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">자동재예치 기간</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2023.06.30~2024.06.30</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청계좌</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-000000-00-000</span>
+										</span>
+									</p>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">회차</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">10001</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">가입통화</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">USD</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">자동재예치 신청</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 신청정보확인 -->
+
+				<!-- s: step4 신청완료 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								자동재예치가 신청 되었습니다.
+							</div>
+
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">신청구분</span>
+									<span class="d_list_r">
+										<span class="color ty2">등록</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">자동재예치 기간</span>
+									<span class="d_list_r">
+										<span class="date">2023.06.30~2024.06.30</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">신청계좌</span>
+									<span class="d_list_r">
+										<span class="account_no">000-000000-00-000</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">회차</span>
+									<span class="d_list_r">10001</span>
+								</li>
+								<li>
+									<span class="d_list_l">가입통화</span>
+									<span class="d_list_r">
+										<span class="txt_unit">USD</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 신청완료 -->
+
+				<!-- s: step6 해지정보확인 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">입력확인</div>
+							<!-- <div class="title_text ty1">입력확인</div> -->
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"><span class="color ty4">해지</span></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청계좌</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-000000-00-000</span>
+										</span>
+									</p>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">회차</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">10001</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">가입통화</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">USD</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(7);">자동재예치 해지</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step6 해지정보확인 -->
+
+				<!-- s: step7 해지완료 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								자동재예치를 해지 했어요
+							</div>
+
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">신청구분</span>
+									<span class="d_list_r">
+										<span class="color ty4">해지</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">신청계좌</span>
+									<span class="d_list_r">
+										<span class="account_no">000-000000-00-000</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">회차</span>
+									<span class="d_list_r">10001</span>
+								</li>
+								<li>
+									<span class="d_list_l">가입통화</span>
+									<span class="d_list_r">
+										<span class="txt_unit">USD</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step7 해지완료 -->
+
+				<!-- s: step9 결재함_외화정기예금_자동재예치 -->
+				<div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">외화정기예금 자동재예치 내역</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청 구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">-</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청 계좌</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-00000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">회차</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">10001</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">가입 통화</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">USD</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">목록</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step9 결재함_외화정기예금_자동재예치 -->
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">달력</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+								<div class="calendar_select_wrap">
+									<div class="calendar_select">
+										<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+											<span class="t_hidden">이전 년도</span>
+										</button>
+										<span>
+											<em id="year">2024</em>
+											년
+										</span>
+										<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+											<span class="t_hidden">다음 년도</span>
+										</button>
+									</div>
+									<div class="calendar_select">
+										<button id="preMon" type="button" class="btn_prev" title="이전 달">
+											<span class="t_hidden">이전 달</span>
+										</button>
+										<span>
+											<em id="mon">5</em>
+											월
+										</span>
+										<button id="nextMon" type="button" class="btn_next" title="다음 달">
+											<span class="t_hidden">다음 달</span>
+										</button>
+									</div>
+								</div>
+								<div class="wrap_calendar">
+									<table class="calendar weekday">
+										<caption class="hidden">상세기간 달력</caption>
+										<colgroup>
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="sun">일</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col" class="sat">토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													28
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													29
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													30
+												</td>
+												<td>
+													<button type="button">1</button>
+												</td>
+												<td>
+													<button type="button">2</button>
+												</td>
+												<td>
+													<button type="button">3</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">4</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">5</button>
+												</td>
+												<td>
+													<button type="button">6</button>
+												</td>
+												<td>
+													<button type="button">7</button>
+												</td>
+												<td>
+													<button type="button">8</button>
+												</td>
+												<td>
+													<button type="button">9</button>
+												</td>
+												<td>
+													<button type="button">10</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">11</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">12</button>
+												</td>
+												<td>
+													<button type="button">13</button>
+												</td>
+												<td>
+													<button type="button">14</button>
+												</td>
+												<td>
+													<button type="button">15</button>
+												</td>
+												<td>
+													<button type="button">16</button>
+												</td>
+												<td>
+													<button type="button">17</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">18</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">19</button>
+												</td>
+												<td>
+													<button type="button">20</button>
+												</td>
+												<td class="today">
+													<button type="button" title="오늘 날짜">21</button>
+												</td>
+												<td>
+													<button type="button">22</button>
+												</td>
+												<td class="on term">
+													<button type="button" title="선택된 날짜">23</button>
+												</td>
+												<td class="off">
+													<button type="button">24</button>
+												</td>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">25</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">26</button>
+												</td>
+												<td class="off">
+													<button type="button">27</button>
+												</td>
+												<td class="off">
+													<button type="button">28</button>
+												</td>
+												<td class="off">
+													<button type="button">29</button>
+												</td>
+												<td class="off">
+													<button type="button">30</button>
+												</td>
+												<td class="off">
+													<button type="button">31</button>
+												</td>
+												<td class="btn_next">
+													<em class="hidden">다음달</em>
+													1
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="optList" title="회차선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">회차선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

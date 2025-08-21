@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="701" class="container_wrap">
+				<!--
+          nextstep : number // 이동할 스텝
+          nextpopup : string // open시킬 팝업
+        -->
+				<!-- s: 스크래핑 안내 -->
+				<div id="step701" data-jx-step-no="701" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="scraping_wrap">
+								<div class="title_text ty1">국세청 홈텍스 정보 조회</div>
+								<ul class="scraping_info_list">
+									<li class="item ty1">공동인증서 또는 금융인증서를 준비해 주세요.</li>
+									<li class="item ty2">홈택스 회원가입을 해주세요.</li>
+								</ul>
+								<div class="bg_box ty1">
+									<div class="acd_wrap accodian_wrap ty1">
+										<div class="acd_head accodian_head small active">
+											<button type="button" title="조회하는 정보 내용 상세보기" aria-expanded="true" class="acd_btn">
+												<span class="title">
+													<span class="left">조회하는 정보</span>
+												</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner" style="display: block">
+												<ul class="list_bullet ty1">
+													<li>사업자 휴폐업 정보</li>
+													<li>공동대표자 여부</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(702);">다음</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 스크래핑 안내 -->
+
+				<!-- s: 조회방법 선택 - 공동인증서, 금융인증서 선택 시 -->
+				<div id="step702" data-jx-step-no="702" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">조회방법 선택</div>
+							<div class="select_cert clickable" role="radiogroup">
+								<button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_lock"><span class="text">공동인증서</span></button>
+								<button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_cloud"><span class="text">금융인증서</span></button>
+								<button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_hometax"><span class="text">홈택스 로그인</span></button>
+							</div>
+
+							<div class="scraping_join_box">
+								<p class="scraping_join_box_text">홈택스 회원만 정보 조회를 할 수 있어요. 홈텍스 회원이 아닌 경우 회원가입을 해주세요.</p>
+								<div class="btn_area">
+									<a href="#" target="_blank" class="btn s_2 c_1 r_3" title="새창열기">홈택스 회원가입</a>
+								</div>
+							</div>
+							<div class="scraping_opt_select">
+								<div class="title_text ty1">인증서 종류를 선택해 주세요</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">개인용 인증서</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">사업자용 인증서</span></button>
+								</div>
+								<div class="title_text ty1">홈택스에 인증서를 등록하셨나요?</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" disabled role="radio" aria-checked="false"><span class="text">예</span></button>
+									<button type="button" disabled role="radio" aria-checked="false"><span class="text">아니오</span></button>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(703);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 조회방법 선택 - 공동인증서, 금융인증서 선택 시 -->
+
+				<!-- s: 조회방법 선택 - 공동인증서, 홈택스 ID 선택 시 -->
+				<div id="step703" data-jx-step-no="703" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">조회방법 선택</div>
+							<div class="select_cert clickable" role="radiogroup">
+								<button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_lock"><span class="text">공동인증서</span></button>
+								<button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_cloud"><span class="text">금융인증서</span></button>
+								<button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_hometax"><span class="text">홈택스 로그인</span></button>
+							</div>
+							<div class="scraping_join_box">
+								<p class="scraping_join_box_text">홈택스 회원만 정보 조회를 할 수 있어요. 홈텍스 회원이 아닌 경우 회원가입을 해주세요.</p>
+								<div class="btn_area">
+									<a href="#" target="_blank" class="btn s_2 c_1 r_3" title="새창열기">홈택스 회원가입</a>
+								</div>
+							</div>
+							<div class="scraping_inp_form">
+								<div class="txt_style ty6">아이디</div>
+								<div class="input">
+									<input type="text" name="" id="" title="ID 입력" placeholder="ID 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="txt_style ty6">비밀번호</div>
+								<div class="input">
+									<button type="button" class="input_button" aria-label="비밀번호 입력">비밀번호 입력</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('scraping_popup3');">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: 조회방법 선택 - 공동인증서, 홈택스 ID 선택 시 -->
+
+				<!-- s: 홈텍스 인증서 등록 -->
+				<div id="step705" data-jx-step-no="705" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<ul class="space_list_ty1">
+								<!-- s: 인증서 만료 전 -->
+								<li>
+									<div class="cert_item_wrap">
+										<div class="cert_item" id="phone_chk98_content">
+											<a href="#" role="button" class="block" onclick="uf_goStep(806);">
+												<div class="name">홍길동</div>
+												<div class="info_wrap">
+													<div class="info">
+														<div class="tit">용도/발급기관</div>
+														<div class="txt">은행개인&middot;금융결재원</div>
+													</div>
+													<div class="info">
+														<div class="tit">만료일</div>
+														<div class="txt">
+															2017.06.17
+															<span class="color ty4">(만료 2547일전)</span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</li>
+								<!-- e: 인증서 만료 전 -->
+								<!-- s: 인증서 만료 후 -->
+								<li>
+									<div class="cert_item_wrap">
+										<div class="cert_item disabled" id="phone_chk98_content">
+											<a href="#" role="button" class="block" aria-disabled="true" tabindex="-1">
+												<div class="badge_cont">
+													<span class="badge ty3 colorB1">만료</span>
+												</div>
+												<div class="name">홍길동</div>
+												<div class="info_wrap">
+													<div class="info">
+														<div class="tit">용도/발급기관</div>
+														<div class="txt">은행개인&middot;금융결재원</div>
+													</div>
+													<div class="info">
+														<div class="tit">만료일</div>
+														<div class="txt">2017.06.17</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</li>
+								<!-- e: 인증서 만료 후 -->
+							</ul>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(706);">등록하기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 홈텍스 인증서 등록 -->
+
+				<!-- s: 로딩-->
+				<div id="step708" data-jx-step-no="708" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="icon_info_group">
+							<div class="icon lottie">
+								<lottie-player src="../../../../lottie/lottie_case7.json" background="transparent" speed="1" loop></lottie-player>
+							</div>
+							<div class="tit">
+								정보를 조회하고 있어요
+								<br />
+								잠시만 기다려 주세요.
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 로딩-->
+
+				<!-- s: 조회완료 -->
+				<div id="step706" data-jx-step-no="706" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								정보 조회가
+								<br />
+								완료 되었어요
+							</div>
+							<div class="scraping_result_wrap">
+								<div class="title_text ty1">국세청 홈텍스</div>
+								<ul class="d_list ty1">
+									<li>
+										<span class="d_list_l">휴페업조회</span>
+										<span class="d_list_r">
+											<span class="ico_txt ty2 complete">완료</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">조회업무/서식명</span>
+										<span class="d_list_r">
+											<span class="ico_txt ty2 complete">완료</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">소득금액증명원</span>
+										<span class="d_list_r">
+											<span class="ico_txt ty2 complete">완료</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<!-- <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(707);">다음</button> -->
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(701)">다음</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회완료 -->
+
+				<!-- s: 조회실패 -->
+				<div id="step707" data-jx-step-no="707" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								조회하지 못한 정보가 있어요
+								<br />
+								<div class="note_cmt">다시 조회해 주세요.</div>
+							</div>
+							<div class="scraping_result_wrap">
+								<div class="title_text ty1">국세청 홈택스</div>
+								<ul class="d_list ty1">
+									<li>
+										<span class="d_list_l">휴페업조회</span>
+										<span class="d_list_r">
+											<span class="ico_txt ty2 complete">완료</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">조회업무/서식명</span>
+										<div class="d_list_r">
+											<div class="ico_txt ty2 fail">실패</div>
+											<div class="acd_wrap accodian_wrap ty1 detail_more">
+												<div class="acd_head accodian_head">
+													<button type="button" title="오류코드 상세보기" aria-expanded="false" class="acd_btn btn more">
+														<span class="title">오류코드</span>
+													</button>
+												</div>
+												<div class="acd_cont accodian_cont error_occur_txt">
+													<div class="inner">
+														<p class="color ty4">
+															오류코드:$ECBKEXT11524$
+															<br />
+															해당 기관에서 에러가 발생하였습니다
+															<br />
+															다시 시도해 주세요 (참가은행 에러)
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<span class="d_list_l">소득금액증명원</span>
+										<span class="d_list_r">
+											<span class="ico_txt ty2 complete">완료</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty2">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area ty5">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="">실패한 서류만 다시 조회</button>
+									<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(701);">전체 서류 다시 조회</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회실패 -->
+
+				<!-- 정보조회 위임 동의 팝업 -->
+				<div class="bottom_popup_wrap" id="scraping_popup3">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">정보조회 위임 동의</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('scraping_popup3');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="label label_box more_add">
+								<input type="checkbox" name="" id="scraping_ag01" />
+								<label for="scraping_ag01" class="checkbox">
+									<i></i>
+									<span>고객정보조회 위임 동의</span>
+								</label>
+								<button type="button" class="btn ty_txt3 line_bttm btn_view">
+									<span class="sr_only">고객정보조회 위임 동의</span>
+									보기
+								</button>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('scraping_popup3'); uf_goStep(705);">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- 정보조회 위임 동의 팝업 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

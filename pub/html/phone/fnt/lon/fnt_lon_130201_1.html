@@ -1,0 +1,2022 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 원클릭보증부대출 (대출실행) -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<div class="util_btn_wrap">
+					<a href="#" class="btn s_1 c_1 r_3 link_to">
+						전화상담
+						<span class="ico_box ico_tel_consul"></span>
+					</a>
+					<a href="#" class="btn s_1 c_1 r_3 link_to">
+						용어사전
+						<span class="ico_box ico_dictionary"></span>
+					</a>
+				</div>
+
+				<!-- s: step1 보증서확인 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">보증서확인</div>
+							<!-- 보증이 없을 경우 -->
+
+							<div class="no_result_msg">
+								<div class="msg">품의 기본원장이 없습니다.</div>
+							</div>
+
+							<!-- 보증이 있는 경우 -->
+							<div class="title_text ty1">신용보증서 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기업명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">업체명</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자명</span>
+										</span>
+										<span class="line_right">
+											<span class="xtx">이름</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증기관</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">기술보증기금</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증신청금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">진행상태</span>
+										</span>
+										<span class="line_right">
+											<span class="ㅅtxt">발급완료</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">수수료(한화)</span>
+										</span>
+										<span class="line_right">
+											<span class="money money_red">4,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증기한</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1년</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">발급일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">만료일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+								</div>
+							</div>
+
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>대출실행 시 위 신용보증서 정보는 변경할 수 없습니다.</li>
+											<li>신용보증서가 발급되더라도 금융기관 신용정보관리대상 고객 및 IBK기업은행 대출 부적격자는 대출이 제한될 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">대출실행</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step1 보증서확인 -->
+
+				<!-- e: step2 정보제공동의 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보제공동의</div>
+
+							<p class="agree_page_text">IBK원클릭보증부대출 상품 이용을 위해 아래 약관내용을 충분히 이해한 후 동의해 주세요.</p>
+
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<div class="agree_check_group_top">
+										<div class="label all_chk">
+											<input type="checkbox" name="" id="agree_check_group_top3" class="chk_point_all" />
+											<label for="agree_check_group_top3" class="checkbox">
+												<i></i>
+												<span>
+													<span class="ess_text">필수</span>
+													약관 모두 동의
+												</span>
+											</label>
+										</div>
+									</div>
+
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="ago_group03_1" class="chk_point" />
+												<label for="ago_group03_1" class="checkbox">
+													<i></i>
+													<span>
+														개인(신용)정보 수집·이용 및 제공 관련 고객 권리 안내문
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+											<button type="button" class="btn ty_txt3 line_bttm btn_view">
+												<span class="sr_only">개인(신용)정보 수집·이용 및 제공 관련 고객 권리 안내문</span>
+												보기
+											</button>
+										</div>
+									</div>
+
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="ago_group03_2" class="chk_point" />
+												<label for="ago_group03_2" class="checkbox small">
+													<i></i>
+													<span>
+														개인(신용)정보 조회 동의서
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+											<button type="button" class="btn ty_txt3 line_bttm btn_view">
+												<span class="sr_only">개인(신용)정보 조회 동의서</span>
+												보기
+											</button>
+										</div>
+										<div class="inner depth">
+											<ul class="list_bullet ty5">
+												<li>개인(신용)정보 수집&middot;이용</li>
+												<li>고유식별정보 수집&middot;이용 동의</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="ago_group03_3" class="chk_point" />
+												<label for="ago_group03_3" class="checkbox small">
+													<i></i>
+													<span>
+														개인(신용)정보 수집·이용·제공 동의서(여신금융거래)
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+											<button type="button" class="btn ty_txt3 line_bttm btn_view">
+												<span class="sr_only">개인(신용)정보 수집·이용·제공 동의서(여신금융거래)</span>
+												보기
+											</button>
+										</div>
+										<div class="inner depth">
+											<ul class="list_bullet ty5">
+												<li>개인(신용)정보 수집&middot;이용 동의</li>
+												<li>고유식별정보 수집&middot;이용 동의</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="ago_group03_4" class="chk_point" />
+												<label for="ago_group03_4" class="checkbox small">
+													<i></i>
+													<span>
+														공공기관 전산정보 이용동의서
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+											<button type="button" class="btn ty_txt3 line_bttm btn_view">
+												<span class="sr_only">공공기관 전산정보 이용동의서</span>
+												보기
+											</button>
+										</div>
+										<div class="inner depth">
+											<ul class="list_bullet ty5">
+												<li>개인(신용)정보 수집&middot;이용,제공,동의</li>
+												<li>고유식별정보 수집&middot;이용,제공 동의</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(801);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 정보제공동의 -->
+
+				<!-- s: step3 본인확인 -->
+				<!-- s: MO 인증 팝업 -->
+				<div id="step801" data-jx-step-no="801" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="bottom_popup_wrap active" id="phonePopup4">
+							<div class="bottom_popup">
+								<div class="bottom_popup_header">
+									<h2 class="tit">휴대폰인증 메시지 보내기</h2>
+									<button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup4');">닫기</button>
+								</div>
+								<div class="bottom_popup_body">
+									<div class="cert_msg_send">
+										<strong>
+											고객님이 사용하는 휴대폰이
+											<br />
+											맞는지 확인할게요.
+										</strong>
+										아래 화면에 입력된 문자 내용을 그대로 보내주세요.
+										<br />
+										고객님의 휴대폰이 아니시면 아래 다른 방법
+										<br />
+										(인증서)으로 인증 을 선택해 주세요
+									</div>
+									<div class="btn_area tyTxt mt_24">
+										<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(803);">다른 방법(인증서)으로 인증</button>
+									</div>
+									<div class="cert_msg_guideimg">
+										<img src="../../../../img/common/cert/img_cert_mo_guide.png" alt="본인인증을 하기 위해 문자메시지를 발송하는 예시화면 입니다. 보내는 메시지는 은행에서 지정한 특정한 문자열 입니다." />
+									</div>
+									<div class="bg_box ty1">
+										<ul class="list_bullet ty1">
+											<li>이용 중인 통신요금제에 따라 문자 발송 비용이 발생할 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="bottom_popup_footer">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('phonePopup2');">보내기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: MO 인증 팝업 -->
+
+				<!-- s: 정보입력 (휴대폰인증) -->
+				<div id="step802" data-jx-step-no="802" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty1">휴대폰 본인 인증</div>
+							<div class="form_group mt_24">
+								<div class="input_label ty2">이름</div>
+								<div class="input">
+									<input type="text" name="" id="" title="이름 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">사업자등록번호</div>
+								<div class="comp_wrap business_num">
+									<div class="input no_del">
+										<input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" />
+									</div>
+									<span>-</span>
+									<button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+								</div>
+
+								<!-- 주민등록번호 뒷자리 7개 모두 받는 경우 -->
+								<div class="input_label ty2">주민등록번호(모두입력)</div>
+								<div class="comp_wrap birth">
+									<div class="input no_del">
+										<input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="birth_after full_value">
+										<button type="button" aria-label="주민등록번호 뒤 7자리 입력" class="keypad_btn"></button>
+									</div>
+								</div>
+								<!-- // 주민등록번호 뒷자리 7개 모두 받는 경우 -->
+
+								<!-- 주민등록번호 뒷자리 1개만 받는 경우 -->
+								<div class="input_label ty2">주민등록번호(첫번째만 입력, button)</div>
+								<div class="comp_wrap birth">
+									<div class="input no_del">
+										<input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="birth_after">
+										<button type="button" aria-label="주민등록번호 뒷자리 1번째번호 입력" class="keypad_btn"></button>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+									</div>
+								</div>
+								<!-- // 주민등록번호 뒷자리 1개만 받는 경우 -->
+
+								<!-- 주민등록번호 뒷자리 1개만 받는 경우 -->
+								<div class="input_label ty2">주민등록번호(첫번째만 입력, input)</div>
+								<div class="comp_wrap birth">
+									<div class="input no_del">
+										<input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="birth_after">
+										<div class="input no_del">
+											<input type="tel" maxlength="1" name="" id="" class="letter" title="주민등록번호 뒷자리 1번째번호 입력" />
+										</div>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+									</div>
+								</div>
+								<!-- // 주민등록번호 뒷자리 1개만 받는 경우 -->
+
+								<div class="input_label ty2">휴대폰번호</div>
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력" />
+									</div>
+								</div>
+
+								<div class="input_label ty2">통신사</div>
+								<div class="dropdown ty2" role="button" title="통신사 목록보기" onclick="comLayerPopUtil.open('telecom');">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="btn_area ty1 mt_16">
+									<button type="button" class="btn s_4 c_2 r_2">인증번호 요청하기</button>
+								</div>
+								<div class="btn_area ty1 mt_16">
+									<button type="button" class="btn s_4 c_2 r_2">인증번호 다시요청</button>
+								</div>
+
+								<div class="input_label ty2">인증번호</div>
+								<div class="comp_wrap with_count">
+									<div class="count_wrap">
+										<div class="input">
+											<input type="text" name="" id="" title="인증번호 숫자 6자리 입력" placeholder="숫자 6자리 입력" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+										<div class="with_count_utils">
+											<span class="count">
+												<span class="hidden">남은시간 :</span>
+												29:15
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="btn_area tyTxt mt_24">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(803);">다른 방법(인증서)으로 인증</button>
+								</div>
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>휴대폰 본인인증은 대표자 명의 휴대폰으로만 할 수 있습니다.</li>
+												<li>IBK기업은행에 등록된 휴대폰이 있고 현재 이용중인 휴대폰번호와 다른 경우, IBK고객센터(1566-2566) 또는 가까운 영업점에서 변경해주세요.</li>
+												<li>단, IBK고객센터에서 수정할 경우, 전자금융사기예방을 위해 정보수정 7일 후부터 대출을 신청할 수 있습니다.</li>
+												<li>법인폰은 각 통신사별 법인폰 본인인증서비스를 등록하면 휴대폰 본인확인을 할 수 있습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4)">인증번호 확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 정보입력 (휴대폰인증) -->
+
+				<!-- s: 본인인증 방법 선택 -->
+				<!-- e: 본인인증 방법 선택 -->
+
+				<!-- s: 공동인증서 인증 - 정보입력 (본인인증) -->
+				<div id="step804" data-jx-step-no="804" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty1">본인인증</div>
+							<div class="form_group mt_24">
+								<div class="input_label ty2">이름</div>
+								<div class="input">
+									<input type="text" name="" id="" title="이름 입력" placeholder="이름 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">사업자등록번호</div>
+								<div class="comp_wrap business_num">
+									<div class="input no_del">
+										<input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" />
+									</div>
+									<span>-</span>
+									<button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+								</div>
+
+								<!-- 주민등록번호 뒷자리 7개 모두 받는 경우 -->
+								<div class="input_label ty2">주민등록번호</div>
+
+								<div class="comp_wrap birth">
+									<div class="input no_del">
+										<input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" placeholder="생년월일 6자리" />
+									</div>
+									<span>-</span>
+									<div class="birth_after full_value">
+										<button type="button" aria-label="주민등록번호 뒤 7자리 입력" class="keypad_btn"></button>
+									</div>
+								</div>
+								<!-- // 주민등록번호 뒷자리 7개 모두 받는 경우 -->
+
+								<!-- 주민등록번호 뒷자리 1개만 받는 경우 -->
+								<div class="input_label ty2">주민등록번호</div>
+								<div class="comp_wrap birth">
+									<div class="input no_del">
+										<input type="tel" maxlength="6" name="" id="" title="주민등록번호 앞 6자리 입력" placeholder="생년월일 6자리" />
+									</div>
+									<span>-</span>
+									<div class="birth_after">
+										<button type="button" aria-label="주민등록번호 뒷자리 1번째번호 입력" class="keypad_btn"></button>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+										<span class="masking"></span>
+									</div>
+								</div>
+								<!-- // 주민등록번호 뒷자리 1개만 받는 경우 -->
+
+								<div class="input_label ty2">휴대폰번호</div>
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력" />
+									</div>
+								</div>
+								<div class="btn_area tyTxt mt_24">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(803);">다른 방법으로 인증</button>
+								</div>
+
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>본인인증은 대표자 개인명의 인증서로만 할 수 있습니다.</li>
+												<li>스마트폰에 이용가능한 인증서가 등록된 경우에만 본인인증을 할 수 있습니다.</li>
+												<li>공동인증서가 등록되지 않은 경우 [인증센터]에서 인증서를 발급받거나 타행/타기관 인증서 등록 후 이용해 주세요.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(805);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 공동인증서 인증 - 정보입력 (본인인증) -->
+
+				<!-- s: 본인인증 - 공동인증서 -->
+				<!-- 전체팝업 -->
+				<div id="step805" data-jx-step-no="805" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="id_veri">
+								<div class="txt_style ty1">공동인증서</div>
+								<p class="desc">공동인증서를 선택 후 본인인증을 해주세요</p>
+								<ul class="space_list_ty1">
+									<!-- s: 인증서 만료 전 -->
+									<li>
+										<div class="cert_item_wrap">
+											<div class="cert_item" id="phone_chk98_content">
+												<a href="#" role="button" class="block" onclick="uf_goStep(806);">
+													<div class="name">홍길동</div>
+													<div class="info_wrap">
+														<div class="info">
+															<div class="tit">용도/발급기관</div>
+															<div class="txt">은행개인&middot;금융결재원</div>
+														</div>
+														<div class="info">
+															<div class="tit">만료일</div>
+															<div class="txt">
+																2017.06.17
+																<span class="color ty4">(만료 2547일전)</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+									</li>
+									<!-- e: 인증서 만료 전 -->
+									<!-- s: 인증서 만료 후 -->
+									<li>
+										<div class="cert_item_wrap">
+											<div class="cert_item disabled" id="phone_chk98_content">
+												<a href="#" role="button" class="block" aria-disabled="true" tabindex="-1">
+													<div class="badge_cont">
+														<span class="badge ty3 colorB1">만료</span>
+													</div>
+													<div class="name">홍길동</div>
+													<div class="info_wrap">
+														<div class="info">
+															<div class="tit">용도/발급기관</div>
+															<div class="txt">은행개인&middot;금융결재원</div>
+														</div>
+														<div class="info">
+															<div class="tit">만료일</div>
+															<div class="txt">2017.06.17</div>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+									</li>
+									<!-- e: 인증서 만료 후 -->
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty4">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 가져오기</button>
+									<button type="button" class="btn ty_txt2 link_ty1">다른기관 인증서 등록하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 전체팝업 -->
+				<!-- e: 본인인증 - 공동인증서 -->
+
+				<!-- s: 본인인증 - 금융인증서 -->
+				<div id="step806" data-jx-step-no="806" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="id_veri">
+								<div class="id_veri_head">
+									<div class="id_veri_head_title">금융인증서</div>
+									<p class="id_veri_head_desc">본인인증을 해주세요</p>
+								</div>
+								<div class="id_veri_cert">
+									<button type="button" class="btn s_3 c_1 r_3" onClick=";">본인인증</button>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty4">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm">인증센터 바로가기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 본인인증 - 금융인증서 -->
+
+				<!-- s: 팝업 -->
+				<div class="bottom_popup_wrap" id="telecom" title="통신사 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">통신사 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('telecom');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" aria-selected="false">SKT</li>
+								<li role="option" tabindex="-1" aria-selected="false">KT</li>
+								<li role="option" tabindex="-1" aria-selected="false">LGU+</li>
+								<li role="option" tabindex="-1" aria-selected="false">SKT (알뜰폰)</li>
+								<li role="option" tabindex="-1" aria-selected="false">KT (알뜰폰)</li>
+								<li role="option" tabindex="-1" aria-selected="false">LGU+ (알뜰폰)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- s: 다른 본인인증 방법 선택 -->
+				<div class="bottom_popup_wrap" id="phonePopup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">다른 본인인증 방법 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="select_cert clickable" role="radiogroup">
+								<button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_lock"><span class="text">공동인증서</span></button>
+								<button type="button" role="radio" aria-checked="false" class="btn btn_cert btn_cert_cloud"><span class="text">금융인증서</span></button>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('phonePopup5');">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 다른 본인인증 방법 선택 -->
+
+				<!-- s: 휴대폰 본인 인증 약관 -->
+				<div class="bottom_popup_wrap" id="phonePopup2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">약관동의</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="phone_ago_group" class="chk_point_all" />
+												<label for="phone_ago_group" class="checkbox">
+													<i></i>
+													<span>
+														약관 모두 동의
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+										</div>
+										<div class="inner">
+											<ul class="term_list">
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="phone_chk1" class="chk_point_sub" />
+														<label for="phone_chk1" class="checkbox small lbl">
+															<i></i>
+															<span>
+																서비스 이용약관
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">서비스 이용약관</span>
+														보기
+													</button>
+												</li>
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="phone_chk2" class="chk_point_sub" />
+														<label for="phone_chk2" class="checkbox small lbl">
+															<i></i>
+															<span>
+																통신사 이용약관
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">통신사 이용약관</span>
+														보기
+													</button>
+												</li>
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="phone_chk3" class="chk_point_sub" />
+														<label for="phone_chk3" class="checkbox small lbl">
+															<i></i>
+															<span>
+																개인정보 수집 이용 위탁 동의서
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">개인정보 수집 이용 위탁 동의서</span>
+														보기
+													</button>
+												</li>
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="phone_chk4" class="chk_point_sub" />
+														<label for="phone_chk4" class="checkbox small lbl">
+															<i></i>
+															<span>
+																고유식별 정보처리 동의서
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">고유식별 정보처리 동의서</span>
+														보기
+													</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('phonePopup2'); uf_goStep(802);">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 휴대폰 본인 인증 약관 -->
+
+				<!-- s: 공동인증서 인증/금융인증서 인증 약관 -->
+				<div class="bottom_popup_wrap" id="phonePopup3">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">약관동의</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup3');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="chk_group_wrap">
+								<div class="agree_check">
+									<div class="acd_wrap accodian_wrap ty1">
+										<div class="acd_head accodian_head check_as_all active chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="phone_chk10" class="chk_point" />
+												<label for="phone_chk10" class="checkbox">
+													<i></i>
+													<span>
+														약관 모두 동의
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+											<button type="button" aria-label="필수 약관동의 목록보기" aria-expanded="true" class="acd_btn box_ty"></button>
+										</div>
+										<div class="acd_cont accodian_cont chk_list">
+											<div class="inner" style="display: block">
+												<ul class="term_list">
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="phone_chk11" class="chk_point_sub" />
+															<label for="phone_chk11" class="checkbox small lbl">
+																<i></i>
+																<span>
+																	개인정보 수집 및 이용 동의
+
+																	<span class="ess_mark">필수</span>
+																</span>
+															</label>
+														</div>
+														<button type="button" class="btn ty_txt3 line_bttm btn_view">
+															<span class="sr_only">개인정보 수집 및 이용 동의</span>
+															보기
+														</button>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="phone_chk12" class="chk_point_sub" />
+															<label for="phone_chk12" class="checkbox small lbl">
+																<i></i>
+																<span>
+																	고유식별정보 수집 및 이용 동의
+
+																	<span class="ess_mark">필수</span>
+																</span>
+															</label>
+														</div>
+														<button type="button" class="btn ty_txt3 line_bttm btn_view">
+															<span class="sr_only">고유식별정보 수집 및 이용 동의</span>
+															보기
+														</button>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="phone_chk13" class="chk_point_sub" />
+															<label for="phone_chk13" class="checkbox small lbl">
+																<i></i>
+																<span>
+																	개인정보 제3자 제공 동의(유효성검증)
+
+																	<span class="ess_mark">필수</span>
+																</span>
+															</label>
+														</div>
+														<button type="button" class="btn ty_txt3 line_bttm btn_view">
+															<span class="sr_only">개인정보 제3자 제공 동의(유효성검증)</span>
+															보기
+														</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 공동인증서 인증/금융인증서 인증 약관 -->
+
+				<!-- s: 휴대폰 본인 인증 약관 -->
+				<div class="bottom_popup_wrap" id="phonePopup5">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">약관동의</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('phonePopup5');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<div class="agree_check tit_ty">
+										<div class="top chk_middle">
+											<div class="label">
+												<input type="checkbox" name="" id="phone_ago_group" class="chk_point_all" />
+												<label for="phone_ago_group" class="checkbox">
+													<i></i>
+													<span>
+														약관 모두 동의
+
+														<span class="ess_mark">필수</span>
+													</span>
+												</label>
+											</div>
+										</div>
+										<div class="inner">
+											<ul class="term_list">
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="phone_chk1" class="chk_point_sub" />
+														<label for="phone_chk1" class="checkbox small lbl">
+															<i></i>
+															<span>
+																서비스 이용약관
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">서비스 이용약관</span>
+														보기
+													</button>
+												</li>
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="phone_chk2" class="chk_point_sub" />
+														<label for="phone_chk2" class="checkbox small lbl">
+															<i></i>
+															<span>
+																통신사 이용약관
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">통신사 이용약관</span>
+														보기
+													</button>
+												</li>
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="phone_chk3" class="chk_point_sub" />
+														<label for="phone_chk3" class="checkbox small lbl">
+															<i></i>
+															<span>
+																개인정보 수집 이용 위탁 동의서
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">개인정보 수집 이용 위탁 동의서</span>
+														보기
+													</button>
+												</li>
+												<li class="item">
+													<div class="label">
+														<input type="checkbox" name="" id="phone_chk4" class="chk_point_sub" />
+														<label for="phone_chk4" class="checkbox small lbl">
+															<i></i>
+															<span>
+																고유식별 정보처리 동의서
+
+																<span class="ess_mark">필수</span>
+															</span>
+														</label>
+													</div>
+													<button type="button" class="btn ty_txt3 line_bttm btn_view">
+														<span class="sr_only">고유식별 정보처리 동의서</span>
+														보기
+													</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('phonePopup1'); comLayerPopUtil.close('phonePopup5'); comLayerPopUtil.close('phonePopup2'); uf_goStep(804);">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 휴대폰 본인 인증 약관 -->
+
+				<!-- e: 팝업 -->
+				<!-- s: step3 본인확인 -->
+
+				<!-- s: step4 정보입력 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보입력</div>
+
+							<div class="title_text ty1">대출신청 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출상품명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">IBK원클릭보증부대출</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출신청일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2016-12-11</span>
+										</span>
+									</p>
+									<div class="line" role="text">
+										<div class="line_left">
+											<span class="tit">대출금액</span>
+										</div>
+										<div class="line_right">
+											<div class="live_input_group">
+												<div class="live_input ty2">
+													<div class="value" aria-live="assertive" role="button" title="대출금액 입력">숫자만 입력</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신용보증서금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">50,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기업명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">업체명</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">이름</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출만기일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환방법</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">원금균등분할상환방식</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">
+									거치기간
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="dropdown ty2" role="button" title="거치기간 목록보기">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="input_label ty1">
+									자금용도
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="dropdown ty2" role="button" title="자금용도 목록보기">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="input_label ty1">
+									대출금리 종류
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="dropdown ty2" role="button" title="대출금리 종류 목록보기">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="input_label ty1">
+									이자 자동이체일
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="comp_wrap with_txt">
+									<span class="txt">매월</span>
+									<div class="dropdown ty2" role="button" title="이자 자동이체일 목록보기">
+										<div class="dropdown_text">선택</div>
+									</div>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>선택한 이자납입일이 아직 오지 않았다면 이번달부터 이자를 납입해야 합니다.</li>
+								</ul>
+
+								<div class="input_label ty1">
+									자동이체 출금계좌번호
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="dropdown ty2" role="button" title="자동이체 출금계좌번호 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="input_label ty1">
+									대출 입금계좌번호
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="dropdown ty2" role="button" title="대출 입금계좌번호 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="input_label ty1">관리직원 정보</div>
+								<div class="comp_wrap with_btn2">
+									<div class="input has_search">
+										<input type="text" name="" id="" title="지점명 입력" placeholder="지점명 입력" />
+
+										<button type="button" class="search">검색</button>
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<button type="button" class="btn s_5 c_1 r_2 inp_reset_event" disabled="true">입력취소</button>
+								</div>
+								<p class="placeholder_text">지점명을 입력하고 검색 버튼을 눌러주세요</p>
+							</div>
+
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>대출실행 시 위 신용보증서 정보는 변경할 수 없습니다.</li>
+											<li>신용보증서가 발급되더라도 금융기관 신용정보관리대상 고객 및 IBK기업은행 대출 부적격자는 대출이 제한될 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step4 정보입력 -->
+
+				<!-- s: step5 인지세 확인 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 인지세 면제 확인 -->
+						<div class="group">
+							<div class="title_text ty1">인지세 확인</div>
+
+							<div class="content_head ty1">
+								<div class="content_head_left">
+									<div class="tooltip_box">
+										<div class="txt_style ty2">인지세 면제 확인</div>
+										<div class="tooltip_wrap ty1">
+											<button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+											<div class="tooltip_wrap_container" role="tooltip">
+												<div class="inner">
+													<ul>
+														<li>고객 1일 이체한도 50,000원</li>
+
+														<li>고객 1회 이체한도 50,000원</li>
+
+														<li>계좌 1일 이체한도 50,000원</li>
+														<li>고객 1일 잔여한도 50,000원</li>
+														<li>계좌 1일 잔여한도 50,000원</li>
+													</ul>
+												</div>
+												<button type="button" class="tooltip_close">도움말 닫기</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="txt_style ty2 fw_5 mt_16">인지세 면제대상 여부를 확인하기 위해 아래 내용을 확인해 주세요.</div>
+
+							<ul class="list_number mt_12">
+								<li>
+									<div class="list_number_num">1.</div>
+									<div class="list_number_cont">본인은 「중소기업창업지원법」에 따른 창업자로서 창업일로부터 2년 이내에 해당 사업과 관련해 IBK기업은행으로부터 대출받기 위해 대출약정을 체결할 예정입니다.</div>
+								</li>
+								<li>
+									<div class="list_number_num">2.</div>
+									<div class="list_number_cont">이에 본인은 「조세특례제한법」 제116조 제1항 제19호에 따른 '창업자에 대한 인지세 면제'의 판정을 위해 「중소기업창업지원법」 제2조 및 같은 법 시행령 제2조에 따른 창업기업에서 제외되는 사유의 해당 여부에 대해 아래와 같이 확인합니다.</div>
+								</li>
+							</ul>
+						</div>
+						<!-- e: 인지세 면제 확인 -->
+
+						<!-- s: 창업일 -->
+						<div class="group mt_32">
+							<div class="title_text ty1">창업일</div>
+							<div class="question_list">
+								<div class="question">
+									<div class="question_cont">
+										사업개시일이 2년 이내에 해당되나요?
+										<ul class="list_bullet ty1 fw_5 mt_12">
+											<li>법인 : 법인설립등기일로부터 2년 이내</li>
+											<li>개인 : 사업개시일로부터 2년 이내</li>
+										</ul>
+									</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="from_to">
+										<div class="input">
+											<input type="text" name="" id="" title="창업일 입력" readonly="true" />
+											<button type="button" class="btn calendar" title="달력으로 창업일 선택" disabled></button>
+										</div>
+									</div>
+									<div class="btn_area clickable ty2" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당 없음</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 창업일 -->
+
+						<!-- s: 업종 -->
+						<div class="group mt_32">
+							<div class="title_text ty1">업종</div>
+							<div class="question_list">
+								<div class="question">
+									<div class="question_cont">
+										사업 업종이 위 제외업종에 해당되나요?
+										<ul class="list_bullet ty1 fw_5 mt_12">
+											<li>
+												제외 업종
+												<ul class="list_number mt_4">
+													<li>
+														<div class="list_number_num">1.</div>
+														<div class="list_number_cont">일반 유흥주점업(I56211)</div>
+													</li>
+													<li>
+														<div class="list_number_num">2.</div>
+														<div class="list_number_cont">무도 유흥주점업(I56212)</div>
+													</li>
+													<li>
+														<div class="list_number_num">3.</div>
+														<div class="list_number_cont">기타 사행시설 관리 및 운영업(R91249)</div>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="input">
+										<input type="text" name="" id="" value="업종 : C15129 (가방 및 기타 보호용 케이스 제작)" title="업종 입력" readonly />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="btn_area clickable ty2" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당 없음</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 업종 -->
+
+						<!-- s: 창업형태 -->
+						<div class="group">
+							<div class="title_text ty1">창업형태</div>
+							<div class="question_list">
+								<div class="question">
+									<div class="question_num">1.</div>
+									<div class="question_cont">다른 사람으로부터 사업을 상속 또는 증여 받아 해당 사업과 같은 종류의 사업을 계속하는 경우 (다만, 법인을 새로 설립해 해당 사업과 같은 종류의 사업을 계속하는 경우는 제외)</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty2" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당 없음</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당</span>
+										</button>
+									</div>
+								</div>
+
+								<div class="question">
+									<div class="question_num">2.</div>
+									<div class="question_cont">개인사업자가 기존 사업을 계속 영위하면서 다른 개인사업자(법인은 제외)를 새로 설립해 사업을 개시하는 것</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty2" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당 없음</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당</span>
+										</button>
+									</div>
+								</div>
+
+								<div class="question">
+									<div class="question_num">3.</div>
+									<div class="question_cont">개인사업자가 기존 사업을 폐업한 후 사업을 재개해 폐업 전의 사업과 같은 종류의 사업을 계속하는 경우(개인사업자의 법인전환 포함) [다만, 사업을 폐업한 날부터 3년(부도 또는 파산으로 폐업한 경우는 2년) 이상이 지난 후에 기존 사업과 같은 종류의 사업을 개시하는 경우는 제외]</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty2" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당 없음</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당</span>
+										</button>
+									</div>
+								</div>
+
+								<div class="question">
+									<div class="question_num">4.</div>
+									<div class="question_cont">
+										개인사업자가 기존 사업을 계속 영위하면서 단독 또는 친족*과 합해 의결권 있는 주식 기준 30%이상 지분 보유 또는 최대 주주인 중소법인을 설립해 기존 사업과 같은 종류의 사업을 개시하는 경우
+
+										<div class="txt_style ty5 mt_12">*배우자(사실혼 관계 포함), 6촌 이내의 혈족 및 4촌 이내의 인척</div>
+									</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty2" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당 없음</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당</span>
+										</button>
+									</div>
+								</div>
+
+								<div class="question">
+									<div class="question_num">5.</div>
+									<div class="question_cont">중소법인이 의결권 있는 발행주식 기준 30%이상 지분을 소유함과 동시에(해당 법인과 그 임원이 소유하고 있는 주식을 합산) 최대주주로서 다른 중소법인을 설립하는 경우(업종 동일 여부 불문)</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty2" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당 없음</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당</span>
+										</button>
+									</div>
+								</div>
+
+								<div class="question">
+									<div class="question_num">6.</div>
+									<div class="question_cont">중소법인이 조직변경 등 기업형태를 변경해 변경 전의 사업과 같은 종류의 사업을 계속하는 경우</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty2" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당 없음</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">해당</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 창업형태 -->
+
+						<!-- s: 확인사항 -->
+						<div class="group">
+							<div class="title_text ty1">확인사항</div>
+							<div class="label">
+								<input type="checkbox" name="chk" id="chk5-1" />
+								<label for="chk5-1" class="checkbox">
+									<i></i>
+									<span class="fw_4">
+										본인은 「조세특례제한법」 제116조 제1항 제19호에 따른
+										<strong>인지세 면제 대상으로 인지세 면제를 신청합니다.</strong>
+									</span>
+									<span class="label_desc_text">※ 향후 인지세 면제 대상이 아닌 것으로 판명되는 경우, 「국세기본법」 제47조 4제9항에 따라 납부하지 않은 세액의 300%에 상당하는 금액이 가산세로 부과될 수 있습니다.</span>
+								</label>
+							</div>
+							<div class="label mt_16">
+								<input type="checkbox" name="chk" id="chk5-2" />
+								<label for="chk5-2" class="checkbox">
+									<i></i>
+									<span class="fw_4">
+										본인은 「조세특례제한법」 제116조 제1항 제19호에 따른
+										<strong>인지세 면제 대상이 아님을 확인합니다.</strong>
+									</span>
+								</label>
+							</div>
+							<div class="label mt_16">
+								<input type="checkbox" name="chk" id="chk5-3" />
+								<label for="chk5-3" class="checkbox">
+									<i></i>
+									<span class="fw_4">본인은 위 확인서의 중요한 내용에 대해 설명을 듣고 이해했으며, 이로 인해 발생되는 손해에 대해서는 아무런 이의를 제기하지 않겠습니다.</span>
+								</label>
+							</div>
+						</div>
+						<!-- e: 확인사항 -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(4);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step5 인지세 확인 -->
+
+				<!-- s: step6 정보확인 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보확인</div>
+							<div class="title_text ty1">신청정보확인</div>
+
+							<ul class="list_bullet ty1">
+								<li>본 대출 약정신청정보는 약정신청을 완료한 이후에는 취소/변경이 불가하오니 주요항목에 대해 다시 한 번 명확히 확인 및 체크하신 후 약정 신청해 주세요.</li>
+								<li>신청정보관련 문의사항이 있으신 경우 대출상담을 받은 영업점에 문의해 주세요.</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2017-07-10</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기업명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">기업명</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">대표자명</span>
+										</span>
+									</p>
+
+									<div class="line">
+										<div class="line_left">
+											<span class="tit">계정과목명</span>
+										</div>
+										<div class="line_right">
+											<div class="label reverse">
+												<input type="checkbox" name="" id="item_check01" />
+												<label for="item_check01" class="checkbox small">
+													<i></i>
+													<span class="txt ty1">계정과목명</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출계좌</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">대출계좌</span>
+										</span>
+									</p>
+
+									<div class="line">
+										<div class="line_left">
+											<span class="tit">대출금액</span>
+										</div>
+										<div class="line_right">
+											<div class="label reverse">
+												<input type="checkbox" name="" id="item_check02" />
+												<label for="item_check02" class="checkbox small">
+													<i></i>
+													<span class="txt ty1">여신금액</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">거래구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">거래구분</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출실행일</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">대출실행일</span>
+										</span>
+									</p>
+
+									<div class="line">
+										<div class="line_left">
+											<span class="tit">대출만기일</span>
+										</div>
+										<div class="line_right">
+											<div class="label reverse">
+												<input type="checkbox" name="" id="item_check03" />
+												<label for="item_check03" class="checkbox small">
+													<i></i>
+													<span class="txt ty1">대출만기일</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="line_left">
+											<span class="tit">대출금리</span>
+										</div>
+										<div class="line_right">
+											<div class="label reverse">
+												<input type="checkbox" name="" id="item_check04" />
+												<label for="item_check04" class="checkbox small">
+													<i></i>
+													<span class="txt ty1">대출금리</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="line_left">
+											<span class="tit">지연배상금률</span>
+										</div>
+										<div class="line_right">
+											<div class="label reverse">
+												<input type="checkbox" name="" id="item_check05" />
+												<label for="item_check05" class="checkbox small">
+													<i></i>
+													<span class="txt ty1">지연배상금률</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="line_left">
+											<span class="tit">중도상환해약금</span>
+										</div>
+										<div class="line_right">
+											<div class="label reverse">
+												<input type="checkbox" name="" id="item_check06" />
+												<label for="item_check06" class="checkbox small">
+													<i></i>
+													<span class="txt ty1">중도상환해약금</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<div class="line">
+										<div class="line_left">
+											<span class="tit">대출실행방법</span>
+										</div>
+										<div class="line_right">
+											<div class="label reverse">
+												<input type="checkbox" name="" id="item_check07" />
+												<label for="item_check07" class="checkbox small">
+													<i></i>
+													<span class="txt ty1">대출실행방법</span>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환방법</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">[균등분할] 대출실행일로부터 (1)년 (0)개월 동안 거치하고, 2019-03-12부터 매 (1)개월 마다 (원금)을 균등분할해 상환합니다.</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이자납입일</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">이자납입시기</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">자동이체신청</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">자동이체신청</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">특약사항</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">특약사항</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">인지세(금액)</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">인지세(금액)</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="label">
+								<input type="checkbox" name="" id="chk1" />
+								<label for="chk1" class="checkbox">
+									<i></i>
+									<span>후견인 부존재 확인</span>
+
+									<span class="label_desc_text bullet_txt ty2">본인과 관련해 오늘 현재 가정법원에 후견(성년후견·한정후견·특정후견·임의후견, 이하같음) 개시심판을 청구했거나, 가정법원에서 후견 개시결정을 받은 사실이 없음을 확인합니다.</span>
+								</label>
+							</div>
+							<div class="label mt_16">
+								<input type="checkbox" name="" id="chk2" />
+								<label for="chk2" class="checkbox">
+									<i></i>
+									<span>안내 동의</span>
+									<span class="label_desc_text bullet_txt ty2">
+										이자할부금 등 납입을 지연한 경우, 기본약관 제7조에 불구하고 은행의 통지가 없는 경우에도 대출금액에 대해 곧 기한 전 채무변제의무가 발생하며 지연배상금률을 적용함을 본인에게 안내합니다.
+										<br />
+										대출만기가 다가오면 만기 사실(기간연장 가능 여부 포함)에 대해 안내합니다.
+										<br />
+										대출실행(기간연장 포함)시 실행 사실에 대해 안내합니다.
+									</span>
+									<span class="label_desc_text bullet_txt ty2">여신만기 도래시 만기도래사실(기간연장 가능여부포함)에 대한 통지</span>
+									<span class="label_desc_text bullet_txt ty2">여신실행(기간연장 포함)시 실행사실에 대한 통지</span>
+								</label>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">대출약관 안내</div>
+							<p class="txt_caution">기업대출 상품설명서, 약정서 및 은행여신거래 기본약관을 안내해드리니 참고해 주세요.</p>
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<div class="agree_check_group_top">
+										<div class="label all_chk">
+											<input type="checkbox" name="" id="agree_check_group_top6" class="chk_point_all" />
+											<label for="agree_check_group_top6" class="checkbox">
+												<i></i>
+												<span>
+													<span class="ess_text">필수</span>
+													약관 모두 동의
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="agree_check tit_ty">
+										<ul class="term_list">
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group06_1" class="chk_point_sub" />
+													<label for="ago_group06_1" class="checkbox small lbl">
+														<i></i>
+														<span>
+															상품설명서
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">상품설명서</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group06_2" class="chk_point_sub" />
+													<label for="ago_group06_2" class="checkbox small lbl">
+														<i></i>
+														<span>
+															여신거래약정서(기업용)
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">여신거래약정서(기업용)</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group06_3" class="chk_point_sub" />
+													<label for="ago_group06_3" class="checkbox small lbl">
+														<i></i>
+														<span>
+															은행여신거래 기본약관
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">은행여신거래 기본약관</span>
+													보기
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(5);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(7);">실행</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step6 정보확인 -->
+
+				<!-- s: step7 실행완료 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								대출실행을 완료했어요
+							</div>
+
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">대출상품명</span>
+									<span class="d_list_r">
+										<span class="txt">IBK원클릭보증부대출</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">계좌과목명</span>
+									<span class="d_list_r">중소기업자금대출</span>
+								</li>
+								<li>
+									<span class="d_list_l">거래구분</span>
+									<span class="d_list_r">개별거래</span>
+								</li>
+								<li>
+									<span class="d_list_l">대출신청일</span>
+									<span class="d_list_r">
+										<span class="date">2021-03-25</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">대출금액</span>
+									<span class="d_list_r">
+										<span class="money">10,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">대출만기일</span>
+									<span class="d_list_r">
+										<span class="date">2021-03-25</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">상환방법</span>
+									<span class="d_list_r">
+										균등분할상환방식
+										<span class="desc_txt">* 거치기간 후 매월마다 원금을 균등 분할해 상환합니다.</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">거치기간</span>
+									<span class="d_list_r">대출실행일로부터 1년</span>
+								</li>
+								<li>
+									<span class="d_list_l">대출금리</span>
+									<span class="d_list_r">
+										고정금리 : 대출만료일까지
+										<span class="per"><span class="rate">3.2%</span></span>
+										<br />
+										변동금리 : 코리보(KORIBOR) 3월물 +
+										<span class="per"><span class="rate">1.6%</span></span>
+										<span class="desc_txt">* 기준금리 변동주기에 따라 금리 변동 가능</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">지연배상금률</span>
+									<span class="d_list_r">
+										대출금리 + 연체가산금리 연
+										<span class="per"><span class="rate">3%</span></span>
+										<br />
+										(최고 지연배상금률 : 연
+										<span class="per"><span class="rate">11%</span></span>
+										)
+										<span class="desc_txt">* 대출만기일 이내에 변동될 수 있습니다</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">이자납입일</span>
+									<span class="d_list_r">
+										매월 1일에 납입합니다.
+										<span class="desc_txt">* 선택한 이자납입일이 아직 오지 않았다면 이번달부터 이자를 납입해야 합니다.</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">이자납입 자동이체 계좌번호</span>
+									<span class="d_list_r">
+										<span class="account_no">계좌번호</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">대출입금 계좌번호</span>
+									<span class="d_list_r">
+										<span class="account_no">계좌번호</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step7 실행완료 -->
+
+				<!-- s: 약관동의 팝업 -->
+				<div id="step98" data-jx-step-no="98" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">약관 내용</div>
+
+						<button type="button" class="btn" onclick="uf_goStep(6);">확인</button>
+					</div>
+				</div>
+				<!-- e: 약관동의 팝업 -->
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

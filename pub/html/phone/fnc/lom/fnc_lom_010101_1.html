@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+</head>
+<body>
+<div class="wrap"> 
+    <!-- s: 대출상품가입 -->
+    <div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap"> 
+        <!-- s: step1 대출상품목록 -->
+        <div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+            <div class="content_wrap ty3"> 
+                <!-- s: 상품검색 -->
+                <div class="group">
+                    <div class="title_text ty1">상품 검색</div>
+                    <div class="dropdown ty1" role="button" title="대출상품 검색 조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+                        <div class="dropdown_text">전체・전체・추천순</div>
+                    </div>
+                </div>
+                <!-- e: 상품검색 --> 
+                
+                <!-- s: 목록 -->
+                <div class="group">
+                    <div class="content_head ty2 line">
+                        <div class="content_head_left">
+                            <div class="txt_style ty3 fw_7"> 총 <span class="count">00</span> 건 </div>
+                        </div>
+                        <div class="content_head_right">
+                            <div class="label">
+                                <input type="checkbox" name="" id="chk1" />
+                                <label for="chk1" class="checkbox small"> <i></i> <span class="txt ty1">가입 가능</span> </label>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="space_list_ty3 loan_list">
+                        <!-- 2507 ibk box 신청대출-->
+                        <li>
+                            <div class="loan_info"> <a href="#" role="button" class="block">
+                                <div class="badge_cont"> <span class="badge ty3 colorA2">기업대출</span> <span class="badge ty3 colorD1">인기 1위</span> </div>
+                                <div class="box">
+                                    <div class="txt_wrap">
+                                        <div class="tit">BOX개인사업자신용대출</div>
+                                        <div class="txt">당행에 입출금이 자유로운 예금계좌를 보유하고있는 개인사업자를 대상으로 BOX 플랫폼을 통해 대출심사를 자동화 하여 지원하는 신용대출상품</div>
+                                        <div class="cate"> <span>개인사업자</span> <span>운전자금</span> </div>
+                                        <div class="type"> 
+                                            <!-- 인터넷, 모바일, 영업점 경우에 따른 클래스 --> 
+                                            <!-- <span class="web">인터넷</span> --> 
+                                            <!-- <span class="mobile">모바일</span>--> 
+                                            <span class="box">BOX</span> 
+                                            
+                                            <!-- <span class="branch">영업점</span> --> 
+                                        </div>
+                                    </div>
+                                    <div class="rate"> 혼합
+                                        <p class="sub_txt">(고정+변동)</p>
+                                    </div>
+                                </div>
+                                </a>
+                                <div class="btn_area ty1">
+                                    <button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(3);">가입하기</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- //2507 ibk box 신청대출/-->
+                        <li>
+                            <div class="loan_info"> <a href="#" role="button" class="block">
+                                <div class="badge_cont"> <span class="badge ty3 colorA2">기업대출</span> <span class="badge ty3 colorETC6">NEW</span> <span class="badge ty3 colorD1">추천 1위</span> <span class="badge ty3 colorD1">EVENT</span> </div>
+                                <div class="box">
+                                    <div class="txt_wrap">
+                                        <div class="tit">IBK 소상공인 저금리대환 대출</div>
+                                        <div class="txt">기업은행과 신용보증기금 간 업무 협약을 통해 개인사업자에게 영업점 방문 없이 90% 부분 수탁 신용보증서 담보로 기업은행과 신용보증기금 간 업무 협약을 통해 개인사업자에게 영업점 방문 없이 90% 부분 수탁 신용보증서 담보로</div>
+                                        <div class="cate"> <span>개인사업자</span> <span>운전자금</span> </div>
+                                        <div class="type"> 
+                                            <!-- 인터넷, 모바일, 영업점 경우에 따른 클래스 --> 
+                                            <!-- <span class="web">인터넷</span> --> 
+                                            <span class="mobile">모바일</span> 
+                                            <!-- <span class="branch">영업점</span> --> 
+                                        </div>
+                                    </div>
+                                    <div class="rate"> 혼합
+                                        <p class="sub_txt">(고정+변동)</p>
+                                    </div>
+                                </div>
+                                </a>
+                                <div class="btn_area ty1">
+                                    <button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(2);">가입하기</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li> 
+                            <!-- 플랫폼 가입상품 -->
+                            <div class="loan_info"> <a href="#" role="button" class="block">
+                                <div class="badge_cont"> <span class="badge ty3 colorA2">기업대출</span> <span class="badge ty3 colorD1">추천 2위</span> </div>
+                                <div class="box">
+                                    <div class="txt_wrap">
+                                        <div class="tit">e커머스 소상공인 성공 보증부대출</div>
+                                        <div class="txt">네이버 스마트스토어 개인사업자의 사업성공을 응원하는비대면 전용 보증부대출</div>
+                                        <div class="cate"> <span>개인사업자</span> <span>운전자금</span> </div>
+                                    </div>
+                                    <p class="rate">변동</p>
+                                </div>
+                                </a> </div>
+                            <!-- // 플랫폼 가입상품 --> 
+                        </li>
+                        <li> 
+                            <!-- 영업점 가입상품 -->
+                            <div class="loan_info"> <a href="#" role="button" class="block">
+                                <div class="badge_cont"> <span class="badge ty3 colorA2">기업대출</span> <span class="badge ty3 colorD1">추천 3위</span> </div>
+                                <div class="box">
+                                    <div class="txt_wrap">
+                                        <div class="tit">IBK혁신창업대출</div>
+                                        <div class="txt">신용보증기금과 업무협약을 체결하여 보증서를 담보로 자금을 지원하는 혁신창업기업 전용상품</div>
+                                        <div class="cate"> <span>기업</span> <span>운전/시설자금</span> </div>
+                                        <div class="type"> <span class="branch">영업점</span> </div>
+                                    </div>
+                                    <div class="rate"> 혼합
+                                        <p class="sub_txt">(고정+변동)</p>
+                                    </div>
+                                </div>
+                                </a>
+                                <div class="btn_area ty1">
+                                    <button type="button" class="btn s_4 c_2 r_2" disabled>영업점가입</button>
+                                </div>
+                            </div>
+                            <!-- //영업점 가입상품 --> 
+                        </li>
+                        <li>
+                            <div class="no_result_msg">
+                                <div class="msg">검색 결과가 없습니다</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn_area ty1 more">
+                        <button type="button" class="btn s_2 c_1 r_1">더보기</button>
+                    </div>
+                </div>
+                <!-- e: 목록 --> 
+            </div>
+        </div>
+        <!-- e: step1 대출상품목록 --> 
+        
+        <!-- s: step2 상품상세 -->
+        <div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+            <div class="content_wrap card_account_join deposit_product"> 
+                <!-- s: 금융상품 노출 -->
+                <div class="util_btn_wrap"> <a href="#" class="btn s_1 c_1 r_3 link_to"> 대출계산기 <span class="ico_box ico_loan_calc"></span> </a> <a href="#" class="btn s_1 c_1 r_3 link_to"> 전화상담 <span class="ico_box ico_tel_consul"></span> </a> <a href="#" class="btn s_1 c_1 r_3 link_to"> 용어설명 <span class="ico_box ico_explane"></span> </a> </div>
+                <!-- e: 금융상품 노출 --> 
+                
+                <!-- s: 상단 상품 요약 -->
+                
+                <div class="group account_product_list">
+                    <div class="group_item">
+                        <div class="group_item_info">
+                            <div class="badge_cont"> <span class="badge ty3 colorA1">수시입출금식</span> <span class="badge ty3 colorD3">NEW</span> <span class="badge ty3 colorD1">EVENT</span> </div>
+                            <div class="txt5">i-ONE소상공인 대출</div>
+                        </div>
+                        <ul class="list_bullet ty2 mt_16">
+                            <li> 대출한도 : <strong>5,000만원</strong> </li>
+                            <li> 대출금리 : <strong>혼합(고정+변동)</strong> </li>
+                            <li> 가입방법 : <strong>인터넷뱅킹, i-ONE뱅크, BOX플랫폼</strong> </li>
+                            <li> 가입대상 : <strong>중소개인</strong> </li>
+                        </ul>
+                        <div class="btn_area ty1 btn_product_detail mt_24">
+                            <div class="row">
+                                <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1)">가입하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- e: 상단 상품 요약 -->
+                
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- s: 탭 버튼 -->
+                <div class="tab_list ty1" role="tablist">
+                    <button type="button" role="tab" aria-selected="true" class="active">요약</button>
+                    <button type="button" role="tab" aria-selected="false">상품 혜택</button>
+                    <button type="button" role="tab" aria-selected="false">대출정보</button>
+                    <button type="button" role="tab" aria-selected="false">유의사항</button>
+                </div>
+                <!-- e: 탭 버튼 --> 
+                <!-- s: 탭 컨텐츠 --> 
+                <!-- s: 요약 -->
+                <div class="tab_cont holding_finance active" role="tabpanel" aria-expanded="true">
+                    <div class="group">
+                        <dl class="finance_product_info">
+                            <dt class="tit">상품 특징</dt>
+                            <dd class="cont">당좌예금거래자에게 지원하는 수시인출 및 상환이 가능한 상품</dd>
+                            <dt class="tit">계약기간</dt>
+                            <dd class="cont">1년 이내(기간 연장 시 최대 5년)</dd>
+                            <dt class="tit">대출금리</dt>
+                            <dd class="cont">혼합(고정+변동)</dd>
+                            <dt class="tit">가입방법</dt>
+                            <dd class="cont">영업점</dd>
+                            <dt class="tit">가입대상</dt>
+                            <dd class="cont">중소개인, 법인</dd>
+                            <dd class="tit">꼭 알아두세요!</dd>
+                            <dd class="cont"> 상품가입 시 핵심설명서를 꼭 확인해 주세요. <br />
+                                대출문의 : IBK고객센터(1566-2566) IBK기업은행 전국 영업점 <br />
+                                수수료 등 부대비용 : 인지세*, 한도약정수수료** 등 * 인지세 : 대출 시 대출금액에 따라 세액 차등 적용, 총 인지세의 ½은 고객이 부담(대출금액 5,000만원 이하 면세) <br />
+                                ** 한도약정수수료: 한도약정금액의 0.2% </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- e: 요약 --> 
+                <!-- s: 상품혜택 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="true">
+                    <div class="group">
+                        <dl class="finance_product_info">
+                            <dt class="tit">상품 우대 혜택</dt>
+                            <dd class="cont">
+                                <ul class="list_bullet ty4">
+                                    <li> 금리감면 : 산출금리에서 0.4%p 금리 자동 감면 '카드매출대금 자동상환', '매일원금 자동상환' 선택 시 다음 조건에 따라 추가 자동 금리감면
+                                        <div class="tbl ty2 mt_16">
+                                            <table>
+                                                <caption>
+                                                구분, 자동상환비율로 이루어진 금리감면 표
+                                                </caption>
+                                                <colgroup>
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th rowspan="2" scope="row">구분</th>
+                                                        <th colspan="3" scope="col">자동상환비율</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">10%이상~50%미만</th>
+                                                        <th scope="col">50%이상~100%미만</th>
+                                                        <th scope="col">100%</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>카드매출대금 자동상환</td>
+                                                        <td>0.2%p</td>
+                                                        <td>0.3%p</td>
+                                                        <td>0.5%p</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>매일원금 자동상황</td>
+                                                        <td colspan="3">0.5%p</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>중도상환해약금 : '카드매출대금 자동상환' 또는 '매일원금 자동상환'으로 대출금 자동상환 시 해당 자동상환금액에 대한 중도상환해약금 자동 면제</li>
+                                </ul>
+                            </dd>
+                            <dt class="tit">대출과목</dt>
+                            <dd class="cont">중소기업자금대출 (수시로대출 제외)</dd>
+                            <dd class="tit">대출기간</dd>
+                            <dd class="cont">1년 이내(월단위 선택 가능)</dd>
+                            <dd class="tit">서비스별 이용시간(영업일만 가능)</dd>
+                            <dd class="cont">대출신청 : 09:00~17:00</dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- e: 상품혜택 --> 
+                <!-- s: 대출정보 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="true">
+                    <div class="group">
+                        <dl class="finance_product_info">
+                            <dt class="tit">대출한도</dt>
+                            <dd class="cont">
+                                <ul class="list_bullet ty4">
+                                    <li>최대 5천만원 이내</li>
+                                    <li>개인 신용등급, 기존 대출금액 등을 고려하여 자동산출 된 대출한도 범위 내에서 대출채널을 통해 고객이 직접 신청한 금액(십만원 단위)</li>
+                                    <li>개인 신용등급, 기존 대출금액 등을 고려하여 대출한도를 자동으로 산출</li>
+                                </ul>
+                            </dd>
+                            <dt class="tit">대출금리</dt>
+                            <dd class="cont">
+                                <ul class="list_bullet ty4">
+                                    <li> 금리감면 : 산출금리에서 0.54%p 금리 자동 감면 '카드매출대금 자동상환', '매일원금 자동상환' 선택 시 다음 조건에 따라 추가 자동 금리감면
+                                        <div class="tbl ty2 mt_16">
+                                            <table>
+                                                <caption>
+                                                구분, 자동상환비율로 이루어진 금리감면 표
+                                                </caption>
+                                                <colgroup>
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th rowspan="2" scope="row">구분</th>
+                                                        <th colspan="3" scope="col">자동상환비율</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">10%이상~50%미만</th>
+                                                        <th scope="col">50%이상~100%미만</th>
+                                                        <th scope="col">100%</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>카드매출대금 자동상환</td>
+                                                        <td>0.2%p</td>
+                                                        <td>0.3%p</td>
+                                                        <td>0.5%p</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>매일원금 자동상황</td>
+                                                        <td colspan="3">0.5%p</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li> 금리예시 : 최저 연 3.59% ~ 최고 연 4.09% (2022.4.15. 기준)
+                                        <ul class="list_refer_mark">
+                                            <li>기준금리 (연 1.57%) + 가산금리(연 3.06%p) - 감면금리(연 0.54~1.04%p)</li>
+                                            <li>산출기준 : 대출금액 5천만원/대출기간 1년/신용등급 BBB+급/고객기여도 A/신용/변동금리(3월)/만기일시상환/운전자금</li>
+                                            <li>실제 대출 취급시 대출 대상 기업의 신용등급, 담보비율 등의 요소에 따라 달라질 수 있습니다.</li>
+                                            <li>이자는 매 1월 단위로 약정 납입일에 후취</li>
+                                            <li>연체이자율 : 대출이자율에 연체가산금리 연 3%를 더하여 적용 (단, 최고 연체이자율은 가계 및 중소기업의 경우 연 11%, 그 외는 13%)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </dd>
+                            <dt class="tit">이자계산방법</dt>
+                            <dd class="cont">1년을 365일(윤년은 366일)로 보고 1일 단위로 계산</dd>
+                            <dt class="tit">대출대상</dt>
+                            <dd class="cont"> <span>아래 조건을 충족하는 개인 사업자</span>
+                                <ul class="list_bullet ty4">
+                                    <li>소기업·소상공인공제(노란우산) 가입 기업</li>
+                                    <li>기업명의의 IBK기업은행 입출식 계좌 보유</li>
+                                    <li>IBK기업은행의 기업전용인터넷뱅킹 가입</li>
+                                    <li>본인명의 휴대폰번호가 IBK기업은행에 등록</li>
+                                    <li>국세청에 등록된 개인공동인증서 보유</li>
+                                    <li>국세청 자료상 소득금액 및 사업자등록일 1년 경과 확인</li>
+                                    <li>대표자 개인 CB점수 KCB 620점 이상이고 NICE 660점 이상</li>
+                                    <li> IBK기업은행 신용등급 BBB 이상이고 빅데이터 신용등급 5등급 이상 <br />
+                                        또는 IBK기업은행 신용등급 BB+ 이상이고 빅데이터 신용 등급 4등급 이상(자동검증) </li>
+                                </ul>
+                            </dd>
+                            <dd class="tit">제외대상</dd>
+                            <dd class="cont">
+                                <ul class="list_bullet ty4">
+                                    <li>임대업 영위 기업</li>
+                                    <li>공동사업자</li>
+                                    <li>「중소기업중앙회 동반성장협력대출I」 이용(또는 완제) 고객</li>
+                                </ul>
+                            </dd>
+                            <dd class="tit">상환방식</dd>
+                            <dd class="cont"> <span>만기일시상환, 원금균등분할상환</span>
+                                <ul class="list_refer_mark">
+                                    <li>단, 개인CB점수 KCB 759점 이하 또는 NICE 804점 이하일 경우 '자동상환' 여부를 필수적으로 선택해야 하며, 해당사항이 없는 고객의 경우 '자동상환' 여부를 직접 선택할 수 있음</li>
+                                </ul>
+                                <div class="bg_box ty1 detail_desc">
+                                    <div class="title_text ty1">'자동상환'세부사항</div>
+                                    <div class="txt_style ty7"> <strong>카드매출대금 자동상환</strong> (BC카드가맹점 결제계좌가 IBK기업은행인 경우에 한해 선택가능) </div>
+                                    <ul class="list_bullet ty3">
+                                        <li> <strong>상환비율</strong> : 10 ~100% 범위로 10% 단위 선택 가능 </li>
+                                        <li> <strong>상환방법</strong> : 가맹점 결제계좌로 입금되는 BC카드사 매출대금의 자동상환비율에 해당하는 금액(만원 미만 절사)으로 대출금 자동 상환 </li>
+                                        <li> <strong>유의사항</strong>
+                                            <ul class="list_dash">
+                                                <li>카드 매출정보가 취소된 경우에도 대출금 자동상환 취소 불가</li>
+                                                <li>본 상품의 기 취급계좌가 있는 경우 대출실행일이 빠른 대출부터 자동상환</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="title_text ty1">매일원금 자동상환</div>
+                                    <ul class="list_bullet ty3">
+                                        <li>대출원금을 대출기간 중 영업일수로 매일 균등분할(천원 미만 절사)하여 산출된 금액을 매일 자동상환</li>
+                                    </ul>
+                                    <div class="title_text ty1">추가 안내사항</div>
+                                    <ul class="list_dash">
+                                        <li> <strong>중도상환해약금</strong> : 대출의 상환기일이 도래하기 전에 대출금을 상환할 경우 부담하는 금액 </li>
+                                        <li>[중도상환금액 x 요율(고정금리 0.9%/변동금리 0.8%) x (대출잔여일수 ÷ 총대출일수)] (중도상환해약금 3년초과시 면제)</li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- e: 대출정보 --> 
+                <!-- s: 유의사항 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="true">
+                    <div class="group mt_16"> 자동상환 방식에 의한 상환금액 外 임의로 상환하시는 대출 원금에 대해서는 중도상환해약금이 정상 부과됩니다. <br />
+                        <br />
+                        사업장운전자금, 원부자재구입, 기타 용도 외 유용 시 관련대출 회수 및 신규여신 취급 제한이 될 수 있으니 유의하시기 바랍니다.
+                        <hr aria-hidden="true" class="divider ty2" />
+                        고객님의 신용도와 당행 심사기준에 따라 대출여부 및 한도가 결정됩니다. <br />
+                        금융기관 신용정보관리대상 고객 및 당행 대출 부적격자는 대출이 제한될 수 있습니다. <br />
+                        상기 내용은 사전통보 없이 변경 가능하며, 당행 여신규정 및 관련 법률에 의거하여 금융기관의 신용관리대상 거래처로 규제된 경우 또는 연체자 등은 대출이 거절될 수 있습니다. 대출원금 납입이 지연되거나 만기 시 원금을 상환하지 않는 경우 연체이자가 부과 됩니다. <br />
+                        <br />
+                        개별 상품에 관한 자세한 문의는 거래영업점 또는 IBK고객센터(☎1566-2566)를 이용하여 주시기 바랍니다. <br />
+                        <br />
+                        은행거래와 관련하여 이의가 있을 때에는 IBK기업은행의 분쟁처리기구에 해결을 요구하거나 금융분쟁조정위원회 등을 통하여 분쟁조정을 신청할 수 있습니다. <br />
+                        (금융감독원 : 국번없이 ☎1332, IBK기업은행 : ☎080-800-0119) <br />
+                        <br />
+                        IBK기업은행은 금품,향응을 받지 않습니다. 윤리경영 위반 사실이나 개선이 필요한 경우 신고해주시기 바랍니다. <br />
+                        (☎02-729-7490, e-mail : ibkethics@ibk.co.kr)
+                        <hr aria-hidden="true" class="divider ty2" />
+                        <p class="txt_style ty7"> 준법감시인 심의필 : 제2022-2050호(2022.04.21) <br />
+                            유효기간 : (2023.04.20) </p>
+                    </div>
+                </div>
+                <!-- e: 유의사항 --> 
+                <!-- e: 탭 컨텐츠 --> 
+            </div>
+        </div>
+        <!-- e: step2 상품상세 --> 
+        
+        <!-- s: step3 BOX 상품상세 -->
+        <div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+            <div class="content_wrap card_account_join deposit_product"> 
+                <!-- s: 금융상품 노출 -->
+                <div class="util_btn_wrap"> <a href="#" class="btn s_1 c_1 r_3 link_to"> 대출계산기 <span class="ico_box ico_loan_calc"></span> </a> <a href="#" class="btn s_1 c_1 r_3 link_to"> 전화상담 <span class="ico_box ico_tel_consul"></span> </a> <a href="#" class="btn s_1 c_1 r_3 link_to"> 용어설명 <span class="ico_box ico_explane"></span> </a> </div>
+                <!-- e: 금융상품 노출 --> 
+                
+                <!-- s: 상단 상품 요약 -->
+                
+                <div class="group account_product_list">
+                    <div class="group_item">
+                        <div class="group_item_info">
+                            <div class="badge_cont"> <span class="badge ty3 colorA1">수시입출금식</span> <span class="badge ty3 colorD3">NEW</span> <span class="badge ty3 colorD1">EVENT</span> </div>
+                            <div class="txt5">BOX개인사업자신용대출</div>
+                        </div>
+                        <ul class="list_bullet ty2 mt_16">
+                            <li> 대출한도 : <strong>100억원이상 1억원이하</strong> </li>
+                            <li> 대출금리 : <strong>고정금리,변동금리</strong> </li>
+                            <li> 가입방법 : <strong>BOX플랫폼</strong> </li>
+                            <li> 가입대상 : <strong>중소개인</strong> </li>
+                        </ul>
+                        <div class="btn_area ty1 btn_product_detail mt_24">
+                            <div class="row">
+                                <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1)">BOX로 이동</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- e: 상단 상품 요약 -->
+                
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- s: 탭 버튼 -->
+                <div class="tab_list ty1" role="tablist">
+                    <button type="button" role="tab" aria-selected="true" class="active">요약</button>
+                    <button type="button" role="tab" aria-selected="false">상품 혜택</button>
+                    <button type="button" role="tab" aria-selected="false">대출정보</button>
+                    <button type="button" role="tab" aria-selected="false">유의사항</button>
+                </div>
+                <!-- e: 탭 버튼 --> 
+                <!-- s: 탭 컨텐츠 --> 
+                <!-- s: 요약 -->
+                <div class="tab_cont holding_finance active" role="tabpanel" aria-expanded="true">
+                    <div class="group">
+                        <dl class="finance_product_info">
+                            <dt class="tit">상품 특징</dt>
+                            <dd class="cont">당좌예금거래자에게 지원하는 수시인출 및 상환이 가능한 상품</dd>
+                            <dt class="tit">계약기간</dt>
+                            <dd class="cont">1년 이내(기간 연장 시 최대 5년)</dd>
+                            <dt class="tit">대출금리</dt>
+                            <dd class="cont">혼합(고정+변동)</dd>
+                            <dt class="tit">가입방법</dt>
+                            <dd class="cont">영업점</dd>
+                            <dt class="tit">가입대상</dt>
+                            <dd class="cont">중소개인, 법인</dd>
+                            <dd class="tit">꼭 알아두세요!</dd>
+                            <dd class="cont"> 상품가입 시 핵심설명서를 꼭 확인해 주세요. <br />
+                                대출문의 : IBK고객센터(1566-2566) IBK기업은행 전국 영업점 <br />
+                                수수료 등 부대비용 : 인지세*, 한도약정수수료** 등 * 인지세 : 대출 시 대출금액에 따라 세액 차등 적용, 총 인지세의 ½은 고객이 부담(대출금액 5,000만원 이하 면세) <br />
+                                ** 한도약정수수료: 한도약정금액의 0.2% </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- e: 요약 --> 
+                <!-- s: 상품혜택 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="true">
+                    <div class="group">
+                        <dl class="finance_product_info">
+                            <dt class="tit">상품 우대 혜택</dt>
+                            <dd class="cont">
+                                <ul class="list_bullet ty4">
+                                    <li> 금리감면 : 산출금리에서 0.4%p 금리 자동 감면 '카드매출대금 자동상환', '매일원금 자동상환' 선택 시 다음 조건에 따라 추가 자동 금리감면
+                                        <div class="tbl ty2 mt_16">
+                                            <table>
+                                                <caption>
+                                                구분, 자동상환비율로 이루어진 금리감면 표
+                                                </caption>
+                                                <colgroup>
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th rowspan="2" scope="row">구분</th>
+                                                        <th colspan="3" scope="col">자동상환비율</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">10%이상~50%미만</th>
+                                                        <th scope="col">50%이상~100%미만</th>
+                                                        <th scope="col">100%</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>카드매출대금 자동상환</td>
+                                                        <td>0.2%p</td>
+                                                        <td>0.3%p</td>
+                                                        <td>0.5%p</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>매일원금 자동상황</td>
+                                                        <td colspan="3">0.5%p</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>중도상환해약금 : '카드매출대금 자동상환' 또는 '매일원금 자동상환'으로 대출금 자동상환 시 해당 자동상환금액에 대한 중도상환해약금 자동 면제</li>
+                                </ul>
+                            </dd>
+                            <dt class="tit">대출과목</dt>
+                            <dd class="cont">중소기업자금대출 (수시로대출 제외)</dd>
+                            <dd class="tit">대출기간</dd>
+                            <dd class="cont">1년 이내(월단위 선택 가능)</dd>
+                            <dd class="tit">서비스별 이용시간(영업일만 가능)</dd>
+                            <dd class="cont">대출신청 : 09:00~17:00</dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- e: 상품혜택 --> 
+                <!-- s: 대출정보 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="true">
+                    <div class="group">
+                        <dl class="finance_product_info">
+                            <dt class="tit">대출한도</dt>
+                            <dd class="cont">
+                                <ul class="list_bullet ty4">
+                                    <li>최대 5천만원 이내</li>
+                                    <li>개인 신용등급, 기존 대출금액 등을 고려하여 자동산출 된 대출한도 범위 내에서 대출채널을 통해 고객이 직접 신청한 금액(십만원 단위)</li>
+                                    <li>개인 신용등급, 기존 대출금액 등을 고려하여 대출한도를 자동으로 산출</li>
+                                </ul>
+                            </dd>
+                            <dt class="tit">대출금리</dt>
+                            <dd class="cont">
+                                <ul class="list_bullet ty4">
+                                    <li> 금리감면 : 산출금리에서 0.54%p 금리 자동 감면 '카드매출대금 자동상환', '매일원금 자동상환' 선택 시 다음 조건에 따라 추가 자동 금리감면
+                                        <div class="tbl ty2 mt_16">
+                                            <table>
+                                                <caption>
+                                                구분, 자동상환비율로 이루어진 금리감면 표
+                                                </caption>
+                                                <colgroup>
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                <col style="width: 25%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th rowspan="2" scope="row">구분</th>
+                                                        <th colspan="3" scope="col">자동상환비율</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">10%이상~50%미만</th>
+                                                        <th scope="col">50%이상~100%미만</th>
+                                                        <th scope="col">100%</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>카드매출대금 자동상환</td>
+                                                        <td>0.2%p</td>
+                                                        <td>0.3%p</td>
+                                                        <td>0.5%p</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>매일원금 자동상황</td>
+                                                        <td colspan="3">0.5%p</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li> 금리예시 : 최저 연 3.59% ~ 최고 연 4.09% (2022.4.15. 기준)
+                                        <ul class="list_refer_mark">
+                                            <li>기준금리 (연 1.57%) + 가산금리(연 3.06%p) - 감면금리(연 0.54~1.04%p)</li>
+                                            <li>산출기준 : 대출금액 5천만원/대출기간 1년/신용등급 BBB+급/고객기여도 A/신용/변동금리(3월)/만기일시상환/운전자금</li>
+                                            <li>실제 대출 취급시 대출 대상 기업의 신용등급, 담보비율 등의 요소에 따라 달라질 수 있습니다.</li>
+                                            <li>이자는 매 1월 단위로 약정 납입일에 후취</li>
+                                            <li>연체이자율 : 대출이자율에 연체가산금리 연 3%를 더하여 적용 (단, 최고 연체이자율은 가계 및 중소기업의 경우 연 11%, 그 외는 13%)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </dd>
+                            <dt class="tit">이자계산방법</dt>
+                            <dd class="cont">1년을 365일(윤년은 366일)로 보고 1일 단위로 계산</dd>
+                            <dt class="tit">대출대상</dt>
+                            <dd class="cont"> <span>아래 조건을 충족하는 개인 사업자</span>
+                                <ul class="list_bullet ty4">
+                                    <li>소기업·소상공인공제(노란우산) 가입 기업</li>
+                                    <li>기업명의의 IBK기업은행 입출식 계좌 보유</li>
+                                    <li>IBK기업은행의 기업전용인터넷뱅킹 가입</li>
+                                    <li>본인명의 휴대폰번호가 IBK기업은행에 등록</li>
+                                    <li>국세청에 등록된 개인공동인증서 보유</li>
+                                    <li>국세청 자료상 소득금액 및 사업자등록일 1년 경과 확인</li>
+                                    <li>대표자 개인 CB점수 KCB 620점 이상이고 NICE 660점 이상</li>
+                                    <li> IBK기업은행 신용등급 BBB 이상이고 빅데이터 신용등급 5등급 이상 <br />
+                                        또는 IBK기업은행 신용등급 BB+ 이상이고 빅데이터 신용 등급 4등급 이상(자동검증) </li>
+                                </ul>
+                            </dd>
+                            <dd class="tit">제외대상</dd>
+                            <dd class="cont">
+                                <ul class="list_bullet ty4">
+                                    <li>임대업 영위 기업</li>
+                                    <li>공동사업자</li>
+                                    <li>「중소기업중앙회 동반성장협력대출I」 이용(또는 완제) 고객</li>
+                                </ul>
+                            </dd>
+                            <dd class="tit">상환방식</dd>
+                            <dd class="cont"> <span>만기일시상환, 원금균등분할상환</span>
+                                <ul class="list_refer_mark">
+                                    <li>단, 개인CB점수 KCB 759점 이하 또는 NICE 804점 이하일 경우 '자동상환' 여부를 필수적으로 선택해야 하며, 해당사항이 없는 고객의 경우 '자동상환' 여부를 직접 선택할 수 있음</li>
+                                </ul>
+                                <div class="bg_box ty1 detail_desc">
+                                    <div class="title_text ty1">'자동상환'세부사항</div>
+                                    <div class="txt_style ty7"> <strong>카드매출대금 자동상환</strong> (BC카드가맹점 결제계좌가 IBK기업은행인 경우에 한해 선택가능) </div>
+                                    <ul class="list_bullet ty3">
+                                        <li> <strong>상환비율</strong> : 10 ~100% 범위로 10% 단위 선택 가능 </li>
+                                        <li> <strong>상환방법</strong> : 가맹점 결제계좌로 입금되는 BC카드사 매출대금의 자동상환비율에 해당하는 금액(만원 미만 절사)으로 대출금 자동 상환 </li>
+                                        <li> <strong>유의사항</strong>
+                                            <ul class="list_dash">
+                                                <li>카드 매출정보가 취소된 경우에도 대출금 자동상환 취소 불가</li>
+                                                <li>본 상품의 기 취급계좌가 있는 경우 대출실행일이 빠른 대출부터 자동상환</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <div class="title_text ty1">매일원금 자동상환</div>
+                                    <ul class="list_bullet ty3">
+                                        <li>대출원금을 대출기간 중 영업일수로 매일 균등분할(천원 미만 절사)하여 산출된 금액을 매일 자동상환</li>
+                                    </ul>
+                                    <div class="title_text ty1">추가 안내사항</div>
+                                    <ul class="list_dash">
+                                        <li> <strong>중도상환해약금</strong> : 대출의 상환기일이 도래하기 전에 대출금을 상환할 경우 부담하는 금액 </li>
+                                        <li>[중도상환금액 x 요율(고정금리 0.9%/변동금리 0.8%) x (대출잔여일수 ÷ 총대출일수)] (중도상환해약금 3년초과시 면제)</li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- e: 대출정보 --> 
+                <!-- s: 유의사항 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="true">
+                    <div class="group mt_16"> 자동상환 방식에 의한 상환금액 外 임의로 상환하시는 대출 원금에 대해서는 중도상환해약금이 정상 부과됩니다. <br />
+                        <br />
+                        사업장운전자금, 원부자재구입, 기타 용도 외 유용 시 관련대출 회수 및 신규여신 취급 제한이 될 수 있으니 유의하시기 바랍니다.
+                        <hr aria-hidden="true" class="divider ty2" />
+                        고객님의 신용도와 당행 심사기준에 따라 대출여부 및 한도가 결정됩니다. <br />
+                        금융기관 신용정보관리대상 고객 및 당행 대출 부적격자는 대출이 제한될 수 있습니다. <br />
+                        상기 내용은 사전통보 없이 변경 가능하며, 당행 여신규정 및 관련 법률에 의거하여 금융기관의 신용관리대상 거래처로 규제된 경우 또는 연체자 등은 대출이 거절될 수 있습니다. 대출원금 납입이 지연되거나 만기 시 원금을 상환하지 않는 경우 연체이자가 부과 됩니다. <br />
+                        <br />
+                        개별 상품에 관한 자세한 문의는 거래영업점 또는 IBK고객센터(☎1566-2566)를 이용하여 주시기 바랍니다. <br />
+                        <br />
+                        은행거래와 관련하여 이의가 있을 때에는 IBK기업은행의 분쟁처리기구에 해결을 요구하거나 금융분쟁조정위원회 등을 통하여 분쟁조정을 신청할 수 있습니다. <br />
+                        (금융감독원 : 국번없이 ☎1332, IBK기업은행 : ☎080-800-0119) <br />
+                        <br />
+                        IBK기업은행은 금품,향응을 받지 않습니다. 윤리경영 위반 사실이나 개선이 필요한 경우 신고해주시기 바랍니다. <br />
+                        (☎02-729-7490, e-mail : ibkethics@ibk.co.kr)
+                        <hr aria-hidden="true" class="divider ty2" />
+                        <p class="txt_style ty7"> 준법감시인 심의필 : 제2022-2050호(2022.04.21) <br />
+                            유효기간 : (2023.04.20) </p>
+                    </div>
+                </div>
+                <!-- e: 유의사항 --> 
+                <!-- e: 탭 컨텐츠 --> 
+            </div>
+        </div>
+        <!-- e: step3 BOX 상품상세 --> 
+        
+        <!-- s: Popup -->
+        <div class="bottom_popup_wrap" id="popup1">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">조건설정</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="form_group">
+                        <h3 class="input_label ty1 top">상품명 검색</h3>
+                        <div class="input has_search">
+                            <input type="text" name="" id="" title="상품명 입력" placeholder="상품명 입력" />
+                            <button type="button" class="search">검색</button>
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <hr aria-hidden="true" class="divider ty1 full" />
+                        <h3 class="input_label ty1">상품 종류</h3>
+                        <div class="search_group">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">기술금융대출</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">기업대출</span></button>
+                            </div>
+                        </div>
+                        <h3 class="input_label ty1">금리 종류</h3>
+                        <div class="search_group">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">고정</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">변동</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">기타</span></button>
+                            </div>
+                        </div>
+                        <h3 class="input_label ty1">조회방법</h3>
+                        <div class="search_group">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">추천순</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">인기순</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">최신순</span></button>
+                            </div>
+                        </div>
+                        <h3 class="input_label ty1">가입채널</h3>
+                        <div class="search_group">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">모바일</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">인터넷&영업점</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2">조회</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: Popup --> 
+    </div>
+    <!-- e: 대출상품가입 --> 
+</div>
+
+<!--**퍼블용** 데모확인 로티 구동 스크립트--> 
+<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script> 
+<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+</body>
+</html>

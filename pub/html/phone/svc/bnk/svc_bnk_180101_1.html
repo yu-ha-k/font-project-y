@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 보조관리자 설정 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">
+								보조관리자를 선택 후
+								<br />
+								권한을 설정해 주세요
+							</div>
+							<p class="txt_style ty11">보조관리자는 관리자를 대신해 이용자의 권한과 정보를 설정할 수 있어요.</p>
+							<div class="form_group mt_24">
+								<div class="input_label ty1">이용자</div>
+								<div class="dropdown ty2" role="button" title="이용자 목록 보기" onclick="comLayerPopUtil.open('optlist');">
+									<div class="dropdown_text">홍길동(00000000)</div>
+								</div>
+
+								<div class="label">
+									<input type="checkbox" name="" id="chked1" />
+									<label for="chked1" class="checkbox mt_24">
+										<i></i>
+										<span>전체선택</span>
+									</label>
+								</div>
+								<hr aria-hidden="true" class="divider ty3" />
+								<div class="input_label ty1">스마트뱅킹 메뉴</div>
+
+								<ul class="space_list_ty5">
+									<li>
+										<div class="label">
+											<input type="checkbox" name="" id="chked2" />
+											<label for="chked2" class="checkbox small">
+												<i></i>
+												<span>직원이용자관리</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+
+								<div class="input_label ty1 mt_32">인터넷뱅킹 전용 메뉴</div>
+								<ul class="space_list_ty5">
+									<li>
+										<div class="label">
+											<input type="checkbox" name="" id="chked5" />
+											<label for="chked5" class="checkbox small">
+												<i></i>
+												<span>이용자별 메뉴권한 관리</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="label">
+											<input type="checkbox" name="" id="chked6" />
+											<label for="chked6" class="checkbox small">
+												<i></i>
+												<span>잔액증명서</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="label">
+											<input type="checkbox" name="" id="chked7" />
+											<label for="chked7" class="checkbox small">
+												<i></i>
+												<span>급여이체결과조회(영업점)</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>관리자 전용 권한 중 일부를 보조관리자에게 부여할 수 있습니다.</li>
+											<li>보조관리자는 1명만 지정할 수 있습니다.</li>
+											<li>보조관리자는 관리자 설정을 변경할 수 없습니다.</li>
+											<li>개인사업자가 보조관리자에게 계좌/카드 관리 권한을 부여할 경우, 관리자의 개인계좌를 조회할 수 있으니 유의해 주세요.</li>
+											<li>보조관리자가 ‘이체한도’ ‘결재선 등록/지정‘ ‘대직자조회‘ 설정을 변경하려면 관리자가 권한설정을 승인해야 합니다.</li>
+											<li>보조관리자 설정을 해제하려면 메뉴권한을 전체해제 후 저장해 주세요.</li>
+											<li>저장 후 다시 로그인해야 적용됩니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 보조관리자 설정 -->
+				<!-- s: step2 보조관리자 설정(데이터 없음) -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">
+								보조관리자를 선택 후
+								<br />
+								권한을 설정해 주세요
+							</div>
+							<p class="txt"></p>
+							<div class="form_group">
+								<div class="input_label ty1">이용자</div>
+								<div class="dropdown ty2" role="button" title="이용자 목록 보기" onclick="comLayerPopUtil.open('optlist');">
+									<div class="dropdown_text">홍길동(00000000)</div>
+								</div>
+
+								<div class="no_result_msg">
+									<div class="msg">
+										보조관리자로 지정할
+										<br />
+										이용자를 선택해 주세요
+									</div>
+								</div>
+							</div>
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>관리자 전용 권한 중 일부를 보조관리자에게 부여할 수 있습니다.</li>
+											<li>보조관리자는 1명만 지정할 수 있습니다.</li>
+											<li>보조관리자는 관리자 설정을 변경할 수 없습니다.</li>
+											<li>개인사업자가 보조관리자에게 계좌/카드 관리 권한을 부여할 경우, 관리자의 개인계좌를 조회할 수 있으니 유의해 주세요.</li>
+											<li>보조관리자가 ‘이체한도’ ‘결재선 등록/지정‘ ‘대직자조회‘ 설정을 변경하려면 관리자가 권한설정을 승인해야 합니다.</li>
+											<li>보조관리자 설정을 해제하려면 메뉴권한을 전체해제 후 저장해 주세요.</li>
+											<li>저장 후 다시 로그인해야 적용됩니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 보조관리자 설정(데이터 없음) -->
+				<!-- s: step3 완료 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								보조관리자 권한설정을
+								<br />
+								완료했어요
+								<div class="note_cmt">
+									로그아웃 후 다시 로그인 하셔야
+									<br />
+									수정된 내용이 적용 됩니다.
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 완료 -->
+				<!-- s: popup -->
+				<div class="bottom_popup_wrap" id="optlist" title="이용자 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">이용자 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

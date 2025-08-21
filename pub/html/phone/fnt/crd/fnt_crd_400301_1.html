@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 4대보험 자동납부 변경/해지 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 자동납부 정보 -->
+						<div class="group">
+							<div class="title_text ty1">자동납부 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납부카드번호</span>
+										</span>
+										<span class="line_right">
+											<span class="text"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">세부보험</span>
+										</span>
+										<span class="line_right">
+											<span class="text">산재, 고용</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납부자번호</span>
+										</span>
+										<span class="line_right">
+											<span class="text"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납부자명</span>
+										</span>
+										<span class="line_right">
+											<span class="text"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">최근 자동납부일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">YYYY.MM.DD</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 자동납부 정보 -->
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 카드 자동납부 변경 -->
+						<div class="group">
+							<div class="title_text ty1">카드 자동납부 변경</div>
+							<div class="form_group">
+								<div class="input_label ty1">카드선택</div>
+								<div class="dropdown ty2" role="button" title="카드선택 목록보기" onclick="comLayerPopUtil.open('cardlist');">
+									<div class="dropdown_text">1234-****-9999-1234 카드별명</div>
+								</div>
+
+								<div class="input_label ty1">납부예정일</div>
+								<div class="input">
+									<input type="text" name="" id="" value="3일" title="납부예정일 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<!-- e: 카드 자동납부 변경 -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">실행</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 4대보험 자동납부 계좌해지 -->
+
+				<!-- s: step2 4대보험 자동납부 변경/해지 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<!-- s: 4대보험 자동납부 카드를 변경 -->
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								4대보험 자동납부 카드를 변경했어요
+							</div>
+							<!-- e: 4대보험 자동납부 카드를 변경 -->
+
+							<!-- s: 4대보험 자동납부 카드를 해지 
+               <div class="ico_txt ty1 lottie_case1">
+            <div class="lottie_box">
+              <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+            </div>
+                4대보험 자동납부 카드를 해지했어요
+              </div> e: 4대보험 자동납부 카드를 해지 -->
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 4대보험 자동납부 변경/해지 -->
+
+				<!-- s: step3 4대보험 자동납부 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">4대보험 자동납부</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기납부방식</span>
+										</span>
+										<span class="line_right">
+											<span class="text">카드</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">변경납부방식</span>
+										</span>
+										<span class="line_right">
+											<span class="text"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납부카드번호</span>
+										</span>
+										<span class="line_right">
+											<span class="text"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">세부보험</span>
+										</span>
+										<span class="line_right">
+											<span class="text"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납부자번호</span>
+										</span>
+										<span class="line_right">
+											<span class="text"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납부자명</span>
+										</span>
+										<span class="line_right">
+											<span class="text"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">목록</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 4대보험 자동납부 -->
+
+				<!-- s: popup -->
+				<div class="bottom_popup_wrap" id="cardlist" title="카드 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">카드 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('cardlist');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">참! 좋은 Biz카드(대한항공)</div>
+										<div class="item_bottom">4140-****-****-3915</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false" aria-disabled="true">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-4996</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-5941</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1923</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1931</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1949</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1956</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

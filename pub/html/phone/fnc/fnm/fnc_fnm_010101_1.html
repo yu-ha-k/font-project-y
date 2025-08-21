@@ -1,0 +1,2223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+</head>
+<body>
+<div class="wrap"> 
+    <!-- s: 금융상품-펀드 -->
+    <div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap"> 
+        <!-- s: step1 투자성향분석 안내 팝업 1 -->
+        <div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="bottom_popup_wrap active" id="popup11">
+                    <div class="bottom_popup">
+                        <div class="bottom_popup_header">
+                            <h2 class="tit">투자성향분석 안내</h2>
+                            <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup11');">닫기</button>
+                        </div>
+                        <div class="bottom_popup_body">
+                            <div class="bg_box ty3"> 투자성향을 분석하시면 <br />
+                                기은찬 님께 맞는 상품을 찾아 드려요. </div>
+                            <ul class="list_bullet ty3 mt_12">
+                                <li>「금융소비자 보호에 관한 법률」 에 따라 투자성향 분석 후 적합 상품 조회 및 가입이 가능합니다.</li>
+                            </ul>
+                        </div>
+                        <div class="bottom_popup_footer favorite_tooltip_wrap">
+                            <div class="favorite_tooltip">1일 1회만 가능해요</div>
+                            <!-- s: 02504 투자성향분석 고도화 수정 -->
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(15);">분석하기</button>
+                            <!-- e: 02504 투자성향분석 고도화 수정 --> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step1 투자성향분석 안내 팝업 1 --> 
+        
+        <!-- s: 202504 투자성향분석 고도화 추가 step14 금융소비자 유형 확인_ step15에 합침 --> 
+        <!--
+        <div id="step14" data-jx-step-no="14" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">투자성향 분석 전 필수 확인사항을 체크해 주세요</div>
+                    <div class="question_list">
+                        <div class="question">
+                            <div class="question_cont">금융소비자 유형 확인</div>
+                        </div>
+                        <div class="answer">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"> <span class="text">일반금융소비자</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">전문금융소비자 </span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(15);">확인</button>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+--> 
+        <!-- e: 202504 투자성향분석 고도화 추가 step14 금융소비자 유형 확인 --> 
+        
+        <!-- s: 202504 투자성향분석 고도화 추가 step15 금융소비자 불이익사항 안내 – 확인사항 동의 -->
+        <div id="step15" data-jx-step-no="15" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">확인사항 동의</div>
+                    <p class="agree_page_text mb_16">투자성향 분석 전 아래 내용을 모두 확인해 주세요. </p>
+                </div>
+                <div class="group">
+                    <div class="question_list">
+                        <div class="question">
+                            <div class="question_cont">금융소비자 유형 확인</div>
+                        </div>
+                        <div class="answer">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"> <span class="text">일반금융소비자</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">전문금융소비자 </span> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list_bullet ty4 mt_16">
+                        <li> 전문금융소비자란? 국가, 한국은행, 금융회사(은행, 종합금융회사, 보험회사 등)주권상장법인, 겸영여신업자, 금융상품판매대리·중개업자, 특수목적을 위해 설립된 전문투자자로 관련 법령이 정한 기준을 충족하여 인정을 받은 투자자입니다. </li>
+                    </ul>
+                </div>
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="agree_check_group">
+                        <div class="chk_group_wrap">
+                            <div class="agree_check_group_top">
+                                <div class="label all_chk">
+                                    <input type="checkbox" name="" id="agree_check_group_top" class="chk_point_all">
+                                    <label for="agree_check_group_top" class="checkbox"> <i></i> <span> <span class="ess_text">필수</span> 약관 모두 동의 </span> </label>
+                                </div>
+                            </div>
+                            <div class="agree_check tit_ty">
+                                <div class="top chk_middle">
+                                    <div class="label">
+                                        <input type="checkbox" name="" id="abs1_1" class="chk_point">
+                                        <label for="abs1_1" class="checkbox small lbl"> <i></i> <span>금융소비자 불이익사항 우선설명 안내<span class="ess_mark">필수</span> </span> </label>
+                                    </div>
+                                    <button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(17);"> <span class="sr_only">펀드투자 관련 금융소비자 유의사항 안내</span> 보기 </button>
+                                </div>
+                                <div class="inner">
+                                    <div class="term_text">
+                                        <div class="txt_style ty6 fw_4">만 65세 이상, 은퇴자, 주부 등 본인이 금융취약계층이라고 생각되시면 [보기] 버튼을 눌러주세요. 소비자 불이익 사항에 대하여 우선적으로 설명해 드립니다. </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="agree_check tit_ty">
+                                <div class="top chk_middle">
+                                    <div class="label">
+                                        <input type="checkbox" name="" id="abs1_2" class="chk_point">
+                                        <label for="abs1_2" class="checkbox small lbl"> <i></i> <span>대출거래 유의사항 안내<span class="ess_mark">필수</span> </span> </label>
+                                    </div>
+                                </div>
+                                <div class="inner">
+                                    <div class="term_text">
+                                        <div class="txt_style ty6 fw_4">투자성상품 구속행위 규제제도 유의사항 : 1개월 내 대출을 받았거나, 1개월 이내 받을 예정이라면 금융소비자보호법 상 구속행위로 간주되어 펀드 <span class="color ty4">신규 가입이 불가</span>합니다. </div>
+                                    </div>
+                                </div>
+                            </div>
+<!--
+                            <div class="agree_check tit_ty">
+                                <div class="top chk_middle">
+                                    <div class="label">
+                                        <input type="checkbox" name="" id="abs1_3" class="chk_point">
+                                        <label for="abs1_3" class="checkbox small lbl"> <i></i> <span>투자성향분석 결과 재사용 안내<span class="ess_mark">필수</span> </span> </label>
+                                    </div>
+                                </div>
+                                <div class="inner">
+                                    <div class="term_text">
+                                        <div class="txt_style ty6 fw_4">투자자 정보는 파악한 날로부터 <span class="color ty4">당해 연도 동안 유효</span>하며, 당해 연도 이내 파악한 관련 정보는 변경되지 않았습니다. 기존 정보를 다시 사용하는 것에 동의합니다.</div>
+                                    </div>
+                                </div>
+                            </div>
+-->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(15);">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: 202504 투자성향분석 고도화 추가 step15 금융소비자 불이익사항 안내 – 확인사항 동의 --> 
+        
+        <!-- s: 202504 투자성향분석 고도화 추가 step17 펀드투자 관련 금융소비자 유의사항 안내 -->
+        <div id="step17" data-jx-step-no="17" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">펀드투자 관련 금융소비자 유의사항 안내</div>
+                    <ul class="list_number">
+                        <li>
+                            <div class="list_number_num">1.</div>
+                            <div class="list_number_cont">원금손실 가능성<br>
+                                펀드 상품은 <span class="color ty4">투자원금의 전부 또는 일부 손실이 발생할 수 있으며, 투자로 인한 손실은 투자자 본인에게 귀속</span>됩니다.</div>
+                        </li>
+                        <li>
+                            <div class="list_number_num">2.</div>
+                            <div class="list_number_cont">중도해지 불이익 사항<br>
+                                펀드 상품별로 조건은 다르지만 일정기간 내 <span class="color ty4">중도해지 시 환매수수료 또는 기타비용이 발생</span>할 수 있습니다.<br>
+                                상품가입 시 중도해지에 따른 불이익 사항을 반드시 확인하시기 바랍니다.</div>
+                        </li>
+                        <li>
+                            <div class="list_number_num">3.</div>
+                            <div class="list_number_cont">예금자보호 적용여부<br>
+                                펀드상품은 <span class="color ty4">예금자보호법에 따라 보호되지 않습니다.</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group"> 
+                    <!-- 꼭 알아두세요 -->
+                    <div class="acd_wrap accodian_wrap ty3 active">
+                        <div class="acd_head accodian_head">
+                            <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                        </div>
+                        <div class="acd_cont accodian_cont">
+                            <div class="inner">
+                                <ul class="list_bullet ty1">
+                                    <li>상품가입 전 투자설명서 등을 통해 상품내용을 충분히 이해하시고 투자결정을 하시기 바랍니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(15);">확인</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: 202504 투자성향분석 고도화 추가 step17 펀드투자 관련 금융소비자 유의사항 안내 --> 
+        
+        <!-- s: step2 투자성향분석 안내 팝업 2 -->
+        <div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="bottom_popup_wrap active" id="popup12">
+                    <div class="bottom_popup">
+                        <div class="bottom_popup_header">
+                            <h2 class="tit">투자성향분석 안내</h2>
+                            <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup12');">닫기</button>
+                        </div>
+                        <div class="bottom_popup_body">
+                            <div class="bg_box ty3"> <span class="fw_7">기은찬</span> 님의 이전 투자성향은 <br />
+                                <span class="fw_7 color ty4">적극투자형</span> 이에요.
+                                <div class="text_style ty12 mt_8">분석일 : 2024.12.31</div>
+                            </div>
+                            <ul class="list_bullet ty3 mt_12">
+                                <li>투자성향분석 대면, 비대면 합해 1일 1회만 가능하니 신중히 답변해 주세요.</li>
+                            </ul>
+                        </div>
+                        <div class="bottom_popup_footer">
+                            <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(3);">이전결과</button>
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다시분석</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step2 투자성향분석 안내 팝업 2 --> 
+        
+        <!-- s: step3 투자성향분석 -->
+        <div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <p class="txt">질문사항은 고객님의 투자정보를 분석하기 위한 자료로 활용될 예정이며 투자성향분석은 고객님의 투자성향에 적합한 상품 선택에 도움을 드리기 위해 활용됩니다.</p>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <div class="title_text ty1">A.기본투자성향</div>
+                    <div class="propensity_analyze">
+                        <div class="acd_group_list">
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 연령대(만 나이)를 선택해 주세요(법인 제외) 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q1. 고객님의 <span class="fw_7">연령대(만 나이)</span> 를 선택해 주세요(법인 제외) </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_1" />
+                                                    <label for="radio3_1" class="radio"> <i></i> <span>20대 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_2" disabled />
+                                                    <label for="radio3_2" class="radio"> <i></i> <span>30대</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_3" disabled />
+                                                    <label for="radio3_3" class="radio"> <i></i> <span>40대</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_4" disabled />
+                                                    <label for="radio3_4" class="radio"> <i></i> <span>50대</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_5" disabled />
+                                                    <label for="radio3_5" class="radio"> <i></i> <span>60대 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 수입원을 잘 나타내는 항목을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q2. 고객님의 <span class="fw_7">수입원</span> 을 잘 나타내는 항목을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio4" id="radio4_1" />
+                                                    <label for="radio4_1" class="radio"> <i></i> <span>일정수입이 발생하고 있고 증가 예상</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio4" id="radio4_2" />
+                                                    <label for="radio4_2" class="radio"> <i></i> <span>일정수입이 발생하고 있고 감소 예상</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio4" id="radio4_3" />
+                                                    <label for="radio4_3" class="radio"> <i></i> <span>현재 일정수입이 없거나 감소 또는 불안정</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 연소득 범위를 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q3. 고객님의 <span class="fw_7">연소득 범위</span> 를 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio5" id="radio5_1" />
+                                                    <label for="radio5_1" class="radio"> <i></i> <span>5,000만원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio5" id="radio5_2" />
+                                                    <label for="radio5_2" class="radio"> <i></i> <span>5,000만원~1억원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 연소득 범위를 선택해 주세요(법인은 매출액 기준) 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q3. 고객님의 <span class="fw_7">연소득 범위</span> 를 선택해 주세요(법인은 매출액 기준) </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio6" id="radio6_1" />
+                                                    <label for="radio6_1" class="radio"> <i></i> <span>5,000만원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio6" id="radio6_2" />
+                                                    <label for="radio6_2" class="radio"> <i></i> <span>5,000만원~1억원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio6" id="radio6_3" />
+                                                    <label for="radio6_3" class="radio"> <i></i> <span>1억원 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 현재 순자산(자산 및 부채)을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q4. 고객님의 현재 <span class="fw_7">순자산(자산 및 부채)</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio7" id="radio7_1" />
+                                                    <label for="radio7_1" class="radio"> <i></i> <span>5억원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio7" id="radio7_2" />
+                                                    <label for="radio7_2" class="radio"> <i></i> <span>5억원~1억원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio7" id="radio7_3" />
+                                                    <label for="radio7_3" class="radio"> <i></i> <span>10억원 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 총 금융자산대비 투자상품 비중을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q5. 고객님의 <span class="fw_7">총 금융자산대비 투자상품 비중</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio8" id="radio8_1" />
+                                                    <label for="radio8_1" class="radio"> <i></i> <span>5% 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio8" id="radio8_2" />
+                                                    <label for="radio8_2" class="radio"> <i></i> <span>10% 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio8" id="radio8_3" />
+                                                    <label for="radio8_3" class="radio"> <i></i> <span>15% 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio8" id="radio8_4" />
+                                                    <label for="radio8_4" class="radio"> <i></i> <span>20% 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio8" id="radio8_5" />
+                                                    <label for="radio8_5" class="radio"> <i></i> <span>20% 초과</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님께서 투자경험이 있는 상품을 선택해 주세요(중복 선택 가능)  목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q6. 고객님께서 <span class="fw_7">투자경험이 있는 상품</span> 을 선택해 주세요(중복 선택 가능) </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk2" />
+                                                    <label for="chk2" class="checkbox"> <i></i> <span> 안정형 상품 <br />
+                                                        <span class="fw_5">은행(예적금, 국채, 지방채, 보증채,MMF, CMA등)</span> </span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님께서 투자경험이 있는 상품을 선택해 주세요(중복 선택 가능)  목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q6. 고객님께서 <span class="fw_7">투자경험이 있는 상품</span> 을 선택해 주세요(중복 선택 가능) </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk92" />
+                                                    <label for="chk92" class="checkbox"> <i></i> <span> 안정형 상품 <br />
+                                                        <span class="fw_5">은행(예적금, 국채, 지방채, 보증채,MMF, CMA등)</span> </span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk3" />
+                                                    <label for="chk3" class="checkbox"> <i></i> <span>금융채, 고신용 회사채, 채권형 펀드, 원금보장형, ELF(ELS), 혼합형펀드 등</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk4" />
+                                                    <label for="chk4" class="checkbox"> <i></i> <span>신용도 중간 등급의 회사채 주식, 원금이 보장되지 않는 ELF(ELS), 혼합형펀드 등</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk5" />
+                                                    <label for="chk5" class="checkbox"> <i></i> <span>신용도가 낮은 회사채, 주식, 원금이 보장되지 않는 ELF(ELS),시장수익률 수준의 수익을 추가하는 주식형 펀드 등</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk6" />
+                                                    <label for="chk6" class="checkbox"> <i></i> <span>ELW, 선물옵션, 시장수익률 이상의 수익을 추구하는 주식형펀드, 파생상품에 투자하는 펀드, 주식 신용거래 등</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="과거 금융투자상품의 투자기간을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q7. 과거 금융투자상품의 <span class="fw_7">투자기간</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio66" id="radio66_1" />
+                                                    <label for="radio66_1" class="radio"> <i></i> <span>없음</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio66" id="radio66_2" />
+                                                    <label for="radio66_2" class="radio"> <i></i> <span>1년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio66" id="radio66_3" />
+                                                    <label for="radio66_3" class="radio"> <i></i> <span>3년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio66" id="radio66_4" />
+                                                    <label for="radio66_4" class="radio"> <i></i> <span>5년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio66" id="radio66_5" />
+                                                    <label for="radio66_5" class="radio"> <i></i> <span>5년 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="과거 금융투자상품의 취득 및 처분 목적을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q8. 과거 금융투자상품의 <span class="fw_7">취득 및 처분 목적</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio9" id="radio9_1" />
+                                                    <label for="radio9_1" class="radio"> <i></i> <span>여유자금</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio9" id="radio9_2" />
+                                                    <label for="radio9_2" class="radio"> <i></i> <span>생활비</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio9" id="radio9_3" />
+                                                    <label for="radio9_3" class="radio"> <i></i> <span>주택자금</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio9" id="radio9_4" />
+                                                    <label for="radio9_4" class="radio"> <i></i> <span>교육비</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio9" id="radio9_5" />
+                                                    <label for="radio9_5" class="radio"> <i></i> <span>기타</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="최근 1년간 금융투자상품의 가입 및 해지 횟수를 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q9. 최근 1년간 금융투자상품의 <span class="fw_7">가입 및 해지 횟수</span> 를 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio10" id="radio10_1" />
+                                                    <label for="radio10_1" class="radio"> <i></i> <span>4회 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio10" id="radio10_2" />
+                                                    <label for="radio10_2" class="radio"> <i></i> <span>5~8회 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio10" id="radio10_3" />
+                                                    <label for="radio10_3" class="radio"> <i></i> <span>8~12회 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio10" id="radio10_4" />
+                                                    <label for="radio10_4" class="radio"> <i></i> <span>12회 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="금융상품에 대한 지식수준이 어느 정도인지 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q9. 금융상품에 대한 <span class="fw_7">지식수준</span> 이 어느 정도인지 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio11" id="radio11_1" />
+                                                    <label for="radio11_1" class="radio"> <i></i> <span>매우 높은 수준 : 금융상품을 비롯하여 모든 투자대상 상품의 차이를 이해할 수 있는 정도</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio11" id="radio11_2" />
+                                                    <label for="radio11_2" class="radio"> <i></i> <span>높은 수준 : 투자할 수 있는 대부분의 금융상품의 차이를 구별할 수 있는 정도</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio11" id="radio11_3" />
+                                                    <label for="radio11_3" class="radio"> <i></i> <span>낮은 수준 : 주식과 채권의 차이를 구별할 수 있는 정도</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio11" id="radio11_4" />
+                                                    <label for="radio11_4" class="radio"> <i></i> <span>매우 낮은 수준 : 금융상품 중 예· 적금에 대해서만 알고 있는 정도</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="파생상품, 파생결합증권 또는 파생상품 투자펀드에 투자한 경험이 있다면 투자기간이 얼마나 되는지 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left">Q9. 파생상품, 파생결합증권 또는 파생상품 투자펀드에 투자한 경험이 있다면 투자기간이 얼마나 되는지 선택해 주세요</span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio12" id="radio12_1" />
+                                                    <label for="radio12_1" class="radio"> <i></i> <span>3년 이상</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio12" id="radio12_2" />
+                                                    <label for="radio12_2" class="radio"> <i></i> <span>1년~3년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio12" id="radio12_3" />
+                                                    <label for="radio12_3" class="radio"> <i></i> <span>1년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio12" id="radio12_4" />
+                                                    <label for="radio12_4" class="radio"> <i></i> <span>없음</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <div class="title_text ty1">B. 투자자금 성격(투자목적 및 투자가능시간)</div>
+                    <div class="propensity_analyze">
+                        <div class="acd_group_list">
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="현재 고객님께서 감내할 수 있는 투자자금의 손실 수준을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q12. 현재 고객님께서 감내할 수 있는 투자자금의 <span class="fw_7">손실 수준</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio13" id="radio13_1" />
+                                                    <label for="radio13_1" class="radio"> <i></i> <span>기대수익이 높다면 위험이 높아도 상관없음</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio13" id="radio13_2" />
+                                                    <label for="radio13_2" class="radio"> <i></i> <span>20% 미만까지 손실을 감수할 수 있음</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio13" id="radio13_3" />
+                                                    <label for="radio13_3" class="radio"> <i></i> <span>10% 미만까지 손실을 감수할 수 있음</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio13" id="radio13_4" />
+                                                    <label for="radio13_4" class="radio"> <i></i> <span>투자 원금 보장을 원함</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="금융투자상품의 취득 및 처분 목적을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q13. 금융투자상품의 <span class="fw_7">취득 및 처분 목적</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio40_1" />
+                                                    <label for="radio40_1" class="radio"> <i></i> <span>여유자금</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio40_2" />
+                                                    <label for="radio40_2" class="radio"> <i></i> <span>생활비</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio40_3" />
+                                                    <label for="radio40_3" class="radio"> <i></i> <span>주택자금</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio40_4" />
+                                                    <label for="radio40_4" class="radio"> <i></i> <span>교육비</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio40_5" />
+                                                    <label for="radio40_5" class="radio"> <i></i> <span>기타</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="이번 투자에 투자가능 기간을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q14. 이번 투자에 <span class="fw_7">투자가능 기간</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_11" />
+                                                    <label for="radio3_11" class="radio"> <i></i> <span>3년 이상</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_12" />
+                                                    <label for="radio3_12" class="radio"> <i></i> <span>2~3년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_13" />
+                                                    <label for="radio3_13" class="radio"> <i></i> <span>1~2년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_14" />
+                                                    <label for="radio3_14" class="radio"> <i></i> <span>6개월~1년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio3" id="radio3_15" />
+                                                    <label for="radio3_15" class="radio"> <i></i> <span>6개월 미만</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(15);">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step3 투자성향분석 --> 
+        
+        <!-- s: step4 투자성향분석 확인 -->
+        <div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+            <div class="util_btn_wrap"> <a href="#" class="btn s_1 c_1 r_3 link_to"> 다운로드 <span class="ico_box ico_download"></span> </a> <a href="#" class="btn s_1 c_1 r_3 link_to"> 공유하기 <span class="ico_box ico_share"></span> </a> </div>
+            <div class="content_wrap propensity_analyze_check ty3">
+                <div class="group">
+                    <div class="title_text ty1">투자성향분석 및 확인</div>
+                    <div class="title_text ty1">고객 투자성향</div>
+                    <div class="bg_box ty3"> <span class="fw_7">기은찬(목)</span> 님의 투자성향은 <strong class="color ty4">적극투자형</strong> 입니다. 
+                        
+                        <!-- 유형별 스타일 --> 
+                        <!-- 
+                <strong class="color ty9">공격투자형</strong> 입니다.
+                <strong class="color ty10">적극투자형</strong> 입니다.
+                <strong class="color ty11">위험중립형</strong> 입니다.
+                <strong class="color ty12">안전추구형</strong> 입니다.
+                <strong class="color ty13">안정형</strong> 입니다.
+                --> 
+                        <!-- 유형별 스타일 -->
+                        
+                        <div class="txt_style ty12">(분석일 : 2024년 06월 20일)</div>
+                    </div>
+                    <div class="personal_investment_graph mt_16">
+                        <div class="graph_area"> <img src="../../../../img/fnc/m_graph_im4.png" alt="" class="투자성향 적극투자형" /> 
+                            <!-- 
+                  <img src="../../../../img/fnc/m_graph_im4.png" alt="" class="투자성향 적극투자형">
+                  <img src="../../../../img/fnc/m_graph_im3.png" alt="" class="투자성향 위험중립형">
+                  <img src="../../../../img/fnc/m_graph_im2.png" alt="" class="투자성향 안정추구형">
+                  <img src="../../../../img/fnc/m_graph_im1.png" alt="" class="투자성향 안정형">
+                  <img src="../../../../img/fnc/m_graph_im5.png" alt="" class="투자성향 공격투자형">
+                   --> 
+                            <!-- 
+                  - 적극투자형 : m_graph_im4.png
+                  - 위험중립형 : m_graph_im3.png
+                  - 안정추구형 : m_graph_im2.png
+                  - 안정형     : m_graph_im1.png
+                  - 공격투자형 : m_graph_im5.png
+                  --> 
+                        </div>
+                        <div class="txt_style ty3 fw_4 mt_16">투자원금의 보전보다는 위험을 감내하더라도 높은 수준의 투자수익 실현을 추구합니다. 투자자금의 상당 부분을 주식, 주식형펀드 또는 파생상품 등의 위험자산에 투자할 의향이 있는 유형입니다.</div>
+                        <ul class="list_bullet ty3 mt_12">
+                            <li>적합한 펀드위험등급 : 3등급(다소 높은 위험) 이하</li>
+                        </ul>
+                        <!-- s: 202504 투자성향분석 고도화 추가 -->
+                        <button type="button" class="btn s_4 c_1 r_2 w_100p mt_16" onclick="uf_goStep(16);">투자성향분석 내용보기</button>
+                        <!-- e: 202504 투자성향분석 고도화 추가 -->
+                        <button type="button" class="btn s_4 c_2 r_2 w_100p mt_16" onclick="comLayerPopUtil.open('popup3');">투자성향별 적합한 펀드위험등급 보기</button>
+                    </div>
+                </div>
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step4 투자성향분석 확인 --> 
+        
+        <!-- s: 202504 투자성향분석 고도화 추가 step16 투자성향분석 내용보기 -->
+        <div id="step16" data-jx-step-no="16" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <p class="txt"><span>홍길동 </span>님이 기존에 작성한 투자성향 분석 내용을 안내해 드릴게요 </p>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <div class="title_text ty1">A.기본투자성향</div>
+                    <div class="propensity_analyze">
+                        <div class="acd_group_list">
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 연령대(만 나이)를 선택해 주세요(법인 제외) 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q1. 고객님의 <span class="fw_7">연령대(만 나이)</span> 를 선택해 주세요(법인 제외) </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_3" id="radio1_3_1" />
+                                                    <label for="radio1_3_1" class="radio"> <i></i> <span>20대 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_3" id="radio1_3_2" disabled />
+                                                    <label for="radio1_3_2" class="radio"> <i></i> <span>30대</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_2" id="radio1_3_3" disabled />
+                                                    <label for="radio1_3_3" class="radio"> <i></i> <span>40대</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_3" id="radio1_3_4" disabled />
+                                                    <label for="radio1_3_4" class="radio"> <i></i> <span>50대</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_3" id="radio1_3_5" disabled />
+                                                    <label for="radio1_3_5" class="radio"> <i></i> <span>60대 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 수입원을 잘 나타내는 항목을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q2. 고객님의 <span class="fw_7">수입원</span> 을 잘 나타내는 항목을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_4" id="radio1_4_1" />
+                                                    <label for="radio1_4_1" class="radio"> <i></i> <span>일정수입이 발생하고 있고 증가 예상</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_4" id="radio1_4_2" />
+                                                    <label for="radio1_4_2" class="radio"> <i></i> <span>일정수입이 발생하고 있고 감소 예상</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_4" id="radio1_4_3" />
+                                                    <label for="radio1_4_3" class="radio"> <i></i> <span>현재 일정수입이 없거나 감소 또는 불안정</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 연소득 범위를 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q3. 고객님의 <span class="fw_7">연소득 범위</span> 를 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_5" id="radio1_5_1" />
+                                                    <label for="radio1_5_1" class="radio"> <i></i> <span>5,000만원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_5" id="radio1_5_2" />
+                                                    <label for="radio1_5_2" class="radio"> <i></i> <span>5,000만원~1억원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 연소득 범위를 선택해 주세요(법인은 매출액 기준) 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q3. 고객님의 <span class="fw_7">연소득 범위</span> 를 선택해 주세요(법인은 매출액 기준) </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_6" id="radio1_6_1" />
+                                                    <label for="radio1_6_1" class="radio"> <i></i> <span>5,000만원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_6" id="radio1_6_2" />
+                                                    <label for="radio1_6_2" class="radio"> <i></i> <span>5,000만원~1억원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_6" id="radio1_6_3" />
+                                                    <label for="radio1_6_3" class="radio"> <i></i> <span>1억원 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 현재 순자산(자산 및 부채)을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q4. 고객님의 현재 <span class="fw_7">순자산(자산 및 부채)</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_7" id="radio1_7_1" />
+                                                    <label for="radio1_7_1" class="radio"> <i></i> <span>5억원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_7" id="radio1_7_2" />
+                                                    <label for="radio1_7_2" class="radio"> <i></i> <span>5억원~1억원 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_7" id="radio1_7_3" />
+                                                    <label for="radio1_7_3" class="radio"> <i></i> <span>10억원 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님의 총 금융자산대비 투자상품 비중을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q5. 고객님의 <span class="fw_7">총 금융자산대비 투자상품 비중</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_8" id="radio1_8_1" />
+                                                    <label for="radio1_8_1" class="radio"> <i></i> <span>5% 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_8" id="radio1_8_2" />
+                                                    <label for="radio1_8_2" class="radio"> <i></i> <span>10% 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_8" id="radio1_8_3" />
+                                                    <label for="radio1_8_3" class="radio"> <i></i> <span>15% 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_8" id="radio1_8_4" />
+                                                    <label for="radio1_8_4" class="radio"> <i></i> <span>20% 이하</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_8" id="radio1_8_5" />
+                                                    <label for="radio1_8_5" class="radio"> <i></i> <span>20% 초과</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님께서 투자경험이 있는 상품을 선택해 주세요(중복 선택 가능)  목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q6. 고객님께서 <span class="fw_7">투자경험이 있는 상품</span> 을 선택해 주세요(중복 선택 가능) </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk21" />
+                                                    <label for="chk2" class="checkbox"> <i></i> <span> 안정형 상품 <br />
+                                                        <span class="fw_5">은행(예적금, 국채, 지방채, 보증채,MMF, CMA등)</span> </span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="고객님께서 투자경험이 있는 상품을 선택해 주세요(중복 선택 가능)  목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q6. 고객님께서 <span class="fw_7">투자경험이 있는 상품</span> 을 선택해 주세요(중복 선택 가능) </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk1_92" />
+                                                    <label for="chk1_92" class="checkbox"> <i></i> <span> 안정형 상품 <br />
+                                                        <span class="fw_5">은행(예적금, 국채, 지방채, 보증채,MMF, CMA등)</span> </span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk1_3" />
+                                                    <label for="chk1_3" class="checkbox"> <i></i> <span>금융채, 고신용 회사채, 채권형 펀드, 원금보장형, ELF(ELS), 혼합형펀드 등</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk1_4" />
+                                                    <label for="chk1_4" class="checkbox"> <i></i> <span>신용도 중간 등급의 회사채 주식, 원금이 보장되지 않는 ELF(ELS), 혼합형펀드 등</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk1_5" />
+                                                    <label for="chk1_5" class="checkbox"> <i></i> <span>신용도가 낮은 회사채, 주식, 원금이 보장되지 않는 ELF(ELS),시장수익률 수준의 수익을 추가하는 주식형 펀드 등</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="checkbox" name="" id="chk1_6" />
+                                                    <label for="chk1_6" class="checkbox"> <i></i> <span>ELW, 선물옵션, 시장수익률 이상의 수익을 추구하는 주식형펀드, 파생상품에 투자하는 펀드, 주식 신용거래 등</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="과거 금융투자상품의 투자기간을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q7. 과거 금융투자상품의 <span class="fw_7">투자기간</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_66" id="radio1_66_1" />
+                                                    <label for="radio1_66_1" class="radio"> <i></i> <span>없음</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_66" id="radio1_66_2" />
+                                                    <label for="radio1_66_2" class="radio"> <i></i> <span>1년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_66" id="radio1_66_3" />
+                                                    <label for="radio1_66_3" class="radio"> <i></i> <span>3년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_66" id="radio1_66_4" />
+                                                    <label for="radio1_66_4" class="radio"> <i></i> <span>5년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_66" id="radio1_66_5" />
+                                                    <label for="radio1_66_5" class="radio"> <i></i> <span>5년 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="과거 금융투자상품의 취득 및 처분 목적을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q8. 과거 금융투자상품의 <span class="fw_7">취득 및 처분 목적</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_9" id="radio1_9_1" />
+                                                    <label for="radio1_9_1" class="radio"> <i></i> <span>여유자금</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_9" id="radio1_9_2" />
+                                                    <label for="radio1_9_2" class="radio"> <i></i> <span>생활비</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_9" id="radio1_9_3" />
+                                                    <label for="radio1_9_3" class="radio"> <i></i> <span>주택자금</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_9" id="radio1_9_4" />
+                                                    <label for="radio1_9_4" class="radio"> <i></i> <span>교육비</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_9" id="radio1_9_5" />
+                                                    <label for="radio1_9_5" class="radio"> <i></i> <span>기타</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="최근 1년간 금융투자상품의 가입 및 해지 횟수를 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q9. 최근 1년간 금융투자상품의 <span class="fw_7">가입 및 해지 횟수</span> 를 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_10" id="radio1_10_1" />
+                                                    <label for="radio1_10_1" class="radio"> <i></i> <span>4회 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_10" id="radio1_10_2" />
+                                                    <label for="radio1_10_2" class="radio"> <i></i> <span>5~8회 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_10" id="radio1_10_3" />
+                                                    <label for="radio1_10_3" class="radio"> <i></i> <span>8~12회 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_10" id="radio1_10_4" />
+                                                    <label for="radio1_10_4" class="radio"> <i></i> <span>12회 이상</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="금융상품에 대한 지식수준이 어느 정도인지 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q9. 금융상품에 대한 <span class="fw_7">지식수준</span> 이 어느 정도인지 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_11" id="radio1_11_1" />
+                                                    <label for="radio1_11_1" class="radio"> <i></i> <span>매우 높은 수준 : 금융상품을 비롯하여 모든 투자대상 상품의 차이를 이해할 수 있는 정도</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_11" id="radio1_11_2" />
+                                                    <label for="radio1_11_2" class="radio"> <i></i> <span>높은 수준 : 투자할 수 있는 대부분의 금융상품의 차이를 구별할 수 있는 정도</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_11" id="radio1_11_3" />
+                                                    <label for="radio1_11_3" class="radio"> <i></i> <span>낮은 수준 : 주식과 채권의 차이를 구별할 수 있는 정도</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_11" id="radio1_11_4" />
+                                                    <label for="radio1_11_4" class="radio"> <i></i> <span>매우 낮은 수준 : 금융상품 중 예· 적금에 대해서만 알고 있는 정도</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="파생상품, 파생결합증권 또는 파생상품 투자펀드에 투자한 경험이 있다면 투자기간이 얼마나 되는지 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left">Q9. 파생상품, 파생결합증권 또는 파생상품 투자펀드에 투자한 경험이 있다면 투자기간이 얼마나 되는지 선택해 주세요</span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_12" id="radio1_12_1" />
+                                                    <label for="radio1_12_1" class="radio"> <i></i> <span>3년 이상</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_12" id="radio1_12_2" />
+                                                    <label for="radio1_12_2" class="radio"> <i></i> <span>1년~3년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_12" id="radio1_12_3" />
+                                                    <label for="radio1_12_3" class="radio"> <i></i> <span>1년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_12" id="radio1_12_4" />
+                                                    <label for="radio1_12_4" class="radio"> <i></i> <span>없음</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <div class="title_text ty1">B. 투자자금 성격(투자목적 및 투자가능시간)</div>
+                    <div class="propensity_analyze">
+                        <div class="acd_group_list">
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="현재 고객님께서 감내할 수 있는 투자자금의 손실 수준을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q12. 현재 고객님께서 감내할 수 있는 투자자금의 <span class="fw_7">손실 수준</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_13" id="radio1_13_1" />
+                                                    <label for="radio1_13_1" class="radio"> <i></i> <span>기대수익이 높다면 위험이 높아도 상관없음</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_13" id="radio1_13_2" />
+                                                    <label for="radio1_13_2" class="radio"> <i></i> <span>20% 미만까지 손실을 감수할 수 있음</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_13" id="radio1_13_3" />
+                                                    <label for="radio1_13_3" class="radio"> <i></i> <span>10% 미만까지 손실을 감수할 수 있음</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_13" id="radio1_13_4" />
+                                                    <label for="radio1_13_4" class="radio"> <i></i> <span>투자 원금 보장을 원함</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="금융투자상품의 취득 및 처분 목적을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q13. 금융투자상품의 <span class="fw_7">취득 및 처분 목적</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_40" id="radio1_40_1" />
+                                                    <label for="radio1_40_1" class="radio"> <i></i> <span>여유자금</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_40" id="radio1_40_2" />
+                                                    <label for="radio1_40_2" class="radio"> <i></i> <span>생활비</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_40" id="radio1_40_3" />
+                                                    <label for="radio1_40_3" class="radio"> <i></i> <span>주택자금</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_40" id="radio1_40_4" />
+                                                    <label for="radio1_40_4" class="radio"> <i></i> <span>교육비</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_40" id="radio1_40_5" />
+                                                    <label for="radio1_40_5" class="radio"> <i></i> <span>기타</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acd_wrap accodian_wrap ty1">
+                                <div class="acd_head accodian_head small">
+                                    <button type="button" title="이번 투자에 투자가능 기간을 선택해 주세요 목록보기" aria-expanded="false" class="acd_btn"> <span class="title"> <span class="left"> Q14. 이번 투자에 <span class="fw_7">투자가능 기간</span> 을 선택해 주세요 </span> </span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="term_list">
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_30" id="radio1_30_11" />
+                                                    <label for="radio1_30_11" class="radio"> <i></i> <span>3년 이상</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_30" id="radio1_30_12" />
+                                                    <label for="radio1_30_12" class="radio"> <i></i> <span>2~3년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_30" id="radio1_30_13" />
+                                                    <label for="radio1_30_13" class="radio"> <i></i> <span>1~2년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_30" id="radio1_30_14" />
+                                                    <label for="radio1_30_14" class="radio"> <i></i> <span>6개월~1년 미만</span> </label>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="label">
+                                                    <input type="radio" name="radio1_30" id="radio1_30_15" />
+                                                    <label for="radio1_30_15" class="radio"> <i></i> <span>6개월 미만</span> </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: 202504 투자성향분석 고도화 추가 step16 투자성향분석 내용보기 --> 
+        
+        <!-- s: step5 상품목록 -->
+        <div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="link_bann"> <a href="#" onclick="uf_goStep(7);"> <img src="../../../../img/fnc/img_fund_link_bann.png" alt="비교해보고 선택하여 실속있게 가입하세요! Match 1/1 우량채권에 분산 VS 국내 안정채권 바로가기" /> </a> </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty4" />
+                <div class="group">
+                    <div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+                        <div class="dropdown_text">전체 · 주식형 · 적합순</div>
+                    </div>
+                    <div class="bg_box ty1">
+                        <p class="txt_style ty2 fw_4"> 고객님의 투자성향은 <br />
+                            <!-- 투자성향에 따른 컬러 클래스 : ty1 ~ ty5 --> 
+                            <strong class="color ty9">공격투자형</strong> 입니다. 
+                            
+                            <!-- 유형별 스타일 --> 
+                            <!-- 
+                  <strong class="color ty9">공격투자형</strong> 입니다.
+                  <strong class="color ty10">적극투자형</strong> 입니다.
+                  <strong class="color ty11">위험중립형</strong> 입니다.
+                  <strong class="color ty12">안전추구형</strong> 입니다.
+                  <strong class="color ty13">안정형</strong> 입니다.
+                  --> 
+                            <!-- 유형별 스타일 --> 
+                        </p>
+                        <p class="txt_caution mt_8">투자성향에 적합한 상품만 조회합니다.</p>
+                    </div>
+                    <div class="content_head mt_32">
+                        <div class="content_head_left">
+                            <div class="txt_style ty3 fw_7"> 검색 결과 <span class="count">38</span> 개 </div>
+                        </div>
+                    </div>
+                    <ul class="space_list_ty3 loan_list ty2">
+                        <li>
+                            <div class="loan_info"> <a href="#" role="button" class="block" onclick="uf_goStep(6);">
+                                <div class="badge_cont"> <span class="badge ty3 colorC6">1등급</span> <span class="badge ty3 colorC5">2등급</span> <span class="badge ty3 colorC4">3등급</span> <span class="badge ty3 colorC3">4등급</span> <span class="badge ty3 colorC2">5등급</span> <span class="badge ty3 colorC1">6등급</span> <span class="badge ty3 colorD1">일반펀드</span> <span class="badge ty3 colorD1">주식형</span> <span class="badge ty3 colorETC6">원금손실가능</span> </div>
+                                <div class="box">
+                                    <div class="txt_wrap">
+                                        <div class="tit">BNK삼성전자중소형증권투자신탁1호(주식)A-e</div>
+                                        <div class="txt"> (클래스명칭 : 수수료선취-온라인) <br />
+                                            집합투자재산의 60% 이상을 국내주식에 투자하며, 삼성전자를 편입하여 변동성을 축소하는 동시에 중소형주에 투자를 함으로써 비교지수 대비 초과수익 달성을 추구하는 펀드 </div>
+                                    </div>
+                                    <div class="info_wrap">
+                                        <div class="cate"> <span>개인사업자</span> <span>기업</span> </div>
+                                        <div class="type"> <span class="private">개인사업자</span> <span class="web">인터넷</span> <span class="mobile">모바일</span> <span class="branch">영업점</span> </div>
+                                    </div>
+                                    <div class="rate">
+                                        <p class="per"> <span class="num">4.50</span> <span class="unit">%</span> </p>
+                                        <p class="sub_txt">(최근1개월수익률)</p>
+                                    </div>
+                                </div>
+                                </a>
+                                <div class="btn_area ty1">
+                                    <button type="button" class="btn s_4 c_2 r_2" onclick="window.location.href='fnc_fnm_010201_1.html'">가입하기</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li> 
+                            <!-- s: 오프라인 개설 상품일 시 -->
+                            <div class="loan_info"> <a href="#" role="button" class="block" onclick="uf_goStep(6);">
+                                <div class="badge_cont"> <span class="badge ty3 colorC6">6등급</span> <span class="badge ty3 colorETC6">원금손실가능</span> </div>
+                                <div class="box">
+                                    <div class="txt_wrap">
+                                        <div class="tit">미래에셋인도중소형포커스증권자투자신탁1호(주식)A-e</div>
+                                        <div class="txt"> (클래스명칭 : 수수료선취-오프라인) <br />
+                                            인도에서 설립되거나 인도에서 대부분의 경제활동을 영위하는 기업 중 향후 인도의 대형기업으로 성장할 잠재력이 높은 중소형 기업에 60% 이상 투자하는 펀드 </div>
+                                    </div>
+                                    <div class="info_wrap">
+                                        <div class="cate"> <span>기업</span> </div>
+                                    </div>
+                                </div>
+                                </a> </div>
+                            <!-- e: 오프라인 개설 상품일 시 --> 
+                        </li>
+                        <li>
+                            <div class="no_result_msg">
+                                <div class="msg">검색 결과가 없습니다</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn_area ty1 mt_32">
+                        <button type="button" class="btn s_2 c_1 r_1">더보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step5 상품목록 --> 
+        
+        <!-- s: step6 상품 상세 -->
+        <div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+            <div class="content_wrap ty3 card_account_join deposit_product"> 
+                <!-- s: 상단 상품 요약 -->
+                <div class="group account_product_list">
+                    <div class="group_item">
+                        <div class="group_item_info">
+                            <div class="badge_cont"> <span class="badge ty3 colorC2">2등급</span> <span class="badge ty3 colorD1">일반펀드</span> <span class="badge ty3 colorD1">주식형</span> <span class="badge ty3 colorETC6">원금손실가능</span> </div>
+                            <div class="txt5">BNK삼성전자중소형증권투자신탁1호(주식)A-e</div>
+                            <div class="txt_style ty7">(클래스명칭: 수수료선취-온라인)</div>
+                        </div>
+                        <ul class="list_bullet ty2 mt_16">
+                            <li> 기준가 : <strong>0원 / 전일대비 0.00</strong> <span class="price_gap"> <span class="ico_up"> <span class="blind">증가</span> 0.03 </span> </span> </li>
+                            <li> 기준가 : <strong>0원 / 전일대비 0.00</strong> <span class="price_gap"> <span class="ico_down"> <span class="blind">감소</span> 0.03 </span> </span> </li>
+                            <li> 위험등급 : <strong>2등급</strong> </li>
+                            <li> 상품유형 : <strong>주식형</strong> </li>
+                            <li> 가입구분 : <strong>개인, 법인</strong> </li>
+                            <li> 운용규모 : <strong>220억원</strong> </li>
+                        </ul>
+                        <div class="bg_box ty1 mt_16">
+                            <p class="txt_caution"> 이 집합투자증권은 <span class="color ty4">운용실적에 따라 손익이 결정되는 실적배당상품</span> 으로 <span class="color ty4">투자원금 손실이 발생할 수 있으니</span> 신중히 투자해 주세요. </p>
+                        </div>
+                        <div class="btn_area ty1 btn_product_detail mt_24">
+                            <div class="row">
+                                <button type="button" class="btn s_5 c_3 r_2">가입하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 상단 상품 요약 -->
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- s: 탭 버튼 -->
+                
+                <div class="tab_list_scroll_wrap">
+                    <div class="tab_list ty1 scrollable" role="tablist">
+                        <button type="button" role="tab" aria-selected="true" class="active">요약</button>
+                        <button type="button" role="tab" aria-selected="false">개요</button>
+                        <button type="button" role="tab" aria-selected="false">성과 분석</button>
+                        <button type="button" role="tab" aria-selected="false">약관</button>
+                        <button type="button" role="tab" aria-selected="false">금융소비자권리</button>
+                        <button type="button" role="tab" aria-selected="false">유의사항</button>
+                    </div>
+                </div>
+                
+                <!-- e: 탭 버튼 --> 
+                <!-- s: 탭 컨텐츠 --> 
+                <!-- s: 요약 -->
+                <div class="tab_cont active" role="tabpanel" aria-expanded="true">
+                    <div class="group prd_detail">
+                        <div class="tabcon">
+                            <div>
+                                <div class="chart_area"></div>
+                                <div class="tbl ty2 mt_16">
+                                    <table>
+                                        <caption>
+                                        캡션 필수 입력
+                                        </caption>
+                                        <colgroup>
+                                        <col style="width: 20%" />
+                                        <col style="width: 20%" />
+                                        <col style="width: 20%" />
+                                        <col style="width: 20%" />
+                                        <col style="width: 20%" />
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">2024</th>
+                                                <th scope="col">2023</th>
+                                                <th scope="col">2022</th>
+                                                <th scope="col">2021</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>펀드</td>
+                                                <td>2.37</td>
+                                                <td>47.61</td>
+                                                <td>-24.78</td>
+                                                <td>9.76</td>
+                                            </tr>
+                                            <tr>
+                                                <td>BM</td>
+                                                <td>2.37</td>
+                                                <td>47.61</td>
+                                                <td>-24.78</td>
+                                                <td>9.76</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="list_bullet ty3">
+                                    <li>본 수익률은 세전수익률로 표기되었으며, 과거 운영실적이 미래의 수익률을 보장하는 것은 아닙니다.</li>
+                                </ul>
+                                <div class="mt_40">
+                                    <div class="title_text ty1 with_sub_txt"> 자산구성 <span class="sub_txt fw_4 txt_style ty10">(기준일:2024.03.08)</span> </div>
+                                    <div class="bar_graph">
+                                        <div class="bar_area section1" style="width: 70%">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="bar_area section2" style="width: 5%">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="bar_area section4" style="width: 15%">
+                                            <div class="bar"></div>
+                                        </div>
+                                        <div class="bar_area section5" style="width: 10%">
+                                            <div class="bar"></div>
+                                        </div>
+                                    </div>
+                                    <ul class="legend mt_8">
+                                        <li class="item"> 국내주식 : <em>80</em> % </li>
+                                        <li class="item"> 국외주식 : <em>5</em> % </li>
+                                        <li class="item"> 펀드 : <em>0</em> % </li>
+                                        <li class="item"> 유동성 : <em>15</em> % </li>
+                                        <li class="item"> 국내채권 : <em>10</em> % </li>
+                                        <li class="item"> 국외채권 : <em>0</em> % </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 요약 --> 
+                <!-- s: 개요 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="false">
+                    <div class="group prd_detail">
+                        <div class="tabcon">
+                            <div> 외부 컨텐츠 삽입 구간 <br />
+                                외부 컨텐츠 삽입 구간 </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 개요 --> 
+                <!-- s: 성과 분석 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="false">
+                    <div class="group prd_detail">
+                        <div class="tabcon">
+                            <div> 외부 컨텐츠 삽입 구간 <br />
+                                외부 컨텐츠 삽입 구간 </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 성과 분석 --> 
+                <!-- s: 약관 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="false">
+                    <div class="group prd_detail">
+                        <div class="tabcon">
+                            <div> 외부 컨텐츠 삽입 구간 <br />
+                                외부 컨텐츠 삽입 구간 </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 약관 --> 
+                <!-- s: 금융소비자권리 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="false">
+                    <div class="group prd_detail">
+                        <div class="tabcon">
+                            <div> 외부 컨텐츠 삽입 구간 <br />
+                                외부 컨텐츠 삽입 구간 </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 금융소비자권리 --> 
+                <!-- s: 유의사항 -->
+                <div class="tab_cont" role="tabpanel" aria-expanded="false">
+                    <div class="group prd_detail">
+                        <div class="tabcon">
+                            <div> 외부 컨텐츠 삽입 구간 <br />
+                                외부 컨텐츠 삽입 구간 </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 유의사항 --> 
+                <!-- e: 탭 컨텐츠 --> 
+            </div>
+        </div>
+        <!-- e: step6 상품 상세 --> 
+        
+        <!-- s: step7 펀드 비교 -->
+        <div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+            <div class="content_wrap">
+                <div class="compare_slide_area">
+                    <div id="swiper_1" class="slide_swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="slide_item">
+                                    <div class="fund_compare_box">
+                                        <div class="fund_item">
+                                            <div class="item_top">
+                                                <div class="info">
+                                                    <div class="type">
+                                                        <div class="favorite_tooltip visible">우량채권에 분산투자</div>
+                                                        중단기채권111 </div>
+                                                    <div class="name">BNK삼성전자증권 투자신탁1호(주식)C-e투자신탁1호(주식)C-e투자신탁1호(주식)C-e투자신탁1호(주식)C-e</div>
+                                                </div>
+                                                <div class="btn_area ty5">
+                                                    <button type="button" class="btn s_4 c_1 r_2">상세정보보기</button>
+                                                    <button type="button" class="btn s_4 c_3 r_2">가입하기</button>
+                                                </div>
+                                            </div>
+                                            <div class="item_cont">
+                                                <ul class="compare_list">
+                                                    <li>
+                                                        <div class="tit">3개월 수익률</div>
+                                                        <div class="cont"> <span class="per"> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">펀드유형</div>
+                                                        <div class="cont"> 국내 <span class="sub_txt">(채권/혼합)</span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">선취판매수수료율</div>
+                                                        <div class="cont"> <span class="per"> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">신탁보수</div>
+                                                        <div class="cont"> <span class="per"> <span class="txt">연</span> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">환매수수료</div>
+                                                        <div class="cont">없음</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="vs">VS</div>
+                                        <div class="fund_item">
+                                            <div class="item_top">
+                                                <div class="info">
+                                                    <div class="type">
+                                                        <div class="favorite_tooltip">국내 안정채권</div>
+                                                        단기채권 </div>
+                                                    <div class="name">삼성전자증권투자신탁1호(주식)C-e</div>
+                                                </div>
+                                                <div class="btn_area ty5">
+                                                    <button type="button" class="btn s_4 c_1 r_2">상세정보보기</button>
+                                                    <button type="button" class="btn s_4 c_3 r_2">가입하기</button>
+                                                </div>
+                                            </div>
+                                            <div class="item_cont">
+                                                <ul class="compare_list">
+                                                    <li>
+                                                        <div class="tit">3개월 수익률</div>
+                                                        <div class="cont"> <span class="per"> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">펀드유형</div>
+                                                        <div class="cont"> 국내 <span class="sub_txt">(채권/혼합)</span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">선취판매수수료율</div>
+                                                        <div class="cont"> <span class="per"> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">신탁보수</div>
+                                                        <div class="cont"> <span class="per"> <span class="txt">연</span> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">환매수수료</div>
+                                                        <div class="cont">없음</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="slide_item">
+                                    <div class="fund_compare_box">
+                                        <div class="fund_item">
+                                            <div class="item_top">
+                                                <div class="info">
+                                                    <div class="type">
+                                                        <div class="favorite_tooltip visible">우량채권에 분산투자</div>
+                                                        중단기채권222 </div>
+                                                    <div class="name">BNK삼성전자증권 투자신탁1호(주식)C-e투자신탁1호(주식)C-e투자신탁1호(주식)C-e투자신탁1호(주식)C-e</div>
+                                                </div>
+                                                <div class="btn_area ty5">
+                                                    <button type="button" class="btn s_4 c_1 r_2">상세정보보기</button>
+                                                    <button type="button" class="btn s_4 c_3 r_2">가입하기</button>
+                                                </div>
+                                            </div>
+                                            <div class="item_cont">
+                                                <ul class="compare_list">
+                                                    <li>
+                                                        <div class="tit">3개월 수익률</div>
+                                                        <div class="cont"> <span class="per"> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">펀드유형</div>
+                                                        <div class="cont"> 국내 <span class="sub_txt">(채권/혼합)</span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">선취판매수수료율</div>
+                                                        <div class="cont"> <span class="per"> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">신탁보수</div>
+                                                        <div class="cont"> <span class="per"> <span class="txt">연</span> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">환매수수료</div>
+                                                        <div class="cont">없음</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="vs">VS</div>
+                                        <div class="fund_item">
+                                            <div class="item_top">
+                                                <div class="info">
+                                                    <div class="type">
+                                                        <div class="favorite_tooltip">국내 안정채권</div>
+                                                        단기채권 </div>
+                                                    <div class="name">삼성전자증권투자신탁1호(주식)C-e</div>
+                                                </div>
+                                                <div class="btn_area ty5">
+                                                    <button type="button" class="btn s_4 c_1 r_2">상세정보보기</button>
+                                                    <button type="button" class="btn s_4 c_3 r_2">가입하기</button>
+                                                </div>
+                                            </div>
+                                            <div class="item_cont">
+                                                <ul class="compare_list">
+                                                    <li>
+                                                        <div class="tit">3개월 수익률</div>
+                                                        <div class="cont"> <span class="per"> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">펀드유형</div>
+                                                        <div class="cont"> 국내 <span class="sub_txt">(채권/혼합)</span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">선취판매수수료율</div>
+                                                        <div class="cont"> <span class="per"> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">신탁보수</div>
+                                                        <div class="cont"> <span class="per"> <span class="txt">연</span> <span class="rate"> 1.72 <span class="txt_unit">%</span> </span> </span> </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tit">환매수수료</div>
+                                                        <div class="cont">없음</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="swiper-fraction-wrap">
+                            <button type="button" class="swiper-button-prev"><span class="sr_only">이전 슬라이드</span></button>
+                            <div class="swiper-pagination" aria-label="슬라이드 페이지네이션"></div>
+                            <button type="button" class="swiper-button-next"><span class="sr_only">다음 슬라이드</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: step7 펀드 비교 --> 
+        
+        <!-- s: step99 투자성향별 가입가능 상품 안내-->
+        <div class="bottom_popup_wrap" id="popup3">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">투자성향별 가입 가능 상품 안내</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup3');">닫기</button>
+                </div>
+                <div class="bottom_popup_body propensity_analyze_check">
+                    <div class="tbl ty2 guide_tbl">
+                        <table>
+                            <caption>
+                            구분, 안정형, 안정 추구형, 위험 중립형, 적극 투자형, 공격 투자형 정보로 이루어진 표
+                            </caption>
+                            <colgroup>
+                            <col style="width: 30%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            <col style="width: 14%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">안정형</th>
+                                    <th scope="col"> 안정 <br />
+                                        추구형 </th>
+                                    <th scope="col"> 위험 <br />
+                                        중립형 </th>
+                                    <th scope="col"> 적극 <br />
+                                        투자형 </th>
+                                    <th scope="col"> 공격 <br />
+                                        투자형 </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 6등급 <br />
+                                        <span class="ps">매우 낮은 위험</span></td>
+                                    <td class="level5 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level4 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level3 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level2 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level1 in"> O <span class="blind">해당됨</span></td>
+                                </tr>
+                                <tr>
+                                    <td> 5등급 <br />
+                                        <span class="ps">낮은위험</span></td>
+                                    <td class="level5"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level4 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level3 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level2 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level1 in"> O <span class="blind">해당됨</span></td>
+                                </tr>
+                                <tr>
+                                    <td> 4등급 <br />
+                                        <span class="ps">보통위험</span></td>
+                                    <td class="level5"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level4"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level3 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level2 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level1 in"> O <span class="blind">해당됨</span></td>
+                                </tr>
+                                <tr>
+                                    <td> 3등급 <br />
+                                        <span class="ps">다소 높은 위험</span></td>
+                                    <td class="level5"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level4"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level3"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level2 in"> O <span class="blind">해당됨</span></td>
+                                    <td class="level1 in"> O <span class="blind">해당됨</span></td>
+                                </tr>
+                                <tr>
+                                    <td> 2등급 <br />
+                                        <span class="ps">높은위험</span></td>
+                                    <td class="level5"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level4"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level3"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level2"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level1 in"> O <span class="blind">해당됨</span></td>
+                                </tr>
+                                <tr>
+                                    <td> 1등급 <br />
+                                        <span class="ps">매우 높은 위험</span></td>
+                                    <td class="level5"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level4"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level3"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level2"> X <span class="blind">해당안됨</span></td>
+                                    <td class="level1 in"> O <span class="blind">해당됨</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="list_bullet ty3 mt_12">
+                        <li>O 적합 X 부적합</li>
+                    </ul>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: step99 투자성향별 가입가능 상품 안내--> 
+        
+        <!-- s: Popup --> 
+        <!-- 조회구분 팝업 -->
+        <div class="bottom_popup_wrap" id="popup1">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">조회구분</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="form_group space_updown_group">
+                        <div class="input_label ty1">상품명 검색</div>
+                        <div class="input has_search">
+                            <input type="text" name="" id="" title="상품명 입력" placeholder="상품명 입력" />
+                            <button type="button" class="search">검색</button>
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <hr aria-hidden="true" class="divider ty1 full" />
+                        <h3 class="input_label ty1">펀드구분</h3>
+                        <div class="search_group">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">국내</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">해외</span></button>
+                            </div>
+                        </div>
+                        <h3 class="input_label ty1">펀드유형</h3>
+                        <div class="search_group">
+                            <div class="btn_area toggleable ty4" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">주식형</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">주식혼합형</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">채권혼합형</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">채권형</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">파생상품형</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">재간접투자형</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">MMF</span></button>
+                            </div>
+                        </div>
+                        <div class="space_updown">
+                            <h3 class="input_label ty1">펀드위험등급</h3>
+                            <div class="search_group">
+                                <div class="btn_area toggleable ty4" role="radiogroup">
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">1등급</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">2등급</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">3등급</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">4등급</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">5등급</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">6등급</span></button>
+                                </div>
+                            </div>
+                            <ul class="list_bullet ty3">
+                                <li>숫자가 적을수록 고위험 펀드</li>
+                            </ul>
+                        </div>
+                        <div class="space_updown">
+                            <h3 class="input_label ty1">가입방법</h3>
+                            <div class="search_group">
+                                <div class="btn_area toggleable ty4" role="radiogroup">
+                                    <button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">인터넷</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">모바일</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">영업점</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space_updown">
+                            <h3 class="input_label ty1">판매여부</h3>
+                            <div class="search_group">
+                                <div class="btn_area toggleable ty4" role="radiogroup">
+                                    <button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">판매중</span></button>
+                                    <button type="button" role="radio" aria-checked="false"><span class="text">판매중지</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="input_label ty1">조회방법</h3>
+                        <div class="search_group">
+                            <div class="btn_area clickable ty1" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="true" class="active"><span class="text">추천순</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">인기순</span></button>
+                                <button type="button" role="radio" aria-checked="false"><span class="text">수익률순</span></button>
+                                <button type="button" role="radio" aria-checked="false" class="half"><span class="text">최신순</span></button>
+                                <button type="button" role="radio" aria-checked="false" class="half"><span class="text">적합순</span></button>
+                            </div>
+                        </div>
+                        <div class="space_updown" id="periodBtnArea">
+                            <h3 class="input_label ty1">수익률기준</h3>
+                            <div class="search_group">
+                                <div class="btn_area clickable ty3" role="radiogroup" id="search5">
+                                    <button type="button" role="radio" id="btnPrdcPeriod1" aria-checked="true" class="active"><span class="text">1개월</span></button>
+                                    <button type="button" role="radio" id="btnPrdcPeriod2" aria-checked="false"><span class="text">3개월</span></button>
+                                    <button type="button" role="radio" id="btnPrdcPeriod3" aria-checked="false"><span class="text">6개월</span></button>
+                                    <button type="button" role="radio" id="btnPrdcPeriod4" aria-checked="false"><span class="text">12개월</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2">조회</button>
+                </div>
+            </div>
+        </div>
+        <!-- // 조회구분 팝업 --> 
+        
+        <!-- s: 투자유의사항 안내 -->
+        <div class="bottom_popup_wrap" id="popup2">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">투자유의사항 안내</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <div class="investment_attention"></div>
+                    <div class="investment_attention_guide">
+                        <p> <strong>삼성 WTI원유 특별자산 투자신탁1호(WTI원유-파생형)는 뉴욕상업거래소(NYMEX)에서 거래되는 ‘WTI원유선물‘에 주로 투자하며, 일부는 국내외 상장된 WTI원유 ETF에도 투자하고 있습니다.</strong> </p>
+                        <p> 동 펀드는 선물교체비용과 ETF의 가격변동성으로 인해 <strong class="color ty4">유가 상승 시 수익이 기대에 미치지 못할 가능성</strong> 이 높으며, </p>
+                        <p> 또한, 유가 급락이 지속될 시 <strong class="color ty4">주요 투자대상인 선물 가격이 마이너스로 진입할 가능성</strong> 도 배제할 수 없습니다. </p>
+                        <p> 가격이 마이너스로 진입할 경우 <strong class="color ty4">투자원금 대부분을 잃을 수 있는 1등급(매우높은 위험) 상품</strong> 이므로 투자에 유의하여 주시기 바랍니다. </p>
+                    </div>
+                </div>
+                <div class="bottom_popup_footer">
+                    <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup2');">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 투자유의사항 안내 --> 
+        
+        <!-- e: Popup --> 
+    </div>
+    <!-- e: 금융상품-펀드 --> 
+</div>
+
+<!--**퍼블용** 데모확인 로티 구동 스크립트--> 
+<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script> 
+<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+</body>
+</html>
+<script>
+	const swiper1 = new Swiper("#swiper_1", {
+		observer: true,
+		observerParents: true,
+		// autoHeight: true,
+		watchOverflow: true,
+		pagination: {
+			el: "#swiper_1 .swiper-pagination",
+			// s: 24-11-15 수정
+			// clickable: true,
+			// e: 24-11-15 수정
+			type: "bullets",
+			// s: 24-11-15 수정
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '" aria-label="슬라이드 ' + (index + 1) + '">' + (index + 1) + "</span>";
+			},
+			// e: 24-11-15 수정
+		},
+		navigation: {
+			nextEl: "#swiper_1 .swiper-button-next",
+			prevEl: "#swiper_1 .swiper-button-prev",
+		},
+		on: {
+			init: function () {
+				// s: 24-10-25 추가
+				if (this.slides.length <= 1) $(".swiper-fraction-wrap").hide();
+				// e: 24-10-25 추가
+				this.slides.each(function (slide, index) {
+					// s: 24-11-15 수정
+					$(slide).prop("tabindex", "-1").attr({ "aria-hidden": "true" });
+					// e: 24-11-15 수정
+					$(slide).eq(index).prop("tabindex", "0").attr("aria-hidden", "false");
+				});
+			},
+			slideChange: function () {
+				const slideCount = this.activeIndex;
+				// s: 24-11-15 수정
+				$("#swiper_1").find(".swiper-slide").prop("tabindex", "-1").attr({ "aria-hidden": "true" });
+				// e: 24-11-15 수정
+				$("#swiper_1").find(".swiper-slide").eq(slideCount).prop("tabindex", "0").attr("aria-hidden", "false");
+			},
+			afterInit: function () {
+				if (this.slides.length == 1) {
+					$("#swiper_1 .swiper-pagination").hide();
+					$(".fund_item").addClass("pb_0");
+				}
+			},
+		},
+	});
+</script>

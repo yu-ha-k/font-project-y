@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 정지사유 조회 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 카드 정지사유 선택 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty2">
+						<div class="group">
+							<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+								<div class="dropdown_text">1234-****-9999-1234 카드별명</div>
+							</div>
+						</div>
+
+						<div class="group card_stop">
+							<div class="title_text ty1">카드 정지사유 선택</div>
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block">
+											<div class="card_item_info">
+												<div class="txt1">사고등록일</div>
+												<div class="txt2">2024.05.12</div>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">거래정지 사유</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">본인거래정지요청(카드)</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">사고등록 부서</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">영업부</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="no_result_msg">
+										<div class="msg">
+											해당 카드의 정지사유 조회
+											<br />
+											결과가 없습니다.
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="group mt_64">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>
+												카드 조회권한이 등록된 경우만 조회할 수 있습니다.
+												<ul class="list_dash mt_16">
+													<li>
+														카드 조회권한 등록방법
+														<ul class="list_star mt_6">
+															<li>단독 이용고객 : [전체 메뉴 > 뱅킹 관리 > 자동환경 설정 > 실행]</li>
+															<li>복수 이용고객 : [기업인터넷뱅킹 로그인 > 뱅킹 관리 > 계좌·카드 등록/권한 설정 > 카드 조회권한 부여]</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 카드내역 -->
+
+				<!-- s: Popup -->
+				<!-- 조건설정 팝업 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조건설정</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<div class="input_label ty1 top">카드선택</div>
+								<div class="dropdown ty2" role="button" title="카드선택 목록보기" onclick="comLayerPopUtil.open('cardlist');">
+									<div class="dropdown_text">1234-****-9999-1234 카드별명</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- // 조건설정 팝업 -->
+
+				<div class="bottom_popup_wrap" id="cardlist" title="카드 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">카드 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('cardlist');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">참! 좋은 Biz카드(대한항공)</div>
+										<div class="item_bottom">4140-****-****-3915</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false" aria-disabled="true">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-4996</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-5941</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1923</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1931</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1949</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">기업 그린카드(신용)</div>
+										<div class="item_bottom">4140-****-****-1956</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

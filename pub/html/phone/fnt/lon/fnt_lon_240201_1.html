@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 적합성/적정성 고객정보 확인서 작성내역 조회 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 신청내역조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">적합성 적정성 고객정보 신청내역 조회</div>
+							<div class="form_group">
+								<div class="input_label ty1">조회기간</div>
+								<div class="search_group">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active half"><span class="text">오늘</span></button>
+										<button type="button" role="radio" aria-checked="false" class="half"><span class="text">3일</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">3개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">6개월</span></button>
+									</div>
+									<div class="comp_wrap from_to">
+										<div class="input">
+											<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+											<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup3_1');"></button>
+										</div>
+										<span>~</span>
+										<div class="input">
+											<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+											<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup3_2');"></button>
+										</div>
+									</div>
+								</div>
+								<div class="btn_area ty1 mt_24">
+									<button type="button" class="btn s_4 c_3 r_2">조회</button>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head active">
+									<button type="button" title="적합성·적정성 작성 및 판단내역 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">
+											<span class="left">적합성·적정성 작성 및 판단내역</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner" style="display: block">
+										<ul class="space_list_ty6">
+											<li>
+												<div class="group_item">
+													<div class="group_item_detail">
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">작성일</span>
+															</span>
+															<span class="line_right">
+																<span class="date">2021-03-25</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">관리번호</span>
+															</span>
+															<span class="line_right">
+																<span class="txt">91012-40-000519178</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">판단구분</span>
+															</span>
+															<span class="line_right">
+																<span class="txt color ty3">적합</span>
+															</span>
+														</p>
+													</div>
+												</div>
+												<div class="btn_area ty1 mt_16">
+													<button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(2);">상세내역</button>
+												</div>
+											</li>
+											<li>
+												<div class="group_item">
+													<div class="group_item_detail">
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">작성일</span>
+															</span>
+															<span class="line_right">
+																<span class="date">2021-03-25</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">관리번호</span>
+															</span>
+															<span class="line_right">
+																<span class="txt">91012-40-000519178</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">판단구분</span>
+															</span>
+															<span class="line_right">
+																<span class="txt color ty4">부적합</span>
+															</span>
+														</p>
+													</div>
+												</div>
+												<div class="btn_area ty1 mt_16">
+													<button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(3);">상세내역</button>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 신청내역조회  -->
+
+				<!-- s: step2 상세조회(개인사업자용) -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">적합성·적정성 고객정보 확인서(개인사업자용)</div>
+							<p class="txt_caution">적합성·적정성 판단결과를 확인해 주세요</p>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">적합성 여부</div>
+							<!-- 적합 시 -->
+							<div class="survey_result mt_0">
+								<span class="tit">대출 적합성 여부</span>
+								<span class="state">적합(대출신청 가능)</span>
+							</div>
+
+							<!-- 부적합 시 -->
+							<!-- <div class="survey_result mt_0">
+                <span class="tit">대출 적합성 여부</span>
+                <span class="state fail">부적합(대출신청 불가)</span>
+              </div> -->
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">작성정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">소비자 분류</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">일반금융소비자</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">나이</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">50</span>
+											<span class="txt_unit">세</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출용도</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">운전자금</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보유자산</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">10억원 이상</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">현재소득</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1억원 미만</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">미래예상소득</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">현재보다 증가</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">부채</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1억원 미만</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">고정지출</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">현재 소득의 50% 이상</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">연체정보</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">현재 연체정보 없음</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신용점수</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">957</span>
+											<span class="txt_unit">점</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">평가기관</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">KCB</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">변제방법</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">사업소득</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 부적합 시 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">OOO님 귀하</div>
+							<div class="txt_desc_area">
+								<p class="txt">IBK기업은행으로 대출신청을 해주신 고객님께 깊이 감사드립니다.</p>
+								<p class="txt">「금융소비자 보호에 관한 법률」 제18조에 따라 아래와 같이 적정성 판단 결과를 안내드립니다.</p>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">적정성 판단 결과</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판단시점</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2024-07-23</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판단대상</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">대출상품</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">부정적 주요사유</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">사유</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="txt_desc_area">
+								<p class="txt">
+									IBK기업은행은
+									<strong>고객님께서 제공한 정보를 활용해 IBK기업은행이 자체적으로 운영하는 상환능력 판단기준</strong>
+									에 따라
+									<strong>종합적으로 적정성을 판단</strong>
+									했습니다.
+									<br />
+									따라서, 다른 금융회사에서 평가한 결과와 다를 수 있습니다.
+								</p>
+								<p class="txt">
+									본인은 위 내용에 대해
+									<strong>충분히 설명을 듣고 이해하였으며, 적정성 검토 보고서 및 상품설명서를 수령하였음을 확인합니다.</strong>
+								</p>
+								<p class="txt">보고서는 「금융소비자 보호에 관한 법률」 제18조에 따라 작성되었습니다.</p>
+							</div>
+							<div class="agree_check tit_ty">
+								<div class="top">
+									<div class="label">
+										<input type="checkbox" name="" id="ag_multi01" />
+										<label for="ag_multi01" class="checkbox">
+											<i></i>
+											<span>기업대출 상품설명서</span>
+										</label>
+									</div>
+									<button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(4);">
+										<span class="sr_only">기업대출 상품설명서</span>
+										보기
+									</button>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">적합성·적정성 고객정보 확인서</div>
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_4 c_2 r_2">이미지 조회하기</button>
+							</div>
+						</div>
+						<!-- e: 부적합 시 -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 상세조회(개인사업자용) -->
+
+				<!-- s: step3 상세조회(법인사업자용) -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">적합성·적정성 고객정보 확인서(법인사업자용)</div>
+							<p class="txt_caution">적합성·적정성 판단결과를 확인해 주세요</p>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">적합성 여부</div>
+							<div class="survey_result mt_0">
+								<span class="tit">대출 적합성 여부</span>
+								<!-- 적합 시 -->
+								<!-- <span class="state">적합(대출신청 가능)</span> -->
+								<!-- 부적합 시 -->
+								<span class="state fail">부적합(대출신청 불가)</span>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">작성정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">소비자 분류</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">일반금융소비자</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">업력</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">10</span>
+											<span class="txt_unit">년</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출용도</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">운전자금</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">총자산</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">10억원 이상</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">매출액</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">10억원 이상</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">미래예상 매출액</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">현재보다 증가</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">순이익</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1억원 미만</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">부채</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1억원 미만</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">고정지출</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">현재 소득의 50% 이상</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">연체정보</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">현재 연체정보 없음</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신용등급</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1</span>
+											<span class="txt_unit">등급</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">변제방법</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">사업소득</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 부적합 시 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">OOO님 귀하</div>
+							<div class="txt_desc_area">
+								<p class="txt">IBK기업은행으로 대출신청을 해주신 고객님께 깊이 감사드립니다.</p>
+								<p class="txt">「금융소비자 보호에 관한 법률」 제18조에 따라 아래와 같이 적정성 판단 결과를 안내드립니다.</p>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">적정성 판단 결과</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판단시점</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2024-07-23</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">판단대상</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">대출상품</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">부정적 주요사유</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">업력, 총자산, 매출액, 미래예상 매출액, 순이익, 부채, 연체정보, 고정지출, 신용등급</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="txt_desc_area">
+								<p class="txt">
+									IBK기업은행은
+									<strong>고객님께서 제공한 정보를 활용해 IBK기업은행이 자체적으로 운영하는 상환능력 판단기준</strong>
+									에 따라
+									<strong>종합적으로 적정성을 판단</strong>
+									했습니다.
+									<br />
+									따라서, 다른 금융회사에서 평가한 결과와 다를 수 있습니다.
+								</p>
+								<p class="txt">
+									본인은 위 내용에 대해
+									<strong>충분히 설명을 듣고 이해하였으며, 적정성 검토 보고서 및 상품설명서를 수령하였음을 확인합니다.</strong>
+								</p>
+								<p class="txt">보고서는 「금융소비자 보호에 관한 법률」 제18조에 따라 작성되었습니다.</p>
+							</div>
+							<div class="agree_check tit_ty">
+								<div class="top">
+									<div class="label">
+										<input type="checkbox" name="" id="ag_multi11" />
+										<label for="ag_multi11" class="checkbox">
+											<i></i>
+											<span>기업대출 상품설명서</span>
+										</label>
+									</div>
+									<button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(4);">
+										<span class="sr_only">기업대출 상품설명서</span>
+										보기
+									</button>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">적합성·적정성 고객정보 확인서</div>
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_4 c_2 r_2">이미지 조회하기</button>
+							</div>
+						</div>
+						<!-- e: 부적합 시 -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 상세조회(법인사업자용) -->
+
+				<!-- s: Popup -->
+				<!-- s: 약관 상세 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div style="text-align: center; padding: 100px 0; font-weight: 700">약관 pdf 뷰어 실행</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">동의</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 약관 상세 -->
+
+				<!-- s: 달력 바텀시트 -->
+				<div class="bottom_popup_wrap" id="popup3_1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">시작일</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup3_1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+								<div class="calendar_select_wrap">
+									<div class="calendar_select">
+										<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+											<span class="t_hidden">이전 년도</span>
+										</button>
+										<span>
+											<em id="year">2024</em>
+											년
+										</span>
+										<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+											<span class="t_hidden">다음 년도</span>
+										</button>
+									</div>
+									<div class="calendar_select">
+										<button id="preMon" type="button" class="btn_prev" title="이전 달">
+											<span class="t_hidden">이전 달</span>
+										</button>
+										<span>
+											<em id="mon">5</em>
+											월
+										</span>
+										<button id="nextMon" type="button" class="btn_next" title="다음 달">
+											<span class="t_hidden">다음 달</span>
+										</button>
+									</div>
+								</div>
+								<div class="wrap_calendar">
+									<table class="calendar weekday">
+										<caption class="hidden">상세기간 달력</caption>
+										<colgroup>
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="sun">일</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col" class="sat">토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													28
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													29
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													30
+												</td>
+												<td>
+													<button type="button">1</button>
+												</td>
+												<td>
+													<button type="button">2</button>
+												</td>
+												<td>
+													<button type="button">3</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">4</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">5</button>
+												</td>
+												<td>
+													<button type="button">6</button>
+												</td>
+												<td>
+													<button type="button">7</button>
+												</td>
+												<td>
+													<button type="button">8</button>
+												</td>
+												<td>
+													<button type="button">9</button>
+												</td>
+												<td>
+													<button type="button">10</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">11</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">12</button>
+												</td>
+												<td>
+													<button type="button">13</button>
+												</td>
+												<td>
+													<button type="button">14</button>
+												</td>
+												<td>
+													<button type="button">15</button>
+												</td>
+												<td>
+													<button type="button">16</button>
+												</td>
+												<td>
+													<button type="button">17</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">18</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">19</button>
+												</td>
+												<td>
+													<button type="button">20</button>
+												</td>
+												<td class="today">
+													<button type="button" title="오늘 날짜">21</button>
+												</td>
+												<td>
+													<button type="button">22</button>
+												</td>
+												<td class="on term">
+													<button type="button" title="선택된 날짜">23</button>
+												</td>
+												<td class="off">
+													<button type="button">24</button>
+												</td>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">25</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">26</button>
+												</td>
+												<td class="off">
+													<button type="button">27</button>
+												</td>
+												<td class="off">
+													<button type="button">28</button>
+												</td>
+												<td class="off">
+													<button type="button">29</button>
+												</td>
+												<td class="off">
+													<button type="button">30</button>
+												</td>
+												<td class="off">
+													<button type="button">31</button>
+												</td>
+												<td class="btn_next">
+													<em class="hidden">다음달</em>
+													1
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popup3_2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">종료일</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup3_2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+								<div class="calendar_select_wrap">
+									<div class="calendar_select">
+										<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+											<span class="t_hidden">이전 년도</span>
+										</button>
+										<span>
+											<em id="year">2024</em>
+											년
+										</span>
+										<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+											<span class="t_hidden">다음 년도</span>
+										</button>
+									</div>
+									<div class="calendar_select">
+										<button id="preMon" type="button" class="btn_prev" title="이전 달">
+											<span class="t_hidden">이전 달</span>
+										</button>
+										<span>
+											<em id="mon">5</em>
+											월
+										</span>
+										<button id="nextMon" type="button" class="btn_next" title="다음 달">
+											<span class="t_hidden">다음 달</span>
+										</button>
+									</div>
+								</div>
+								<div class="wrap_calendar">
+									<table class="calendar weekday">
+										<caption class="hidden">상세기간 달력</caption>
+										<colgroup>
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="sun">일</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col" class="sat">토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													28
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													29
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													30
+												</td>
+												<td>
+													<button type="button">1</button>
+												</td>
+												<td>
+													<button type="button">2</button>
+												</td>
+												<td>
+													<button type="button">3</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">4</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">5</button>
+												</td>
+												<td>
+													<button type="button">6</button>
+												</td>
+												<td>
+													<button type="button">7</button>
+												</td>
+												<td>
+													<button type="button">8</button>
+												</td>
+												<td>
+													<button type="button">9</button>
+												</td>
+												<td>
+													<button type="button">10</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">11</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">12</button>
+												</td>
+												<td>
+													<button type="button">13</button>
+												</td>
+												<td>
+													<button type="button">14</button>
+												</td>
+												<td>
+													<button type="button">15</button>
+												</td>
+												<td>
+													<button type="button">16</button>
+												</td>
+												<td>
+													<button type="button">17</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">18</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">19</button>
+												</td>
+												<td>
+													<button type="button">20</button>
+												</td>
+												<td class="today">
+													<button type="button" title="오늘 날짜">21</button>
+												</td>
+												<td>
+													<button type="button">22</button>
+												</td>
+												<td class="on term">
+													<button type="button" title="선택된 날짜">23</button>
+												</td>
+												<td class="off">
+													<button type="button">24</button>
+												</td>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">25</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">26</button>
+												</td>
+												<td class="off">
+													<button type="button">27</button>
+												</td>
+												<td class="off">
+													<button type="button">28</button>
+												</td>
+												<td class="off">
+													<button type="button">29</button>
+												</td>
+												<td class="off">
+													<button type="button">30</button>
+												</td>
+												<td class="off">
+													<button type="button">31</button>
+												</td>
+												<td class="btn_next">
+													<em class="hidden">다음달</em>
+													1
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 달력 바텀시트 -->
+
+				<!-- e: Popup -->
+			</div>
+			<!-- e: 적합성/적정성 고객정보 확인서 작성내역 조회 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

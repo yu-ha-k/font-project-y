@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 카드결제취소 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">결제비용</span>
+									<span class="d_list_r">
+										<span class="money">567,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+							</ul>
+
+							<div class="title_text ty3 mt_32">결제내용</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">가맹점명</span>
+									<span class="d_list_r">
+										<span class="text">도레미 음악학원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">결제카드</span>
+									<span class="d_list_r">
+										<span class="text block">유니온2페이(신용)</span>
+										<span class="text">123-****-****-1234</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">결제일시</span>
+									<span class="d_list_r">
+										<span class="date">2024-05-12</span>
+										<span class="time">20:10:24</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2">결제취소</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 카드결제취소 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap">
+				<div class="cont_wrap">
+					<h1 class="guide_h1">draggable</h1>
+
+					<div class="content_wrap enterprise">
+						<div class="tit_wrap">
+							<div class="tit">
+								<div class="txt_style ty10">순서변경방법</div>
+								<div class="tooltip_wrap ty1">
+									<button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+									<div class="tooltip_wrap_container" role="tooltip">
+										<div class="inner">
+											<!-- s: drag -->
+											<p>
+												손가락으로 이동버튼을 누르신 상태에서
+												<br />
+												위로 아래로 이동해서 변경해 주세요.
+											</p>
+											<div class="account_user_guide guide_drag"></div>
+											<!-- e: drag -->
+
+											<!-- s: btn -->
+											<p>
+												버튼을 눌러서 위로 아래로
+												<br />
+												이동해서 변경해 주세요.
+											</p>
+											<div class="account_user_guide guide_btn"></div>
+											<!-- e: btn -->
+										</div>
+										<button type="button" class="tooltip_close">도움말 닫기</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="tooltip_box">
+								<div class="order_filter">
+									<div class="drag type">
+										<input type="radio" name="order" id="orderDrag" checked />
+										<label for="orderDrag">
+											<span class="sr_only">드래그로 순서 변경하기</span>
+										</label>
+									</div>
+									<div class="button type">
+										<input type="radio" name="order" id="orderBtn" />
+										<label for="orderBtn">
+											<span class="sr_only">버튼으로 순서 변경하기</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--
+            draggable : 드래그로 순서 변경
+            btn_order : 버튼으로 순서 변경
+            -->
+
+						<div class="bx_content mt_12">
+							<!-- s: draggable -->
+							<ul id="step2_list1" data-jx-ul="" class="ui-sortable draggable enterprise_list">
+								<li class="mvs_use_item_li pop" data-rownum="0">
+									<div class="txt_style ty2">교촌치킨 송파점</div>
+									<div class="num txt_style ty6">123-45-*****</div>
+								</li>
+								<li class="mvs_use_item_li pop" data-rownum="1">
+									<div class="txt_style ty2">교촌치킨 송파점</div>
+									<div class="num txt_style ty6">123-45-*****</div>
+								</li>
+								<li class="mvs_use_item_li pop" data-rownum="2">
+									<div class="txt_style ty2">교촌치킨 송파점</div>
+									<div class="num txt_style ty6">123-45-*****</div>
+								</li>
+								<li class="mvs_use_item_li pop" data-rownum="3">
+									<div class="txt_style ty2">교촌치킨 송파점</div>
+									<div class="num txt_style ty6">123-45-*****</div>
+								</li>
+							</ul>
+							<!-- e: draggable -->
+
+							<!-- s: btn_order -->
+							<ul id="step2_list2" data-jx-ul="" class="enterprise_list">
+								<li>
+									<div class="txt_style ty2">교촌치킨 송파점</div>
+									<div class="num txt_style ty6">123-45-*****</div>
+									<div class="ctr_order">
+										<!-- 리스트 최상단 도달 시 '위로 한칸 이동 버튼' 비활성화 처리 -->
+										<button type="button" class="up" disabled>
+											<span class="sr_only">위로 한칸 이동</span>
+										</button>
+										<button type="button" class="down">
+											<span class="sr_only">아래로 한칸 이동</span>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="txt_style ty2">교촌치킨 송파점</div>
+									<div class="num txt_style ty6">123-45-*****</div>
+									<div class="ctr_order">
+										<button type="button" class="up">
+											<span class="sr_only">위로 한칸 이동</span>
+										</button>
+										<button type="button" class="down">
+											<span class="sr_only">아래로 한칸 이동</span>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="txt_style ty2">교촌치킨 송파점</div>
+									<div class="num txt_style ty6">123-45-*****</div>
+									<div class="ctr_order">
+										<button type="button" class="up">
+											<span class="sr_only">위로 한칸 이동</span>
+										</button>
+										<button type="button" class="down">
+											<span class="sr_only">아래로 한칸 이동</span>
+										</button>
+									</div>
+								</li>
+								<li>
+									<div class="txt_style ty2">교촌치킨 송파점</div>
+									<div class="num txt_style ty6">123-45-*****</div>
+									<div class="ctr_order">
+										<button type="button" class="up">
+											<span class="sr_only">위로 한칸 이동</span>
+										</button>
+										<button type="button" class="down" disabled>
+											<span class="sr_only">아래로 한칸 이동</span>
+										</button>
+										<!-- 리스트 최하단 도달 시 '아래로 한칸 이동 버튼' 비활성화 처리 -->
+									</div>
+								</li>
+							</ul>
+							<!-- e: btn_order -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>

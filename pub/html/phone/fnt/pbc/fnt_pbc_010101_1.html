@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 납부정보조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3 giro_notice">
+						<div class="group">
+							<div class="title_text ty1">납부정보조회</div>
+							<div class="ex_giro">
+								<img src="../../../../img/fnt/ex_giro_notice.png" alt="지로납부용지 샘플 이미지 입니다. 지로용지에 표시된 지로납부번호 7자리와 전자납부번호 14자리를 확인하시고 입력해 주세요." class="img" />
+							</div>
+							<div class="form_group mt_40">
+								<div class="input_label ty1">
+									납부정보조회
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="tel" name="" id="" title="지로번호 숫자 7자리 필수 입력" placeholder="지로번호 숫자 7자리(필수)" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_8">
+									<input type="tel" name="" id="" title="전자납부번호 숫자 14자리 선택 입력" placeholder="전자납부번호 숫자 14자리(선택)" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+							<ul class="list_bullet ty1 mt_24">
+								<li>지로번호를 정확히 입력해 주세요.</li>
+								<li>’전자납부가능’이라고 표시된 고지서만 납부할 수 있습니다.</li>
+								<li>14자리 이내 전자납부번호가 표시된 지로요금만 납부할 수 있습니다.</li>
+							</ul>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">조회</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 납부정보조회 -->
+
+				<!-- s: step2 공과금확인(입력납부) -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3 giro_notice">
+						<div class="group">
+							<div class="title_text ty1">공과금확인</div>
+							<div class="ex_giro">
+								<img src="../../../../img/fnt/img_giro_ocr.png" alt="지로납부용지 샘플 이미지 입니다. 지로용지에 표시된 지로납부번호 7자리와 전자납부번호 14자리를 확인하시고 입력해 주세요." class="img" />
+							</div>
+							<div class="title_text ty1 mt_40">지로통지내역</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">청구기관</span>
+										</span>
+										<span class="line_right">
+											<span class="text">강서양천연세우유대리점</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지로번호</span>
+										</span>
+										<span class="line_right">
+											<span class="text">1233445</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="form_group mt_24">
+								<div class="input_label ty1">
+									고객조회번호①
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="고객조회번호 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									납부금액②
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<!-- 해당 금액입력은 input으로 사용함 - 기획 확인 -->
+								<div class="input">
+									<input type="tel" name="" id="" title="납부금액② 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<!-- 해당 금액입력은 input으로 사용함 - 기획 확인 -->
+
+								<div class="input_label ty1">
+									체크번호③
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="체크번호 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									납부자명
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="납부자명 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									부과년월(회차)
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="부과년월(회차) 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 공과금확인(입력납부) -->
+
+				<!-- s: step3 공과금확인(QOCR) -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3 giro_notice">
+						<div class="group">
+							<div class="title_text ty1">공과금확인</div>
+							<div class="ex_giro">
+								<img src="../../../../img/fnt/img_giro_qocr.png" alt="지로납부용지 샘플 이미지 입니다. 지로용지에 표시된 지로납부번호 7자리와 전자납부번호 14자리를 확인하시고 입력해 주세요." class="img" />
+							</div>
+							<div class="title_text ty1 mt_40">지로통지내역</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">청구기관</span>
+										</span>
+										<span class="line_right">
+											<span class="text">강서양천연세우유대리점</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지로번호</span>
+										</span>
+										<span class="line_right">
+											<span class="text">1233445</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="form_group mt_24">
+								<div class="input_label ty1">
+									고객조회번호①
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="고객조회번호 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									납부금액②
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<!-- 해당 금액입력은 input으로 사용함 - 기획 확인 -->
+								<div class="input">
+									<input type="tel" name="" id="" title="납부금액② 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<!-- 해당 금액입력은 input으로 사용함 - 기획 확인 -->
+
+								<div class="input_label ty1">
+									체크번호③
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="체크번호 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									납부자확인정보
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="납부자확인정보 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									납부자명
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="납부자명 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									부과년월(회차)
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="부과년월(회차) 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 공과금확인(QOCR) -->
+
+				<!-- s: step4 공과금확인(MICR) -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3 giro_notice">
+						<div class="group">
+							<div class="title_text ty1">공과금확인</div>
+							<div class="ex_giro">
+								<img src="../../../../img/fnt/img_giro_micr.png" alt="지로납부용지 샘플 이미지 입니다. 지로용지에 표시된 지로납부번호 7자리와 전자납부번호 14자리를 확인하시고 입력해 주세요." class="img" />
+							</div>
+							<div class="title_text ty1 mt_40">지로통지내역</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">청구기관</span>
+										</span>
+										<span class="line_right">
+											<span class="text">강서양천연세우유대리점</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지로번호</span>
+										</span>
+										<span class="line_right">
+											<span class="text">1233445</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="form_group mt_24">
+								<div class="input_label ty1">
+									납부금액①
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<!-- 해당 금액입력은 input으로 사용함 - 기획 확인 -->
+								<div class="input">
+									<input type="tel" name="" id="" title="납부금액① 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<!-- 해당 금액입력은 input으로 사용함 - 기획 확인 -->
+
+								<div class="input_label ty1">
+									납부자확인정보②
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="납부자확인정보 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									납부자확인정보③
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="납부자확인정보 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									납부자명
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="납부자명 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">
+									부과년월(회차)
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="부과년월(회차) 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 공과금확인(MICR) -->
+
+				<!-- s: step5 공과금확인(조회납부) -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3 giro_notice">
+						<div class="group">
+							<div class="title_text ty1">공과금확인</div>
+							<div class="title_text ty1">납부할 지로 목록</div>
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(6)">
+											<div class="card_item_info">
+												<div class="txt1">2018-09-26</div>
+												<div class="txt2">영남대학교총동창회</div>
+											</div>
+											<div class="card_item_sub_info">
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="money">8,562,600</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">전자납부번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">123567</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">고객번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">123567890</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(6)">
+											<div class="card_item_info">
+												<div class="txt1">2018-09-26</div>
+												<div class="txt2">영남대학교총동창회</div>
+											</div>
+											<div class="card_item_sub_info">
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="money">8,562,600</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">전자납부번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">123567</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">고객번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">123567890</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: step5 공과금확인(조회납부) -->
+
+				<!-- s: step6 정보입력 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty3 giro_notice">
+						<div class="group">
+							<div class="title_text ty1">정보입력</div>
+							<div class="title_text ty1">지로통지 내역</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">청구기관</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">강서양천연세우유대리점</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지로번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1233445</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">금액</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">USD</span>
+											<span class="money">33.00</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">고객조회번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">11111111111</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">금액검증번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">9</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납부자확인정보</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">나기업</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">부과년월(회차)</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1704</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납부자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">약약영전코</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="form_group mt_32">
+								<div class="input_label ty1">
+									출금계좌
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="dropdown ty2" role="button" title="출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="form_desc_info">
+									출금가능액
+									<span class="color ty3">
+										<span class="money">123,456,789</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</div>
+
+								<div class="input_label ty1">
+									불능시 연락처
+									<span class="ess_text ty1">타행 이체시 필수 입력</span>
+								</div>
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="연락처 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="연락처 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="연락처 뒤 4자리 입력" />
+									</div>
+								</div>
+							</div>
+							<div class="btn_area ty1 mt_16">
+								<button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(7);">등록/변경</button>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(5);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(7);">실행</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step6 정보입력 -->
+
+				<!-- s: step7 완료 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">납부완료</div>
+
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								지로납부를 완료했어요
+								<div class="note_cmt">출금계좌번호 000-000000-00-000</div>
+							</div>
+
+							<ul class="space_list_ty1 mt_40">
+								<li>
+									<ul class="d_list ty1">
+										<li>
+											<span class="d_list_l">납부금액</span>
+											<span class="d_list_r">
+												<span class="money color ty4">90,350</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="d_list ty1">
+										<li>
+											<span class="d_list_l">출금 후 잔액</span>
+											<span class="d_list_r">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</li>
+										<li>
+											<span class="d_list_l">납부일시</span>
+											<span class="d_list_r">
+												<span class="date">2024-05-12</span>
+												<span class="time">20:10:24</span>
+											</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<ul class="list_bullet ty2">
+								<li>납부 취소는 납부 당일만 할 수 있습니다.</li>
+								<li>[지로납부내역조회]에서 납부결과를 꼭 확인해 주세요</li>
+							</ul>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step7 완료 -->
+
+				<!-- s: popup -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 스크래핑 안내 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="scraping_wrap">
+								<div class="title_text ty1">여신금융협회 정보 조회</div>
+								<ul class="scraping_info_list">
+									<li class="item ty2">여신금융협회 회원가입을 해주세요.</li>
+									<li class="item ty4">여신금융협회 로그인 아이디/비밀번호로 정보를 조회할게요.</li>
+								</ul>
+								<div class="bg_box ty1">
+									<div class="acd_wrap accodian_wrap ty1">
+										<div class="acd_head accodian_head small active">
+											<button type="button" title="조회하는 정보 내용 상세보기" aria-expanded="true" class="acd_btn">
+												<span class="title">
+													<span class="left">조회하는 정보</span>
+												</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner" style="display: block">
+												<ul class="list_bullet ty1">
+													<li>카드가맹점 승인정보</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 스크래핑 안내 -->
+
+				<!-- s: 조회 정보 입력 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">로그인 정보 입력</div>
+							<div class="form_group">
+								<div class="input_label ty2">아이디</div>
+								<div class="input">
+									<input type="text" name="" id="" title="여신금융협회 입력" placeholder="아이디 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">비밀번호</div>
+								<div class="input">
+									<button type="button" class="input_button" aria-label="여신금융협회 비밀번호 입력">비밀번호 입력</button>
+								</div>
+							</div>
+							<div class="scraping_join_box">
+								<p class="scraping_join_box_text">여신금융협회 회원만 정보 조회를 할 수 있어요. 여신금융협회 회원이 아닌 경우 회원가입을 해주세요.</p>
+								<div class="btn_area">
+									<a href="#" target="_blank" class="btn s_2 c_1 r_3" title="새창열기">여신금융협회 회원가입</a>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">다음</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회 정보 입력 -->
+
+				<!-- s: 카드가맹점 등록여부 선택 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">로그인 정보 입력</div>
+							<div class="scraping_opt_select mt_0">
+								<div class="title_text ty1">카드가맹점 등록여부를 선택해 주세요</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">예</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">아니오</span></button>
+								</div>
+							</div>
+							<div class="form_group mt_32">
+								<div class="input_label ty2">아이디</div>
+								<div class="input">
+									<input type="text" name="" id="" title="여신금융협회 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">비밀번호</div>
+								<div class="input">
+									<button type="button" class="input_button" aria-label="여신금융협회 비밀번호 입력"></button>
+								</div>
+							</div>
+							<div class="scraping_join_box">
+								<p class="scraping_join_box_text">여신금융협회 회원만 정보 조회를 할 수 있어요. 여신금융협회 회원이 아닌 경우 회원가입을 해주세요.</p>
+								<div class="btn_area">
+									<a href="#" target="_blank" class="btn s_2 c_1 r_3" title="새창열기">여신금융협회 회원가입</a>
+								</div>
+							</div>
+							<div class="scraping_join_box">
+								<p class="scraping_join_box_text">카드매출 수집이 안되실 경우 현금영수증, 세금계산서 매출로만 접수되어 심사에 영향이 있을 수 있습니다. 계속 진행하시려면 다음 버튼을 눌러주세요.</p>
+							</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 카드가맹점 등록여부 선택 -->
+
+				<!-- s: 정보조회 위임 동의-->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="bottom_popup_wrap active" id="scraping_popup3">
+							<div class="bottom_popup">
+								<div class="bottom_popup_header">
+									<h2 class="tit">정보조회 위임 동의</h2>
+									<button type="button" class="btn_close" onclick="comLayerPopUtil.close('scraping_popup3');">닫기</button>
+								</div>
+								<div class="bottom_popup_body">
+									<div class="label label_box more_add">
+										<input type="checkbox" name="" id="scraping_ag01" />
+										<label for="scraping_ag01" class="checkbox">
+											<i></i>
+											<span>고객정보조회 위임 동의</span>
+										</label>
+										<button type="button" class="btn ty_txt3 line_bttm btn_view">
+											<span class="sr_only">고객정보조회 위임 동의</span>
+											보기
+										</button>
+									</div>
+								</div>
+								<div class="bottom_popup_footer">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 정보조회 위임 동의-->
+
+				<!-- s: 로딩-->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="common_loading">
+								<div class="msg">
+									정보를 조회하고 있어요
+									<br />
+									잠시만 기다려 주세요.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 로딩-->
+
+				<!-- s: 조회완료 -->
+				<!-- <div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+            <div class="content_wrap ty4">
+              <div class="group">
+                <div class="ico_txt ty1 lottie_case1">
+            <div class="lottie_box">
+              <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+            </div>
+                  정보 조회가<br> 완료 되었어요
+                </div>
+                <div class="scraping_result_wrap">
+                  <div class="title_text ty1">여신금융협회</div>
+                  <ul class="d_list ty1">
+                    <li>
+                      <span class="d_list_l">가맹점 승인 정보</span>
+                      <span class="d_list_r">
+                        <span class="ico_txt ty2 complete">완료</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bottom_btn_area">
+                <div class="btn_area ty1">
+                  <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+                </div>
+              </div>
+            </div>      
+          </div> -->
+				<!-- e: 조회완료 -->
+
+				<!-- s: 조회실패 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								조회하지 못한 정보가 있어요
+								<br />
+								다시 조회해 주세요.
+							</div>
+							<div class="scraping_result_wrap">
+								<div class="title_text ty1">여신금융협회</div>
+								<ul class="d_list ty1">
+									<li>
+										<span class="d_list_l">가맹점 승인정보</span>
+										<div class="d_list_r">
+											<span class="ico_txt ty2 fail">실패</span>
+											<div class="acd_wrap accodian_wrap ty1 detail_more">
+												<div class="acd_head accodian_head">
+													<button type="button" title="오류코드 상세보기" aria-expanded="false" class="acd_btn btn more">
+														<span class="title">오류코드</span>
+													</button>
+												</div>
+												<div class="acd_cont accodian_cont error_occur_txt">
+													<div class="inner">
+														<p class="color ty4">
+															오류코드:ECBKEXT11524
+															<br />
+															해당 기관에서 에러가 발생하였습니다
+															<br />
+															다시 시도해 주세요 (참가은행 에러)
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">다시 조회하기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회실패 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

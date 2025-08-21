@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 금융인증서 - 다른기관인증서해제 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="2" class="container_wrap">
+				<!-- s: step1 인증서 선택 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">금융인증서 솔루션 화면</div>
+				</div>
+				<!-- e: step1 인증서 선택 -->
+
+				<!-- s: step2 정보입력 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보입력</div>
+							<div class="form_group">
+								<div class="input_label ty1">
+									사업자등록번호
+									<em class="ess_text ty1">필수</em>
+								</div>
+
+								<div class="comp_wrap business_num">
+									<div class="input no_del">
+										<input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" />
+									</div>
+									<span>-</span>
+									<button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+								</div>
+
+								<div class="input_label ty1">
+									출금계좌번호
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="계좌번호 입력" placeholder="-없이 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>평생계좌번호는 출금계좌번호로 사용할 수 없습니다.</li>
+								</ul>
+								<div class="input_label ty1">인증서종류</div>
+								<div class="input">
+									<input type="text" name="" id="" value="금융결제원(은행/보험용)" title="인증서종류 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 정보입력 -->
+
+				<!-- s: step3 이용자선택 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 이용자 목록 -->
+						<div class="group">
+							<div class="title_text ty1">이용자 선택</div>
+							<div class="title_text ty1">이용자 목록</div>
+							<ul class="list_bullet ty1">
+								<li>인증서 이용자를 선택하세요.</li>
+							</ul>
+							<ul class="space_list_ty1 mt_16">
+								<li>
+									<div class="card_item_wrap ty2">
+										<div class="card_chkbox">
+											<input type="radio" name="name" id="item1" />
+											<label for="item1" aria-labelledby="testitem1"></label>
+										</div>
+										<div class="card_item" id="testitem1">
+											<div class="card_item_wrap_head">
+												<div class="tit title_text ty1">담뭐시기</div>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용자번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">00000000</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용자구분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">관리자</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">가입일자</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2024-08-10</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">제조사</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">바스코</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item_wrap ty2">
+										<div class="card_chkbox">
+											<input type="radio" name="name" id="item2" />
+											<label for="item2" aria-labelledby="testitem2"></label>
+										</div>
+										<div class="card_item" id="testitem2">
+											<div class="card_item_wrap_head">
+												<div class="tit title_text ty1">담뭐시기</div>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용자번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">00000000</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용자구분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">관리자</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">가입일자</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2024-08-10</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">제조사</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">바스코</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- e: 이용자 목록 -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 이용자선택 -->
+
+				<!-- s: step4 보안매체인증 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 인증서 정보 -->
+						<div class="group">
+							<div class="title_text ty1">보안매체인증</div>
+							<div class="title_text ty1">인증서정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">우리회사</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">123-45-*****</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">인증서종류</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">금융결제원(금융거래용기업)</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이용자번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000000000</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 인증서 정보 -->
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>해당 인증서는 삭제만 되며 폐기되는 것은 아닙니다.</li>
+											<li>IBK기업은행에서 다시 사용하려면 [다른 기관 인증서 등록]을 이용해 주세요.</li>
+											<li>인증서를 삭제하려면 삭제할 기관 인증서 옆 [삭제 요청]을 눌러주세요.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 보안매체인증 -->
+
+				<!-- s: step5 등록완료 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								다른기관 인증서
+								<br />
+								해제완료
+							</div>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>해당 인증서는 삭제만 되며 폐기되는 것은 아닙니다.</li>
+											<li>IBK기업은행에서 다시 사용하려면 [다른 기관 인증서 등록]을 이용해 주세요.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 등록완료 -->
+			</div>
+			<!-- e: 금융인증서 - 다른기관인증서해제 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

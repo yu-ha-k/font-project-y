@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap">
+				<div class="content_wrap ty4">
+					<h4 class="guide_h4">case 1</h4>
+
+					<div class="group">
+						<div class="ico_txt ty1 lottie_case1">
+							<div class="lottie_box">
+								<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+							</div>
+							.ico_txt.ty1 완료문구. - 완료페이지에 사용
+							<div class="note_cmt">보조문구</div>
+						</div>
+						<div class="bg_box ty1">
+							<ul class="list_bullet ty1">
+								<li>완료페이지 하단 안내 문구 리스트</li>
+								<li>완료페이지 하단 안내 문구 리스트</li>
+							</ul>
+						</div>
+					</div>
+
+					<h4 class="guide_h4">case 2</h4>
+
+					<div class="group">
+						<div class="ico_txt ty1 lottie_case1">
+							<div class="lottie_box">
+								<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+							</div>
+							.ico_txt.ty1 완료문구. - 완료페이지에 사용
+						</div>
+
+						<ul class="list_bullet ty4">
+							<li>상단 완료 타이틀 부분에 보조문구가 없는 경우</li>
+							<li>상단 완료 타이틀 부분에 보조문구가 없는 경우</li>
+						</ul>
+					</div>
+
+					<h4 class="guide_h4">case 3</h4>
+
+					<div class="group">
+						<div class="ico_txt ty1 lottie_case1">
+							<div class="lottie_box">
+								<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+							</div>
+							.ico_txt.ty1 완료문구. - 완료페이지에 사용
+						</div>
+
+						<ul class="d_list ty1">
+							<li>
+								<span class="d_list_l">데이터 타이틀</span>
+								<span class="d_list_r">데이터</span>
+							</li>
+							<li>
+								<span class="d_list_l">데이터 타이틀</span>
+								<span class="d_list_r">데이터</span>
+							</li>
+							<li>
+								<span class="d_list_l">데이터 타이틀</span>
+								<span class="d_list_r">데이터</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>

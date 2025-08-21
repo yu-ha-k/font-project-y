@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="demo_visual_dom">
+							<img src="../../../../img/demo/demo_login_after_1.png" alt="로그인 후" class="demo_visual_dom_item1" />
+							<img src="../../../../img/demo/demo_login_after_2.png" alt="로그인 후" class="demo_visual_dom_item2" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

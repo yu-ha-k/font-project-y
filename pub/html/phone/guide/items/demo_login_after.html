@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ko" class="demo_html">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>i-ONE뱅크 기업 데모 페이지</title>
+
+		<script type="text/javascript" src="../../../../../js/lib/jquery-3.5.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../../../css/demo.css" />
+	</head>
+	<body>
+		<div class="demo_wrap">
+			<aside class="demo_aside">
+				<div class="demo_wrap_search_wrap">
+					<h1 class="demo_logo">
+						<img src="../../../../img/demo/img_demo_logo.png" alt="i-ONE뱅크 기업" />
+					</h1>
+					<div class="demo_wrap_search">
+						<div class="input">
+							<input type="text" name="" id="" placeholder="메뉴검색" />
+							<button class="btn_demo_search"><span class="text">검색</span></button>
+						</div>
+					</div>
+					<div class="demo_wrap_search_btnarea">
+						<button class="btn_demo_reset"><span class="text">검색 초기화</span></button>
+					</div>
+				</div>
+
+				<!-- s: lnb -->
+				<div class="demo_lnb">
+					<ul class="demo_lnb_list demo_lnb_depth_lv1">
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty1 toggle_able"><span class="text">메인</span></button>
+							<ul class="demo_lnb_depth_lv2">
+								<li>
+									<button class="demo_lnb_btn toggle_able"><span class="text">카드</span></button>
+									<ul class="demo_lnb_depth_lv3">
+										<li>
+											<button class="demo_lnb_btn toggle_able"><span class="text">발급사용등록</span></button>
+											<ul class="demo_lnb_depth_lv4">
+												<li>
+													<button class="demo_lnb_btn"><span class="text">개인사업자 카드발급</span></button>
+												</li>
+												<li>
+													<!-- s: 활성화 상태 -->
+													<button class="demo_lnb_btn active"><span class="text">카드발급현황조회</span></button>
+													<!-- e: 활성화 상태 -->
+												</li>
+												<li>
+													<button class="demo_lnb_btn">
+														<span class="text">신용/체크카드 사용등록</span>
+														<span class="demo_blind_mark">숨김</span>
+													</button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn">
+														<span class="text">현금카드 사용등록</span>
+														<span class="demo_blind_mark">숨김</span>
+													</button>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<button class="demo_lnb_btn toggle_able"><span class="text">발급사용등록</span></button>
+											<ul class="demo_lnb_depth_lv4">
+												<li>
+													<button class="demo_lnb_btn"><span class="text">개인사업자 카드발급</span></button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn"><span class="text">카드발급현황조회</span></button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn"><span class="text">신용/체크카드 사용등록</span></button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn"><span class="text">현금카드 사용등록</span></button>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<button class="demo_lnb_btn"><span class="text">발급사용등록</span></button>
+										</li>
+										<li>
+											<button class="demo_lnb_btn"><span class="text">발급사용등록</span></button>
+										</li>
+										<li>
+											<button class="demo_lnb_btn"><span class="text">발급사용등록</span></button>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<button class="demo_lnb_btn toggle_able"><span class="text">예금/신탁</span></button>
+									<ul class="demo_lnb_depth_lv3">
+										<li class="active">
+											<button class="demo_lnb_btn toggle_able"><span class="text">발급사용등록</span></button>
+											<ul class="demo_lnb_depth_lv4">
+												<li>
+													<button class="demo_lnb_btn"><span class="text">개인사업자 카드발급</span></button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn"><span class="text">카드발급현황조회</span></button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn"><span class="text">신용/체크카드 사용등록</span></button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn"><span class="text">현금카드 사용등록</span></button>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<button class="demo_lnb_btn toggle_able"><span class="text">발급사용등록</span></button>
+											<ul class="demo_lnb_depth_lv4">
+												<li>
+													<button class="demo_lnb_btn"><span class="text">개인사업자 카드발급</span></button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn"><span class="text">카드발급현황조회</span></button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn"><span class="text">신용/체크카드 사용등록</span></button>
+												</li>
+												<li>
+													<button class="demo_lnb_btn"><span class="text">현금카드 사용등록</span></button>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<button class="demo_lnb_btn"><span class="text">발급사용등록</span></button>
+										</li>
+										<li>
+											<button class="demo_lnb_btn"><span class="text">발급사용등록</span></button>
+										</li>
+										<li>
+											<button class="demo_lnb_btn"><span class="text">발급사용등록</span></button>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<button class="demo_lnb_btn"><span class="text">대출</span></button>
+								</li>
+								<li>
+									<button class="demo_lnb_btn"><span class="text">원클릭보증부대출</span></button>
+								</li>
+								<li>
+									<button class="demo_lnb_btn"><span class="text">대출관리</span></button>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty2 toggle_able"><span class="text">조회</span></button>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty3 toggle_able"><span class="text">이체</span></button>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty4 toggle_able"><span class="text">금융상품</span></button>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty5 toggle_able"><span class="text">뱅킹업무</span></button>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty6 toggle_able"><span class="text">B2B</span></button>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty7 toggle_able"><span class="text">경영지원</span></button>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty8 toggle_able"><span class="text">뱅킹관리</span></button>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty9 toggle_able"><span class="text">결재함</span></button>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty10 toggle_able"><span class="text">인증/보안</span></button>
+						</li>
+						<li>
+							<button class="demo_lnb_btn demo_lnb_ty11 toggle_able"><span class="text">IBK HELP</span></button>
+						</li>
+					</ul>
+				</div>
+				<!-- e: lnb -->
+			</aside>
+
+			<!-- s: demo_content -->
+			<div class="demo_content">
+				<div class="demo_content_head">
+					<div class="demo_breadcrumbs">
+						<span class="demo_breadcrumbs_tit">메뉴정보</span>
+						<div class="demo_breadcrumbs_items">
+							<span class="item">개인사업자/법인사업자 이용 가능</span>
+							<span class="item">관리자만 이용 가능</span>
+						</div>
+					</div>
+
+					<div class="demo_content_head_util">
+						<div class="demo_size_guide">
+							<button class="demo_size_guide_btn"><span class="text">사이즈 기준</span></button>
+							<div class="demo_size_guide_list_wrap">
+								<ul class="demo_size_guide_list">
+									<li>
+										<span class="l">갤럭시 S10</span>
+										<span class="r">360X740</span>
+									</li>
+									<li>
+										<span class="l">갤럭시 S20</span>
+										<span class="r">360X800</span>
+									</li>
+									<li>
+										<span class="l">갤럭시 S20 Ultra</span>
+										<span class="r">412X914</span>
+									</li>
+									<li>
+										<span class="l">갤럭시 S22</span>
+										<span class="r">360X780</span>
+									</li>
+									<li>
+										<span class="l">갤럭시폴드5 접힘</span>
+										<span class="r">280X882</span>
+									</li>
+									<li>
+										<span class="l">갤럭시폴드5 펼침</span>
+										<span class="r">800X560</span>
+									</li>
+									<li>
+										<span class="l">아이폰SE</span>
+										<span class="r">375X667</span>
+									</li>
+									<li>
+										<span class="l">아이폰12</span>
+										<span class="r">390X844</span>
+									</li>
+									<li>
+										<span class="l">아이폰15</span>
+										<span class="r">393X852</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="demo_content_viewer">
+					<div class="viewer_size">
+						<div class="viewer_size_wrap">
+							<button class="viewer_size_text">
+								<span class="text">360X740 (갤럭시 S10)</span>
+							</button>
+							<ul class="viewer_size_list">
+								<li data-size-w="360" data-size-h="740">360*740 (갤럭시 S10)</li>
+								<li data-size-w="360" data-size-h="800">360*800 (갤럭시 S20)</li>
+								<li data-size-w="412" data-size-h="914">412*914 (갤럭시 S20 Ultra)</li>
+								<li data-size-w="360" data-size-h="780">360*780 (갤럭시 S22)</li>
+								<li data-size-w="280" data-size-h="882">280*882 (갤럭시폴드5 접힘)</li>
+								<li data-size-w="800" data-size-h="560">800*560 (갤럭시폴드5 펼침)</li>
+								<li data-size-w="375" data-size-h="667">375*667 (아이폰SE)</li>
+								<li data-size-w="390" data-size-h="844">390*844 (아이폰12)</li>
+								<li data-size-w="393" data-size-h="852">393*852 (아이폰15)</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="viewer_cont">
+						<div class="viewer_cont_frame login_case" style="width: 360px; height: 740px">
+							<div class="viewer_cont_frame_header">
+								<a href="#" class="demo_history_back"><span class="text">이전</span></a>
+								<h2 class="demo_frame_title">카드발급현황조회</h2>
+								<button class="btn_demo_all_menu">전체메뉴</button>
+							</div>
+							<iframe src="demo_login_after_page.html" frameborder="0" class="inner" id="demo_frame"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- e: demo_content -->
+		</div>
+
+		<script>
+			$(function () {
+				const $DOC = $(document);
+				const $WIN = $(window);
+
+				$DOC.on("click", ".toggle_able", function () {
+					const $this = $(this);
+					$this.closest("li").toggleClass("active");
+				});
+
+				$DOC.on("click", ".viewer_size_text", function () {
+					const $this = $(this);
+					$this.toggleClass("active");
+				});
+
+				$DOC.on("click", ".demo_size_guide_btn", function () {
+					const $this = $(this);
+					$this.toggleClass("active");
+				});
+
+				// 페이지 클릭시 툴팁 / 셀렉트 목록 숨기기
+				$DOC.on("click", function (e) {
+					const $tooltip = $(e.target).closest(".demo_content_head_util").length;
+					if (!$tooltip) {
+						$(".demo_size_guide_btn").removeClass("active");
+					}
+
+					const $sizePick = $(e.target).closest(".viewer_size_wrap").length;
+					if (!$sizePick) {
+						$(".viewer_size_text").removeClass("active");
+					}
+				});
+
+				// 사이즈 값 받아오기
+				$DOC.on("click", ".viewer_size_list > li", function (e) {
+					const dataW = $(this).data("size-w");
+					const dataH = $(this).data("size-h");
+					const text = $(this).text();
+					$(".viewer_size_text").removeClass("active").find(".text").text(text);
+
+					$(".viewer_cont_frame").css("width", dataW);
+					$(".viewer_cont_frame").css("height", dataH);
+
+					if (dataW > "799") {
+						document.getElementById("demo_frame").contentWindow.$(".demo_visual_dom").addClass("v2");
+					} else {
+						document.getElementById("demo_frame").contentWindow.$(".demo_visual_dom").removeClass("v2");
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

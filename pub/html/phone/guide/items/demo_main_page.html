@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<!-- 데모 메인 예시 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap demo_main">
+				<!-- s: 로그인 전 메인 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="page_img step1">
+						<img src="../../../../img/demo/main/img_demo_main01.png" />
+
+						<button type="button" class="link_point ty1" onclick="uf_goStep(6);">전체메뉴</button>
+
+						<button type="button" class="link_point ty3" onclick="window.parent.$('#svc_cus_020101_0').click();">튜토리얼 이동</button>
+						<button type="button" class="link_point ty4" onclick="window.parent.$('#nff_acn_010102_1').click();">계좌개설 이동</button>
+
+						<button type="button" class="link_point ty5" onclick="window.parent.$('#fnt_mnt_010101_1').click();">모바일결재 이동</button>
+						<button type="button" class="link_point ty6" onclick="window.parent.$('#fnt_inq_090101_1').click();">빠른조회 이동</button>
+						<button type="button" class="link_point ty7" onclick="window.parent.$('#man_fnc_000101_1').click();">상품 둘러보기 이동</button>
+						<button type="button" class="link_point ty8" onclick="window.parent.$('#cmc_cir_000100_1').click();">인증보안 이동</button>
+
+						<button type="button" class="link_point ty9" onclick="window.parent.$('#fnc_crm_010101_1').click();">이벤트 IBK카드 이동</button>
+						<button type="button" class="link_point ty10" onclick="window.parent.$('#svc_box_010101_1').click();">IBK BOX 이동</button>
+
+						<button type="button" class="link_point ty2" onclick="uf_goStep(2);">로그인하기</button>
+					</div>
+				</div>
+				<!-- e: 로그인 전 메인 -->
+
+				<!-- s: 로그인 후 메인(은행 탭 - 기업은행) -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="page_img step2">
+						<img src="../../../../img/demo/main/img_demo_main02.png" />
+
+						<button type="button" class="link_point large_mode" onclick="uf_goStep(4);">큰글씨 보기</button>
+
+						<button type="button" class="link_point ty1" onclick="window.parent.$('#svc_ntc_010101_1').click();">알림함 이동</button>
+
+						<button type="button" class="link_point bank_tab_ty1" onclick="uf_goStep(3);">다른은행 탭</button>
+						<button type="button" class="link_point ty2" onclick="window.parent.$('#fnt_sav_010201_1').click();">모으기 이동</button>
+						<button type="button" class="link_point ty3" onclick="window.parent.$('#fnt_trn_110101_1').click();">보내기 이동</button>
+						<button type="button" class="link_point current_history" onclick="uf_goStep(7);">최근거래내역</button>
+
+						<button type="button" class="link_point ty4" onclick="window.parent.$('#man_ach_020101_1').click();">메뉴 설정</button>
+
+						<button type="button" class="link_point ty5" onclick="window.parent.$('#fnt_snt_010101_1').click();">결재대기</button>
+						<button type="button" class="link_point ty6" onclick="window.parent.$('#fnt_snt_010101_1').click();">실행대기</button>
+
+						<button type="button" class="link_point ty7" onclick="window.parent.$('#fnc_crm_010101_1').click();">이벤트 IBK카드 이동</button>
+						<button type="button" class="link_point ty8" onclick="window.parent.$('#svc_box_010101_1').click();">IBK BOX 이동</button>
+
+						<button type="button" class="link_point ty9" onclick="window.parent.$('#fnt_inq_010101_1').click();">내계좌 이동</button>
+						<button type="button" class="link_point ty10" onclick="window.parent.$('#fnt_trn_110101_1').click();">이체 이동</button>
+						<button type="button" class="link_point ty11" onclick="window.parent.$('#man_fnc_000101_1').click();">금융상품 이동</button>
+						<button type="button" class="link_point allmenu_ty1" onclick="uf_goStep(6);">전체메뉴</button>
+					</div>
+				</div>
+				<!-- e: 로그인 후 메인(은행 탭 - 기업은행) -->
+
+				<!-- s: 로그인 후 메인(은행 탭 - 다른은행) -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="page_img step3">
+						<img src="../../../../img/demo/main/img_demo_main03.png" />
+
+						<button type="button" class="link_point large_mode" onclick="uf_goStep(5);">큰글씨 보기</button>
+						<button type="button" class="link_point bank_tab_ty1" onclick="uf_goStep(2);">기업은행 탭</button>
+						<!-- <button type="button" class="link_point current_history" onclick="uf_goStep(7);">최근거래내역</button> -->
+						<button type="button" class="link_point allmenu_ty1" onclick="uf_goStep(6);">전체메뉴</button>
+					</div>
+				</div>
+				<!-- e: 로그인 후 메인(은행 탭 - 다른은행) -->
+
+				<!-- s: 로그인 후 메인(큰글씨 모드: 은행 탭 - 기업은행) -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="page_img step4">
+						<img src="../../../../img/demo/main/img_demo_main04.png" />
+
+						<button type="button" class="link_point large_mode" onclick="uf_goStep(2);">큰글씨 보기 해제</button>
+						<!-- <button type="button" class="link_point bank_tab_ty2" onclick="uf_goStep(5);">다른은행 탭</button> -->
+						<button type="button" class="link_point allmenu_ty2" onclick="uf_goStep(6);">전체메뉴</button>
+					</div>
+				</div>
+				<!-- e: 로그인 후 메인(큰글씨 모드: 은행 탭 - 기업은행) -->
+
+				<!-- s: 로그인 후 메인(큰글씨 모드: 은행 탭 - 다른은행) -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="page_img step5">
+						<img src="../../../../img/demo/main/img_demo_main05.png" />
+
+						<button type="button" class="link_point large_mode" onclick="uf_goStep(3);">큰글씨 보기 해제</button>
+						<!-- <button type="button" class="link_point bank_tab_ty2" onclick="uf_goStep(4);">기업은행 탭</button> -->
+						<button type="button" class="link_point allmenu_ty2" onclick="uf_goStep(6);">전체메뉴</button>
+					</div>
+				</div>
+				<!-- e: 로그인 후 메인(큰글씨 모드: 은행 탭 - 다른은행) -->
+
+				<!-- s: 전체메뉴 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="page_img step6">
+						<img src="../../../../img/demo/main/img_demo_main06.png" />
+
+						<button type="button" class="link_point ty1" onclick="uf_goStep(1);">전체메뉴 닫기</button>
+					</div>
+				</div>
+				<!-- e: 전체메뉴 -->
+
+				<!-- s: 로그인 후 메인(최근거래내역 열기 - 기업은행) -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="page_img step7">
+						<img src="../../../../img/demo/main/img_demo_main07.png" />
+
+						<button type="button" class="link_point large_mode" onclick="uf_goStep(4);">큰글씨 보기</button>
+						<button type="button" class="link_point current_history" onclick="uf_goStep(2);">최근거래내역</button>
+						<button type="button" class="link_point allmenu_ty1" onclick="uf_goStep(6);">전체메뉴</button>
+					</div>
+				</div>
+				<!-- e: 로그인 후 메인(최근거래내역 열기 - 기업은행) -->
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>

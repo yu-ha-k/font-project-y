@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 로그인 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="cert_bio">
+								<div class="cert_bio_head face">
+									<div class="inner">
+										<div class="cert_bio_head_title">얼굴을 보여주세요</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty5">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 link_ty1">Face ID 재설정하기</button>
+									<button type="button" class="btn ty_txt2 link_ty1">인증센터 바로가기</button>
+								</div>
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(2)">다른 로그인방법 선택하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 로그인 -->
+
+				<!-- s: 등록/재설정 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="cert_bio">
+								<div class="cert_bio_head face">
+									<div class="inner">
+										<div class="cert_bio_head_title">얼굴을 보여주세요</div>
+										<div class="cert_bio_head_msg">생체인증을 취소했어요.</div>
+									</div>
+								</div>
+								<div class="btn_area center">
+									<button type="button" class="btn s_2 c_1 r_1">다시 시도</button>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty4">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm">다음에 등록하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 등록/재설정 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

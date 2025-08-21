@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty2">
+						<div class="group">
+							<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+								<div class="dropdown_text">입출금 · 최근순 · 전체</div>
+							</div>
+						</div>
+						<div class="group">
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>조회일시 : 2017-09-20 18:14:55</li>
+								</ul>
+							</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">법인명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">주침민선</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대표자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">홍삼삼</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자(주민)등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">123-45-67890</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">부도여부</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">N</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">부도회차</span>
+										</span>
+										<span class="line_right">
+											<span class="date">0</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">당좌거래 정지여부</span>
+										</span>
+										<span class="line_right">
+											<span class="date">N</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기업규모</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">중소기업</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">당좌거래 개시일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">1974-01-01</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">당좌거래 해지여부</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">거래중</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 조회 -->
+
+				<!-- s: popup -->
+				<!-- s: 조건설정 팝업 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조건설정</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<div class="input_label ty1 top">고객번호</div>
+								<div class="input">
+									<input type="text" name="" id="" value="0010657530" title="고객번호" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1">당좌계좌번호</div>
+								<div class="dropdown ty2" role="button" title="당좌계좌번호 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">전체</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조건설정 팝업 -->
+				<!-- s: 고객 안내사항 바텀시트 -->
+				<div class="bottom_popup_wrap" id="popupNotice">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">고객안내사항</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupNotice');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							IBK인증서로는
+							<strong>전자어음/전자채권</strong>
+							거래를 이용하실 수 없습니다.
+							<strong>공동/금융인증서를 사용</strong>
+							하여 거래해주시길 바랍니다.
+							<div class="label">
+								<input type="checkbox" name="" id="chk1" />
+								<label for="chk1" class="checkbox small mt_16">
+									<i></i>
+									<span>3일 동안 열지않기</span>
+								</label>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 고객 안내사항 바텀시트-->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

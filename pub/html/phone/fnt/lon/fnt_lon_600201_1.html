@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 민생금융지원 캐시백 - 개인사업자 이자캐시백 조회 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 캐시백 조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 회차 선택 -->
+						<div class="group">
+							<div class="title_text ty1">민생금융지원 캐시백 조회</div>
+							<div class="bg_box ty1">
+								<div class="acd_wrap accodian_wrap ty1">
+									<div class="acd_head accodian_head small">
+										<button type="button" title="캐시백 데출계좌가 보이지 않을 경우 참고할 내용" aria-expanded="false" class="acd_btn">
+											<span class="title">
+												<span class="left">캐시백 대출계좌를 조회해 보세요</span>
+											</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<div class="txt_style ty12 fz_14">은행권 민생금융지원방안 발표(23.12.21.)에 따라 개인사업자 대출고객님을 대상으로 이자 환급(캐시백)을 시행합니다.</div>
+											<div class="title_text ty3 mt_12 pb_6">캐시백 대상</div>
+											<div class="txt_style ty12 fz_14">
+												2023.12.20 기준 개인사업자 대출을 보유한 고객(단, 부동산임대업으로 분류*된 대출고객은 제외).
+												<ul class="list_bullet ty1 mt_6">
+													<li>한국표준산업분류(10차)에 따라 IBK기업은행이 L68111(주거용 건물 임대업), L68112(비주거용 건물 임대업), L68119(기타 부동산 임대업) 영위 기업으로 분류한 대출고객</li>
+												</ul>
+											</div>
+											<div class="title_text ty3 mt_12 pb_6">대상대출</div>
+											<div class="txt_style ty12 fz_14">
+												2023.12.20 기준 대출고객이 보유한 개인사업자 대출(단, 기한의 이익상실 계좌, 한도대출*, 외화대출, 가계대출 등은 제외)
+												<ul class="list_bullet ty1 mt_6">
+													<li>수시로 대출(마이너스통장)은 캐시백 대상에 포함</li>
+												</ul>
+											</div>
+											<div class="title_text ty3 mt_12 pb_6">대상기간</div>
+											<div class="txt_style ty12 fz_14">2023.01.01~12.31(단 2023.01.01 이후 실행된 대출계좌의 경우 실행일로부터 1년까지)</div>
+											<div class="title_text ty3 mt_12 pb_6">캐시백 금액</div>
+											<div class="txt_style ty12 fz_14">
+												캐시백 대상기간 동안 납부한 대출이자 중 4% 초과분에 대해 90%를 대출고객별 최대 300만원까지 캐시백
+												<ul class="list_bullet ty1 mt_6">
+													<li>캐시백 금액 산정 시, 계좌별 대출금액은 최대 2억원까지만 반영</li>
+												</ul>
+											</div>
+											<div class="title_text ty3 mt_12 pb_6">지급 일정</div>
+											<div class="txt_style ty12 fz_14">2024.04.12(예정)</div>
+											<ul class="list_bullet ty1 mt_6">
+												<li>단 2023.01.01 이후 실행된 대출계좌의 경우, 2024년 중 납입한 이자에 대한 캐시백은 분기별로 분할 지급(2024년 4월, 7월, 10월 및 2025년 1월 중 예정)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="title_text ty1 mt_24">회차</div>
+							<div class="dropdown ty2" role="button" title="회차 선택 목록 보기" onclick="comLayerPopUtil.open('count');">
+								<div class="dropdown_text">회차 선택</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 회차 선택 -->
+
+						<!-- s: 결과 없음 -->
+						<div class="group">
+							<div class="no_result_msg">
+								<div class="msg">검색한 회차에 대출이자 캐시백을 받을 대출계좌가 없습니다.</div>
+							</div>
+						</div>
+						<!-- e: 결과 없음 -->
+
+						<!-- s: 캐시백 예상금액 -->
+						<div class="group">
+							<div class="title_text ty1">캐시백 예상금액</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">캐시백 예상금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">3,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금(예정일)</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">진행상태</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">입금예정</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<ul class="list_bullet ty1 mt_8">
+								<li>캐시백 예상금액은 총 캐시백 금액 중 선택한 회차의 이자납입 기간에 해당하는 캐시백 금액입니다.</li>
+								<li class="color ty4">동일 대출고객(대표자)별로 합산(전체 회차 누계 기준)한 총 캐시백 금액이 3백만원을 초과할 경우, 캐시백 최대한도에 따라 3백만원까지만 지급됩니다. 캐시백 금액이 3백만원을 초과하거나 추가 캐시백 대상계좌가 없을 경우 다음 회차 캐시백 금액은 없을 수 있습니다.</li>
+							</ul>
+							<div class="bg_box ty1 mt_32">
+								<div class="txt_style ty7 fw_6">
+									000-000000-00-000(예금주)
+									<div class="color ty4">유효한 입금계좌가 없습니다.</div>
+								</div>
+							</div>
+							<ul class="list_bullet ty1 mt_8">
+								<li>유효한 입금계좌(본인계좌)가 없을 경우, 캐시백 금액이 입금되지 않을 수 있습니다. 입금계좌 정보가 보이지 않을 경우 IBK고객센터(1588-2588)로 연락해 입금계좌를 지정해 주세요.</li>
+								<li>현금지급, 다른 은행 계좌, 다른 사람 명의의 계좌로는 캐시백을 받을 수 없습니다.</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 캐시백 예상금액 -->
+
+						<!-- s: 대상 계좌 정보 -->
+						<div class="group">
+							<div class="title_text ty1">대상계좌 정보</div>
+							<div class="title_text ty1">소상공인 대출</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-000000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">총 캐시백 대상기간</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+											~
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이번회차 캐시백 대상기간</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+											~
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="title_text ty1 mt_24">프랜차이즈 모바일론</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-000000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">총 캐시백 대상기간</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+											~
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">금차 캐시백 대상기간</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+											~
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<ul class="list_bullet ty1 mt_8">
+								<li>계좌별 '총 캐시백 대상기간' 종료일이 '이번회차 캐시백 대상기간' 종료일보다 뒤에 날짜인 계좌의 잔여 캐시백은 다음 회차에 지급됩니다.</li>
+							</ul>
+						</div>
+						<!-- e: 대상 계좌 정보 -->
+					</div>
+				</div>
+				<!-- e: step1 캐시백 조회 -->
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="count" title="회차 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">회차 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('count');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+			<!-- e: 민생금융지원 캐시백 - 개인사업자 이자캐시백 조회 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

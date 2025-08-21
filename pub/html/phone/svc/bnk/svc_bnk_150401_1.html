@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 등록(영업점발급고객) -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">디지털OTP 등록 서비스</div>
+							<p class="txt mt_16">영업점에서 신청한 디지털OTP를 앱 등록코드로 등록할 수 있어요.</p>
+							<div class="title_text ty1 mt_32">영업점 신청내역 조회</div>
+							<div class="form_group">
+								<div class="input_label ty2">사업자등록번호</div>
+								<div class="comp_wrap business_num">
+									<div class="input no_del">
+										<input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" />
+									</div>
+									<span>-</span>
+									<button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+								</div>
+
+								<div class="input_label ty2">휴대폰번호</div>
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력" />
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('popup1');">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 등록(영업점발급고객) -->
+
+				<!-- s: step2 앱등록코드 입력 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3 digital_otp_submit">
+						<div class="group">
+							<div class="title_text ty1">앱 등록코드</div>
+							<div class="app_submit_code">
+								<input type="text" class="input_txt" title="앱 등록코드 첫번째 자리 입력" />
+								<input type="text" class="input_txt" title="앱 등록코드 두번째 자리 입력" />
+								<input type="text" class="input_txt" title="앱 등록코드 세번째 자리 입력" />
+								<input type="text" class="input_txt" title="앱 등록코드 네번째 자리 입력" />
+								<input type="text" class="input_txt" title="앱 등록코드 다섯번째 자리 입력" />
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="set_app">
+								<div class="title_text ty1">유의사항</div>
+								<div class="agree_check tit_ty mt_0">
+									<div class="top chk_middle">
+										<div class="label">
+											<input type="checkbox" name="" id="ago_group03_2" class="chk_point" />
+											<label for="ago_group03_2" class="checkbox">
+												<i></i>
+												<span>디지털OTP PUSH 알림 동의</span>
+											</label>
+										</div>
+									</div>
+									<div class="inner">
+										<ul class="term_list chk_list">
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group02_1" class="chk_point_sub" />
+													<label for="ago_group02_1" class="checkbox small lbl">
+														<i></i>
+														<span>원활한 디지털OTP 이용을 위해 푸시알림을 켜주세요.</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="btn s_2 c_1 r_3 btn_set">설정하기</button>
+							</div>
+						</div>
+					</div>
+					<!-- s: 화면 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+						</div>
+					</div>
+					<!-- e: 화면 하단 고정 버튼 -->
+				</div>
+				<!-- e: step2 앱등록코드 입력 -->
+
+				<!-- s: step3 PIN 비밀번호 입력 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3 digital_otp_submit">
+						<div class="group">PIN 비밀번호 입력 공통</div>
+					</div>
+					<!-- s: 화면 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+						</div>
+					</div>
+					<!-- e: 화면 하단 고정 버튼 -->
+				</div>
+				<!-- e: step3 PIN 비밀번호 입력 -->
+
+				<!-- s: step4 완료 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								디지털OTP를
+								<br />
+								등록했어요
+							</div>
+						</div>
+					</div>
+					<!-- s: 화면 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2">로그인</button>
+						</div>
+					</div>
+					<!-- e: 화면 하단 고정 버튼 -->
+				</div>
+				<!-- e: step4 완료 -->
+
+				<!-- s: popup -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">약관동의</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<p class="txt">디지털OTP를 등록하기 위해 필요해요.</p>
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<div class="agree_check">
+										<div class="acd_wrap accodian_wrap ty1">
+											<div class="acd_head accodian_head check_as_all active chk_middle">
+												<div class="label">
+													<input type="checkbox" name="" id="ago_group05" class="chk_point" />
+													<label for="ago_group05" class="checkbox">
+														<i></i>
+														<span>
+															약관 모두 동의
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" aria-label="필수 약관동의 목록보기" aria-expanded="true" class="acd_btn box_ty"></button>
+											</div>
+											<div class="acd_cont accodian_cont chk_list">
+												<div class="inner" style="display: block">
+													<ul class="term_list">
+														<li class="item">
+															<div class="label">
+																<input type="checkbox" name="" id="ago_group05_1" class="chk_point_sub" />
+																<label for="ago_group05_1" class="checkbox small lbl">
+																	<i></i>
+																	<span>디지털OTP이용약관</span>
+																</label>
+															</div>
+															<button type="button" class="btn ty_txt3 line_bttm btn_view">
+																<span class="sr_only">디지털OTP이용약관</span>
+																보기
+															</button>
+														</li>
+														<li class="item">
+															<div class="label">
+																<input type="checkbox" name="" id="ago_group05_2" class="chk_point_sub" />
+																<label for="ago_group05_2" class="checkbox small lbl">
+																	<i></i>
+																	<span>개인정보 수집ㆍ이용동의</span>
+																</label>
+															</div>
+															<button type="button" class="btn ty_txt3 line_bttm btn_view">
+																<span class="sr_only">개인정보 수집ㆍ이용동의</span>
+																보기
+															</button>
+														</li>
+														<li class="item">
+															<div class="label">
+																<input type="checkbox" name="" id="ago_group05_3" class="chk_point_sub" />
+																<label for="ago_group05_3" class="checkbox small lbl">
+																	<i></i>
+																	<span>개인정보 제3자 제공 동의</span>
+																</label>
+															</div>
+															<button type="button" class="btn ty_txt3 line_bttm btn_view">
+																<span class="sr_only">개인정보 제3자 제공 동의</span>
+																보기
+															</button>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup1'); uf_goStep(2);">동의하기</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: MMT출금 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 정보입력 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보입력</div>
+							<div class="title_text ty1 with_btn pb_0">
+								출금계좌
+								<button type="button" class="btn link_ty1" onclick="comLayerPopUtil.open('layerpopup1');">출금가능금액조회</button>
+							</div>
+
+							<div class="acount_item_select ty1">
+								<div class="acount_item ty3" role="button" title="계좌선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="badge_cont">
+										<span class="badge ty3 colorB5">개인</span>
+										<span class="txt_style ty6 fw_4">IBK간편한통장(별명1줄)</span>
+									</div>
+
+									<div class="acount_item ty5">
+										<div class="ico_box ty5 ico_bank_003"></div>
+										<div class="item">
+											<div class="item_top">
+												<span class="bank_name">기업은행</span>
+												<span class="ac_num">000-000000-00-000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<span class="acount_item_select_money">출금가능액 : 12,000,000원</span>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">거래구분</div>
+							<div class="btn_area clickable ty1" role="radiogroup">
+								<button type="button" role="radio" aria-checked="true" class="active"><span class="text">원금</span></button>
+								<button type="button" role="radio" aria-checked="false"><span class="text">원리금</span></button>
+								<button type="button" role="radio" aria-checked="false"><span class="text">이자</span></button>
+							</div>
+							<ul class="list_bullet ty3 mt_8">
+								<li>원리금 및 이자 출금은 1일 1회만 할 수 있습니다.(원금 출금은 제한 없음)</li>
+							</ul>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">이체금액</div>
+
+							<div class="live_input_group">
+								<div class="live_input ty2">
+									<div class="value" aria-live="assertive" role="button" title="이체금액 입력">숫자만 입력</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="txt_style ty2">입금계좌</div>
+							<div class="acount_item_select ty1">
+								<div class="acount_item ty3" role="button" title="계좌선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="badge_cont">
+										<span class="badge ty3 colorB5">개인</span>
+										<span class="txt_style ty6 fw_4">IBK간편한통장(별명1줄)</span>
+									</div>
+
+									<div class="acount_item ty5">
+										<div class="ico_box ty5 ico_bank_003"></div>
+										<div class="item">
+											<div class="item_top">
+												<span class="bank_name">기업은행</span>
+												<span class="ac_num">000-000000-00-000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">선택정보</div>
+							<ul class="d_list ty3">
+								<li>
+									<span class="d_list_l">받는 분 통장 표기</span>
+
+									<div class="d_list_r">
+										<div class="input line_ty2 no_del">
+											<input type="text" name="" id="" title="받는 분 통장 표기할 내용 입력" placeholder="출금계좌 실명" />
+										</div>
+									</div>
+								</li>
+								<li>
+									<span class="d_list_l">내 통장 표기</span>
+
+									<div class="d_list_r">
+										<div class="input line_ty2 no_del">
+											<input type="text" name="" id="" title="미 입력시 받는 분 이름 입력" placeholder="내 통장 표기할 내용 입력" />
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>이체 후 취소할 수 없으므로, 출금이 가능한 계좌인지 확인 후 이체해 주세요.</li>
+											<li>이체 가능시간은 09:00~18;00입니다.(토/일/공휴일 이용 안됨)</li>
+											<li>MMT계좌에서 원리금, 원금, 이자를 출금할 수 있습니다. 원리금 및 이자 출금 시 전체 잔액에 대한 이자가 출금됩니다.</li>
+											<li>IBK기업은행 계좌로만 이체 가능하며, 다른 은행으로는 이체할 수 없습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 정보입력 -->
+
+				<!-- s: step2 정보확인 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="bottom_popup_wrap active" id="popup4">
+							<div class="bottom_popup no_header">
+								<div class="bottom_popup_body">
+									<div class="transfer_confirm">
+										<div class="transfer_confirm_title">
+											원금
+											<br />
+											<span class="won">50,000,000원</span>
+											을
+											<br />
+											출금할까요?
+										</div>
+
+										<div class="title_text ty1 mt_24">입출금 계좌번호</div>
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">출금계좌번호</span>
+												<span class="d_list_r">
+													<span class="account_no">000-00000-00-00000</span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">입금계좌번호</span>
+												<span class="d_list_r">
+													<span class="account_no">000-00000-00-00000</span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">입금은행</span>
+												<span class="d_list_r">기업은행</span>
+											</li>
+										</ul>
+
+										<div class="title_text ty1 mt_24">선택정보</div>
+										<ul class="d_list ty3">
+											<li>
+												<span class="d_list_l">받는 분 통장 표기</span>
+												<span class="d_list_r">기운센</span>
+											</li>
+											<li>
+												<span class="d_list_l">내 통장 표기</span>
+												<span class="d_list_r">기운센</span>
+											</li>
+										</ul>
+
+										<!-- 거래구분 원리금 선택시 노출 
+                      <div class="transfer_confirm_title">
+                        원리금<br>
+                        <span class="won">50,000,000원</span>을<br>
+                        출금할까요?
+                      </div>
+                      <ul class="d_list ty1">
+                        <li>
+                          <span class="d_list_l">선택이익금액</span>
+                          <span class="d_list_r">
+                            <span class="money">999,999</span>
+                            <span class="txt_unit">원</span>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="d_list_l">세후 이체예정금액</span>
+                          <span class="d_list_r">
+                            <span class="money">999,999</span>
+                            <span class="txt_unit">원</span>
+                          </span>
+                        </li>
+                      </ul>
+                      -->
+
+										<!-- 거래구분 이자 선택시 노출 
+                      <div class="transfer_confirm_title">
+                        이자를<br>
+                        출금할까요?
+                      </div>
+                      <ul class="d_list ty1">
+                        <li>
+                          <span class="d_list_l">선택이익금액</span>
+                          <span class="d_list_r">
+                            <span class="money">999,999</span>
+                            <span class="txt_unit">원</span>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="d_list_l">세후 이체예정금액</span>
+                          <span class="d_list_r">
+                            <span class="money">999,999</span>
+                            <span class="txt_unit">원</span>
+                          </span>
+                        </li>
+                      </ul>
+                      -->
+
+										<!-- s: 이자 출금할 금액이 없는 경우 -->
+										<div class="bg_box ty1 mt_32">
+											<p class="txt_style ty7">이자 출금할 금액이 없으며 출금을 원하실 경우 거래구분을 원금으로 선택하여 출금거래를 하시기 바랍니다.</p>
+										</div>
+										<!-- e: 이자 출금할 금액이 없는 경우  -->
+									</div>
+								</div>
+
+								<div class="bottom_popup_footer ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">이체하기</button>
+								</div>
+								<!-- 결제선인 경우 노출
+                    <div class="bottom_popup_footer ty2">
+                      <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                      <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">결제 요청하기</button>
+                    </div>
+                    -->
+
+								<!-- s: 이자 출금할 금액이 없는 경우  
+                    <div class="bottom_popup_footer ty1">
+                      <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">이전</button>
+                    </div>
+                    e: 이자 출금할 금액이 없는 경우  -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: step2 정보확인 -->
+
+				<!-- s: step3 이체완료 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="transfer_confirm">
+								<div class="ico_txt ty1 lottie_case2">
+									<div class="lottie_box" aria-hidden="true">
+										<lottie-player src="../../../../lottie/lottie_case1.json" background="transparent" speed="1" loop></lottie-player>
+									</div>
+									<div class="transfer_confirm_title">
+										원금
+										<br />
+										<span class="won">50,000,000원</span>
+										을
+										<br />
+										입금했어요
+										<!-- 
+            이자를<br>
+            입금했어요
+          -->
+									</div>
+								</div>
+
+								<div class="transfer_etcs pt_0">
+									<div class="transfer_etcs_items">
+										<div class="item">
+											<div class="favorite_tooltip">자주쓰는 계좌를 등록해보세요</div>
+											<div class="label">
+												<input type="checkbox" name="" id="comp1" class="favorite rnd_box" aria-label="즐겨찾기 등록" />
+												<label for="comp1" class="checkbox">
+													<i></i>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="transfer_confirm_moreview">
+									<div class="acd_wrap accodian_wrap ty2">
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="d_list ty1">
+													<li>
+														<span class="d_list_l">출금계좌번호</span>
+														<span class="d_list_r">
+															<span class="account_txt">000-00000-00-00000</span>
+														</span>
+													</li>
+													<li>
+														<span class="d_list_l">입금계좌번호</span>
+														<span class="d_list_r">
+															<span class="account_txt">000-00000-00-00000</span>
+														</span>
+													</li>
+													<li>
+														<span class="d_list_l">입금은행</span>
+														<span class="d_list_r">기업은행</span>
+													</li>
+													<li>
+														<span class="d_list_l">받는 분 통장 표기</span>
+														<span class="d_list_r">내용</span>
+													</li>
+													<li>
+														<span class="d_list_l">내 통장 표기</span>
+														<span class="d_list_r">내용</span>
+													</li>
+												</ul>
+
+												<!-- 원리금인 경우 노출
+                        <ul class="d_list ty1">
+                          <li>
+                            <span class="d_list_l">출금계좌번호</span>
+                            <span class="d_list_r">
+                              <span class="account_txt">000-00000-00-00000</span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">입금계좌번호</span>
+                            <span class="d_list_r">
+                              <span class="account_txt">000-00000-00-00000</span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">입금은행</span>
+                            <span class="d_list_r">기업은행</span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">신탁이익금액</span>
+                            <span class="d_list_r">
+                              <span class="money">999,999</span>
+                              <span class="txt_unit">원</span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">세후 이체예정금액</span>
+                            <span class="d_list_r">
+                              <span class="money">999,999</span>
+                              <span class="txt_unit">원</span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">받는 분 통장 표기</span>
+                            <span class="d_list_r">내용</span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">내 통장 표기</span>
+                            <span class="d_list_r">내용</span>
+                          </li>
+                        </ul>
+                         -->
+
+												<!-- 이자인 경우 노출
+                        <ul class="d_list ty1">
+                          <li>
+                            <span class="d_list_l">출금계좌번호</span>
+                            <span class="d_list_r">
+                              <span class="account_txt">000-00000-00-00000</span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">거래구분</span>
+                            <span class="d_list_r">이자</span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">입금계좌번호</span>
+                            <span class="d_list_r">
+                              <span class="account_txt">000-00000-00-00000</span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">입금은행</span>
+                            <span class="d_list_r">기업은행</span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">신탁이익금액</span>
+                            <span class="d_list_r">
+                              <span class="money">999,999</span>
+                              <span class="txt_unit">원</span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">세후 이체예정금액</span>
+                            <span class="d_list_r">
+                              <span class="money">999,999</span>
+                              <span class="txt_unit">원</span>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">받는 분 통장 표기</span>
+                            <span class="d_list_r">내용</span>
+                          </li>
+                          <li>
+                            <span class="d_list_l">내 통장 표기</span>
+                            <span class="d_list_r">내용</span>
+                          </li>
+                        </ul>
+                         -->
+											</div>
+										</div>
+
+										<div class="acd_head accodian_head">
+											<button type="button" title="컨텐츠내용 상세보기" aria-expanded="false" class="acd_btn">
+												<span class="title">더보기</span>
+												<span class="title sub">접기</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">거래내역조회</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: step3 이체완료 -->
+
+				<!-- s: step4 결재함_초단기특정 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="d_list_ty3_group">
+								<div class="d_list_ty3_group_head">
+									<div class="txt_style ty1">초단기특정(MMT)내역</div>
+								</div>
+								<div class="d_list ty3">
+									<p class="line" role="text">
+										<span class="d_list_l">출금계좌번호</span>
+										<span class="d_list_r">
+											<span class="account_no">000-00000-00-00000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="d_list_l">거래구분</span>
+										<span class="d_list_r">거래</span>
+									</p>
+									<p class="line" role="text">
+										<span class="d_list_l">입금은행</span>
+										<span class="d_list_r">은행명</span>
+									</p>
+									<p class="line" role="text">
+										<span class="d_list_l">입금계좌번호</span>
+										<span class="d_list_r">
+											<span class="account_no">000-00000-00-00000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="d_list_l">신탁이익금액</span>
+										<span class="d_list_r">
+											<span class="money">10,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="d_list_l">세액공제 후 입금예정금액</span>
+										<span class="d_list_r">
+											<span class="money">10,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+								<div class="acd_wrap accodian_wrap ty2 etc1">
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<div class="d_list ty3 bdt_none">
+												<p class="line" role="text">
+													<span class="d_list_l">이체금액</span>
+													<span class="d_list_r">
+														<span class="money">10,000,000</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="d_list_l">출금가능금액</span>
+													<span class="d_list_r">
+														<span class="money">10,000,000</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="d_list_l">반송사유</span>
+													<span class="d_list_r">-</span>
+												</p>
+												<p class="line" role="text">
+													<span class="d_list_l">거래상태</span>
+													<span class="d_list_r">-</span>
+												</p>
+												<p class="line" role="text">
+													<span class="d_list_l">에러메세지</span>
+													<span class="d_list_r">-</span>
+												</p>
+												<p class="line" role="text">
+													<span class="d_list_l">사용자</span>
+													<span class="d_list_r">-</span>
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="acd_head accodian_head">
+										<button type="button" title="컨텐츠내용 상세보기" aria-expanded="false" class="acd_btn">
+											<span class="title">더보기</span>
+											<span class="title sub">접기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty2" />
+
+						<div class="group">
+							<div class="form_group">
+								<div class="txt_style ty1">이체 오류 시 연락처</div>
+								<div class="comp_wrap phone error mt_16">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="전화번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="전화번호 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="전화번호 뒤 4자리 입력" />
+									</div>
+								</div>
+								<div class="error_text">문제 발생 시 연락받을 전화번호를 입력해 주세요.</div>
+							</div>
+							<div class="btn_area ty1 mt_16">
+								<button type="button" class="btn s_4 c_2 r_2">등록/변경</button>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area ty2">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area ty3">
+									<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.open('popup8');">결재선 조회</button>
+									<button type="button" class="btn s_5 c_1 r_2">목록</button>
+									<button type="button" class="btn s_5 c_1 r_2">반송</button>
+									<button type="button" class="btn s_5 c_3 r_2">결재</button>
+								</div>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 결재함_초단기특정 -->
+
+				<!-- s: popup -->
+				<!-- s: 출금계좌 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 출금계좌 선택 팝업 -->
+				<!-- s: 결재선 조회 팝업-->
+				<div class="bottom_popup_wrap" id="popup8">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">결재선조회</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup8');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">등록(완료)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">결재(대기)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">결재(완료)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">실행(대기)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 결재선 조회 팝업 -->
+
+				<div class="layer_popup_wrap" id="layerpopup1">
+					<div class="layer_popup">
+						<div class="layer_popup_body">
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">원본금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">50,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신탁보수</span>
+										</span>
+										<span class="line_right">
+											<span class="money">50,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이자금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">50,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신탁보수율</span>
+										</span>
+										<span class="line_right">
+											<span class="rate">%</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">수익률</span>
+										</span>
+										<span class="line_right">
+											<span class="rate">%</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">소득기간</span>
+										</span>
+										<span class="line_right">
+											<span class="date"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="layer_popup_footer">
+							<button type="button" class="btn s_4 c_3 r_2" onclick="comLayerPopUtil.close('layerpopup1');">확인</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- e: popup -->
+			</div>
+			<!-- e: MMT출금 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

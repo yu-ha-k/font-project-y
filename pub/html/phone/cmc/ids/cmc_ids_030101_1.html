@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: IBK인증서 폐기/환급 안내 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 폐기/환급 안내 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<!-- s: 안내 -->
+						<div class="group">
+							<div class="icon_info_group pb_0">
+								<div class="icon ibk_cert_discard"></div>
+
+								<div class="tit">IBK인증서 폐기/환급 안내</div>
+							</div>
+
+							<ul class="list_bullet ty4 mt_40">
+								<li>
+									<strong class="color ty4">IBK인증서를 폐기할 경우 모든 채널에서 이용할 수 없습니다.</strong>
+								</li>
+								<li>인증서 폐기 후 폐기된 인증서 유효기간이 남아있는 경우 재발급할 수 있어요.</li>
+								<li>인증서 폐기는 인터넷뱅킹에서도 할 수 있어요.</li>
+							</ul>
+						</div>
+						<!-- e: 안내 -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">IBK인증서 폐기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 폐기/환급 안내 -->
+			</div>
+			<!-- e: IBK인증서 폐기/환급 안내 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

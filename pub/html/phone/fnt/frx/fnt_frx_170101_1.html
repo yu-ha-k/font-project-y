@@ -1,0 +1,3563 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty2 foreign_currency_condition">
+						<div class="group">
+							<!-- 문구는 기획서 참조 - 조견별 노출 -->
+							<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+								<div class="dropdown_text">최근 10건・최신순</div>
+							</div>
+						</div>
+
+						<!-- s: 목록 -->
+						<div class="group">
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+								</ul>
+							</div>
+							<ul class="space_list_ty1 mt_16">
+								<li class="item">
+									<div class="card_item_wrap ty1">
+										<div class="card_chkbox">
+											<input type="radio" name="rdo" id="rdo01" />
+											<label for="rdo01" aria-labelledby="rdo01_content"></label>
+										</div>
+										<div class="card_item" id="rdo01_content">
+											<div class="card_item_info">
+												<div class="txt1">송금일</div>
+												<div class="txt2">
+													<span class="account_no">2024-05-17</span>
+												</div>
+											</div>
+											<div class="card_item_sub_info">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty1">송금금액</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+														<span class="money">13.05</span>
+													</span>
+												</p>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">거래번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt account_no">002-35-4O-R2-4008</span>
+													</span>
+												</p>
+
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">받는 분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">GDHHFF</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">국가</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">대한민국(한국)</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="item">
+									<div class="card_item_wrap ty1">
+										<div class="card_chkbox">
+											<input type="radio" name="rdo" id="rdo02" />
+											<label for="rdo02" aria-labelledby="rdo02_content"></label>
+										</div>
+										<div class="card_item" id="rdo02_content">
+											<div class="card_item_info">
+												<div class="txt1">송금일</div>
+												<div class="txt2">
+													<span class="account_no">2024-05-17</span>
+												</div>
+											</div>
+											<div class="card_item_sub_info">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty1">송금금액</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+														<span class="money">13.05</span>
+													</span>
+												</p>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">거래번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt account_no">002-35-4O-R2-4008</span>
+													</span>
+												</p>
+
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">받는 분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">GDHHFF</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">국가</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">대한민국(한국)</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- e: 목록 -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(6);">조건 변경</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">자금반환 요청</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 조회 -->
+
+				<!-- s: step2 자금반환요청-->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">자금반환 사유 선택</div>
+							<div class="question">
+								<div class="question_cont">
+									<strong>자금반환 사유를 선택해 주세요</strong>
+								</div>
+							</div>
+							<div class="answer mt_24">
+								<ul class="term_list">
+									<li class="item">
+										<div class="label">
+											<input type="radio" name="radio7" id="radio7_1" />
+											<label for="radio7_1" class="radio">
+												<i></i>
+												<span>이중지급</span>
+											</label>
+										</div>
+									</li>
+									<li class="item">
+										<div class="label">
+											<input type="radio" name="radio7" id="radio7_2" />
+											<label for="radio7_2" class="radio">
+												<i></i>
+												<span>은행오류</span>
+											</label>
+										</div>
+									</li>
+									<li class="item">
+										<div class="label">
+											<input type="radio" name="radio7" id="radio7_3" />
+											<label for="radio7_3" class="radio">
+												<i></i>
+												<span>금액오류</span>
+											</label>
+										</div>
+									</li>
+									<li class="item">
+										<div class="label">
+											<input type="radio" name="radio7" id="radio7_4" />
+											<label for="radio7_4" class="radio">
+												<i></i>
+												<span>통화오류</span>
+											</label>
+										</div>
+									</li>
+									<li class="item">
+										<div class="label">
+											<input type="radio" name="radio7" id="radio7_5" />
+											<label for="radio7_5" class="radio">
+												<i></i>
+												<span>송금인(본인)요청</span>
+											</label>
+										</div>
+									</li>
+									<li class="item">
+										<div class="label">
+											<input type="radio" name="radio7" id="radio7_6" />
+											<label for="radio7_6" class="radio">
+												<i></i>
+												<span>사기</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+								<ul class="list_bullet ty1 mt_16">
+									<li>신속한 자금반환 요청을 위해 사유 선택은 필수입니다.</li>
+									<li>선택 후에는 사유를 변경/취소할 수 없습니다.</li>
+								</ul>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 자금반환요청-->
+
+				<!-- s: step3 자금반환요청 정보확인 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<!-- s: 정보확인 -->
+						<div class="group">
+							<div class="title_text ty1">정보 확인</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외화참조번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">002-35-4O-R2-400803</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">자금반환사유</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">금액 오류</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 정보확인 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="title_text ty1">보내는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">GSDFSDF</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 받는 분 -->
+
+						<div class="group">
+							<div class="title_text ty1">받는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">GSDFSDF</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">1465464634654</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행명</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name">SHINHAN BANK</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행 주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- e: 받는 분 -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">송금하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 자금반환요청 정보확인 -->
+
+				<!-- s: step4 자금반환요청 완료 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">외화참조번호</span>
+									<span class="d_list_r">
+										<span class="txt">002-35-4O-R2-400803</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">자금반환사유</span>
+									<span class="d_list_r">
+										<span class="txt">금액 오류</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								자금반환 요청 완료
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="보내는 분 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">보내는 분</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">영문이름</span>
+												<span class="d_list_r">
+													<span class="txt">DFDSDF</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 받는 분 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="받는 분 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">받는 분</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">영문이름</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">영문주소</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">입금계좌번호</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">지급은행소재국</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">지급은행명</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">지급은행 주소</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">
+													지급은행 코드
+													<br />
+													* 스위프트 코드와 다른 코드임
+												</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">송금중계 은행명</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 받는 분 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_2 c_1 r_1" onclick="uf_goStep(1);">외화송금 조건 변경</button>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step4 자금반환요청 완료 -->
+
+				<!-- s: step5 결재함 상세, 승인완료(자금반환요청) -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">자금반환 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외환참조번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">자금반환사유</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">보내는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">받는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<!-- s: 자금반환요청 상세 -->
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">목록</button>
+							</div>
+							<!-- e: 자금반환요청 상세 -->
+							<!-- s: 자금반환요청 승인완료 -->
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">확인</button>
+							</div>
+							<!-- e: 자금반환요청 승인완료 -->
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step5 결재함 상세, 승인완료(자금반환요청) -->
+
+				<!-- s: step6 국내 조건변경(보내는정보) -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">보내는 분 정보</div>
+							<!-- s: 외화참조번호 -->
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외화참조번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">002-35-4O-R2-400803</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<ul class="list_bullet ty1 mt_8">
+								<li>추후 특정 해외 중계은행 및 수취은행으로부터 취급수수료가 추가 청구될 수 있습니다.</li>
+								<li>송금액, 해외은행 수수료는 조건 변경을 할 수 없습니다.</li>
+								<li>국내송금은 송금 후 수취은행 조건변경이 안 됩니다. 수취은행 오류 시 자금반환 신청해 주세요.</li>
+								<li>지급은행 변경 시 스위프트 코드(SWIFT CODE)를 반드시 입력해야 합니다. 입력하지 않을 경우, 중계은행으로부터 조건변경 요청을 받을 수 있습니다.</li>
+								<li>
+									<span class="color ty4">
+										이메일 해킹에 따른 외화송금 사기에 주의해 주세요.
+										<br />
+										수취인 정보(은행명, 계좌번호 등)가 변경된 이메일을 받은 경우, 수취인에게 직접 이메일의 진위 여부를 확인해 주세요.
+									</span>
+								</li>
+								<li>조건변경수수료는 수수료 결제계좌에 따라 다를 수 있습니다.</li>
+							</ul>
+							<!-- e: 외화참조번호 -->
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="title_text ty1">보내는 분</div>
+							<div class="form_group">
+								<div class="input_label ty2">
+									영문이름
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="영문이름 입력" placeholder="영문이름" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">
+									영문주소
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<div class="comp_wrap address">
+									<div class="input">
+										<input type="text" name="" id="" value="경기도 용인시 수지구 신수로" title="주소정보 입력" placeholder="주소입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" value="799 (동천동, 기업은행)" title="상세주소 입력" placeholder="상세주소 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">이전</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(7);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step6 국내 조건변경(보내는정보) -->
+
+				<!-- s: step7 국내 조건변경(받는정보) -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">받는 분 정보</div>
+							<div class="title_text ty1">받는 분</div>
+							<div class="form_group">
+								<!-- s: 영문 이름 -->
+								<div class="input_label ty2">
+									영문이름
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>
+										<span class="color ty4">
+											송금받는 분을 제3자로 변경해 거래 시 자금세탁방지업무 및 외국환거래법 등에 저촉되는 거래가 발생할 수 있어 비대면 채널에서는 조건변경 거래는 할 수 없습니다.
+											<br />
+											송금 증빙서류를 가지고 거래 영업점을 방문해 변경해 주세요.
+										</span>
+									</li>
+								</ul>
+								<div class="input mt_8">
+									<input type="text" name="" id="" value="DFSD" title="영문이름 입력" readonly placeholder="영문이름" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<!-- e: 영문 이름 -->
+								<!-- s: 입금계좌번호 -->
+								<div class="input_label ty2">
+									입금계좌번호
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<div class="input mt_8">
+									<input type="text" name="" id="" value="434686533" title="입금계좌번호 입력" placeholder="숫자만입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<ul class="list_bullet ty1 mt_8">
+									<li>
+										IBAN CODE: 국가코드, 은행 및 지점코드, 수취계좌번호 등으로 구성된 일련번호
+										<ul class="list_dash">
+											<li>IBAN CODE를 입력하지 않으면 입금이 지연되거나 자금이 반환될 수 있습니다.</li>
+										</ul>
+									</li>
+									<li>
+										<span class="color ty4">이메일 해킹에 따른 외화송금 사기가 급증하고 있으니 송금받는 분의 정보 진위 여부를 꼭 확인해 주세요.</span>
+									</li>
+								</ul>
+								<!-- e: 입금계좌번호 -->
+								<!-- s: 입금은행 -->
+								<div class="input_label ty2">
+									입금은행
+									<span class="ess_text ty2">필수</span>
+								</div>
+
+								<div class="comp_wrap column">
+									<div class="dropdown ty2 disabled" role="button" title="은행 선택 목록보기" aria-disabled="true" tabindex="-1" onclick="comLayerPopUtil.open('bankList');">
+										<div class="dropdown_text">신한은행(088)</div>
+									</div>
+
+									<div class="input">
+										<input type="text" name="" id="" value="SHINHAN BANK" title="은행 영문 이름" disabled placeholder="플레이스홀더" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>일본으로 송금할 때는 영업점명을 필수로 입력해 주세요.</li>
+									<li>지급은행 BIC를 기재한 경우 추가정보란에 영업점명 또는 영업점 코드 기재</li>
+									<li>
+										다음 은행 일본 통화 엔(JPY) 송금이 불가합니다.
+										<br />
+										JAPAN POST(YUCHYO BANK, JAPAN-NET BANK)
+									</li>
+								</ul>
+								<!-- e: 입금은행 -->
+								<!-- s: 변경후 입금은행 -->
+								<div class="input_label ty2">변경후 입금은행</div>
+								<div class="dropdown ty2" role="button" title="은행 선택 목록보기" onclick="comLayerPopUtil.open('bankList');">
+									<div class="dropdown_text">선택해주세요</div>
+								</div>
+
+								<ul class="list_bullet ty1">
+									<li>국내송금은 송금이 완료된 경우 수취은행 조건변경이 불가합니다. 수취은행 오류시 자금반환 신청하시기 바랍니다.</li>
+								</ul>
+								<!-- e: 변경후 입금은행 -->
+								<!-- s: 추가정보 -->
+								<div class="input_label ty2">추가정보</div>
+
+								<div class="comp_wrap column">
+									<div class="input">
+										<input type="text" name="" id="" title="추가정보 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" title="추가정보 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" title="추가정보 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" title="추가정보 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+
+								<ul class="list_bullet ty1">
+									<li>계약서 및 인보이스 번호 등 해당 송금과 관련된 필수 추가정보를 입력해 주세요.</li>
+									<li>
+										주소 등의 정보를 추가 입력하는 경우 보내는 분 또는 받는 분을 정확히 입력해 주세요.
+										<br />
+										예) 보내는 분 주소를 추가할 경우: ORDERING CUSTOMER ADDRESS: 받는 분 주소를 추가할 경우: BENEFICIARY ADDRESS:
+									</li>
+								</ul>
+								<!-- e: 추가정보 -->
+							</div>
+						</div>
+					</div>
+					<!-- s: 화면 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(6);">이전</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(8);">다음</button>
+						</div>
+					</div>
+					<!-- e: 화면 하단 고정 버튼 -->
+				</div>
+				<!-- s: step7 국내 조건변경(받는정보) -->
+
+				<!-- s: step8 국내 조건변경(정보확인) -->
+				<div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">정보확인</div>
+							<!-- s: 외화참조번호 -->
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외화참조번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">002-35-4O-R2-400803</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<!-- e: 외화참조번호 -->
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="group_item mt_24">
+								<div class="group_item_info">
+									<div class="txt3">보내는 분</div>
+								</div>
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">DADADDA</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">SDG</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 받는 분 -->
+						<div class="group">
+							<div class="group_item">
+								<div class="group_item_info">
+									<div class="txt3">받는 분</div>
+								</div>
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">DADADDA</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000000005</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">변경 후 입금은행</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name">000000005</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">추가정보</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name">000000005</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 받는 분 -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty2">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(9);">변경하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step8 국내 조건변경(정보확인) -->
+
+				<!-- s: step9 국내 조건변경 완료 -->
+				<div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+					<div class="content_wrap ty4 foreign_currency_condition">
+						<!-- s: 조건변경 완료 요약 -->
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								조건변경 완료
+							</div>
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">외화참조번호</span>
+									<span class="d_list_r">002-35-4O-R2-400803</span>
+								</li>
+							</ul>
+						</div>
+						<!-- e: 조건변경 완료 요약 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="보내는 분 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">보내는 분</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">영문이름</span>
+												<span class="d_list_r">GSDFDSFSDFSDF</span>
+											</li>
+											<li>
+												<span class="d_list_l">영문주소</span>
+												<span class="d_list_r">GSASFMEWFSD SDFSDLFDF</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 받는 분 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="받는 분 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">받는 분</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">영문이름</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">입금계좌번호</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">변경 후 입금은행</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">추가정보</span>
+												<span class="d_list_r"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 받는 분 -->
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_2 c_1 r_1" onclick="uf_goStep(1);">외화송금 조건 변경</button>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step9 국내 조건변경 완료 -->
+
+				<!-- s: step10 결재함 상세, 승인완료(조건변경(국내)) -->
+				<div id="step10" data-jx-step-no="10" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">보내는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외환참조번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">거래상태</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">반송사유</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">받는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행명</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">추가정보</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<!-- s: 상세 -->
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(11);">목록</button>
+							</div>
+							<!-- e: 상세 -->
+							<!-- s: 승인완료 -->
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(11);">확인</button>
+							</div>
+							<!-- e: 승인완료 -->
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step10 결재함 승인완료(조건변경(국내)) -->
+
+				<!-- s: step11 해외 조건변경(수수료정보) -->
+				<div id="step11" data-jx-step-no="11" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">수수료 정보</div>
+							<!-- s: 외화참조번호 -->
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외화참조번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">002-35-4O-R2-400803</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<ul class="list_bullet ty1 mt_8">
+								<li>
+									<span class="color ty4">수수료 조회를 선행</span>
+									하셔야 조건변경이 가능합니다.
+								</li>
+								<li><span class="color ty4">수수료계좌를 변경할 경우 입력 내용이 초기화됩니다.</span></li>
+								<li>조건변경수수료는 결제계좌에 따라 다를 수 있습니다.</li>
+								<li>조건변경 전문은 영업점에서 증빙서류 검토 및 승인 후 진행됩니다.</li>
+								<li>신속한 승인이 필요할 경우 관리 영업점에 문의해 주세요.</li>
+							</ul>
+							<!-- e: 외화참조번호 -->
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 조건변경 수수료 -->
+						<div class="group">
+							<div class="title_text ty1">조건변경 수수료</div>
+							<div class="form_group">
+								<!-- s: 수수료결제계좌 -->
+								<div class="input_label ty2">
+									수수료결제계좌
+									<span class="ess_text ty2">선택</span>
+								</div>
+
+								<div class="with_option">
+									<div class="btn_area ty1">
+										<button class="btn s_2 c_1 r_3" onclick="uf_goStep(91);">조건변경수수료 조회</button>
+									</div>
+									<div class="cont">
+										<div class="dropdown ty2" role="button" title="수수료결제계좌 선택 목록보기" onclick="comLayerPopUtil.open('popupAccount_old');">
+											<div class="dropdown_text"></div>
+										</div>
+									</div>
+								</div>
+
+								<!-- e: 수수료결제계좌 -->
+								<!-- s: 조건변경수수료 -->
+								<div class="input_label ty2">
+									조건변경수수료
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="조건변경수수료 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<!-- e: 조건변경수수료 -->
+							</div>
+						</div>
+						<!-- e: 조건변경 수수료 -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">이전</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(12);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step11 해외 조건변경(수수료정보) -->
+
+				<!-- s: step12 해외 조건변경(보내는정보) -->
+				<div id="step12" data-jx-step-no="12" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">보내는 분 정보</div>
+							<!-- s: 외화참조번호 -->
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외화참조번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">002-35-4O-R2-400803</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<ul class="list_bullet ty1 mt_8">
+								<li>추후 특정 해외 중계은행 및 수취은행으로부터 취급수수료가 추가 청구될 수 있습니다.</li>
+								<li>송금액, 해외은행 수수료는 조건 변경을 할 수 없습니다.</li>
+								<li>국내송금은 송금 후 수취은행 조건변경이 안 됩니다. 수취은행 오류 시 자금반환 신청해 주세요.</li>
+								<li>지급은행 변경 시 스위프트 코드(SWIFT CODE)를 반드시 입력해야 합니다. 입력하지 않을 경우, 중계은행으로부터 조건변경 요청을 받을 수 있습니다.</li>
+								<li>
+									<span class="color ty4">
+										이메일 해킹에 따른 외화송금 사기에 주의해 주세요.
+										<br />
+										수취인 정보(은행명, 계좌번호 등)가 변경된 이메일을 받은 경우, 수취인에게 직접 이메일의 진위 여부를 확인해 주세요.
+									</span>
+								</li>
+								<li>조건변경수수료는 수수료 결제계좌에 따라 다를 수 있습니다.</li>
+							</ul>
+							<!-- e: 외화참조번호 -->
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="title_text ty1">보내는 분</div>
+							<div class="form_group">
+								<div class="input_label ty2">
+									영문이름
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="영문이름 입력" placeholder="영문이름" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">
+									영문주소
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<div class="comp_wrap address">
+									<div class="input">
+										<input type="text" name="" id="" value="경기도 용인시 수지구 신수로" title="주소정보 입력" placeholder="주소입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" value="799 (동천동, 기업은행)" title="상세주소 입력" placeholder="상세주소 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(11);">이전</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(13);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step12 해외 조건변경(보내는정보) -->
+
+				<!-- s: step13 해외 조건변경(받는정보) -->
+				<div id="step13" data-jx-step-no="13" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">받는 분 정보</div>
+							<div class="title_text ty1">받는 분</div>
+							<div class="form_group">
+								<!-- s: 영문 이름 -->
+								<div class="input_label ty2">
+									영문이름
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>
+										<span class="color ty4">
+											송금받는 분을 제3자로 변경해 거래 시 자금세탁방지업무 및 외국환거래법 등에 저촉되는 거래가 발생할 수 있어 비대면 채널에서는 조건변경 거래는 할 수 없습니다.
+											<br />
+											송금 증빙서류를 가지고 거래 영업점을 방문해 변경해 주세요.
+										</span>
+									</li>
+								</ul>
+								<div class="input mt_8">
+									<input type="text" name="" id="" value="DFSD" title="영문이름 입력" readonly placeholder="영문이름" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<!-- e: 영문 이름 -->
+								<!-- s: 영문 주소 -->
+								<div class="input_label ty2">
+									영문주소
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<div class="comp_wrap address">
+									<div class="input">
+										<input type="text" name="" id="" value="경기도 용인시 수지구 신수로" title="주소정보 입력" placeholder="주소입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" value="123456" title="주소정보 입력" placeholder="주소입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" value="799 (동천동, 기업은행)" title="상세주소 입력" placeholder="상세주소 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>
+										외환거래 시
+										<span class="color ty4">금융제재 대상국가 및 지역[북한, 이란, 시리아, 쿠바, 러시아-우크라이나 분쟁지역(크림반도&middot;도네츠크&middot;루간스크&middot;자포리자&middot;헤르손)]</span>
+										과 직&middot;간접적으로 연관된 경우 거래가 불가능합니다. 금융제재 대상국가와의 거래로 확인될 경우 해당 거래가 거절되거나 자금이 동결될 수 있음을 알려드립니다.
+										<br />
+										※ 금융제재 대상국가는 수시로 변경될 수 있습니다.
+									</li>
+								</ul>
+								<!-- e: 영문 주소 -->
+								<!-- s: 입금계좌번호 -->
+								<div class="input_label ty2">
+									입금계좌번호
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<div class="input mt_8">
+									<input type="text" name="" id="" value="434686533" title="입금계좌번호 입력" placeholder="숫자만입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<ul class="list_bullet ty1 mt_8">
+									<li>
+										IBAN CODE: 국가코드, 은행 및 지점코드, 수취계좌번호 등으로 구성된 일련번호
+										<ul class="list_dash">
+											<li>IBAN CODE를 입력하지 않으면 입금이 지연되거나 자금이 반환될 수 있습니다.</li>
+										</ul>
+									</li>
+									<li>
+										<span class="color ty4">이메일 해킹에 따른 외화송금 사기가 급증하고 있으니 송금받는 분의 정보 진위 여부를 꼭 확인해 주세요.</span>
+									</li>
+								</ul>
+								<!-- e: 입금계좌번호 -->
+								<!-- s: 지급은행 소재국 -->
+								<div class="input_label ty2">
+									지급은행 소재국
+									<span class="ess_text ty2">필수</span>
+								</div>
+
+								<div class="dropdown ty2" role="button" title="지급은행 소재국 목록 보기" onclick="uf_goStep(998);">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="btn_area ty1 mt_16">
+									<button class="btn s_4 c_2 r_2" onclick="uf_goStep(93)">송금목적코드 조회</button>
+								</div>
+								<div class="input mt_8">
+									<input type="text" name="" id="" title="송금목적코드(숫자 6자리) 입력" placeholder="송금목적코드(숫자 6자리) 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_8">
+									<input type="text" name="" id="" title="송금목적코드(영문 3자리) 입력" placeholder="송금목적코드(영문 3자리) 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+
+								<ul class="list_bullet ty2">
+									<li>
+										인도네시아(ID)로 무역대전(1만 USD 상당액 이상) 송금 시 추가정보 입력 방법 아래 참고
+										<ul class="list_dash">
+											<li>인보이스 번호와 해당 금액(통화 표기 없이 숫자와 소수점)을 표기하되, 띄어쓰기 없이 입력</li>
+											<li>2개 이상의 인보이스를 합산한 송금인 경우: /1011//INVOICE01(1234.58)INVOICE02(56781.94)</li>
+										</ul>
+									</li>
+								</ul>
+
+								<!-- e: 지급은행 소재국 -->
+								<!-- s: 지급은행 BIC(SWIFT CODE) -->
+
+								<div class="input_label ty2 mt_24">지급은행 BIC(스위프트 코드)</div>
+
+								<div class="with_option">
+									<div class="btn_area ty1">
+										<button class="btn s_2 c_1 r_3" onclick="uf_goStep(92)">스위프트코드 찾기</button>
+									</div>
+									<div class="cont">
+										<div class="input">
+											<input type="text" name="" id="" title="지급은행 BIC(스위프트 코드) 입력" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+										<div class="btn_area ty1 mt_16">
+											<button type="button" class="btn s_4 c_1 r_2">초기화</button>
+											<button type="button" class="btn s_4 c_2 r_2">조회</button>
+										</div>
+										<ul class="list_bullet ty1">
+											<li>
+												<span class="color ty4">코드를 잘못 선택할 경우 잘못 송금될 수 있으며, 코드를 모른다면 영문은행명 및 영문은행 주소를 입력해서 거래해 주세요.</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- e: 지급은행 BIC(SWIFT CODE) -->
+								<!-- s: 지급은행명 -->
+								<div class="input_label ty2">
+									지급은행명
+									<span class="ess_text ty2">필수</span>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="지급은행명 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_12">
+									<input type="text" name="" id="" title="지급은행명 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<ul class="list_bullet ty1 mt_8">
+									<li>일본으로 송금할 때는 영업점명을 필수로 입력해 주세요. (지급은행 BIC를 기재한 경우 추가정보란에 영업점명 또는 영업점 코드 기재)</li>
+									<li>다음 은행 일본 통화 엔(JPY) 송금이 불가합니다. JAPAN POST(YUCHYO BANK), JAPAN-NET BANK</li>
+								</ul>
+								<!-- e: 지급은행명 -->
+								<!-- s: 지급은행 주소 -->
+								<div class="input_label ty2">지급은행 주소</div>
+								<div class="input">
+									<input type="text" name="" id="" title="지급은행 주소 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_12">
+									<input type="text" name="" id="" title="지급은행 주소 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<!-- e: 지급은행 주소 -->
+								<!-- s: 은행고유구분/지급은행 코드 -->
+								<div class="input_label ty2">은행고유구분/지급은행 코드</div>
+								<div class="dropdown ty2" role="button" title="은행고유구분 선택 목록 보기" onclick="comLayerPopUtil.open('optlist');">
+									<div class="dropdown_text">은행고유구분 선택</div>
+								</div>
+
+								<div class="input mt_12">
+									<input type="text" name="" id="" title="지급은행 주소 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<ul class="list_bullet ty1 mt_8">
+									<li>미국(ABA 9자리), 호주/뉴질랜드(BSB 6자리), 독일(BLZ 8자리), 캐나다(TRANSIT CODE 8~9자리), 영국 / 아일랜드(SORT CODE 6자리)</li>
+									<li>코드를 모를 경우 입력하지 않아도 되지만, 송금이 지연되거나 반환될 수 있습니다.</li>
+								</ul>
+								<!-- e: 은행고유구분/지급은행 코드 -->
+								<!-- s: 중계은행 BIC(스위프트 코드) -->
+
+								<div class="input_label ty2">중계은행 BIC(스위프트 코드)</div>
+
+								<div class="with_option">
+									<div class="btn_area ty1">
+										<button class="btn s_2 c_1 r_3" onclick="uf_goStep(92)">스위프트코드 찾기</button>
+									</div>
+									<div class="cont">
+										<div class="input">
+											<input type="text" name="" id="" title="중계은행 BIC(스위프트 코드) 입력" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+										<div class="btn_area ty1 mt_16">
+											<button type="button" class="btn s_4 c_1 r_2">초기화</button>
+											<button type="button" class="btn s_4 c_2 r_2">조회</button>
+										</div>
+										<ul class="list_bullet ty1">
+											<li>코드를 잘못 선택할 경우 잘못 송금될 수 있으니 정확하게 입력해 주세요.</li>
+											<li>코드를 모를 경우 입력하지 않아도 됩니다.</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- e: 중계은행 BIC(스위프트 코드) -->
+								<!-- s: 송금중계은행명 -->
+								<div class="input_label ty2">송금중계은행명</div>
+								<div class="input">
+									<input type="text" name="" id="" title="송금중계은행명 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_12">
+									<input type="text" name="" id="" title="송금중계은행명 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_12">
+									<input type="text" name="" id="" title="송금중계은행명 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_12">
+									<input type="text" name="" id="" title="송금중계은행명 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<!-- e: 송금중계은행명 -->
+								<!-- s: 추가정보 -->
+								<div class="input_label ty2">추가정보</div>
+								<div class="input">
+									<input type="text" name="" id="" title="추가정보 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_12">
+									<input type="text" name="" id="" title="추가정보 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_12">
+									<input type="text" name="" id="" title="추가정보 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input mt_12">
+									<input type="text" name="" id="" title="추가정보 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<ul class="list_bullet ty1 mt_8">
+									<li>계약서 및 인보이스 번호 등 해당 송금과 관련된 필수 추가정보를 입력해 주세요.</li>
+									<li>
+										주소 등의 정보를 추가 입력하는 경우 보내는 분 또는 받는 분을 정확히 입력해 주세요.
+										<br />
+										예) 보내는 분 주소를 추가할 경우: ORDERING CUSTOMER ADDRESS:
+										<br />
+										받는 분 주소를 추가할 경우: BENEFICIARY ADDRESS:
+									</li>
+								</ul>
+								<!-- e: 추가정보 -->
+							</div>
+						</div>
+					</div>
+					<!-- s: 화면 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(12);">이전</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(14);">다음</button>
+						</div>
+					</div>
+					<!-- e: 화면 하단 고정 버튼 -->
+				</div>
+				<!-- s: step13 해외 조건변경(받는정보) -->
+
+				<!-- s: step14 사기송금 예방 고객확인서 -->
+				<div id="step14" data-jx-step-no="14" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">사기송금 예방 고객확인서</div>
+							<div class="bg_box ty1">
+								<div class="txt_style ty3">"수취인 계좌번호를 전화로 직접 확인하셨나요?"</div>
+							</div>
+							<div class="txt_style ty2 fw_4 mt_16">고객님이 요청하신 해외송금건은 다음 사유로 이메일 해킹이 의심되는 거래입니다.</div>
+
+							<div class="label mt_16">
+								<input type="checkbox" name="" id="cheat1" />
+								<label for="cheat1" class="checkbox">
+									<i></i>
+									<span class="color ty4">수취인의 소재국가와 수취은행의 소재국가 상이</span>
+									<span class="label_desc_text">수취인 소재국(ex: 중국), 수취은행 소재국(ex: 영국)</span>
+								</label>
+							</div>
+							<div class="label mt_16">
+								<input type="checkbox" name="" id="cheat2" />
+								<label for="cheat2" class="checkbox">
+									<i></i>
+									<span class="color ty4">기업은행에서 송금이력이 없는 수취인 계좌번호*</span>
+									<span class="label_desc_text">최근 전 금융권에서 급증하고 있는 이메일 해킹 사기송금의 대부분이 첫 송금거래에서 발생하고 있습니다.</span>
+								</label>
+								<ul class="list_asterisk ml_32 mt_8">
+									<li>기존 거래업체의 수취인계좌 변경 및 당행에 송금이력이 없는 계좌번호</li>
+								</ul>
+							</div>
+							<div class="label mt_16">
+								<input type="checkbox" name="" id="cheat3" />
+								<label for="cheat3" class="checkbox">
+									<i></i>
+									<span class="color ty4">수취인의 계좌번호가 지난 5년 동안의 송금정보와 상이</span>
+									<span class="label_desc_text">수취인 ABC CO., LTD(ex. 계좌번호:12345) &#8594; ABC CO., LTD(ex: 54321)</span>
+								</label>
+							</div>
+
+							<div class="txt_style ty2 mt_16">
+								<p class="color ty4">이메일 해킹에 따른 해외송금의 경우 송금완료 후에는 해당 자금의 반환이 안 될 확률이 큽니다.</p>
+							</div>
+							<div class="txt_style ty2 fw_4 mt_16">이메일 해킹으로 인한 피해를 사전에 방지하기 위해 유선 및 팩스 등의 방법으로 상대 거래처에 거래의 진위 여부를 확인해 주세요.</div>
+						</div>
+
+						<div class="img_visual">
+							<img src="../../../../img/fnt/img_fnt_frx_150101_1_01.png" alt="이메일 해킹 사기 수법" />
+							<div class="sr_only">
+								<p>e-Mail 해킹 사기 수법</p>
+								<dl>
+									<dt>1. 이메일 발신</dt>
+									<dd>해외 A업체</dd>
+									<dt>2. 이메일 해킹</dt>
+									<dd>이메일, 인보이스(오퍼 등)</dd>
+									<dd>해커가 국내외 업체간 이메일을 해킹해 유사 이메일을 사용 후 송금정보 변경</dd>
+									<dd>수취은행, 수취인명, 수취계좌번호 변경 등</dd>
+									<dt>3. 해킹된 정보 수신</dt>
+									<dd>국내 B업체</dd>
+								</dl>
+								<p>무역대금 결제 관련 거래 시 점검사항</p>
+								<p>유사 이메일 확인 거래 상대방의 이메일 주소를 정확히 확인하셨나요? 발신자와 기존 거래자의 이메일 정보가 같은 지 꼭 확인해 보세요.</p>
+								<dl>
+									<dt>일부 글자 더하거나 빼기</dt>
+									<dd>Ex) widgets@freemail.com → widget@freemail.com</dd>
+									<dt>이메일 글자 재정렬</dt>
+									<dd>Ex) acme868@freemail.com → acme686@freemail.com</dd>
+									<dt>이메일 글자 변환</dt>
+									<dd>Ex) sales@freemail.com → sa1es@freemail.com</dd>
+								</dl>
+								<p>송금정보 확인 메일로 송금정보 변경요청을 받으셨나요? 반드시 거래 상대방에게 전화 또는 팩스로 송금정보 진위여부를 재확인해 주세요.</p>
+								<ul>
+									<li>수취인과 수취은행 국가가 서로 다른 경우 확인</li>
+									<li>기존에 보낸 송금정보(수취은행, 계좌번호 등)와 다르거나 변경된 경우 확인</li>
+									<li>수취인이 거래상대방이 아닌 제3자 명의로 송금 요청한 경우 확인</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="group mt_40">
+							<div class="label">
+								<input type="checkbox" name="" id="agree" />
+								<label for="agree" class="checkbox small">
+									<i class="align_self_center"></i>
+									<span>당사는 위의 유의사항에 대해 충분히 이해하고 본 거래가 정상 거래임을 확인해 송금을 신청합니다.</span>
+								</label>
+							</div>
+							<div class="txt_style ty10 mt_16 fw_4 ta_r">
+								2022년 3월 15일
+								<br />
+								신청인 : Kiup Kim
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(15);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step14 사기송금 예방 고객확인서 -->
+
+				<!-- s: step15 해외 조건변경(정보확인) -->
+				<div id="step15" data-jx-step-no="15" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">정보 확인</div>
+							<!-- s: 외화참조번호 -->
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외화참조번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">002-35-4O-R2-400803</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<!-- e: 외화참조번호 -->
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="group_item mt_24">
+								<div class="group_item_info">
+									<div class="txt3">보내는 분</div>
+								</div>
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">DADADDA</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">SDG</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 받는 분 -->
+						<div class="group">
+							<div class="group_item">
+								<div class="group_item_info">
+									<div class="txt3">받는 분</div>
+								</div>
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">DADADDA</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">DADADDA</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000000005</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행소재국</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name">GH가나</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">
+												지급은행 BIC
+												<br />
+												(스위프트 코드)
+											</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">ABDFSDF</span>
+										</span>
+									</p>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">송금목적코드</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행명</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name">ABDFSDF</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행 주소</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name">ABDFSDF</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">
+												지급은행 코드
+												<br />
+												* 스위프트 코드와 다른 코드임
+											</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">ABDFSDF</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">
+												중계은행 BIC
+												<br />
+												(스위프트 코드)
+											</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">ABDFSDF</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">송금중계 은행명</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name">ABDFSDF</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">추가정보</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 받는 분 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 수수료정보 -->
+						<div class="group">
+							<div class="title_text ty1">수수료정보</div>
+
+							<div class="with_option">
+								<div class="btn_area ty1">
+									<button class="btn s_2 c_1 r_3" onclick="uf_goStep(91)">수수료보기</button>
+								</div>
+								<div class="cont">
+									<div class="group_item">
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">수수료결제계좌</span>
+												</span>
+												<span class="line_right">
+													<span class="txt">DADADDA</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">조건변경수수료</span>
+												</span>
+												<span class="line_right">
+													<span class="txt">DADADDA</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 수수료정보 -->
+
+						<!-- s: 결재선 조회 버튼 -->
+						<div class="group">
+							<div class="btn_area ty1 mt_32">
+								<button type="button" class="btn s_2 c_1 r_1" onclick="comLayerPopUtil.open('popup3');">결재선 조회</button>
+							</div>
+						</div>
+						<!-- e: 결재선 조회 버튼 -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty2">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(16);">변경하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step15 해외 조건변경(정보확인) -->
+
+				<!-- s: step16 해외 조건변경(완료) -->
+				<div id="step16" data-jx-step-no="16" data-jx-effect="slide">
+					<div class="content_wrap ty4 foreign_currency_condition">
+						<!-- s: 조건변경 완료 요약 -->
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								조건변경을 완료했어요
+							</div>
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">외화참조번호</span>
+									<span class="d_list_r">002-35-4O-R2-400803</span>
+								</li>
+							</ul>
+						</div>
+						<!-- e: 조건변경 완료 요약 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="보내는 분 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">보내는 분</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">영문이름</span>
+												<span class="d_list_r">GSDFDSFSDFSDF</span>
+											</li>
+											<li>
+												<span class="d_list_l">영문주소</span>
+												<span class="d_list_r">GSASFMEWFSD SDFSDLFDF</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 받는 분 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="받는 분 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">받는 분</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">영문이름</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">영문주소</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">입금계좌번호</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">지급은행소재국</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">지급은행 BIC(스위프트 코드)</span>
+												<span class="d_list_r"></span>
+											</li>
+
+											<li>
+												<span class="d_list_l">송금목적코드</span>
+												<span class="d_list_r"></span>
+											</li>
+
+											<li>
+												<span class="d_list_l">지급은행명</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">지급은행 주소</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">
+													지급은행 코드
+													<br />
+													* 스위프트 코드와 다른 코드임
+												</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">
+													중계은행 BIC
+													<br />
+													(스위프트 코드)
+												</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">송금중계 은행명</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">추가정보</span>
+												<span class="d_list_r"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 받는 분 -->
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 수수료정보 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="수수료정보 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">수수료정보</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">수수료결제계좌</span>
+												<span class="d_list_r"></span>
+											</li>
+											<li>
+												<span class="d_list_l">조건변경수수료</span>
+												<span class="d_list_r"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 받는 분 -->
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_2 c_1 r_1" onclick="uf_goStep(1);">외화송금 조건 변경</button>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(17);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step16 해외 조건변경(완료) -->
+
+				<!-- s: step17 해외 결재요청 완료 -->
+				<div id="step17" data-jx-step-no="17" data-jx-effect="slide">
+					<div class="content_wrap ty4 foreign_currency_condition">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								결재요청 완료
+								<div class="note_cmt">결재요청을 등록했어요</div>
+							</div>
+
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>[결재함 > 결재/실행완료]에서 결과를 꼭 확인해 주세요</li>
+									<li>문의 : IBK고객센터(1566-2566/내선 515, 1588-2588/내선 515)</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step17 해외 결재요청 완료 -->
+
+				<!-- s: step18 결재함 상세, 승인완료(해외송금) -->
+				<div id="step18" data-jx-step-no="18" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">보내는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외환참조번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<!-- 거래상태는 승인완료의 경우에만 보임 -->
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">거래상태</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">반송사유</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">받는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행 소재국</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행명</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행 주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급은행구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">
+												지급은행 코드
+												<br />
+												(스위프트 코드 아님)
+											</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">송금중계 은행명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">추가정보</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">수수료정보</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>수수료 결제계좌, 조건변경 수수료 정보로 이루어진 송금정보 표</caption>
+									<colgroup>
+										<col style="width: 50%" />
+										<col style="width: auto" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">수수료 결제계좌</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">조건변경 수수료</th>
+											<td class="ta_r">
+												<span class="money"></span>
+												<span class="txt_unit">원</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<!-- s: 상세 -->
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">목록</button>
+							</div>
+							<!-- e: 상세 -->
+							<!-- s: 승인완료 -->
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+							<!-- e: 승인완료 -->
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step18 결재함 상세, 승인완료(해외송금) -->
+
+				<!-- s: step91 외화송금수수료 정보 -->
+				<!-- s: 전체팝업-->
+				<div id="step91" data-jx-step-no="91" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_trans">
+						<div class="group">
+							<div class="title_text ty1">외화송금수수료 정보</div>
+							<div class="title_text ty1">송금수수료</div>
+							<!-- s: 해외송금 -->
+							<div class="title_text ty3">해외송금(지급증빙미제출송금/체재비송금)</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 해외송금 표</caption>
+									<colgroup>
+										<col style="width: 33.3%" />
+										<col style="width: 33.3%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>~USD 500 이하</td>
+											<td>건당 5,000원</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>USD 500 초과~USD 2,000 이하</td>
+											<td>건당 1만원</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>USD 2,000 초과~USD 5,000 이하</td>
+											<td>건당 1만5,000원</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>USD 5,000 초과</td>
+											<td>건당 2만원</td>
+											<td>면제</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 해외송금 -->
+							<!-- s: 무역대전송금 -->
+							<div class="title_text ty3 mt_24">무역대전송금</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 무역대전송금 표</caption>
+									<colgroup>
+										<col style="width: 33.3%" />
+										<col style="width: 33.3%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>~USD 500 이하</td>
+											<td>건당 5,000원</td>
+											<td>건당 2,500원</td>
+										</tr>
+										<tr>
+											<td>USD 500 초과~USD 2,000 이하</td>
+											<td>건당 1만원</td>
+											<td>건당 5,000원</td>
+										</tr>
+										<tr>
+											<td>USD 2,000 초과~USD 5,000 이하</td>
+											<td>건당 1만5,000원</td>
+											<td>건당 7,500원</td>
+										</tr>
+										<tr>
+											<td>USD 5,000 초과</td>
+											<td>건당 2만원</td>
+											<td>건당 10,000원</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 무역대전송금 -->
+							<!-- s: 국내간 자금이체 -->
+							<div class="title_text ty3 mt_24">국내간 자금이체</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>구분, 송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 국내간 자금이체 표</caption>
+									<colgroup>
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>당행</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>타행</td>
+											<td>구분 없음</td>
+											<td>건당 5,000원</td>
+											<td>건당 5,000원</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 국내간 자금이체 -->
+							<!-- s: 조건변경 수수료 -->
+							<div class="title_text ty1 mt_24">조건변경 수수료</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>구분, 송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 조건변경 수수료 표</caption>
+									<colgroup>
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>해외송금</td>
+											<td>구분 없음</td>
+											<td>8,000원(전신료)</td>
+											<td>8,000원(전신료)</td>
+										</tr>
+										<tr>
+											<td>국내송금</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 조건변경 수수료 -->
+							<!-- s: 자금반환 수수료 -->
+							<div class="title_text ty1 mt_24">자금반환 수수료</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>구분, 송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 자금반환 수수료 표</caption>
+									<colgroup>
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>해외송금</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>국내송금</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 자금반환 수수료 -->
+							<!-- s: 전신료 -->
+							<div class="title_text ty1 mt_24">전신료</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>구분, 송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 전신료 표</caption>
+									<colgroup>
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>해외송금</td>
+											<td>구분 없음</td>
+											<td>건당 8,000원</td>
+											<td>건당 8,000원</td>
+										</tr>
+										<tr>
+											<td>무역대전송금</td>
+											<td>구분 없음</td>
+											<td>건당 8,000원</td>
+											<td>건당 8,000원</td>
+										</tr>
+										<tr>
+											<td>국내간 자금이체</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<!-- e: 전신료 -->
+							<ul class="list_bullet ty2">
+								<li>고객님이 부담하실 수수료 비용은 송금수수료와 전신료를 합한 금액입니다.</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(11);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 전체팝업-->
+				<!-- e: step91 외화송금수수료 정보 -->
+
+				<!-- s: step92 스위프트 코드 조회 -->
+				<!-- s: 전체팝업-->
+				<div id="step92" data-jx-step-no="92" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">스위프트 코드 조회</div>
+							<ul class="list_bullet ty1">
+								<li>원하는 구분 및 조건을 선택해 스위프트 코드를 조회할 수 있어요.</li>
+							</ul>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">조회 구분</div>
+							<div class="btn_area clickable ty1" role="radiogroup">
+								<button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체은행</span></button>
+								<button type="button" role="radio" aria-checked="false"><span class="text">국가/도시별</span></button>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">조회 조건</div>
+							<div class="btn_area clickable ty1" role="radiogroup">
+								<button type="button" role="radio" aria-checked="true" class="active"><span class="text">은행BIC</span></button>
+								<button type="button" role="radio" aria-checked="false"><span class="text">은행약칙명</span></button>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">국가선택</div>
+							<div class="dropdown ty2" role="button" title="국가 선택 목록 보기" onclick="comLayerPopUtil.open('optList3');">
+								<div class="dropdown_text">선택</div>
+							</div>
+
+							<div class="input mt_12">
+								<input type="text" name="" id="" title="국가 선택 직접 입력" />
+
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+							<div class="btn_area ty1 mt_16">
+								<button type="button" class="btn s_4 c_2 r_2">조회</button>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(5);">
+											<div class="card_item_info">
+												<div class="txt1">거래은행 BIC(스위프트 코드)</div>
+												<div class="txt2">
+													<span class="txt">ABOCKRSEXXX</span>
+												</div>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">은행명1</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">AGRICULTURAL BANK OF CHINA SEOUL</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">은행명2</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">BRANCH(SEOUL)</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">은행주소1</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">-</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">은행주소2</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">-</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">도시명</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">SEOUL</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(5);">
+											<div class="card_item_info">
+												<div class="txt1">거래은행 BIC(스위프트 코드)</div>
+												<div class="txt2">
+													<span class="txt">ABOCKRSEXXX</span>
+												</div>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">은행명1</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">AGRICULTURAL BANK OF CHINA SEOUL</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">은행명2</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">BRANCH(SEOUL)</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">은행주소1</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">-</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">은행주소2</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">-</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">도시명</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">SEOUL</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+							<div class="btn_area ty1 mt_32">
+								<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업-->
+				<!-- e: step92 스위프트 코드 조회 -->
+
+				<!-- s: step93 송금목적코드 조회 -->
+				<!-- s: 전체팝업-->
+				<div id="step93" data-jx-step-no="93" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">송금목적코드 조회</div>
+							<ul class="list_refer_mark">
+								<li>송금목적을 선택해 주세요.</li>
+							</ul>
+							<div class="form_group mt_32">
+								<div class="input_label ty1">조회구분</div>
+								<div class="dropdown ty2" role="button" title="조회구분 목록 보기" onclick="comLayerPopUtil.open('optlist1');">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="input_label ty1">송금목적</div>
+								<div class="dropdown ty2" role="button" title="송금목적 목록 보기" onclick="comLayerPopUtil.open('optlist2');">
+									<div class="dropdown_text">선택</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(13);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+					<!-- e: 전체팝업-->
+					<!-- e: step93 송금목적코드 조회 -->
+				</div>
+
+				<!-- s: popup -->
+				<!-- s: 조건설정 팝업 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조건설정</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<div class="input_label ty2">조회구분</div>
+								<div class="search_group">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">최신순</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">과거순</span></button>
+									</div>
+								</div>
+								<div class="input_label ty1">조회기간</div>
+								<div class="search_group">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="half active"><span class="text">최근10건</span></button>
+										<button type="button" role="radio" aria-checked="false" class="half"><span class="text">오늘</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">3개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">6개월</span></button>
+									</div>
+									<div class="comp_wrap from_to">
+										<div class="input">
+											<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+											<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup3_1');"></button>
+										</div>
+										<span>~</span>
+										<div class="input">
+											<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+											<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup3_2');"></button>
+										</div>
+									</div>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>조회가능기간: 2년</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조건설정 팝업 -->
+				<div class="bottom_popup_wrap" id="popup3">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">결재선조회</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup3');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">등록(완료)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">결재(대기)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">결재(완료)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">실행(대기)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- s: 은행 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="bankList">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">기관 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('bankList');">닫기</button>
+						</div>
+						<div class="bottom_popup_body agency_select_popup">
+							<div class="agency_select_wrap">
+								<div class="agency_select_wrap_title">은행</div>
+								<ul class="agency_select_list" role="listbox">
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000"></div>
+										<span class="name">기본</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_003"></div>
+										<span class="name">기업은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_004"></div>
+										<span class="name">국민은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_020"></div>
+										<span class="name">우리은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_088"></div>
+										<span class="name">신한은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_081"></div>
+										<span class="name">하나은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_011"></div>
+										<span class="name">농협은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_012"></div>
+										<span class="name">지역농축협</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_023"></div>
+										<span class="name">SC은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_027"></div>
+										<span class="name">한국씨티은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_071"></div>
+										<span class="name">우체국</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_039"></div>
+										<span class="name">경남은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_034"></div>
+										<span class="name">광주은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_031"></div>
+										<span class="name">iM[구 대구은행]</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_055"></div>
+										<span class="name">도이치</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_032"></div>
+										<span class="name">부산은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_064"></div>
+										<span class="name">산림조합</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_002"></div>
+										<span class="name">산업은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_050"></div>
+										<span class="name">저축은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_045"></div>
+										<span class="name">새마을금고</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_007"></div>
+										<span class="name">수협</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_048"></div>
+										<span class="name">신협</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_037"></div>
+										<span class="name">전북은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_035"></div>
+										<span class="name">제주은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_060"></div>
+										<span class="name">BOA</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_054"></div>
+										<span class="name">HSBC</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_057"></div>
+										<span class="name">JP모간</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_062"></div>
+										<span class="name">중국공상은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_061"></div>
+										<span class="name">BNP파리바</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_067"></div>
+										<span class="name">중국건설은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_063"></div>
+										<span class="name">중국은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_090"></div>
+										<span class="name">카카오뱅크</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_089"></div>
+										<span class="name">케이뱅크</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_092"></div>
+										<span class="name">토스뱅크</span>
+									</li>
+
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B9"></div>
+										<span class="name">AMEX</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A4"></div>
+										<span class="name">MELLAT</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C4"></div>
+										<span class="name">중국은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B7"></div>
+										<span class="name">교통은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C2"></div>
+										<span class="name">BANK OF NEW YORK</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_059"></div>
+										<span class="name">MUFG은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B8"></div>
+										<span class="name">BARCLAYS</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A8"></div>
+										<span class="name">BNP PARIBAS</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A6"></div>
+										<span class="name">CALYON</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C6"></div>
+										<span class="name">건설은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A3"></div>
+										<span class="name">인도</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C5"></div>
+										<span class="name">공상은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B6"></div>
+										<span class="name">ING</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C1"></div>
+										<span class="name">JP MORGAN</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A1"></div>
+										<span class="name">미즈호</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0C3"></div>
+										<span class="name">PAKISTAN</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0B5"></div>
+										<span class="name">OCBC</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A7"></div>
+										<span class="name">SOCIETE GENERALE</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A2"></div>
+										<span class="name">스미토모미쯔이</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_008"></div>
+										<span class="name">수출입은행</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A5"></div>
+										<span class="name">UBAF</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_0A9"></div>
+										<span class="name">UBS</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_056"></div>
+										<span class="name">ABN암로은행</span>
+									</li>
+								</ul>
+
+								<div class="agency_select_wrap_title">국세/지방세</div>
+								<ul class="agency_select_list" role="listbox">
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_government"></div>
+										<span class="name">국세</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_government"></div>
+										<span class="name">국고금</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_government"></div>
+										<span class="name">지방세입</span>
+									</li>
+								</ul>
+
+								<div class="agency_select_wrap_title">증권사</div>
+								<ul class="agency_select_list" role="listbox">
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_261"></div>
+										<span class="name">교보증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_267"></div>
+										<span class="name">대신증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_238"></div>
+										<span class="name">미래에셋</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_279"></div>
+										<span class="name">DB금융투자</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_209"></div>
+										<span class="name">유안타증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_287"></div>
+										<span class="name">메리츠증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_290"></div>
+										<span class="name">부국증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_240"></div>
+										<span class="name">삼성증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_291"></div>
+										<span class="name">신영증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_278"></div>
+										<span class="name">신한투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_247"></div>
+										<span class="name">NH투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_280"></div>
+										<span class="name">유진투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_265"></div>
+										<span class="name">LS증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_264"></div>
+										<span class="name">키움증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_270"></div>
+										<span class="name">하나증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_262"></div>
+										<span class="name">아이엠증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_243"></div>
+										<span class="name">한국투자</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_269"></div>
+										<span class="name">한화투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_218"></div>
+										<span class="name">KB증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_263"></div>
+										<span class="name">현대차증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_292"></div>
+										<span class="name">케이프투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_289"></div>
+										<span class="name">NH농협증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_266"></div>
+										<span class="name">SK증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_288"></div>
+										<span class="name">카카오페이증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_224"></div>
+										<span class="name">BNK투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_225"></div>
+										<span class="name">IBK투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_227"></div>
+										<span class="name">다올투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_221"></div>
+										<span class="name">상상인증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_294"></div>
+										<span class="name">우리투자증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_271"></div>
+										<span class="name">토스증권</span>
+									</li>
+									<li role="option" tabindex="-1">
+										<div class="ico_box ty1 ico_bank_000 ico_bank_C4"></div>
+										<span class="name">이베스트투자증권</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 은행 선택 팝업 -->
+				<!-- s: 계좌 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="popupAccount_old">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount_old');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 계좌 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="optlist1" title="조회구분">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회구분</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="optlist2" title="송금목적">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">송금목적</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- s: 국가선택 팝업 -->
+				<!-- s: 전체팝업 -->
+				<div id="step998" data-jx-step-no="998" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<ul class="select_list ty4 country_list" role="listbox">
+								<li role="option" tabindex="-1" class="item">
+									<strong class="eng">US</strong>
+									<span class="kor">미국</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<strong class="eng">JP</strong>
+									<span class="kor">일본</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<strong class="eng">GB</strong>
+									<span class="kor">영국</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<strong class="eng">CN</strong>
+									<span class="kor">중국</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<strong class="eng">DE</strong>
+									<span class="kor">독일</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<strong class="eng">CA</strong>
+									<span class="kor">캐나다</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<strong class="eng">HK</strong>
+									<span class="kor">홍콩</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<strong class="eng">IT</strong>
+									<span class="kor">이탈리아</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<strong class="eng">SE</strong>
+									<span class="kor">스웨덴</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 국가선택 팝업 -->
+
+				<!-- 선택 목록 기본형 -->
+				<div class="bottom_popup_wrap" id="optlist" title="은행고유구분">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">은행고유구분</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- // 선택 목록 기본형 -->
+
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

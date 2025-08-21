@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 공동인증서 - 스마트폰으로 가져오기 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 스마트폰으로 가져오기 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 인증서 가져오기 -->
+						<div class="group">
+							<div class="cert_ico_progress">
+								<div class="ico_progress mobile"></div>
+								<div class="ico_progress mobile"></div>
+							</div>
+
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								인증번호를 발급했어요
+							</div>
+
+							<div class="form_group mt_32">
+								<div class="input_label ty2">인증번호</div>
+								<div class="comp_wrap phone disabled mb_16">
+									<div class="input no_del">
+										<input type="tel" name="" id="" value="010" title="인증번호 앞자리 입력" readonly />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" value="0000" title="인증번호 가운데자리 입력" readonly />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" value="0000" title="인증번호 뒤자리 입력" readonly />
+									</div>
+								</div>
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_4 c_2 r_2">인증서 가져오기</button>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 인증서 가져오기 -->
+
+						<!-- s: 인증번호로 가져오기 절차 -->
+						<div class="group cert_import_smart">
+							<div class="acd_wrap accodian_wrap ty1 active">
+								<div class="acd_head accodian_head small active">
+									<button type="button" title="(구) i-ONE Bank 기업 앱에서 공동인증서 가져오는 방법 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">
+											<span class="left">
+												(구) i-ONE Bank 기업 앱에서
+												<br />
+												공동인증서 가져오는 방법
+											</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner" style="display: block">
+										<ol class="icon_step_list ty1 mt_24 cert_get_list4">
+											<li class="order1">
+												<div class="inner">
+													<span class="step">Step 01</span>
+													<div class="item">
+														<span class="tit">신규앱에서 인증번호 생성하기</span>
+														<span class="txt_style ty6 fw_4">경로(신규앱) : 인증&middot;보안 &gt; 공동인증서 &gt; 스마트폰에서 가져오기</span>
+														<span class="desc">현재 화면 상단에 생성된 인증번호를 확인해주세요.</span>
+														<ul class="list_star">
+															<li>신규앱을 종료하지 않은 상태로 기존앱을 실행해 주세요.(홈버튼을 활용해보세요.)</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="order2">
+												<div class="inner">
+													<span class="step">Step 02</span>
+													<div class="item">
+														<span class="tit">기존앱에서 인증번호 입력하기</span>
+														<span class="txt_style ty6 fw_4">경로(기존앱) : 인증센터 &gt; 공동인증서 &gt; 스마트기기로 내보내기</span>
+														<ul class="list_bullet ty4">
+															<li>기존앱에서 복사해갈 공동인증서를 선택하고 비밀번호를 입력하세요.</li>
+															<li>화면의 공란에 신규앱에서 생성된 인증번호를 입력하고 [인증서 내보내기]를 눌러주세요.</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="order3">
+												<div class="inner">
+													<span class="step">Step 03</span>
+													<div class="item">
+														<span class="tit">신규앱에서 가져오기 완료하기</span>
+														<span class="desc">신규앱에서 [인증서 가져오기]를 눌러 완료해주세요.</span>
+													</div>
+												</div>
+											</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1 full" />
+
+							<div class="acd_wrap accodian_wrap ty1 active">
+								<div class="acd_head accodian_head small active">
+									<button type="button" title="i-ONE Bank 개인 앱에서 개인용 공동인증서 가져오는 방법 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">
+											<span class="left">
+												i-ONE Bank 개인 앱에서
+												<br />
+												개인용 공동인증서 가져오는 방법
+											</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner" style="display: block">
+										<ol class="icon_step_list ty1 mt_24 cert_get_list5">
+											<li class="order1">
+												<div class="inner">
+													<span class="step">Step 01</span>
+													<div class="item">
+														<span class="tit">기업앱에서 인증번호 생성하기</span>
+														<span class="txt_style ty6 fw_4">경로(기업앱) : 인증&middot;보안 &gt; 공동인증서 &gt; 스마트폰에서 가져오기</span>
+														<span class="desc">현재 화면 상단에 생성된 인증번호를 확인해주세요.</span>
+														<ul class="list_star">
+															<li>기업앱을 종료하지 않은 상태로 개인앱을 실행해 주세요.(홈버튼을 활용해보세요.)</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="order2">
+												<div class="inner">
+													<span class="step">Step 02</span>
+													<div class="item">
+														<span class="tit">개인앱에서 인증번호 입력하기</span>
+														<span class="txt_style ty6 fw_4">경로(개인앱) : 인증센터 &gt; 공동인증서(구 공인인증서) &gt; 인증서내보내기 &gt; 스마트폰으로 내보내기</span>
+														<ul class="list_bullet ty4">
+															<li>개인앱에서 복사해갈 공동인증서를 선택하고 비밀번호를 입력하세요.</li>
+															<li>화면의 공란에 기업앱에서 생성된 인증번호를 입력하고 [인증서 내보내기]를 눌러주세요.</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="order3">
+												<div class="inner">
+													<span class="step">Step 03</span>
+													<div class="item">
+														<span class="tit">기업앱에서 가져오기 완료하기</span>
+														<span class="desc">기업앱에서 [인증서 가져오기]를 눌러 완료해주세요.</span>
+													</div>
+												</div>
+											</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1 full" />
+
+							<div class="acd_wrap accodian_wrap ty1 active">
+								<div class="acd_head accodian_head small active">
+									<button type="button" title="스마트폰을 바꿨을 때 공동인증서 가져오는 방법 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">
+											<span class="left">스마트폰을 바꿨을 때 공동인증서 가져오는 방법</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner" style="display: block">
+										<ol class="icon_step_list ty1 mt_24 cert_get_list3">
+											<li class="order1">
+												<div class="inner">
+													<span class="step">Step 01</span>
+													<div class="item">
+														<span class="tit">신규 스마트폰에서 인증번호 생성하기</span>
+														<span class="desc">현재 화면 상단에 생성된 인증번호를 확인해주세요.</span>
+													</div>
+												</div>
+											</li>
+											<li class="order2">
+												<div class="inner">
+													<span class="step">Step 02</span>
+													<div class="item">
+														<span class="tit">기존 스마트폰에서 인증번호 입력하기</span>
+														<ul class="list_bullet ty4">
+															<li>인증서가 설치된 스마트폰에서 [인증보안 &gt; 공동인증서 &gt; 스마트폰으로 내보내기]에 접속해주세요.</li>
+															<li>기존 스마트폰에서 복사해갈 공동인증서를 선택하고 비밀번호를 입력하세요.</li>
+															<li>화면의 공란에 신규 스마트폰에서 생성된 인증번호를 입력하고 [인증서 내보내기]를 눌러주세요.</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="order3">
+												<div class="inner">
+													<span class="step">Step 03</span>
+													<div class="item">
+														<span class="tit">신규 스마트폰에서 가져오기 완료하기</span>
+														<span class="desc">신규 스마트폰에서 [인증서 가져오기]를 눌러 완료해주세요.</span>
+													</div>
+												</div>
+											</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 인증번호로 가져오기 절차 -->
+					</div>
+				</div>
+				<!-- e: step1 스마트폰으로 가져오기 -->
+			</div>
+			<!-- e: 공동인증서 - 스마트폰으로 가져오기 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

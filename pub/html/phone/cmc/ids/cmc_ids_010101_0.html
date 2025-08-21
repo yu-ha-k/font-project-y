@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+</head>
+<body>
+<!-- s: IBK인증서 발급/재발급 -->
+<div class="wrap">
+    <div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap"> 
+        
+        <!-- s: step1 인증서 발급/재발급하기-->
+        <div id="step1" data-jx-step-no="1" data-jx-effect="slide" style="">
+            <div class="content_wrap ty4"> 
+                <!-- s: 인증서 안내 -->
+                <div class="group">
+                    <div class="icon_info_group">
+                        <div class="icon ibk_cert_infomation"></div>
+                        <div class="tit"> 더욱 안전하고 간편한 <br>
+                            IBK인증서 </div>
+                        <div class="txt">IBK기업은행이 인증기관으로 금융거래 시 안전하게 전자서명하고 더 간편하게 인증서를 발급할 수 있어요.</div>
+                    </div>
+                    <div class="btn_area ty5 mt_24"> <a href="#" role="button" class="btn s_4 r_2 c_3" onclick="uf_goStep(2);">인증서 발급/재발급 하기</a> </div>
+                </div>
+                <!-- e: 인증서 안내 --> 
+                
+                <!-- s: 인증서 메뉴 -->
+                <div class="group mt_40">
+                    <ul class="space_list_ty4">
+                        <li> <a href="#" role="button" class="block">
+                            <div class="link_item_ty2 link">
+                                <div class="inner">
+                                    <div class="link_item_left">
+                                        <div class="item_text1">IBK인증서 안내</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a> </li>
+                        <li> <a href="#" role="button" class="block">
+                            <div class="link_item_ty2 link">
+                                <div class="inner">
+                                    <div class="link_item_left">
+                                        <div class="item_text1">인증서 갱신</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a> </li>
+                        <li> <a href="#" role="button" class="block">
+                            <div class="link_item_ty2 link">
+                                <div class="inner">
+                                    <div class="link_item_left">
+                                        <div class="item_text1">인증서 폐기/수수료 환불신청</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a> </li>
+                        <li> <a href="#" role="button" class="block">
+                            <div class="link_item_ty2 link">
+                                <div class="inner">
+                                    <div class="link_item_left">
+                                        <div class="item_text1">인증서 공유 신청/관리</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a> </li>
+                        <li> <a href="#" role="button" class="block">
+                            <div class="link_item_ty2 link">
+                                <div class="inner">
+                                    <div class="link_item_left">
+                                        <div class="item_text1">인증서 관리</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a> </li>
+                        <li> <a href="#" role="button" class="block">
+                            <div class="link_item_ty2 link">
+                                <div class="inner">
+                                    <div class="link_item_left">
+                                        <div class="item_text1">인증서 가입정보 변경</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a> </li>
+                    </ul>
+                    <div class="btn_area tyTxt mt_64">
+                        <button type="button" class="btn ty_txt2 line_bttm">개인정보처리방침</button>
+                        <button type="button" class="btn ty_txt2 line_bttm">전자서명인증업무준칙</button>
+                    </div>
+                </div>
+                <!-- e: 인증서 메뉴 --> 
+                
+            </div>
+        </div>
+        <!-- e: step1 인증서 발급/재발급하기 --> 
+        
+        <!-- s: step2 사업자등록번호입력-->
+        <div id="step2" data-jx-step-no="2" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <div class="txt_style ty1"> IBK인증서 발급을 위해 <br>
+                        사업자등록번호를 입력해 주세요 </div>
+                    <div class="form_group mt_24">
+                        <div class="input_label ty2">사업자등록번호</div>
+                        <div class="comp_wrap business_num">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력">
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력">
+                            </div>
+                            <span>-</span>
+                            <button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn" ></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1)">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3)">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+                
+            </div>
+        </div>
+        <!-- e: step2 사업자등록번호입력 --> 
+        
+        <!-- s: step3 용도선택-->
+        <div id="step3" data-jx-step-no="3" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group">
+                    <div class="txt_style ty1"> 발급할 IBK인증서 용도를 <br>
+                        선택해 주세요 </div>
+                    <div class="group mt_24">
+                        <ul class="cert_select">
+                            <li> <a href="#" role="button" onclick="uf_goStep(4)">
+                                <div class="icon certify_01"></div>
+                                <div class="txt_wrap">
+                                    <div class="tit">범용 인증서</div>
+                                    <div class="txt">기업뱅킹, 나라장터 전자입찰에서 사용 가능해요. </div>
+                                    <ul class="list_dash mt_10">
+                                        <li>외부 이용처 확대 준비중</li>
+                                        <li>준비물<br>
+                                            대표자 신분증, 본인명의 휴대폰</li>
+                                    </ul>
+                                </div>
+                                </a> </li>
+                            
+                            <!-- 법인사업자인 경우 -->
+                            <li> <a href="#" role="button" class="disabled">
+                                <div class="icon certify_01"></div>
+                                <div class="txt_wrap">
+                                    <div class="tit color ty6">범용 인증서</div>
+                                    <div class="txt color ty6">기업뱅킹, 나라장터 전자입찰에서 사용 가능해요. </div>
+                                    <ul class="list_dash mt_10">
+                                        <li>외부 이용처 확대 준비중</li>
+                                        <li>준비물<br>
+                                            대표자 신분증, 본인명의 휴대폰</li>
+                                    </ul>
+                                    <div class="txt color ty4 mt_10 ">법인 고객은 영업점에서만 발급할 수 있습니다.</div>
+                                </div>
+                                </a> </li>
+                            
+                            <!-- //법인사업자인 경우 -->
+                            <li> <a href="#" role="button" onclick="uf_goStep(4)">
+                                <div class="icon certify_02"></div>
+                                <div class="txt_wrap">
+                                    <div class="tit">IBK기업은행 전용 인증서</div>
+                                    <div class="txt">IBK 기업인터넷뱅킹, 스마트뱅킹 전용 인증서예요.</div>
+                                    <ul class="list_dash mt_10">
+                                        <li>준비물<br>
+                                            OTP발생기</li>
+                                    </ul>
+                                </div>
+                                </a> </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 꼭알아두세요 -->
+                    <div class="group">
+                        <div class="caution">
+                            <div class="acd_wrap accodian_wrap ty3 active">
+                                <div class="acd_head accodian_head">
+                                    <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                                </div>
+                                <div class="acd_cont accodian_cont">
+                                    <div class="inner">
+                                        <ul class="list_bullet ty1">
+                                            <li>범용 인증서는 다음의 경우 영업점에서만 발급이 가능합니다.
+                                                <ul class="list_dash">
+                                                    <li>개인사업자 대표자가 공동대표, 외국인, 미성년자인 경우, 법인사업자인 경우</li>
+                                                </ul>
+                                            </li>
+                                            <li>IBK인증서 재발급 시 현재 인증서는 자동 폐기되며 이미 등록된 사용처에도 인증서를 새로 등록해야 합니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //꼭알아두세요 --> 
+                    
+                </div>
+            </div>
+        </div>
+        <!-- e: step3 용도선택 --> 
+        
+        <!-- s: step4 준비물안내-->
+        <div id="step4" data-jx-step-no="4" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3" aria-hidden="false">
+                <div class="group"> 
+                    
+                    <!-- s: 범용 인증서를 선택한 경우 --> 
+                    
+                    <!-- 준비물안내 -->
+                    <div class="title_text ty1">준비물 안내</div>
+                    <ul class="icon_step_list ty1 digital_otp_list">
+                        <li class="order1">
+                            <div class="inner">
+                                <div class="item"> <span class="desc">대표자 본인명의 휴대폰</span> </div>
+                            </div>
+                        </li>
+                        <li class="order2">
+                            <div class="inner">
+                                <div class="item"> <span class="desc"> 대표자 신분증 </span> </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- //준비물안내 --> 
+                    
+                    <!-- 발급절차안내 -->
+                    <div class="title_text ty1 mt_32">발급절차 안내</div>
+                    <ol class="icon_step_list ty1 cert_get_list1_01">
+                        <li class="order1">
+                            <div class="inner"> <span class="step">Step 01</span>
+                                <div class="item">
+                                    <div class="tit">대표자 휴대폰 본인확인</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="order2">
+                            <div class="inner"> <span class="step">Step 02</span>
+                                <div class="item">
+                                    <div class="tit">신분증 촬영 또는 <br>
+                                        모바일 신분증 인증</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="order3">
+                            <div class="inner"> <span class="step">Step 03</span>
+                                <div class="item">
+                                    <div class="tit">사업자 정보확인</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="order4">
+                            <div class="inner"> <span class="step">Step 04</span>
+                                <div class="item">
+                                    <div class="tit">기업은행계좌 확인</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="order5">
+                            <div class="inner"> <span class="step">Step 05</span>
+                                <div class="item">
+                                    <div class="tit">인증서 발급</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                    <!-- //발급절차안내 --> 
+                    
+                    <!-- 꼭 알아두세요 -->
+                    <div class="acd_wrap accodian_wrap ty3 active">
+                        <div class="acd_head accodian_head">
+                            <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                        </div>
+                        <div class="acd_cont accodian_cont">
+                            <div class="inner">
+                                <ul class="list_bullet ty1">
+                                    <li>현재 기업뱅킹, 나라장터 전자입찰에서 사용 가능하며 외부 이용처 확대를 준비중이에요.</li>
+                                    <li>범용 인증서는 개인사업자 대표자가 공동대표, 외국인, 미성년자인 경우에 영업점에서만 발급이 가능합니다. </li>
+                                    <li>전자결제(전자어음, 채권 등) 관련 서비스, 온택트 보증부대출은 공동인증서(사업자용)을 이용해주시기 바랍니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // 꼭 알아두세요 --> 
+                    <!-- e: 범용 인증서를 선택한 경우  --> 
+                    
+                    
+                    
+                    <!-- 개발시 삭제 --> 
+                    <br>
+                    <br>
+                    <span class="color ty4">-----IBK기업은행 전용 인증서를 선택한 경우----</span>
+                    <br>
+                    <br>
+                    <!-- //개발시 삭제 --> 
+                    
+                    
+                    
+                    <!-- s: IBK기업은행 전용 인증서를 선택한 경우  --> 
+                    
+                    <!-- 준비물안내 -->
+                    <div class="title_text ty1">준비물 안내</div>
+                    <ul class="icon_step_list ty1 digital_otp_list_01">
+                        <li class="order1">
+                            <div class="inner">
+                                <div class="item"> <span class="desc">OTP발생기</span> </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- //준비물안내 --> 
+                    
+                    <!--발급절차안내 -->
+                    <div class="title_text ty1 mt_32">발급절차 안내</div>
+                    <ol class="icon_step_list ty1 cert_get_list1_01">
+                        <li class="order3">
+                            <div class="inner"> <span class="step">Step 01</span>
+                                <div class="item">
+                                    <div class="tit">사업자 및 이용자 정보조회</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="order4">
+                            <div class="inner"> <span class="step">Step 02</span>
+                                <div class="item">
+                                    <div class="tit">기업은행계좌 확인</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="order6">
+                            <div class="inner"> <span class="step">Step 03</span>
+                                <div class="item">
+                                    <div class="tit">OTP발생번호 확인</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="order5">
+                            <div class="inner"> <span class="step">Step 04</span>
+                                <div class="item">
+                                    <div class="tit">인증서 발급</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                    <!-- // 발급절차안내 --> 
+                    
+                    <!-- 꼭 알아두세요 -->
+                    <div class="acd_wrap accodian_wrap ty3 active">
+                        <div class="acd_head accodian_head">
+                            <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                        </div>
+                        <div class="acd_cont accodian_cont">
+                            <div class="inner">
+                                <ul class="list_bullet ty1">
+                                    <li>IBK 기업인터넷뱅킹, 스마트뱅킹 전용 인증서에요 외부기관에서 이용 불가능해요.</li>
+                                    <li>전자결제(전자어음, 채권 등) 관련 서비스, 온택트 보증부대출은 공동인증서(사업자용)을 이용해주시기 바랍니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 꼭 알아두세요 --> 
+                    
+                    <!--// e :IBK기업은행 전용 인증서를 선택한 경우 --> 
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(3)">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5)">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+                
+            </div>
+        </div>
+        <!-- e: step4 준비물안내 --> 
+        
+        <!--s: step5  *기존프로세스 시작 확인용 *필수약관동의-->
+        <div id="step5" data-jx-step-no="5" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">약관 동의</div>
+                    <div class="agree_check_group">
+                        <div class="chk_group_wrap">
+                            <div class="agree_check_group_top">
+                                <div class="label all_chk">
+                                    <input type="checkbox" name="" id="5412" class="chk_point_all">
+                                    <label for="5412" class="checkbox"> <i></i> <span>모두 동의</span> </label>
+                                </div>
+                            </div>
+                            <div class="agree_check">
+                                <div class="acd_wrap accodian_wrap ty1">
+                                    <div class="acd_cont accodian_cont chk_list">
+                                        <div class="inner" style="display: block">
+                                            <ul class="term_list">
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group04_1" class="chk_point_sub">
+                                                        <label for="ago_group04_1" class="checkbox small lbl"> <i></i> <span> IBK인증서 서비스 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                    <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">IBK인증서 서비스 이용약관</span> 보기 </button>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group04_2" class="chk_point_sub">
+                                                        <label for="ago_group04_2" class="checkbox small lbl"> <i></i> <span> 개인정보 수집 및 이용동의 <br>
+                                                            (IBK 인증서 서비스) <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                    <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">개인정보 수집 및 이용동의</span> 보기 </button>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group04_3" class="chk_point_sub">
+                                                        <label for="ago_group04_3" class="checkbox small lbl"> <i></i> <span> 전자금융거래 기본약관 <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                    <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">전자금융거래 기본약관</span> 보기 </button>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group04_4" class="chk_point_sub">
+                                                        <label for="ago_group04_4" class="checkbox small lbl"> <i></i> <span> 전자금융서비스 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                    <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">전자금융서비스 이용약관</span> 보기 </button>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group04_5" class="chk_point_sub">
+                                                        <label for="ago_group04_5" class="checkbox small lbl"> <i></i> <span> B2B전자결제 서비스 이용약관 <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                    <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">B2B전자결제 서비스 이용약관</span> 보기 </button>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group04_6" class="chk_point_sub">
+                                                        <label for="ago_group04_6" class="checkbox small lbl"> <i></i> <span> 개인(신용)정보 수집 이용 제공 동의(공공마이데이터 활용) <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                    <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">개인(신용)정보 수집 이용 제공 동의(공공마이데이터 활용)</span> 보기 </button>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="label">
+                                                        <input type="checkbox" name="" id="ago_group04_7" class="chk_point_sub">
+                                                        <label for="ago_group04_7" class="checkbox small lbl"> <i></i> <span> 고객님의 IBK인증서를 기업은행 서버에 안전하게 보관하기 위한 인증서 보관 서비스 신청에 동의하십니까? <span class="ess_mark">필수</span> </span> </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- s: 화면 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 화면 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!--e: step5  *기존프로세스 시작 확인용 *필수약관동의 --> 
+    </div>
+</div>
+<!-- e: IBK인증서 발급/재발급 --> 
+<!--**퍼블용** 데모확인 로티 구동 스크립트--> 
+<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script> 
+<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+</body>
+</html>

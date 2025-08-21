@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap">
+				<div class="cont_wrap">
+					<h1 class="guide_h1">swiper banner</h1>
+					<h4 class="guide_h4">.slide_swiper.ty1 - swiper slide 상태 : role: button - 슬라이드 자체가 링크의 역활</h4>
+					<!-- slide_swiper -->
+					<div id="swiper_1" class="slide_swiper ty1">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 1</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 2</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 3</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 4</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 5</div>
+							</div>
+						</div>
+						<div class="swiper-fraction-wrap">
+							<button type="button" class="swiper-button-prev"><span class="sr_only">이전 슬라이드</span></button>
+							<div class="swiper-pagination" aria-label="슬라이드 페이지네이션"></div>
+							<button type="button" class="swiper-button-next"><span class="sr_only">다음 슬라이드</span></button>
+						</div>
+					</div>
+
+					<!-- // slide_swiper -->
+					<h4 class="guide_h4">.slide_swiper.ty2</h4>
+					<!-- slide_swiper -->
+					<div id="swiper_2" class="slide_swiper ty2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 1</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 2</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 3</div>
+							</div>
+						</div>
+						<div class="swiper-fraction-wrap">
+							<button type="button" class="swiper-button-prev"><span class="sr_only">이전 슬라이드</span></button>
+							<div class="swiper-pagination" aria-label="슬라이드 페이지네이션"></div>
+							<button type="button" class="swiper-button-next"><span class="sr_only">다음 슬라이드</span></button>
+						</div>
+					</div>
+					<!-- // slide_swiper -->
+
+					<h4 class="guide_h4">.slide_swiper.ty3</h4>
+					<!-- slide_swiper -->
+					<div id="swiper_3" class="slide_swiper ty3">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 1</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 2</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 3</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="slide_item">slide_item 4</div>
+							</div>
+						</div>
+						<div class="swiper-fraction-wrap">
+							<button type="button" class="swiper-button-prev"><span class="sr_only">이전 슬라이드</span></button>
+							<div class="swiper-pagination" aria-label="슬라이드 페이지네이션"></div>
+							<button type="button" class="swiper-button-next"><span class="sr_only">다음 슬라이드</span></button>
+						</div>
+					</div>
+					<!-- // slide_swiper -->
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>
+<script>
+	const swiper1 = new Swiper("#swiper_1", {
+		observer: true,
+		observerParents: true,
+		pagination: {
+			el: "#swiper_1 .swiper-pagination",
+			clickable: true,
+			type: "bullets",
+			// s: 24-11-15 수정
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '" aria-label="슬라이드 ' + (index + 1) + '">' + (index + 1) + "</span>";
+			},
+			// e: 24-11-15 수정
+		},
+		navigation: {
+			nextEl: "#swiper_1 .swiper-button-next",
+			prevEl: "#swiper_1 .swiper-button-prev",
+		},
+		on: {
+			init: function () {
+				this.slides.each(function (slide, index) {
+					// $(slide).prop('tabindex' , '-1').attr({'role': 'button', 'aria-hidden': 'true'});
+					// $(slide).eq(index).prop('tabindex' , '0').attr('aria-hidden' , 'false');
+					$("#swiper_1").find(".swiper-slide").prop("tabindex", "-1").attr({ role: "button", "aria-hidden": "true" });
+					$("#swiper_1").find(".swiper-slide").eq(index).prop("tabindex", "0").attr("aria-hidden", "false");
+				});
+			},
+			slideChange: function () {
+				const slideCount = this.activeIndex;
+				$("#swiper_1").find(".swiper-slide").prop("tabindex", "-1").attr({ role: "button", "aria-hidden": "true" });
+				$("#swiper_1").find(".swiper-slide").eq(slideCount).prop("tabindex", "0").attr("aria-hidden", "false");
+
+				// $(".main_banner").find('.swiper-slide a').on("focusin", function(e){
+				//   var banIndex = $(this).parent().index();
+				//   myswiper.slideTo(banIndex);
+				//   e.preventDefault();
+				// });
+			},
+		},
+	});
+
+	const swiper2 = new Swiper("#swiper_2", {
+		slidesPerView: "auto",
+		spaceBetween: 16,
+		navigation: {
+			nextEl: "#swiper_2 .swiper-button-next",
+			prevEl: "#swiper_2 .swiper-button-prev",
+		},
+		pagination: {
+			el: "#swiper_2 .swiper-pagination",
+			type: "bullets",
+		},
+	});
+
+	const swiper3 = new Swiper("#swiper_3", {
+		slidesPerView: "auto",
+		spaceBetween: 16,
+		navigation: {
+			nextEl: "#swiper_3 .swiper-button-next",
+			prevEl: "#swiper_3 .swiper-button-prev",
+		},
+		pagination: {
+			el: "#swiper_3 .swiper-pagination",
+			type: "bullets",
+		},
+	});
+</script>

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 부가세환급내역조회 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 부가세환급내역조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty2">
+						<div class="group">
+							<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+								<div class="dropdown_text">당일 · 전체</div>
+								<div class="dropdown_filter_rst_date">
+									<span class="tit">조회기간 :</span>
+									<span class="date">2024.02.01~2024.02.06</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="group">
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>조회 일시 : 2024-11-11 00:00:00</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="group mt_32">
+							<div class="title_text ty1">환급내역(총 2건)</div>
+							<div class="d_list ty3">
+								<p class="line" role="text">
+									<span class="d_list_l">총매출세액</span>
+									<span class="d_list_r">
+										<span class="txt">10,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">총매입세액</span>
+									<span class="d_list_r">
+										<span class="txt">10,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">총환급세액</span>
+									<span class="d_list_r">
+										<span class="txt">10,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">금고입금(예정)액</span>
+									<span class="d_list_r">
+										<span class="txt">10,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+							<ul class="space_list_ty1 mt_40">
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="card_item_info">
+												<div class="txt1">거래일자</div>
+												<div class="txt2">2024.11.11</div>
+											</div>
+											<div class="card_item_sub_info">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">합계금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">999</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">거래구분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">매출</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">상호명</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">기업</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="card_item_info">
+												<div class="txt1">거래일자</div>
+												<div class="txt2">2024.11.11</div>
+											</div>
+											<div class="card_item_sub_info">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty2">합계금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">999</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">거래구분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">매출</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">상호명</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">기업</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="no_result_msg">
+										<div class="msg">조회할 등록내역이 없습니다</div>
+									</div>
+								</li>
+							</ul>
+							<div class="btn_area mt_16">
+								<button type="button" class="btn more"><span class="text">더보기</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 부가세환급내역조회 -->
+
+				<!-- s: step2 부가세환급내역상세조회 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="d_list ty3">
+								<p class="line" role="text">
+									<span class="d_list_l">매매구분</span>
+									<span class="d_list_r">
+										<span class="txt">매출</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">거래일</span>
+									<span class="d_list_r">
+										<span class="date">2024.11.11</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">거래구분</span>
+									<span class="d_list_r">
+										<span class="txt">취소결제</span>
+									</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="group mt_40">
+							<div class="d_list ty3">
+								<p class="line" role="text">
+									<span class="d_list_l">세금계산서 작성일자</span>
+									<span class="d_list_r">
+										<span class="date">2024.11.11</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">상호명</span>
+									<span class="d_list_r">
+										<span class="txt">-</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">사업자등록번호</span>
+									<span class="d_list_r">
+										<span class="txt">000-00-00000</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">공급가액</span>
+									<span class="d_list_r">
+										<span class="money">999</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">부가세액</span>
+									<span class="d_list_r">
+										<span class="money">999</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">합계금액</span>
+									<span class="d_list_r">
+										<span class="money">999</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="d_list_l">부가세환급액</span>
+									<span class="d_list_r">
+										<span class="money">999</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 부가세환급내역상세조회 -->
+
+				<!-- s: popup -->
+				<!-- s: 조건설정 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회구분</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<h3 class="input_label ty1">조회기간</h3>
+								<div class="comp_wrap">
+									<div class="dropdown ty2" role="button" title="연도 선택 목록 보기" onclick="comLayerPopUtil.open('optList1');">
+										<div class="dropdown_text">연도 선택</div>
+									</div>
+
+									<div class="dropdown ty2" role="button" title="분기 선택 목록 보기" onclick="comLayerPopUtil.open('optList2');">
+										<div class="dropdown_text">분기 선택</div>
+									</div>
+								</div>
+
+								<h3 class="input_label ty1">사업자등록번호</h3>
+								<div class="dropdown ty2" role="button" title="거래품목 선택 목록 보기" onclick="comLayerPopUtil.open('optList3');">
+									<div class="dropdown_text">연도 선택</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조건설정 -->
+
+				<div class="bottom_popup_wrap" id="optList1" title="연도 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">연도 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="optList2" title="분기 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">분기 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="optList3" title="거래품목 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">거래품목 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList3');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+			<!-- e: 부가세환급내역조회 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 자동이체 조회/해지 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">등록내역</div>
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item link">
+										<a href="#!" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="card_item_info">
+												<div class="txt1">이체기관번호</div>
+												<div class="txt2">NIBK11951</div>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">등록가능여부</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">新IBK아파트</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이체기관명</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">자너영전오강남</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">주소</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">감보심감충 감삼문사 자최왕6이 16</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="card_item link">
+										<a href="#!" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="card_item_info">
+												<div class="txt1">이체기관번호</div>
+												<div class="txt2">NIBK11951</div>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">등록가능여부</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">新IBK아파트</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이체기관명</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">자너영전오강남</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">주소</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">감보심감충 감삼문사 자최왕6이 16</span>
+													</span>
+												</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="no_result_msg">
+										<div class="msg">조회내역이 없습니다</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>관리비 자동이체 신규 당일 해지는 가까운 영업점에서 할 수 있습니다.</li>
+												<li>해지 당일 아파트/빌딩의 같은 동호수로 자동이체를 신청할 수 없습니다. 다음 영업일에 신청해 주세요.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 조회 -->
+
+				<!-- s: step2 상세 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">상세조회</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">출금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">123-456789-01-011</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이체기관번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">NIBK11951</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">아파트/빌딩 동호수</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">0001동 1002호</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입주자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">홍길동</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">문자 수신여부</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">수신안함</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">권유자 직원번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">040791</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">등록상태</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">활동</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="btn_area ty1 mt_24">
+								<button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(3);">자동이체 해지</button>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 상세 -->
+
+				<!-- s: step3 해지 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">해지내역</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">출금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">123-456789-01-011</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이체기관번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">NIBK11951</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">아파트/빌딩 동호수</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">0001동 1002호</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입주자명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">홍길동</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">문자 수신여부</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">수신안함</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">권유자 직원번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">040791</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 해지 -->
+
+				<!-- s: step4 신청완료 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								관리비 자동이체를 해지했어요
+							</div>
+
+							<ul class="list_bullet ty4">
+								<li>관리비 자동이체 신규 당일 해지는 가까운 영업점에서 할 수 있습니다.</li>
+								<li>해지 당일 아파트/빌딩의 같은 동호수로 자동이체를 신청할 수 없습니다. 다음 영업일에 신청해 주세요.</li>
+							</ul>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 신청완료 -->
+			</div>
+			<!-- e: 자동이체 조회/해지 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

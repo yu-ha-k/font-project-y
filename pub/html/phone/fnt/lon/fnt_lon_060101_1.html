@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					cont 1
+					<button type="button" onclick="uf_goStep(2);">다음화면이동</button>
+				</div>
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					cont 2
+					<button type="button" onclick="uf_goStep(1);">이전화면이동</button>
+				</div>
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

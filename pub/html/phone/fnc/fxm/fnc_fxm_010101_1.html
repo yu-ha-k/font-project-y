@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 금융상품-외환 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 상품목록 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty2">
+						<div class="group">
+							<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+								<div class="dropdown_text">모바일 · 추천순</div>
+							</div>
+
+							<div class="content_head mt_32">
+								<div class="content_head_left">
+									<div class="txt_style ty3 fw_7">
+										검색 결과
+										<span class="count">3</span>
+										개
+									</div>
+								</div>
+							</div>
+							<ul class="space_list_ty3 loan_list">
+								<li>
+									<div class="loan_info">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="badge_cont">
+												<span class="badge ty3 colorA8">혼합식</span>
+												<span class="badge ty3 colorD1">추천 1위</span>
+											</div>
+											<div class="box">
+												<div class="txt_wrap">
+													<div class="tit">IBK외화통장</div>
+													<div class="txt">외화예금 금리경쟁력 강화, 환율 및 수수료 우대서비스 제공, 평생계좌번호서비스 등의 프리미엄서비스도 제공</div>
+													<div class="cate">
+														<span>개인</span>
+														<span>기업</span>
+														<span>개인사업자</span>
+													</div>
+													<div class="type">
+														<span class="web">인터넷</span>
+														<span class="mobile">모바일</span>
+														<span class="branch">영업점</span>
+													</div>
+												</div>
+											</div>
+										</a>
+
+										<div class="btn_area ty1">
+											<button type="button" class="btn s_4 c_2 r_2" onclick="window.location.href='fnc_fxm_010201_1.html'">가입하기</button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="loan_info">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="badge_cont">
+												<span class="badge ty3 colorA8">일시예치식,자유적립식</span>
+												<span class="badge ty3 colorD1">추천 2위</span>
+											</div>
+											<div class="box">
+												<div class="txt_wrap">
+													<div class="tit">IBK외화통장(정기예금)</div>
+													<div class="txt">외화예금 금리경쟁력 강화, 환율 및 수수료 우대서비스 제공, 평생계좌번호서비스 등의 프리미엄서비스도 제공</div>
+													<div class="cate">
+														<span>개인</span>
+														<span>기업</span>
+													</div>
+													<div class="type">
+														<span class="branch">영업점</span>
+													</div>
+												</div>
+											</div>
+										</a>
+
+										<div class="btn_area ty1">
+											<button type="button" class="btn s_4 c_2 r_2" disabled>영업점가입</button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="loan_info">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="badge_cont">
+												<span class="badge ty3 colorA8">일시예치식,자유적립식</span>
+												<span class="badge ty3 colorD1">추천 2위</span>
+											</div>
+											<div class="box">
+												<div class="txt_wrap">
+													<div class="tit">IBK외화통장(정기예금)</div>
+													<div class="txt">외화예금 금리경쟁력 강화, 환율 및 수수료 우대서비스 제공, 평생계좌번호서비스 등의 프리미엄서비스도 제공</div>
+													<div class="cate">
+														<span>개인</span>
+														<span>기업</span>
+													</div>
+													<div class="type">
+														<span class="branch">영업점</span>
+													</div>
+												</div>
+											</div>
+										</a>
+
+										<div class="btn_area ty1">
+											<button type="button" class="btn s_4 c_2 r_2" disabled>판매중지</button>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="no_result_msg">
+										<div class="msg">검색 결과가 없습니다</div>
+									</div>
+								</li>
+							</ul>
+							<div class="btn_area ty1 mt_32">
+								<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 상품목록 -->
+
+				<!-- s: step2 상품 상세 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3 card_account_join deposit_product">
+						<!-- s: 상단 상품 요약 -->
+						<div class="group account_product_list">
+							<div class="group_item">
+								<div class="group_item_info">
+									<div class="badge_cont">
+										<span class="badge ty3 colorA1">수시입출금식</span>
+										<span class="badge ty3 colorD3">NEW</span>
+										<span class="badge ty3 colorD1">EVENT</span>
+									</div>
+									<div class="txt3">IBK 외화통장</div>
+								</div>
+								<ul class="list_bullet ty2 mt_16">
+									<li>
+										예금종류 :
+										<strong>수시입출금식</strong>
+									</li>
+									<li>
+										예치통화 :
+										<strong>EU유로, 일본, 미국</strong>
+									</li>
+									<li>
+										가입방법 :
+										<strong>영업점 i-one뱅크</strong>
+									</li>
+									<li>
+										가입구분 :
+										<strong>전체</strong>
+									</li>
+									<li>
+										상품특성 :
+										<strong>예금자보호상품</strong>
+									</li>
+								</ul>
+								<div class="btn_area ty1 btn_product_detail mt_24">
+									<div class="row">
+										<button type="button" class="btn s_5 c_3 r_2">가입하기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 상단 상품 요약 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 탭 버튼 -->
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="true" class="active">상품요약</button>
+							<button type="button" role="tab" aria-selected="false">상품혜택</button>
+							<button type="button" role="tab" aria-selected="false">금리정보</button>
+							<button type="button" role="tab" aria-selected="false">약관</button>
+							<button type="button" role="tab" aria-selected="false">유의사항</button>
+						</div>
+						<!-- e: 탭 버튼 -->
+						<!-- s: 탭 컨텐츠 -->
+						<!-- s: 상품요약 -->
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true">
+							<div class="group prd_detail">
+								<div class="tabcon">
+									<div id="con2">
+										<strong class="tit_txt">금리안내</strong>
+										<span class="cnt_txt" id="INT_CON"></span>
+										<strong class="tit_txt" id="PRDC_NM" style="display: none"></strong>
+										<table cellspacing="0" cellpadding="0" class="cnt_tbl zebra alignC border uiAct" id="prdcIntTable">
+											<caption>금리안내</caption>
+											<colgroup id="prdcIntColgroup">
+												<col />
+												<col />
+												<col />
+												<col width="25%" />
+											</colgroup>
+											<thead id="prdcIntHeader">
+												<tr>
+													<th scope="col">금리구분</th>
+													<th scope="col">잔액</th>
+													<th scope="col">금리</th>
+													<th scope="col">비고</th>
+												</tr>
+											</thead>
+											<tbody id="prdcIntBody">
+												<tr>
+													<th rowspan="2" scope="rowp" class="firstc">약정이율</th>
+													<td>500만원이하</td>
+													<td>0.10</td>
+													<td rowspan="1" class="lastc" alt="1">&nbsp;</td>
+												</tr>
+												<tr>
+													<td>500만원초과</td>
+													<td>0.10</td>
+													<td rowspan="1" class="lastc" alt="2">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+										<strong class="tit_txt depo_int_txt">우대금리</strong>
+										<span class="cnt_txt depo_int_cnt">
+											<ul class="bullet">
+												<li class="first">
+													통장 개설일로부터 3년 응당 도래일까지 잔액에 따른 우대이자율 제공
+													<table class="tbl_basic" summary="IBK창업응원파킹통장 우대금리 사항을 보여주는 표입니다.">
+														<caption>IBK창업응원파킹통장 우대금리</caption>
+														<colgroup>
+															<col width="30%" />
+															<col width="30%" />
+															<col width="40%" />
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="col">5백만원 이하</th>
+																<th scope="col">5백만원 초과</th>
+																<td class="last" rowspan="2">※ 매 분기 3월, 6월, 9월, 12월의 3번째 토요일에 결산 후 일별 계산이자 합산금액을 익일에 지급</td>
+															</tr>
+															<tr>
+																<td class="ac">
+																	연 2.5%
+																	<br />
+																	(기본이자율 포함)
+																</td>
+																<td class="ac">
+																	연 0.1%
+																	<br />
+																	(기본이자율 적용)
+																</td>
+															</tr>
+														</tbody>
+													</table>
+													※ 해당 고시이자율과 우대이자율은 변경될 수 있으며, 변경일로부터 변경이자율이 적용
+												</li>
+											</ul>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 상품요약 -->
+						<!-- s: 상품혜택 -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group prd_detail">
+								<div class="tabcon">
+									<div id="con2">
+										<strong class="tit_txt">금리안내</strong>
+										<span class="cnt_txt" id="INT_CON"></span>
+										<strong class="tit_txt" id="PRDC_NM" style="display: none"></strong>
+										<table cellspacing="0" cellpadding="0" class="cnt_tbl zebra alignC border uiAct" id="prdcIntTable">
+											<caption>금리안내</caption>
+											<colgroup id="prdcIntColgroup">
+												<col />
+												<col />
+												<col />
+												<col width="25%" />
+											</colgroup>
+											<thead id="prdcIntHeader">
+												<tr>
+													<th scope="col">금리구분</th>
+													<th scope="col">계약기간</th>
+													<th scope="col">금리</th>
+													<th scope="col">비고</th>
+												</tr>
+											</thead>
+											<tbody id="prdcIntBody">
+												<tr>
+													<th rowspan="5" scope="rowp" class="firstc">약정이율</th>
+													<td>6개월이상 12개월미만</td>
+													<td>2.85</td>
+													<td rowspan="1" class="lastc" alt="1">&nbsp;</td>
+												</tr>
+												<tr>
+													<td>12개월이상 24개월미만</td>
+													<td>2.75</td>
+													<td rowspan="1" class="lastc" alt="2">&nbsp;</td>
+												</tr>
+												<tr>
+													<td>24개월이상 36개월미만</td>
+													<td>2.55</td>
+													<td rowspan="1" class="lastc" alt="3">&nbsp;</td>
+												</tr>
+												<tr>
+													<td>36개월이상 48개월미만</td>
+													<td>2.50</td>
+													<td rowspan="1" class="lastc" alt="4">&nbsp;</td>
+												</tr>
+												<tr>
+													<td>48개월이상 70개월이하</td>
+													<td>2.50</td>
+													<td rowspan="1" class="lastc" alt="5">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+										<strong class="tit_txt depo_int_txt">우대금리</strong>
+										<span class="cnt_txt depo_int_cnt">
+											<ul class="bullet">
+												<li class="first">
+													우대혜택
+													<ul class="hyphen">
+														<li>
+															기쁜날 우대금리
+															<ul class="gray_square">
+																<li>
+																	대 상 : 적금가입후 1년이상 경과계좌로서 아래 사유의 관련증빙자료를 사유발생일로부터 3개월이내 제출한 고객
+																	<ul class="reference">
+																		<li>사 유 : 생애최초 사업장 마련, 매출액 또는 순이익 50% 증가, 은행내부신용평가등급 상승, 산업포장 각종 대외수상</li>
+																	</ul>
+																</li>
+																<li>제공기간 : 기쁜날 등록일 + 1년 (만기일이내)</li>
+																<li>
+																	적용금리 : 고시이율 + 기쁜날 우대금리 연 0.2%p를 만기해지시 제공
+																	<ul class="gray_square">
+																		<li>계약기간 중 1회에 한하며 중복적용 배제</li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+														<li>
+															자동이체 등 우대금리
+															<ul class="gray_square">
+																<li>대 상 : 계약기간 중 자동이체, 전자금융으로 적립금을 납입한 고객</li>
+																<li>적용금리 : 실제 납입금액에 대하여 고시이율 + 우대금리 연 0.1%p를 만기 해지시 제공</li>
+															</ul>
+														</li>
+														<li>
+															주거래 금리우대
+															<ul class="gray_square">
+																<li>대 상 : 계약기간 2년제 이상으로 아래 해당요건을 충족계좌</li>
+																<li>대상금액 : 신규가입 후 1년간 납입한 적금납입액</li>
+																<li>
+																	제공기간 : 신규가입 후 1년 경과시점부터 적금 만기일까지
+																	<ol class="number">
+																		<li>
+																			<br />
+																			1)평잔유지 우대금리
+																			<table class="tbl_basic" summary="금리별 평잔유지 우대금리 지급조건 표 입니다.">
+																				<caption>평잔유지 우대금리표</caption>
+																				<colgroup>
+																					<col width="30%" />
+																					<col width="70%" />
+																				</colgroup>
+																				<thead>
+																					<tr class="first">
+																						<th scope="col">금리</th>
+																						<th>평잔유지 우대금리 지급조건</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td class="al">연 0.2%p</td>
+																						<td class="last">입출식예금평잔 ≥ 우대금리 기준구간 중 적금납입액</td>
+																					</tr>
+																					<tr>
+																						<td class="al">연0.3%p</td>
+																						<td class="last">입출식예금평잔 ≥ 우대금리 기준구간 중 적금납입액의 2배</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</li>
+																		<br />
+																		<li>
+																			2) 카드 우대금리
+																			<table class="tbl_basic" summary="금리 카드유자 유대금리 지급조건 표 입니다.">
+																				<caption>카드 우대금리표</caption>
+																				<colgroup>
+																					<col width="30%" />
+																					<col width="70%" />
+																				</colgroup>
+																				<thead>
+																					<tr class="first">
+																						<th scope="col">금리</th>
+																						<th>평잔유지 우대금리 지급조건</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td class="al">연 0.2%p</td>
+																						<td class="last">카드이용금액 ≥ 우대금리 기준구간 중 적금납입액</td>
+																					</tr>
+																					<tr>
+																						<td class="al">연0.3%p</td>
+																						<td class="last">카드이용금액 ≥ 우대금리 기준구간 중 적금납입액의 2배</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<ul class="gray_square">
+																				<li>주1) 적금해지일 기준 카드연체중인 경우에는 우대금리를 제공하지 않음</li>
+																				<li>주2) 카드이용금액 산출시 구매카드 이용액, 현금서비스 이용액은 제외</li>
+																				<li>주3) 카드이용금액은 적금신규가입일 전월부터 향후 1년이 되는 말일까지의 이용액 기준</li>
+																			</ul>
+																			<ul class="reference">
+																				<li>우대금리 기준구간(적금신규일로부터 1년)은 우대금리적용을 위한 실적산정기간을 의미</li>
+																			</ul>
+																		</li>
+																	</ol>
+																</li>
+															</ul>
+														</li>
+														<li>
+															중도해지(인출)우대
+															<ul class="gray_square">
+																<li>
+																	대 상 : 가입후 1년이상 경과계좌로서 아래 사유 해당고객
+																	<ul class="reference">
+																		<li>사 유 : 사업장 마련, 사업장 증축, 사업장 이전</li>
+																	</ul>
+																</li>
+																<li>
+																	적용금리 : 중도해지(인출)시까지의 경과기간별 약정이율
+																	<ul class="reference">
+																		<li>중도인출은 적금 초년도 납입액 범위내로 계약기간 중 선입선출방식에 의거 1회 가능하며, 정기적립식은 중도인출 불가</li>
+																	</ul>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 상품혜택 -->
+						<!-- s: 금리정보 -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group prd_detail">
+								<div class="tabcon">
+									<div>
+										외부 컨텐츠 삽입 구간
+										<br />
+										외부 컨텐츠 삽입 구간
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 금리정보 -->
+						<!-- s: 약관 -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group prd_detail">
+								<div class="tabcon">
+									<div>
+										외부 컨텐츠 삽입 구간
+										<br />
+										외부 컨텐츠 삽입 구간
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 약관 -->
+						<!-- s: 유의사항 -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group prd_detail">
+								<div class="tabcon">
+									<div>
+										외부 컨텐츠 삽입 구간
+										<br />
+										외부 컨텐츠 삽입 구간
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 유의사항 -->
+						<!-- e: 탭 컨텐츠 -->
+					</div>
+				</div>
+				<!-- e: step2 상품 상세 -->
+
+				<!-- s: Popup -->
+				<!-- 조회구분 팝업 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회구분</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<h3 class="input_label ty1">조회방법</h3>
+								<div class="search_group">
+									<div class="btn_area clickable ty4" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">추천순</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">인기순</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">최신순</span></button>
+									</div>
+								</div>
+
+								<h3 class="input_label ty1">가입채널</h3>
+								<div class="search_group">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">모바일</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">인터넷&영업점</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- // 조회구분 팝업 -->
+				<!-- e: Popup -->
+			</div>
+			<!-- e: 금융상품-외환 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

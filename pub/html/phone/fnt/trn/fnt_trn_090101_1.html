@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 계좌선택 > 계좌번호 직접 입력 > 은행/증권사 선택 > 금액 입력(국세/국고금/지방세) -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty2">출금계좌</div>
+								<div class="dropdown ty2" role="button" title="출금계좌 선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text"></div>
+								</div>
+
+								<div class="input_label ty2">입금은행</div>
+								<div class="dropdown ty2 disabled" role="button" title="입금은행 선택 목록보기" aria-disabled="true" tabindex="-1">
+									<div class="dropdown_text">국세</div>
+								</div>
+
+								<div class="input_label ty2">입금계좌번호</div>
+								<div class="dropdown ty2 disabled" role="button" title="입금계좌번호 선택 목록보기" aria-disabled="true" tabindex="-1">
+									<div class="dropdown_text">국세</div>
+								</div>
+
+								<div class="input_label ty2">납부금액</div>
+								<div class="live_input_group">
+									<div class="live_input ty2 enter">
+										<div class="value disabled" aria-live="assertive" role="button" aria-disabled="true" title="납부금액 입력">123원</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="group">
+							<!-- s: 꼭 알아두세요! -->
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											국세/국고금
+											<li>국세계좌번호는 지로 용지에 있습니다.</li>
+											<li>국세법에 따라 납부취소는 불가능 합니다.</li>
+											<li>오류가 발생한 경우에는’거래내역조회’와 ‘국세납부내역조회’를 통해 정상거래여부를 반드시 확인하시기 바랍니다.</li>
+											<li>납부가능시간 : 매일00:30~23:30(단, 매월 두번째 토요일 23:30~익일 07:00까지 시스템 정기점검으로 인한 납부불가)</li>
+											<li>결정구분이 1~4일인 경우, 자진납부를 이용하여 납부하세요.</li>
+
+											지방세
+											<li>지방세 (재산세, 자동차세, 균등할주민세, 취득세, 등록세, 면허세, 종합토지세 등)를 납부하실 수 있습니다.</li>
+											<li>위택스 및 홈택스를 통한 자진신고가 완료되지 않은 지방소득세(법인세, 소득세) 인 경우는 인터넷뱅킹에서 조회 및 납부가 되지 않을 수 있으므로 가까운 영업점 및 위택스(http://www.wetax.go.kr)에서 자진신고 납부하시기 바랍니다.</li>
+											<li>납부가능시간 : 매일00:30~23:30(단, 매월 두번째 토요일 23:30~익일 07:00까지 시스템 정기점검으로 인한 납부불가)</li>
+											<li>지방세는 지방자치단체의 요청에 따라 납부취소가 불가능합니다.</li>
+											<li>개별고지건에 대한 보다 구체적인 정보는 해당수납기관의 담당부서(세무과)로 연락하시기 바랍니다.</li>
+											<li>오류가 발생한 경우에는 스마트뱅킹과 인터넷뱅킹의 ’거래내역조회’와 ‘지방세납부내역조회’를 통해 정상거래여부를 반드시 확인하시기 바랍니다.</li>
+											<li>지방세의 납부내역은＇뱅킹 &gt; 공과금 &gt; 지방세‘ 에서 확인하실 수 있습니다. (단, 세외수입, 환경개선부담금은 인터넷뱅킹에서 조회가능)</li>
+											<li>신용카트를 이용한 지방세 납부서비스는 지로사이트(www.giro.or.kr)에서 가능합니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- e: 꼭 알아두세요! -->
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<!-- <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button> -->
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('popup4');">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 계좌선택 > 계좌번호 직접 입력 > 은행/증권사 선택 > 금액 입력(국세/국고금/지방세) -->
+
+				<!-- s: 계좌선택 > 계좌번호 직접 입력 > 은행/증권사 선택 > 금액 입력(국세/국고금/지방세) > 이체확인_국세/국고금/지방세 > 이체완료_국세/국고금/지방세 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="transfer_confirm">
+								<div class="ico_txt ty1 lottie_case2">
+									<div class="lottie_box" aria-hidden="true">
+										<lottie-player src="../../../../lottie/lottie_case1.json" background="transparent" speed="1" loop></lottie-player>
+									</div>
+									<div class="transfer_confirm_title">
+										기미래님에게
+										<br />
+										<span class="won">50,000,000원</span>
+										을
+										<br />
+										이체했어요
+									</div>
+								</div>
+								<div class="acd_wrap accodian_wrap ty2 etc3">
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="d_list ty1">
+												<li>
+													<span class="d_list_l">출금은행</span>
+													<span class="d_list_r">
+														<span class="bank_name">기업은행</span>
+													</span>
+												</li>
+												<li>
+													<span class="d_list_l">출금계좌</span>
+													<span class="d_list_r">
+														<span class="account_no">000-000000-00-000</span>
+													</span>
+												</li>
+												<li>
+													<span class="d_list_l">입금은행</span>
+													<span class="d_list_r">
+														<span class="bank_name">기업은행</span>
+													</span>
+												</li>
+												<li>
+													<span class="d_list_l">입금계좌</span>
+													<span class="d_list_r">
+														<span class="account_no">000-000000-00-000</span>
+													</span>
+												</li>
+												<li>
+													<span class="d_list_l">이체 신청일시</span>
+													<span class="d_list_r">
+														<span class="date">2024-05-12</span>
+														<span class="time">20:10:24</span>
+													</span>
+												</li>
+												<li>
+													<span class="d_list_l">이체 예정일시</span>
+
+													<span class="d_list_r">
+														<span class="date">2024-05-12</span>
+														<span class="time">20:10:24</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="acd_head accodian_head">
+										<button type="button" title="컨텐츠내용 상세보기" aria-expanded="false" class="acd_btn">
+											<span class="title">더보기</span>
+											<span class="title sub">접기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">거래내역조회</button>
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 계좌선택 > 계좌번호 직접 입력 > 은행/증권사 선택 > 금액 입력(국세/국고금/지방세) > 이체확인_국세/국고금/지방세 > 이체완료_국세/국고금/지방세 -->
+
+				<!-- s: 결재함_국세/국고금/지방세 화면 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty1">이체내역</div>
+							<ul class="d_list ty3">
+								<li>
+									<span class="d_list_l">출금계좌</span>
+
+									<span class="d_list_r">
+										<span class="account_no">000-000000-00-000</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">입금계좌</span>
+
+									<span class="d_list_r">
+										<span class="account_no">000-000000-00-000</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">입금은행</span>
+									<span class="d_list_r">
+										<span class="txt">IBK기업은행</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">예금주</span>
+									<span class="d_list_r">
+										<span class="txt">예금주명</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">이체금액</span>
+									<span class="d_list_r">
+										<span class="money">10,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+							</ul>
+
+							<div class="txt_style ty1 mt_40">거래상태</div>
+							<ul class="d_list ty3">
+								<li>
+									<span class="d_list_l">거래상태</span>
+									<span class="d_list_r">
+										<span class="txt"></span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">반송사유</span>
+									<span class="d_list_r">
+										<span class="txt"></span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">납부자주민(사업자)등록번호</span>
+									<span class="d_list_r">
+										<span class="txt"></span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">납부일시</span>
+									<span class="d_list_r">
+										<span class="date">2024-05-12</span>
+										<span class="time">20:10:24</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">납부은행</span>
+									<span class="d_list_r">
+										<span class="txt">예금주명</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">납부하신 금액</span>
+
+									<span class="d_list_r">
+										<span class="money">10,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty2" />
+
+						<div class="group">
+							<div class="title_text ty1">불능시 연락처</div>
+
+							<div class="comp_wrap phone">
+								<div class="input no_del">
+									<input type="tel" name="" id="" title="연락처 앞 3자리 입력" />
+								</div>
+								<span>-</span>
+								<div class="input no_del">
+									<input type="tel" name="" id="" title="연락처 가운데 4자리 입력" />
+								</div>
+								<span>-</span>
+								<div class="input no_del">
+									<input type="tel" name="" id="" title="연락처 뒤 4자리 입력" />
+								</div>
+							</div>
+
+							<div class="error_text">장애 발생시 연락받을 전화번호를 입력하세요.</div>
+							<div class="btn_area ty1 mt_16">
+								<button type="button" class="btn s_4 c_2 r_2">등록/변경</button>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area ty2">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area ty3">
+									<button type="button" class="btn s_5 c_1 r_2">반송</button>
+									<button type="button" class="btn s_5 c_3 r_2">결제</button>
+									<button type="button" class="btn s_5 c_1 r_2">결재선 조회</button>
+									<button type="button" class="btn s_5 c_1 r_2">목록</button>
+								</div>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+					<button type="button" onclick="uf_goStep(1);">이전화면이동</button>
+				</div>
+				<!-- e: 결재함_국세/국고금/지방세 화면 -->
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- s: 계좌선택 > 계좌번호 직접 입력 > 은행/증권사 선택 > 금액 입력(국세/국고금/지방세) > 이체확인_국세/국고금/지방세 -->
+				<div class="bottom_popup_wrap" id="popup4">
+					<div class="bottom_popup no_header">
+						<div class="bottom_popup_body">
+							<div class="transfer_confirm">
+								<div class="transfer_confirm_title">
+									기미래님에게
+									<br />
+									<span class="won">50,000,000원</span>
+									을
+									<br />
+									이체할까요?
+								</div>
+								<ul class="d_list ty1">
+									<li>
+										<span class="d_list_l">출금은행</span>
+										<span class="d_list_r">은행명</span>
+									</li>
+									<li>
+										<span class="d_list_l">출금계좌번호</span>
+										<span class="d_list_r">
+											<span class="account_no">000-000000-00-000</span>
+										</span>
+									</li>
+								</ul>
+								<ul class="d_list ty3">
+									<li>
+										<span class="d_list_l">입금은행</span>
+										<span class="d_list_r">
+											<span class="txt">은행명</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">입금계좌</span>
+										<span class="d_list_r">
+											<span class="account_no">000-000000-00-000</span>
+										</span>
+									</li>
+								</ul>
+								<hr aria-hidden="true" class="divider ty2" />
+								<div class="title_text ty1">불능시 연락처</div>
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="연락처 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="연락처 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="연락처 뒤 4자리 입력" />
+									</div>
+								</div>
+								<div class="error_text">장애 발생시 연락받을 전화번호를 입력하세요.</div>
+								<div class="btn_area ty1 mt_16">
+									<button type="button" class="btn s_4 c_2 r_2">등록/변경</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="bottom_popup_footer ty2">
+							<button type="button" class="btn s_5 c_1 r_2">아니오</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup4'); uf_goStep(2);">이체하기</button>
+						</div>
+						<!-- 결제선인 경우 노출
+                  <div class="bottom_popup_footer ty2">
+                    <button type="button" class="btn s_5 c_1 r_2">아니오</button>
+                    <button type="button" class="btn s_5 c_3 r_2">결제요청</button>
+                  </div>
+                  -->
+					</div>
+				</div>
+				<!-- e: 계좌선택 > 계좌번호 직접 입력 > 은행/증권사 선택 > 금액 입력(국세/국고금/지방세) > 이체확인_국세/국고금/지방세 -->
+
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

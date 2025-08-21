@@ -1,0 +1,1606 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 해지예정 이자조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">계좌번호</div>
+								<div class="comp_wrap">
+									<div class="dropdown ty2" role="button" title="계좌번호 선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택하세요</div>
+									</div>
+								</div>
+
+								<div class="input_label ty1">해지일</div>
+
+								<div class="from_to">
+									<div class="input">
+										<input type="text" name="" id="" value="23-02-01" title="해지일자 입력" />
+										<button type="button" class="btn calendar" title="해지일자 날짜선택 날짜선택" onclick="comLayerPopUtil.open('cal01');"></button>
+									</div>
+								</div>
+
+								<ul class="list_bullet ty1">
+									<li>해지 예정일은 오늘 이후의 날짜를 입력해 주세요.</li>
+									<li>신탁 및 외화예금 해지 예정이자는 오늘 날짜로만 조회됩니다.</li>
+									<li>추가 입금/출금/결산 발생 시, 현재 조회한 이자와 실제 받는 이자는 다를 수 있습니다.</li>
+								</ul>
+
+								<div class="input_label ty1">조회 구분</div>
+								<div class="dropdown ty2" role="button" title="조회 구분" onclick="comLayerPopUtil.open('optList1');">
+									<div class="dropdown_text">선택하세요</div>
+								</div>
+
+								<div class="input_label ty1">금액</div>
+
+								<div class="live_input_group">
+									<div class="live_input ty2">
+										<div class="value" aria-live="assertive" role="button" title="금액 입력">숫자만 입력</div>
+									</div>
+								</div>
+
+								<div class="input_label ty1">해지 방법</div>
+								<div class="dropdown ty2" role="button" title="해지 방법" onclick="comLayerPopUtil.open('optList2');">
+									<div class="dropdown_text">선택하세요</div>
+								</div>
+
+								<div class="input_label ty1">기준가적용일자</div>
+
+								<div class="from_to">
+									<div class="input">
+										<input type="text" name="" id="" value="23-02-01" title="기준가적용일자 입력" readonly />
+										<button type="button" class="btn calendar" title="기준가적용일자 날짜선택" disabled></button>
+									</div>
+								</div>
+								<div class="from_to">
+									<div class="input">
+										<input type="text" name="" id="" value="23-02-01" title="기준가적용일자 입력" />
+										<button type="button" class="btn calendar" title="기준가적용일자 날짜선택" onclick="comLayerPopUtil.open('cal02');"></button>
+									</div>
+								</div>
+
+								<div class="input_label ty1">회차 번호</div>
+								<div class="dropdown ty2" role="button" title="회차 번호" onclick="comLayerPopUtil.open('optList3');">
+									<div class="dropdown_text">선택하세요</div>
+								</div>
+							</div>
+
+							<button type="button" class="btn s_4 c_2 r_2 w_100p mt_16">조회</button>
+						</div>
+					</div>
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">확인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: 해지예정 이자조회 -->
+
+				<!-- s: 조회완료 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">계좌번호</div>
+
+								<div class="dropdown ty2" role="button" title="계좌번호 선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">선택하세요</div>
+								</div>
+
+								<div class="input_label ty1">해지일자</div>
+
+								<div class="from_to">
+									<div class="input">
+										<input type="text" name="" id="" value="23-02-01" title="해지일자 입력" />
+										<button type="button" class="btn calendar" title="해지일자 날짜선택" onclick="comLayerPopUtil.open('cal01');"></button>
+									</div>
+								</div>
+
+								<ul class="list_bullet ty1">
+									<li>해지 예정일은 금일 이후의 날짜를 입력하십시오.</li>
+									<li>신탁 및 외화예금 해지 예정이자는 오늘 날짜로만 조회됩니다.</li>
+									<li>추가적인 입금/출금/결산 발생 시, 현재 조회 이자와 미래시점 실제 지급 이자는 다를 수 있습니다.</li>
+								</ul>
+							</div>
+
+							<button type="button" class="btn s_2 c_1 r_1 w_100p mt_16">조회</button>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>조회일시 : 2017-09-20 18:14:55</li>
+								</ul>
+							</div>
+
+							<div class="d_list_ty2_group mt_16">
+								<ul class="d_list ty2">
+									<li>
+										<span class="d_list_l">해지일자</span>
+										<span class="d_list_r">
+											<span class="date">2021-03-25</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">계좌번호</span>
+										<span class="d_list_r">
+											<span class="account_no">169-121013-01-018</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">해지종류</span>
+										<span class="d_list_r">
+											<span class="txt">일반해지(완제)</span>
+										</span>
+									</li>
+								</ul>
+
+								<ul class="d_list ty2">
+									<li>
+										<span class="d_list_l">계약잔액</span>
+										<span class="d_list_r">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">이자금액</span>
+										<span class="d_list_r">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">공제 후 원화이자</span>
+										<span class="d_list_r">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">소득세</span>
+										<span class="d_list_r">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">주민세</span>
+										<span class="d_list_r">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</li>
+									<li>
+										<span class="d_list_l">정산지급액</span>
+										<span class="d_list_r">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: 조회완료 -->
+
+				<!-- s: 조회완료(신탁 CASE) -->
+				<div id="step21" data-jx-step-no="21" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="group_item mt_16">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">169-121013-01-018</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">원본금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">운용수익</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">운용수익률</span>
+										</span>
+										<span class="line_right">
+											<span class="rate"></span>
+											<span class="txt_unit">%</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">미수이자</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기본보수</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신탁이익금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,292</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신탁이익률</span>
+										</span>
+										<span class="line_right">
+											<span class="rate"></span>
+											<span class="txt_unit">%</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">중도해지수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,292</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">법인(소득)세</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,292</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지방소득세</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,292</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">미지급원천세</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,292</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">세후 신탁이익</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,292</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">소득기간</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,292</span>
+											<span class="term">
+												<span class="date"></span>
+												~
+												<span class="date"></span>
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: 조회완료(신탁 CASE) -->
+
+				<!-- s: 조회완료(골드 CASE) -->
+				<div id="step22" data-jx-step-no="22" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="group_item mt_16">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상품명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">총 적립량</span>
+										</span>
+										<span class="line_right">
+											<span class="amount"></span>
+											<span class="txt_unit"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납입원금</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">현금해지량</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">금기준가격</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">금적립 원화환산금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌유지수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,292</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">현금해지금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">총 지급금액(원)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,292</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: 조회완료(골드 CASE) -->
+
+				<!-- s: 조회완료(펀드 CASE) -->
+				<div id="step23" data-jx-step-no="23" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="group_item mt_16">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">적용기준일</span>
+										</span>
+										<span class="line_right">
+											<span class="date"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">조회구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">실제기준가 적용일</span>
+										</span>
+										<span class="line_right">
+											<span class="date"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급일</span>
+										</span>
+										<span class="line_right">
+											<span class="date"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: 조회완료(펀드 CASE) -->
+
+				<!-- s: 조회완료(펀드 CASE) -->
+				<div id="step24" data-jx-step-no="24" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="group_item mt_16">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급좌수</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급잔액</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">납입원금</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">평가금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">환매수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">세금합계</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">정산지급액</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기준가격</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">과표기준가격</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">과표</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">소득세</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지방소득세</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">농어촌특별세</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">실제기준가 적용일</span>
+										</span>
+										<span class="line_right">
+											<span class="date"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급일</span>
+										</span>
+										<span class="line_right">
+											<span class="date"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: 조회완료(펀드 CASE) -->
+
+				<!-- s: 조회완료(외화 CASE) -->
+				<div id="step25" data-jx-step-no="25" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="group_item mt_16">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계약잔액</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">JYP</span>
+											<span class="money"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">원화환산 계약잔액</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이자금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외화이자</span>
+										</span>
+										<span class="line_right">
+											<span class="line_right">
+												<span class="txt_unit">JYP</span>
+												<span class="money"></span>
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">공제 후 원화이자</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">공제 후 외화이자</span>
+										</span>
+										<span class="line_right">
+											<span class="line_right">
+												<span class="txt_unit">JYP</span>
+												<span class="money"></span>
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기간인식 외환차익</span>
+										</span>
+										<span class="line_right">
+											<span class="line_right">
+												<span class="txt_unit">JYP</span>
+												<span class="money"></span>
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">법인세</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">법인지방소득세</span>
+										</span>
+										<span class="line_right">
+											<span class="money"></span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">외화정산지급액</span>
+										</span>
+										<span class="line_right">
+											<span class="line_right">
+												<span class="txt_unit">JYP</span>
+												<span class="money"></span>
+											</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">적용환율</span>
+										</span>
+										<span class="line_right">
+											<span class="line_right">
+												<span class="txt_unit">JYP</span>
+												<span class="money"></span>
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: 조회완료(외화 CASE) -->
+
+				<!-- s: 계좌 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 계좌 선택 팝업 -->
+
+				<!-- s: 조회기간 바텀시트 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회기간</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<h3 class="input_label ty1">조회기간</h3>
+								<div class="search_group">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active half"><span class="text">당일</span></button>
+										<button type="button" role="radio" aria-checked="false" class="half"><span class="text">7일</span></button>
+
+										<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">6개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">1년</span></button>
+									</div>
+									<div class="comp_wrap from_to">
+										<div class="input">
+											<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+											<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+										</div>
+										<span>~</span>
+										<div class="input">
+											<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+											<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popup2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회기간</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<h3 class="input_label ty1">조회기간</h3>
+								<div class="search_group">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active half"><span class="text">당일</span></button>
+										<button type="button" role="radio" aria-checked="false" class="half"><span class="text">7일</span></button>
+
+										<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">6개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">1년</span></button>
+									</div>
+									<div class="comp_wrap from_to">
+										<div class="input">
+											<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+											<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+										</div>
+										<span>~</span>
+										<div class="input">
+											<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+											<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회기간 바텀시트 -->
+
+				<!-- s: 조회구분 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="optList1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회 구분</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">전액환매</li>
+								<li role="option" tabindex="-1" aria-selected="false">일부환매</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회구분 선택 팝업 -->
+
+				<!-- s: 해지일자 선택 달력 -->
+				<div class="bottom_popup_wrap" id="cal01">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">해지일자</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('cal01');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+								<div class="calendar_select_wrap">
+									<div class="calendar_select">
+										<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+											<span class="t_hidden">이전 년도</span>
+										</button>
+										<span>
+											<em id="year">2024</em>
+											년
+										</span>
+										<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+											<span class="t_hidden">다음 년도</span>
+										</button>
+									</div>
+									<div class="calendar_select">
+										<button id="preMon" type="button" class="btn_prev" title="이전 달">
+											<span class="t_hidden">이전 달</span>
+										</button>
+										<span>
+											<em id="mon">5</em>
+											월
+										</span>
+										<button id="nextMon" type="button" class="btn_next" title="다음 달">
+											<span class="t_hidden">다음 달</span>
+										</button>
+									</div>
+								</div>
+								<div class="wrap_calendar">
+									<table class="calendar weekday">
+										<caption class="hidden">상세기간 달력</caption>
+										<colgroup>
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="sun">일</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col" class="sat">토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													28
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													29
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													30
+												</td>
+												<td>
+													<button type="button">1</button>
+												</td>
+												<td>
+													<button type="button">2</button>
+												</td>
+												<td>
+													<button type="button">3</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">4</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">5</button>
+												</td>
+												<td>
+													<button type="button">6</button>
+												</td>
+												<td>
+													<button type="button">7</button>
+												</td>
+												<td>
+													<button type="button">8</button>
+												</td>
+												<td>
+													<button type="button">9</button>
+												</td>
+												<td>
+													<button type="button">10</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">11</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">12</button>
+												</td>
+												<td>
+													<button type="button">13</button>
+												</td>
+												<td>
+													<button type="button">14</button>
+												</td>
+												<td>
+													<button type="button">15</button>
+												</td>
+												<td>
+													<button type="button">16</button>
+												</td>
+												<td>
+													<button type="button">17</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">18</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">19</button>
+												</td>
+												<td>
+													<button type="button">20</button>
+												</td>
+												<td class="today">
+													<button type="button" title="오늘 날짜">21</button>
+												</td>
+												<td>
+													<button type="button">22</button>
+												</td>
+												<td class="on term">
+													<button type="button" title="선택된 날짜">23</button>
+												</td>
+												<td class="off">
+													<button type="button">24</button>
+												</td>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">25</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">26</button>
+												</td>
+												<td class="off">
+													<button type="button">27</button>
+												</td>
+												<td class="off">
+													<button type="button">28</button>
+												</td>
+												<td class="off">
+													<button type="button">29</button>
+												</td>
+												<td class="off">
+													<button type="button">30</button>
+												</td>
+												<td class="off">
+													<button type="button">31</button>
+												</td>
+												<td class="btn_next">
+													<em class="hidden">다음달</em>
+													1
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 해지일자 선택 달력 -->
+
+				<!-- s: 기준가적용일자 선택 달력 -->
+				<div class="bottom_popup_wrap" id="cal02">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">기준가적용일자</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('cal02');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+								<div class="calendar_select_wrap">
+									<div class="calendar_select">
+										<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+											<span class="t_hidden">이전 년도</span>
+										</button>
+										<span>
+											<em id="year">2024</em>
+											년
+										</span>
+										<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+											<span class="t_hidden">다음 년도</span>
+										</button>
+									</div>
+									<div class="calendar_select">
+										<button id="preMon" type="button" class="btn_prev" title="이전 달">
+											<span class="t_hidden">이전 달</span>
+										</button>
+										<span>
+											<em id="mon">5</em>
+											월
+										</span>
+										<button id="nextMon" type="button" class="btn_next" title="다음 달">
+											<span class="t_hidden">다음 달</span>
+										</button>
+									</div>
+								</div>
+								<div class="wrap_calendar">
+									<table class="calendar weekday">
+										<caption class="hidden">상세기간 달력</caption>
+										<colgroup>
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="sun">일</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col" class="sat">토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													28
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													29
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													30
+												</td>
+												<td>
+													<button type="button">1</button>
+												</td>
+												<td>
+													<button type="button">2</button>
+												</td>
+												<td>
+													<button type="button">3</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">4</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">5</button>
+												</td>
+												<td>
+													<button type="button">6</button>
+												</td>
+												<td>
+													<button type="button">7</button>
+												</td>
+												<td>
+													<button type="button">8</button>
+												</td>
+												<td>
+													<button type="button">9</button>
+												</td>
+												<td>
+													<button type="button">10</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">11</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">12</button>
+												</td>
+												<td>
+													<button type="button">13</button>
+												</td>
+												<td>
+													<button type="button">14</button>
+												</td>
+												<td>
+													<button type="button">15</button>
+												</td>
+												<td>
+													<button type="button">16</button>
+												</td>
+												<td>
+													<button type="button">17</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">18</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">19</button>
+												</td>
+												<td>
+													<button type="button">20</button>
+												</td>
+												<td class="today">
+													<button type="button" title="오늘 날짜">21</button>
+												</td>
+												<td>
+													<button type="button">22</button>
+												</td>
+												<td class="on term">
+													<button type="button" title="선택된 날짜">23</button>
+												</td>
+												<td class="off">
+													<button type="button">24</button>
+												</td>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">25</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">26</button>
+												</td>
+												<td class="off">
+													<button type="button">27</button>
+												</td>
+												<td class="off">
+													<button type="button">28</button>
+												</td>
+												<td class="off">
+													<button type="button">29</button>
+												</td>
+												<td class="off">
+													<button type="button">30</button>
+												</td>
+												<td class="off">
+													<button type="button">31</button>
+												</td>
+												<td class="btn_next">
+													<em class="hidden">다음달</em>
+													1
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 기준가적용일자 선택 달력 -->
+
+				<!-- s: 달력 선택 -->
+				<div class="bottom_popup_wrap" id="popup3">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">날짜선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup3');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+								<div class="calendar_select_wrap">
+									<div class="calendar_select">
+										<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+											<span class="t_hidden">이전 년도</span>
+										</button>
+										<span>
+											<em id="year">2024</em>
+											년
+										</span>
+										<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+											<span class="t_hidden">다음 년도</span>
+										</button>
+									</div>
+									<div class="calendar_select">
+										<button id="preMon" type="button" class="btn_prev" title="이전 달">
+											<span class="t_hidden">이전 달</span>
+										</button>
+										<span>
+											<em id="mon">5</em>
+											월
+										</span>
+										<button id="nextMon" type="button" class="btn_next" title="다음 달">
+											<span class="t_hidden">다음 달</span>
+										</button>
+									</div>
+								</div>
+								<div class="wrap_calendar">
+									<table class="calendar weekday">
+										<caption class="hidden">상세기간 달력</caption>
+										<colgroup>
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="sun">일</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col" class="sat">토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													28
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													29
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													30
+												</td>
+												<td>
+													<button type="button">1</button>
+												</td>
+												<td>
+													<button type="button">2</button>
+												</td>
+												<td>
+													<button type="button">3</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">4</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">5</button>
+												</td>
+												<td>
+													<button type="button">6</button>
+												</td>
+												<td>
+													<button type="button">7</button>
+												</td>
+												<td>
+													<button type="button">8</button>
+												</td>
+												<td>
+													<button type="button">9</button>
+												</td>
+												<td>
+													<button type="button">10</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">11</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">12</button>
+												</td>
+												<td>
+													<button type="button">13</button>
+												</td>
+												<td>
+													<button type="button">14</button>
+												</td>
+												<td>
+													<button type="button">15</button>
+												</td>
+												<td>
+													<button type="button">16</button>
+												</td>
+												<td>
+													<button type="button">17</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">18</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">19</button>
+												</td>
+												<td>
+													<button type="button">20</button>
+												</td>
+												<td class="today">
+													<button type="button" title="오늘 날짜">21</button>
+												</td>
+												<td>
+													<button type="button">22</button>
+												</td>
+												<td class="on term">
+													<button type="button" title="선택된 날짜">23</button>
+												</td>
+												<td class="off">
+													<button type="button">24</button>
+												</td>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">25</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">26</button>
+												</td>
+												<td class="off">
+													<button type="button">27</button>
+												</td>
+												<td class="off">
+													<button type="button">28</button>
+												</td>
+												<td class="off">
+													<button type="button">29</button>
+												</td>
+												<td class="off">
+													<button type="button">30</button>
+												</td>
+												<td class="off">
+													<button type="button">31</button>
+												</td>
+												<td class="btn_next">
+													<em class="hidden">다음달</em>
+													1
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 달력 선택 -->
+
+				<div class="bottom_popup_wrap" id="optList2" title="해지 방법">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">해지 방법</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- s: 회차번호 선택 팝업 -->
+
+				<div class="bottom_popup_wrap" id="optList3">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">회차 번호 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optList3');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="round_select_head">
+								<div class="content_head_left">회차 번호</div>
+								<div class="content_head_right">계약금액</div>
+							</div>
+
+							<ul class="round_select_list" role="listbox">
+								<li role="option" tabindex="-1" class="item active" aria-selected="true">
+									<div class="item_left">1</div>
+									<div class="item_right">JPY 0.00</div>
+								</li>
+								<li role="option" tabindex="-1" class="item" aria-selected="false">
+									<div class="item_left">2</div>
+									<div class="item_right">EUR 0.00</div>
+								</li>
+								<li role="option" tabindex="-1" class="item" aria-selected="false">
+									<div class="item_left">3</div>
+									<div class="item_right">CNY 0.00</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 회차번호 선택 팝업 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

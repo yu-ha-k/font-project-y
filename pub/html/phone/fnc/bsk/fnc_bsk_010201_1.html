@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- step1 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3 cart_box">
+						<!--s: 상단문구  -->
+						<div class="group txt_page_desc">
+							<div class="txt_style ty2">고객님이 직접 선택한 '나의 관심상품'과 영업점에서 엄선한 '영업점 추천상품'을 제공합니다.</div>
+						</div>
+						<!--e: 상단문구  -->
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="true">나의 관심상품</button>
+							<button type="button" role="tab" aria-selected="false" class="active">영업점 추천상품</button>
+						</div>
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group mt_24">
+								<ul class="space_list_ty3 loan_list">
+									<li>
+										<div class="loan_info">
+											<a href="#" role="button" class="block">
+												<div class="badge_cont">
+													<span class="badge ty3 colorA2">정액적립식</span>
+													<span class="badge ty3 colorD3">NEW</span>
+													<span class="badge ty_img">
+														<img src="../../../../img/logo/ico_kdic.png" alt="kdic 보호금융상품 1인당 최고 5천만원" />
+													</span>
+												</div>
+												<div class="box">
+													<div class="txt_wrap">
+														<div class="tit">참! 좋은 기부적금</div>
+														<div class="txt">기부관련 확인서류 제출 시 우대 금리를 제공하는 기부 전용상품</div>
+														<div class="cate">
+															<span>인터넷</span>
+															<span>우대금리</span>
+															<span>비과세</span>
+														</div>
+														<div class="type">
+															<!-- 인터넷, 모바일, 영업점 경우에 따른 클래스 -->
+															<span class="web">인터넷</span>
+															<span class="mobile">모바일</span>
+															<span class="branch">영업점</span>
+														</div>
+													</div>
+													<div class="rate right">
+														<p class="txt">최고 연</p>
+														<p class="per">
+															<span class="num">2.10</span>
+															<span class="unit">%</span>
+														</p>
+														<span class="sub_txt fw_4">(12개월)</span>
+													</div>
+												</div>
+											</a>
+
+											<div class="btn_area ty1">
+												<button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(2)">가입하기</button>
+											</div>
+											<button class="btn_del" title="삭제"></button>
+										</div>
+									</li>
+									<li>
+										<!--s: 데이터 없을 때 -->
+										<div class="no_result_msg">
+											<div class="msg">검색 결과가 없습니다.</div>
+										</div>
+										<!--e: 데이터 없을 때 -->
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true">
+							<div class="group mt_24">
+								<ul class="space_list_ty3 loan_list">
+									<li>
+										<div class="loan_info">
+											<a href="#" role="button" class="block">
+												<div class="badge_cont">
+													<span class="badge ty3 colorA2">정액적립식</span>
+													<span class="badge ty3 colorD3">NEW</span>
+													<span class="badge ty_img">
+														<img src="../../../../img/logo/ico_kdic.png" alt="kdic 보호금융상품 1인당 최고 5천만원" />
+													</span>
+												</div>
+												<div class="box">
+													<div class="txt_wrap">
+														<div class="tit">참! 좋은 기부적금</div>
+														<div class="txt">기부관련 확인서류 제출 시 우대 금리를 제공하는 기부 전용상품</div>
+														<div class="cate">
+															<span>인터넷</span>
+															<span>우대금리</span>
+															<span>비과세</span>
+														</div>
+														<div class="type">
+															<!-- 인터넷, 모바일, 영업점 경우에 따른 클래스 -->
+															<span class="web">인터넷</span>
+															<span class="mobile">모바일</span>
+															<span class="branch">영업점</span>
+														</div>
+													</div>
+													<div class="rate right">
+														<p class="txt">최고 연</p>
+														<p class="per">
+															<span class="num">2.10</span>
+															<span class="unit">%</span>
+														</p>
+														<span class="sub_txt fw_4">(12개월)</span>
+													</div>
+												</div>
+											</a>
+
+											<div class="btn_area ty1">
+												<button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(2)">가입하기</button>
+											</div>
+											<button class="btn_del" title="삭제"></button>
+										</div>
+									</li>
+									<li>
+										<!--s: 데이터 없을 때 -->
+										<div class="no_result_msg">
+											<div class="msg">검색 결과가 없습니다.</div>
+										</div>
+										<!--e: 데이터 없을 때 -->
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

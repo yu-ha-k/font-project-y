@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">content</div>
+				</div>
+
+				<div class="bottom_popup_wrap active" id="auth_ars">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">ARS 인증안내</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('auth_ars');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="ars_common">
+								<div class="bg_box ty1">
+									<p class="txt_style ty3">보이스피싱 등 금융사기피해 예방을 위해 추가로 ARS 인증을 진행해 주세요.</p>
+								</div>
+								<div class="form_group">
+									<div class="dropdown ty2" role="button" title="전화번호 선택 목록 보기" onclick="comLayerPopUtil.open('phone_number_select');">
+										<div class="dropdown_text">00000000000</div>
+									</div>
+
+									<!-- s: 기본값 제공시 사용 -->
+									<div class="dropdown ty2 default">
+										<div class="dropdown_text">00000000000</div>
+									</div>
+
+									<!-- e: 기본값 제공시 사용 -->
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_4 c_2 r_2">ARS 인증 요청하기</button>
+									</div>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>다른 번호로 착신전환된 휴대폰으로는 ARS 인증을 할 수 없습니다.</li>
+								</ul>
+								<div class="ars_common_get">
+									<div class="ars_common_get_loading">
+										[ARS 인증 요청하기]를 눌러
+										<br />
+										인증번호를 받아 주세요
+									</div>
+								</div>
+								<div class="ars_common_get">
+									<div class="ars_common_get_text">
+										거래를 승인하시려면 ARS 전화에서
+										<br />
+										아래의 인증번호를 입력해 주세요
+									</div>
+									<div class="ars_common_get_center">
+										<strong class="tit">인증 번호</strong>
+										<strong class="num">10</strong>
+									</div>
+									<ul class="list_bullet ty1">
+										<li>ARS 전화에서 승인 처리가 완료되면 어래 확인 버튼을 눌러주세요.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="bottom_popup_footer ty2">
+							<button type="button" class="btn s_5 c_1 r_2">취소</button>
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- s: 전화번호 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="phone_number_select">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">전화번호 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('phone_number_select');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">01012345678</li>
+								<li role="option" tabindex="-1" aria-selected="false">01012345678</li>
+								<li role="option" tabindex="-1" aria-selected="false">01012345678</li>
+								<li role="option" tabindex="-1" aria-selected="false">01012345678</li>
+								<li role="option" tabindex="-1" aria-selected="false">01012345678</li>
+								<li role="option" tabindex="-1" aria-selected="false">01012345678</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전화번호 선택 팝업 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

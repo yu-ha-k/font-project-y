@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 사업자용 금융인증서 > 로그인방법 선택 -->
+				<!-- s: 전체팝업 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">로그인방법을 선택해 주세요</div>
+								</div>
+								<div class="login_certs">
+									<div class="login_certs_title">사업자용 인증서</div>
+									<div class="login_certs_item">
+										<div class="select_cert">
+											<button type="button" class="btn btn_cert btn_cert_ibk btn_cert_cloud_small" onclick="uf_goStep(51);"><span class="text">IBK인증서</span></button>
+											<button type="button" class="btn btn_cert btn_cert_public" onclick="uf_goStep(3);"><span class="text">공동인증서</span></button>
+											<button type="button" class="btn btn_cert btn_cert_cloud btn_cert_cloud_small" onclick="uf_goStep(5);"><span class="text">금융인증서</span></button>
+										</div>
+									</div>
+
+									<div class="login_certs_info">
+										<div class="tooltip_box">
+											<div class="txt_style ty6">공동인증서와 금융인증서의 차이가 궁금하신가요?</div>
+											<div class="tooltip_wrap ty1">
+												<button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+												<div class="tooltip_wrap_container" role="tooltip">
+													<div class="inner">금융인증서는 숫자 6자리 비밀번호, 공동인증서는 영문/숫자 등을 포함하여 10자리 이상 비밀번호를 사용합니다.</div>
+													<button type="button" class="tooltip_close">도움말 닫기</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<hr aria-hidden="true" class="divider ty2" />
+
+									<div class="login_certs_title">새로운 기능을 소개할게요.</div>
+									<div class="bg_box ty3">
+										<div class="new_service_intro">
+											<div class="intro_box">
+												<div class="tit">개인인증서로 기업뱅킹을 이용해 보세요!</div>
+												<p class="desc">
+													인증서 발급비용 NO
+													<br />
+													한 개의 인증서로 여러 사업장을 동시에
+												</p>
+											</div>
+
+											<hr aria-hidden="true" class="divider ty3" />
+
+											<div class="step_top">1단계</div>
+											<div class="btn_area ty4">
+												<button type="button" class="btn s_2 c_1 r_3">개인인증서 연동서비스를 알아볼게요!</button>
+											</div>
+											<div class="step_top">2단계</div>
+											<div class="certs_intro_box">
+												<div class="login_certs_title">개인용 인증서</div>
+												<div class="login_certs_item">
+													<div class="select_cert">
+														<button type="button" class="btn btn_cert btn_cert_public"><span class="text" onclick="uf_goStep(7);">공동인증서</span></button>
+														<button type="button" class="btn btn_cert btn_cert_cloud btn_cert_cloud_small" onclick="uf_goStep(52);"><span class="text">금융인증서</span></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="bottom_btn_area ty4">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(8);">로그인방법 관리</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 사업자용 금융인증서 > 로그인방법 선택 -->
+
+				<!-- s: 사업자용 금융인증서 > 공동인증서 선택 -->
+				<!-- s: 전체팝업 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">사업자용 금융인증서</div>
+									<p class="desc">공동인증서를 선택해 로그인해 주세요</p>
+								</div>
+								<ul class="login_cert_select">
+									<li>
+										<div class="cert_item_wrap">
+											<div class="cert_item" id="chk99_content">
+												<div class="name">홍길동</div>
+												<div class="info_wrap">
+													<div class="info">
+														<div class="tit">용도/발급기관</div>
+														<div class="txt">은행개인&middot;금융결재원</div>
+													</div>
+													<div class="info">
+														<div class="tit">만료일</div>
+														<div class="txt">2017.06.17</div>
+													</div>
+												</div>
+												<div class="type_wrap">
+													<a href="#" role="button" class="type auth">간편비밀번호</a>
+													<!-- <a href="#" role="button" class="type fingerprint">지문</a> -->
+													<a href="#" role="button" class="type pattern">패턴</a>
+													<!-- <a href="#" role="button" class="type face">얼굴인식</a> -->
+													<a href="#" role="button" class="type bio">바이오</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cert_item_wrap">
+											<div class="cert_item" id="chk100_content">
+												<div class="name">홍길동</div>
+												<div class="info_wrap">
+													<div class="info">
+														<div class="tit">용도/발급기관</div>
+														<div class="txt">은행개인&middot;금융결재원</div>
+													</div>
+													<div class="info">
+														<div class="tit">만료일</div>
+														<div class="txt">2017.06.17</div>
+													</div>
+												</div>
+												<div class="type_wrap">
+													<!-- <a href="#" role="button" class="type auth">간편비밀번호</a> -->
+													<!-- <a href="#" role="button" class="type fingerprint">지문</a> -->
+													<a href="#" role="button" class="type pattern">패턴</a>
+													<a href="#" role="button" class="type bio">바이오</a>
+													<!-- <a href="#" role="button" class="type face">얼굴인식</a> -->
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty5">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 가져오기</button>
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 발급/재발급하기</button>
+								</div>
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(1)">다른 로그인방법 선택하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 사업자용 금융인증서 > 공동인증서 선택 -->
+
+				<!-- s: 사업자용 금융인증서 > 공동인증서 선택 -->
+				<!-- s: 전체팝업 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">사업자용 공동인증서</div>
+									<p class="desc">공동인증서를 선택해 로그인해 주세요</p>
+								</div>
+								<ul class="login_cert_select">
+									<li>
+										<div class="cert_item_wrap">
+											<div class="cert_item" id="chk98_content">
+												<div class="name">홍길동</div>
+												<div class="info_wrap">
+													<div class="info">
+														<div class="tit">용도/발급기관</div>
+														<div class="txt">은행개인&middot;금융결재원</div>
+													</div>
+													<div class="info">
+														<div class="tit">만료일</div>
+														<div class="txt">
+															2017.06.17
+															<span class="color ty4">(만료 15일전)</span>
+														</div>
+													</div>
+												</div>
+												<div class="type_wrap">
+													<a href="#" role="button" class="type auth">간편비밀번호</a>
+													<!-- <a href="#" role="button" class="type fingerprint">지문</a> -->
+													<a href="#" role="button" class="type pattern">패턴</a>
+													<!-- <a href="#" role="button" class="type face">얼굴인식</a> -->
+													<a href="#" role="button" class="type bio">바이오</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cert_item_wrap">
+											<div class="cert_item disabled" id="chk97_content">
+												<div class="badge_cont">
+													<span class="badge ty3 colorB1">만료</span>
+												</div>
+												<div class="name">홍길동</div>
+												<div class="info_wrap">
+													<div class="info">
+														<div class="tit">용도/발급기관</div>
+														<div class="txt">은행개인&middot;금융결재원</div>
+													</div>
+													<div class="info">
+														<div class="tit">만료일</div>
+														<div class="txt">2017.06.17</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty5">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 link_ty1" onclick="comLayerPopUtil.open('popup7')">인증서 가져오기</button>
+
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 발급/재발급하기</button>
+								</div>
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(1)">다른 로그인방법 선택하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 사업자용 금융인증서 > 공동인증서 선택 -->
+
+				<!-- s: 사업자용 금융인증서 > 공동인증서 없음 -->
+				<!-- s: 전체팝업 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">사업자용 공동인증서</div>
+								</div>
+								<div class="ico_txt ty1 lottie_case1">
+									<div class="lottie_box">
+										<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+									</div>
+									등록된 공동인증서가 없습니다.
+									<div class="note_cmt">공동인증서를 발급받으시거나 타행/타기관 인증서 등록 후 이용해 주세요.</div>
+								</div>
+
+								<!-- s: 사업자용 노출 -->
+								<div class="bg_box ty3">
+									<div class="txt_style ty14 fw_6">기존의 i-ONE뱅크 기업 앱에서 공동인증서를 이용하는 고객님이신가요?</div>
+									<div class="btn_area ty4">
+										<button type="button" class="btn s_2 c_1 r_3">기존앱에서 가져오기</button>
+									</div>
+								</div>
+								<!-- e: 사업자용 노출 -->
+
+								<!-- s: 25-01-10 수정 -->
+								<!-- s: 개인용 노출 -->
+								<div class="bg_box ty3">
+									<div class="txt_style ty14 fw_6">개인용 금융인증서 이용 안내</div>
+									<ul class="list_bullet ty1 mt_8">
+										<li>IBK기업은행 개인뱅킹에서 인증서를 발급받으세요.</li>
+										<li>이미 다른 기관에서 발급받은 인증서가 있다면 IBK기업은행 개인뱅킹에서 [타행/타기관 인증서등록] 후 이용해 주세요.</li>
+									</ul>
+									<div class="bullet_txt ty4 mt_12">i-ONE뱅크 개인 앱</div>
+									<ul class="list_bullet ty1 mt_8">
+										<li>
+											인증센터 &gt; 공동인증서 &gt;
+											<span class="fw_7">인증서발급/재발급</span>
+										</li>
+										<li>
+											인증센터 &gt; 공동인증서 &gt;
+											<span class="fw_7">타행/타기관인증서등록</span>
+										</li>
+									</ul>
+								</div>
+								<!-- e: 개인용 노출 -->
+								<!-- e: 25-01-10 수정 -->
+							</div>
+						</div>
+						<div class="bottom_btn_area ty5">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 가져오기</button>
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 발급/재발급하기</button>
+								</div>
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(1)">다른 로그인방법 선택하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 사업자용 금융인증서 > 공동인증서 없음 -->
+
+				<!-- s: 로그인-기업 금융인증서 -->
+				<!-- s: 전체팝업 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">사업자용 금융인증서</div>
+									<p class="desc">[로그인]을 눌러 주세요</p>
+								</div>
+
+								<div class="login_wrap_business_login enterprise_finance">
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_5 c_3 r_2">로그인</button>
+									</div>
+									<div class="btn_area center">
+										<button type="button" class="btn link_ty1">인증센터 바로가기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty4">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(1)">다른 로그인방법 선택하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 로그인-기업 금융인증서 -->
+
+				<!-- s: 로그인-기업 IBK인증서 -->
+				<!-- s: 전체팝업 -->
+				<div id="step51" data-jx-step-no="51" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">사업자용 IBK인증서</div>
+									<p class="desc">[로그인]을 눌러 주세요</p>
+								</div>
+
+								<div class="login_wrap_business_login enterprise_ibk">
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_5 c_3 r_2">로그인</button>
+									</div>
+									<div class="btn_area center">
+										<button type="button" class="btn link_ty1">인증센터 바로가기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty4">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(1)">다른 로그인방법 선택하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 로그인-기업 IBK인증서 -->
+
+				<!-- s: 로그인-개인 금융인증서 -->
+				<!-- s: 전체팝업 -->
+				<div id="step52" data-jx-step-no="52" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">개인용 금융인증서</div>
+									<p class="desc">[로그인]을 눌러 주세요</p>
+								</div>
+
+								<div class="login_wrap_business_login individual_finance">
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_5 c_3 r_2">로그인</button>
+									</div>
+									<div class="btn_area center">
+										<button type="button" class="btn link_ty1">인증센터 바로가기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty4">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(1)">다른 로그인방법 선택하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 로그인-개인 금융인증서 -->
+
+				<!-- s: 개인용 공동인증서 > 공동인증서 선택 -->
+				<!-- s: 전체팝업 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">개인용 공동인증서</div>
+									<p class="desc">공동인증서를 선택해 로그인해 주세요</p>
+								</div>
+
+								<ul class="login_cert_select">
+									<li>
+										<div class="cert_item_wrap">
+											<div class="cert_item" id="chk96_content">
+												<div class="name">홍길동</div>
+												<div class="info_wrap">
+													<div class="info">
+														<div class="tit">용도/발급기관</div>
+														<div class="txt">은행개인&middot;금융결재원</div>
+													</div>
+													<div class="info">
+														<div class="tit">만료일</div>
+														<div class="txt">2017-06-17</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty5">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 가져오기</button>
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 발급/재발급하기</button>
+								</div>
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(1)">다른 로그인방법 선택하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 개인용 공동인증서 > 공동인증서 선택 -->
+
+				<!-- s: 개인용 공동인증서 > 공동인증서 선택 -->
+				<!-- s: 전체팝업 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">개인용 공동인증서</div>
+									<p class="desc">공동인증서를 선택해 로그인해 주세요</p>
+								</div>
+
+								<ul class="login_cert_select">
+									<li>
+										<div class="cert_item_wrap">
+											<div class="cert_item" id="chk95_content">
+												<div class="name">홍길동</div>
+												<div class="info_wrap">
+													<div class="info">
+														<div class="tit">용도/발급기관</div>
+														<div class="txt">은행개인&middot;금융결재원</div>
+													</div>
+													<div class="info">
+														<div class="tit">만료일</div>
+														<div class="txt">2017.06.17</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cert_item_wrap">
+											<div class="cert_item disabled" id="chk94_content">
+												<div class="badge_cont">
+													<span class="badge ty3 colorB1">만료</span>
+												</div>
+												<div class="name">홍길동</div>
+												<div class="info_wrap">
+													<div class="info">
+														<div class="tit">용도/발급기관</div>
+														<div class="txt">은행개인&middot;금융결재원</div>
+													</div>
+													<div class="info">
+														<div class="tit">만료일</div>
+														<div class="txt">2017.06.17</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area ty5">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 가져오기</button>
+									<button type="button" class="btn ty_txt2 link_ty1">인증서 발급/재발급하기</button>
+								</div>
+								<div class="btn_area tyTxt">
+									<button type="button" class="btn ty_txt2 line_bttm" onclick="uf_goStep(1)">다른 로그인방법 선택하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 개인용 공동인증서 > 공동인증서 선택 -->
+
+				<!-- s: 기본 로그인방법 관리 -->
+				<div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">
+										기본 로그인방법을
+										<br />
+										선택해 주세요
+									</div>
+								</div>
+
+								<ul class="btn_area clickable ty5" role="radiogroup">
+									<li>
+										<button type="button" role="radio" aria-checked="true" class="active">
+											<span class="text">사업자용 금융인증서</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">개인용 공동인증서</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">사업자용 금융인증서</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">개인용 금융인증서</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">IBK 인증서</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">패턴</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">바이오인증</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty2">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(9)">저장</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 기본 로그인방법 관리 -->
+
+				<!-- s: 사업장 선택 -->
+				<div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="login_wrap">
+								<div class="login_wrap_header">
+									<div class="title">
+										로그인할 사업장을
+										<br />
+										선택해 주세요
+									</div>
+								</div>
+								<ul class="btn_area clickable ty5" role="radiogroup">
+									<li>
+										<button type="button" role="radio" aria-checked="true" class="active">
+											<span class="text">
+												<span class="sub_text1">교촌치킨 송파점</span>
+												<span class="sub_text2">123-45-*****</span>
+											</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">
+												<span class="sub_text1">교촌치킨 송파점</span>
+												<span class="sub_text2">123-45-*****</span>
+											</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">
+												<span class="sub_text1">교촌치킨 송파점</span>
+												<span class="sub_text2">123-45-*****</span>
+											</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">
+												<span class="sub_text1">교촌치킨 송파점</span>
+												<span class="sub_text2">123-45-*****</span>
+											</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1)">로그인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사업장 선택 -->
+
+				<!-- s: 사업장 전환 -->
+				<div id="step10" data-jx-step-no="10" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="use_trans_select">
+								<div class="icon_step_list ty1 business_trans_target">
+									<div class="order1">
+										<div class="inner">
+											<p class="item">
+												<span class="tit">개인뱅킹 이용하기</span>
+												<span class="desc">내폰을 등록하고 개인 스마트뱅킹에 편리하게 로그인하세요.</span>
+											</p>
+										</div>
+										<div class="btn_area ty1">
+											<!-- s: 개인뱅킹 미 가입인 경우 -->
+											<button type="button" class="btn s_4 c_2 r_2 entry"><span class="text">i-ONE Bank 개인</span></button>
+											<!-- e: 개인뱅킹 미 가입인 경우 -->
+											<!-- s: 그 외의 경우 -->
+											<!-- <button type="button" class="btn s_4 c_2 r_2"><span class="text">내폰등록서비스 다시 가입하기</span></button> -->
+											<!-- e: 그 외의 경우 -->
+										</div>
+									</div>
+									<div class="order2">
+										<div class="inner">
+											<p class="item">
+												<span class="tit">사업장 전환하기</span>
+												<span class="desc">개인인증서를 연동하고 다른 사업장으로 간편하게 전환하세요.</span>
+											</p>
+										</div>
+										<!-- s: 목록 Case -->
+										<div class="dropdown ty2" role="button" title="전환할 사업장 선택 목록 보기" onclick="comLayerPopUtil.open('trans_business');">
+											<div class="dropdown_text">잠실 1호 사업장(현재 로그인)</div>
+										</div>
+
+										<!-- e: 목록 Case -->
+
+										<!-- s: 버튼 Case -->
+										<!-- <div class="btn_area ty1">
+                      <button type="button" class="btn s_4 c_2 r_2"><span class="text">서비스 가입하기</span></button>
+                    </div> -->
+										<!-- e: 버튼 Case -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사업장 전환 -->
+
+				<!-- s: 사업장 전환 사용불가(서비스가입 필요) -->
+				<div id="step11" data-jx-step-no="11" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty2">다른 사업장으로 간편하게 전환하세요</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty4 full" />
+
+						<div class="group">
+							<div class="no_result_msg ty1 mt_40 pt_0 pb_0">
+								<div class="msg">
+									개인인증서 연동
+									<br />
+									서비스 가입이 필요해요
+								</div>
+								<div class="ps">
+									개인인증서 연동 서비스에 가입해보세요
+									<br />
+									편리하게 기업뱅킹도 이용하고
+									<br />
+									간편하게 사업장 전환이 가능해요.
+								</div>
+							</div>
+							<div class="btn_area ty4 center mt_24">
+								<button type="button" class="btn s_2 c_1 r_3">서비스 가입하기</button>
+							</div>
+						</div>
+
+						<div class="bottom_btn_area ibk">
+							<a href="#" role="button" class="txt_wrap" onclick="comLayerPopUtil.open('popup3');">
+								<div class="ibk_tit">i-ONE뱅크 개인 이용하기</div>
+								<div class="ibk_txt">
+									내폰 등록하고 개인 스마트뱅킹으로
+									<br />
+									편리하게 자동 로그인 하세요
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사업장 전환 사용불가(서비스가입 필요) -->
+
+				<!-- s: 사업장 전환 사용불가(사업장 없음) -->
+				<div id="step12" data-jx-step-no="12" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty2">다른 사업장으로 간편하게 전환하세요</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty4 full" />
+
+						<div class="group">
+							<div class="no_result_msg ty1 mt_40 pt_0 pb_0">
+								<div class="msg">
+									전환할 수 있는
+									<br />
+									사업장이 없어요
+								</div>
+								<div class="ps">
+									다른 사업장을 등록하고
+									<br />
+									간편하게 사업장 전환하세요.
+								</div>
+							</div>
+							<div class="btn_area ty4 center mt_24">
+								<button type="button" class="btn s_2 c_1 r_3">사업장 등록하기</button>
+							</div>
+						</div>
+
+						<div class="bottom_btn_area ibk">
+							<a href="#" role="button" class="txt_wrap" onclick="comLayerPopUtil.open('popup3');">
+								<div class="ibk_tit">i-ONE뱅크 개인 이용하기</div>
+								<div class="ibk_txt">
+									내폰 등록하고 개인 스마트뱅킹으로
+									<br />
+									편리하게 자동 로그인 하세요
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사업장 전환 사용불가(사업장 없음) -->
+
+				<!-- s: 사업장 전환 사용불가(개인 인증서 로그인) -->
+				<div id="step13" data-jx-step-no="13" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="txt_style ty2">다른 사업장으로 간편하게 전환하세요</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty4 full" />
+
+						<div class="group">
+							<div class="no_result_msg ty1 mt_40 pt_0 pb_0">
+								<div class="msg">
+									개인 인증서로
+									<br />
+									로그인 해주세요
+								</div>
+								<div class="ps">
+									기업용 인증서 로그아웃 후
+									<br />
+									개인 인증서로 로그인 해주세요.
+								</div>
+							</div>
+							<div class="btn_area ty4 center mt_24">
+								<button type="button" class="btn s_2 c_1 r_3">개인인증서로 로그인하기</button>
+							</div>
+						</div>
+						<div class="bottom_btn_area ibk">
+							<a href="#" role="button" class="txt_wrap" onclick="comLayerPopUtil.open('popup3');">
+								<div class="ibk_tit">i-ONE뱅크 개인 이용하기</div>
+								<div class="ibk_txt">
+									내폰 등록하고 개인 스마트뱅킹으로
+									<br />
+									편리하게 자동 로그인 하세요
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- e: 사업장 전환 사용불가(개인 인증서 로그인) -->
+
+				<!-- s: popup -->
+				<!-- s: 개인용 공동인증서 이용 안내 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">개인용 공동인증서 이용 안내</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<!-- s: 25-01-10 수정 -->
+							<ul class="list_bullet ty4">
+								<li>개인용 공동인증서로 로그인 하려면 IBK기업은행 개인뱅킹에서 인증서를 발급받으세요.</li>
+								<li>이미 다른 기관에서 발급받은 인증서가 있다면 IBK기업은행 개인뱅킹에서 [타행/타기관 인증서등록] 후 이용해 주세요</li>
+							</ul>
+							<div class="bullet_txt ty4 mt_32">i-ONE뱅크 개인 앱</div>
+							<ul class="list_bullet ty4 mt_12">
+								<span class="fw7"></span>
+								<li>
+									i-ONE뱅크 개인 앱 &gt; 인증센터 &gt; 공동인증서 &gt;
+									<span class="fw_7">인증서발급/재발급</span>
+									또는
+									<span class="fw_7">타행/타기관인증서등록</span>
+								</li>
+							</ul>
+							<!-- e: 25-01-10 수정 -->
+						</div>
+						<div class="bottom_popup_footer ty4">
+							<button type="button" class="btn s_5 c_3 r_2">개인용 공동인증서로 로그인</button>
+							<div class="no_more_area">
+								<button type="button" class="btn ty_txt5">다시보지 않기</button>
+								<button type="button" class="btn ty_txt5" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 개인용 공동인증서 이용 안내 -->
+
+				<!-- s: 개인용 금융인증서 이용 안내 -->
+				<!-- s: 25-01-10 수정 -->
+				<div class="bottom_popup_wrap" id="popup11">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">개인용 금융인증서 이용 안내</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup11');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="list_bullet ty4">
+								<li>개인용 금융인증서로 로그인 하려면 IBK기업은행 개인뱅킹에서 인증서를 발급받으세요.</li>
+								<li>이미 다른 기관에서 발급받은 인증서가 있다면 IBK기업은행 개인뱅킹에서 [타행/타기관 인증서등록] 후 이용해 주세요</li>
+							</ul>
+							<div class="bullet_txt ty4 mt_32">i-ONE뱅크 개인 앱</div>
+							<ul class="list_bullet ty4 mt_12">
+								<span class="fw7"></span>
+								<li>
+									i-ONE뱅크 개인 앱 &gt; 인증센터 &gt; 금융인증서 &gt;
+									<span class="fw_7">인증서발급/재발급</span>
+									또는
+									<span class="fw_7">타행/타기관인증서등록</span>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom_popup_footer ty4">
+							<button type="button" class="btn s_5 c_3 r_2">개인용 금융인증서로 로그인</button>
+							<div class="no_more_area">
+								<button type="button" class="btn ty_txt5">다시보지 않기</button>
+								<button type="button" class="btn ty_txt5" onclick="comLayerPopUtil.close('popup11');">닫기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 25-01-10 수정 -->
+				<!-- e: 개인용 금융인증서 이용 안내 -->
+
+				<div class="bottom_popup_wrap" id="popup2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">개인 앱 로그인 안내</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="individual_app_login_info"></div>
+							<div class="popup_msg_txt1 mt_16">
+								i-ONE뱅크 개인 스마트 앱이
+								<br />
+								실행되면 반드시
+								<span class="color ty3">모바일 인증서</span>
+								또는
+								<br />
+								<span class="color ty3">IBK 인증서</span>
+								로 로그인하세요
+							</div>
+							<div class="popup_msg_txt5 ta_c mt_16">
+								로그인 후 기업 스마트 이동 안내 화면이 나오면
+								<span class="color ty3">"이동"</span>
+								버튼을 터치하세요
+							</div>
+						</div>
+						<div class="bottom_popup_footer ty2">
+							<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.close('popup2');">취소</button>
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup2');">개인 스마트 이동</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bottom_popup_wrap" id="popup3">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">i-ONE뱅크 개인 이용하기</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup3');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<div class="popup_msg_txt1">개인뱅킹 가입이 필요해요</div>
+							<div class="popup_msg_txt5 ta_c mt_16">
+								스마트 이동 기능을 사용하고
+								<br />
+								편리하게 개인뱅킹을 이용하세요.
+							</div>
+						</div>
+						<div class="bottom_popup_footer ty2">
+							<div class="btn_area">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup3');">개인뱅킹 가입하기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popup4">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">i-ONE뱅크 개인 이용하기</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup4');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<div class="popup_msg_txt1">서비스 가입이 필요해요</div>
+							<div class="popup_msg_txt5 ta_c mt_16">
+								스마트 이동 기능을 사용하고
+								<br />
+								편리하게 개인뱅킹을 이용하세요.
+							</div>
+						</div>
+						<div class="bottom_popup_footer ty2">
+							<div class="btn_area">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup4');">서비스 가입하기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popup5">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">i-ONE뱅크 개인 이용하기</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup5');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<div class="popup_msg_txt1">가입한 스마트폰이 아니에요</div>
+							<div class="popup_msg_txt5 ta_c mt_16">
+								스마트 이동 기능을 사용하고
+								<br />
+								편리하게 개인뱅킹을 이용하세요.
+							</div>
+						</div>
+						<div class="bottom_popup_footer ty2">
+							<div class="btn_area">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup5');">서비스 다시 가입하기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popup6">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">i-ONE뱅크 개인 이용하기</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup6');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<div class="popup_msg_txt1">개인 스마트 이동기능을 켜주세요</div>
+							<div class="popup_msg_txt5 ta_c mt_16">
+								스마트 이동 기능을 사용하고
+								<br />
+								편리하게 개인뱅킹을 이용하세요.
+							</div>
+						</div>
+						<div class="bottom_popup_footer ty2">
+							<div class="btn_area">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup6');">서비스 설정하기</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bottom_popup_wrap" id="trans_business">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">전환할 사업장 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('trans_business');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="acount_select_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_bottom">잠실 1사업장(현재 로그인)</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">잠실 2사업장</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">을지로 2사업장</div>
+									</div>
+								</li>
+								<li class="acount_select_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">을지로 4사업장</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- s: 인증서 가져오기 팝업 -->
+				<div class="bottom_popup_wrap" id="popup7">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">인증서를 어디에서 가져오시겠어요?</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup7');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<p class="txt_style ty11">IBK기업은행 기업인터넷뱅킹에서 가지고 오려면 [PC에서 가져오기]를, 다른 스마트폰이나 앱에서 가지고 오려면 [스마트폰에서 가져오기]를 이용해 주세요</p>
+
+							<ul class="cert_ctr mt_16">
+								<li>
+									<a href="#" role="button">
+										<div class="icon import_pc"></div>
+										<div class="txt">
+											PC에서
+											<br />
+											가져오기
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" role="button">
+										<div class="icon import_smart"></div>
+										<div class="txt">
+											스마트폰에서
+											<br />
+											가져오기
+										</div>
+									</a>
+								</li>
+							</ul>
+
+							<ul class="list_refer_mark point mt_12">
+								<li>기존의 i-ONE뱅크 기업 앱에서 공동인증서를 이용하시는 고객님은 새로운 앱으로 인증서를 가져오셔야 합니다. [스마트폰에서 가져오기]로 인증서가 설치된 기존 앱에 인증번호만 입력하면 손쉽게 복사해올 수 있습니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 인증서 가져오기 팝업 -->
+
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

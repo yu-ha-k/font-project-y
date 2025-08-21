@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 	인증센터 간편인증 메인 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="5" class="container_wrap">
+				<!-- s: 메인 -->
+
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<a href="#" role="button">
+								<img src="../../../../img/cmc/img_mycert.png" alt="인증서 추천부터 발급까지 한 번에 내 금융업무에 딱 맞는 인증서를 찾아드려요 바로가기" />
+							</a>
+						</div>
+						<div class="group mt_24">
+							<ul class="cert_select">
+								<li>
+									<a href="#" role="button">
+										<div class="icon ibk"></div>
+										<div class="txt_wrap">
+											<div class="tit">IBK 인증서</div>
+											<div class="txt">IBK기업은행이 인증하는 안전하고 편리한 인증서</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" role="button">
+										<div class="icon finance"></div>
+										<div class="txt_wrap">
+											<div class="tit">금융인증서</div>
+											<div class="txt">클라우드에 보관하는 인증서</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" role="button">
+										<div class="icon common"></div>
+										<div class="txt_wrap">
+											<div class="tit">공동인증서</div>
+											<div class="txt">인터넷/PC에 저장하는 인증서</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" role="button" onclick="uf_goStep(5);">
+										<div class="icon personal"></div>
+										<div class="txt_wrap">
+											<div class="tit">개인인증서 연동</div>
+											<div class="txt">i-ONE뱅크 개인뱅킹에 등록된 개인인증서 연동</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" role="button">
+										<div class="icon digital_otp"></div>
+										<div class="txt_wrap">
+											<div class="tit">디지털OTP</div>
+											<div class="txt">보안이 더욱 편리한 인증서</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<div class="bg_box ty1 mt_24">
+								<ul class="list_bullet ty1">
+									<li>기존에 발급한 공동인증서 또는 금융인증서가 있어도 IBK인증서를 추가 발급할 수 있어요.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 메인 -->
+
+				<!-- s: 간편인증 메인 (미등록) -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 간편인증수단 등록 -->
+						<div class="group">
+							<div class="cert_regist_box">
+								<a href="#" role="button" onclick="uf_goStep(6);">
+									<!-- s: 미등록 Case -->
+									<div class="result">
+										<div class="alert">
+											간편인증수단이 등록된
+											<br />
+											공동인증서가 없어요
+										</div>
+									</div>
+									<!-- e: 미등록 Case -->
+									<!-- s: 다른 공동인증서 등록 Case -->
+									<!-- 
+                  <div class="result">
+                    <div class="alert">
+                      로그인한 기기에<br>
+                      다른 공동인증서가 등록되어있어요.
+                    </div>
+                  </div>
+                   -->
+									<!-- e: 다른 공동인증서 등록 Case -->
+
+									<div class="click_state">
+										<span class="txt plus">간편인증수단 등록하기</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- e: 간편인증수단 등록 -->
+
+						<div class="group mt_40">
+							<div class="title_text ty1">
+								관리자용 공동인증서를
+								<br />
+								쉽고 간편하게 이용해 보세요
+							</div>
+							<p class="txt_style ty11">공동인증서 비밀번호 대신 간편인증수단(패턴, 지문, 얼굴)을 등록할 수 있어요.</p>
+							<ul class="cert_menu mt_40">
+								<li>
+									<div class="icon ico_patten"></div>
+									<span class="txt">패턴</span>
+								</li>
+
+								<li>
+									<div class="icon ico_fgprint"></div>
+									<span class="txt">
+										바이오인증
+										<br />
+										(지문)
+									</span>
+								</li>
+								<li>
+									<div class="icon ico_faceid"></div>
+									<span class="txt">
+										바이오인증
+										<br />
+										(FACE ID)
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="group mt_40">
+							<div class="title_text ty1">
+								i-ONE Bank에서 거래 시 이용할
+								<br />
+								6자리 간편비밀번호를 설정할 수 있어요.
+							</div>
+
+							<img src="../../../../img/cmc/img_cmc_sim_010100_1_04.png" alt="6자리 간편비밀번호 입력 예시" />
+						</div>
+
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>다른 공동인증서로 등록/해지하려면 해당 공동인증서로 다시 로그인해 주세요.</li>
+											<li>기존에 등록된 공동인증서가 있을 경우 기존 인증서는 등록 해제됩니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 간편인증 메인 (미등록) -->
+
+				<!-- s: 간편인증 메인 (공동인증서 등록) -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 간편인증수단 등록 -->
+						<div class="group">
+							<!--공동인증서 등록 시, common 수정 -->
+							<div class="cert_regist_box common">
+								<div class="result">
+									<div class="cert_card">
+										<div class="badge_cont">
+											<span class="badge ty3 colorETC6 ty_r">사업자용 금융결제원</span>
+										</div>
+										<span class="tit">
+											IBK기업은행 공동인증서
+											<br />
+											(최대50자)
+										</span>
+										<span class="date">만료일 2024.12.06</span>
+
+										<div class="txt_style ty14 mt_8">등록된 간편인증수단</div>
+										<ul class="auth_means">
+											<li class="item">
+												<div class="icon pin"></div>
+												<span class="tit">간편비밀번호</span>
+											</li>
+											<li class="item">
+												<div class="icon pattern"></div>
+												<span class="tit">패턴</span>
+											</li>
+											<li class="item">
+												<div class="icon bio"></div>
+												<span class="tit">바이오</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<a href="#" role="button">
+									<div class="click_state">
+										<span class="txt minus">해지하기</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- e: 간편인증수단 등록 -->
+
+						<div class="cert_setting_list">
+							<hr aria-hidden="true" class="divider ty1" />
+							<div class="group">
+								<!-- <div class="title_text ty1">PIN 관리</div> -->
+								<ul class="space_list_ty7">
+									<li>
+										<a href="#" role="button" class="block">
+											<div class="link_item_ty2 link">
+												<div class="inner">
+													<div class="link_item_left">
+														<div class="item_text5">간편비밀번호 변경하기</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block">
+											<div class="link_item_ty2 link">
+												<div class="inner">
+													<div class="link_item_left">
+														<div class="item_text5">간편비밀번호 오류횟수/재설정하기</div>
+													</div>
+													<div class="link_item_right">
+														<div class="item_text5">0/5</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<hr aria-hidden="true" class="divider ty1" />
+							<div class="group">
+								<!-- <div class="title_text ty1">패턴 관리</div> -->
+								<ul class="space_list_ty7">
+									<li>
+										<a href="#" role="button" class="block">
+											<div class="link_item_ty2 link">
+												<div class="inner">
+													<div class="link_item_left">
+														<div class="item_text5">패턴 변경하기</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block">
+											<div class="link_item_ty2 link">
+												<div class="inner">
+													<div class="link_item_left">
+														<div class="item_text5">패턴 오류횟수/재설정하기</div>
+													</div>
+													<div class="link_item_right">
+														<div class="item_text5 color ty4">5/5</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="link_item_ty2">
+											<div class="inner">
+												<div class="link_item_left">
+													<div class="item_text5">입력한 패턴 선 숨기기</div>
+												</div>
+												<div class="link_item_right">
+													<label class="checkbox_switch">
+														<input type="checkbox" name="" id="" />
+														<i></i>
+													</label>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<hr aria-hidden="true" class="divider ty1" />
+							<div class="group">
+								<!-- <div class="title_text ty1">바이오인증 관리</div> -->
+								<ul class="space_list_ty7">
+									<li>
+										<div class="link_item_ty2">
+											<div class="inner">
+												<div class="link_item_left">
+													<div class="item_text5">바이오 정보 등록하기</div>
+												</div>
+												<div class="link_item_right">
+													<label class="checkbox_switch">
+														<input type="checkbox" name="" id="" />
+														<i></i>
+													</label>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<a href="#" role="button" class="block">
+											<div class="link_item_ty2 link">
+												<div class="inner">
+													<div class="link_item_left">
+														<div class="item_text5">바이오인증 오류횟수/재설정하기</div>
+													</div>
+													<div class="link_item_right">
+														<div class="item_text5">5/5</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>다른 공동인증서로 등록/해지하려면 해당 공동인증서로 다시 로그인해 주세요.</li>
+											<li>기존에 등록된 공동인증서가 있을 경우 기존 인증서는 등록 해제됩니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 간편인증 메인 (공동인증서 등록) -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

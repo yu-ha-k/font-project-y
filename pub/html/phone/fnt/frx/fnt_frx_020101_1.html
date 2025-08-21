@@ -1,0 +1,2346 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 정보 입력 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3 korea_currency_trans">
+						<!-- s: 자주 사용하는 송금 -->
+						<div class="group">
+							<div class="title_text ty1">정보 입력</div>
+							<div class="form_group">
+								<div class="input_label ty1 with_sub_txt">
+									<div>
+										자주 사용하는 송금
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<a href="#" class="btn ty_txt3 line_bttm" onclick="uf_goStep(91)">유의사항</a>
+								</div>
+
+								<div class="comp_wrap with_btn">
+									<div class="dropdown ty2" role="button" title="자주 사용하는 송금 목록 보기" onclick="comLayerPopUtil.open('optlist1');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_4 c_1 r_2" onclick="comLayerPopUtil.open('optlist2');">수정</button>
+										<button type="button" class="btn s_4 c_1 r_2">삭제</button>
+										<button type="button" class="btn s_4 c_2 r_2" onclick="comLayerPopUtil.open('optlist2');">등록</button>
+									</div>
+								</div>
+							</div>
+
+							<ul class="list_bullet ty1 mt_10">
+								<li>자주 사용하는 송금 선택 시 해당 데이터가 조회됩니다.</li>
+								<li>수정은 조회 후 가능합니다.</li>
+							</ul>
+						</div>
+						<!-- e: 자주 사용하는 송금 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="title_text ty1">보내는 분</div>
+							<div class="form_group">
+								<div class="input_label ty2">
+									송금용도
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">당행이체(환전포함)</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">타행이체</span></button>
+								</div>
+								<div class="input_label ty2">
+									영문이름
+									<span class="ess_text ty1">필수</span>
+								</div>
+
+								<div class="input">
+									<input type="text" name="" id="" title="영문이름 입력" placeholder="보내는 분 영문이름" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2 mt_32">
+									영문주소
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="input has_search">
+									<input type="text" name="" id="" title="도로명, 건물명, 지번 입력" readonly placeholder="우편번호" />
+
+									<button type="button" class="search">검색</button>
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" class="mt_12" title="주소입력" placeholder="주소입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" class="mt_12" title="상세주소입력" placeholder="상세주소입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>주소를 입력하지 않으면 입금이 지연되거나 수취은행으로부터 조건변경 요청을 받을 수 있습니다.</li>
+								</ul>
+								<div class="input_label ty2">사업자등록번호</div>
+
+								<div class="input">
+									<input type="text" name="" id="" value="214-75-*****" title="사업자등록번호 입력" readonly />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">전화번호</div>
+
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="전화번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="전화번호 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="전화번호 뒤 4자리 입력" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 받는 분 -->
+						<div class="group">
+							<div class="title_text ty1">받는 분</div>
+
+							<div class="form_group">
+								<div class="input_label ty2">
+									영문이름
+									<span class="ess_text ty1">필수</span>
+								</div>
+
+								<div class="input">
+									<input type="text" name="" id="" title="영문이름 입력" placeholder="받는 분 영문이름" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">
+									입금계좌번호
+									<span class="ess_text ty1">필수</span>
+								</div>
+
+								<div class="input">
+									<input type="text" name="" id="" title="입금계좌번호 입력" placeholder="영문 또는 숫자만 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="btn_area ty1 mt_16">
+									<button type="button" class="btn s_4 c_1 r_2" onclick="comLayerPopUtil.open('popupAccount');">자주쓰는계좌</button>
+									<button type="button" class="btn s_4 c_2 r_2" onclick="comLayerPopUtil.open('popupSelectBank');">내계좌</button>
+								</div>
+								<div class="input_label ty2">지급은행</div>
+
+								<div class="input">
+									<input type="text" name="" id="" value="기업은행" title="지급은행 입력" disabled />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<!-- e: 받는 분 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 추가정보(영문) -->
+						<div class="group">
+							<div class="title_text ty1">추가정보(영문)</div>
+
+							<div class="input">
+								<input type="text" name="" id="" title="추가정보1 입력" placeholder="계약서 &#x27;NO&#x27;, &#x27;INVOICE NO." />
+
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+							<div class="input mt_8">
+								<input type="text" name="" id="" title="추가정보2 입력" placeholder="예) Remitter&#x27;s Address:" />
+
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+							<ul class="list_bullet ty1">
+								<li>계약서 'NO.', 'INVOICE NO.' 등 해당 송금과 관련된 필수 추가 정보만 입력해 주세요.</li>
+								<li>
+									주소 등의 정보 입력 시 송금인 및 수취인을 명확히 표현해 주세요.
+
+									<ul class="list_dash">
+										<li>예) 송금인 주소를 추가할 경우 'Remitter's Address:' 입력</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- e: 추가정보(영문) -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 정보 입력 -->
+
+				<!-- s: step2 금액정보 입력 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_trans">
+						<!-- s: 통화 -->
+						<div class="group">
+							<div class="title_text ty1">금액정보 입력</div>
+
+							<div class="form_group">
+								<div class="input_label ty1">
+									전체송금금액(외화)
+									<span class="ess_text ty1">필수</span>
+								</div>
+
+								<div class="with_option">
+									<div class="btn_area ty1">
+										<button class="btn s_2 c_1 r_3" onclick="uf_goStep(3);">환율 보기</button>
+										<button class="btn s_2 c_1 r_3" onclick="uf_goStep(4);">수수료 보기</button>
+									</div>
+									<div class="cont">
+										<div class="comp_wrap column">
+											<div class="dropdown ty2" role="button" title="통화 목록 보기" onclick="comLayerPopUtil.open('currency');">
+												<div class="dropdown_text">통화 선택</div>
+											</div>
+
+											<div class="comp_wrap float_num">
+												<div class="front">
+													<div class="input">
+														<input type="tel" name="" id="" title="전체송금금액 앞자리 입력" />
+
+														<button type="button" class="del">텍스트삭제</button>
+													</div>
+												</div>
+												<span class="dot">.</span>
+												<div class="back">
+													<div class="input">
+														<input type="tel" name="" id="" title="전체송금금액 뒷자리 입력" />
+
+														<button type="button" class="del">텍스트삭제</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<ul class="list_bullet ty1">
+									<li>입금계좌가 IBK기업은행 원화계좌인 경우 환율(송금받을 때)로 적용됩니다.</li>
+								</ul>
+							</div>
+						</div>
+						<!-- e: 통화 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 계좌인출방식 -->
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">
+									계좌인출방식
+									<span class="ess_text ty1">필수</span>
+								</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="false"><span class="text">원화계좌</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">외화계좌</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">원화 + 외화계좌</span></button>
+								</div>
+
+								<div class="bar_graph mt_24">
+									<div class="bar_area_display">
+										<div class="bar_area won" style="width: 80%">
+											<div class="bar"></div>
+										</div>
+										<div class="bar_area foreign" style="width: 20%">
+											<div class="bar"></div>
+										</div>
+									</div>
+									<div class="bar_area_data">
+										<div class="bar_area won">
+											<span class="txt">원화 470.00</span>
+											<span class="percent">80%</span>
+										</div>
+										<div class="bar_area foreign">
+											<span class="txt">외화 30.00</span>
+											<span class="percent">20%</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="input_label ty1">출금금액(외화)</div>
+
+								<div class="comp_wrap column">
+									<div class="dropdown ty2 disabled" role="button" title="통화 목록 보기" aria-disabled="true" tabindex="-1" onclick="comLayerPopUtil.open('currency');">
+										<div class="dropdown_text">통화 선택</div>
+									</div>
+
+									<div class="comp_wrap float_num">
+										<div class="front">
+											<div class="input">
+												<input type="tel" name="" id="" title="출금금액 앞자리 입력" />
+
+												<button type="button" class="del">텍스트삭제</button>
+											</div>
+										</div>
+										<span class="dot">.</span>
+										<div class="back">
+											<div class="input">
+												<input type="tel" name="" id="" title="출금금액 뒷자리 입력" />
+
+												<button type="button" class="del">텍스트삭제</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- e: 계좌인출방식 -->
+							</div>
+							<hr aria-hidden="true" class="divider ty2 small" />
+							<!-- s: 원화출금계좌 -->
+							<div class="form_group">
+								<div class="input_label ty1">원화출금계좌</div>
+								<div class="input_label ty2">
+									계좌번호
+									<span class="ess_text ty2">필수</span>
+								</div>
+
+								<div class="dropdown ty2" role="button" title="원화출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="form_desc_info">
+									출금가능금액
+									<span class="color ty3">
+										<span class="money">123,456,789</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</div>
+							</div>
+							<!-- e: 원화출금계좌 -->
+							<hr aria-hidden="true" class="divider ty2 small" />
+							<!-- s: 외화출금계좌 -->
+							<div class="form_group">
+								<div class="input_label ty1">외화출금계좌</div>
+
+								<div class="input_label ty2">
+									계좌번호
+									<span class="ess_text ty2">필수</span>
+								</div>
+
+								<div class="with_option">
+									<div class="btn_area ty1">
+										<button class="btn s_2 c_1 r_3" onclick="comLayerPopUtil.open('popup1');">외화잔액조회</button>
+									</div>
+									<div class="cont">
+										<div class="dropdown ty2" role="button" title="원화출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+											<div class="dropdown_text">선택</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form_desc_info">
+									출금가능금액
+									<span class="color ty3">
+										<span class="money">123,456,789</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</div>
+							</div>
+							<!-- e: 외화출금계좌 -->
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 금액정보 입력 -->
+
+				<!-- s: step3 환율 보기 -->
+				<!-- s: 전체팝업-->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_trans">
+						<div class="group">
+							<div class="title_text ty1">일반고시환율 정보</div>
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+								</ul>
+							</div>
+
+							<ul class="space_list_ty5">
+								<li>
+									<!-- s: 미국달러 -->
+
+									<div class="group_item">
+										<div class="group_item_info">
+											<div class="txt3">
+												<strong>USD</strong>
+												미국달러($)
+											</div>
+										</div>
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">매매기준율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금받을때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금보낼때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰팔때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰살때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">대마환산율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+										</div>
+									</div>
+									<!-- e: 미국달러 -->
+								</li>
+								<li>
+									<!-- s: 일본 엔 -->
+									<div class="group_item">
+										<div class="group_item_info">
+											<div class="txt3">
+												<strong>JYP</strong>
+												일본 100엔(￥)
+											</div>
+										</div>
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">매매기준율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금받을때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금보낼때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰팔때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰살때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">대마환산율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+										</div>
+									</div>
+									<!-- s: 일본 엔 -->
+								</li>
+								<li>
+									<!-- s: 유럽 유로 -->
+									<div class="group_item">
+										<div class="group_item_info">
+											<div class="txt3">
+												<strong>EUR</strong>
+												EU 유로
+											</div>
+										</div>
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">매매기준율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금받을때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금보낼때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰팔때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰살때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">대마환산율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+										</div>
+									</div>
+									<!-- e: 유럽 유로 -->
+								</li>
+								<li>
+									<!-- s: 인도네시아 루피아 -->
+									<div class="group_item">
+										<div class="group_item_info">
+											<div class="txt3">
+												<strong>IDR</strong>
+												인도네시아 100루피아
+											</div>
+										</div>
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">매매기준율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금받을때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금보낼때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰팔때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰살때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">대마환산율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+										</div>
+									</div>
+									<!-- e: 인도네시아 루피아 -->
+								</li>
+								<li>
+									<!-- s: 중국 위안 -->
+									<div class="group_item">
+										<div class="group_item_info">
+											<div class="txt3">
+												<strong>CYN</strong>
+												중국 위안
+											</div>
+										</div>
+										<div class="group_item_detail">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">매매기준율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금받을때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">송금보낼때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰팔때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">현찰살때</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="tit">대마환산율</span>
+												</span>
+												<span class="line_right">
+													<span class="money">1,374.50</span>
+												</span>
+											</p>
+										</div>
+									</div>
+									<!-- e: 중국 위안 -->
+								</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<ul class="list_bullet ty1">
+								<li>환율은 영업점 거래시 보다 30% 우대하여 적용됩니다.</li>
+							</ul>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 전체팝업-->
+				<!-- e: step3 환율 보기 -->
+
+				<!-- s: step4 외화송금수수료 정보 -->
+				<!-- s: 전체팝업-->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_trans">
+						<div class="group">
+							<div class="title_text ty1">외화송금수수료 정보</div>
+							<div class="title_text ty1">송금수수료</div>
+							<!-- s: 해외송금 -->
+							<div class="title_text ty3">해외송금(지급증빙미제출송금/체재비송금)</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 해외송금 표</caption>
+									<colgroup>
+										<col style="width: 33.3%" />
+										<col style="width: 33.3%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>~USD 500 이하</td>
+											<td>건당 5,000원</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>USD 500 초과~USD 2,000 이하</td>
+											<td>건당 1만원</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>USD 2,000 초과~USD 5,000 이하</td>
+											<td>건당 1만5,000원</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>USD 5,000 초과</td>
+											<td>건당 2만원</td>
+											<td>면제</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 해외송금 -->
+							<!-- s: 무역대전송금 -->
+							<div class="title_text ty3 mt_24">무역대전송금</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 무역대전송금 표</caption>
+									<colgroup>
+										<col style="width: 33.3%" />
+										<col style="width: 33.3%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>~USD 500 이하</td>
+											<td>건당 5,000원</td>
+											<td>건당 2,500원</td>
+										</tr>
+										<tr>
+											<td>USD 500 초과~USD 2,000 이하</td>
+											<td>건당 1만원</td>
+											<td>건당 5,000원</td>
+										</tr>
+										<tr>
+											<td>USD 2,000 초과~USD 5,000 이하</td>
+											<td>건당 1만5,000원</td>
+											<td>건당 7,500원</td>
+										</tr>
+										<tr>
+											<td>USD 5,000 초과</td>
+											<td>건당 2만원</td>
+											<td>건당 10,000원</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 무역대전송금 -->
+							<!-- s: 국내간 자금이체 -->
+							<div class="title_text ty3 mt_24">국내간 자금이체</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>구분, 송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 국내간 자금이체 표</caption>
+									<colgroup>
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>당행</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>타행</td>
+											<td>구분 없음</td>
+											<td>건당 5,000원</td>
+											<td>건당 5,000원</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 국내간 자금이체 -->
+							<!-- s: 조건변경 수수료 -->
+							<div class="title_text ty1 mt_24">조건변경 수수료</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>구분, 송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 조건변경 수수료 표</caption>
+									<colgroup>
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>해외송금</td>
+											<td>구분 없음</td>
+											<td>8,000원(전신료)</td>
+											<td>8,000원(전신료)</td>
+										</tr>
+										<tr>
+											<td>국내송금</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 조건변경 수수료 -->
+							<!-- s: 자금반환 수수료 -->
+							<div class="title_text ty1 mt_24">자금반환 수수료</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>구분, 송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 자금반환 수수료 표</caption>
+									<colgroup>
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>해외송금</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+										<tr>
+											<td>국내송금</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 자금반환 수수료 -->
+							<!-- s: 전신료 -->
+							<div class="title_text ty1 mt_24">전신료</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>구분, 송금금액, 출금계좌가 외화계좌일 때, 출금계좌가 원화계좌일 때로 이루어진 전신료 표</caption>
+									<colgroup>
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+										<col style="width: 25%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">송금금액</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												외화계좌일 때
+											</th>
+											<th scope="col">
+												출금계좌가
+												<br />
+												원화계좌일 때
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>해외송금</td>
+											<td>구분 없음</td>
+											<td>건당 8,000원</td>
+											<td>건당 8,000원</td>
+										</tr>
+										<tr>
+											<td>무역대전송금</td>
+											<td>구분 없음</td>
+											<td>건당 8,000원</td>
+											<td>건당 8,000원</td>
+										</tr>
+										<tr>
+											<td>국내간 자금이체</td>
+											<td>구분 없음</td>
+											<td>면제</td>
+											<td>면제</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<!-- e: 전신료 -->
+							<ul class="list_bullet ty2">
+								<li>고객님이 부담하실 수수료 비용은 송금수수료와 전신료를 합한 금액입니다.</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 전체팝업-->
+				<!-- e: step4 외화송금수수료 정보 -->
+
+				<!-- s: step5 정보확인 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_trans">
+						<div class="group">
+							<div class="title_text ty1">정보확인</div>
+							<!-- s: 보내는 분 -->
+
+							<div class="title_text ty1">보내는 분</div>
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">송금용도</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">특허권사용료</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">DADADDA</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">총 사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">214-86-*****</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">전화번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000000005</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<!-- e: 보내는 분 -->
+						</div>
+						<hr aria-hidden="true" class="divider ty1 medium" />
+						<!-- s: 받는 분 -->
+						<div class="group">
+							<div class="title_text ty1">받는 분</div>
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">DADADDA</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000000005</span>
+											<br />
+											(예금주명: 여신가상)
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금은행명</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name">기업은행</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문은행명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">IBK</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 받는 분 -->
+						<hr aria-hidden="true" class="divider ty1 medium" />
+						<!-- s: 추가정보 -->
+						<div class="group">
+							<div class="title_text ty1">추가정보</div>
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">추가정보</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">추가정보</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- e: 추가정보 -->
+						<hr aria-hidden="true" class="divider ty1 medium" />
+						<div class="group">
+							<!-- s: 송금정보 -->
+							<div class="title_text ty1">송금정보</div>
+							<div class="ib_item">
+								<div class="ib_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit"><span class="txt_style ty7">전체송금금액(외화)</span></span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit"><span class="txt_style ty7">USD</span></span>
+											<span class="money"><span class="txt_style ty7">10.00</span></span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="tbl ty2 mt_8">
+								<table>
+									<caption>원화출금계좌 정보로 이루어진 송금정보 표</caption>
+									<colgroup>
+										<col style="width: 30%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="2">원화출금계좌</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">계좌번호</th>
+											<td>000-000000-00-000</td>
+										</tr>
+										<tr>
+											<th scope="row">출금금액(외화)</th>
+											<td>USD 0</td>
+										</tr>
+										<tr>
+											<th scope="row">원화환산금액</th>
+											<td>
+												<span class="money">0</span>
+												<span class="txt_unit">원</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tbl ty2 mt_24">
+								<table>
+									<caption>외화출금계좌 정보로 이루어진 송금정보 표</caption>
+									<colgroup>
+										<col style="width: 30%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="2">외화출금계좌</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">계좌번호</th>
+											<td>000-000000-00-000</td>
+										</tr>
+										<tr>
+											<th scope="row">출금금액(외화)</th>
+											<td>USD 0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tbl ty2 mt_24">
+								<table>
+									<caption>환율정보로 이루어진 송금정보 표</caption>
+									<colgroup>
+										<col style="width: 30%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="2">환율정보</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">매매기준율</th>
+											<td>1,124.50</td>
+										</tr>
+										<tr>
+											<th scope="row">고시환율</th>
+											<td>1,124.50</td>
+										</tr>
+										<tr>
+											<th scope="row">적용환율</th>
+											<td>1,124.50</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- e: 송금정보 -->
+							<!-- s: 수수료정보 -->
+
+							<div class="title_text ty1 mt_24">수수료정보</div>
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">송금금액</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">USD</span>
+											<span class="money">1.00</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">송금수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">USD</span>
+											<span class="money">1.00</span>
+										</span>
+									</p>
+
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">적용환율</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">USD</span>
+											<span class="money">1.00</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<!-- e: 수수료정보 -->
+						</div>
+						<div class="group">
+							<!-- s: 유의사항 -->
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>거래 중 오류 발생 시 반드시 외화송금내역조회로 거래 여부를 확인해 주세요.</li>
+											<li>외국인 고객님은 가까운 영업점에서 외화송금(국내)을 할 수 있습니다.</li>
+											<li>환율은 영업점 거래보다 30% 우대 적용됩니다.</li>
+											<li>타행송금 시 16시 이후에는 외화계좌로만 송금할 수 있으며, 당일 송금되지 않은 건은 다음 영업일에 송금됩니다.</li>
+											<li>당행송금 시 18시 이후에는 외화계좌에서 외화계좌로 송금만 가능합니다.</li>
+											<li>타행 송금 시 수취은행 자금 도착까지 약 30분 이상 1시간 이내 소요됩니다.</li>
+											<li>실시간으로 송금해야 할 때는 국내실시간 외화송금(금융결제원)을 이용해 주세요.</li>
+											<li>환율변동에 따라 거래 체결이 안 될 수 있어 최종 비밀번호(인증번호) 입력 시간을 1분으로 제한합니다.</li>
+											<li>원화·외화 내맘대로통장 가입 중 다른 통화로 계좌이체 및 같은 계좌 내 통화전환을 할 때는 통화전환(내맘대로통장전용)을 이용해 주세요.</li>
+											<li>지급은행이 IBK기업은행인 경우 ‘국내간이체-당행’ 선택 후 거래해 주세요.</li>
+											<li>16시 이후 당일 송금해야 하는 건이 있을 시 영업점으로 문의해 주세요.</li>
+											<li>지급은행이 KB국민은행일 경우 태국 통화 바트(THB)로 국내송금할 수 있습니다.</li>
+											<li>중국 통화 위안(CNY) 송금 시 가까운 영업점에 문의해 주세요.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- e: 유의사항 -->
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(2);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">실행</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 정보확인 -->
+
+				<!-- s: step6 완료 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty4 foreign_currency_trans">
+						<!-- s: 송금완료 요약 -->
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								송금금액
+								<span class="color ty3">85,294 USD</span>
+								<br />
+								송금했어요
+							</div>
+						</div>
+						<!-- e: 송금완료 요약 -->
+						<hr aria-hidden="true" class="divider ty1 medium" />
+						<!-- s: 보내는 분 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="보내는 분 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">보내는 분</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">송금용도</span>
+												<span class="d_list_r">
+													<span class="txt">특허권사용료</span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">영문이름</span>
+												<span class="d_list_r">
+													<span class="txt">DAFDF</span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">총 사업자등록번호</span>
+												<span class="d_list_r">
+													<span class="txt">214-86-*****</span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">전화번호</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+
+											<li>
+												<span class="d_list_l">내통장표시</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 보내는 분 -->
+						<hr aria-hidden="true" class="divider ty1 medium" />
+						<!-- s: 받는 분 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="받는 분 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">받는 분</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">영문이름</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">입금계좌번호</span>
+												<span class="d_list_r">
+													<span class="account_no"></span>
+												</span>
+											</li>
+											<li>
+												<span class="d_list_l">영문은행명</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+
+											<li>
+												<span class="d_list_l">받는 분 통장표시</span>
+												<span class="d_list_r">
+													<span class="txt"></span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 받는 분 -->
+						<hr aria-hidden="true" class="divider ty1 medium" />
+						<!-- s: 추가정보 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="추가정보 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">추가정보</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">추가정보</span>
+												<span class="d_list_r">
+													<span class="txt">추가정보</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 추가정보 -->
+						<hr aria-hidden="true" class="divider ty1 medium" />
+						<!-- s: 송금정보 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1 mt_16">
+								<div class="acd_head accodian_head">
+									<button type="button" title="송금정보 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">송금정보</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<div class="group_item mt_16 total">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">전체송금금액(외화)</span>
+													</span>
+													<span class="line_right">
+														<strong class="txt_unit">USD</strong>
+														<strong class="money color ty2">1.00</strong>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="tbl ty2 mt_16">
+											<table>
+												<caption>원화출금계좌 정보로 이루어진 송금정보 표</caption>
+												<colgroup>
+													<col style="width: 30%" />
+													<col style="width: auto" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">원화출금계좌</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row">계좌번호</th>
+														<td>000-000000-00-000</td>
+													</tr>
+													<tr>
+														<th scope="row">출금금액(외화)</th>
+														<td>USD 0</td>
+													</tr>
+													<tr>
+														<th scope="row">원화환산금액</th>
+														<td>
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="tbl ty2 mt_16">
+											<table>
+												<caption>외화출금계좌 정보로 이루어진 송금정보 표</caption>
+												<colgroup>
+													<col style="width: 30%" />
+													<col style="width: auto" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">외화출금계좌</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row">게좌번호</th>
+														<td>000-000000-00-000</td>
+													</tr>
+													<tr>
+														<th scope="row">출금금액(외화)</th>
+														<td>USD 0</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="tbl ty2 mt_16">
+											<table>
+												<caption>환율정보로 이루어진 송금정보 표</caption>
+												<colgroup>
+													<col style="width: 30%" />
+													<col style="width: auto" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">환율정보</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row">매매기준율</th>
+														<td>1,124.50</td>
+													</tr>
+													<tr>
+														<th scope="row">고시환율</th>
+														<td>1,124.50</td>
+													</tr>
+													<tr>
+														<th scope="row">적용환율</th>
+														<td>1,124.50</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 송금정보 -->
+						<hr aria-hidden="true" class="divider ty1 medium" />
+						<!-- s: 수수료정보 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1 mt_16">
+								<div class="acd_head accodian_head">
+									<button type="button" title="수수료정보 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">수수료정보</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="d_list ty1">
+											<li>
+												<span class="d_list_l">송금금액</span>
+												<span class="d_list_r">USD 0</span>
+											</li>
+											<li>
+												<span class="d_list_l">원화환산금액</span>
+												<span class="d_list_r">원</span>
+											</li>
+											<li>
+												<span class="d_list_l">송금수수료</span>
+												<span class="d_list_r">원</span>
+											</li>
+											<li>
+												<span class="d_list_l">적용환율</span>
+												<span class="d_list_r">원</span>
+											</li>
+											<li>
+												<span class="d_list_l">적용환율일련번호</span>
+												<span class="d_list_r">원</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 수수료정보 -->
+						<div class="group">
+							<div class="btn_area ty1 mt_32">
+								<button type="button" class="btn s_2 c_1 r_1">거래내역조회</button>
+								<button type="button" class="btn s_2 c_1 r_1">외화송금내역조회</button>
+								<button type="button" class="btn s_2 c_1 r_1 w_full">자주쓰는 송금내용 등록</button>
+							</div>
+						</div>
+						<!-- s: 유의사항 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>거래 중 오류 발생 시 반드시 외화송금내역조회로 거래 여부를 확인해 주세요.</li>
+											<li>외국인 고객님은 가까운 영업점에서 외화송금(국내)을 할 수 있습니다.</li>
+											<li>환율은 영업점 거래보다 30% 우대 적용됩니다.</li>
+											<li>타행송금 시 16시 이후에는 외화계좌로만 송금할 수 있으며, 당일 송금되지 않은 건은 다음 영업일에 송금됩니다.</li>
+											<li>당행송금 시 18시 이후에는 외화계좌에서 외화계좌로 송금만 가능합니다.</li>
+											<li>타행 송금 시 수취은행 자금 도착까지 약 30분 이상 1시간 이내 소요됩니다.</li>
+											<li>실시간으로 송금해야 할 때는 국내실시간 외화송금(금융결제원)을 이용해 주세요.</li>
+											<li>환율변동에 따라 거래 체결이 안 될 수 있어 최종 비밀번호(인증번호) 입력 시간을 1분으로 제한합니다.</li>
+											<li>원화·외화 내맘대로통장 가입 중 다른 통화로 계좌이체 및 같은 계좌 내 통화전환을 할 때는 통화전환(내맘대로통장전용)을 이용해 주세요.</li>
+											<li>지급은행이 IBK기업은행인 경우 ‘국내간이체-당행’ 선택 후 거래해 주세요.</li>
+											<li>16시 이후 당일 송금해야 하는 건이 있을 시 영업점으로 문의해 주세요.</li>
+											<li>지급은행이 KB국민은행일 경우 태국 통화 바트(THB)로 국내송금할 수 있습니다.</li>
+											<li>중국 통화 위안(CNY) 송금 시 가까운 영업점에 문의해 주세요.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 유의사항 -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(7);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step6 완료 -->
+
+				<!-- s: step7 결제요청등록 완료 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty4 foreign_currency_trans">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								결재요청을 등록했어요
+							</div>
+
+							<ul class="list_bullet ty4">
+								<li>[결재함 > 결재/실행완료]에서 결과를 꼭 확인해 주세요</li>
+								<li>문의 : IBK고객센터(1566-2566/내선 515, 1588-2588/내선 515)</li>
+							</ul>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(8);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step7 결제요청등록 완료 -->
+
+				<!-- s: step8 실행처리 완료 -->
+				<div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+					<div class="content_wrap ty4 foreign_currency_trans">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								해외송금을 완료했어요
+							</div>
+
+							<ul class="list_bullet ty4">
+								<li>[결재함 > 결재/실행완료]에서 결과를 꼭 확인해 주세요.</li>
+								<li>문의 : IBK고객센터(1566-2566/내선 515, 1588-2588/내선 515)</li>
+							</ul>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step8 결제요청등록 완료 -->
+
+				<!-- s: step9 결재함 외화송금(국내) -->
+				<div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_currency_condition">
+						<div class="group">
+							<div class="title_text ty1">받는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금은행명</span>
+										</span>
+										<span class="line_right">
+											<span class="bank_name"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">보내는 분</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">거래상태</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">송금구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문이름</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">영문주소</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="business_no"></span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">송금정보</div>
+							<div class="title_text ty1">전체송금금액(외화)</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>원화출금계좌 정보로 이루어진 송금정보 표</caption>
+									<colgroup>
+										<col style="width: 50%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="2">원화출금계좌</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">송금계좌번호</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">송금금액</th>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tbl ty2 mt_16">
+								<table>
+									<caption>외화출금계좌 정보로 이루어진 송금정보 표</caption>
+									<colgroup>
+										<col style="width: 50%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" colspan="2">외화출금계좌</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">송금계좌번호</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">송금금액</th>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">수수료정보</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>수수료 결제원화계좌,수수료합계,송금수수료,전신료,대체료,Banking Charge 정보로 이루어진 수수료정보 표</caption>
+									<colgroup>
+										<col style="width: 50%" />
+										<col style="width: auto" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">수수료 결제원화계좌</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">수수료합계</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">송금수수료</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">전신료</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">대체료</th>
+											<td></td>
+										</tr>
+										<tr>
+											<th scope="row">Banking Charge</th>
+											<td></td>
+										</tr>
+
+										<tr>
+											<th scope="row">수수료 결제계좌 비밀번호</th>
+											<td>
+												<div class="input">
+													<button type="button" class="input_button" aria-label="수수료 결제계좌 비밀번호 숫자 4자리 입력">숫자 4자리 입력</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">적용환율정보</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>적용환율,적용환율일련번호 정보로 이루어진 수수료정보 표</caption>
+									<colgroup>
+										<col style="width: 50%" />
+										<col style="width: auto" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">적용환율</th>
+											<td>
+												<span class="money"></span>
+												<span class="txt_unit"></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">적용환율일련번호</th>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">목록</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step9 결재함 외화송금(국내) -->
+
+				<!-- s: step91 유의사항 -->
+				<!-- s: 전체팝업-->
+				<div id="step91" data-jx-step-no="91" data-jx-effect="slide">
+					<div class="content_wrap ty3 korea_currency_trans">
+						<div class="group">
+							<div class="title_text ty1">꼭 알아두세요!</div>
+							<ul class="list_bullet ty1">
+								<li>거래 중 오류 발생 시 반드시 외화송금내역조회로 거래 여부를 확인해 주세요.</li>
+								<li>외국인 고객님은 가까운 영업점에서 외화송금(국내)을 할 수 있습니다.</li>
+								<li>환율은 영업점 거래보다 30% 우대 적용됩니다.</li>
+								<li>타행송금 시 16시 이후에는 외화계좌로만 송금할 수 있으며, 당일 송금되지 않은 건은 다음 영업일에 송금됩니다.</li>
+								<li>당행송금 시 18시 이후에는 외화계좌에서 외화계좌로 송금만 가능합니다.</li>
+								<li>타행 송금 시 수취은행 자금 도착까지 약 30분 이상 1시간 이내 소요됩니다.</li>
+								<li>실시간으로 송금해야 할 때는 국내실시간 외화송금(금융결제원)을 이용해 주세요.</li>
+								<li>환율변동에 따라 거래 체결이 안 될 수 있어 최종 비밀번호(인증번호) 입력 시간을 1분으로 제한합니다.</li>
+								<li>원화·외화 내맘대로통장 가입 중 다른 통화로 계좌이체 및 같은 계좌 내 통화전환을 할 때는 통화전환(내맘대로통장전용)을 이용해 주세요.</li>
+								<li>지급은행이 IBK기업은행인 경우 ‘국내간이체-당행’ 선택 후 거래해 주세요.</li>
+								<li>16시 이후 당일 송금해야 하는 건이 있을 시 영업점으로 문의해 주세요.</li>
+								<li>지급은행이 KB국민은행일 경우 태국 통화 바트(THB)로 국내송금할 수 있습니다.</li>
+								<li>중국 통화 위안(CNY) 송금 시 가까운 영업점에 문의해 주세요.</li>
+							</ul>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 전체팝업-->
+				<!-- e: step91 유의사항 -->
+
+				<!-- s: popup -->
+
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">자주쓰는계좌 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popupSelectBank">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">내계좌 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupSelectBank');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="optlist1" title="자주 사용하는 송금">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">자주 사용하는 송금</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="popupAccount_old">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount_old');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- s: 자주 사용하는 송금 등록 수정 -->
+				<div class="bottom_popup_wrap" id="optlist2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">자주 사용하는 송금 등록/수정</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="list_bullet ty1">
+								<li>송금명을 자신이 알기 쉬운 이름으로 등록하여 주시기 바랍니다.</li>
+							</ul>
+							<div class="form_group mt_32">
+								<div class="input_label ty1">자주 사용하는 송금명</div>
+
+								<div class="input">
+									<input type="text" name="" id="" title="자주 사용하는 송금명 입력" placeholder="10자 입력 가능" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2">확인</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 자주 사용하는 송금 등록 수정 -->
+
+				<!-- s: 외화잔액조회 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">외화잔액조회</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="tbl ty2">
+								<table>
+									<caption>캡션 필수 입력</caption>
+									<colgroup>
+										<col style="width: auto" />
+										<col style="width: 35%" />
+										<col style="width: 35%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">출금가능금액</th>
+											<th scope="col">계좌잔액</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>USD</td>
+											<td class="ta_r">9,890.00</td>
+											<td class="ta_r">9,890.00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup1');">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 외화잔액조회 -->
+
+				<!-- s: 통화선택 팝업 -->
+				<div class="bottom_popup_wrap" id="currency" title="통화 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">통화 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('currency');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty4 currency_list" role="listbox">
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_usd"></div>
+									<strong class="eng">USD</strong>
+									<span class="kor">(미국 달러)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_jpy"></div>
+									<strong class="eng">JPY</strong>
+									<span class="kor">(일본 엔)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_eur"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">(유로)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_gbp"></div>
+									<strong class="eng">GBP</strong>
+									<span class="kor">(영국 파운드)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_aud"></div>
+									<strong class="eng">AUD</strong>
+									<span class="kor">(호주 달러)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_nzd"></div>
+									<strong class="eng">NZD</strong>
+									<span class="kor">(뉴질랜드 달러)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_chf"></div>
+									<strong class="eng">CHF</strong>
+									<span class="kor">(스위스 프랑)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_cad"></div>
+									<strong class="eng">CAD</strong>
+									<span class="kor">(캐나다 달러)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_nok"></div>
+									<strong class="eng">NOK</strong>
+									<span class="kor">(노르웨이 크로네)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_sek"></div>
+									<strong class="eng">SEK</strong>
+									<span class="kor">(스웨덴 크로나)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_hkd"></div>
+									<strong class="eng">HKD</strong>
+									<span class="kor">(홍콩 달러)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_sgd"></div>
+									<strong class="eng">SGD</strong>
+									<span class="kor">(싱가폴 달러)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_thb"></div>
+									<strong class="eng">THB</strong>
+									<span class="kor">(태국 바트)</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_cny"></div>
+									<strong class="eng">CNY</strong>
+									<span class="kor">(중국 위안)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 통화선택 팝업 -->
+
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

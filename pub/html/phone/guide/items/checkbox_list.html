@@ -1,0 +1,1171 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<style>
+		.cont_wrap {
+			padding: 0 1.5rem;
+		}
+		.container_wrap {
+			padding-bottom: 5rem;
+		}
+		.main .guide_h1 ~ .guide_h1 {
+			margin-top: 2.5rem;
+		}
+
+		.guide_h1 {
+			position: relative;
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin: 1.25rem 0;
+			padding: 1.25rem 0;
+			border-top: 0.25rem dashed green;
+			border-bottom: 0.25rem dashed green;
+		}
+		.guide_h1::before {
+			content: "/* ";
+			color: green;
+		}
+
+		.guide_h1::after {
+			content: " */";
+			color: green;
+		}
+
+		.guide_h4 {
+			margin: 1.25rem 0;
+			padding: 0.625rem 0;
+			text-align: center;
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #000;
+			background-color: #f4f4f4;
+		}
+
+		.guide_h5 {
+			position: relative;
+			margin: 1.25rem 0 0.9375rem 0;
+			padding: 0.625rem 0;
+			border-bottom: 1px solid #000;
+		}
+		.guide_h5::before {
+			content: "-";
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 0.1875rem;
+		}
+
+		.guide_el {
+			margin: 1.25rem 0;
+		}
+
+		.guide_discription {
+			border-top: 0.125rem dotted #222;
+			border-bottom: 0.125rem dotted #222;
+			white-space: pre-line;
+			margin: 1.25rem 0;
+			font-size: 1rem;
+			line-height: 1.25rem;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.guide_discription code {
+			display: block;
+			background-color: papayawhip;
+			margin: 0.625rem 0 0;
+			padding: 0.625rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+			border-left: 0.1875rem solid #222;
+			letter-spacing: 0.2px;
+		}
+
+		.guide_discription code:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth:first-line {
+			line-height: 0;
+		}
+
+		.guide_discription .guide_depth {
+			display: block;
+			padding-left: 1.25rem;
+			margin-bottom: -1.25rem;
+			font-size: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			font-weight: inherit;
+		}
+
+		.guide_discription .guide_cmt {
+			color: green;
+		}
+
+		.guide_discription b {
+			font-weight: 700;
+		}
+
+		.guide_ico_btns_wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			gap: 0.75rem;
+			padding: 1.5rem;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.guide_grid_wrap {
+			display: grid;
+			gap: 0.5rem;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+		.guide_grid_wrap.n3 {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.guide_grid_wrap.n4 {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.guide_grid_wrap .guide_grid_wrap_item {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="container_wrap">
+				<div class="cont_wrap">
+					<h4 class="guide_h4">Card_item - checkbox + link</h4>
+					<div class="card_item_wrap ty1">
+						<div class="card_chkbox">
+							<input type="checkbox" name="" id="chk01" />
+
+							<label for="chk01" aria-labelledby="chk01_content"></label>
+						</div>
+						<div class="card_item" id="chk01_content">
+							<div class="badge_cont">
+								<span class="badge ty3 colorD1">등록</span>
+							</div>
+							<div class="card_item_info">
+								<div class="txt1">IBK그랑프리국공채MMF법인CIBK</div>
+								<div class="txt2">
+									<span class="bank_name">기업은행</span>
+									<span class="account_no">
+										000-000000-00-000
+										<span class="txt">(12회차)</span>
+									</span>
+								</div>
+							</div>
+							<div class="card_item_sub_info">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty1">(주)커피빈코리아</span>
+									</span>
+									<span class="line_right">
+										<button type="button" class="btn link_ty2" role="link">
+											내 이체함
+											<span class="hidden">해당화면 이동</span>
+										</button>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_right">
+										<span class="per">
+											<span class="text">수익률</span>
+											<span class="rate">150%</span>
+										</span>
+									</span>
+								</p>
+							</div>
+							<div class="card_item_sub_info">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty2">승인금액</span>
+									</span>
+									<span class="line_right">
+										<span class="money money_blue">8,562,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty2">취소금액</span>
+									</span>
+									<span class="line_right">
+										<span class="money money_red">8,562,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty2">현지외화금액</span>
+									</span>
+									<span class="line_right">
+										<span class="txt_unit">USD</span>
+										<span class="money">33.00</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">은행</span>
+									</span>
+									<span class="line_right">
+										<span class="txt bank_name">기업은행</span>
+										<span class="txt bank_code">(003)</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">계좌별명</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">홍삼삼삼</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">계좌별명</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">홍삼삼삼</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">건수</span>
+									</span>
+									<span class="line_right">
+										<span class="txt count">1</span>
+										<span class="txt_unit">건</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">입금일시</span>
+									</span>
+									<span class="line_right">
+										<span class="date">2023-03-15</span>
+										<span class="time">10:10:10</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">매수대기금액</span>
+									</span>
+									<span class="line_right">
+										<span class="money">120,000,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="card_item_wrap ty1">
+						<div class="card_chkbox">
+							<input type="checkbox" name="" id="chk02" />
+
+							<label for="chk02" aria-labelledby="chk02_content"></label>
+						</div>
+						<div class="card_item" id="chk02_content">
+							<div class="badge_cont">
+								<span class="badge ty3 colorD1">등록</span>
+							</div>
+							<div class="card_item_info">
+								<div class="txt1">입금계좌번호</div>
+								<div class="txt2">
+									<span class="account_no">000-000000-00-000</span>
+								</div>
+							</div>
+							<div class="card_item_sub_info">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty1">이체금액</span>
+									</span>
+									<span class="line_right">
+										<button type="button" class="btn link_ty2" role="link">
+											<span class="money">2,000,000</span>
+											<span class="txt_unit">원</span>
+											<span class="hidden">해당화면 이동</span>
+										</button>
+									</span>
+								</p>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">이체은행</span>
+									</span>
+									<span class="line_right">
+										<span class="txt bank_name">기업은행</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<h4 class="guide_h4">Card_item - checkbox</h4>
+					<div class="card_item_wrap ty1">
+						<div class="card_chkbox">
+							<input type="checkbox" name="" id="chk03" />
+
+							<label for="chk03" aria-labelledby="chk03_content"></label>
+						</div>
+						<div class="card_item" id="chk03_content">
+							<div class="badge_cont">
+								<span class="badge ty3 colorD1">등록</span>
+							</div>
+							<div class="card_item_info">
+								<div class="txt1">입금계좌번호</div>
+								<div class="txt2">
+									<span class="account_no">000-000000-00-000</span>
+								</div>
+							</div>
+							<div class="card_item_sub_info">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty1">이체금액</span>
+									</span>
+									<span class="line_right">
+										<span class="money">2,000,000</span>
+										<span class="txt_unit">원</span>
+										<span class="hidden">해당화면 이동</span>
+									</span>
+								</p>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">이체은행</span>
+									</span>
+									<span class="line_right">
+										<span class="txt bank_name">기업은행</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<h4 class="guide_h4">Card_item - radio + link</h4>
+					<div class="card_item_wrap ty1">
+						<div class="card_chkbox">
+							<input type="radio" name="rdo" id="rdo02" />
+							<label for="rdo02" aria-labelledby="rdo02_content"></label>
+						</div>
+						<div class="card_item" id="rdo02_content">
+							<div class="card_item_info">
+								<div class="txt1">송금일자</div>
+								<div class="txt2">
+									<span class="account_no">2024-05-17</span>
+								</div>
+							</div>
+							<div class="card_item_sub_info">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty1">송금금액</span>
+									</span>
+									<span class="line_right">
+										<button type="button" class="btn link_ty2" role="link">
+											<span class="txt_unit">USD</span>
+											<span class="money">13.05</span>
+											<span class="hidden">해당화면 이동</span>
+										</button>
+									</span>
+								</p>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">거래번호</span>
+									</span>
+									<span class="line_right">
+										<span class="txt account_no">002-35-4O-R2-4008</span>
+									</span>
+								</p>
+
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">받는분</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">GDHHFF</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">국가</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">대한민국(한국)</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<h4 class="guide_h4">Card_item - radio</h4>
+					<div class="card_item_wrap ty1">
+						<div class="card_chkbox">
+							<input type="radio" name="rdo" id="rdo01" />
+							<label for="rdo01" aria-labelledby="rdo01_content"></label>
+						</div>
+						<div class="card_item" id="rdo01_content">
+							<div class="card_item_info">
+								<div class="txt1">송금일자</div>
+								<div class="txt2">
+									<span class="account_no">2024-05-17</span>
+								</div>
+							</div>
+							<div class="card_item_sub_info">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty1">송금금액</span>
+									</span>
+									<span class="line_right">
+										<span class="txt_unit">USD</span>
+										<span class="money">13.05</span>
+									</span>
+								</p>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">거래번호</span>
+									</span>
+									<span class="line_right">
+										<span class="txt account_no">002-35-4O-R2-4008</span>
+									</span>
+								</p>
+
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">받는분</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">GDHHFF</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">국가</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">대한민국(한국)</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="card_item_wrap ty1">
+						<div class="card_chkbox">
+							<input type="radio" name="rdo" id="rdo03" />
+							<label for="rdo03" aria-labelledby="rdo03_content"></label>
+						</div>
+						<div class="card_item" id="rdo03_content">
+							<div class="badge_cont">
+								<span class="badge ty3 colorETC1">비활동</span>
+							</div>
+							<div class="card_item_info">
+								<div class="txt1">프리미엄카드</div>
+								<div class="txt2">4140-****-****-4385</div>
+							</div>
+						</div>
+					</div>
+					<h4 class="guide_h4">Card_item - link</h4>
+					<div class="card_item link">
+						<a href="#" role="button" class="block">
+							<div class="card_item_info">
+								<div class="txt1">2024-05-12(목)</div>
+								<div class="txt2">000-000000-00-000</div>
+								<div class="txt3">000-000000-00-000</div>
+								<div class="txt4">000-000000-00-000</div>
+							</div>
+							<div class="card_item_sub_info">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty1">거래금액</span>
+									</span>
+									<span class="line_right">
+										<span class="money">0</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty1">거래후잔액</span>
+									</span>
+									<span class="line_right">
+										<span class="money">123</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">거래대상금융기관</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">등록</span>
+									</span>
+								</p>
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">가맹점명</span>
+									</span>
+									<span class="line_right">
+										<span class="txt"></span>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+
+					<h4 class="guide_h4">Card_item - button</h4>
+					<div class="card_item">
+						<div class="card_item_info">
+							<div class="txt1">
+								증소기업자금대출
+								<span class="bar"></span>
+								부품수입금
+							</div>
+							<div class="txt2">
+								<span class="account_no">000-000000-00-000</span>
+							</div>
+						</div>
+						<div class="card_item_sub_info">
+							<p class="line" role="text">
+								<span class="line_left">
+									<span class="tit">대출 잔액</span>
+								</span>
+								<span class="line_right">
+									<span class="money">8,567,600</span>
+									<span class="txt_unit">원</span>
+								</span>
+							</p>
+						</div>
+						<div class="card_item_detail">
+							<p class="line" role="text">
+								<span class="line_left">
+									<span class="tit">만기일</span>
+								</span>
+								<span class="line_right">
+									<span class="date">2018-09-28</span>
+								</span>
+							</p>
+						</div>
+						<button type="button" class="btn_pop_menu" title="거래 선택 목록 보기" onclick="comLayerPopUtil.open('optlist')"></button>
+					</div>
+
+					<div class="bottom_popup_wrap" id="optlist">
+						<div class="bottom_popup">
+							<div class="bottom_popup_header">
+								<h2 class="tit">거래 선택</h2>
+								<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist');">닫기</button>
+							</div>
+							<div class="bottom_popup_body">
+								<ul class="select_list ty6">
+									<li>
+										<button type="button" class="link block" role="link">
+											거래내역조회
+											<span class="hidden">해당화면 이동</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="link block" role="link">
+											이자조회/납입
+											<span class="hidden">해당화면 이동</span>
+										</button>
+									</li>
+									<li>
+										<button type="button" class="link block" role="link">
+											원금상환
+											<span class="hidden">해당화면 이동</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h4 class="guide_h4">Card - 적용기준 - 유형 2(Radio) + 하단버튼</h4>
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="radio" name="name99" id="cardItem91" />
+							<label for="cardItem91" aria-labelledby="testitem91"></label>
+						</div>
+						<div class="card_item" id="testitem91">
+							<div class="card_item_wrap_head">
+								<div class="tit title_text ty1">담뭐시기</div>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">이용자번호</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">00000000</span>
+									</span>
+								</p>
+							</div>
+						</div>
+						<div class="btn_area ty1 btn_del mt_16">
+							<button type="button" class="btn s_4 c_1 r_2">삭제</button>
+						</div>
+					</div>
+					<br />
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="radio" name="name99" id="cardItem92" />
+							<label for="cardItem92" aria-labelledby="testitem92"></label>
+						</div>
+						<div class="card_item" id="testitem92">
+							<div class="card_item_wrap_head">
+								<div class="tit title_text ty1">담뭐시기</div>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">이용자번호</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">00000000</span>
+									</span>
+								</p>
+							</div>
+						</div>
+						<div class="btn_area ty1 btn_del mt_16">
+							<button type="button" class="btn s_4 c_1 r_2">삭제</button>
+						</div>
+					</div>
+
+					<h4 class="guide_h4">Card - 적용기준 - 유형 2(Radio)</h4>
+
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="radio" name="name3" id="cardItem1" />
+							<label for="cardItem1" aria-labelledby="testitem1"></label>
+						</div>
+						<div class="card_item" id="testitem1">
+							<div class="card_item_wrap_head">
+								<div class="tit title_text ty1">담뭐시기</div>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">이용자번호</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">00000000</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="radio" name="name3" id="cardItem2" />
+							<label for="cardItem2" aria-labelledby="testitem2"></label>
+						</div>
+						<div class="card_item" id="testitem2">
+							<div class="card_item_wrap_head">
+								<div class="tit title_text ty1">담뭐시기</div>
+							</div>
+							<div class="card_item_detail">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="tit">이용자번호</span>
+									</span>
+									<span class="line_right">
+										<span class="txt">00000000</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<hr aria-hidden="true" class="divider ty1 full" />
+
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="radio" name="name" id="test1" />
+							<label for="test1" aria-labelledby="test1_content"></label>
+						</div>
+						<div class="card_item" id="test1_content">
+							<div class="card_item_wrap_head">
+								<div class="acount_item ty4">
+									<div class="ico_box ty1 ico_bank_003"></div>
+									<div class="item">
+										<div class="item_top">name1</div>
+										<div class="item_bottom">12,000,123원</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_group show_item">
+								<div class="input_label ty2">이체금액</div>
+								<div class="live_input_group">
+									<div class="live_input ty2 enter">
+										<div class="value" aria-live="assertive" role="button" title="이체금액 입력">
+											500,000,000
+											<span class="unit">원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="radio" name="name" id="test2" />
+							<label for="test2" aria-labelledby="test2_content"></label>
+						</div>
+						<div class="card_item" id="test2_content">
+							<div class="card_item_wrap_head">
+								<div class="acount_item ty4">
+									<div class="ico_box ty1 ico_bank_003"></div>
+									<div class="item">
+										<div class="item_top">name1</div>
+										<div class="item_bottom">12,000,123원</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_group show_item">
+								<div class="input_label ty2">이체금액</div>
+								<div class="live_input_group">
+									<div class="live_input ty2 enter">
+										<div class="value" aria-live="assertive" role="button" title="이체금액 입력">
+											500,000,000
+											<span class="unit">원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="radio" name="name" id="test6" />
+							<label for="test6" aria-labelledby="test6_content"></label>
+						</div>
+						<div class="card_item" id="test6_content">
+							<div class="card_item_wrap_head">
+								<div class="acount_item ty4">
+									<div class="ico_box ty1 ico_bank_003"></div>
+									<div class="item">
+										<div class="item_top">name1</div>
+										<div class="item_bottom">12,000,123원</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_group show_item">
+								<div class="input_label ty2">이체금액</div>
+								<div class="live_input_group">
+									<div class="live_input ty2 enter">
+										<div class="value" aria-live="assertive" role="button" title="이체금액 입력">
+											500,000,000
+											<span class="unit">원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr aria-hidden="true" class="divider ty1 full" />
+
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="radio" name="name1" id="test5" />
+							<label for="test5" aria-labelledby="test5_content"></label>
+						</div>
+						<div class="card_item" id="test5_content">
+							<div class="card_item_wrap_head">
+								<div class="acount_item ty4">
+									<div class="ico_box ty1 ico_bank_003"></div>
+									<div class="item">
+										<div class="item_top">name2</div>
+										<div class="item_bottom">12,000,123원</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_group show_item">
+								<div class="input_label ty2">이체금액</div>
+								<div class="live_input_group">
+									<div class="live_input ty2 enter">
+										<div class="value" aria-live="assertive" role="button" title="이체금액 입력">
+											500,000,000
+											<span class="unit">원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h4 class="guide_h4">Card - 적용기준 - 유형 2(Checkbox)</h4>
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="checkbox" name="" id="test3" />
+
+							<label for="test3" aria-labelledby="test3_content"></label>
+						</div>
+						<div class="card_item" id="test3_content">
+							<div class="card_item_wrap_head">
+								<div class="acount_item ty4">
+									<div class="ico_box ty1 ico_bank_003"></div>
+									<div class="item">
+										<div class="item_top">기업 000-000000-00-000</div>
+										<div class="item_bottom">12,000,123원</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_group show_item">
+								<div class="input_label ty2">이체금액</div>
+								<div class="live_input_group">
+									<div class="live_input ty2 enter">
+										<div class="value" aria-live="assertive" role="button" title="이체금액 입력">
+											500,000,000
+											<span class="unit">원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="card_item_wrap ty2">
+						<div class="card_chkbox">
+							<input type="checkbox" name="" id="test4" />
+
+							<label for="test4" aria-labelledby="test4_content"></label>
+						</div>
+						<div class="card_item" id="test4_content">
+							<div class="card_item_wrap_head">
+								<div class="acount_item ty4">
+									<div class="ico_box ty1 ico_bank_003"></div>
+									<div class="item">
+										<div class="item_top">기업 000-000000-00-000</div>
+										<div class="item_bottom">12,000,123원</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_group show_item">
+								<div class="input_label ty2">이체금액</div>
+								<div class="live_input_group">
+									<div class="live_input ty2 enter">
+										<div class="value" aria-live="assertive" role="button" title="이체금액 입력">
+											500,000,000
+											<span class="unit">원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h4 class="guide_h4">Card - 적용기준 - 유형 3(Checkbox)</h4>
+					<div class="card_item_wrap ty3">
+						<div class="card_chkbox">
+							<input type="checkbox" name="" id="test55" />
+
+							<label for="test55" aria-labelledby="test55_content"></label>
+						</div>
+						<div class="card_item" id="test55_content">
+							<div class="card_item_wrap_head">
+								<div class="acount_item ty4">
+									<div class="ico_box ty1 ico_bank_003"></div>
+									<div class="item">
+										<div class="item_top">기업 000-000000-00-000</div>
+										<div class="item_bottom">12,000,123원</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_group show_item">
+								<div class="input_label ty2">이체금액</div>
+								<div class="live_input_group">
+									<div class="live_input ty2 enter">
+										<div class="value" aria-live="assertive" role="button" title="이체금액 입력">
+											500,000,000
+											<span class="unit">원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br />
+					<br />
+					<br />
+
+					<h4 class="guide_h1">Card item - 적용예정</h4>
+					<h4 class="guide_h4">type1</h4>
+					<div class="card_item_wrap ty1">
+						<div class="card_chkbox">
+							<input type="checkbox" name="" id="chk1" />
+
+							<label for="chk1" aria-labelledby="chk1_content"></label>
+						</div>
+						<div class="card_item" id="chk1_content">
+							<div class="badge_cont">
+								<span class="badge ty3 colorA3">입출금</span>
+								<span class="badge ty3 colorETC1">비활동성</span>
+								<span class="badge ty3 colorD3">등록불가</span>
+							</div>
+							<div class="card_item_info">
+								<div class="txt1">수시입출금11</div>
+								<div class="txt2">
+									<span class="bank_name">기업은행</span>
+									<span class="account_no">
+										000-000000-00-000
+										<span class="txt">(12회차)</span>
+									</span>
+								</div>
+							</div>
+							<div class="card_item_sub_info">
+								<p class="line" role="text">
+									<span class="line_right">
+										<span class="money">8,567,600</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+
+							<div class="acd_wrap accodian_wrap ty2">
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<div class="card_item_detail">
+											<p class="line" role="text">
+												<span class="line_left"><span class="tit">지점명</span></span>
+												<span class="line_right"><span class="txt">영업부</span></span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left"><span class="tit">개설일</span></span>
+												<span class="line_right"><span class="txt">2017.01.01</span></span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left"><span class="tit">만기일</span></span>
+												<span class="line_right"><span class="txt">2017.01.01</span></span>
+											</p>
+											<p class="line" role="text">
+												<span class="line_left"><span class="tit">최종입출금일</span></span>
+												<span class="line_right"><span class="txt">2017.01.01</span></span>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="acd_head accodian_head">
+									<button type="button" title="컨텐츠내용 상세보기" aria-expanded="false" class="acd_btn">
+										<span class="title">더보기</span>
+										<span class="title sub">접기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p style="height: 50px"></p>
+					<h4 class="guide_h4">type2</h4>
+					<div class="card_item_wrap ty1">
+						<div class="card_chkbox">
+							<input type="checkbox" name="" id="chk2" />
+
+							<label for="chk2" aria-labelledby="chk2_content"></label>
+						</div>
+						<div class="card_item" id="chk2_content">
+							<div class="card_item_info">
+								<div class="txt1">
+									<span class="date">2024-05-12</span>
+									&nbsp;
+									<span class="time">20:10:24</span>
+								</div>
+								<div class="txt2">결재대기(보조관리)</div>
+							</div>
+							<div class="card_item_sub_info">
+								<p class="line" role="text">
+									<span class="line_left">
+										<span class="name_ty1">즉시이체(당행)</span>
+									</span>
+									<span class="line_right">
+										<span class="money">69,000,123</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- <p style="height:50px"></p>
+          <h4 class="guide_h4">type3</h4>
+          <div class="card_item mt_16">
+            <input type="checkbox" name="" id="bank_chk01" />
+            <label for="bank_chk01" class="checkbox_label">
+              <div class="card_item_detail ty2">
+                <p class="line" role="text">
+                  <span class="line_left">
+                    <span class="tit">출금계좌번호</span>
+                  </span>
+                  <span class="line_right">
+                    <div class="ico_box ty4 ico_bank_003"></div>
+                    <span class="txt bank_name">기업은행</span>
+                    <span class="txt account_no">(03009399501010)</span>
+                  </span>
+                </p>
+                <p class="line" role="text">
+                  <span class="line_left">
+                    <span class="tit">입금계좌번호</span>
+                  </span>
+                  <span class="line_right">
+                    <div class="ico_box ty4 ico_bank_020"></div>
+                    <span class="txt bank_name">우리은행</span>
+                    <span class="txt account_no">(03009399501010)</span>
+                  </span>
+                </p>
+                <p class="line" role="text">
+                  <span class="line_left">
+                    <span class="tit">이체금액</span>
+                  </span>
+                  <span class="line_right">
+                    <span class="money">69,000,123</span>
+                    <span class="txt_unit">원</span>
+                  </span>
+                </p>
+                <p class="line" role="text">
+                  <span class="line_left">
+                    <span class="tit">예금주</span>
+                  </span>
+                  <span class="line_right">
+                    <span class="txt">홍길동</span>
+                  </span>
+                </p>
+              </div>
+            </label>
+            <div class="acd_wrap accodian_wrap ty2 mt_16">
+              
+              <div class="acd_cont accodian_cont">
+                <div class="inner">
+                  <div class="card_item_detail ty2 view_more_detail">
+                    <p class="line" role="text">
+                      <span class="line_left">
+                        <span class="tit">수수료</span>
+                      </span>
+                      <span class="line_right">
+                        <span class="money">0</span>
+                        <span class="txt_unit">원</span>
+                      </span>
+                    </p>
+                    <p class="line" role="text">
+                      <span class="line_left">
+                        <span class="tit">출금계좌표시내용</span>
+                      </span>
+                      <span class="line_right">
+                        <span class="txt">더블유하우스</span>
+                      </span>
+                    </p>
+                    <p class="line" role="text">
+                      <span class="line_left">
+                        <span class="tit">입금계좌표시내용</span>
+                      </span>
+                      <span class="line_right">
+                        <span class="txt">구태완</span>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="acd_head accodian_head">
+                <button type="button" title="컨텐츠내용 상세보기" aria-expanded="false" class="acd_btn">
+                  <span class="title">더보기</span>
+                  <span class="title sub">접기</span>
+                </button>
+              </div>
+            </div>
+          </div>
+      
+          <p style="height:50px"></p>
+          <h4 class="guide_h4">type4</h4>
+          <ul class="check_info_list">
+            <li class="item">
+              <div class="card_item link link_center check_info_list">
+                <input type="checkbox" name="" id="bank_chk01" />
+                <label for="bank_chk01" class="checkbox_label">
+                  <div class="card_item_detail ty2">
+                    <p class="line" role="text">
+                      <span class="line_left">
+                        <span class="tit">처리상태</span>
+                      </span>
+                      <span class="line_right">
+                        <span class="txt">등록</span>
+                      </span>
+                    </p>
+                    <p class="line" role="text">
+                      <span class="line_left">
+                        <span class="tit">입금계좌번호</span>
+                      </span>
+                      <span class="line_right">
+                        <span class="txt account_no">030-0939-9501010</span>
+                      </span>
+                    </p>
+                    <p class="line" role="text">
+                      <span class="line_left">
+                        <span class="tit">입금은행</span>
+                      </span>
+                      <span class="line_right">
+                        <span class="txt bank_name">기업은행</span>
+                      </span>
+                    </p>
+                    <p class="line" role="text">
+                      <span class="line_left">
+                        <span class="tit">이체금액</span>
+                      </span>
+                      <span class="line_right">
+                        <span class="money">69,000,123</span>
+                        <span class="txt_unit">원</span>
+                      </span>
+                    </p>
+      
+                  </div>
+                </label>
+                <a href="#" role="button" class="btn_link" onclick="uf_goStep(2);">상세목록으로 이동</a>
+              </div>
+            </li>
+          </ul> -->
+
+					<p style="height: 50px"></p>
+					<h4 class="guide_h4">type6</h4>
+					<div class="card_item_wrap ty1">
+						<div class="card_chkbox">
+							<input type="checkbox" name="" id="chk3" />
+
+							<label for="chk3" aria-labelledby="chk3_content"></label>
+						</div>
+						<div class="card_item" id="chk3_content">
+							<div class="badge_cont">
+								<span class="badge ty3 colorETC1">비활동</span>
+							</div>
+							<div class="card_item_info">
+								<div class="txt1">프리미엄카드</div>
+								<div class="txt2">4140-****-****-4385</div>
+							</div>
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_4 c_1 r_2" onclick="uf_goStep(4);">상세정보</button>
+								<button type="button" class="btn s_4 c_3 r_2">계약서조회</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script></script>
+</html>
