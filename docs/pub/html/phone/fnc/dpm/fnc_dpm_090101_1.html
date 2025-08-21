@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="true" class="active">예금</button>
+
+							<button type="button" role="tab" aria-selected="false">적금</button>
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true">
+							<div class="group mt_24">
+								<!-- s: 입력 목록 -->
+
+								<div class="form_group">
+									<h4 class="input_label ty1">예치금액</h4>
+									<div class="live_input_group">
+										<div class="live_input ty2">
+											<div class="value" aria-live="assertive" role="button" title="예치금액 입력">숫자만 입력</div>
+										</div>
+									</div>
+									<h4 class="input_label ty1">예금기간</h4>
+									<div class="input unit_ty1">
+										<input type="num" name="" id="" class="comma" placeholder="숫자만 입력" title="예금기간 입력. 숫자만 입력." />
+
+										<span class="unit">개월</span>
+										<button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+									</div>
+									<h4 class="input_label ty1">연 이자율</h4>
+									<div class="input unit_ty1">
+										<input type="num" name="" id="" class="comma" placeholder="숫자만 입력" title="연 이자율 입력. 숫자만 입력." />
+
+										<span class="unit">%</span>
+										<button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+									</div>
+
+									<h4 class="input_label ty1">과세기간</h4>
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">일반과세</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">비과세</span></button>
+									</div>
+								</div>
+
+								<!-- e: 입력 목록 -->
+								<!-- s: 계산 버튼 -->
+								<div class="btn_area ty1 mt_24">
+									<button type="button" class="btn s_5 c_3 r_2">계산하기</button>
+								</div>
+								<!-- e: 계산 버튼 -->
+								<!-- s: 계산 결과 -->
+								<ul class="d_list ty1 mt_40">
+									<li>
+										<div class="d_list_l">원금합계</div>
+										<div class="d_list_r">
+											<span class="money">12,000,000</span>
+											<span class="txt_unit">원</span>
+										</div>
+									</li>
+									<li>
+										<div class="d_list_l">세전이자</div>
+										<div class="d_list_r">
+											<span class="money">195,000</span>
+											<span class="txt_unit">원</span>
+										</div>
+									</li>
+									<li>
+										<div class="d_list_l">이자과세</div>
+										<div class="d_list_r">
+											<span class="color ty4 money">-30,030</span>
+											<span class="txt_unit">원</span>
+											<br />
+											<span class="txt_style ty4 color ty4">(일반과세 15.4%)</span>
+										</div>
+									</li>
+									<li>
+										<div class="d_list_l">(세후)만기 예상금액</div>
+										<div class="d_list_r">
+											<div class="emphasis">
+												<span class="money">12,456,78</span>
+												<span class="txt_unit">원</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<!-- e: 계산 결과 -->
+							</div>
+						</div>
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group mt_24">
+								<!-- s: 입력 목록 -->
+								<div class="form_group">
+									<h4 class="input_label ty1">월적립액</h4>
+									<div class="live_input_group">
+										<div class="live_input ty2">
+											<div class="value" aria-live="assertive" role="button" title="월적립액 입력">숫자만 입력</div>
+										</div>
+									</div>
+									<h4 class="input_label ty1">적금기간</h4>
+									<div class="input unit_ty1">
+										<input type="num" name="" id="" class="comma" placeholder="숫자만 입력" title="적금기간 입력. 숫자만 입력" />
+
+										<span class="unit">개월</span>
+										<button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+									</div>
+									<h4 class="input_label ty1">연 이자율</h4>
+									<div class="input unit_ty1">
+										<input type="num" name="" id="" class="comma" placeholder="숫자만 입력" title="연 이자율 입력. 숫자만 입력" />
+
+										<span class="unit">%</span>
+										<button type="button" class="del" tabindex="0" aria-hidden="true">텍스트삭제</button>
+									</div>
+
+									<h4 class="input_label ty1">과세기간</h4>
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">일반과세</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">비과세</span></button>
+									</div>
+								</div>
+
+								<!-- e: 입력 목록 -->
+								<!-- s: 계산 버튼 -->
+								<div class="btn_area ty1 mt_24">
+									<button type="button" class="btn s_5 c_3 r_2">계산하기</button>
+								</div>
+								<!-- e: 계산 버튼 -->
+								<!-- s: 계산 결과 -->
+								<ul class="d_list ty1 mt_40">
+									<li>
+										<div class="d_list_l">원금합계</div>
+										<div class="d_list_r">
+											<span class="money">12,000,000</span>
+											<span class="txt_unit">원</span>
+										</div>
+									</li>
+									<li>
+										<div class="d_list_l">세전이자</div>
+										<div class="d_list_r">
+											<span class="money">195,000</span>
+											<span class="txt_unit">원</span>
+										</div>
+									</li>
+									<li>
+										<div class="d_list_l">이자과세</div>
+										<div class="d_list_r">
+											<span class="color ty4 money">-30,030</span>
+											<span class="txt_unit">원</span>
+											<br />
+											<span class="txt_style ty4 color ty4">(일반과세 15.4%)</span>
+										</div>
+									</li>
+									<li>
+										<div class="d_list_l">(세후)만기 예상금액</div>
+										<div class="d_list_r">
+											<div class="emphasis">
+												<span class="money">12,456,78</span>
+												<span class="txt_unit">원</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<!-- e: 계산 결과 -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

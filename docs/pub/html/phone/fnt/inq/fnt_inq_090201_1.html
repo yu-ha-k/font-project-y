@@ -1,0 +1,2604 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 카드내역1(기간별 사용내역 선택하여 조회시) -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap fast_inquiry">
+						<!-- s: 탭 버튼 리스트 -->
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" data-opentab="open2" aria-selected="false">계좌</button>
+							<button type="button" role="tab" data-opentab="open2" aria-selected="true" class="active">카드</button>
+							<button type="button" role="tab" data-opentab="open2" aria-selected="false">펀드</button>
+							<button type="button" role="tab" data-opentab="open2" aria-selected="false">외화/중금채</button>
+						</div>
+						<!-- s: 탭 버튼 리스트 -->
+						<!-- s: tab contents -->
+						<div class="tab_cont mt_24" role="tabpanel" aria-expanded="false" data-expendtab="open1">
+							<!-- s: 조회폼 -->
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">계좌번호</div>
+									<div class="input">
+										<input type="text" name="" id="" title="계좌번호 &#x27;-&#x27;없이 입력" placeholder="&#x27;-없이 입력&#x27;" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">조회구분</div>
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">입금</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">출금</span></button>
+									</div>
+									<div class="input_label ty1">조회방법</div>
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">최신순</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">과거순</span></button>
+									</div>
+									<div class="input_label ty1">조회기간</div>
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active half"><span class="text">최근 20건</span></button>
+										<button type="button" role="radio" aria-checked="false" class="half"><span class="text">당일</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">3일</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">6개월</span></button>
+									</div>
+									<div class="btn_area ty1 mt_24 mb_24">
+										<button type="button" class="btn s_4 c_3 r_2">조회</button>
+									</div>
+								</div>
+							</div>
+							<!-- e: 조회폼 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 조회결과 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<!-- s: 계좌정보 -->
+								<div class="acd_wrap accodian_wrap ty1">
+									<div class="acd_head accodian_head active">
+										<button type="button" title="계좌정보 목록보기" aria-expanded="true" class="acd_btn">
+											<span class="title">계좌정보</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner" style="display: block">
+											<div class="card_item account_summary">
+												<div class="card_item_info">
+													<div class="txt4">
+														<div class="bank_name fw_7">
+															<span class="color ty3">기은상사</span>
+															<span class="bar"></span>
+															<span class="color ty6">보통예금</span>
+														</div>
+													</div>
+													<div class="txt2 color ty6">KTB4차산업1등주분할매수1호(주식)A-E</div>
+													<div class="txt3">
+														<span class="account_no">000-000000-00-000</span>
+													</div>
+													<div class="amount">
+														<span class="money">4,116,820</span>
+														<span class="txt_unit">원</span>
+													</div>
+													<div class="available_amount fw_5 last">
+														<span class="txt color ty6">출금가능액</span>
+														<span class="money color ty7">4,116,820</span>
+														<span class="txt_unit color ty6">원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- e: 계좌정보 -->
+								<!-- s: 검색어 입력 -->
+								<div class="input has_search mt_32">
+									<input type="text" name="" id="" title="검색어(거래적요)를 입력" placeholder="검색어(거래적요)를 입력" />
+
+									<button type="button" class="search">검색</button>
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<!-- e: 검색어 입력 -->
+								<!-- s: 거래적요 목록 -->
+								<ul class="space_list_ty3 mt_32">
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="ib_item link">
+												<div class="ib_item_info">
+													<div class="txt1">2017-07-16</div>
+												</div>
+												<div class="ib_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">익일매수</span>
+														</span>
+														<span class="line_right">
+															<span class="txt txt_blue">입금</span>
+															<span class="money money_blue">200,000</span>
+															<span class="txt_unit txt_unit_blue">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_right">
+															<span class="txt">잔액</span>
+															<span class="money">200,000</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="ib_item link">
+												<div class="ib_item_info justify">
+													<div class="txt1">2017-07-16</div>
+													<div class="txt1">1회차</div>
+												</div>
+												<div class="ib_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">2017년 11월분</span>
+														</span>
+														<span class="line_right">
+															<span class="money money_red">출금</span>
+															<span class="money money_red">200,000</span>
+															<span class="txt_unit txt_unit_red">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="no_result_msg">
+											<div class="msg">조회된 거래내역이 없습니다.</div>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_2 c_1 r_1 w_full">더보기</button>
+								</div>
+								<!-- e: 거래적요 목록 -->
+							</div>
+							<!-- e: 조회결과 -->
+						</div>
+						<div class="group mt_16">
+							<ul class="list_bullet ty1">
+								<li>카드 빠른 조회 서비스는 영업점에서 조회할 카드정보를 등록한 후 이용할 수 있어요.</li>
+							</ul>
+						</div>
+						<div class="tab_cont active mt_24" role="tabpanel" aria-expanded="true" data-expendtab="open2">
+							<!-- s: 조회폼 -->
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">
+										카드번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+
+									<div class="comp_wrap phone">
+										<div class="input no_del">
+											<input type="tel" name="" id="" title="카드번호 첫번째 4자리 입력" />
+										</div>
+										<span>-</span>
+										<button type="button" aria-label="카드번호 두번째 4자리 입력" class="keypad_btn"></button>
+										<span>-</span>
+										<button type="button" aria-label="카드번호 세번째 4자리 입력" class="keypad_btn"></button>
+										<span>-</span>
+										<div class="input no_del">
+											<input type="tel" name="" id="" title="카드번호 마지막 4자리 입력" />
+										</div>
+									</div>
+
+									<div class="input_label ty1">
+										카드비밀번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<button type="button" class="input_button" aria-label="카드 비밀번호 숫자 4자리 입력">숫자 4자리 입력</button>
+									</div>
+									<div class="input_label ty1">
+										사용자정보
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<button type="button" id="acnt_rnno" class="input_button" aria-label="대표자 생년월일 6자리 또는 관리자휴대전화번호 입력">'-'없이 입력</button>
+									</div>
+									<div class="group mt_16">
+										<ul class="list_bullet ty1">
+											<li>대표자 생년월일 6자리 또는 관리자휴대전화번호 입력 (단, 지정카드는 지정자 생년월일 6자리도 가능)</li>
+										</ul>
+									</div>
+
+									<div class="input_label ty1">조회항목</div>
+									<div class="btn_area clickable ty3" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true"><span class="text">청구서</span></button>
+										<button type="button" role="radio" aria-checked="false" class="active"><span class="text">기간별 사용내역</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">연체내역</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">이용한도</span></button>
+									</div>
+									<div class="input_label ty1">조회방법</div>
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">최신순</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">과거순</span></button>
+									</div>
+									<div class="input_label ty1">조회기간</div>
+									<div class="search_group">
+										<div class="btn_area clickable ty4" role="radiogroup">
+											<button type="button" role="radio" aria-checked="true" class="active"><span class="text">당일</span></button>
+											<button type="button" role="radio" aria-checked="false"><span class="text">7일</span></button>
+											<button type="button" role="radio" aria-checked="false"><span class="text">15일</span></button>
+											<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+											<button type="button" role="radio" aria-checked="false"><span class="text">2개월</span></button>
+											<button type="button" role="radio" aria-checked="false"><span class="text">3개월</span></button>
+										</div>
+										<div class="comp_wrap from_to">
+											<div class="input">
+												<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+												<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+											</div>
+											<span>~</span>
+											<div class="input">
+												<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+												<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+											</div>
+										</div>
+									</div>
+
+									<div class="btn_area ty1 mt_24 mb_24">
+										<button type="button" class="btn s_4 c_3 r_2" onclick="uf_goStep(2)">조회</button>
+									</div>
+								</div>
+							</div>
+							<!-- e: 조회폼 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 조회결과 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<!-- s: 승인내역 -->
+								<div class="title_text ty1">승인내역</div>
+								<span></span>
+								<ul class="space_list_ty3">
+									<li>
+										<div class="ib_item">
+											<div class="ib_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="txt">합계</span>
+													</span>
+													<span class="line_right">
+														<span class="money bold">200,000</span>
+														<span class="txt_unit bold">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="txt_unit bold">USD</span>
+														<span class="money bold">0.00</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="ib_item">
+											<div class="ib_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="txt">일시불</span>
+													</span>
+													<span class="line_right">
+														<span class="money bold">200,000</span>
+														<span class="txt_unit bold">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="txt_unit bold">USD</span>
+														<span class="money bold">0.00</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="ib_item">
+											<div class="ib_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="txt">현금서비스</span>
+													</span>
+													<span class="line_right">
+														<span class="money bold">200,000</span>
+														<span class="txt_unit bold">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="txt_unit bold">USD</span>
+														<span class="money bold">0.00</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<!-- e: 승인내역 -->
+							</div>
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 상세내역 -->
+							<div class="group">
+								<div class="title_text ty1">상세내역</div>
+
+								<ul class="space_list_ty3">
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="ib_item link">
+												<div class="ib_item_info justify">
+													<div class="txt1">2024-05-12 15:04</div>
+													<div class="txt1">무역대전송금</div>
+												</div>
+												<div class="ib_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">
+																국내 단기카드대출
+																<br />
+																(현금서비스)
+															</span>
+														</span>
+														<span class="line_right">
+															<span class="money money_blue">200,000</span>
+															<span class="txt_unit txt_unit_blue">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="ib_item link">
+												<div class="ib_item_info justify">
+													<div class="txt1">2024-05-12 15:04</div>
+													<div class="txt1">무역대전송금</div>
+												</div>
+												<div class="ib_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">
+																국내 단기카드대출
+																<br />
+																(현금서비스)
+															</span>
+														</span>
+														<span class="line_right">
+															<span class="money money_blue">200,000</span>
+															<span class="txt_unit txt_unit_blue">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="no_result_msg">
+											<div class="msg">조회된 거래내역이 없습니다.</div>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_2 c_1 r_1 w_full">더보기</button>
+								</div>
+							</div>
+							<!-- e: 상세내역 -->
+						</div>
+						<div class="tab_cont mt_24" role="tabpanel" aria-expanded="false" data-expendtab="open3">
+							<!-- s: 조회폼 -->
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">계좌번호</div>
+									<div class="input">
+										<input type="text" name="" id="" title="계좌번호 입력" placeholder="&#x27;-없이 입력&#x27;" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">주민/사업자등록번호</div>
+									<div class="input">
+										<input type="text" name="" id="" title="주민번호 앞 6자리/사업자번호 뒤 7자리 입력" placeholder="주민번호 앞 6자리/사업자번호 뒤 7자리" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+
+									<div class="btn_area ty1 mt_24 mb_24">
+										<button type="button" class="btn s_4 c_3 r_2" onclick="uf_goStep(2)">조회</button>
+									</div>
+								</div>
+							</div>
+							<!-- e: 조회폼 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 조회결과 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<div class="card_item">
+									<div class="card_item_info">
+										<div class="txt5">IBK베트남플러스아시아증권Ce</div>
+										<span class="txt3">000-000000-00-000</span>
+									</div>
+								</div>
+								<!-- s: 상세내역 -->
+								<div class="group_item mt_16">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">고객명</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">황상공주봄자정수고무홍보</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">평가금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">495,445,560</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">출금합계</span>
+											</span>
+											<span class="line_right">
+												<span class="money">495,445,560</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 투자원금</span>
+											</span>
+											<span class="line_right">
+												<span class="money">495,445,560</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">판매수수료</span>
+											</span>
+											<span class="line_right">
+												<span class="money">495,445,560</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">수익금</span>
+											</span>
+											<span class="line_right">
+												<span class="money">495,445,560</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">가입일</span>
+											</span>
+											<span class="line_right">
+												<span class="date">2023.03.15</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">만기일</span>
+											</span>
+											<span class="line_right">
+												<span class="date">2023.03.15</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">잔고좌수</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">0</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">기준가격</span>
+											</span>
+											<span class="line_right">
+												<span class="money">495,445,560</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<!-- e: 상세내역 -->
+							</div>
+							<!-- e: 조회결과 -->
+						</div>
+						<div class="tab_cont mt_24" role="tabpanel" aria-expanded="false" data-expendtab="open4">
+							<!-- s: 조회폼 -->
+							<div class="group">
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">외화</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">중금채</span></button>
+								</div>
+								<div class="form_group mt_24">
+									<div class="input_label ty1">계좌번호</div>
+									<div class="input">
+										<input type="text" name="" id="" title="계좌번호 입력" placeholder="&#x27;-없이 입력&#x27;" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">주민/사업자등록번호</div>
+									<div class="input">
+										<input type="text" name="" id="" title="주민번호 앞 6자리/사업자번호 뒤 7자리 입력" placeholder="주민번호 앞 6자리/사업자번호 뒤 7자리" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<!-- s: 외화 -->
+									<div class="input_label ty1">예금종류</div>
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">정기</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">통지</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">당좌</span></button>
+									</div>
+									<div class="input_label ty1">조회기간</div>
+									<div class="search_group">
+										<div class="btn_area clickable ty1" role="radiogroup">
+											<button type="button" role="radio" aria-checked="true" class="active half"><span class="text">최근 20건</span></button>
+											<button type="button" role="radio" aria-checked="false" class="half"><span class="text">당일</span></button>
+											<button type="button" role="radio" aria-checked="false"><span class="text">3일</span></button>
+											<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+											<button type="button" role="radio" aria-checked="false"><span class="text">6개월</span></button>
+										</div>
+										<div class="comp_wrap from_to">
+											<div class="input">
+												<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+												<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+											</div>
+											<span>~</span>
+											<div class="input">
+												<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+												<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup3');"></button>
+											</div>
+										</div>
+									</div>
+									<!-- e: 외화 -->
+								</div>
+								<div class="btn_area ty1 mt_24 mb_24">
+									<button type="button" class="btn s_4 c_3 r_2" onclick="uf_goStep(2)">조회</button>
+								</div>
+							</div>
+							<!-- e: 조회폼 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 조회결과 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<!-- s: 외화조회결과 -->
+								<div class="card_item">
+									<div class="card_item_info">
+										<div class="txt5">
+											<span class="color ty3">기은상사</span>
+											<span class="bar"></span>
+											<span>외화보통</span>
+										</div>
+										<span class="txt3">000-000000-00-000</span>
+									</div>
+								</div>
+								<!-- s: 상세내역 -->
+								<ul class="space_list_ty3 mt_32">
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="ib_item link">
+												<div class="ib_item_info justify">
+													<div class="txt1">
+														<span class="date">2024-05-12</span>
+														<span class="time">16:03</span>
+													</div>
+													<div class="txt1">무역대전송금</div>
+												</div>
+												<div class="ib_item_detail">
+													<p class="line" role="text">
+														<span class="line_right">
+															<span class="txt txt_blue fw_7">입금</span>
+															<span class="txt_unit txt_unit_blue fw_7">USD</span>
+															<span class="money money_blue">200,000</span>
+														</span>
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="ib_item link">
+												<div class="ib_item_info justify">
+													<div class="txt1">
+														<span class="date">2024-05-12</span>
+														<span class="time">16:03</span>
+													</div>
+													<div class="txt1">무역대전송금</div>
+												</div>
+												<div class="ib_item_detail">
+													<p class="line" role="text">
+														<span class="line_right">
+															<span class="money money_red">출금</span>
+															<span class="txt_unit txt_unit_red">USD</span>
+															<span class="money money_red">200,000</span>
+														</span>
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="no_result_msg">
+											<div class="msg">조회된 거래내역이 없습니다.</div>
+										</div>
+									</li>
+								</ul>
+								<!-- e: 상세내역 -->
+								<!-- e: 외화조회결과 -->
+
+								<!-- s: 중금채 조회결과 -->
+								<div class="card_item">
+									<div class="card_item_info">
+										<div class="txt5">
+											<span class="color ty3">담초코</span>
+										</div>
+										<span class="txt3">00000000</span>
+									</div>
+								</div>
+								<!-- s: 상세내역 -->
+								<ul class="space_list_ty3 mt_32">
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(3);">
+											<div class="ib_item link">
+												<div class="ib_item_info justify">
+													<div class="txt1">
+														신규년월일 :
+														<span class="date">2024-05-12</span>
+													</div>
+													<div class="txt1">1회차</div>
+												</div>
+												<div class="ib_item_detail">
+													<p class="line" role="text">
+														<span class="line_right">
+															<span class="txt">잔액</span>
+															<span class="money">1,000,000</span>
+															<span class="txt_unit fw_4">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+								<!-- e: 상세내역 -->
+								<!-- e: 중금채 조회결과 -->
+							</div>
+							<!-- e: 조회결과 -->
+						</div>
+						<!-- e: tab contents -->
+					</div>
+				</div>
+				<!-- s: step1 카드내역1 -->
+
+				<!-- s: step2 카드내역2(연체내역 선택하여 조회시) -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap fast_inquiry">
+						<!-- s: 탭 버튼 리스트 -->
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="false">계좌내역</button>
+							<button type="button" role="tab" aria-selected="true" class="active">카드조회</button>
+							<button type="button" role="tab" aria-selected="false">펀드수익률</button>
+							<button type="button" role="tab" aria-selected="false">외화/중금채</button>
+						</div>
+						<!-- s: 탭 버튼 리스트 -->
+						<!-- s: tab contents -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open1">계좌내역</div>
+						<div class="tab_cont active mt_24" role="tabpanel" aria-expanded="true" data-expendtab="open2">
+							<!-- s: 조회폼 -->
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">
+										카드번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" title="카드번호 입력" placeholder="&#x27;-없이 입력&#x27;" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">
+										카드비밀번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<button type="button" class="input_button" aria-label="카드 비밀번호 숫자 4자리 입력">숫자 4자리 입력</button>
+									</div>
+									<div class="input_label ty1">
+										주민/사업자등록번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" title="주민/사업자등록번호 사업자번호 뒤 7자리 입력" placeholder="사업자번호 뒤 7자리" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">조회항목</div>
+									<div class="btn_area clickable ty3" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false"><span class="text">청구서</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">기간별 사용내역</span></button>
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">연체내역</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">이용한도</span></button>
+									</div>
+
+									<div class="btn_area ty1 mt_24 mb_24">
+										<button type="button" class="btn s_4 c_3 r_2" onclick="uf_goStep(3)">조회</button>
+									</div>
+								</div>
+							</div>
+							<!-- e: 조회폼 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 조회결과 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 연체금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">495,445,560</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">결제은행</span>
+											</span>
+											<span class="line_right">
+												<span class="bank_name">기업은행</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">결제계좌번호</span>
+											</span>
+											<span class="line_right">
+												<span class="account_no">000-000000-00-000</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 청구금액 상세정보 -->
+							<div class="group">
+								<div class="acd_wrap accodian_wrap ty1">
+									<div class="acd_head accodian_head active">
+										<button type="button" title="청구금액 상세정보 목록보기" aria-expanded="true" class="acd_btn">
+											<span class="title">
+												<span class="left">청구금액 상세정보</span>
+											</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner" style="display: block">
+											<div class="group_item">
+												<div class="group_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">국내 일시불</span>
+														</span>
+														<span class="line_right">
+															<span class="money">495,445,560</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">국내 단기카드대출(현금서비스)</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">할부</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">해외 일시불</span>
+														</span>
+														<span class="line_right">
+															<span class="money">69,000,123</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">해외 단기카드대출(현금서비스)</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">과오납입금</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">일부결제금액이월(리볼빙) 국내 일시불</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">일부결제금액이월 국내 단기카드대출</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">일부결제금액이월(리볼빙) 해외 일시불</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">일부결제금액이월 해외 단기카드대출</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">연회비</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">참! 좋은 장기카드대출(카드론)</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">국내 체크일시불</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">대차대조표1</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+											<div class="result_box mt_16">
+												<p class="line">
+													<span class="line_left">총 청구금액</span>
+													<span class="line_right">
+														<span class="money color ty3">99,999,999</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- e: 청구금액 상세정보 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 청구금액 -->
+							<div class="group">
+								<div class="acd_wrap accodian_wrap ty1">
+									<div class="acd_head accodian_head active">
+										<button type="button" title="청구금액 목록보기" aria-expanded="true" class="acd_btn">
+											<span class="title">
+												<span class="left">청구금액</span>
+											</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner" style="display: block">
+											<div class="group_item">
+												<div class="group_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">연체료</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">청구금액</span>
+														</span>
+														<span class="line_right">
+															<span class="money">69,000,123</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수수료</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+											<div class="result_box mt_16">
+												<p class="line">
+													<span class="line_left">총계</span>
+													<span class="line_right">
+														<span class="money color ty3">99,999,999</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- e: 청구금액 -->
+							<!-- e: 상세내역 -->
+							<!-- e: 조회결과 -->
+						</div>
+					</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open3">펀드수익률</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open4">외화/중금채</div>
+					<!-- e: tab contents -->
+				</div>
+				<!-- s: step2 카드내역2 -->
+
+				<!-- s: step3 카드내역3(청구서 선택하여 조회시) -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap fast_inquiry">
+						<!-- s: 탭 버튼 리스트 -->
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="false">계좌내역</button>
+							<button type="button" role="tab" aria-selected="true" class="active">카드조회</button>
+							<button type="button" role="tab" aria-selected="false">펀드수익률</button>
+							<button type="button" role="tab" aria-selected="false">외화/중금채</button>
+						</div>
+						<!-- s: 탭 버튼 리스트 -->
+						<!-- s: tab contents -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open1">계좌내역</div>
+						<div class="tab_cont active mt_24" role="tabpanel" aria-expanded="true" data-expendtab="open2">
+							<!-- s: 조회폼 -->
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">
+										카드번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" title="카드번호 입력" placeholder="&#x27;-없이 입력&#x27;" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">
+										카드비밀번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<button type="button" class="input_button" aria-label="카드 비밀번호 숫자 4자리 입력">숫자 4자리 입력</button>
+									</div>
+									<div class="input_label ty1">
+										주민/사업자등록번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" title="주민/사업자등록번호 사업자번호 뒤 7자리 입력" placeholder="사업자번호 뒤 7자리" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">조회항목</div>
+									<div class="btn_area clickable ty3" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">청구서</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">기간별 사용내역</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">연체내역</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">이용한도</span></button>
+									</div>
+									<div class="input_label ty1">조회구분</div>
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">요약조회</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">전체</span></button>
+									</div>
+
+									<div class="btn_area ty1 mt_24 mb_24">
+										<button type="button" class="btn s_4 c_3 r_2" onclick="uf_goStep(4)">조회</button>
+									</div>
+								</div>
+							</div>
+							<!-- e: 조회폼 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 조회결과 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<div class="form_group mt_16">
+									<div class="input_label ty2">청구일 선택</div>
+									<div class="dropdown ty2" role="button" title="청구일 목록 보기" onclick="comLayerPopUtil.open('optlist1');">
+										<div class="dropdown_text">선택</div>
+									</div>
+								</div>
+								<div class="group_item mt_16">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">청구금액 총계</span>
+											</span>
+											<span class="line_right">
+												<span class="money">495,445,560</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">결제은행</span>
+											</span>
+											<span class="line_right">
+												<span class="bank_name">기업은행</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">결제계좌번호</span>
+											</span>
+											<span class="line_right">
+												<span class="account_no">000-000000-00-000</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">결제일자</span>
+											</span>
+											<span class="line_right">
+												<span class="date">2023.03.15</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 청구금액 상세정보 -->
+							<div class="group">
+								<div class="acd_wrap accodian_wrap ty1">
+									<div class="acd_head accodian_head active">
+										<button type="button" title="청구금액 상세정보 목록보기" aria-expanded="true" class="acd_btn">
+											<span class="title">
+												<span class="left">청구금액 상세정보</span>
+											</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner" style="display: block">
+											<div class="group_item">
+												<div class="group_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">연체료</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">청구금액</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수수료</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+											<div class="result_box mt_16">
+												<p class="line">
+													<span class="line_left">총계</span>
+													<span class="line_right">
+														<span class="money color ty3">99,999,999</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+											<div class="acd_wrap accodian_wrap ty3 active">
+												<div class="acd_head accodian_head">
+													<button type="button" aria-expanded="true" class="acd_btn">
+														<span class="title">꼭 알아두세요!</span>
+													</button>
+												</div>
+												<div class="acd_cont accodian_cont">
+													<div class="inner">
+														<ul class="list_bullet ty1">
+															<li>님께서 에 결제하실 금액은 원 입니다.</li>
+															<li>일시불/할부 이용기간: 부터 까지</li>
+															<li>단기카드대출(현금서비스) 이용기간: 부터 까지</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- e: 청구금액 상세정보 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 승인내역 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<div class="title_text ty1">승인내역</div>
+								<span></span>
+								<ul class="space_list_ty3">
+									<li>
+										<div class="ib_item">
+											<div class="ib_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="txt">합계</span>
+													</span>
+													<span class="line_right">
+														<span class="money bold">200,000</span>
+														<span class="txt_unit bold">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="txt_unit bold">USD</span>
+														<span class="money bold">0.00</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="ib_item">
+											<div class="ib_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="txt">일시불</span>
+													</span>
+													<span class="line_right">
+														<span class="money bold">200,000</span>
+														<span class="txt_unit bold">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="txt_unit bold">USD</span>
+														<span class="money bold">0.00</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="ib_item">
+											<div class="ib_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="txt">현금서비스</span>
+													</span>
+													<span class="line_right">
+														<span class="money bold">200,000</span>
+														<span class="txt_unit bold">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="txt_unit bold">USD</span>
+														<span class="money bold">0.00</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- e: 승인내역 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 상세내역 -->
+							<div class="group">
+								<div class="title_text ty1">상세내역</div>
+								<ul class="space_list_ty3">
+									<li>
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="ib_item link">
+												<div class="ib_item_info justify">
+													<div class="txt1">2024-05-12 15:04</div>
+													<div class="txt1">무역대전송금</div>
+												</div>
+												<div class="ib_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">
+																국내 단기카드대출
+																<br />
+																(현금서비스)
+															</span>
+														</span>
+														<span class="line_right">
+															<span class="money money_blue">200,000</span>
+															<span class="txt_unit txt_unit_blue">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="no_result_msg">
+											<div class="msg">조회된 거래내역이 없습니다.</div>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_2 c_1 r_1 w_full">더보기</button>
+								</div>
+							</div>
+							<!-- e: 상세내역 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- e: 조회결과 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<div class="group_item mt_16">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 연체금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">495,445,560</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">결제은행</span>
+											</span>
+											<span class="line_right">
+												<span class="bank_name">기업은행</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">결제계좌번호</span>
+											</span>
+											<span class="line_right">
+												<span class="account_no">000-000000-00-000</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 연체내역 -->
+							<div class="group">
+								<div class="title_text ty1">연체내역</div>
+								<div class="acd_wrap accodian_wrap ty1">
+									<div class="acd_head accodian_head active">
+										<button type="button" title="청구금액 상세정보 목록보기" aria-expanded="true" class="acd_btn">
+											<span class="title">
+												<span class="left">청구금액 상세정보</span>
+											</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner" style="display: block">
+											<div class="title_text ty1">청구금액</div>
+											<div class="group_item">
+												<div class="group_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">연체료</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">청구금액</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수수료</span>
+														</span>
+														<span class="line_right">
+															<span class="money">0</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+												</div>
+											</div>
+											<div class="result_box mt_16">
+												<p class="line">
+													<span class="line_left">총 결제금액</span>
+													<span class="line_right">
+														<span class="money color ty3">99,999,999</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- e: 연체내역 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 기본한도(본인한도 정보) -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<div class="title_text ty1">기본한도(본인한도 정보)</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 1회한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">0</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 1일한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">0</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 월한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">0</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">이용금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">0</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="result_box mt_16">
+									<p class="line">
+										<span class="line_left">이용가능금액</span>
+										<span class="line_right">
+											<span class="money color ty3">99,999,999</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<!-- e: 기본한도(본인한도 정보) -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 현재 체크카드 특인한도내역 -->
+							<div class="group">
+								<ul class="space_list_ty1">
+									<li>
+										<div class="title_text ty1">현재 체크카드 특인한도내역</div>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">특인한도 시작일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">24-07-29</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">특인한도 종료일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">24-07-29</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="title_text ty1">사업장 한도</div>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">총 특인1회한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">총 특인1일한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">총 특인월한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용가능금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="title_text ty1">카드한도(별도등록분)</div>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">총 카드특인 1회한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">총 카드특인 1일한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">총 카드특인 월한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용가능금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- e: 현재 체크카드 특인한도내역 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 기업 총 한도내역 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<div class="title_text ty1">기업 총 한도내역</div>
+								<ul class="space_list_ty1">
+									<li>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">기업명</span>
+													</span>
+													<span class="line_right">
+														<span class="company_name">웹캐시</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">청구서 조회번호(한도조회용)</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">0001</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">기업 총 한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">10</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">기업 총 사용금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">10</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">기업 총 잔여한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">10</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">사업장 총 한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">10</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">사업장 총 사용금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">10</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">사업장 총 잔여한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">10</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- e: 기업 총 한도내역 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 카드별 한도내역 -->
+							<div class="group">
+								<ul class="space_list_ty1">
+									<li>
+										<div class="title_text ty1">카드별 한도내역</div>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">한도금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">사용금액</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">잔여한도</span>
+													</span>
+													<span class="line_right">
+														<span class="money">0</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="title_text ty1">카드별 한도내역</div>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">국외한도</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+														<span class="money">0</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">사용금액</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+														<span class="money">0</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">잔여한도</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+														<span class="money">0</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="title_text ty1">국외ATM</div>
+										<div class="group_item">
+											<div class="group_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">한도금액</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+														<span class="money">0</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">사용금액</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+														<span class="money">0</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">잔여한도</span>
+													</span>
+													<span class="line_right">
+														<span class="txt_unit">USD</span>
+														<span class="money">0</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- e: 카드별 한도내역 -->
+						</div>
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open3">펀드수익률</div>
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open4">외화/중금채</div>
+						<!-- e: tab contents -->
+					</div>
+				</div>
+				<!-- s: step3 카드내역3 -->
+
+				<!-- s: step4 카드내역4(이용한도 선택하여 조회시) -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap fast_inquiry">
+						<!-- s: 탭 버튼 리스트 -->
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="false">계좌내역</button>
+							<button type="button" role="tab" aria-selected="true" class="active">카드조회</button>
+							<button type="button" role="tab" aria-selected="false">펀드수익률</button>
+							<button type="button" role="tab" aria-selected="false">외화/중금채</button>
+						</div>
+						<!-- s: 탭 버튼 리스트 -->
+						<!-- s: tab contents -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open1">계좌내역</div>
+						<div class="tab_cont active mt_24" role="tabpanel" aria-expanded="true" data-expendtab="open2">
+							<!-- s: 조회폼 -->
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">
+										카드번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" title="카드번호 입력" placeholder="&#x27;-없이 입력&#x27;" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">
+										카드비밀번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<button type="button" class="input_button" aria-label="카드 비밀번호 숫자 4자리 입력">숫자 4자리 입력</button>
+									</div>
+									<div class="input_label ty1">
+										주민/사업자등록번호
+										<span class="ess_text ty1">필수</span>
+									</div>
+									<div class="input">
+										<input type="text" name="" id="" title="주민/사업자등록번호 사업자번호 뒤 7자리 입력" placeholder="사업자번호 뒤 7자리" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">조회항목</div>
+
+									<div class="btn_area clickable ty3" role="radiogroup">
+										<button type="button" role="radio" aria-checked="false"><span class="text">청구서</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">기간별 사용내역</span></button>
+										<button type="button" role="radio" aria-checked="true"><span class="text">연체내역</span></button>
+										<button type="button" role="radio" aria-checked="false" class="active"><span class="text">이용한도</span></button>
+									</div>
+
+									<div class="btn_area ty1 mt_24 mb_24">
+										<button type="button" class="btn s_4 c_3 r_2" onclick="uf_goStep(5)">조회</button>
+									</div>
+								</div>
+							</div>
+							<!-- e: 조회폼 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 조회결과 -->
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2024.05.27 ~ 2024.06.05</li>
+									</ul>
+								</div>
+								<div class="title_text ty1">기업 총 한도내역</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">기업명</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">웹캐시</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">청구서 조회번호(한도조회용)</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">0001</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="group_item mt_16">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">기업 총 한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">기업 총 사용금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">기업 총 잔여한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="group_item mt_16">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">사업장 총 한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">사업장 총 사용금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">사업장 총 잔여한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 카드별 한도내역 -->
+							<div class="group">
+								<div class="title_text ty1">카드별 한도내역</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 1회한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 사용금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="result_box mt_16">
+									<p class="line">
+										<span class="line_left">총 잔여한도</span>
+										<span class="line_right">
+											<span class="money color ty3">99,999,999</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+								<div class="title_text ty1 mt_24">국외한도</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">한도금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">사용금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">잔여한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="title_text ty1 mt_24">국외ATM</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">한도금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">사용금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">잔여한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- e: 카드별 한도내역 -->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 기본한도 -->
+							<div class="group">
+								<div class="title_text ty1">기본한도(본인한도 정보)</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 1회한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 1일한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 월한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">이용금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="result_box mt_16">
+									<p class="line">
+										<span class="line_left">이용가능금액</span>
+										<span class="line_right">
+											<span class="money color ty3">99,999,999</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+								<div class="title_text ty1 mt_24">현재 체크카드 특인한도내역</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">특인한도 시작일</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">특인한도 종료일</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="title_text ty1 mt_24">사업장 한도</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 특인1회한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 특인1일한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 특인월한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">이용금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">이용가능금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="title_text ty1 mt_24">카드한도(별도등록분)</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 카드특인 1회한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 카드특인 1일한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">총 카드특인 월한도</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">이용금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">이용가능금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money">123,456,789</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- e: 기본한도 -->
+							<!-- e: 상세내역 -->
+							<!-- e: 조회결과 -->
+						</div>
+					</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open3">펀드수익률</div>
+					<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open4">외화/중금채</div>
+					<!-- e: tab contents -->
+				</div>
+				<!-- s: step4 카드내역4 -->
+
+				<!-- s: step5 상세내역 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3 fast_inquiry">
+						<div class="group">
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이용구분</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">국내 단기카드대출(현금서비스)</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">승인일시</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2016-10-24</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신용카드번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">****0000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">이용가맹점</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">씨유</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">승인금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">7,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">할부개월</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">00</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">승인번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">0000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">취소일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2024-06-22</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">매출표접수일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2024-06-22</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 상세내역 -->
+
+				<!-- s: popup -->
+				<div class="bottom_popup_wrap" id="popup3">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">달력</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup3');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+								<div class="calendar_select_wrap">
+									<div class="calendar_select">
+										<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+											<span class="t_hidden">이전 년도</span>
+										</button>
+										<span>
+											<em id="year">2024</em>
+											년
+										</span>
+										<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+											<span class="t_hidden">다음 년도</span>
+										</button>
+									</div>
+									<div class="calendar_select">
+										<button id="preMon" type="button" class="btn_prev" title="이전 달">
+											<span class="t_hidden">이전 달</span>
+										</button>
+										<span>
+											<em id="mon">5</em>
+											월
+										</span>
+										<button id="nextMon" type="button" class="btn_next" title="다음 달">
+											<span class="t_hidden">다음 달</span>
+										</button>
+									</div>
+								</div>
+								<div class="wrap_calendar">
+									<table class="calendar weekday">
+										<caption class="hidden">상세기간 달력</caption>
+										<colgroup>
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="sun">일</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col" class="sat">토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													28
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													29
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													30
+												</td>
+												<td>
+													<button type="button">1</button>
+												</td>
+												<td>
+													<button type="button">2</button>
+												</td>
+												<td>
+													<button type="button">3</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">4</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">5</button>
+												</td>
+												<td>
+													<button type="button">6</button>
+												</td>
+												<td>
+													<button type="button">7</button>
+												</td>
+												<td>
+													<button type="button">8</button>
+												</td>
+												<td>
+													<button type="button">9</button>
+												</td>
+												<td>
+													<button type="button">10</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">11</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">12</button>
+												</td>
+												<td>
+													<button type="button">13</button>
+												</td>
+												<td>
+													<button type="button">14</button>
+												</td>
+												<td>
+													<button type="button">15</button>
+												</td>
+												<td>
+													<button type="button">16</button>
+												</td>
+												<td>
+													<button type="button">17</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">18</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">19</button>
+												</td>
+												<td>
+													<button type="button">20</button>
+												</td>
+												<td class="today">
+													<button type="button" title="오늘 날짜">21</button>
+												</td>
+												<td>
+													<button type="button">22</button>
+												</td>
+												<td class="on term">
+													<button type="button" title="선택된 날짜">23</button>
+												</td>
+												<td class="off">
+													<button type="button">24</button>
+												</td>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">25</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">26</button>
+												</td>
+												<td class="off">
+													<button type="button">27</button>
+												</td>
+												<td class="off">
+													<button type="button">28</button>
+												</td>
+												<td class="off">
+													<button type="button">29</button>
+												</td>
+												<td class="off">
+													<button type="button">30</button>
+												</td>
+												<td class="off">
+													<button type="button">31</button>
+												</td>
+												<td class="btn_next">
+													<em class="hidden">다음달</em>
+													1
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom_popup_wrap" id="optlist1" title="청구일 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">청구일 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

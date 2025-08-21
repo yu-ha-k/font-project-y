@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+</head>
+<body>
+<div class="wrap"> 
+    <!-- s: 대출심사 -->
+    <div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+        <div class="util_btn_wrap"> <a href="#" class="btn s_1 c_1 r_3 link_to"> 전화상담 <span class="ico_box ico_tel_consul"></span> </a> <a href="#" class="btn s_1 c_1 r_3 link_to"> 용어사전 <span class="ico_box ico_dictionary"></span> </a> </div>
+        
+        <!-- s: step1 심사결과 -->
+        <div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">심사결과</div>
+                    <div class="txt_style ty2">대출 심사결과 확인</div>
+                    <p class="txt_style ty2 fw_4 mt_16 mb_24">대출가능 여부와 가능금액, 금리를 안내해드립니다.</p>
+                    <div class="bg_box ty1 txt_style ty7"> 고객님의 <span class="color ty3">대출가능한도는 10,000,000원</span> 이에요. </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- s: 폼 요소 -->
+                <div class="group">
+                    <div class="form_group">
+                        <div class="tooltip_box">
+                            <div class="input_label ty1">대출금리(최저)</div>
+                            <div class="tooltip_wrap ty1">
+                                <button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+                                <div class="tooltip_wrap_container" role="tooltip">
+                                    <div class="inner">대출금리는 대출기간 1년을 기준으로 산출하였으며, 본 상품의 감면금리가 적용된 금리입니다. 대출기간의 변경 또는 대출실행일의 시장금리 변동에 따라 금리는 변동될 수 있습니다.</div>
+                                    <button type="button" class="tooltip_close">도움말 닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comp_wrap with_txt mt_8"> <span class="txt">고정금리</span>
+                            <div class="input">
+                                <input type="tel" name="" id="" title="고정금리 입력" readonly />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <span class="txt">%</span> </div>
+                        <div class="comp_wrap with_txt"> <span class="txt">변동금리</span>
+                            <div class="input">
+                                <input type="tel" name="" id="" title="변동금리 입력" readonly />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <span class="txt">%</span> </div>
+                    </div>
+                </div>
+                <!-- e: 폼 요소 -->
+                
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <ul class="list_bullet ty2">
+                        <li>권리조사 결과에 따라 대출할 수 없거나, 대출한도가 변동될 수 있습니다.</li>
+                        <li>대출금리는 대출만기 1년, 코리보(KORIBOR) 3월물(대출금리 '변동'의 경우) 상품의 감면금리(0.5%p)를 적용해 산출했으며, 최종 대출한도, 대출기간, 금리종류, 대출실행일의 시장금리에 따라 변동될 수 있습니다.</li>
+                        <li>대출진행을 계속하려면 [다음] 눌러 주세요.</li>
+                    </ul>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step1 심사결과 --> 
+        
+        <!-- s: step2 정보입력 -->
+        <div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">정보입력</div>
+                    <div class="txt_style ty2">대출금액 및 상세정보 입력</div>
+                    <p class="txt_style ty2 fw_4 mt_16 mb_24">대출진행을 계속 진행하려면 다음 사항을 입력해 주세요.</p>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <div class="form_group">
+                        <div class="tooltip_box">
+                            <div class="input_label ty1"> 대출 신청금액 <em class="ess_text ty1">필수</em> </div>
+                            <div class="tooltip_wrap ty1">
+                                <button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+                                <div class="tooltip_wrap_container" role="tooltip">
+                                    <div class="inner">대출 신청금액은 최소 3,000만원부터 최대 대출 가능금액까지 100만원 단위로 입력 가능합니다.</div>
+                                    <button type="button" class="tooltip_close">도움말 닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live_input_group">
+                            <div class="live_input ty2">
+                                <div class="value" aria-live="assertive" role="button" title="대출 신청금액 입력">숫자만 입력</div>
+                            </div>
+                        </div>
+                        <ul class="list_bullet ty1 mt_8">
+                            <li>최소 3,000만원 이상 가능(100만원 단위)</li>
+                        </ul>
+                        <div class="input_label ty1 mt_24"> 자금용도 <em class="ess_text ty1">필수</em> </div>
+                        <div class="dropdown ty2" role="button" title="자금용도 목록보기" onclick="comLayerPopUtil.open('popup1-1');">
+                            <div class="dropdown_text">운전자금</div>
+                        </div>
+                        <div class="tooltip_box mt_24">
+                            <div class="input_label ty1"> 대출금 상환방법 <em class="ess_text ty1">필수</em> </div>
+                            <div class="tooltip_wrap ty1">
+                                <button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+                                <div class="tooltip_wrap_container" role="tooltip">
+                                    <div class="inner">
+                                        <ul>
+                                            <li>만기일시상환 : 대출만기까지 대출금 이자만 부담하고 대출만기에 대출금 전액을 상환합니다.</li>
+                                            <li>매월원금균등분할상환 : 대출원금은 거치기간 없이 최초 도래하는 대출이자 자동이체일부터 대출만기까지 매월 균등하게 나누어서 상환합니다. 단, 할부금은 만원 단위로 분할하여 납부하되, 우수리는 초회할부금에 편입합니다.</li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="tooltip_close">도움말 닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown ty2" role="button" title="대출금 상환방법 목록보기" onclick="comLayerPopUtil.open('popup1-2');">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                        <div class="input_label ty1 mt_24"> 대출기간 <em class="ess_text ty1">필수</em> </div>
+                        <div class="comp_wrap">
+                            <div class="dropdown ty2" role="button" title="대출기간 년도 선택" onclick="comLayerPopUtil.open('popup1-3');">
+                                <div class="dropdown_text">1년</div>
+                            </div>
+                            <div class="dropdown ty2" role="button" title="대출기간 월 선택" onclick="comLayerPopUtil.open('popup1-4');">
+                                <div class="dropdown_text">0월</div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 대출금리 종류 <em class="ess_text ty1">필수</em> </div>
+                        <div class="dropdown ty2" role="button" title="대출금리 종류 목록보기" onclick="comLayerPopUtil.open('popup1-5');">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                        <div class="mt_24">
+                            <div class="txt_style ty10">예상금리</div>
+                            <div class="btn_area ty5 mt_8">
+                                <button type="button" class="btn s_2 r_3 c_1">조회</button>
+                            </div>
+                            <div class="comp_wrap mt_12">
+                                <div class="input">
+                                    <input type="text" name="" id="" value="3개월 변동금리" title="금리종류 입력" readonly />
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                                <div class="input">
+                                    <input type="text" name="" id="" value="3.5%" title="예상금리 입력" readonly />
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                            </div>
+                            <ul class="list_bullet ty1">
+                                <li>이 대출상품은 신청기간 및 권리조사 등 소요시간에 따라 당일 또는 다음 영업일에 실행되는 대출상품입니다. 다음 영업일에 실행되는 경우 기준금리 변동에 따라 대출금리는 변동될 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <div class="input_label ty1"> 대출이자 자동이체일 <em class="ess_text ty1">필수</em> </div>
+                        <div class="comp_wrap with_txt"> <span class="txt">매월</span>
+                            <div class="dropdown ty2" role="button" title="대출이자 자동이체일 목록보기" onclick="comLayerPopUtil.open('popup1-6');">
+                                <div class="dropdown_text">선택</div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1"> 대출금 입금 및 자동이체계좌 선택 <em class="ess_text ty1">필수</em> </div>
+                        <div class="dropdown ty2" role="button" title="대출금 입금 및 자동이체계좌 선택 목록보기" onclick="comLayerPopUtil.open('popup1-7');">
+                            <div class="dropdown_text">선택</div>
+                        </div>
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <ul class="list_bullet ty2">
+                        <li>대출실행은 약정서 점검, 권리보험 가입, 은행 전자서명, 등기 신청, 대출실행 순으로 진행되고, 점검 결과에 문제가 없으면 당일 또는 다음 영업일에 완료됩니다.</li>
+                    </ul>
+                </div>
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step2 정보입력 --> 
+        
+        <!-- s: step3 인지세확인 -->
+        <div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+            <div class="content_wrap ty3"> 
+                <!-- s: 인지세 면제 확인 -->
+                <div class="group">
+                    <div class="title_text ty1">인지세 확인</div>
+                    <div class="content_head ty1">
+                        <div class="content_head_left">
+                            <div class="tooltip_box">
+                                <div class="txt_style ty2">인지세 면제 확인</div>
+                                <div class="tooltip_wrap ty1">
+                                    <button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+                                    <div class="tooltip_wrap_container" role="tooltip">
+                                        <div class="inner">중소기업창업 지원법에서 정한 업종을 창업한 자가 중소기업 창업일로부터 2년 이내 당해 사업과 관련하여 여신을 받는 경우에는 ‘조세특례제한법’에서 정하는 기간까지는 인지세를 면제받을 수 있습니다. 면제 대상 여부를 판별하기 위해 관련 정보를 정확하게 입력해 주십시오.</div>
+                                        <button type="button" class="tooltip_close">도움말 닫기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="txt_style ty2 fw_5 mt_16">인지세 면제대상 여부를 확인하기 위해 아래 내용을 확인해 주세요.</div>
+                    <ul class="list_number mt_12">
+                        <li>
+                            <div class="list_number_num">1.</div>
+                            <div class="list_number_cont">본인은 「중소기업창업지원법」에 따른 창업자로서 창업일로부터 2년 이내에 해당 사업과 관련해 IBK기업은행으로부터 대출받기 위해 대출약정을 체결할 예정입니다.</div>
+                        </li>
+                        <li>
+                            <div class="list_number_num">2.</div>
+                            <div class="list_number_cont">이에 본인은 「조세특례제한법」 제116조 제1항 제19호에 따른 '창업자에 대한 인지세 면제'의 판정을 위해 「중소기업창업지원법」 제2조 및 같은 법 시행령 제2조에 따른 창업기업에서 제외되는 사유의 해당 여부에 대해 아래와 같이 확인합니다.</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- e: 인지세 면제 확인 --> 
+                
+                <!-- s: 창업일 -->
+                <div class="group mt_32">
+                    <div class="title_text ty1">창업일</div>
+                    <div class="question_list">
+                        <div class="question">
+                            <div class="question_cont"> 사업개시일이 2년 이내에 해당되나요?
+                                <ul class="list_bullet ty1 fw_5 mt_12">
+                                    <li>법인 : 법인설립등기일로부터 2년 이내</li>
+                                    <li>개인 : 사업개시일로부터 2년 이내</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="answer select_answer">
+                            <div class="input">
+                                <input type="text" name="" id="" value="YYYY-MM-DD" title="창업일 입력" readonly />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="btn_area clickable ty2 mt_8" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당 없음</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당</span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 창업일 --> 
+                
+                <!-- s: 업종 -->
+                <div class="group mt_32">
+                    <div class="title_text ty1">업종</div>
+                    <div class="question_list">
+                        <div class="question">
+                            <div class="question_cont"> 사업 업종이 위 제외업종에 해당되나요?
+                                <ul class="list_bullet ty1 fw_5 mt_12">
+                                    <li> 제외 업종
+                                        <ul class="list_number mt_4">
+                                            <li>
+                                                <div class="list_number_num">1.</div>
+                                                <div class="list_number_cont">일반 유흥주점업(I56211)</div>
+                                            </li>
+                                            <li>
+                                                <div class="list_number_num">2.</div>
+                                                <div class="list_number_cont">무도 유흥주점업(I56212)</div>
+                                            </li>
+                                            <li>
+                                                <div class="list_number_num">3.</div>
+                                                <div class="list_number_cont">기타 사행시설 관리 및 운영업(R91249)</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="answer select_answer">
+                            <div class="input">
+                                <input type="text" name="" id="" value="업종 : C15129 (가방 및 기타 보호용 케이스 제작)" title="업종 입력" readonly />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="btn_area clickable ty2 mt_8" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당 없음</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당</span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- e: 업종 --> 
+                
+                <!-- s: 창업형태 -->
+                <div class="group">
+                    <div class="title_text ty1">창업형태</div>
+                    <div class="question_list">
+                        <div class="question">
+                            <div class="question_num">1.</div>
+                            <div class="question_cont"> 다른 사람으로부터 사업을 상속 또는 증여 받아 해당 사업과 같은 종류의 사업을 계속하는 경우 <br />
+                                (다만, 법인을 새로 설립해 해당 사업과 같은 종류의 사업을 계속하는 경우는 제외) </div>
+                        </div>
+                        <div class="answer select_answer">
+                            <div class="btn_area clickable ty2" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당 없음</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당</span> </button>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question_num">2.</div>
+                            <div class="question_cont">개인사업자가 기존 사업을 계속 영위하면서 다른 개인사업자(법인은 제외)를 새로 설립해 사업을 개시하는 것</div>
+                        </div>
+                        <div class="answer select_answer">
+                            <div class="btn_area clickable ty2" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당 없음</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당</span> </button>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question_num">3.</div>
+                            <div class="question_cont"> 개인사업자가 기존 사업을 폐업한 후 사업을 재개해 폐업 전의 사업과 같은 종류의 사업을 계속하는 경우(개인사업자의 법인전환 포함) <br />
+                                [다만, 사업을 폐업한 날부터 3년(부도 또는 파산으로 폐업한 경우는 2년) 이상이 지난 후에 기존 사업과 같은 종류의 사업을 개시하는 경우는 제외] </div>
+                        </div>
+                        <div class="answer select_answer">
+                            <div class="btn_area clickable ty2" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당 없음</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당</span> </button>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question_num">4.</div>
+                            <div class="question_cont"> 개인사업자가 기존 사업을 계속 영위하면서 단독 또는 친족*과 합해 의결권 있는 주식 기준 30%이상 지분 보유 또는 최대 주주인 중소법인을 설립해 기존 사업과 같은 종류의 사업을 개시하는 경우
+                                <div class="txt_style ty5 mt_12">*배우자(사실혼 관계 포함), 6촌 이내의 혈족 및 4촌 이내의 인척</div>
+                            </div>
+                        </div>
+                        <div class="answer select_answer">
+                            <div class="btn_area clickable ty2" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당 없음</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당</span> </button>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question_num">5.</div>
+                            <div class="question_cont">중소법인이 의결권 있는 발행주식 기준 30%이상 지분을 소유함과 동시에(해당 법인과 그 임원이 소유하고 있는 주식을 합산) 최대주주로서 다른 중소법인을 설립하는 경우(업종 동일 여부 불문)</div>
+                        </div>
+                        <div class="answer select_answer">
+                            <div class="btn_area clickable ty2" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당 없음</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당</span> </button>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question_num">6.</div>
+                            <div class="question_cont">중소법인이 조직변경 등 기업형태를 변경해 변경 전의 사업과 같은 종류의 사업을 계속하는 경우</div>
+                        </div>
+                        <div class="answer select_answer">
+                            <div class="btn_area clickable ty2" role="radiogroup">
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당 없음</span> </button>
+                                <button type="button" role="radio" aria-checked="false"> <span class="text">해당</span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- e: 창업형태 --> 
+                
+                <!-- s: 확인사항 -->
+                <div class="group">
+                    <div class="title_text ty1">확인사항</div>
+                    <div class="label">
+                        <input type="checkbox" name="chk" id="chk5-1" />
+                        <label for="chk5-1" class="checkbox"> <i></i> <span class="fw_4"> 본인은 「조세특례제한법」 제116조 제1항 제19호에 따른 <strong>인지세 면제 대상으로 인지세 면제를 신청합니다.</strong> </span> <span class="label_desc_text">※ 향후 인지세 면제 대상이 아닌 것으로 판명되는 경우, 「국세기본법」 제47조 4제9항에 따라 납부하지 않은 세액의 300%에 상당하는 금액이 가산세로 부과될 수 있습니다.</span> </label>
+                    </div>
+                    <div class="label mt_16">
+                        <input type="checkbox" name="chk" id="chk5-2" />
+                        <label for="chk5-2" class="checkbox"> <i></i> <span class="fw_4"> 본인은 「조세특례제한법」 제116조 제1항 제19호에 따른 <strong>인지세 면제 대상이 아님을 확인합니다.</strong> </span> </label>
+                    </div>
+                    <div class="label mt_16">
+                        <input type="checkbox" name="chk" id="chk5-3" />
+                        <label for="chk5-3" class="checkbox"> <i></i> <span class="fw_4">본인은 위 확인서의 중요한 내용에 대해 설명을 듣고 이해했으며, 이로 인해 발생되는 손해에 대해서는 아무런 이의를 제기하지 않겠습니다.</span> </label>
+                    </div>
+                </div>
+                <!-- e: 확인사항 --> 
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step3 인지세확인 --> 
+        
+        <!-- s: step4 정보확인(등기필정보 확인 및 비밀번호 입력) -->
+        <div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">정보확인</div>
+                    <div class="txt_style ty2">등기필정보 확인 및 비밀번호 입력</div>
+                    <p class="txt_style ty2 fw_4 mt_16 mb_24">등기필증 표지에 있는 부동산 고유번호와 일련번호를 다시 확인해 주세요.</p>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- s: 폼 -->
+                <div class="group">
+                    <div class="form_group">
+                        <div class="input_label ty1">부동산 고유번호</div>
+                        <div class="comp_wrap column">
+                            <div class="comp_wrap phone readonly">
+                                <div class="input no_del">
+                                    <input type="tel" name="" id="" value="1234" title="부동산 고유번호 앞 4자리 입력" readonly placeholder="4자리" />
+                                </div>
+                                <span>-</span>
+                                <div class="input no_del">
+                                    <input type="tel" name="" id="" value="1234" title="부동산 고유번호 가운데 4자리 입력" readonly placeholder="4자리" />
+                                </div>
+                                <span>-</span>
+                                <div class="input no_del">
+                                    <input type="tel" name="" id="" value="123456" title="부동산 고유번호 뒤 6자리 입력" readonly placeholder="6자리" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_label ty1">일련번호</div>
+                        <div class="comp_wrap phone readonly">
+                            <div class="input no_del">
+                                <input type="tel" maxlength="4" name="" id="" value="1234" title="일련번호 앞 4자리 입력" readonly />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" maxlength="4" name="" id="" value="1234" title="일련번호 가운데 4자리 입력" readonly />
+                            </div>
+                            <span>-</span>
+                            <div class="input no_del">
+                                <input type="tel" maxlength="4" name="" id="" value="1234" title="일련번호 뒤 4자리 입력" readonly />
+                            </div>
+                        </div>
+                        <div class="input_label ty1">부동산 시세조회용 주소</div>
+                        <div class="comp_wrap address">
+                            <div class="input">
+                                <input type="text" name="" id="" value="경기도 용인시 수지구 신수로" title="주소정보 입력" readonly placeholder="주소입력" />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="" id="" value="799 (동천동, 기업은행)" title="상세주소 입력" readonly placeholder="상세주소 입력" />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                        </div>
+                        <div class="input_label ty1">등기필정보상 주소</div>
+                        <div class="comp_wrap address">
+                            <div class="input">
+                                <input type="text" name="" id="" value="경기도 용인시 수지구 신수로" title="주소정보 입력" readonly placeholder="주소입력" />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" name="" id="" value="799 (동천동, 기업은행)" title="상세주소 입력" readonly placeholder="상세주소 입력" />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 폼 -->
+                
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <ul class="list_bullet ty2">
+                        <li>위 부동산 시세조회용 주소와 등기필정보상 주소는 반드시 일치해야 합니다. 권리조사 결과, 주소가 일치하지 않을 경우 대출진행이 취소됩니다.</li>
+                    </ul>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- s: 등기필 비밀번호 입력 -->
+                <div class="group">
+                    <div class="tooltip_box"> <span class="txt_style ty2"> 등기필 비밀번호 입력 <em class="ess_text ty1">필수</em> </span>
+                        <div class="tooltip_wrap ty1">
+                            <button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+                            <div class="tooltip_wrap_container" role="tooltip">
+                                <div class="inner">
+                                    <p>등기필정보 보안스티커 제거시 확인 가능한 등기필 비밀번호</p>
+                                    <div class="img_visual"> <img src="../../../../img/lon/img_fnt_lon_120201_1_01.png" alt="등기필비밀번호 예시" /> </div>
+                                </div>
+                                <button type="button" class="tooltip_close">도움말 닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="txt_style ty2 fw_4">부동산 근저당권 설정을 위해 등기필정보의 비밀번호를 입력해 주세요. 비밀번호는 등기필증 표지의 보안스티커 제거 후 확인할 수 있습니다.</p>
+                    <div class="form_password_list mt_24">
+                        <div class="line">
+                            <div class="input_label ty2">비밀번호 순번</div>
+                            <div class="input_label ty2">비밀번호 입력</div>
+                        </div>
+                        <div class="line">
+                            <div class="input">
+                                <input type="tel" name="" id="" value="15" title="비밀번호 순번 입력" readonly />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <button type="button" class="input_button" aria-label="비밀번호 입력">4자리</button>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="input">
+                                <input type="tel" name="" id="" value="16" title="비밀번호 순번 입력" readonly />
+                                <button type="button" class="del">텍스트삭제</button>
+                            </div>
+                            <div class="input">
+                                <button type="button" class="input_button" aria-label="비밀번호 입력">4자리</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 등기필 비밀번호 입력 --> 
+                
+                <!--s: 꼭 알아두세요! -->
+                <div class="group">
+                    <div class="caution">
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>비밀번호는 다른 사람에게 노출되지 않도록 각별히 주의해 주세요.</li>
+                                        <li>비밀번호를 잘못 입력하면 약정 완료 후에도 대출이 진행되지 않을 수 있으니 주의해 주세요.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--e: 꼭 알아두세요! --> 
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step4 정보확인(등기필정보 확인 및 비밀번호 입력) --> 
+        
+        <!-- s: step5 정보확인(대출계좌 확인) -->
+        <div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">정보확인</div>
+                    <div class="title_text ty1">대출계좌 확인</div>
+                    <ul class="space_list_ty2">
+                        <li>
+                            <div class="group_item">
+                                <div class="group_item_detail">
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">상품명</span> </span> <span class="line_right"> <span class="txt">i-ONE소상공인 부동산 담보대출</span> </span> </p>
+                                    <div class="line">
+                                        <div class="line_left"> <span class="tit">대출신청금액</span> </div>
+                                        <div class="line_right">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="item_check01_1" />
+                                                <label for="item_check01_1" class="checkbox small"> <i></i> <span class="txt ty1"> <span class="money">30,000,000</span> <span class="txt_unit">원</span> <span class="sub_info_txt"> <span class="txt_unit">(삼천만원)</span> </span> </span> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">자금용도</span> </span> <span class="line_right"> <span class="txt">사업장 운영자금</span> </span> </p>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">신청일</span> </span> <span class="line_right"> <span class="date">2018-12-01</span> </span> </p>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">대출기간</span> </span> <span class="line_right"> <span class="date">2018-12-10 ~ 2019-12-09 (1년)</span> </span> </p>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">대출금리</span> </span> <span class="line_right"> <span class="txt"> 고정금리 : 대출만기일까지 3.2% <br />
+                                        변동금리 : 코리보(KORIBOR) 3월물 + 1.6% </span> <span class="sub_info_txt"> <span class="desc_txt">* 기준금리 변동주기에 따라 금리 변동 가능</span> </span> </span> </p>
+                                    <div class="line">
+                                        <div class="line_left"> <span class="tit">대출실행일</span> </div>
+                                        <div class="line_right">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="item_check01_2" />
+                                                <label for="item_check01_2" class="checkbox small"> <i></i> <span class="txt ty1">이 대출상품은 신청기간 및 권리조사 등 소요시간에 따라 당일 또는 다음 영업일에 실행되는 대출상품입니다. 다음 영업일에 실행되는 경우 기준금리에 따라 대출금리는 변동될 수 있으며, 고정금리를 제외한 이자율은 대출만기일 내에 수시로 변동됩니다.</span> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">대출이자납입 안내</span> </span> <span class="line_right"> <span class="txt">신청</span> </span> </p>
+                                    <div class="line">
+                                        <div class="line_left"> <span class="tit">상환방법</span> </div>
+                                        <div class="line_right">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="item_check01_3" />
+                                                <label for="item_check01_3" class="checkbox small"> <i></i> <span class="txt ty1">만기일시상환</span> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="line_left"> <span class="tit">대출이자자동이체일</span> </div>
+                                        <div class="line_right">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="item_check01_4" />
+                                                <label for="item_check01_4" class="checkbox small"> <i></i> <span class="txt ty1">30일</span> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">자동이체계좌</span> </span> <span class="line_right"> <span class="account_no">000-000000-00-000</span> </span> </p>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">대출금 입금계좌</span> </span> <span class="line_right"> <span class="account_no">000-000000-00-000</span> </span> </p>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">중도상환해약금</span> </span> <span class="line_right"> <span class="money"></span> <span class="txt_unit">원</span> </span> </p>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">인지세</span> </span> <span class="line_right"> <span class="money"></span> <span class="txt_unit">원</span> </span> </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- s: 후견인 부존재 확인 -->
+                <div class="group">
+                    <div class="label">
+                        <input type="checkbox" name="" id="chk1" />
+                        <label for="chk1" class="checkbox"> <i></i> <span>후견인 부존재 확인</span> <span class="label_desc_text bullet_txt ty1">본인과 관련해 오늘 현재 가정법원에 후견(성년후견·한정후견·특정후견·임의후견, 이하같음) 개시심판을 청구했거나, 가정법원에서 후견 개시결정을 받은 사실이 없음을 확인합니다.</span> </label>
+                    </div>
+                </div>
+                <!-- e: 후견인 부존재 확인 -->
+                
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- s: 사업자 정보 확인 -->
+                <div class="group">
+                    <div class="title_text ty1">사업자 정보 확인</div>
+                    <ul class="space_list_ty2">
+                        <li>
+                            <div class="group_item">
+                                <div class="group_item_detail">
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">기업명</span> </span> <span class="line_right"> <span class="txt">기업명</span> </span> </p>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">사업자등록번호</span> </span> <span class="line_right"> <span class="account_no">000-00-00000</span> </span> </p>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">대표자명</span> </span> <span class="line_right"> <span class="txt">이름</span> </span> </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- e: 사업자 정보 확인 -->
+                
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- s: 근저당권 정보 -->
+                <div class="group">
+                    <div class="title_text ty1">근저당권 정보</div>
+                    <ul class="space_list_ty2">
+                        <li>
+                            <div class="group_item">
+                                <div class="group_item_detail">
+                                    <div class="line">
+                                        <div class="line_left"> <span class="tit">피담보채무의 범위</span> </div>
+                                        <div class="line_right">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="item_check02_1" />
+                                                <label for="item_check02_1" class="checkbox small"> <i></i> <span class="txt ty1">한정근저당(중소기업자금대출 거래)</span> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="line_left"> <span class="tit"> 근저당권 설정금액 <br />
+                                            (채권최고액) </span> </div>
+                                        <div class="line_right">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="item_check02_2" />
+                                                <label for="item_check02_2" class="checkbox small"> <i></i> <span class="txt ty1">대출금액의 120%</span> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">근저당권 결산기</span> </span> <span class="line_right"> <span class="txt">장래지정형</span> </span> </p>
+                                    <p class="line" role="text"> <span class="line_left"> <span class="tit">근저당 물건</span> </span> <span class="line_right"> <span class="txt">대출금액의 120%</span> </span> </p>
+                                    <div class="line">
+                                        <div class="line_left"> <span class="tit">말소비용</span> </div>
+                                        <div class="line_right">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="item_check02_3" />
+                                                <label for="item_check02_3" class="checkbox small"> <i></i> <span class="txt ty1">근저당권을 말소하는 경우 근저당권의 말소에 필요한 비용은 본인이 부담함을 확인합니다.</span> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="line_left"> <span class="tit">위임</span> </div>
+                                        <div class="line_right">
+                                            <div class="label reverse">
+                                                <input type="checkbox" name="" id="item_check02_4" />
+                                                <label for="item_check02_4" class="checkbox small"> <i></i> <span class="txt ty1">은행과 법무법인이 본인을 대신해 근저당권설정계약서, 위임장, 행정정보공동이용사전동의서 등 필요서류를 작성해 등기소에 제출하는 것에 동의합니다.</span> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- e: 근저당권 정보 --> 
+                
+                <!-- s: 2501 행정정보 공동이용 사전동의 추가 -->
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <div class="title_text ty1">행정정보 공동이용 사전동의</div>
+                    <ul class="space_list_ty1">
+                        <li>
+                            <div class="label">
+                                <input type="checkbox" name="" id="chk12">
+                                <label for="chk1" class="checkbox"> <i></i> <span> <span class="fw_4">대출실행 전 미래등기시스템에 접속(접속경로는 위임 법무사에서 별도 메시지 전송 예정)하여 행정정보 공동이용 사전동의서 양식에 전자서명 예정임을 확인합니다.</span> </span> </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- e: 2501 행정정보 공동이용 사전동의 추가 --> 
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step5 정보확인(대출계좌 확인) --> 
+        
+        <!-- s: step6 전자서명 -->
+        <div id="step6" data-jx-step-no="6" data-jx-ㅛeffect="slide">
+            <div class="content_wrap ty3"> 
+                <!-- s: 전자서명 -->
+                <div class="group">
+                    <div class="title_text ty1">전자서명</div>
+                    <div class="title_text ty1">대출약관 동의 및 전자서명</div>
+                    <p class="txt_style ty2 fw_4">기업대출 상품설명서를 비롯한 약관 및 근저당권설정계약서 등 전자서명에 동의해 주세요.</p>
+                    <div class="agree_check_group mt_32">
+                        <div class="chk_group_wrap">
+                            <div class="agree_check_group_top">
+                                <div class="label all_chk">
+                                    <input type="checkbox" name="" id="agree_check_group_top" class="chk_point_all" />
+                                    <label for="agree_check_group_top" class="checkbox"> <i></i> <span> <span class="ess_text">필수</span> 약관 모두 동의 </span> </label>
+                                </div>
+                            </div>
+                            <div class="agree_check tit_ty">
+                                <ul class="term_list">
+                                    <li class="item">
+                                        <div class="label">
+                                            <input type="checkbox" name="" id="ago_group01_1" class="chk_point_sub" />
+                                            <label for="ago_group01_1" class="checkbox small lbl"> <i></i> <span> 대출신청서 동의완료 <span class="ess_mark">필수</span> </span> </label>
+                                        </div>
+                                        <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">대출신청서 동의완료</span> 보기 </button>
+                                    </li>
+                                    <li class="item">
+                                        <div class="label">
+                                            <input type="checkbox" name="" id="ago_group01_2" class="chk_point_sub" />
+                                            <label for="ago_group01_2" class="checkbox small lbl"> <i></i> <span> 여신거래약정서(기업용) <span class="ess_mark">필수</span> </span> </label>
+                                        </div>
+                                        <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">여신거래약정서(기업용)</span> 보기 </button>
+                                    </li>
+                                    <li class="item">
+                                        <div class="label">
+                                            <input type="checkbox" name="" id="ago_group01_3" class="chk_point_sub" />
+                                            <label for="ago_group01_3" class="checkbox small lbl"> <i></i> <span> 은행여신거래 기본약관 <span class="ess_mark">필수</span> </span> </label>
+                                        </div>
+                                        <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">은행여신거래 기본약관</span> 보기 </button>
+                                    </li>
+                                    <li class="item">
+                                        <div class="label">
+                                            <input type="checkbox" name="" id="ago_group01_4" class="chk_point_sub" />
+                                            <label for="ago_group01_4" class="checkbox small lbl"> <i></i> <span> 기업대출 상품설명서 <span class="ess_mark">필수</span> </span> </label>
+                                        </div>
+                                        <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">기업대출 상품설명서</span> 보기 </button>
+                                    </li>
+                                    <li class="item">
+                                        <div class="label">
+                                            <input type="checkbox" name="" id="ago_group01_5" class="chk_point_sub" />
+                                            <label for="ago_group01_5" class="checkbox small lbl"> <i></i> <span> 근저당권설정계약서 <span class="ess_mark">필수</span> </span> </label>
+                                        </div>
+                                        <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">근저당권설정계약서</span> 보기 </button>
+                                    </li>
+                                    <li class="item">
+                                        <div class="label">
+                                            <input type="checkbox" name="" id="ago_group01_6" class="chk_point_sub" />
+                                            <label for="ago_group01_6" class="checkbox small lbl"> <i></i> <span> 위임장 <span class="ess_mark">필수</span> </span> </label>
+                                        </div>
+                                        <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">위임장</span> 보기 </button>
+                                    </li>
+                                    <li class="item">
+                                        <div class="label">
+                                            <input type="checkbox" name="" id="ago_group01_7" class="chk_point_sub" />
+                                            <label for="ago_group01_7" class="checkbox small lbl"> <i></i> <span> 행정정보 공동이용 사전동의서(인터넷등기소 제출용) <span class="ess_mark">필수</span> </span> </label>
+                                        </div>
+                                        <button type="button" class="btn ty_txt3 line_bttm btn_view"> <span class="sr_only">행정정보 공동이용 사전동의서(인터넷등기소 제출용)</span> 보기 </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 전자서명 --> 
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">전자서명하기</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step6 전자서명 --> 
+        
+        <!-- s: step7 전자서명 – 공동인증서 선택 -->
+        <div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">전자서명</div>
+                    <div class="title_text ty1">개인 공인인증서 선택</div>
+                    <ul class="space_list_ty1">
+                        <li>
+                            <div class="cert_item_wrap">
+                                <div class="cert_item link" id="chk98_content">
+                                    <div class="badge_cont"> <span class="badge ty3 colorB1">만료</span> </div>
+                                    <a href="#" role="button" class="block">
+                                    <div class="name">홍길동(48811111)99939939339</div>
+                                    </a>
+                                    <div class="info_wrap">
+                                        <div class="info">
+                                            <div class="tit">발급자</div>
+                                            <div class="txt">yessignCA-Test Class3</div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="tit">만료일</div>
+                                            <div class="txt">2017-06-17</div>
+                                        </div>
+                                    </div>
+                                    <div class="alert">인증서를 갱신하세요.(만료-2547일전)</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- s: step7 전자서명 – 공동인증서 선택 --> 
+        
+        <!-- s: step8 신청완료 -->
+        <div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+            <div class="content_wrap ty4">
+                <div class="group">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        대출을 신청했어요 </div>
+                    <ul class="d_list ty1">
+                        <li> <span class="d_list_l">신청일</span> <span class="d_list_r">2017.07.10</span> </li>
+                        <li> <span class="d_list_l">기업명</span> <span class="d_list_r">기업월드</span> </li>
+                        <li> <span class="d_list_l">사업자등록번호</span> <span class="d_list_r">000-00-00000</span> </li>
+                        <li> <span class="d_list_l">대표자명</span> <span class="d_list_r">이름</span> </li>
+                        <li> <span class="d_list_l">상품명</span> <span class="d_list_r">i-ONE소상공인부동산담보대출</span> </li>
+                        <li> <span class="d_list_l">대출신청금액</span> <span class="d_list_r"> <span class="txt_unit">USD</span> <span class="money">1,000,000</span> <span class="txt_unit">원</span> </span> </li>
+                        <li> <span class="d_list_l">대출기간(만기일)</span> <span class="d_list_r">1개월 (2019-12-15)</span> </li>
+                        <li> <span class="d_list_l">자금용도</span> <span class="d_list_r">운전자금</span> </li>
+                        <li> <span class="d_list_l">대출금리</span> <span class="d_list_r"> 변동금지 : 연 7.7830 % <span class="desc_txt">(코리보(KORIBOR) 3월물 1.66 + 0.00%p)</span> <span class="desc_txt">* 기준금리 변동주기에 따라 금리변동 가능</span> </span> </li>
+                        <li> <span class="d_list_l">지연배상금률</span> <span class="d_list_r"> 대출금리 + 연체가산금리 연 3% <span class="desc_txt">(단, 최고 지연배상금률은 연 11%)</span> </span> </li>
+                        <li> <span class="d_list_l">중도상환해약금</span> <span class="d_list_r">대출실행일에 전액 실행</span> </li>
+                        <li> <span class="d_list_l">대출 실행방법</span> <span class="d_list_r">대출실행일에 전액 실행</span> </li>
+                        <li> <span class="d_list_l">상환방법</span> <span class="d_list_r">만기일시 상환방식</span> </li>
+                        <li> <span class="d_list_l">대출이자 자동이체일</span> <span class="d_list_r"> <span class="txt">매월</span> <span class="day">25일</span> </span> </li>
+                        <li> <span class="d_list_l">자동이체계좌번호</span> <span class="d_list_r">000-000000-00-000</span> </li>
+                        <li> <span class="d_list_l">약정계좌번호</span> <span class="d_list_r">000-000000-00-000</span> </li>
+                        <li> <span class="d_list_l">대출예정일</span> <span class="d_list_r">당일(또는 다음 영업일)</span> </li>
+                        <li> <span class="d_list_l">피담보채무의 범위</span> <span class="d_list_r">한정근저당(중소기업자금대출거래)</span> </li>
+                        <li> <span class="d_list_l">근저당권 설정금액</span> <span class="d_list_r"> <span class="money">1,000,000</span> <span class="txt_unit">원</span> </span> </li>
+                        <li> <span class="d_list_l">근저당권 결산기</span> <span class="d_list_r">장래지정형</span> </li>
+                        <li> <span class="d_list_l">대상 물건</span> <span class="d_list_r"></span> </li>
+                    </ul>
+                </div>
+                
+                <!--s: 꼭 알아두세요! -->
+                <div class="group">
+                    <div class="caution">
+                        <div class="acd_wrap accodian_wrap ty3 active">
+                            <div class="acd_head accodian_head">
+                                <button type="button" aria-expanded="true" class="acd_btn"> <span class="title">꼭 알아두세요!</span> </button>
+                            </div>
+                            <div class="acd_cont accodian_cont">
+                                <div class="inner">
+                                    <ul class="list_bullet ty1">
+                                        <li>권리조사 결과에 따라 대출이 진행되지 않을 수 있습니다.</li>
+                                        <li>대출실행일까지 담보물의 권리사항이 변동되는 경우 대출이 취소됩니다.</li>
+                                        <li>대출실행 완료 시까지 전입신고가 있는 경우 대출 실행이 되지 않습니다.</li>
+                                        <li>권리조사 및 등기설정(약 4시간 소요)이 영업시간 중 완료되지 않는 경우 대출이 다음 영업일에 실행될 수 있습니다. 이 경우 대출만기일도 늦춰질 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--e: 꼭 알아두세요! --> 
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2">확인</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- s: step8 신청완료 --> 
+        
+        <!-- s: step9 결재함 대출신청 -->
+        <div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+            <div class="content_wrap ty3">
+                <div class="group">
+                    <div class="title_text ty1">대출신청정보</div>
+                    <div class="group_item">
+                        <div class="group_item_detail">
+                            <p class="line" role="text"> <span class="line_left"> <span class="tit">기업명</span> </span> <span class="line_right"> <span class="txt"></span> </span> </p>
+                            <p class="line" role="text"> <span class="line_left"> <span class="tit">사업자등록번호</span> </span> <span class="line_right"> <span class="business_no"></span> </span> </p>
+                            <p class="line" role="text"> <span class="line_left"> <span class="tit">대표자명</span> </span> <span class="line_right"> <span class="txt"></span> </span> </p>
+                            <p class="line" role="text"> <span class="line_left"> <span class="tit">상환금액</span> </span> <span class="line_right"> <span class="money"></span> <span class="txt_unit">원</span> </span> </p>
+                            <p class="line" role="text"> <span class="line_left"> <span class="tit">대출이자금액</span> </span> <span class="line_right"> <span class="money"></span> <span class="txt_unit">원</span> </span> </p>
+                            <p class="line" role="text"> <span class="line_left"> <span class="tit">출금계좌</span> </span> <span class="line_right"> <span class="account_no"></span> </span> </p>
+                            <p class="line" role="text"> <span class="line_left"> <span class="tit">출금금액</span> </span> <span class="line_right"> <span class="money"></span> <span class="txt_unit">원</span> </span> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">목록</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- e: step9 결재함 대출신청 --> 
+        
+        <!-- s: Popup -->
+        <div class="bottom_popup_wrap" id="popup1-1" title="자금용도">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">자금용도</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1-1');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_popup_wrap" id="popup1-2" title="대출금 상환방법">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">대출금 상환방법</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1-2');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_popup_wrap" id="popup1-3" title="대출기간 년도">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">대출기간 년도</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1-3');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_popup_wrap" id="popup1-4" title="대출기간 월">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">대출기간 월</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1-4');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_popup_wrap" id="popup1-5" title="대출금리 종류">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">대출금리 종류</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1-5');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_popup_wrap" id="popup1-6" title="매월 선택">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">매월 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1-6');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_popup_wrap" id="popup1-7" title="대출금 입금 및 자동이체계좌 ">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">대출금 입금 및 자동이체계좌</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1-7');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+                        <li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_popup_wrap" id="telecom">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">통신사 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('telecom');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" aria-selected="false">SKT</li>
+                        <li role="option" tabindex="-1" aria-selected="false">KT</li>
+                        <li role="option" tabindex="-1" aria-selected="false">LGU+</li>
+                        <li role="option" tabindex="-1" aria-selected="false">SKT (알뜰폰)</li>
+                        <li role="option" tabindex="-1" aria-selected="false">KT (알뜰폰)</li>
+                        <li role="option" tabindex="-1" aria-selected="false">LGU+ (알뜰폰)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- e: Popup --> 
+    </div>
+    <!-- e: 대출심사 --> 
+</div>
+
+<!--**퍼블용** 데모확인 로티 구동 스크립트--> 
+<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script> 
+<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+</body>
+</html>

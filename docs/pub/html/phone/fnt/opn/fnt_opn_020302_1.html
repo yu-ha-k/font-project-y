@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 출금기능등록 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3 open_bank service_setting">
+						<div class="group">
+							<ul class="list_bullet ty2">
+								<li>해당 계좌의 이체 및 출금 기능을 등록해 보세요</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">계좌선택</div>
+								<div class="dropdown ty2" role="button" title="계좌번호 선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">선택</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty2" />
+						<div class="group">
+							<ul class="term_list">
+								<li class="item">
+									<div class="label">
+										<input type="checkbox" name="" id="chkterm01_01" />
+										<label for="chkterm01_01" class="checkbox small lbl">
+											<i></i>
+											<span>(우리) 자동계좌이체 약관</span>
+										</label>
+									</div>
+									<button type="button" class="btn ty_txt3 line_bttm btn_view">
+										<span class="sr_only">(우리) 자동계좌이체 약관</span>
+										보기
+									</button>
+								</li>
+								<li class="item">
+									<div class="label">
+										<input type="checkbox" name="" id="chkterm01_02" />
+										<label for="chkterm01_02" class="checkbox small lbl">
+											<i></i>
+											<span>(삼성선물) 오픈뱅킹공동업무 출금이체 약관</span>
+										</label>
+									</div>
+									<button type="button" class="btn ty_txt3 line_bttm btn_view">
+										<span class="sr_only">(삼성선물) 오픈뱅킹공동업무 출금이체 약관</span>
+										보기
+									</button>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 출금기능등록 -->
+
+				<!-- s: 출금기능등록 완료 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								출금기능을 등록했어요
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type=" button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 출금기능등록 완료 -->
+
+				<!-- s: 출금계좌 선택 -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">출금계좌</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 출금계좌 선택 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 원클릭보증부대출 (보증신청) -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 상품설명 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3 ione_loan card_account_join">
+						<!-- s: 상단 요약 정보 -->
+
+						<div class="group account_product_list">
+							<div class="group_item">
+								<div class="group_item_info">
+									<div class="txt5">i-IBK원클릭보증부대출</div>
+								</div>
+								<p class="page_desc mt_8">은행 방문 없이 인터넷뱅킹, 스마트뱅킹으로 보증신청, 간편심사를 통해 보증부대출 지원 상품</p>
+								<ul class="list_bullet ty2 mt_16">
+									<li>
+										대출금리 :
+										<strong>고정금리, 변동금리</strong>
+									</li>
+
+									<li>
+										가입방법 :
+										<strong>기업인터넷뱅킹, i-ONE뱅크 기업</strong>
+									</li>
+
+									<li>
+										가입대상 :
+										<strong>중소개인</strong>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- e: 상단 요약 정보 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- s: 탭 버튼 -->
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="true" class="active">요약</button>
+							<button type="button" role="tab" aria-selected="false">대출정보</button>
+							<button type="button" role="tab" aria-selected="false">유의사항</button>
+						</div>
+						<!-- e: 탭 버튼 -->
+
+						<!-- s: 탭 컨텐츠 -->
+						<!-- s: 요약 -->
+						<div class="tab_cont holding_finance active" role="tabpanel" aria-expanded="true">
+							<div class="group prd_detail">
+								<div class="tabcon">
+									<div>
+										요약
+										<br />
+										외부 컨텐츠 삽입 구간
+										<br />
+										외부 컨텐츠 삽입 구간
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 요약 -->
+						<!-- s: 대출정보 -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group prd_detail">
+								<div class="tabcon">
+									<div>
+										대출정보
+										<br />
+										외부 컨텐츠 삽입 구간
+										<br />
+										외부 컨텐츠 삽입 구간
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 대출정보 -->
+						<!-- s: 유의사항 -->
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group prd_detail">
+								<div class="tabcon">
+									<div>
+										유의사항
+										<br />
+										외부 컨텐츠 삽입 구간
+										<br />
+										외부 컨텐츠 삽입 구간
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 유의사항 -->
+						<!-- e: 탭 컨텐츠 -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(901);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 상품설명 -->
+
+				<!-- s: 안내 -->
+				<div id="step901" data-jx-step-no="901" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="mydata_wrap">
+								<div class="mydata_wrap_visual">
+									<img src="../../../../img/common/mydata/img_mydata_visual.png" alt="공공마이데이터 시스템을 통해 정보 조회를 진행합니다." />
+								</div>
+								<ul class="list_bullet ty3">
+									<li>통신 환경이 좋지 않으면 시간이 오래 걸리거나 조회가 되지 않을 수도 있어요.</li>
+									<li>조회에 계속 실패하는 경우 인증서로 정보를 조회하는 방법으로 전환됩니다.</li>
+								</ul>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('mydata_single_agree');">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 안내 -->
+
+				<!-- s: 조회 진행중 -->
+				<div id="step903" data-jx-step-no="903" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="icon_info_group">
+							<div class="icon lottie">
+								<lottie-player src="../../../../lottie/lottie_case6.json" background="transparent" speed="1" loop></lottie-player>
+							</div>
+							<div class="tit">
+								정보를 가져오는 중입니다.
+								<br />
+								잠시만 기다려 주세요
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회 진행중 -->
+
+				<!-- s: 조회 실패 -->
+				<div id="step904" data-jx-step-no="904" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="mydata_wrap">
+								<div class="ico_txt ty1 lottie_case1">
+									<div class="lottie_box">
+										<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+									</div>
+									조회하지 못한
+									<br />
+									정보가 있어요
+									<div class="note_cmt">
+										다시 시도하거나
+										<br />
+										인증서로 정보를 조회해 주세요.
+									</div>
+								</div>
+								<div class="acd_wrap accodian_wrap ty2 etc2 active">
+									<div class="acd_cont accodian_cont">
+										<div class="inner" style="display: block">
+											<div class="bg_box ty4">ABCDE0000000234 계정계 오류메시지 출력 계정계 오류메시지 출력 계정계 오류메시지 출력 계정계 오류메시지 출력 계정계 오류메시지 출력 계정계 오류메시지 출력</div>
+										</div>
+									</div>
+
+									<div class="acd_head accodian_head active">
+										<button type="button" title="컨텐츠내용 상세보기" aria-expanded="true" class="acd_btn">
+											<span class="title">
+												오류코드
+												<span class="sr_only">더보기</span>
+											</span>
+											<span class="title sub">
+												오류코드
+												<span class="sr_only">접기</span>
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area ty2">
+							<div class="bottom_btn_area_box">
+								<div class="btn_area ty5">
+									<button type="button" class="btn s_5 c_3 r_2">다시 조회하기</button>
+									<button type="button" class="btn s_5 c_1 r_2" onclick="comLayerPopUtil.open('mydata_popup1');">인증서로 정보 조회(스크래핑)</button>
+								</div>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 조회 실패 -->
+
+				<!-- s: 팝업 -->
+				<!-- s: 단일 동의 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="mydata_single_agree">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">정보제공 동의</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('mydata_single_agree');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="label label_box more_add">
+								<input type="checkbox" name="" id="mydata_ag01" />
+								<label for="mydata_ag01" class="checkbox">
+									<i></i>
+									<span>공공 마이데이터 관련 개인(신용)정보 조회 동의서</span>
+								</label>
+								<button type="button" class="btn ty_txt3 line_bttm btn_view">
+									<span class="sr_only">공공 마이데이터 관련 개인(신용)정보 조회 동의서</span>
+									보기
+								</button>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('mydata_single_agree'); uf_goStep(904);">다음</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 단일 동의 선택 팝업 -->
+
+				<!-- s: 조회방법 변경 안내 팝업 -->
+
+				<div class="bottom_popup_wrap" id="mydata_popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회방법 변경 안내</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('mydata_popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="mydata_error">
+								<div class="icon"></div>
+								<div class="txt">
+									통신 오류 또는 알 수 없는 이유로
+									<br />
+									정보를 조회하지 못했습니다.
+									<br />
+									인증서 조회로 변경해
+									<br />
+									고객님 정보를 조회해 볼게요.
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('mydata_popup1'); uf_goStep(3);">이동</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회방법 변경 안내 팝업 -->
+				<!-- e: 팝업 -->
+				<!-- e: step3 확인사항(가입고객정보 및 고객확인) -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3 ione_loan">
+						<div class="group">
+							<div class="title_text ty1">확인사항</div>
+
+							<div class="form_group">
+								<div class="input_label ty1">
+									가입고객정보 및 고객확인
+									<em class="ess_text ty1">필수</em>
+								</div>
+
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">사업자등록번호</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">000-00-00000</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">기업명</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">업체명</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">대표자명</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">이름</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">사업자등록일</span>
+											</span>
+											<span class="line_right">
+												<span class="date">2021-03-25</span>
+											</span>
+										</p>
+										<div class="line" role="text">
+											<div class="line_left">
+												<span class="tit">표준산업분류</span>
+											</div>
+											<div class="line_right">
+												<div class="dropdown ty2" role="button" title="표준산업분류 목록보기" onclick="comLayerPopUtil.open('optlist');">
+													<div class="dropdown_text">선택하세요</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 확인사항(가입고객정보 및 고객확인) -->
+
+				<!-- s: step4 확인사항(주요사항) -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">확인사항</div>
+							<p class="agree_page_text">'원클릭보증부대출' 신청 전 주요사항을 안내하오니 아래 내용을 충분히 확인하신 후 체크하시기 바랍니다.</p>
+
+							<div class="agree_check_group">
+								<div class="agree_check">
+									<div class="acd_wrap accodian_wrap ty1">
+										<div class="acd_head accodian_head check_as_all active">
+											<div class="label">
+												<input type="checkbox" name="" id="case02" />
+												<label for="case02" class="checkbox">
+													<i></i>
+													<span>전체선택합니다.</span>
+												</label>
+											</div>
+											<button type="button" aria-label="약관동의 목록보기" aria-expanded="true" class="acd_btn box_ty"></button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner" style="display: block">
+												<ul class="term_list chk_list">
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="chk2-1" />
+															<label for="chk2-1" class="checkbox small lbl">
+																<i></i>
+																<span>이 상품은 인터넷/모바일 전용상품으로 영업점에서는 신청할 수 없습니다.</span>
+															</label>
+														</div>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="chk2-2" />
+															<label for="chk2-2" class="checkbox small lbl">
+																<i></i>
+																<span>은행에 등록된 휴대폰번호가 본인명의입니다.</span>
+															</label>
+														</div>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="chk2-3" />
+															<label for="chk2-3" class="checkbox small lbl">
+																<i></i>
+																<span>최종 보증한도는 보증기관의 보증심사 결과에 따라 결정됨을 확인했습니다.</span>
+															</label>
+														</div>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="chk2-4" />
+															<label for="chk2-4" class="checkbox small lbl">
+																<i></i>
+																<span>현재 IBK기업은행에 상담 중인 대출이 없습니다.</span>
+															</label>
+														</div>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="chk2-5" />
+															<label for="chk2-5" class="checkbox small lbl">
+																<i></i>
+																<span>기타 은행에서 정한 취급 제한 사유에 따라 대출이 거절될 수 있습니다.</span>
+															</label>
+														</div>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="chk2-6" />
+															<label for="chk2-6" class="checkbox small lbl">
+																<i></i>
+																<span>상품 상세정보를 확인하고 충분히 이해했습니다.</span>
+															</label>
+														</div>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="chk2-7" />
+															<label for="chk2-7" class="checkbox small lbl">
+																<i></i>
+																<span>이번 대출은 이자와는 별도로 보증기관에서 정하는 바에 따라 보증료를 납부해야 함을 확인하고 충분히 이해했습니다.</span>
+															</label>
+														</div>
+													</li>
+													<li class="item">
+														<div class="label">
+															<input type="checkbox" name="" id="chk2-8" />
+															<label for="chk2-8" class="checkbox small lbl">
+																<i></i>
+																<span>이번 대출을 받은 이후 대출금 연체, 신용도판단정보 등록 등의 사유가 발생하게 되면 보증기관에서 구상권행사를 위한 법적 절차가 진행될 수 있음을 확인했습니다.</span>
+															</label>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 확인사항(주요사항) -->
+
+				<!-- s: step5 보증신청 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">보증신청</div>
+
+							<div class="title_text ty1">보증신청정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증기관</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">기술보증기금</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출신청금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증신청금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증기한</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">5년</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증비율</span>
+										</span>
+										<span class="line_right">
+											<span class="per">
+												<span class="rate">10%</span>
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>보증기관과 상담하신 내용과 보증신청정보의 일치 여부를 확인해 주세요.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(4);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">실행</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 보증신청 -->
+
+				<!-- s: step6 보증신청완료 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								보증을 신청했어요
+							</div>
+
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">사업자등록번호</span>
+									<span class="d_list_r">000-00-0000</span>
+								</li>
+								<li>
+									<span class="d_list_l">대표자명</span>
+									<span class="d_list_r">이름</span>
+								</li>
+								<li>
+									<span class="d_list_l">보증기관</span>
+									<span class="d_list_r">기술보증기금</span>
+								</li>
+								<li>
+									<span class="d_list_l">대출신청금액</span>
+									<span class="d_list_r">
+										<span class="money">50,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">보증신청금액</span>
+									<span class="d_list_r">
+										<span class="money">50,000,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">보증기한</span>
+									<span class="d_list_r">5년</span>
+								</li>
+								<li>
+									<span class="d_list_l">보증비율</span>
+									<span class="d_list_r">100 %</span>
+								</li>
+							</ul>
+
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>최종 발급된 신용보증서는 보증기관의 신용보증서 발급 알림을 받으신 후 확인해 주세요.</li>
+											<li>신용보증서가 발급되더라도 금융기관 신용정보관리대상 고객 및 IBK기업은행 대출 부적격자는 대출이 제한될 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(7);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step6 보증신청완료 -->
+
+				<!-- s: step7 결재함_보증신청 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">보증신청정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">거래상태</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증기관명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출신청금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">전자보증신청금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증기한</span>
+										</span>
+										<span class="line_right">
+											<span class="txt"></span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">보증비율</span>
+										</span>
+										<span class="line_right">
+											<span class="per">
+												<span class="rate">10%</span>
+											</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">목록</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step7 결재함_보증신청 -->
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="optlist" title="표준산업분류">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">표준산업분류</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('optlist');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

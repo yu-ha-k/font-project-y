@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 공동인증서 - PC에서 가져오기 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 PC에서 가져오기 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="cert_ico_progress">
+								<div class="ico_progress pc"></div>
+								<div class="ico_progress mobile"></div>
+							</div>
+
+							<div class="btn_area clickable ty1" role="radiogroup">
+								<button type="button" role="radio" aria-checked="true" class="active"><span class="text">인증번호로 가져오기</span></button>
+								<button type="button" role="radio" aria-checked="false"><span class="text">QR코드로 가져오기</span></button>
+							</div>
+						</div>
+
+						<!-- s: 인증서 가져오기/내보내기 -->
+						<div class="group mt_32">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								발급완료
+								<div class="note_cmt">인증번호를 발급했어요</div>
+							</div>
+
+							<!-- <div class="txt_style ty2 fw_4 mt_32">
+                IBK기업은행 기업인터넷뱅킹에 아래 인증번호를 입력해 주세요.<br>
+                입력을 완료할 때까지 현재 화면을 닫지 않아야 합니다.
+              </div> -->
+							<div class="form_group mt_32">
+								<div class="input_label ty2">인증번호</div>
+								<div class="comp_wrap phone disabled mb_16">
+									<div class="input no_del">
+										<input type="tel" name="" id="" value="010" title="인증번호 앞자리 입력" readonly />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" value="0000" title="인증번호 가운데자리 입력" readonly />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" value="0000" title="인증번호 뒤자리 입력" readonly />
+									</div>
+								</div>
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_4 c_2 r_2">인증서 가져오기</button>
+									<!-- <button type="button" class="btn s_4 c_2 r_2">인증서 내보내기</button> -->
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 인증서 가져오기/내보내기 -->
+
+						<!-- s: 인증번호로 가져오기 절차 -->
+						<div class="group cert_import_pc_num">
+							<div class="acd_wrap accodian_wrap ty1 active">
+								<div class="acd_head accodian_head small active">
+									<button type="button" title="인증번호로 가져오기 방법 안내 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">
+											<span class="left">인증번호로 가져오기 방법 안내</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner" style="display: block">
+										<div class="txt_style ty2">인증번호로 가져오기 서비스란?</div>
+										<div class="txt_style ty8 fw_4 mt_12">기업인터넷뱅킹에서 i-ONE뱅크 기업 앱으로 인증번호 12자리를 이용하여 공동인증서를 복사하는 서비스예요.</div>
+
+										<ol class="icon_step_list ty1 mt_24 cert_get_list1">
+											<li class="order1">
+												<div class="inner">
+													<span class="step">Step 01</span>
+													<div class="item">
+														<div class="tit">(인터넷뱅킹) 인증센터 접속</div>
+														<div class="desc">인증서가 설치된 PC에서 IBK기업은행 기업인터넷뱅킹 접속 후 [인증센터 &gt; 공동인증서 &gt; 스마트기기 인증서복사]에서 [PC → 스마트폰 인증번호로 복사하기]를 눌러주세요.</div>
+													</div>
+												</div>
+											</li>
+											<li class="order2">
+												<div class="inner">
+													<span class="step">Step 02</span>
+													<div class="item">
+														<div class="tit">(인터넷뱅킹) 인증서 선택</div>
+														<div class="desc">i-ONE뱅크 기업 앱으로 가져올 인증서를 선택하고 비밀번호를 입력해 주세요.</div>
+													</div>
+												</div>
+											</li>
+											<li class="order3">
+												<div class="inner">
+													<span class="step">Step 03</span>
+													<div class="item">
+														<div class="tit">(i-ONE뱅크 기업 앱) 인증번호 생성</div>
+														<div class="desc">현재화면 상단에 생성된 인증번호를 확인해 주세요.</div>
+													</div>
+												</div>
+											</li>
+											<li class="order4">
+												<div class="inner">
+													<span class="step">Step 04</span>
+													<div class="item">
+														<div class="tit">(인터넷뱅킹) 인증번호 입력</div>
+														<div class="desc">인증번호 12자리를 입력하고 [인증서 내보내기]를 눌러주세요.</div>
+													</div>
+												</div>
+											</li>
+											<li class="order5">
+												<div class="inner">
+													<span class="step">Step 05</span>
+													<div class="item">
+														<div class="tit">(i-ONE뱅크 기업 앱) 가져오기 완료</div>
+														<div class="desc">[인증서 가져오기]를 누르면 인증서가 스마트폰으로 복사됩니다.</div>
+													</div>
+												</div>
+											</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 인증번호로 가져오기 절차 -->
+
+						<!-- s: QR코드로 가져오기 절차 -->
+						<div class="group cert_import_pc_qr">
+							<div class="acd_wrap accodian_wrap ty1 active">
+								<div class="acd_head accodian_head small active">
+									<button type="button" title="QR코드로 가져오기 방법 안내 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title">
+											<span class="left">QR코드로 가져오기 방법 안내</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner" style="display: block">
+										<div class="txt_style ty2">QR코드로 가져오기 서비스란?</div>
+										<div class="txt_style ty8 fw_4 mt_12">공동인증서 복사를 간편하게 하고 보안을 강화하기 위해 QR코드를 이용해 인증서를 복사하는 서비스예요.</div>
+
+										<ol class="icon_step_list ty1 mt_24 cert_get_list2">
+											<li class="order1">
+												<div class="inner">
+													<span class="step">Step 01</span>
+													<div class="item">
+														<div class="tit">(인터넷뱅킹) 인증센터 접속</div>
+														<div class="desc">인증서가 설치된 PC에서 IBK기업은행 기업인터넷뱅킹 접속 후 [인증센터 &gt; 공동인증서 &gt; 스마트기기 인증서복사]에서 [PC → 스마트폰 QR코드로 복사하기]를 눌러주세요.</div>
+													</div>
+												</div>
+											</li>
+											<li class="order2">
+												<div class="inner">
+													<span class="step">Step 02</span>
+													<div class="item">
+														<div class="tit">(인터넷뱅킹) 인증서 선택</div>
+														<div class="desc">i-ONE뱅크 기업 앱으로 가져올 인증서를 선택하고 비밀번호를 입력하면 QR코드가 생성됩니다.</div>
+													</div>
+												</div>
+											</li>
+											<li class="order3">
+												<div class="inner">
+													<span class="step">Step 03</span>
+													<div class="item">
+														<div class="tit">(i-ONE뱅크 기업 앱) QR코드 촬영</div>
+														<div class="desc">스마트폰 현재화면 상단에 [인증서 가져오기]를 눌러 QR코드를 촬영해 주세요.</div>
+													</div>
+												</div>
+											</li>
+											<li class="order4">
+												<div class="inner">
+													<span class="step">Step 04</span>
+													<div class="item">
+														<div class="tit">(i-ONE뱅크 기업 앱) 가져오기 완료</div>
+														<div class="desc">QR코드가 인식되면 인증서가 스마트폰으로 복사됩니다.</div>
+													</div>
+												</div>
+											</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: QR코드로 가져오기 절차 -->
+					</div>
+				</div>
+				<!-- e: step1 PC에서 가져오기 -->
+			</div>
+			<!-- e: 공동인증서 - PC에서 가져오기 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

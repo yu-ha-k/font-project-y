@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 환율조회 (환가료율) -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty2">
+						<div class="group">
+							<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+								<div class="dropdown_text">환가료율 · 2023-02-01</div>
+							</div>
+						</div>
+
+						<div class="group">
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>기준일 : 2024-06-18</li>
+								</ul>
+							</div>
+
+							<div class="tbl ty2 mt_16">
+								<table>
+									<caption>환가료율 안내</caption>
+									<colgroup>
+										<col style="width: 16%" />
+										<col style="width: 21%" />
+										<col style="width: 21%" />
+										<col style="width: 21%" />
+										<col style="width: 21%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">통화</th>
+											<th scope="col">
+												30일
+												<br />
+												이내
+											</th>
+											<th scope="col">
+												90일
+												<br />
+												이내
+											</th>
+											<th scope="col">
+												180일
+												<br />
+												이내
+											</th>
+											<th scope="col">
+												180일
+												<br />
+												초과
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>USD</td>
+											<td>7.3264</td>
+											<td>7.9040</td>
+											<td>8.0085</td>
+											<td>7.9559</td>
+										</tr>
+										<tr>
+											<td>JPY</td>
+											<td>2.0364</td>
+											<td>2.7773</td>
+											<td>3.0027</td>
+											<td>3.3118</td>
+										</tr>
+										<tr>
+											<td>EUR</td>
+											<td>5.5850</td>
+											<td>6.2780</td>
+											<td>6.4280</td>
+											<td>6.5630</td>
+										</tr>
+										<tr>
+											<td>GBP</td>
+											<td>7.2900</td>
+											<td>7.8800</td>
+											<td>8.0400</td>
+											<td>8.2800</td>
+										</tr>
+										<tr>
+											<td>AUD</td>
+											<td>6.3019</td>
+											<td>7.0633</td>
+											<td>7.5543</td>
+											<td>7.4636</td>
+										</tr>
+										<tr>
+											<td>NZD</td>
+											<td>7.6000</td>
+											<td>8.2000</td>
+											<td>8.3450</td>
+											<td>8.4350</td>
+										</tr>
+										<tr>
+											<td>CHF</td>
+											<td>3.1500</td>
+											<td>3.7900</td>
+											<td>3.9800</td>
+											<td>4.2600</td>
+										</tr>
+										<tr>
+											<td>CAD</td>
+											<td>6.5100</td>
+											<td>7.1800</td>
+											<td>7.3249</td>
+											<td>7.4146</td>
+										</tr>
+										<tr>
+											<td>DKK</td>
+											<td>5.6000</td>
+											<td>6.2133</td>
+											<td>6.5133</td>
+											<td>6.8200</td>
+										</tr>
+										<tr>
+											<td>NOK</td>
+											<td>6.6500</td>
+											<td>7.3800</td>
+											<td>7.6900</td>
+											<td>7.9200</td>
+										</tr>
+										<tr>
+											<td>SEK</td>
+											<td>5.9400</td>
+											<td>6.4600</td>
+											<td>6.4900</td>
+											<td>6.4900</td>
+										</tr>
+										<tr>
+											<td>HKD</td>
+											<td>6.6000</td>
+											<td>7.3000</td>
+											<td>7.6000</td>
+											<td>7.9000</td>
+										</tr>
+										<tr>
+											<td>SGD</td>
+											<td>7.6000</td>
+											<td>7.1100</td>
+											<td>8.6500</td>
+											<td>8.4500</td>
+										</tr>
+										<tr>
+											<td>THB</td>
+											<td>4.5500</td>
+											<td>5.2500</td>
+											<td>5.5000</td>
+											<td>5.8000</td>
+										</tr>
+										<tr>
+											<td>SAR</td>
+											<td>8.0400</td>
+											<td>8.7900</td>
+											<td>9.1400</td>
+											<td>9.5800</td>
+										</tr>
+										<tr>
+											<td>AED</td>
+											<td>5.1000</td>
+											<td>5.9500</td>
+											<td>6.7500</td>
+											<td>7.5000</td>
+										</tr>
+										<tr>
+											<td>KWD</td>
+											<td>5.7500</td>
+											<td>6.5500</td>
+											<td>6.9200</td>
+											<td>7.2500</td>
+										</tr>
+										<tr>
+											<td>BHD</td>
+											<td>8.2500</td>
+											<td>8.8500</td>
+											<td>9.0500</td>
+											<td>9.2500</td>
+										</tr>
+										<tr>
+											<td>MYR</td>
+											<td>5.2900</td>
+											<td>6.2000</td>
+											<td>6.4400</td>
+											<td>6.7000</td>
+										</tr>
+										<tr>
+											<td>IDR</td>
+											<td>9.0500</td>
+											<td>9.8000</td>
+											<td>10.1000</td>
+											<td>10.5000</td>
+										</tr>
+										<tr>
+											<td>CNY</td>
+											<td>5.1500</td>
+											<td>5.8000</td>
+											<td>6.0000</td>
+											<td>6.1200</td>
+										</tr>
+										<tr>
+											<td>CNH</td>
+											<td>5.1500</td>
+											<td>5.8000</td>
+											<td>6.0000</td>
+											<td>6.1200</td>
+										</tr>
+										<tr>
+											<td>KRW</td>
+											<td>6.3300</td>
+											<td>6.3600</td>
+											<td>6.1300</td>
+											<td>5.8200</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회 -->
+
+				<!-- s: Popup -->
+				<!-- 조건설정 팝업 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조건설정</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<div class="input_label ty1">조회구분</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="false">
+										<span class="text">환율</span>
+									</button>
+									<button type="button" role="radio" aria-checked="false">
+										<span class="text">선물환율</span>
+									</button>
+									<button type="button" role="radio" aria-checked="true" class="active">
+										<span class="text">환가료율</span>
+									</button>
+								</div>
+
+								<div class="input_label ty1">조회일</div>
+								<div class="from_to">
+									<div class="input">
+										<input type="text" name="" id="" title="조회일자 입력" />
+										<button type="button" class="btn calendar" title="달력으로 조회일자 선택" onclick="comLayerPopUtil.open('popup2');"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- // 조건설정 팝업 -->
+
+				<!-- 달력 팝업 -->
+				<div class="bottom_popup_wrap" id="popup2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회일자</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div id="calendarArea" class="group calendar_box" style="z-index: 3000; display: block">
+								<div class="calendar_select_wrap">
+									<div class="calendar_select">
+										<button id="preYear" type="button" class="btn_prev" title="이전 년도">
+											<span class="t_hidden">이전 년도</span>
+										</button>
+										<span>
+											<em id="year">2024</em>
+											년
+										</span>
+										<button id="nextYear" type="button" class="btn_next" title="다음 년도">
+											<span class="t_hidden">다음 년도</span>
+										</button>
+									</div>
+									<div class="calendar_select">
+										<button id="preMon" type="button" class="btn_prev" title="이전 달">
+											<span class="t_hidden">이전 달</span>
+										</button>
+										<span>
+											<em id="mon">5</em>
+											월
+										</span>
+										<button id="nextMon" type="button" class="btn_next" title="다음 달">
+											<span class="t_hidden">다음 달</span>
+										</button>
+									</div>
+								</div>
+								<div class="wrap_calendar">
+									<table class="calendar weekday">
+										<caption class="hidden">상세기간 달력</caption>
+										<colgroup>
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+											<col style="width: 14.28%" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="sun">일</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col" class="sat">토</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													28
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													29
+												</td>
+												<td class="btn_prev">
+													<em class="hidden">이전달</em>
+													30
+												</td>
+												<td>
+													<button type="button">1</button>
+												</td>
+												<td>
+													<button type="button">2</button>
+												</td>
+												<td>
+													<button type="button">3</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">4</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">5</button>
+												</td>
+												<td>
+													<button type="button">6</button>
+												</td>
+												<td>
+													<button type="button">7</button>
+												</td>
+												<td>
+													<button type="button">8</button>
+												</td>
+												<td>
+													<button type="button">9</button>
+												</td>
+												<td>
+													<button type="button">10</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">11</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">12</button>
+												</td>
+												<td>
+													<button type="button">13</button>
+												</td>
+												<td>
+													<button type="button">14</button>
+												</td>
+												<td>
+													<button type="button">15</button>
+												</td>
+												<td>
+													<button type="button">16</button>
+												</td>
+												<td>
+													<button type="button">17</button>
+												</td>
+												<td class="sat">
+													<em class="hidden">휴일</em>
+													<button type="button">18</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="sun">
+													<em class="hidden">휴일</em>
+													<button type="button">19</button>
+												</td>
+												<td>
+													<button type="button">20</button>
+												</td>
+												<td class="today">
+													<button type="button" title="오늘 날짜">21</button>
+												</td>
+												<td>
+													<button type="button">22</button>
+												</td>
+												<td class="on term">
+													<button type="button" title="선택된 날짜">23</button>
+												</td>
+												<td class="off">
+													<button type="button">24</button>
+												</td>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">25</button>
+												</td>
+											</tr>
+											<tr>
+												<td class="off">
+													<em class="hidden">휴일</em>
+													<button type="button">26</button>
+												</td>
+												<td class="off">
+													<button type="button">27</button>
+												</td>
+												<td class="off">
+													<button type="button">28</button>
+												</td>
+												<td class="off">
+													<button type="button">29</button>
+												</td>
+												<td class="off">
+													<button type="button">30</button>
+												</td>
+												<td class="off">
+													<button type="button">31</button>
+												</td>
+												<td class="btn_next">
+													<em class="hidden">다음달</em>
+													1
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// 달력 팝업 -->
+
+				<!-- s: 통화선택 팝업 -->
+				<!-- s: 전체팝업 -->
+				<div id="step999" data-jx-step-no="999" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<ul class="select_list ty4 currency_list" role="listbox">
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_usd"></div>
+									<strong class="eng">USD</strong>
+									<span class="kor">미국 달러</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_jpy"></div>
+									<strong class="eng">JYP</strong>
+									<span class="kor">일본 100엔</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_eur"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">EU 유로</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_gbp"></div>
+									<strong class="eng">GBP</strong>
+									<span class="kor">영국 파운드</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_aud"></div>
+									<strong class="eng">AUD</strong>
+									<span class="kor">호주 달러</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_nzd"></div>
+									<strong class="eng">NZD</strong>
+									<span class="kor">뉴질랜드 달러</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_chf"></div>
+									<strong class="eng">CHF</strong>
+									<span class="kor">스위스 프랑</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_cad"></div>
+									<strong class="eng">CAD</strong>
+									<span class="kor">캐나다 달러</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_itl"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">이탈리아 유로</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_dkk"></div>
+									<strong class="eng">DKK</strong>
+									<span class="kor">덴마크 크로네</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_bef"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">벨기에 유로</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_ats"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">오스트리아 유로</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_nok"></div>
+									<strong class="eng">NOK</strong>
+									<span class="kor">노르웨이 크로네</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_nlg"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">네덜란드 유로</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_sek"></div>
+									<strong class="eng">SEK</strong>
+									<span class="kor">스웨덴 크로나</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_frf"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">프랑스 유로</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_hkd"></div>
+									<strong class="eng">HKD</strong>
+									<span class="kor">홍콩 달러</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_sgd"></div>
+									<strong class="eng">SGD</strong>
+									<span class="kor">싱가포르 달러</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_dem"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">독일 유로</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_thb"></div>
+									<strong class="eng">THB</strong>
+									<span class="kor">태국 바트</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_sar"></div>
+									<strong class="eng">SAR</strong>
+									<span class="kor">사우디아라비아 리얄</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_aed"></div>
+									<strong class="eng">AED</strong>
+									<span class="kor">아랍에미리트 디르함</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_kwd"></div>
+									<strong class="eng">KWD</strong>
+									<span class="kor">쿠웨이트 디나르</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_bhd"></div>
+									<strong class="eng">BHD</strong>
+									<span class="kor">바레인 디나르</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_myr"></div>
+									<strong class="eng">MYR</strong>
+									<span class="kor">말레이시아 링기트</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_idr"></div>
+									<strong class="eng">IDR</strong>
+									<span class="kor">인도네시아 100루피아</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_esp"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">스페인 유로</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_fim"></div>
+									<strong class="eng">EUR</strong>
+									<span class="kor">핀란드 유로</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_cny"></div>
+									<strong class="eng">CNY</strong>
+									<span class="kor">중국 위안</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_vnd"></div>
+									<strong class="eng">VND</strong>
+									<span class="kor">베트남 100동</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_php"></div>
+									<strong class="eng">PHP</strong>
+									<span class="kor">필리핀 페소</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_twd"></div>
+									<strong class="eng">TWD</strong>
+									<span class="kor">대만 달러</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_kzt"></div>
+									<strong class="eng">KZT</strong>
+									<span class="kor">카자흐스탄 텡게</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_inr"></div>
+									<strong class="eng">INR</strong>
+									<span class="kor">인도 루피</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_bdt"></div>
+									<strong class="eng">BDT</strong>
+									<span class="kor">방글라데시 타카</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_mnt"></div>
+									<strong class="eng">MNT</strong>
+									<span class="kor">몽골 투그릭</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_bnd"></div>
+									<strong class="eng">BND</strong>
+									<span class="kor">브루나이 달러</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_pkr"></div>
+									<strong class="eng">PKR</strong>
+									<span class="kor">파키스탄 루피</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_mxn"></div>
+									<strong class="eng">MXN</strong>
+									<span class="kor">멕시코 페소</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_ars"></div>
+									<strong class="eng">ARS</strong>
+									<span class="kor">아르헨티나 페소</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_mxn"></div>
+									<strong class="eng">BRL</strong>
+									<span class="kor">브라질 레알</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_huf"></div>
+									<strong class="eng">HUF</strong>
+									<span class="kor">헝가리 포린트</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_czk"></div>
+									<strong class="eng">CZK</strong>
+									<span class="kor">체코 코루나</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_rub"></div>
+									<strong class="eng">RUB</strong>
+									<span class="kor">러시아 루블</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_pln"></div>
+									<strong class="eng">PLN</strong>
+									<span class="kor">폴란드 즐로티</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_ils"></div>
+									<strong class="eng">ILS</strong>
+									<span class="kor">이스라엘 셰켈</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_qar"></div>
+									<strong class="eng">QAR</strong>
+									<span class="kor">카타르 리얄</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_jod"></div>
+									<strong class="eng">JOD</strong>
+									<span class="kor">요르단 디나르</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_try"></div>
+									<strong class="eng">TRY</strong>
+									<span class="kor">터키 리라</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_zar"></div>
+									<strong class="eng">ZAR</strong>
+									<span class="kor">남아프리카공화국 랜드</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_egp"></div>
+									<strong class="eng">EGP</strong>
+									<span class="kor">이집트 파운드</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_khr"></div>
+									<strong class="eng">KHR</strong>
+									<span class="kor">캄보디아 리엘</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_mmk"></div>
+									<strong class="eng">MMK</strong>
+									<span class="kor">미얀마 짜트</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_pln"></div>
+									<strong class="eng">PLN</strong>
+									<span class="kor">폴란드 즐로티</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_npr"></div>
+									<strong class="eng">NPR</strong>
+									<span class="kor">네팔 루피</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_mop"></div>
+									<strong class="eng">MOP</strong>
+									<span class="kor">마카오 타파카</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_omr"></div>
+									<strong class="eng">OMR</strong>
+									<span class="kor">오만 리얄</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_clp"></div>
+									<strong class="eng">CLP</strong>
+									<span class="kor">칠레 페소</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_kes"></div>
+									<strong class="eng">KES</strong>
+									<span class="kor">케냐 실링</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_fjd"></div>
+									<strong class="eng">FJD</strong>
+									<span class="kor">피지 달러</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_lyd"></div>
+									<strong class="eng">LYD</strong>
+									<span class="kor">리비아 디나르</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_ron"></div>
+									<strong class="eng">RON</strong>
+									<span class="kor">루마니아 레우</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_lkr"></div>
+									<strong class="eng">LKR</strong>
+									<span class="kor">스리랑카 루피</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_etb"></div>
+									<strong class="eng">ETB</strong>
+									<span class="kor">에티오피아 비르</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_uzs"></div>
+									<strong class="eng">UZS</strong>
+									<span class="kor">우즈베키스탄 숨</span>
+								</li>
+								<li role="option" tabindex="-1" class="item">
+									<div class="ico_box ty1 flag_cop"></div>
+									<strong class="eng">COP</strong>
+									<span class="kor">콜롬비아 페소</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 전체팝업 -->
+				<!-- e: 통화선택 팝업 -->
+
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

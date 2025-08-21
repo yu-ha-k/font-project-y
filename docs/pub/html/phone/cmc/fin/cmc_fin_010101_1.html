@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 금융인증서 - 인증서발급/재발급 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 약관동의 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">약관 동의</div>
+
+							<div class="agree_check_group">
+								<div class="chk_group_wrap">
+									<!-- 1개 이상일 시 생성 -->
+									<div class="agree_check_group_top">
+										<div class="label all_chk">
+											<input type="checkbox" name="" id="agree_check_group_top" class="chk_point_all" />
+											<label for="agree_check_group_top" class="checkbox">
+												<i></i>
+												<span>
+													<span class="ess_text">필수</span>
+													약관 모두 동의
+												</span>
+											</label>
+										</div>
+									</div>
+									<!-- // 1개 이상일 시 생성 -->
+
+									<div class="agree_check">
+										<ul class="term_list">
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="cag1" class="chk_point_sub" />
+													<label for="cag1" class="checkbox small lbl">
+														<i></i>
+														<span>
+															전자금융거래 기본약관
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">전자금융거래 기본약관</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="cag2" class="chk_point_sub" />
+													<label for="cag2" class="checkbox small lbl">
+														<i></i>
+														<span>
+															전자금융서비스 이용약관
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">전자금융서비스 이용약관</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="cag3" class="chk_point_sub" />
+													<label for="cag3" class="checkbox small lbl">
+														<i></i>
+														<span>
+															금융결제원 전자인증서비스 이용약관
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">금융결제원 전자인증서비스 이용약관</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="cag4" class="chk_point_sub" />
+													<label for="cag4" class="checkbox small lbl">
+														<i></i>
+														<span>
+															B2B 전자결제 서비스 이용약관
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">B2B 전자결제 서비스 이용약관</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="cag5" class="chk_point_sub" />
+													<label for="cag5" class="checkbox small lbl">
+														<i></i>
+														<span>
+															개인(신용정보) 수집·이용·제공 동의서
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">개인(신용정보) 수집·이용·제공 동의서</span>
+													보기
+												</button>
+											</li>
+											<li class="item">
+												<div class="label">
+													<input type="checkbox" name="" id="cag5" class="chk_point_sub" />
+													<label for="cag5" class="checkbox small lbl">
+														<i></i>
+														<span>
+															금융결제원 인증서 발급을 위한 개인(신용)정보 및 기타정보 수집이용 동의서
+
+															<span class="ess_mark">필수</span>
+														</span>
+													</label>
+												</div>
+												<button type="button" class="btn ty_txt3 line_bttm btn_view">
+													<span class="sr_only">금융결제원 인증서 발급을 위한 개인(신용)정보 및 기타정보 수집이용 동의서</span>
+													보기
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 약관동의 -->
+
+				<!-- s: step2 사업자정보조회 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 사업자등록번호 조회-->
+						<div class="group">
+							<div class="title_text ty1">사업자정보조회</div>
+							<div class="form_group">
+								<div class="input_label ty1">
+									사업자등록번호
+									<em class="ess_text ty1">필수</em>
+								</div>
+
+								<div class="comp_wrap business_num">
+									<div class="input no_del">
+										<input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" />
+									</div>
+									<span>-</span>
+									<button type="button" aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn"></button>
+								</div>
+							</div>
+							<button type="button" class="btn s_5 c_3 r_2 mt_16 w_100p">조회</button>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 사업자등록번호 조회 -->
+
+						<!-- s: 이용자 선택 -->
+						<div class="group">
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item_wrap ty2">
+										<div class="card_chkbox">
+											<input type="radio" name="name" id="item1" />
+											<label for="item1" aria-labelledby="testitem1"></label>
+										</div>
+										<div class="card_item" id="testitem1">
+											<div class="card_item_wrap_head">
+												<div class="tit title_text ty1">담뭐시기</div>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용자번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">00000000</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용자구분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">관리자</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">가입일자</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2024-08-10</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">제조사</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">바스코</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item_wrap ty2">
+										<div class="card_chkbox">
+											<input type="radio" name="name" id="item2" />
+											<label for="item2" aria-labelledby="testitem2"></label>
+										</div>
+										<div class="card_item" id="testitem2">
+											<div class="card_item_wrap_head">
+												<div class="tit title_text ty1">담뭐시기</div>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용자번호</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">00000000</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">이용자구분</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">관리자</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">가입일자</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2024-08-10</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">제조사</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">바스코</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 이용자 선택 -->
+
+						<!-- s: OTP 안내 -->
+						<div class="group">
+							<div class="title_text ty1">사용자 인증을 위해 OTP 소유자 확인을 해주세요.</div>
+							<div class="txt_style ty2 fw_4">아래 예시를 참고해 IBK기업은행 또는 다른 은행에서 발급받은 OTP 기기 뒷면에 있는 OTP 일련번호*를 입력해 주세요.</div>
+							<ul class="list_refer_mark mt_12">
+								<li>OTP 기기 뒷면 '일련번호(S/N)' 숫자</li>
+								<li>일련번호를 확인할 수 없는 경우 거래영업점으로 문의해 주세요.</li>
+							</ul>
+
+							<div class="otp_visual">
+								<div class="item">
+									<div class="img">
+										<img src="../../../../img/svc/img_otp_token.png" alt="토큰형OTP의 일련번호위치 예시:뒷면상단 111-2222222" />
+									</div>
+									<span class="text">토큰형 OTP</span>
+								</div>
+								<div class="item">
+									<div class="img">
+										<img src="../../../../img/svc/img_otp_card.png" alt="카드형OTP의 일련번호위치 예시:뒷면하단 111122222" />
+									</div>
+									<span class="text">카드형 OTP</span>
+								</div>
+							</div>
+						</div>
+						<!-- e: OTP 안내 -->
+
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>IBK기업은행 기업인터넷뱅킹 가입고객만 인증서 발급/재발급을 할 수 있습니다.</li>
+												<li>금융인증서는 공동인증서(구 공인인증서)와는 다른 인증서입니다.</li>
+												<li>공동인증서 필요 시 [인증센터 > 공동인증서(구 공인인증서) > 인증서 발급/재발급]을 이용해 주세요.</li>
+												<li>안전한 금융결제원 클라우드에 발급한 금융인증서가 보관됩니다.</li>
+												<li>금융결제원 클라우드가 연결된 모든 환경에서 이용할 수 있습니다.</li>
+												<li>단, 발급 후 1년 동안 금융인증서 클라우드 사용 이력이 없는 경우 안전을 위해 클라우드 계정 및 저장된 모든 인증서가 삭제됩니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 사업자정보조회 -->
+
+				<!-- s: step3 정보입력 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 사업자등록번호-->
+						<div class="group">
+							<div class="title_text ty1">정보입력</div>
+							<div class="form_group">
+								<div class="input_label ty1">
+									사업자등록번호
+									<em class="ess_text ty1">필수</em>
+								</div>
+
+								<div class="comp_wrap business_num disabled">
+									<div class="input no_del">
+										<input type="tel" maxlength="3" name="" id="" title="사업자등록번호 앞 3자리 입력" readonly />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" maxlength="2" name="" id="" title="사업자등록번호 가운데 2자리 입력" readonly />
+									</div>
+									<span>-</span>
+									<button type="button" disabled aria-label="사업자등록번호 뒤 5자리 입력" class="keypad_btn">****</button>
+								</div>
+
+								<div class="input_label ty1">
+									출금계좌번호
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="출금계좌번호 입력" placeholder="-없이 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>평생계좌번호는 출금계좌번호로 사용할 수 없습니다.</li>
+								</ul>
+							</div>
+						</div>
+						<!-- e: 사업자등록번호 -->
+
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>금융인증서는 공동인증서(구 공인인증서)와는 다른 인증서입니다.</li>
+												<li>공동인증서 필요 시 [인증센터 > 공동인증서(구 공인인증서) > 인증서 발급/재발급]을 이용해 주세요.</li>
+												<li>발급 후 1년 동안 금융인증서 클라우드 사용 이력이 없는 경우 안전을 위해 클라우드 계정 및 저장된 모든 인증서가 삭제됩니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step3 정보입력 -->
+
+				<!-- s: step4 인증서종류선택 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">인증서종류선택</div>
+							<div class="title_text ty1">사업자등록번호</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">인증서관리명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">황상공주지점</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-00-******</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-000000-00-***</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<!-- s: 금융인증서 종류 -->
+						<div class="group">
+							<div class="form_group">
+								<div class="favorite_tooltip left">고객님에게 딱 맞는 인증서를 추천해드릴게요.</div>
+
+								<div class="input_label ty1 pb_16">
+									금융인증서 종류
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="label">
+									<input type="radio" name="name" id="radio1" />
+									<label for="radio1" class="radio">
+										<i></i>
+										<span>은행, 카드, 보험, 증권 등 금융거래용</span>
+									</label>
+								</div>
+								<div class="pl_32">
+									<ul class="list_refer_mark">
+										<li>단, 금융인증서 서비스를 제공하지 않은 기관은 이용이 제한됩니다.</li>
+									</ul>
+									<div class="form_group mt_16">
+										<div class="input_label ty2">유효기간</div>
+										<div class="dropdown ty2" role="button" title="유효기간 선택 목록 보기" onclick="comLayerPopUtil.open('expireDateList');">
+											<div class="dropdown_text">선택</div>
+										</div>
+									</div>
+								</div>
+								<br />
+								<div class="label">
+									<input type="radio" name="name" id="radio2" />
+									<label for="radio2" class="radio">
+										<i></i>
+										<span>
+											IBK기업은행 기업뱅킹 조회 서비스만 이용 가능(금융결제원)
+											<br />
+											(유효기간 : 3년/무료)
+										</span>
+									</label>
+								</div>
+								<br />
+								<div class="label">
+									<input type="radio" name="name" id="radio3" />
+									<label for="radio3" class="radio">
+										<i></i>
+										<span>
+											전자세금용(국세청전용)
+											<br />
+											(유효기간 : 1년/4,400원)
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- e: 금융인증서 종류 -->
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>금융인증서는 공동인증서(구 공인인증서)와는 다른 인증서입니다.</li>
+											<li>공동인증서 필요 시 [인증센터 > 공동인증서(구 공인인증서) > 인증서 발급/재발급]을 이용해 주세요.</li>
+											<li>발급 후 1년 동안 금융인증서 클라우드 사용 이력이 없는 경우 안전을 위해 클라우드 계정 및 저장된 모든 인증서가 삭제됩니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 인증서종류선택 -->
+
+				<!-- s: step5 발급신청 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">발급신청</div>
+							<div class="title_text ty1">고객정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">인증서관리명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">황상공주지점</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-00-******</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-000000-00-***</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="txt_style ty12">고객님은 재발급 대상으로 수수료가 발생하지 않습니다.</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">
+									인증서관리명
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="인증서관리명 입력" placeholder="입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1 mt_32">
+									휴대폰번호
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="input">
+									<input type="text" name="" id="" title="휴대폰번호 입력" placeholder="11자리 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty1 mt_32">이메일</div>
+								<div class="input">
+									<input type="text" name="" id="" title="이메일 주소 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">신청</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 발급신청 -->
+
+				<!-- s: step6 발급완료 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case2">
+								<div class="lottie_box" aria-hidden="true">
+									<lottie-player src="../../../../lottie/lottie_case5.json" background="transparent" speed="1" loop></lottie-player>
+								</div>
+								금융인증서를 발급했어요
+							</div>
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">인증서관리명</span>
+									<span class="d_list_r">황성공주지점</span>
+								</li>
+								<li>
+									<span class="d_list_l">사업자등록번호</span>
+									<span class="d_list_r">123-45-*****</span>
+								</li>
+								<li>
+									<span class="d_list_l">발급일시</span>
+									<span class="d_list_r">
+										<span class="date">2024-05-12</span>
+										<span class="time">20:10:24</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">이용자번호</span>
+									<span class="d_list_r">12345678</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>인증서 발급 수수료 환불은 인증서 수수료 납부일부터 7일 이내에 할 수 있습니다.</li>
+											<li>수수료 환불은 기업인터넷/스마트뱅킹 접속 후 [인증센터 > 금융인증서 > 인증서 수수료 환불]에서 해주세요.</li>
+											<li>인증서 수수료 세금계산서는 수수료 부과일 기준 다음달 9일까지만 발급할 수 있습니다.</li>
+											<li>세금계산서 발행신청은 기업인터넷뱅킹(PC) 접속 후 [인증센터 > 금융인증서 > 세금계산서 발행신청/조회]에서 해주세요.</li>
+											<li>인증서 발급안내 문자는 고객님 휴대폰번호(010-1111-****)로 발송됩니다. 안내받을 휴대폰번호 변경은 관리영업점으로 문의해 주세요.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">금융인증센터메인</button>
+								<button type="button" class="btn s_5 c_3 r_2">로그인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step6 발급완료 -->
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="expireDateList" title="유효기간 선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">유효기간 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('expireDateList');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+			<!-- e: 금융인증서 - 인증서발급/재발급 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

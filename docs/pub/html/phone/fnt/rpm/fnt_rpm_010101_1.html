@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 퇴직연금지급신청 내역 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 퇴직연금 지급신청 내역 -->
+						<div class="group">
+							<div class="title_text ty1">퇴직연금 지급신청 내역</div>
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-000000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">진행상태</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">비대면승인요청</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">495,445,560</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급(예정)일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">관리영업점</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">여의도</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 퇴직연금 지급신청 내역 -->
+
+						<!-- s: 가입자정보 -->
+						<div class="group">
+							<div class="title_text ty1">가입자정보</div>
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item link link_center">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="card_item_info">
+												<div class="txt2">
+													<span class="bank_name">타마신</span>
+													<span class="account_no">000-000000-00-000</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 가입자정보 -->
+
+						<!-- s: 매도자산정보 -->
+						<div class="group">
+							<div class="title_text ty1">매도자산정보</div>
+
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item link link_center">
+										<a href="#" role="button" class="block" onclick="uf_goStep(3);">
+											<div class="card_item_info">
+												<div class="txt2">하나은행 퇴직연금정기예금(1년)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="card_item link link_center">
+										<a href="#" role="button" class="block" onclick="uf_goStep(3);">
+											<div class="card_item_info">
+												<div class="txt2">하나은행 퇴직연금정기예금(1년)</div>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 매도자산정보 -->
+
+						<!-- s: 기업반환금계좌정보 -->
+						<div class="group">
+							<div class="title_text ty1">기업반환금계좌정보</div>
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금은행</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">기업은행</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-000000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">예금주</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">담초코(민)</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기업반환금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">495,445,560</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 기업반환금계좌정보 -->
+
+						<!-- s: 연락처 -->
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">불능시 연락처</div>
+
+								<div class="comp_wrap phone">
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="전화번호 앞 3자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="전화번호 가운데 4자리 입력" />
+									</div>
+									<span>-</span>
+									<div class="input no_del">
+										<input type="tel" name="" id="" title="전화번호 뒤 4자리 입력" />
+									</div>
+								</div>
+
+								<div class="txt_style ty5 mt_4">
+									<p class="color ty4">장애 발생시 연락받을 전화번호를 입력하세요.</p>
+								</div>
+							</div>
+
+							<div class="btn_area ty3 mt_32">
+								<button type="button" class="btn s_2 c_1 r_1" onclick="comLayerPopUtil.open('popup1');">결재선조회</button>
+								<button type="button" class="btn s_2 c_1 r_1">목록</button>
+							</div>
+
+							<div class="btn_area ty3 mt_64">
+								<button type="button" class="btn s_5 c_1 r_2">반송</button>
+								<button type="button" class="btn s_5 c_3 r_2">결재하기</button>
+							</div>
+						</div>
+						<!-- e: 연락처 -->
+					</div>
+				</div>
+				<!-- e: step1 퇴직연금지급신청 내역 -->
+
+				<!-- s: step2 가입자 상세정보 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">가입자 상세정보</div>
+
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">
+										<span class="tit">가입자명</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt">타마신</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">가입자 계좌번호</span>
+									</span>
+									<span class="d_list_r">
+										<span class="account_no">000-000000-00-000</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">지급종류</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt">퇴직</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">지급형태</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt">의무이전(당행IRP이전)</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">지급사유</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt">중도</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">IRP이전 제외사유</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt">해당없음</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">퇴사일</span>
+									</span>
+									<span class="d_list_r">
+										<span class="date">2021-03-25</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">퇴직급여 총액</span>
+									</span>
+									<span class="d_list_r">
+										<span class="money">495,445,560</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">국민연금전환금</span>
+									</span>
+									<span class="d_list_r">
+										<span class="money">495,445,560</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">퇴직소득세</span>
+									</span>
+									<span class="d_list_r">
+										<span class="money">495,445,560</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">지방소득세</span>
+									</span>
+									<span class="d_list_r">
+										<span class="money">495,445,560</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">제세금반환여부</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt">N</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">신청금액</span>
+									</span>
+									<span class="d_list_r">
+										<span class="money">495,445,560</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">가입자지급액</span>
+									</span>
+									<span class="d_list_r">
+										<span class="money">495,445,560</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">기업반환금액</span>
+									</span>
+									<span class="d_list_r">
+										<span class="money">495,445,560</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">자산관리기관</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt">기업은행</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">입금금융기관</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt">기업은행</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">계좌번호</span>
+									</span>
+									<span class="d_list_r">
+										<span class="account_no">000-000000-00-000</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">예금주</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt">홍길동</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">제외월수(2012년말 이전)</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt"></span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">제외월수(2013년초 이후)</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt"></span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">가산월수(2012년말 이전)</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt"></span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">가산월수(2013년초 이후)</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt"></span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">
+										<span class="tit">현물이전 적용 여부</span>
+									</span>
+									<span class="d_list_r">
+										<span class="txt"></span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 가입자 상세정보 -->
+
+				<!-- s: step3 매도자산 상세정보 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">매도자산 상세정보</div>
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상품명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">하나은행 퇴직연금정기예금(1년)</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청(예정)일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">신청금액/수량</span>
+										</span>
+										<span class="line_right">
+											<span class="money">495,445,560</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">결제(예정)일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">결제금액/수량</span>
+										</span>
+										<span class="line_right">
+											<span class="money">495,445,560</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 매도자산 상세정보 -->
+
+				<!-- s: 결재선 조회 팝업-->
+
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">결재선조회</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">등록(완료)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">결재(대기)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">결재(완료)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item">
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="txt_ty1">2024.06.04 13:22:34</span>
+												</span>
+												<span class="line_right">
+													<span class="txt_ty2">실행(대기)</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorB5">등록자</span>
+														</span>
+														<span class="data_case_num">01.</span>
+														<span class="data_case_text">홍길동 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+										<div class="card_item_sub_data">
+											<p class="line" role="text">
+												<span class="line_left">
+													<span class="data_case">
+														<span class="badge_cont">
+															<span class="badge ty3 colorD3">대직자</span>
+														</span>
+														<span class="data_case_text">비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316) 비대면 마스터 최대 2줄 네이밍 처리 (9231316)</span>
+													</span>
+												</span>
+											</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 결재선 조회 팝업 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

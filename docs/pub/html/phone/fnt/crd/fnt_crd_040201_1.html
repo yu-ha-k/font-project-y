@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 체크카드 한도 조회/변경 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 보유카드 목록 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="card_item_info">
+												<div class="txt1">
+													<span class="date">참! 좋은 Biz카드(대한항공)</span>
+												</div>
+												<div class="txt2">4140-****-****-3915</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="card_item_info">
+												<div class="txt1">
+													<span class="date">참! 좋은 Biz카드(대한항공)</span>
+												</div>
+												<div class="txt2">4140-****-****-3915</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="card_item_info">
+												<div class="txt1">
+													<span class="date">기업 그린카드(신용)</span>
+												</div>
+												<div class="txt2">4140-****-****-3915</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="card_item link">
+										<a href="#" role="button" class="block" onclick="uf_goStep(2);">
+											<div class="card_item_info">
+												<div class="txt1">
+													<span class="date">기업 그린카드(신용)</span>
+												</div>
+												<div class="txt2">4140-****-****-3915</div>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: 보유카드 목록 -->
+
+				<!-- s: 한도 조회 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="group">
+							<div class="bg_box ty1 mt_16">
+								<ul class="list_bullet ty1">
+									<li>조회 기준일시 : 2024.06.13 17:51:16</li>
+								</ul>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="card_item">
+								<div class="card_item_info">
+									<div class="txt1">기업은행 카드별명</div>
+								</div>
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(3);">이용한도 변경신청</button>
+								</div>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="기본한도 - 사업장 한도 정보 목록보기" aria-expanded="false" class="acd_btn">
+										<span class="title">
+											<span class="left">기본한도 - 사업장 한도 정보</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="space_list_ty2">
+											<li>
+												<div class="group_item">
+													<div class="group_item_detail">
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">1회 한도</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">1일 한도</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">월 한도</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">이용금액(월)</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">이용가능금액(월)</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head">
+									<button type="button" title="현재 체크카드 특인할도내역 목록보기" aria-expanded="false" class="acd_btn">
+										<span class="title">
+											<span class="left">현재 체크카드 특인할도내역</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="space_list_ty5">
+											<li>
+												<div class="group_item">
+													<div class="group_item_detail">
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">특인한도 시작일</span>
+															</span>
+															<span class="line_right">
+																<span class="date">2024.06.24</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">특인한도 종료일</span>
+															</span>
+															<span class="line_right">
+																<span class="date">2024.06.24</span>
+															</span>
+														</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="group_item">
+													<div class="group_item_info">
+														<div class="txt3">사업장 한도구분</div>
+													</div>
+													<div class="group_item_detail">
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">특인 1회 한도</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">특인 1일 한도</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">특인 월 한도</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">이용금액(월)</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">이용가능금액(월)</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="group_item">
+													<div class="group_item_info">
+														<div class="txt3">카드한도구분(별도 등록분)</div>
+													</div>
+													<div class="group_item_detail">
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">특인 1회 한도</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">특인 1일 한도</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">특인 월 한도</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">이용금액(월)</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+														<p class="line" role="text">
+															<span class="line_left">
+																<span class="tit">이용가능금액(월)</span>
+															</span>
+															<span class="line_right">
+																<span class="money">85,676,100</span>
+																<span class="txt_unit">원</span>
+															</span>
+														</p>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<ul class="list_bullet ty1">
+								<li>IBK기업은행 체크카드 이용한도 상세내역입니다.</li>
+								<li>특인한도를 등록하지 않으면 기본한도로 이용할 수 있습니다.</li>
+								<li>특인한도를 등록하면 기본한도는 이용할 수 없습니다.</li>
+							</ul>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 한도 조회 -->
+
+				<!-- s: 이용한도 변경신청 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보입력</div>
+
+							<div class="title_text ty1">기본정보</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">사업자등록번호</span>
+									<span class="d_list_r"></span>
+								</li>
+								<li>
+									<span class="d_list_l">사업장명</span>
+									<span class="d_list_r"></span>
+								</li>
+								<li>
+									<span class="d_list_l">카드번호</span>
+									<span class="d_list_r">9440-****-****-1990</span>
+								</li>
+								<li>
+									<span class="d_list_l">카드명</span>
+									<span class="d_list_r">IBK 여신비용결제전용카드</span>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">사업장 한도</div>
+							<ul class="d_list ty2">
+								<li>
+									<span class="d_list_l">1회 한도</span>
+									<span class="d_list_r">
+										<span class="money">85,676,100</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">1일 한도</span>
+									<span class="d_list_r">
+										<span class="money">85,676,100</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">월 한도</span>
+									<span class="d_list_r">
+										<span class="money">85,676,100</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+							</ul>
+
+							<ul class="list_bullet ty1 mt_8">
+								<li>사업장한도 금액은 기업 총 한도 내 구분된 사업장별로 이용할 수 있는 금액입니다.</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">이용한도 변경 – 카드별 한도</div>
+							<ul class="space_list_ty5">
+								<li class="list">
+									<ul class="d_list ty2">
+										<li>
+											<span class="d_list_l">1회 한도금액</span>
+											<span class="d_list_r">
+												<span class="money">10,000,000</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</li>
+									</ul>
+									<div class="form_group mt_16">
+										<div class="input_label ty2">
+											변경 후 한도
+											<em class="ess_text ty1">필수</em>
+										</div>
+										<div class="input">
+											<input type="text" name="" id="" title="변경 후 한도 입력" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="list">
+									<ul class="d_list ty2">
+										<li>
+											<span class="d_list_l">1일 한도금액</span>
+											<span class="d_list_r">
+												<span class="money">10,000,000</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</li>
+									</ul>
+									<div class="form_group mt_16">
+										<div class="input_label ty2">
+											변경 후 한도
+											<em class="ess_text ty1">필수</em>
+										</div>
+										<div class="input">
+											<input type="text" name="" id="" title="변경 후 한도 입력" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+									</div>
+								</li>
+								<li class="list">
+									<ul class="d_list ty2">
+										<li>
+											<span class="d_list_l">월 한도금액</span>
+											<span class="d_list_r">
+												<span class="money">10,000,000</span>
+												<span class="txt_unit">원</span>
+											</span>
+										</li>
+									</ul>
+									<div class="form_group mt_16">
+										<div class="input_label ty2">
+											변경 후 한도
+											<em class="ess_text ty1">필수</em>
+										</div>
+										<div class="input">
+											<input type="text" name="" id="" title="변경 후 한도 입력" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<ul class="list_bullet ty1">
+								<li>체크카드의 카드별 한도를 직접 변경하는 서비스입니다.</li>
+								<li>한도금액 입력 시 1만원 단위로만 입력할 수 있습니다.</li>
+								<li>카드별 한도 등록은 사업장 한도 범위 내에서 할 수 있습니다.</li>
+							</ul>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(3);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">이용한도 변경하기</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 이용한도 변경신청 -->
+
+				<!-- s: 변경신청 완료 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+
+								이용한도 변경을 신청료했어요
+							</div>
+
+							<div class="title_text ty1 mt_32">변경신청 한도</div>
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">1회 한도금액</span>
+									<span class="d_list_r">
+										<span class="money">85,676,100</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">1일 한도금액</span>
+									<span class="d_list_r">
+										<span class="money">85,676,100</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">월 한도금액</span>
+									<span class="d_list_r">
+										<span class="money">85,676,100</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+							</ul>
+
+							<ul class="list_bullet ty1 mt_16">
+								<li>변경신청 결과는 체크카드 [이용한도조회] 상세내역에서 확인해 주세요.</li>
+							</ul>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 변경신청 완료 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

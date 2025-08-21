@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 사업장전환서비스 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 사업장 목록 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">사업장을 추가/삭제해 주세요.</div>
+							<p class="txt_style ty11">
+								단일 사업장만 보유한 고객님은
+								<br />
+								사업장전환 기능을 활용할 수 없어요.
+							</p>
+							<div class="title_text ty3 fw_7 with_btn align_center mt_40">
+								총 6개
+								<button type="button" class="btn s_2 c_1 r_3" onclick="uf_goStep(3);">순서변경</button>
+							</div>
+							<ul class="workplace_list">
+								<li>
+									<div class="info">
+										<div class="name">
+											<div class="txt_style ty2">
+												교촌치킨 송파점
+												<img src="../../../../img/ico/ico_star_select_active.png" alt="대표 사업장" style="width: 18px; height: 18px" class="va_m" />
+											</div>
+										</div>
+										<div class="num">000-00-*****</div>
+									</div>
+									<button type="button" class="modify" onclick="comLayerPopUtil.open('popup1');">
+										<span class="text">사업장 정보 수정</span>
+									</button>
+								</li>
+								<li>
+									<div class="info">
+										<div class="name">
+											<div class="txt_style ty2">교촌치킨 송파점</div>
+										</div>
+										<div class="num">000-00-*****</div>
+									</div>
+									<button type="button" class="modify" onclick="comLayerPopUtil.open('popup1');">
+										<span class="text">사업장 정보 수정</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">사업장 추가/삭제하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 사업장 목록 -->
+
+				<!-- s: step2 사업장 추가/삭제 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">
+								전환하여 이용하실 사업장들을
+								<br />
+								선택해 주세요.
+							</div>
+
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>
+										<img src="../../../../img/ico/ico_star_select.png" alt="대표사업장 선택" class="workplace_img" />
+										이미지를 터치하여 대표사업장 선택/변경
+									</li>
+								</ul>
+							</div>
+
+							<div class="title_txt ty2 mt_40">
+								<div class="label">
+									<input type="checkbox" name="" id="workAll1" />
+									<label for="workAll1" class="checkbox">
+										<i></i>
+										<span>전체선택 (1/20)</span>
+									</label>
+								</div>
+							</div>
+							<ul class="workplace_list mt_16">
+								<li>
+									<div class="info">
+										<div class="name">
+											<div class="label">
+												<input type="checkbox" name="" id="work11" aria-label="사업장 선택" />
+												<label for="work11" class="checkbox">
+													<i></i>
+												</label>
+											</div>
+											<label for="work11">
+												<span class="txt_style ty2">교촌치킨 송파점 교촌치킨 송파점 교촌치킨 송파점 교촌치킨 송파점 교촌치킨 송파점 교촌치킨 송파점</span>
+											</label>
+										</div>
+										<div class="num txt_style ty6">000-00-*****</div>
+									</div>
+
+									<div class="label star_radio">
+										<input type="radio" name="main1" id="main11" />
+										<label for="main11" class="radio">
+											<i></i>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="info">
+										<div class="name">
+											<div class="label">
+												<input type="checkbox" name="" id="work21" aria-label="사업장 선택" />
+												<label for="work21" class="checkbox">
+													<i></i>
+												</label>
+											</div>
+											<label for="work21">
+												<span class="txt_style ty2">교촌치킨 송파점</span>
+											</label>
+										</div>
+										<div class="num txt_style ty6">000-00-*****</div>
+									</div>
+
+									<div class="label star_radio">
+										<input type="radio" name="main1" id="main21" />
+										<label for="main21" class="radio">
+											<i></i>
+										</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">저장</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 사업장 추가/삭제 -->
+
+				<!-- s: step3 사업장 순서 변경 -->
+				<!-- s: 전체팝업-->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3 enterprise">
+						<div class="group">
+							<p class="txt_style ty1">사업장을 터치한 상태로 위로 아래로 이동해 주세요</p>
+
+							<div class="tit_wrap">
+								<div class="tit">
+									<div class="txt_style ty10">순서변경방법</div>
+									<div class="tooltip_wrap ty1">
+										<button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+										<div class="tooltip_wrap_container" role="tooltip">
+											<div class="inner">
+												<!-- s: drag -->
+												<p>
+													손가락으로 이동버튼을 누르신 상태에서
+													<br />
+													위로 아래로 이동해서 변경해 주세요.
+												</p>
+												<div class="account_user_guide guide_drag"></div>
+												<!-- e: drag -->
+
+												<!-- s: btn -->
+												<p>
+													버튼을 눌러서 위로 아래로
+													<br />
+													이동해서 변경해 주세요.
+												</p>
+												<div class="account_user_guide guide_btn"></div>
+												<!-- e: btn -->
+											</div>
+											<button type="button" class="tooltip_close">도움말 닫기</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="tooltip_box">
+									<div class="order_filter">
+										<div class="drag type">
+											<input type="radio" name="order" id="orderDrag" checked />
+											<label for="orderDrag">
+												<span class="sr_only">드래그로 순서 변경하기</span>
+											</label>
+										</div>
+										<div class="button type">
+											<input type="radio" name="order" id="orderBtn" />
+											<label for="orderBtn">
+												<span class="sr_only">버튼으로 순서 변경하기</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--
+                draggable : 드래그로 순서 변경
+                btn_order : 버튼으로 순서 변경
+              -->
+
+							<div class="bx_content mt_12">
+								<!-- s: draggable -->
+								<ul id="step2_list1" data-jx-ul="" class="draggable enterprise_list">
+									<li>
+										<div class="txt_style ty2">교촌치킨 송파점</div>
+										<div class="num txt_style ty6">123-45-*****</div>
+									</li>
+									<li>
+										<div class="txt_style ty2">교촌치킨 송파점</div>
+										<div class="num txt_style ty6">123-45-*****</div>
+									</li>
+									<li>
+										<div class="txt_style ty2">교촌치킨 송파점</div>
+										<div class="num txt_style ty6">123-45-*****</div>
+									</li>
+									<li>
+										<div class="txt_style ty2">교촌치킨 송파점</div>
+										<div class="num txt_style ty6">123-45-*****</div>
+									</li>
+								</ul>
+								<!-- e: draggable -->
+
+								<!-- s: btn_order -->
+								<ul id="step2_list2" data-jx-ul="" class="enterprise_list">
+									<li>
+										<div class="txt_style ty2">교촌치킨 송파점</div>
+										<div class="num txt_style ty6">123-45-*****</div>
+										<div class="ctr_order">
+											<!-- 리스트 최상단 도달 시 '위로 한칸 이동 버튼' 비활성화 처리 -->
+											<button type="button" class="up" disabled>
+												<span class="sr_only">위로 한칸 이동</span>
+											</button>
+											<button type="button" class="down">
+												<span class="sr_only">아래로 한칸 이동</span>
+											</button>
+										</div>
+									</li>
+									<li>
+										<div class="txt_style ty2">교촌치킨 송파점</div>
+										<div class="num txt_style ty6">123-45-*****</div>
+										<div class="ctr_order">
+											<button type="button" class="up">
+												<span class="sr_only">위로 한칸 이동</span>
+											</button>
+											<button type="button" class="down">
+												<span class="sr_only">아래로 한칸 이동</span>
+											</button>
+										</div>
+									</li>
+									<li>
+										<div class="txt_style ty2">교촌치킨 송파점</div>
+										<div class="num txt_style ty6">123-45-*****</div>
+										<div class="ctr_order">
+											<button type="button" class="up">
+												<span class="sr_only">위로 한칸 이동</span>
+											</button>
+											<button type="button" class="down">
+												<span class="sr_only">아래로 한칸 이동</span>
+											</button>
+										</div>
+									</li>
+									<li>
+										<div class="txt_style ty2">교촌치킨 송파점</div>
+										<div class="num txt_style ty6">123-45-*****</div>
+										<div class="ctr_order">
+											<button type="button" class="up">
+												<span class="sr_only">위로 한칸 이동</span>
+											</button>
+											<button type="button" class="down" disabled>
+												<span class="sr_only">아래로 한칸 이동</span>
+											</button>
+											<!-- 리스트 최하단 도달 시 '아래로 한칸 이동 버튼' 비활성화 처리 -->
+										</div>
+									</li>
+								</ul>
+								<!-- e: btn_order -->
+							</div>
+						</div>
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">순서 저장하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 전체팝업-->
+				<!-- e: step3 사업장 순서 변경 -->
+
+				<!-- s: step31 개인 인증서 이용 해지 -->
+				<div id="step31" data-jx-step-no="31" data-jx-effect="slide">
+					<div class="content_wrap ty4 personal_cert">
+						<!-- s: 안내 -->
+						<div class="group">
+							<!-- s: 가입 권유 -->
+
+							<div class="ico_txt ty1 info">
+								아직 가입하지 않은 서비스예요.
+								<br />
+								개인인증서 이용 등록 서비스에 가입할까요?
+								<div class="note_cmt">
+									개인인증서로 기업 스마트뱅킹을
+									<br />
+									더 편리하게 이용해 보세요.
+								</div>
+							</div>
+							<!-- e: 가입 권유 -->
+						</div>
+						<!-- e: 안내 -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">다음에</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">가입하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step31 개인 인증서 이용 해지 -->
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">사업장 별칭을 등록/수정해 주세요.</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<p class="txt_caution">등록/수정 후 대표사업장 지정 여부를 선택해 주세요.</p>
+
+							<div class="group_item mt_16">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">교촌치킨 송파점</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">사업자등록번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-00-*****</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="form_group mt_24">
+								<div class="input_label ty2">사업장 별칭</div>
+								<div class="input">
+									<input type="text" name="" id="" title="사업장 별칭 입력" placeholder="10자 이내로 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">저장하기</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

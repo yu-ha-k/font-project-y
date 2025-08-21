@@ -1,0 +1,1342 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 대출 청약철회 진행현황조회/취소/상환내역조회 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 진행현황조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<ul class="space_list_ty3">
+								<li>
+									<span class="badge ty3 colorD1 mb_12">반환대상 부대비용 확인 중</span>
+									<div class="txt_style ty7">청약철회 시 발생하는 반환대상 부대비용을 대출 관리영업점에서 확인하고 있어요. 부대비용 산정 완료 시 고객님께 문자메시지로 안내해드릴게요.</div>
+								</li>
+								<li>
+									<span class="badge ty3 colorD1 mb_12">반환대상 부대비용 확인 완료</span>
+									<div class="txt_style ty7">반환대상 부대비용 영업점을 확인했어요. 청약철회를 계속 진행해 주세요.</div>
+								</li>
+								<li>
+									<span class="badge ty3 colorD1 mb_12">청약철회 완료</span>
+									<div class="txt_style ty7">대출원금과 부대비용을 모두 상환해 청약철회가 완료됐어요. 대출기록은 4일(영업일 기준) 이후 삭제돼요.</div>
+								</li>
+								<li>
+									<span class="badge ty3 colorD1 mb_12">중도상환 완료</span>
+									<div class="txt_style ty7">대출원금과 중도상환 해약금을 모두 상환해 중도상환이 완료됐어요. 대출기록은 삭제되지 않습니다.</div>
+								</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<ul class="space_list_ty1">
+								<li>
+									<div class="card_item_wrap ty1">
+										<div class="card_chkbox">
+											<input type="radio" name="rdo" id="rdo01" />
+											<label for="rdo01" aria-labelledby="rdo01_content"></label>
+										</div>
+										<div class="card_item" id="rdo01_content">
+											<div class="badge_cont">
+												<span class="badge ty3 colorD1">반환대상 부대비용 확인 중</span>
+											</div>
+											<div class="card_item_info">
+												<div class="txt1">대출계좌번호</div>
+												<div class="txt2">
+													<span class="account_no">071-501660-99-32031</span>
+												</div>
+											</div>
+											<div class="card_item_sub_info">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty1">대출금액(약정액)</span>
+													</span>
+													<span class="line_right">
+														<span class="money">300,000,000</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">청약철회 신청일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2021-10-25</span>
+													</span>
+												</p>
+
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">상품명</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">중소기업자금대출</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="card_item_wrap ty1">
+										<div class="card_chkbox">
+											<input type="radio" name="rdo" id="rdo02" />
+											<label for="rdo02" aria-labelledby="rdo02_content"></label>
+										</div>
+										<div class="card_item" id="rdo02_content">
+											<div class="badge_cont">
+												<span class="badge ty3 colorD1">반환대상 부대비용 확인 중</span>
+											</div>
+											<div class="card_item_info">
+												<div class="txt1">대출계좌번호</div>
+												<div class="txt2">
+													<span class="account_no">071-501660-99-32031</span>
+												</div>
+											</div>
+											<div class="card_item_sub_info">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="name_ty1">대출금액(약정액)</span>
+													</span>
+													<span class="line_right">
+														<span class="money">300,000,000</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+											<div class="card_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">청약철회 신청일</span>
+													</span>
+													<span class="line_right">
+														<span class="date">2021-10-25</span>
+													</span>
+												</p>
+
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">상품명</span>
+													</span>
+													<span class="line_right">
+														<span class="txt">중소기업자금대출</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>청약철회권은 대출일+14일 이내에만 행사할 수 있습니다.</li>
+												<li>영업점 방문 신청내역은 해당 목록에 표시되지 않습니다. 영업점을 방문해 청약철회를 계속 진행하거나, 영업점에 방문 신청내역 취소 요청 후 비대면 신청을 해주세요.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">신청 취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 진행현황조회 -->
+
+				<!-- s: step2 내역없을경우 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<!-- s: 신청 내역이 없을 경우 -->
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								청약철회 신청내역이 없습니다
+							</div>
+							<!-- e: 신청 내역이 없을 경우 -->
+
+							<!-- s: 청약철회신청 취소 처리되었을 경우 -->
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								청약철회 신청을 취소했어요
+							</div>
+							<!-- e: 청약철회신청 취소 처리되었을 경우 -->
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 내역없을경우 -->
+
+				<!-- s: step3 상세내역 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">상환금액 상세내역</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환종류</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">청약철회</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환금액(a)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환 후 대출잔액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출이자금액(b)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">총 중도상환 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">중도상환 수수료 면제금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">중도상환 수수료(c)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">환출이자(d)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">환출수수료(e)</span>
+											<span class="sub_info_txt">
+												<span class="desc_txt">이미 납부한 한도약정 수수료는 고객님이 입력한 출금계좌번호로 반환됩니다.</span>
+											</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">부대비용(f)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">출금금액(A+B+C+F)-(D)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">출금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">071-501660-99-32031</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환금 납부일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2022-05-12</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="title_text ty1">청약철회로 납부한 부담비용</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">근저당설정비</span>
+										</span>
+										<span class="line_right">
+											<span class="money">2,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">감정평가비용</span>
+										</span>
+										<span class="line_right">
+											<span class="money">2,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">시가조사 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">100,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">임대차조사 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">50,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">은행부담 인지세</span>
+										</span>
+										<span class="line_right">
+											<span class="money">100,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">권리보험료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">100,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">전자등기수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">50,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">국민주택채권</span>
+										</span>
+										<span class="line_right">
+											<span class="money">70,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">모기지신용보험(MCI) 보증료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">IP사업화 대출 질권설정비용</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">IP사업화 대출 특허가치 평가비용</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+								<div class="result_box mt_16">
+									<p class="line">
+										<span class="line_left">부대비용합계</span>
+										<span class="line_right">
+											<span class="money">32,345,778</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 상세내역 -->
+
+				<!-- s: step4 신청유형선택 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">신청유형선택</div>
+							<div class="title_text ty1">선택 대출계좌</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상품명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">B2B팩토링약정</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">000-000000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출금리</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">0.1%</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2012-05-12</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출만기일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2022-05-12</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="txt_style ty2">
+								고객님은
+								<br />
+								<span class="color ty3">중도상환</span>
+								선택 시
+								<br />
+								<span class="color ty3">청약철회</span>
+								선택하는 것보다
+								<br />
+								<span class="color ty3">1,000,000</span>
+								원의 비용을 절감할 수 있어요.
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">청약철회 시 고객부담비용</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">근저당권 등 담보권 설정비용</span>
+										</span>
+										<span class="line_right">
+											<span class="money">2,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">감정평가 및 공동주택가격 자문</span>
+										</span>
+										<span class="line_right">
+											<span class="money">2,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">시가조사 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">100,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">임대차조사 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">50,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">은행부담 인지세</span>
+										</span>
+										<span class="line_right">
+											<span class="money">100,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">전자등기 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">100,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">IP사업화 대출 질권설정비용</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">IP사업화 대출 특허기술가치 평가비용</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="result_box mt_16">
+								<p class="line">
+									<span class="line_left">부대비용합계</span>
+									<span class="line_right">
+										<span class="money">32,345,778</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">중도상환 시 고객부담비용</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">중도상환해약금</span>
+										</span>
+										<span class="line_right">
+											<span class="money">32,345,778</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="result_box mt_16">
+								<p class="line">
+									<span class="line_left">비용합계</span>
+									<span class="line_right">
+										<span class="money">32,345,778</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">신청유형 선택</div>
+						</div>
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="true" class="active">청약철회</button>
+							<button type="button" role="tab" aria-selected="false">중도상환(철회 미신청)</button>
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open1">
+							<div class="group mt_24">
+								<div class="question_list">
+									<div class="question">
+										<div class="question_cont">1개월 내 청약철회를 2회 이상 진행 시 추후 대출신청에 제한이 있음을 확인했습니다.</div>
+									</div>
+									<div class="answer">
+										<div class="btn_area clickable ty1" role="radiogroup">
+											<button type="button" role="radio" aria-checked="true" class="active">
+												<span class="text">아니요</span>
+											</button>
+											<button type="button" role="radio" aria-checked="false">
+												<span class="text">예</span>
+											</button>
+										</div>
+									</div>
+									<div class="question">
+										<div class="question_cont">대출중도상환이 아닌 대출청약철회로 진행함을 확인 했습니다.</div>
+									</div>
+									<div class="answer">
+										<div class="btn_area clickable ty1" role="radiogroup">
+											<button type="button" role="radio" aria-checked="true" class="active">
+												<span class="text">아니요</span>
+											</button>
+											<button type="button" role="radio" aria-checked="false">
+												<span class="text">예</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="question_list">
+									<div class="question">
+										<div class="question_cont">대출기록이 삭제되지 않음을 확인했습니다.</div>
+									</div>
+									<div class="answer">
+										<div class="btn_area clickable ty1" role="radiogroup">
+											<button type="button" role="radio" aria-checked="true" class="active">
+												<span class="text">아니요</span>
+											</button>
+											<button type="button" role="radio" aria-checked="false">
+												<span class="text">예</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>1개월 이내 2회 이상 청약철회를 하는 경우 추후 대출 신청이 일부 제한될 수 있습니다.</li>
+												<li>중도상환 시 신용정보원, 개인신용조회회사(CB사) 등의 대출기록은 삭제되지 않습니다.</li>
+												<li>이미 납부한 한도약정 수수료가 있는 경우 청약철회 시 은행이 해당 수수료를 반환하며, 중도상환 시에는 반환하지 않습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(3);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 신청유형선택 -->
+
+				<!-- s: step5 부대비용확인 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">부대비용확인</div>
+							<div class="title_text ty1">청약철회 시 고객부담비용</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">근저당권 등 담보권 설정비용</span>
+										</span>
+										<span class="line_right">
+											<span class="money">2,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">감정평가 및 공동주택가격 자문</span>
+										</span>
+										<span class="line_right">
+											<span class="money">2,000,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">시가조사 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">100,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">임대차조사 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">50,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">은행부담 인지세</span>
+										</span>
+										<span class="line_right">
+											<span class="money">100,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">전자등기 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">100,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">IP사업화 대출 질권설정비용</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">IP사업화 대출 특허기술가치 평가비용</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="result_box mt_16">
+								<p class="line">
+									<span class="line_left">부대비용합계</span>
+									<span class="line_right">
+										<span class="money">32,345,778</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(4);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(6);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 부대비용확인 -->
+
+				<!-- s: step6 부대비용확인중 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								반환대상 부대비용을 확인하고 있어요
+								<div class="note_cmt">다음 영업일까지 부대비용 확인 후 고객님께 문자메시지로 안내해드릴게요.</div>
+							</div>
+						</div>
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>문자메시지를 받을 수 없는 환경일 경우 영업점으로 문의해 주세요.</li>
+												<li>대출일로부터 14일 이내에 청약철회 신청 및 대출원리금 전액 상환(은행이 제3자에게 지급한 부대비용 반환 포함)을 완료한 때 청약철회의 효력이 발생합니다. 청약철회 효력이 발생한 이후에는 취소할 수 없습니다.</li>
+												<li>영업점 방문 신청 시 부대비용을 빠르게 확인할 수 있습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(7);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step6 부대비용확인중 -->
+
+				<!-- s: step7 상환정보입력 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">상환정보입력</div>
+							<div class="title_text ty1">상환대출계좌</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환종류</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">만기일시상환</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상품명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">B2B팩토링약정</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">071-501660-99-32031</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출만기일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출금리</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">1%</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="title_text ty1">총 상환금액</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">총 출금예정금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money money_blue">32,345,778</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="result_box mt_16">
+								<p class="line">
+									<span class="line_left">부대비용합계</span>
+									<span class="line_right">
+										<span class="money">32,345,778</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</p>
+							</div>
+							<ul class="list_bullet ty1 mt_8">
+								<li>금액에 대한 자세한 안내는 다음 페이지를 참조해 주세요.</li>
+							</ul>
+						</div>
+
+						<hr aria-hidden="true" class="divider ty1" />
+
+						<div class="group">
+							<div class="form_group">
+								<div class="input_label ty1">
+									출금계좌번호
+									<em class="ess_text ty1">필수</em>
+								</div>
+								<div class="dropdown ty2" role="button" title="출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="form_desc_info">
+									출금가능금액
+									<span class="color ty3">
+										<span class="money">123,456,789</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>대출일로부터 14일 이내에 청약철회 신청 및 대출원리금 전액 상환(은행이 제3자에게 지급한 부대비용 반환 포함)을 완료한 때 청약철회의 효력이 발생합니다. 청약철회 효력이 발생한 이후에는 취소할 수 없습니다.</li>
+												<li>재정기금, 협약대출 등 정책자금대출은 청약철회 후 다시 대출 신청할 경우 정책자금 수혜를 이미 받은 기업으로 분류돼 재신청이 제한될 수 있습니다.</li>
+												<li>청약철회 시 중도상환 해약금은 발생하지 않으며 신용정보원, 개인신용조회회사(CB사) 등의 대출기록은 삭제됩니다. 단, 1개월 이내 2회 이상 청약철회를 하는 경우 추후 대출 신청이 일부 제한될 수 있습니다.</li>
+												<li>근저당권 등 담보권 설정 대출인 경우 담보권 말소 관련 내용은 주거래 영업점(또는 대출실행 영업점)으로 문의해 주세요.</li>
+												<li>신용보증서 담보대출은 은행 영업시간에만 신청할 수 있습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(8);">계속 진행하기</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step7 상환정보입력 -->
+
+				<!-- s: step8 정보확인 -->
+				<div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">정보확인</div>
+							<div class="title_text ty1">상환금액 정보</div>
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환종류</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">만기일시상환</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환금액(a)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">상환 후 대출잔액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">0</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">대출이자금액(b)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">총 중도상환 수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">중도상환 수수료 면제금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">중도상환 수수료(c)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">환출이자(d)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">환출수수료(e)</span>
+											<span class="sub_info_txt">
+												<span class="desc_txt">이미 납부한 한도약정 수수료는 고객님이 입력한 출금계좌번호로 반환됩니다.</span>
+											</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">부대비용(f)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">출금금액(A+B+C+F)-(D)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">1,000</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">출금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="account_no">071-501660-99-32031</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>대출일로부터 14일 이내에 청약철회 신청 및 대출원리금 전액 상환(은행이 제3자에게 지급한 부대비용 반환 포함)을 완료한 때 청약철회 효력이 발생합니다. 청약철회 효력이 발생한 이후에는 취소할 수 없습니다.</li>
+												<li>재정기금, 협약대출 등 정책자금대출은 청약철회 후 다시 대출 신청할 경우 정책자금 수혜를 이미 받은 기업으로 분류돼 재신청이 제한될 수 있습니다.</li>
+												<li>청약철회 시 중도상환 해약금은 발생하지 않으며 신용정보원, 개인신용조회회사(CB사) 등의 대출기록은 삭제됩니다. 단, 1개월 이내 2회 이상 청약철회를 하는 경우 추후 대출 신청이 일부 제한될 수 있습니다.</li>
+												<li>근저당권 등 담보권 설정 대출인 경우 담보권 말소 관련 내용은 주거래 영업점(또는 대출실행 영업점)으로 문의해 주세요.</li>
+												<li>신용보증서 담보대출은 은행 영업시간에만 신청할 수 있습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(9);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step8 정보확인 -->
+
+				<!-- s: step9 처리완료 -->
+				<div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								청약철회 및 대출상환을 완료했어요
+							</div>
+						</div>
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>청약철회 또는 중도상환으로 대출을 상환했습니다. 결과는 [진행현황 조회/취소]에서 확인해 주세요.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step9 처리완료 -->
+
+				<!-- s: Popup -->
+				<!-- 계좌 선택 팝업 -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- // 계좌 선택 팝업 -->
+				<!-- e: Popup -->
+			</div>
+			<!-- e: 대출 청약철회 진행현황조회/취소/상환내역조회 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

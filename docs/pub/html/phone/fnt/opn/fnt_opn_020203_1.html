@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: 조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3 trans_inquiry_result">
+						<!-- s: 출금계좌번호 조회 -->
+						<div class="group account_no_inquiry">
+							<ul class="list_bullet ty2">
+								<li>IBK오픈뱅킹을 통해 이체한 내역을 조회할 수 있습니다.</li>
+							</ul>
+							<div class="form_group">
+								<div class="input_label ty1">출금계좌번호</div>
+								<div class="dropdown ty2" role="button" title="출금계좌번호 선택 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">선택</div>
+								</div>
+
+								<div class="input_label ty1">조회기간</div>
+								<div class="dropdown ty1" role="button" title="조회기간 목록보기" onclick="comLayerPopUtil.open('popup1');">
+									<div class="dropdown_text">23.02.01~24.02.06 · 입출금 · 최근순 · 전체</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 출금계좌번호 조회-->
+
+						<!-- s: 조회결과 -->
+						<div class="group inquiry_result_list">
+							<div class="bg_box ty1">
+								<ul class="list_bullet ty1">
+									<li>조회 일시 : 2017-09-20 18:14:55</li>
+								</ul>
+							</div>
+
+							<ul class="card_inquiry_result">
+								<li class="item">
+									<a href="#" role="button" class="block mt_16" onclick="uf_goStep(4);">
+										<div class="card_item link">
+											<div class="card_item_info">
+												<div class="txt1">거래완료</div>
+												<div class="txt2">2017-07-12</div>
+											</div>
+											<div class="card_item_sub_info line">
+												<p class="line">
+													<span class="line_left">결제일자</span>
+													<span class="line_right">
+														<span class="date">2017-07-12</span>
+													</span>
+												</p>
+												<p class="line">
+													<span class="line_left">출금</span>
+													<span class="line_right has_bank_name">
+														<span class="bank_name">
+															<span class="ico_box ty3 ico_bank_003"></span>
+															기업
+														</span>
+														<span class="account_no">27404657502015</span>
+													</span>
+												</p>
+												<p class="line">
+													<span class="line_left">입금</span>
+													<span class="line_right has_bank_name">
+														<span class="bank_name">
+															<span class="ico_box ty3 ico_bank_003"></span>
+															기업
+														</span>
+														<span class="account_no">27404657502015</span>
+													</span>
+												</p>
+												<p class="line">
+													<span class="line_left">거래적요</span>
+													<span class="line_right">
+														<span class="txt">이체</span>
+														<span class="money">456,778</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="item">
+									<div class="no_result_msg">
+										<div class="msg">거래내역이 없습니다.</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- e: 조회결과 -->
+
+						<!-- s: 약관동의 -->
+						<!-- <div class="group">
+              <div class="agree_check tit_ty">
+                <div class="top">
+                  <div class="label">
+                    <input type="checkbox"
+                      name=""
+                      id="ago_group04"
+                      
+                      
+                      
+                      
+                      
+                    >
+                    <label for="ago_group04" class="checkbox">
+                      <i></i>
+                        <span >
+                          개인(신용)정보 선택적 동의1 
+                          
+                           
+                          
+                          
+                        </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="inner">
+                  <ul class="term_list">
+                    <li class="item">
+                      <div class="label">
+                        <input type="checkbox"
+                          name=""
+                          id="ago_group04_1"
+                          class="chk_point_sub"
+                          
+                          
+                          
+                          
+                        >
+                        <label for="ago_group04_1" class="checkbox small lbl">
+                          <i></i>
+                            <span >
+                              (우리) 자동계좌이체 약관 
+                              
+                               
+                              
+                              
+                            </span>
+                        </label>
+                      </div>
+                      <button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(5);" ><span class="sr_only">(우리) 자동계좌이체 약관</span>보기</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div> -->
+						<!-- e: 약관동의 -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty2">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type=" button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 조회 -->
+
+				<!-- s: 이체결과조회 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3 trans_inquiry_result">
+						<!-- s: 상단요약 -->
+						<div class="group">
+							<div class="title_text ty1">계좌조회</div>
+
+							<div class="card_item account_summary other">
+								<div class="card_item_info">
+									<div class="txt4">
+										<div class="bank_name">
+											<div class="ico_box ty3 ico_bank_003"></div>
+											기업
+										</div>
+										<div class="account_info">
+											<span class="badge ty3 colorA3">입출금</span>
+											<span class="account_no">000-000000-00-000</span>
+										</div>
+									</div>
+									<div class="amount">
+										<span class="money">4,116,820</span>
+										<span class="txt_unit">원</span>
+									</div>
+									<div class="available_amount">
+										<span class="txt">출금가능액</span>
+										<span class="money">4,116,820</span>
+										<span class="txt_unit">원</span>
+									</div>
+									<div class="btn_area ty3">
+										<button type="button" class="btn s_4 c_1 r_2">계좌거래내역</button>
+										<button type="button" class="btn s_4 c_3 r_2">이체</button>
+										<button type="button" class="btn s_4 c_1 r_2 w_100p" onclick="uf_goStep(3);">이체결과조회</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 상단요약 -->
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<button type="button" class="btn s_4 c_1 r_2 w_100p">최근 거래내역조회</button>
+							<div class="recent_trans_detail">
+								<div class="title_text ty1">최근거래내역 (7일)</div>
+
+								<ul class="space_list_ty3">
+									<li>
+										<div class="ib_item">
+											<div class="ib_item_info">
+												<div class="txt1">2017-07-16</div>
+											</div>
+											<div class="ib_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">거래적요</span>
+													</span>
+													<span class="line_right">
+														<span class="money money_blue">입금</span>
+														<span class="money money_blue">200,000</span>
+														<span class="txt_unit txt_unit_blue">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="text">잔액</span>
+														<span class="money">200,000</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="ib_item">
+											<div class="ib_item_info">
+												<div class="txt1">2017-07-16</div>
+											</div>
+											<div class="ib_item_detail">
+												<p class="line" role="text">
+													<span class="line_left">
+														<span class="tit">거래적요</span>
+													</span>
+													<span class="line_right">
+														<span class="money money_red">출금</span>
+														<span class="money money_red">200,000</span>
+														<span class="txt_unit txt_unit_red">원</span>
+													</span>
+												</p>
+												<p class="line" role="text">
+													<span class="line_right">
+														<span class="text">잔액</span>
+														<span class="money">200,000</span>
+														<span class="txt_unit">원</span>
+													</span>
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+								<div class="btn_area ty1 more">
+									<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- s: 하단 고정 버튼 -->
+					<div class="bottom_btn_area">
+						<div class="btn_area ty1">
+							<button type=" button" class="btn s_5 c_3 r_2">확인</button>
+						</div>
+					</div>
+					<!-- e: 하단 고정 버튼 -->
+				</div>
+				<!-- e: 이체결과조회 -->
+
+				<!-- s: 이체결과조회2 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap trans_inquiry_result">
+						<div class="content_wrap ty3">
+							<!-- s: 출금계좌번호 조회 -->
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">출금계좌번호</div>
+									<div class="dropdown ty2" role="button" title="출금계좌번호 선택 목록보기" onclick="comLayerPopUtil.open('popupAccount2');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="dropdown ty4 mt_10" role="button" title="날짜선택" onclick="comLayerPopUtil.open('popup1');">
+										<div class="dropdown_text">23.02-01~24.02.06</div>
+									</div>
+								</div>
+							</div>
+							<!-- e: 출금계좌번호 조회-->
+							<hr aria-hidden="true" class="divider ty1" />
+							<!-- s: 조회결과 -->
+							<div class="group inquiry_result_list">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>조회 일시 : 2017-09-20 18:14:55</li>
+									</ul>
+								</div>
+
+								<ul class="space_list_ty1 mt_16">
+									<li class="item">
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(4);">
+												<div class="card_item_info">
+													<div class="txt1">거래완료</div>
+													<div class="txt2">2017-07-12</div>
+												</div>
+
+												<div class="card_item_sub_info line">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="name_ty2">출금</span>
+														</span>
+														<span class="line_right has_bank_name">
+															<span class="bank_name">
+																<span class="ico_box ty3 ico_bank_003"></span>
+																기업
+															</span>
+															<span class="account_no">27404657502015</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="name_ty2">입금</span>
+														</span>
+														<span class="line_right has_bank_name">
+															<span class="bank_name">
+																<span class="ico_box ty3 ico_bank_003"></span>
+																기업
+															</span>
+															<span class="account_no">27404657502015</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="name_ty2">거래적요</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">이체</span>
+															<span class="money">456,778</span>
+															<span class="txt_unit">원</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+
+									<li class="item">
+										<div class="no_result_msg">
+											<div class="msg">거래내역이 없습니다.</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- e: 조회결과 -->
+						</div>
+					</div>
+				</div>
+				<!-- e: 이체결과조회2 -->
+
+				<!-- s: 상세조회 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap trans_inquiry_result">
+						<div class="content_wrap ty3">
+							<div class="group detail_result">
+								<!--s: 상단 조회 요약 -->
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">이체일시</span>
+											</span>
+											<span class="line_right">
+												<span class="date">2024-05-12</span>
+												<span class="time">20:10:24</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">출금은행</span>
+											</span>
+											<span class="line_right">
+												<span class="bank_name">
+													<span class="ico_box ty3 ico_bank_003"></span>
+													기업
+												</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">출금계좌번호</span>
+											</span>
+											<span class="line_right">
+												<span class="account_no">000-000000-00-000</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">입금은행</span>
+											</span>
+											<span class="line_right">
+												<span class="bank_name">
+													<span class="ico_box ty3 ico_bank_003"></span>
+													기업
+												</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">입금계좌번호</span>
+											</span>
+											<span class="line_right">
+												<span class="account_no">000-000000-00-000</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">이체금액</span>
+											</span>
+											<span class="line_right">
+												<span class="money bold">200,000</span>
+												<span class="txt_unit bold">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">수수료</span>
+											</span>
+											<span class="line_right">
+												<span class="money">1</span>
+												<span class="txt_unit bold">원</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">출금통장표시내용</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">IBK오픈뱅킹</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">입금통장표시내용</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">구태완</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">거래상태</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">거래완료</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<!--e: 상단 조회 요약 -->
+							</div>
+
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+					</div>
+				</div>
+				<!-- e: 상세조회 -->
+
+				<!-- s: 계좌 선택 -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 계좌 선택-->
+
+				<!-- s: 출금계좌 선택 -->
+				<div class="bottom_popup_wrap" id="popupAccount2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount2');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 출금계좌 선택-->
+
+				<!-- s: 조회기간 바텀시트 -->
+
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조건설정</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<h3 class="input_label ty1">조회기간</h3>
+								<div class="search_group">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active"><span class="text">오늘</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">3일</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">1개월</span></button>
+										<button type="button" role="radio" aria-checked="false"><span class="text">6개월</span></button>
+									</div>
+
+									<div class="comp_wrap from_to">
+										<div class="input">
+											<input type="text" name="" id="" title="시작일 입력" value="2024-10-24" />
+											<button type="button" class="btn calendar" title="달력으로 시작일 선택" onclick="comLayerPopUtil.open('popup99');"></button>
+										</div>
+										<span>~</span>
+										<div class="input">
+											<input type="text" name="" id="" title="마지막일 입력" value="2024-10-30" />
+											<button type="button" class="btn calendar" title="달력으로 마지막일 선택" onclick="comLayerPopUtil.open('popup99');"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 조회기간 바텀시트 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

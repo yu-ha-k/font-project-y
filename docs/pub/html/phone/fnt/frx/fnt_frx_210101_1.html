@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3 foreign_qr_trans">
+						<div class="group">
+							<!-- s: 상단 문구 -->
+
+							<div class="icon_info_group">
+								<div class="icon qr_repeat_remittance"></div>
+
+								<div class="txt">
+									복잡한 외화송금을
+									<br />
+								</div>
+								<div class="tit">QR코드 스캔 하나로 간편하게</div>
+							</div>
+
+							<!-- e: 상단 문구 -->
+							<!-- s: qr코드 반복송금이란? -->
+
+							<div class="title_text ty1 mt_40">QR코드 반복송금이란?</div>
+
+							<ul class="list_bullet ty1">
+								<li>영업점에서 받은 송금명세서(Remittance Details) 하단의 QR코드 스캔 시 해당 송금정보가 자동 입력돼 간편하게 반복송금할 수 있는 서비스예요.</li>
+							</ul>
+							<!-- e: qr코드 반복송금이란? -->
+							<!-- s: 이용 방법 -->
+							<div class="title_text ty1 mt_32">이용 방법</div>
+							<ol class="step_list num_type">
+								<li class="item">
+									<span class="num">1</span>
+									<div class="context">
+										<div class="tit">기존 송금명세서 준비</div>
+										<div class="txt">송금명세서(Remittance Details)가 없는 경우 영업점에 요청 가능</div>
+									</div>
+								</li>
+								<li class="item">
+									<span class="num">2</span>
+									<div class="context">
+										<div class="tit">QR코드 스캔</div>
+										<div class="txt">스마트폰 카메라 또는 i-ONE Bank 앱 내 'QR코드 반복송금’으로 스캔</div>
+									</div>
+								</li>
+								<li class="item">
+									<span class="num">3</span>
+									<div class="context">
+										<div class="tit">송금정보 자동 입력</div>
+										<div class="txt">기존 송금정보 확인 및 송금금액 입력</div>
+									</div>
+								</li>
+								<li class="item active">
+									<span class="num">4</span>
+									<div class="context">
+										<div class="tit">송금완료</div>
+										<div class="txt">외화송금내역조회를 통해 거래내역 확인</div>
+									</div>
+								</li>
+							</ol>
+							<!-- e: 이용 방법 -->
+							<!-- s: 서비스 이용시간 안내 -->
+							<div class="title_text ty1 mt_32">서비스 이용시간 안내</div>
+							<div class="tbl ty2">
+								<table>
+									<caption>송금종류, 전액 외화거래, 포지션 거래로 이루어진 서비스 이용시간 안내 표</caption>
+									<colgroup>
+										<col style="width: 33.3%" />
+										<col style="width: 33.3%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">송금종류</th>
+											<th scope="col">전액 외화거래</th>
+											<th scope="col">포지션 거래</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>외화송금(국내-타행이체)</td>
+											<td>00:00~24:00</td>
+											<td>09:00~16:00</td>
+										</tr>
+										<tr>
+											<td>외화송금(해외)</td>
+											<td>00:00~24:00</td>
+											<td>09:00~24:00</td>
+										</tr>
+										<tr>
+											<td>무역대전송금</td>
+											<td>00:00~24:00</td>
+											<td>09:00~16:30</td>
+										</tr>
+										<tr>
+											<td>국내실시간 외화송금(금융결제원)</td>
+											<td colspan="2">09:00~16:00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<ul class="list_bullet ty1">
+								<li>외화송금(해외) 포지션 거래 18시 이후 같은 날짜, 같은 사람에게 1만 USD(미국 달러) 초과 불가</li>
+							</ul>
+							<!-- e: 서비스 이용시간 안내 -->
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">QR코드 스캔하기</button>
+							</div>
+						</div>
+
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

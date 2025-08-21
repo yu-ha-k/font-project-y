@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 환매예상금액 조회 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!-- s: 계좌번호 -->
+						<div class="group">
+							<div class="title_text ty1">계좌번호</div>
+							<div class="dropdown ty2" role="button" title="계좌번호선택" onclick="comLayerPopUtil.open('accountList');">
+								<div class="dropdown_text">선택해 주세요.</div>
+							</div>
+
+							<div class="btn_area ty1 mt_16">
+								<button type="button" class="btn s_4 c_3 r_2">조회</button>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 계좌번호 -->
+
+						<div class="group">
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-000000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">펀드명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">NH-Amundi모아모아15Ce(채혼)</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">통화단위</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">잔액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">좌수</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">좌</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">평가금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기준시간</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기준가적용일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금예정일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+								</div>
+							</div>
+
+							<div class="title_text ty1 with_sub_txt mt_32">거래구분</div>
+							<ul class="space_list_ty1">
+								<li>
+									<div class="label">
+										<input type="radio" name="name1" id="radio1" />
+										<label for="radio1" class="radio">
+											<i></i>
+											<span>일부금액환매(MMF 전액환매 포함)</span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="label">
+										<input type="radio" name="name1" id="radio2" />
+										<label for="radio2" class="radio">
+											<i></i>
+											<span>일부좌수환매</span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="label">
+										<input type="radio" name="name1" id="radio3" />
+										<label for="radio3" class="radio">
+											<i></i>
+											<span>최소잔액유지</span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="label">
+										<input type="radio" name="name1" id="radio4" />
+										<label for="radio4" class="radio">
+											<i></i>
+											<span>적정출금</span>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="label">
+										<input type="radio" name="name1" id="radio5" />
+										<label for="radio5" class="radio">
+											<i></i>
+											<span>계좌해지</span>
+										</label>
+									</div>
+								</li>
+							</ul>
+
+							<div class="title_text ty1 with_sub_txt mt_32">
+								거래금액
+								<em class="ess_text ty1">필수</em>
+								<span class="sub_txt bullet_txt ty2 blue">
+									<strong class="color ty3">일부출금가능금액 123,456,789원</strong>
+								</span>
+							</div>
+							<div class="input unit_ty1">
+								<input type="num" name="" id="" class="comma" title="거래금액 입력" placeholder="숫자만 입력" />
+								<span class="unit">원</span>
+
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+							<div class="title_text ty1 with_sub_txt mt_32">
+								거래좌수
+								<em class="ess_text ty1">필수</em>
+								<span class="sub_txt bullet_txt ty2 blue">
+									<strong class="color ty3">일부출금 가능좌수 123,456,789</strong>
+								</span>
+							</div>
+							<div class="input unit_ty1">
+								<input type="num" name="" id="" class="comma" title="거래좌수 입력" placeholder="숫자만 입력" />
+								<span class="unit">좌</span>
+
+								<button type="button" class="del">텍스트삭제</button>
+							</div>
+						</div>
+
+						<!-- s: 꼭 알아두세요 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>환매예상금액은 조회일 현재 기준가격을 적용해 계산한 금액입니다.</li>
+											<li>실제 수령금액은 환매 신청시간 및 펀드별 집합투자규약에서 정해진 날짜의 기준가격, 세금, 환매수수료 등으로 인해 달라질 수 있습니다.</li>
+											<li>조회금액은 당일 기준가 적용 시 금액이며, 실제 지급 시에는 기준가격 변동, 세금, 환매수수료 등에 따라 변경될 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요 -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 환매예상금액 조회 -->
+
+				<!-- s: step2 조회결과 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">조회결과</div>
+
+							<div class="group_item">
+								<div class="group_item_detail">
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-000000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">통화단위</span>
+										</span>
+										<span class="line_right">
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">펀드명</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">NH-Amundi모아모아15Ce(채혼)</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">평가금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">세금합계(단위: 원)</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">환매수수료</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">예상지급액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급잔액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">지급좌수</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">좌</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">실제기준가 적용일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">기준가격</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금계좌번호</span>
+										</span>
+										<span class="line_right">
+											<span class="txt">000-000000-00-000</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">입금예정일</span>
+										</span>
+										<span class="line_right">
+											<span class="date">2021-03-25</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">과표기준가격</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+									<p class="line" role="text">
+										<span class="line_left">
+											<span class="tit">과표금액</span>
+										</span>
+										<span class="line_right">
+											<span class="money">69,000,123</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- s: 꼭 알아두세요 -->
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty3 active">
+								<div class="acd_head accodian_head">
+									<button type="button" aria-expanded="true" class="acd_btn">
+										<span class="title">꼭 알아두세요!</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner">
+										<ul class="list_bullet ty1">
+											<li>환매예상금액은 조회일 현재 기준가격을 적용해 계산한 금액입니다.</li>
+											<li>실제 수령금액은 환매 신청시간 및 펀드별 집합투자규약에서 정해진 날짜의 기준가격, 세금, 환매수수료 등으로 인해 달라질 수 있습니다.</li>
+											<li>조회금액은 당일 기준가 적용 시 금액이며, 실제 지급 시에는 기준가격 변동, 세금, 환매수수료 등에 따라 변경될 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- e: 꼭 알아두세요 -->
+
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">확인</button>
+								<button type="button" class="btn s_5 c_3 r_2">환매 신청하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step2 조회결과 -->
+
+				<!-- s: Popup -->
+				<div class="bottom_popup_wrap" id="accountList" title="계좌번호선택">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌번호선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('accountList');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">선택</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 1</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 2</li>
+								<li role="option" tabindex="-1" aria-selected="false">목록 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

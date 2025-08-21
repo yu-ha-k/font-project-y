@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 금융상품 : 쿠폰함 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 쿠폰존 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<!--s: 상단문구 -->
+						<div class="group mb_32">
+							<div class="title_text ty1">IBK기업은행 고객님을 위한 혜택 가득 우대쿠폰</div>
+							<div class="txt_style ty11">상품별 다양한 혜택을 받아보세요.</div>
+							<div class="btn_area ty1 mt_24">
+								<button type="button" class="btn s_4 c_2 r_2" onclick="uf_goStep(5);">쿠폰 등록</button>
+							</div>
+						</div>
+						<!--e: 상단문구 -->
+
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="false">
+								쿠폰존
+								<span class="num">0</span>
+							</button>
+							<button type="button" role="tab" aria-selected="true" class="active">
+								내쿠폰함
+								<span class="num">1</span>
+							</button>
+						</div>
+
+						<div class="tab_cont" role="tabpanel" aria-expanded="false">
+							<div class="group mt_24">
+								<!--s: 쿠폰 리스트 -->
+								<ul class="coupon_list">
+									<li class="item interest">
+										<div class="coupon_box">
+											<p class="txt">
+												연
+												<span class="num">0.2%p</span>
+											</p>
+										</div>
+										<div class="coupon_txt">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC12">금리우대</span>
+											</div>
+											<p class="tit">IBK ALL바른기업통장(정기적립식)</p>
+											<p class="desc">가입기간 12개월 이상</p>
+											<p class="period">
+												<span class="date">2024-12-31</span>
+												일까지
+												<strong>
+													<span class="d_day">17일</span>
+													남음
+												</strong>
+											</p>
+										</div>
+										<div class="coupon_btn">
+											<button type="button" class="btn btn_download" onclick="comLayerPopUtil.open('openGetCoupon');">쿠폰받기</button>
+										</div>
+									</li>
+									<li class="item cash">
+										<div class="coupon_box">
+											<p class="txt">
+												<span class="num">3,000</span>
+												원
+											</p>
+										</div>
+										<div class="coupon_txt">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC13">현금쿠폰</span>
+												<span class="badge ty3 colorETC14">웰컴쿠폰</span>
+											</div>
+											<p class="tit">가입 축하 쿠폰</p>
+											<p class="period">
+												<span class="date">2024-12-31</span>
+												일까지
+												<strong>
+													<span class="d_day">17일</span>
+													남음
+												</strong>
+											</p>
+										</div>
+										<div class="coupon_btn">
+											<button type="button" class="btn btn_download" onclick="comLayerPopUtil.open('openGetCoupon');">쿠폰받기</button>
+										</div>
+									</li>
+									<li class="item cash">
+										<div class="coupon_box">
+											<p class="txt">
+												<span class="num">10,000</span>
+												원
+											</p>
+										</div>
+										<div class="coupon_txt">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC13">현금쿠폰</span>
+											</div>
+											<p class="period">
+												<span class="date">2024-12-31</span>
+												일까지
+												<strong>
+													<span class="d_day">17일</span>
+													남음
+												</strong>
+											</p>
+											<p class="rest">
+												잔여수량 :
+												<span class="count">255</span>
+											</p>
+										</div>
+										<div class="coupon_btn">
+											<button type="button" class="btn btn_download" onclick="comLayerPopUtil.open('openGetCoupon');">쿠폰받기</button>
+										</div>
+									</li>
+									<li class="item cash">
+										<div class="coupon_box">
+											<p class="txt">
+												<span class="num">10,000</span>
+												원
+											</p>
+										</div>
+										<div class="coupon_txt">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC13">현금쿠폰</span>
+											</div>
+											<p class="period">
+												<span class="date">2024-12-31</span>
+												일까지
+												<strong>
+													<span class="d_day">17일</span>
+													남음
+												</strong>
+											</p>
+										</div>
+										<div class="coupon_btn">
+											<button type="button" class="btn btn_download" disabled>쿠폰받기 완료</button>
+										</div>
+									</li>
+									<!--s: 데이터 없을 때 -->
+									<li class="item">
+										<div class="no_result_msg">
+											<div class="msg">발급가능한 쿠폰이 없습니다.</div>
+										</div>
+									</li>
+									<!--e: 데이터 없을 때 -->
+								</ul>
+								<!--e: 쿠폰 리스트 -->
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>받은 쿠폰은 내쿠폰함에서 확인해 주세요.</li>
+												<li>상품별 쿠폰은 대상 고객만 받을 수 있습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true">
+							<div class="group mt_24">
+								<div class="acd_wrap accodian_wrap ty1">
+									<div class="acd_head accodian_head active">
+										<button type="button" title="[금융쿠폰] 목록보기" aria-expanded="true" class="acd_btn">
+											<span class="title color ty8">
+												<span class="left">금융쿠폰</span>
+											</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner" style="display: block">
+											<ul class="coupon_list">
+												<li class="item interest">
+													<div class="coupon_box">
+														<p class="txt">
+															연
+															<span class="num">0.2%p</span>
+														</p>
+													</div>
+													<div class="coupon_txt">
+														<div class="badge_cont">
+															<span class="badge ty3 colorETC12">금리우대</span>
+														</div>
+														<p class="tit">IBK ALL바른기업통장(정기적립식)</p>
+														<p class="desc">가입기간 12개월 이상</p>
+														<p class="period">
+															<span class="date">2024-12-31</span>
+															일까지
+															<strong>
+																<span class="d_day">17일</span>
+																남음
+															</strong>
+														</p>
+													</div>
+													<div class="coupon_btn">
+														<button type="button" class="btn btn_more">
+															우대받고
+															<br />
+															가입하기
+														</button>
+													</div>
+												</li>
+												<li class="item interest">
+													<div class="coupon_box">
+														<p class="txt">
+															연
+															<span class="num">0.2%p</span>
+														</p>
+													</div>
+													<div class="coupon_txt">
+														<div class="badge_cont">
+															<span class="badge ty3 colorETC12">금리우대</span>
+														</div>
+														<p class="tit">실세금리정기예금</p>
+														<p class="desc">가입기간 12개월 이상</p>
+														<p class="period">
+															<span class="date">2024-12-31</span>
+															일까지
+															<strong>
+																<span class="d_day">17일</span>
+																남음
+															</strong>
+														</p>
+													</div>
+													<div class="coupon_btn">
+														<button type="button" class="btn btn_more">
+															우대받고
+															<br />
+															가입하기
+														</button>
+													</div>
+												</li>
+												<li class="item cash">
+													<div class="coupon_box">
+														<p class="txt">
+															<span class="num">3,000</span>
+															원
+														</p>
+													</div>
+													<div class="coupon_txt">
+														<div class="badge_cont">
+															<span class="badge ty3 colorETC13">현금쿠폰</span>
+														</div>
+														<p class="tit">가입 축하 쿠폰</p>
+														<p class="period">
+															<span class="date">2024-12-31</span>
+															일까지
+															<strong>
+																<span class="d_day">17일</span>
+																남음
+															</strong>
+														</p>
+													</div>
+													<div class="coupon_btn">
+														<button type="button" class="btn btn_more">
+															현금쿠폰
+															<br />
+															가입하기
+														</button>
+													</div>
+												</li>
+												<li class="item cash">
+													<div class="coupon_box">
+														<p class="txt">
+															<span class="num">3,000</span>
+															원
+														</p>
+													</div>
+													<div class="coupon_txt">
+														<div class="badge_cont">
+															<span class="badge ty3 colorETC13">현금쿠폰</span>
+															<span class="badge ty3 colorETC14">웰컴쿠폰</span>
+														</div>
+														<p class="period">
+															<span class="date">2024-12-31</span>
+															일까지
+															<strong>
+																<span class="d_day">17일</span>
+																남음
+															</strong>
+														</p>
+														<p class="rest">
+															잔여수량 :
+															<span class="count">255</span>
+														</p>
+													</div>
+													<div class="coupon_btn">
+														<button type="button" class="btn btn_more">
+															현금쿠폰
+															<br />
+															가입하기
+														</button>
+													</div>
+												</li>
+												<!-- s: 데이터 없을 때 li.item 클래스 없음-->
+												<!-- <li>
+                          <div class="no_result_msg">
+                            <div class="msg">발급가능한 쿠폰이 없습니다.</div>
+                          </div>
+                        </li> -->
+												<!-- e: 데이터 없을 때 li.item 클래스 없음-->
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1" />
+							<div class="group">
+								<div class="acd_wrap accodian_wrap ty1">
+									<div class="acd_head accodian_head active">
+										<button type="button" title="[모바일 쿠폰] 목록보기" aria-expanded="true" class="acd_btn">
+											<span class="title color ty8">
+												<span class="left">모바일 쿠폰</span>
+											</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner" style="display: block">
+											<ul class="coupon_list mobile">
+												<li class="item">
+													<div class="coupon_txt">
+														<p class="tit">[정관장] 정관장 에브리타임 10포</p>
+														<p class="desc">이벤트명</p>
+														<p class="period">
+															<span class="date">2024-12-31</span>
+															일까지
+															<strong>
+																<span class="d_day">17일</span>
+																남음
+															</strong>
+														</p>
+													</div>
+													<div class="coupon_btn">
+														<button type="button" class="btn btn_more" onclick="uf_goStep(6);">상세보기</button>
+													</div>
+												</li>
+												<li class="item">
+													<div class="coupon_txt">
+														<p class="tit">[정관장] 정관장 에브리타임 10포</p>
+														<p class="desc">이벤트명</p>
+														<p class="period">
+															<span class="date">2024-12-31</span>
+															일까지
+															<strong>
+																<span class="d_day">17일</span>
+																남음
+															</strong>
+														</p>
+													</div>
+													<div class="coupon_btn">
+														<button type="button" class="btn btn_more" onclick="uf_goStep(6);">상세보기</button>
+													</div>
+												</li>
+												<li class="item">
+													<div class="coupon_txt">
+														<p class="tit">[정관장] 정관장 에브리타임 10포</p>
+														<p class="desc">이벤트명</p>
+														<p class="period">
+															<span class="date">2024-12-31</span>
+															일까지
+															<strong>
+																<span class="d_day">17일</span>
+																남음
+															</strong>
+														</p>
+													</div>
+													<div class="coupon_btn">
+														<button type="button" class="btn btn_more" onclick="uf_goStep(6);">상세보기</button>
+													</div>
+												</li>
+												<!-- s: 데이터 없을 때 li.item 클래스 없음-->
+												<!-- <li>
+                          <div class="no_result_msg">
+                            <div class="msg">발급가능한 쿠폰이 없습니다.</div>
+                          </div>
+                        </li> -->
+												<!-- e: 데이터 없을 때 li.item 클래스 없음-->
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>금리우대쿠폰은 가입기간 1년 이상 고객만 사용할 수 있습니다.</li>
+												<li>쿠폰을 적용해 상품 가입 후 해지 시 가입 당일에만 쿠폰을 다시 사용할 수 있으며, 가입 다음날부터는 쿠폰이 재발행되지 않습니다.</li>
+												<li>쿠폰을 적용해 우대금리 혜택을 받은 상품이 만기되면, 만기 후 기간부터는 쿠폰 우대금리가 적용되지 않고, 상품의 만기 후 이율이 적용됩니다.</li>
+												<li>쿠폰을 적용해 우대금리 혜택을 받은 상품이 만기되어 해지하면 재가입해도 기존 쿠폰 우대금리 혜택은 적용되지 않습니다.</li>
+												<li>단, 상품 가입 시 새로 받은 쿠폰을 사용할 경우에는 우대금리가 적용됩니다.</li>
+												<li>유효기간 만료 쿠폰은 자동 삭제됩니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 쿠폰존 -->
+
+				<!-- s: step2 계좌선택 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">계좌선택</div>
+							<div class="txt_style ty11">현금쿠폰을 입금 받을 계좌를 선택해 주세요.</div>
+							<div class="form_group mt_32">
+								<div class="input_label ty1">입금 계좌 선택</div>
+								<div class="dropdown ty2" role="button" title="입금계좌번호 목록보기" onclick="comLayerPopUtil.open('popupAccount');">
+									<div class="dropdown_text">계좌를 선택해 주세요.</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- s: step2 계좌선택 -->
+
+				<!-- s: step4 입금완료 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								현금쿠폰
+								<br />
+								입금이 완료되었어요
+							</div>
+							<ul class="d_list ty1">
+								<li>
+									<span class="d_list_l">입금계좌</span>
+									<span class="d_list_r">000-000000-00-000</span>
+								</li>
+								<li>
+									<span class="d_list_l">입금금액</span>
+									<span class="d_list_r">
+										<span class="money">3,000</span>
+										<span class="txt_unit">원</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 입금완료 -->
+
+				<!-- s: step5 쿠폰 등록 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">쿠폰 등록</div>
+							<div class="txt_style ty11">쿠폰 번호를 입력해 주세요.</div>
+							<div class="form_group mt_32">
+								<div class="input_label ty1">쿠폰 번호</div>
+								<div class="input">
+									<input type="text" name="" id="" title="쿠폰 번호 입력" placeholder="문자 또는 숫자만 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('openGetCoupon');">등록</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step5 쿠폰 등록 -->
+
+				<!-- s: step6 모바일쿠폰 상세 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">모바일 쿠폰</div>
+							<div class="txt_style ty11">[정관장] 정관장 에브리타임 10포</div>
+							<div class="img mt_16">
+								<img src="../../../../img/fnc/img_fnc_cpn_010101_1_01.png" alt="[정관장] 정관장 에브리타임 10포" />
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group">
+							<div class="acd_wrap accodian_wrap ty1">
+								<div class="acd_head accodian_head active">
+									<button type="button" title="[모바일 쿠폰 유의사항] 목록보기" aria-expanded="true" class="acd_btn">
+										<span class="title color ty8">
+											<span class="left">모바일 쿠폰 유의사항</span>
+										</span>
+									</button>
+								</div>
+								<div class="acd_cont accodian_cont">
+									<div class="inner" style="display: block">
+										<ul class="list_bullet ty4">
+											<li>각 상품과 연계된 유의사항 노출</li>
+											<li>각 상품과 연계된 유의사항 노출</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step6 모바일쿠폰 상세 -->
+
+				<!-- s: Popup -->
+				<!-- s: 쿠폰받기시 바텀시트 -->
+				<div class="layer_popup_wrap success_get_coupon" id="openGetCoupon">
+					<div class="layer_popup">
+						<div class="layer_popup_header close_add">
+							<h2 class="tit">쿠폰 받기</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('openGetCoupon');">닫기</button>
+						</div>
+						<div class="layer_popup_body">
+							<div class="msg_txt">
+								<p class="tit">쿠폰을 받았습니다.</p>
+								<p class="desc">
+									받은 쿠폰은 내쿠폰함에서
+									<br />
+									확인해 주세요.
+								</p>
+							</div>
+						</div>
+						<div class="layer_popup_footer">
+							<button type="button" class="btn s_4 c_1 r_2 full" onclick="comLayerPopUtil.close('openGetCoupon'); uf_goStep(1);">받은 쿠폰 보기</button>
+							<button type="button" class="btn s_4 c_3 r_2" onclick="comLayerPopUtil.close('openGetCoupon'); uf_goStep(2);">사용하기</button>
+						</div>
+					</div>
+				</div>
+				<!-- e: 추가 쿠폰받기시 바텀시트 -->
+
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">입금 계좌 선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: Popup -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>
+<script>
+	// lottie-player 실행
+	const stepLottiePlayers = document.querySelectorAll("lottie-player");
+	stepLottiePlayers.forEach(player => {
+		player.play();
+	});
+</script>

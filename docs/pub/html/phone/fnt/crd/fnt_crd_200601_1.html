@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 결제일 변경 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 결제일 변경 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">결제일 변경</div>
+							<div class="form_group">
+								<div class="input_label ty2">현재 결제일</div>
+								<div class="input">
+									<input type="text" name="" id="" value="23일" title="현재 결제일 입력" readonly placeholder="현재 결제일 입력" />
+
+									<button type="button" class="del">텍스트삭제</button>
+								</div>
+								<div class="input_label ty2">
+									변경 결제일
+									<em class="ess_text ty1">필수</em>
+								</div>
+
+								<div class="with_option">
+									<div class="btn_area ty1">
+										<button type="button" class="btn s_2 c_1 r_3" onclick="comLayerPopUtil.open('popup2');">대출이용기간 조회</button>
+									</div>
+									<div class="cont">
+										<div class="dropdown ty2" role="button" title="변경 결제일 선택 목록 보기" onclick="comLayerPopUtil.open('popup1');">
+											<div class="dropdown_text">선택</div>
+										</div>
+									</div>
+								</div>
+
+								<ul class="list_bullet ty3">
+									<li>대출이용기간 : 전전월 9일~전월 8일</li>
+								</ul>
+								<div class="tbl ty2 mt_16">
+									<table>
+										<caption>결제일, 카드이용기간로 이루어진 결제일 안내 표</caption>
+										<colgroup>
+											<col style="width: 33%" />
+											<col style="width: 33%" />
+											<col style="width: auto" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col"></th>
+												<th scope="col">결제일</th>
+												<th scope="col">카드이용기간</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">변경 전</th>
+												<td>2024.07.23</td>
+												<td>2024.06.01~2024.06.13</td>
+											</tr>
+											<tr>
+												<th scope="row">변경 후</th>
+												<td>2024.08.01</td>
+												<td>024.06.14~2024.07.08</td>
+											</tr>
+											<tr>
+												<th scope="row">다음 카드이용기간</th>
+												<td>2024.09.01</td>
+												<td>2024.07.09~2024.08.08</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="bg_box ty1 mt_16">
+									<p class="txt_style ty3">
+										다음 카드이용기간 시작일은
+										<br />
+										2024년 7월 9일부터입니다.
+									</p>
+								</div>
+								<ul class="list_bullet ty3 mt_16">
+									<li>결제일 변경일까지 이용한 결제건은 기존 결제일로 청구하고, 다음달부터 이용한 결제건은 새로운 결제일에 청구됩니다.</li>
+									<li>일반적으로 할부결제건은 청구작업이 끝난 경우 기존 결제일에 청구되고 청구되지 않은 할부결제건은 새로운 결제일에 청구됩니다.</li>
+									<li>청구금액은 [이용대금명세서 조회]에서 확인해 주세요.</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">이전</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">변경하기</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 결제일 변경 -->
+
+				<!-- s: step2 신청완료 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								결제일을 변경했어요
+							</div>
+							<ul class="d_list ty1 mt_40">
+								<li>
+									<span class="d_list_l">고객명</span>
+									<span class="d_list_r">나기업</span>
+								</li>
+								<li>
+									<span class="d_list_l">(사업장번호) 사업장명</span>
+									<span class="d_list_r">담초코(민)</span>
+								</li>
+								<li>
+									<span class="d_list_l">변경 전 결제일</span>
+									<span class="d_list_r">
+										<span class="day">3일</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">변경 후 결제일</span>
+									<span class="d_list_r">
+										<span class="day">10일</span>
+									</span>
+								</li>
+								<li>
+									<span class="d_list_l">거래일</span>
+									<span class="d_list_r">
+										<span class="date">2021.06.09</span>
+									</span>
+								</li>
+							</ul>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 신청완료 -->
+
+				<!-- s: Popup -->
+				<!-- 변경 결제일 팝업  -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">변경 결제일</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<ul class="select_list ty1" role="listbox">
+								<li role="option" tabindex="-1" class="active" aria-selected="true">01일</li>
+								<li role="option" tabindex="-1" aria-selected="false">02일</li>
+								<li role="option" tabindex="-1" aria-selected="false">03일</li>
+								<li role="option" tabindex="-1" aria-selected="false">04일</li>
+								<li role="option" tabindex="-1" aria-selected="false">05일</li>
+								<li role="option" tabindex="-1" aria-selected="false">06일</li>
+								<li role="option" tabindex="-1" aria-selected="false">07일</li>
+								<li role="option" tabindex="-1" aria-selected="false">08일</li>
+								<li role="option" tabindex="-1" aria-selected="false">09일</li>
+								<li role="option" tabindex="-1" aria-selected="false">10일</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- // 변경 결제일 팝업  -->
+
+				<!-- 대출이용기간 팝업  -->
+				<div class="bottom_popup_wrap" id="popup2">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">기업회원 대출이용기간</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup2');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="tbl ty2">
+								<table>
+									<caption>결제일, 대출이용기간로 이루어진 기업회원 대출이용기간 표</caption>
+									<colgroup>
+										<col style="width: 35%" />
+										<col style="width: auto" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">결제일</th>
+											<th scope="col">대출이용기간</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">1일</th>
+											<td>전전월 9일~전월 8일</td>
+										</tr>
+										<tr>
+											<th scope="row">2일</th>
+											<td>전전월 10일~전월 9일</td>
+										</tr>
+										<tr>
+											<th scope="row">3일</th>
+											<td>전전월 11일~전월 10일</td>
+										</tr>
+										<tr>
+											<th scope="row">4일</th>
+											<td>전전월 12일~전월 11일</td>
+										</tr>
+										<tr>
+											<th scope="row">5일</th>
+											<td>전전월 13일~전월 12일</td>
+										</tr>
+										<tr>
+											<th scope="row">6일</th>
+											<td>전전월 14일~전월 13일</td>
+										</tr>
+										<tr>
+											<th scope="row">7일</th>
+											<td>전전월 15일~전월 14일</td>
+										</tr>
+										<tr>
+											<th scope="row">8일</th>
+											<td>전전월 16일~전월 15일</td>
+										</tr>
+										<tr>
+											<th scope="row">9일</th>
+											<td>전전월 17일~전월 16일</td>
+										</tr>
+										<tr>
+											<th scope="row">10일</th>
+											<td>전전월 18일~전월 17일</td>
+										</tr>
+										<tr>
+											<th scope="row">11일</th>
+											<td>전전월 19일~전월 18일</td>
+										</tr>
+										<tr>
+											<th scope="row">12일</th>
+											<td>전전월 20일~전월 19일</td>
+										</tr>
+										<tr>
+											<th scope="row">13일</th>
+											<td>전전월 21일~전월 20일</td>
+										</tr>
+										<tr>
+											<th scope="row">14일</th>
+											<td>전전월 22일~전월 21일</td>
+										</tr>
+										<tr>
+											<th scope="row">15일</th>
+											<td>전전월 23일~전월 22일</td>
+										</tr>
+										<tr>
+											<th scope="row">16일</th>
+											<td>전전월 24일~전월 23일</td>
+										</tr>
+										<tr>
+											<th scope="row">17일</th>
+											<td>전전월 25일~전월 24일</td>
+										</tr>
+										<tr>
+											<th scope="row">18일</th>
+											<td>전전월 26일~전월 25일</td>
+										</tr>
+										<tr>
+											<th scope="row">19일</th>
+											<td>전전월 27일~전월 26일</td>
+										</tr>
+										<tr>
+											<th scope="row">20일</th>
+											<td>전전월 28일~전월 27일</td>
+										</tr>
+										<tr>
+											<th scope="row">21일</th>
+											<td>전전월 29일~전월 28일</td>
+										</tr>
+										<tr>
+											<th scope="row">22일</th>
+											<td>전전월 30일~전월 29일</td>
+										</tr>
+										<tr>
+											<th scope="row">23일</th>
+											<td>전월 1일~전월 말일</td>
+										</tr>
+										<tr>
+											<th scope="row">24일</th>
+											<td>전월 2일~당월 1일</td>
+										</tr>
+										<tr>
+											<th scope="row">25일</th>
+											<td>전월 3일~당월 2일</td>
+										</tr>
+										<tr>
+											<th scope="row">26일</th>
+											<td>전월 4일~당월 3일</td>
+										</tr>
+										<tr>
+											<th scope="row">27일</th>
+											<td>전월 5일~당월 4일</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.close('popup2');">확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- // 대출이용기간 팝업  -->
+				<!-- e: Popup -->
+			</div>
+			<!-- e: 결제일 변경 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

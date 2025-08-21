@@ -1,0 +1,2048 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- s: 자동납부 등록/해지 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 지로자동납부등록(탭)-약관동의 -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" data-opentab="open1" aria-selected="true" class="active">지로자동납부등록</button>
+							<button type="button" role="tab" aria-selected="false">신청내역 조회/해지</button>
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open1">
+							<div class="group mt_24">
+								<div class="title_text ty1">약관 동의</div>
+								<p class="agree_page_text">아래 약관을 충분히 이해하신 후 동의해주세요</p>
+
+								<!-- s: 약관동의 -->
+								<div class="agree_check tit_ty">
+									<div class="top">
+										<div class="label">
+											<input type="checkbox" name="" id="agree02" />
+											<label for="agree02" class="checkbox">
+												<i></i>
+												<span>
+													지로 자동계좌이체 약관 동의
+
+													<span class="ess_mark">필수</span>
+												</span>
+											</label>
+										</div>
+										<button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(9);">
+											<span class="sr_only">지로 자동계좌이체 약관 동의</span>
+											보기
+										</button>
+									</div>
+								</div>
+								<!-- e: 약관동의 -->
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부는 금융결제원으로부터 자동납부 이용을 승인받은 기관의 청구 요금만 신청할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>자동납부(자동계좌이체) 약관을 꼭 확인해 주세요.</li>
+													<li>지로자동납부 등록시간 : 영업일 09:00~21:00(토/일/공휴일 제외)</li>
+													<li>다단계결재 이용 시 지로자동납부 등록/해지/취소 거래는 공과금 결재선이 아닌 일반(이체) 업무의 결재선으로 적용됩니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="form_group">
+									<div class="input_label ty1">계좌번호</div>
+									<div class="dropdown ty2" role="button" title="출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택</div>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty2" />
+							<div class="group">
+								<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+									<div class="dropdown_text">전체</div>
+								</div>
+							</div>
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>청구서구분: 일반자료</li>
+									</ul>
+								</div>
+								<ul class="space_list_ty1">
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_area ty1 mt_32">
+									<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+								</div>
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부 등록 및 등록 해지는 거래 당일에만 취소할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>지로자동납부를 등록한 출금계좌번호를 선택해 주세요.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+						</div>
+					</div>
+				</div>
+				<!-- e: step1 지로자동납부등록(탭)-약관동의 -->
+
+				<!-- s: step2 지로자동납부등록(탭)-공과금조회 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" data-opentab="open1" aria-selected="true" class="active">지로자동납부등록</button>
+							<button type="button" role="tab" data-opentab="open2" aria-selected="false">신청내역 조회/해지</button>
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open1">
+							<div class="group mt_24">
+								<div class="title_text ty1">공과금조회</div>
+								<div class="title_text ty1">지로 자동납부 기관정보조회</div>
+								<div class="form_group">
+									<div class="input_label ty2">신청요금</div>
+									<div class="input">
+										<input type="text" name="" id="" value="일반지로요금" title="신청요금 입력" readonly placeholder="신청요금 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty2">지로번호</div>
+									<div class="input">
+										<input type="tel" name="" id="" title="지로번호 입력" placeholder="지로번호 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<ul class="list_bullet ty3">
+										<li>자동이체용 고지서에 적힌 지로번호 7자리를 입력해 주세요.</li>
+									</ul>
+								</div>
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동이체는 금융결제원으로부터 자동납부 이용을 승인받은 기관의 청구요금만 신청할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>자동이체용으로 고지서에 표시된 지로번호(7자리)를 입력하시기 바랍니다.(내용 중복)</li>
+													<li>신청결과가 정상일 경우 자동이체 신청 및 해지에 대한 최초 시작일(납부금액 출금 혹은 중지 시작일)은 청구기관에서 별도 안내합니다.(자동계좌이체 약관 참조)</li>
+													<li>청구기관에서 자동이체 실시(해지) 안내를 받기 전에는 기존대로 납부하고, 정확한 자동이체 적용일은 해당 청구기관에 직접 문의해 주세요.</li>
+													<li>자동이체 신청시간 : 영업일 09:00~21:00(토/일/공휴일 제외)</li>
+													<li>지로자동납부 등록 및 등록 해지는 거래 당일에만 취소할 수 있습니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="form_group">
+									<div class="input_label ty1">계좌번호</div>
+									<div class="dropdown ty2" role="button" title="출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택</div>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty2" />
+							<div class="group">
+								<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+									<div class="dropdown_text">전체</div>
+								</div>
+							</div>
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>청구서구분: 일반자료</li>
+									</ul>
+								</div>
+								<ul class="space_list_ty1">
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_area ty1 mt_32">
+									<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+								</div>
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부 등록 및 등록 해지는 거래 당일에만 취소할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>지로자동납부를 등록한 출금계좌번호를 선택해 주세요.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+						</div>
+					</div>
+				</div>
+				<!-- e: step2 지로자동납부등록(탭)-공과금조회 -->
+
+				<!-- s: step3 지로자동납부등록(탭)-정보입력 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" data-opentab="open1" aria-selected="true" class="active">지로자동납부등록</button>
+							<button type="button" role="tab" data-opentab="open2" aria-selected="false">신청내역 조회/해지</button>
+						</div>
+
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open1">
+							<div class="group mt_24">
+								<div class="title_text ty1">정보입력</div>
+								<div class="title_text ty1">일반지로 자동납부 등록</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">신청구분</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">신규등록</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">청구기관</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">(치) 고명치먹명동사</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">지로번호</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">400349</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">청구기관 연락처</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">1607145</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1" />
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">
+										납부자번호(회원번호)
+										<em class="ess_text ty1">필수</em>
+									</div>
+									<div class="input">
+										<input type="tel" name="" id="" title="납부자번호(회원번호) 입력" placeholder="숫자 4자리 입력" />
+
+										<button type="button" class="del">텍스트삭제</button>
+									</div>
+									<div class="input_label ty1">자동납부등록 오류 시 휴대폰번호</div>
+
+									<div class="comp_wrap phone">
+										<div class="input no_del">
+											<input type="number" name="" id="" title="휴대폰번호 앞 3자리 입력" />
+										</div>
+										<span>-</span>
+										<div class="input no_del">
+											<input type="number" name="" id="" title="휴대폰번호 가운데 4자리 입력" />
+										</div>
+										<span>-</span>
+										<div class="input no_del">
+											<input type="number" name="" id="" title="휴대폰번호 뒤 4자리 입력" />
+										</div>
+									</div>
+
+									<div class="input_label ty1">
+										출금계좌번호
+										<em class="ess_text ty1">필수</em>
+									</div>
+									<div class="dropdown ty2" role="button" title="출금계좌번호 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="form_desc_info">
+										출금가능금액
+										<span class="color ty3">
+											<span class="money">123,456,789</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</div>
+
+									<div class="input_label ty1">관리직원 정보</div>
+									<div class="comp_wrap with_btn2">
+										<div class="input has_search">
+											<input type="text" name="" id="" title="지점명 입력" placeholder="지점명 입력" />
+
+											<button type="button" class="search">검색</button>
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+										<button type="button" class="btn s_5 c_1 r_2 inp_reset_event" disabled="true">입력취소</button>
+									</div>
+									<p class="placeholder_text">지점명을 입력하고 검색 버튼을 눌러주세요</p>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1" />
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">
+										거래 오류 시 연락처
+										<em class="ess_text ty1">다른 은행 이체 시 필수 입력</em>
+									</div>
+									<div class="comp_wrap with_btn">
+										<div class="comp_wrap phone">
+											<div class="input no_del">
+												<input type="tel" name="" id="" title="전화번호 앞 3자리 입력" />
+											</div>
+											<span>-</span>
+											<div class="input no_del">
+												<input type="tel" name="" id="" title="전화번호 가운데 4자리 입력" />
+											</div>
+											<span>-</span>
+											<div class="input no_del">
+												<input type="tel" name="" id="" title="전화번호 뒤 4자리 입력" />
+											</div>
+										</div>
+										<button type="button" class="btn s_4 c_2 r_2">등록/변경</button>
+									</div>
+								</div>
+							</div>
+
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>신청내역은 최소 4일 이상 금융기관 및 청구기관의 확인과정을 거칩니다.(청구기관별로 다름)</li>
+													<li>신청결과가 정상일 경우 자동이체 신청 및 해지에 대한 최초 시작일(납부금액 출금 혹은 중지 시작일)은 청구기관에서 별도 안내합니다.(자동계좌이체 약관 참조)</li>
+													<li>납부자번호(NPS번호, 증번호 등)는 고지서를 확인하거나 청구기관에 직접 문의해 주세요.</li>
+													<li>거래 후 해당기관에 확인하거나 다음달 해당기관에서 발급한 고지서를 확인해 주세요.</li>
+													<li>지로자동납부 등록 및 등록 해지는 거래 당일에만 취소할 수 있습니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_1 r_2">취소</button>
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">납부</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="form_group">
+									<div class="input_label ty1">계좌번호</div>
+									<div class="dropdown ty2" role="button" title="출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택</div>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty2" />
+							<div class="group">
+								<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+									<div class="dropdown_text">전체</div>
+								</div>
+							</div>
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>청구서구분: 일반자료</li>
+									</ul>
+								</div>
+								<ul class="space_list_ty1">
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_area ty1 mt_32">
+									<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+								</div>
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부 등록 및 등록 해지는 거래 당일에만 취소할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>지로자동납부를 등록한 출금계좌번호를 선택해 주세요.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+						</div>
+					</div>
+				</div>
+				<!-- e: step3 지로자동납부등록(탭)-정보입력 -->
+
+				<!-- s: step4 지로자동납부등록(탭)-신청완료 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" data-opentab="open1" aria-selected="true" class="active">지로자동납부등록</button>
+							<button type="button" role="tab" data-opentab="open2" aria-selected="false">신청내역 조회/해지</button>
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open1">
+							<div class="group mt_24">
+								<div class="ico_txt ty1 lottie_case1">
+									<div class="lottie_box">
+										<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+									</div>
+									지로자동납부를 신청했어요
+									<div class="note_cmt">입금계좌번호 000-000000-00-000</div>
+								</div>
+
+								<ul class="d_list ty1 mt_40">
+									<li>
+										<span class="d_list_l">신청구분</span>
+										<span class="d_list_r">신규등록</span>
+									</li>
+									<li>
+										<span class="d_list_l">청구기관</span>
+										<span class="d_list_r">(치) 고명치먹명동사</span>
+									</li>
+									<li>
+										<span class="d_list_l">지로번호</span>
+										<span class="d_list_r">400349</span>
+									</li>
+									<li>
+										<span class="d_list_l">납부자번호(회원번호)</span>
+										<span class="d_list_r">1234567890</span>
+									</li>
+									<li>
+										<span class="d_list_l">신청자 휴대폰번호</span>
+										<span class="d_list_r">010-1234-1234</span>
+									</li>
+									<li>
+										<span class="d_list_l">청구기관 연락처</span>
+										<span class="d_list_r">1607145</span>
+									</li>
+								</ul>
+								<div class="btn_area ty1 mt_32">
+									<button type="button" class="btn s_2 c_1 r_1" onclick="uf_goStep(5);">신청내역 조회/해지</button>
+								</div>
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>신청 내용은 해당기관에서 확인하고 결과 및 자동이체 시작일 결정 등을 하는 데 시간이 걸립니다.</li>
+													<li>거래 후 해당기관에 확인하거나 다음달 해당기관에서 발급한 고지서를 확인해 주세요.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2">확인</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="form_group">
+									<div class="input_label ty1">계좌번호</div>
+									<div class="dropdown ty2" role="button" title="출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택</div>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty2" />
+							<div class="group">
+								<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+									<div class="dropdown_text">전체</div>
+								</div>
+							</div>
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>청구서구분: 일반자료</li>
+									</ul>
+								</div>
+								<ul class="space_list_ty1">
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_area ty1 mt_32">
+									<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+								</div>
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부 등록 및 등록 해지는 거래 당일에만 취소할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>지로자동납부를 등록한 출금계좌번호를 선택해 주세요.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+						</div>
+					</div>
+				</div>
+				<!-- e: step4 지로자동납부등록(탭)-신청완료 -->
+
+				<!-- s: step5 신청내역조회/해지(탭) -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" data-opentab="open1" aria-selected="false">지로자동납부등록</button>
+							<button type="button" role="tab" data-opentab="open2" aria-selected="true" class="active">신청내역 조회/해지</button>
+						</div>
+
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open1">
+							<div class="group mt_24">
+								<div class="title_text ty1">약관 동의</div>
+								<p class="agree_page_text">아래 약관을 충분히 이해하신 후 동의해주세요</p>
+
+								<!-- s: 약관동의 -->
+								<div class="agree_check tit_ty">
+									<div class="top">
+										<div class="label">
+											<input type="checkbox" name="" id="agree02" />
+											<label for="agree02" class="checkbox">
+												<i></i>
+												<span>
+													지로 자동계좌이체 약관 동의
+
+													<span class="ess_mark">필수</span>
+												</span>
+											</label>
+										</div>
+										<button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(9);">
+											<span class="sr_only">지로 자동계좌이체 약관 동의</span>
+											보기
+										</button>
+									</div>
+								</div>
+								<!-- e: 약관동의 -->
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부는 금융결제원으로부터 자동납부 이용을 승인받은 기관의 청구 요금만 신청할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>자동납부(자동계좌이체) 약관을 꼭 확인해 주세요.</li>
+													<li>지로자동납부 등록시간 : 영업일 09:00~21:00(토/일/공휴일 제외)</li>
+													<li>다단계결재 이용 시 지로자동납부 등록/해지/취소 거래는 공과금 결재선이 아닌 일반(이체) 업무의 결재선으로 적용됩니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="form_group">
+									<div class="input_label ty1">계좌번호</div>
+									<div class="dropdown ty2" role="button" title="출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택</div>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty2" />
+							<div class="group">
+								<div class="dropdown ty1" role="button" title="조건설정 목록보기" onclick="comLayerPopUtil.open('popup1');">
+									<div class="dropdown_text">전체</div>
+								</div>
+							</div>
+							<div class="group">
+								<div class="bg_box ty1">
+									<ul class="list_bullet ty1">
+										<li>청구서구분: 일반자료</li>
+									</ul>
+								</div>
+								<ul class="space_list_ty1">
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="card_item link">
+											<a href="#" role="button" class="block" onclick="uf_goStep(6);">
+												<div class="card_item_info">
+													<div class="txt1">신청일</div>
+													<div class="txt2">2024-05-12</div>
+												</div>
+												<div class="card_item_detail">
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">지로번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">4000349</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">수납기관명</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">(치) 고명치먹영동사</span>
+														</span>
+													</p>
+													<p class="line" role="text">
+														<span class="line_left">
+															<span class="tit">납부자번호</span>
+														</span>
+														<span class="line_right">
+															<span class="txt">1234567890</span>
+														</span>
+													</p>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="btn_area ty1 mt_32">
+									<button type="button" class="btn s_2 c_1 r_1">더보기</button>
+								</div>
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부 등록 및 등록 해지는 거래 당일에만 취소할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>지로자동납부를 등록한 출금계좌번호를 선택해 주세요.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+						</div>
+					</div>
+				</div>
+				<!-- e: step5 신청내역조회/해지(탭) -->
+
+				<!-- s: step6 신청내역조회/해지(탭)-자동납부 내역 -->
+				<div id="step6" data-jx-step-no="6" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="false">지로자동납부등록</button>
+							<button type="button" role="tab" aria-selected="true" class="active">신청내역 조회/해지</button>
+						</div>
+
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open1">
+							<div class="group mt_24">
+								<div class="title_text ty1">약관 동의</div>
+								<p class="agree_page_text">아래 약관을 충분히 이해하신 후 동의해주세요</p>
+
+								<!-- s: 약관동의 -->
+								<div class="agree_check tit_ty">
+									<div class="top">
+										<div class="label">
+											<input type="checkbox" name="" id="agree02" />
+											<label for="agree02" class="checkbox">
+												<i></i>
+												<span>
+													지로 자동계좌이체 약관 동의
+
+													<span class="ess_mark">필수</span>
+												</span>
+											</label>
+										</div>
+										<button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(9);">
+											<span class="sr_only">지로 자동계좌이체 약관 동의</span>
+											보기
+										</button>
+									</div>
+								</div>
+								<!-- e: 약관동의 -->
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부는 금융결제원으로부터 자동납부 이용을 승인받은 기관의 청구 요금만 신청할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>자동납부(자동계좌이체) 약관을 꼭 확인해 주세요.</li>
+													<li>지로자동납부 등록시간 : 영업일 09:00~21:00(토/일/공휴일 제외)</li>
+													<li>다단계결재 이용 시 지로자동납부 등록/해지/취소 거래는 공과금 결재선이 아닌 일반(이체) 업무의 결재선으로 적용됩니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="title_text ty1">자동납부 내역</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">신청구분</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">신규신청</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">납부자번호(회원번호)</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">10218095251</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">지로번호</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">6100014</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">청구기관</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">(치) 판영기</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">청구기관 연락처</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">100</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">자동납부 신청일</span>
+											</span>
+											<span class="line_right">
+												<span class="date">2014-01-28</span>
+											</span>
+										</p>
+									</div>
+								</div>
+								<div class="btn_area ty1 mt_32">
+									<button type="button" class="btn s_2 c_1 r_1"><span class="text">당일취소</span></button>
+									<button type="button" class="btn s_2 c_1 r_1" onclick="uf_goStep(7);"><span class="text">해지</span></button>
+								</div>
+							</div>
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">목록</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step6 신청내역조회/해지(탭)-자동납부 내역 -->
+
+				<!-- s: step7 신청내역조회/해지(탭)-정보입력 -->
+				<div id="step7" data-jx-step-no="7" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="false">지로자동납부등록</button>
+							<button type="button" role="tab" aria-selected="true" class="active">신청내역 조회/해지</button>
+						</div>
+
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open1">
+							<div class="group mt_24">
+								<div class="title_text ty1">약관 동의</div>
+								<p class="agree_page_text">아래 약관을 충분히 이해하신 후 동의해주세요</p>
+
+								<!-- s: 약관동의 -->
+								<div class="agree_check tit_ty">
+									<div class="top">
+										<div class="label">
+											<input type="checkbox" name="" id="agree02" />
+											<label for="agree02" class="checkbox">
+												<i></i>
+												<span>
+													지로 자동계좌이체 약관 동의
+
+													<span class="ess_mark">필수</span>
+												</span>
+											</label>
+										</div>
+										<button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(9);">
+											<span class="sr_only">지로 자동계좌이체 약관 동의</span>
+											보기
+										</button>
+									</div>
+								</div>
+								<!-- e: 약관동의 -->
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부는 금융결제원으로부터 자동납부 이용을 승인받은 기관의 청구 요금만 신청할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>자동납부(자동계좌이체) 약관을 꼭 확인해 주세요.</li>
+													<li>지로자동납부 등록시간 : 영업일 09:00~21:00(토/일/공휴일 제외)</li>
+													<li>다단계결재 이용 시 지로자동납부 등록/해지/취소 거래는 공과금 결재선이 아닌 일반(이체) 업무의 결재선으로 적용됩니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="title_text ty1">정보입력</div>
+								<div class="title_text ty1">자동납부 취소내역</div>
+								<div class="group_item">
+									<div class="group_item_detail">
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">신청구분</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">자동납부 취소</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">납부자번호(회원번호)</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">10218095251</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">지로번호</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">6100014</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">청구기관</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">(치) 판영기</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">청구기관 연락처</span>
+											</span>
+											<span class="line_right">
+												<span class="txt">100</span>
+											</span>
+										</p>
+										<p class="line" role="text">
+											<span class="line_left">
+												<span class="tit">자동납부 신청일</span>
+											</span>
+											<span class="line_right">
+												<span class="date">2014-01-28</span>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<hr aria-hidden="true" class="divider ty1" />
+							<div class="group">
+								<div class="form_group">
+									<div class="input_label ty1">
+										출금계좌번호
+										<em class="ess_text ty1">필수</em>
+									</div>
+									<div class="dropdown ty2" role="button" title="출금계좌 선택 목록 보기" onclick="comLayerPopUtil.open('popupAccount');">
+										<div class="dropdown_text">선택</div>
+									</div>
+
+									<div class="form_desc_info">
+										출금가능금액
+										<span class="color ty3">
+											<span class="money">123,456,789</span>
+											<span class="txt_unit">원</span>
+										</span>
+									</div>
+
+									<div class="input_label ty1">
+										거래 오류 시 연락처
+										<em class="ess_text ty1">다른 은행 이체 시 필수 입력</em>
+									</div>
+									<div class="comp_wrap with_btn">
+										<div class="comp_wrap phone">
+											<div class="input no_del">
+												<input type="tel" name="" id="" title="전화번호 앞 3자리 입력" />
+											</div>
+											<span>-</span>
+											<div class="input no_del">
+												<input type="tel" name="" id="" title="전화번호 가운데 4자리 입력" />
+											</div>
+											<span>-</span>
+											<div class="input no_del">
+												<input type="tel" name="" id="" title="전화번호 뒤 4자리 입력" />
+											</div>
+										</div>
+										<button type="button" class="btn s_4 c_2 r_2">등록/변경</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>지로자동납부 등록 및 등록 해지는 거래 당일에만 취소할 수 있습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!--s: 꼭 알아두세요! -->
+						<div class="group">
+							<div class="caution">
+								<div class="acd_wrap accodian_wrap ty3 active">
+									<div class="acd_head accodian_head">
+										<button type="button" aria-expanded="true" class="acd_btn">
+											<span class="title">꼭 알아두세요!</span>
+										</button>
+									</div>
+									<div class="acd_cont accodian_cont">
+										<div class="inner">
+											<ul class="list_bullet ty1">
+												<li>신청내역은 최소 4일 이상 금융기관 및 청구기관의 확인과정을 거칩니다.(청구기관별로 다름)</li>
+												<li>신청결과가 정상일 경우 자동이체 신청 및 해지에 대한 최초 시작일(납부금액 출금 혹은 중지 시작일)은 청구기관에서 별도 안내합니다.(자동계좌이체 약관 참조)</li>
+												<li>해지 신청 시 해지 완료 시점부터 자동납부가 되지 않아 연체료가 발생할 수 있으니, 해지 전 이용기관에 관련 내용을 꼭 확인해 주세요.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--e: 꼭 알아두세요! -->
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(8);">납부취소</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step7 신청내역조회/해지(탭)-정보입력 -->
+
+				<!-- s: step8 신청내역조회/해지(탭)-취소완료 -->
+				<div id="step8" data-jx-step-no="8" data-jx-effect="slide">
+					<div class="content_wrap">
+						<div class="tab_list ty1" role="tablist">
+							<button type="button" role="tab" aria-selected="false">지로자동납부등록</button>
+							<button type="button" role="tab" aria-selected="true" class="active">신청내역 조회/해지</button>
+						</div>
+
+						<div class="tab_cont" role="tabpanel" aria-expanded="false" data-expendtab="open1">
+							<div class="group mt_24">
+								<div class="title_text ty1">약관 동의</div>
+								<p class="agree_page_text">아래 약관을 충분히 이해하신 후 동의해주세요</p>
+
+								<!-- s: 약관동의 -->
+								<div class="agree_check tit_ty">
+									<div class="top">
+										<div class="label">
+											<input type="checkbox" name="" id="agree02" />
+											<label for="agree02" class="checkbox">
+												<i></i>
+												<span>
+													지로 자동계좌이체 약관 동의
+
+													<span class="ess_mark">필수</span>
+												</span>
+											</label>
+										</div>
+										<button type="button" class="btn ty_txt3 line_bttm btn_view" onclick="uf_goStep(9);">
+											<span class="sr_only">지로 자동계좌이체 약관 동의</span>
+											보기
+										</button>
+									</div>
+								</div>
+								<!-- e: 약관동의 -->
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부는 금융결제원으로부터 자동납부 이용을 승인받은 기관의 청구 요금만 신청할 수 있습니다.</li>
+													<li>지방세, 통합징수보험, 전기요금, 통신요금(KT/SKT)은 지로자동납부 등록을 할 수 없습니다. 청구기관 및 가까운 영업점에서 등록해 주세요.</li>
+													<li>자동납부(자동계좌이체) 약관을 꼭 확인해 주세요.</li>
+													<li>지로자동납부 등록시간 : 영업일 09:00~21:00(토/일/공휴일 제외)</li>
+													<li>다단계결재 이용 시 지로자동납부 등록/해지/취소 거래는 공과금 결재선이 아닌 일반(이체) 업무의 결재선으로 적용됩니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+
+							<!-- s: 하단 고정 버튼 -->
+							<div class="bottom_btn_area">
+								<div class="btn_area ty1">
+									<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(2);">다음</button>
+								</div>
+							</div>
+							<!-- e: 하단 고정 버튼 -->
+						</div>
+						<div class="tab_cont active" role="tabpanel" aria-expanded="true" data-expendtab="open2">
+							<div class="group mt_24">
+								<div class="ico_txt ty1 lottie_case1">
+									<div class="lottie_box">
+										<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+									</div>
+									지로 자동납부를 취소했어요
+									<div class="note_cmt">출금계좌번호 000-000000-00-000</div>
+								</div>
+
+								<ul class="d_list ty1 mt_40">
+									<li>
+										<span class="d_list_l">신청구분</span>
+										<span class="d_list_r">지로 자동납부 취소</span>
+									</li>
+									<li>
+										<span class="d_list_l">청구기관</span>
+										<span class="d_list_r">(치) 고명치먹명동사</span>
+									</li>
+									<li>
+										<span class="d_list_l">지로번호</span>
+										<span class="d_list_r">400349</span>
+									</li>
+									<li>
+										<span class="d_list_l">납부자번호(회원번호)</span>
+										<span class="d_list_r">1234567890</span>
+									</li>
+									<li>
+										<span class="d_list_l">청구기관 연락처</span>
+										<span class="d_list_r">1607145</span>
+									</li>
+								</ul>
+							</div>
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>지로자동납부 등록 및 등록 해지는 거래 당일에만 취소할 수 있습니다.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+
+							<!--s: 꼭 알아두세요! -->
+							<div class="group">
+								<div class="caution">
+									<div class="acd_wrap accodian_wrap ty3 active">
+										<div class="acd_head accodian_head">
+											<button type="button" aria-expanded="true" class="acd_btn">
+												<span class="title">꼭 알아두세요!</span>
+											</button>
+										</div>
+										<div class="acd_cont accodian_cont">
+											<div class="inner">
+												<ul class="list_bullet ty1">
+													<li>신청내역은 최소 4일 이상 금융기관 및 청구기관의 확인과정을 거칩니다.(청구기관별로 다름)</li>
+													<li>신청결과가 정상일 경우 자동이체 신청 및 해지에 대한 최초 시작일(납부금액 출금 혹은 중지 시작일)은 청구기관에서 별도 안내합니다.(자동계좌이체 약관 참조)</li>
+													<li>해지 신청 시 해지 완료 시점부터 자동납부가 되지 않아 연체료가 발생할 수 있으니, 해지 전 이용기관에 관련 내용을 꼭 확인해 주세요.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--e: 꼭 알아두세요! -->
+						</div>
+
+						<!-- s: 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">확인</button>
+							</div>
+						</div>
+						<!-- e: 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step8 신청내역조회/해지(탭)-취소완료 -->
+
+				<!-- s: Popup -->
+				<!-- s: step9 지로 자동계좌이체 약관 동의 -->
+				<!-- s: 전체팝업 -->
+
+				<div id="step9" data-jx-step-no="9" data-jx-effect="slide">
+					<div class="content_wrap ty3">
+						<div class="group">
+							<div class="title_text ty1">지로 자동계좌이체 약관</div>
+							<ul class="term_history">
+								<li>2007년 11월 6일 개정</li>
+								<li>2015년 4월 17일 2차 개정</li>
+								<li>2015년 10월 30일 3차 개정</li>
+								<li>2016년 1월 26일 4차 개정</li>
+								<li>2017년 4월 21일 5차 개정</li>
+								<li>2019년 6월 17일 6차 개정</li>
+								<li>2020년 5월 6일 7차 개정</li>
+								<li>2021년 5월 6일 8차 개정</li>
+								<li>2021년 12월 27일 9차 개정</li>
+							</ul>
+
+							<dl class="term_detail_box ty2 mt_24">
+								<dt class="term_tit">제1조 (약관의 적용)</dt>
+								<dd class="term_cont">지로 자동계좌이체제도(이하 “자동이체”라 한다)에 의하여 각종 대금을 납부하고자 하는 자(이하 “납부자”라 한다)와 기업은행(이하 “은행”이라 한다)에 대하여 이 약관을 적용합니다.</dd>
+
+								<dt class="term_tit">제2조 (영업일)</dt>
+								<dd class="term_cont">
+									다음 각호의 휴일을 제외한 날을 영업일로 합니다.
+
+									<ul class="list_number ty4">
+										<li>
+											<div class="list_number_num">①</div>
+											<div class="list_number_cont">대통령령에 의한 관공서의 공휴일</div>
+										</li>
+										<li>
+											<div class="list_number_num">②</div>
+											<div class="list_number_cont">토요일</div>
+										</li>
+										<li>
+											<div class="list_number_num">③</div>
+											<div class="list_number_cont">근로자의 날</div>
+										</li>
+									</ul>
+								</dd>
+
+								<dt class="term_tit">제3조 (출금)</dt>
+								<dd class="term_cont">
+									<ul class="list_number ty4">
+										<li>
+											<div class="list_number_num">①</div>
+											<div class="list_number_cont">납부자가 지급하여야 할 요금에 대하여 은행 앞으로 청구가 있는 경우에는 별도의 통지없이 납부자의 지정계좌에서 출금을 의뢰하는 기관(이하 “이용기관”이라 한다)이 지정하는 납기일(휴일인 경우 익영업일)에 출금 대체납부합니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">②</div>
+											<div class="list_number_cont">제1항의 경우 은행의 예금약관이나 약정서의 규정에 불구하고 예금청구서 기타 관련증서 없이 자동이체 처리절차에 의하여 출금할 수 있습니다.</div>
+										</li>
+									</ul>
+								</dd>
+
+								<dt class="term_tit">제4조 (과실책임)</dt>
+								<dd class="term_cont">
+									<ul class="list_number ty4">
+										<li>
+											<div class="list_number_num">①</div>
+											<div class="list_number_cont">은행 시스템 오류 및 장애로 인해 발생한 납부자 피해는 은행이 부담합니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">②</div>
+											<div class="list_number_cont">은행이 이용기관의 요청에 따라 출금을 시도하였으나 예금 잔액 부족, 계좌 지급 제한 등과 같이 납부자의 중대한 과실로 인해 출금이 되지 않아 발생하는 손해는 납부자의 책임으로 합니다.</div>
+										</li>
+									</ul>
+								</dd>
+
+								<dt class="term_tit">제5조 (부분출금)</dt>
+								<dd class="term_cont">부분출금방식으로 승인된 이용기관의 경우 이용기관의 청구금액에 비해 예금잔액이 부족하여도 동 잔액을 전액 출금할 수 있습니다. 다만, 자동이체 대금으로 입금된 어음, 수표 등이 부도처리되는 경우에는 현금이체분을 포함한 전액이 출금취소 됩니다.</dd>
+
+								<dt class="term_tit">제6조 (출금 우선순위)</dt>
+								<dd class="term_cont">
+									납기일에 동일한 수종의 자동이체 청구가 있는 경우의 출금 우선순위는 은행에서 정한 &lt;별첨&gt;자동이체 출금 우선순위에 따릅니다.
+									<br />
+									자동이체에 의한 출금은 은행의 최종 이체시도 시 예금잔액 (수시로대출 약정이 있는 경우 대출한도 포함)에 대해서만 이루어지며, 최종 이체시도 후 입금분에 대해서는 이루어지지 않습니다.
+								</dd>
+
+								<dt class="term_tit">제7조 (최초 개시일)</dt>
+								<dd class="term_cont">자동이체 신규신청에 의한 이체개시일은 이용기관의 사정에 의하여 결정되어지며 이용기관으로부터 사전통지받은 납기일을 최초 개시일로 합니다.</dd>
+
+								<dt class="term_tit">제8조 (자동이체 신청)</dt>
+								<dd class="term_cont">
+									은행은 자동이체를 실행하기 위하여 다음 각호에서 정하는 방법에 따라 미리 납부자로부터 출금에 대한 동의를 얻어야 합니다.
+
+									<ul class="list_number ty4">
+										<li>
+											<div class="list_number_num">①</div>
+											<div class="list_number_cont">은행이 납부자로부터 서면(공인전자서명이 있는 전자문서를 포함한다. 이하 이조에서 같다), 전화녹취, 음성응답시스템(Audio Response System)에 의하여 자동이체를 신청 받는 방법</div>
+										</li>
+										<li>
+											<div class="list_number_num">②</div>
+											<div class="list_number_cont">이용기관이 납부자로부터 서면, 전화 녹취, 음성응답시스템(Audio Response System)에 의한 출금의 동의를 받아 은행에 전달(전자적 방법으로 자동이체 신청내역을 전송하는 경우를 포함한다)하는 방법. 단, 이 경우 납부자 본인확인은 이용기관이 합니다.</div>
+										</li>
+									</ul>
+								</dd>
+
+								<dt class="term_tit">제9조 (신청기한)</dt>
+								<dd class="term_cont">제8조에 의한 자동이체(신규,변경) 신청시 해당 납기일 30일 전에 신청서를 제출하여야 합니다.</dd>
+
+								<dt class="term_tit">제10조 (자동이체 해지)</dt>
+								<dd class="term_cont">
+									<ul class="list_number ty4">
+										<li>
+											<div class="list_number_num">①</div>
+											<div class="list_number_cont">자동이체 해지는 은행 창구 및 인터넷뱅킹을 통해 가능하며, 이 경우 전자금융거래법상 출금동의의 철회로 봅니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">②</div>
+											<div class="list_number_cont">이용기관이 출금요청을 한 당일에는 자동이체 해지가 제한될 수 있습니다.</div>
+										</li>
+									</ul>
+								</dd>
+
+								<dt class="term_tit">제11조 (출금기준 및 이의제기)</dt>
+								<dd class="term_cont">
+									<ul class="list_number ty4">
+										<li>
+											<div class="list_number_num">①</div>
+											<div class="list_number_cont">자동이체 신청에 의한 지정계좌에서의 출금은 해당 납기일 은행 영업시간 내의 예금잔액 (수시로대출 약정이 있는 경우 대출한도 포함)에 한하여 이용기관의 요청대로 출금을 하며, 출금시 은행은 출금 금액 및 출금일자에 대한 정당여부를 확인하지 않습니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">②</div>
+											<div class="list_number_cont">출금금액과 출금일자의 정당여부는 납부자와 이용기관간의 계약에 의한 것으로 이와 관련된 이의제기는 이용기관에 하여야 합니다.</div>
+										</li>
+									</ul>
+								</dd>
+
+								<dt class="term_tit">제12조 (정보제공)</dt>
+								<dd class="term_cont">자동이체 업무처리를 위하여 자동이체와 관련된 납부자의 계좌정보 (거래은행명, 지점명, 계좌번호, 주민(사업자)등록번호 등)가 이용기관에 제공되며, 제공된 정보는 동 업무 이외의 목적에 사용할 수 없습니다.</dd>
+
+								<dt class="term_tit">제13조 (은행의 자동이체 임의 해지)</dt>
+								<dd class="term_cont">
+									<ul class="list_number ty4">
+										<li>
+											<div class="list_number_num">①</div>
+											<div class="list_number_cont">은행은 1년 이상 이용기관의 출금 요청이 없는 자동이체 등록내역에 대해 사전 SMS 등 개별 통지하고 임의해지 할 수 있습니다. 다만, 특별한 사정이 있다고 인정되는 경우 해당 이용기관에 대한 신청등록 내역은 해지대상에서 제외할 수 있습니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">②</div>
+											<div class="list_number_cont">아파트관리비의 경우 고객이 이용기관을 통해 이체은행 변경을 할 수 있으며, 은행은 이용기관으로부터 동 내용을 통지 받은 경우 사전 SMS 등 개별 통지하고 5영업일 후 자동이체를 해지할 수 있습니다.</div>
+										</li>
+									</ul>
+								</dd>
+
+								<dt class="term_tit">제14조 (이용기관에 신청시 약관적용)</dt>
+								<dd class="term_cont">제8조의 방법에 따라 자동이체신청서를 이용기관에 직접 제출한 경우에도 이 약관을 적용합니다.</dd>
+
+								<dt class="term_tit">제15조 (계좌이동서비스)</dt>
+								<dd class="term_cont">
+									<ul class="list_number ty4">
+										<li>
+											<div class="list_number_num">①</div>
+											<div class="list_number_cont">자동계좌이체는 계좌이동서비스 대상이며, 계좌이동서비스를 이용할 경우 계좌이동서비스 약관이 적용됩니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">②</div>
+											<div class="list_number_cont">은행은 자동이체통합관리시스템(www.payinfo.or.kr)에 자동이체 등록정보를 제공하여 조회 및 해지, 변경 신청이 가능하도록 합니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">③</div>
+											<div class="list_number_cont">고객은 은행 영업점, 인터넷뱅킹(스마트뱅킹 포함), 자동이체통합관리시스템(www.payinfo.or.kr), 애플리케이션에서 계좌이동서비스를 신청할 수 있습니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">④</div>
+											<div class="list_number_cont">고객은 은행 영업점, 인터넷뱅킹(스마트뱅킹 포함), 자동이체통합관리시스템(www.payinfo.or.kr)), 애플리케이션에서 자동이체 출금계좌를 당행계좌로 변경 신청할 경우 타은행 출금계좌에 등록되어 있는 자동이체 해지 후, 당행 출금계좌로 신규 등록 됩니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">⑤</div>
+											<div class="list_number_cont">고객은 은행 영업점, 인터넷뱅킹(스마트뱅킹 포함), 자동이체통합관리시스템(www.payinfo.or.kr), 애플리케이션에서 자동이체 출금계좌를 타은행 계좌로 변경 신청할 경우 당행계좌에 등록되어 있는 자동이체 해지 후, 타은행 출금계좌로 신규 등록 됩니다.</div>
+										</li>
+									</ul>
+								</dd>
+
+								<dt class="term_tit">제16조 (약관의 변경)</dt>
+								<dd class="term_cont">이 약관을 변경하고자 할 경우, 전자금융거래기본약관의 “제29조 약관의 변경” 조항을 따릅니다.</dd>
+
+								<dt class="term_tit">제17조 (준 용)</dt>
+								<dd class="term_cont">
+									<ul class="list_number ty4">
+										<li>
+											<div class="list_number_num">①</div>
+											<div class="list_number_cont">이 약관에서 정하지 아니한 사항은 전자금융거래기본약관, 예금거래기본 약관을 준용 합니다.</div>
+										</li>
+										<li>
+											<div class="list_number_num">②</div>
+											<div class="list_number_cont">제1항에서 정하지 않은 사항에 대하여는 다른 약정이 없으면 전자금융거래법, 전자금융거래법시행령, 전자금융감독규정, 전자금융감독규정시행세칙, 전자서명법, 금융실명거래 및 비밀보장에 관한 법률, 은행법을 적용합니다.</div>
+										</li>
+									</ul>
+
+									<p>별표】자동이체 출금 우선순위</p>
+									<div class="tbl ty2">
+										<table>
+											<caption>자동이체 출금 우선순위 표</caption>
+											<colgroup>
+												<col style="width: 85px" />
+												<col style="width: auto" />
+												<col style="width: 60px" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">순위</th>
+													<th scope="col">업무명</th>
+													<th scope="col">회차</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1순위</td>
+													<td class="ta_l">대출원리금이체 1차</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>2순위</td>
+													<td class="ta_l">요구불이체 1차</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>3순위</td>
+													<td class="ta_l">신용카드 이용대금 출금 1차</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td rowspan="2">4순위</td>
+													<td class="ta_l">타행자동이체 1차</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td class="ta_l">신아파트관리비 이체 1차</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>5순위</td>
+													<td class="ta_l">퇴직연금이체 1차</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>6순위</td>
+													<td class="ta_l">장중매매형 신탁상품 이체</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>7순위</td>
+													<td class="ta_l">수익증권(펀드) 이체</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>8순위</td>
+													<td class="ta_l">퇴직연금이체 2차</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td>9순위</td>
+													<td class="ta_l">외화이체</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>10순위</td>
+													<td class="ta_l">대출원리금이체 2차</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td rowspan="4">11순위</td>
+													<td class="ta_l">아파트 관리비 이체</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td class="ta_l">신아파트이체 2차 이체</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td class="ta_l">ISA 적립식 이체</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td class="ta_l">요구불이체 2차</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td rowspan="2">12순위</td>
+													<td class="ta_l">타행자동이체 2차</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td class="ta_l">신용카드 이용대금 출금 2차</td>
+													<td>2</td>
+												</tr>
+												<tr>
+													<td>13순위</td>
+													<td class="ta_l">지로자동이체</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>14순위</td>
+													<td class="ta_l">CMS자동이체출금</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>15순위</td>
+													<td class="ta_l">펌뱅킹자동이체</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>16순위</td>
+													<td class="ta_l">적립식이체</td>
+													<td>1</td>
+												</tr>
+												<tr>
+													<td>17순위</td>
+													<td class="ta_l">납부자자동이체</td>
+													<td>1</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">동의</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- e: 전체팝업 -->
+				<!-- e: step9 지로 자동계좌이체 약관 동의 -->
+
+				<!-- s: 계좌선택 팝업 -->
+				<div class="bottom_popup_wrap" id="popupAccount">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">계좌선택</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+						</div>
+
+						<div class="bottom_popup_body">
+							<ul class="select_list ty3" role="listbox">
+								<li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+												<div class="item_top_text">별칭</div>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorB5">개인</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="badge_cont">
+												<span class="badge ty3 colorETC11">기업</span>
+											</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_top">
+											<div class="item_top_text">별칭</div>
+										</div>
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+								<li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+									<div class="item">
+										<div class="item_bottom">
+											<div class="item_bottom_text">000-000000-00-000</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- e: 계좌선택 팝업 -->
+
+				<!-- 조건설정 팝업 -->
+				<div class="bottom_popup_wrap" id="popup1">
+					<div class="bottom_popup">
+						<div class="bottom_popup_header">
+							<h2 class="tit">조회구분</h2>
+							<button type="button" class="btn_close" onclick="comLayerPopUtil.close('popup1');">닫기</button>
+						</div>
+						<div class="bottom_popup_body">
+							<div class="form_group">
+								<div class="input_label ty1">조회유형</div>
+								<div class="btn_area clickable ty1" role="radiogroup">
+									<button type="button" role="radio" aria-checked="true" class="active"><span class="text">전체</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">활동</span></button>
+									<button type="button" role="radio" aria-checked="false"><span class="text">비활동</span></button>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_popup_footer">
+							<button type="button" class="btn s_5 c_3 r_2">조회</button>
+						</div>
+					</div>
+				</div>
+				<!-- // 조건설정 팝업 -->
+				<!-- e: Popup -->
+			</div>
+			<!-- e: 자동납부 등록/해지 -->
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>

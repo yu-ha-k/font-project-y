@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap"> 
+        <!-- s: step1 중도인출 계좌선택 -->
+        <div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+            <div class="content_wrap ty3 ione_loan"> 
+                <!-- s : 미가입고객-->
+                <div class="group">
+                    <div class="system_error">
+                        <div class="ico_txt ty1 lottie_case1">
+                            <div class="lottie_box">
+                                <lottie-player src="../../../../lottie/complete_fail.json" background="transparent" speed="1"></lottie-player>
+                            </div>
+                            퇴직연금 미가입 고객입니다.
+                            <div class="note_cmt">해당 메뉴는 퇴직연금 가입고객만 
+                                이용 가능합니다. </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- //e : 미가입고객--> 
+                <!-- s : 퍼블확인용 구분선 _ 개발 삭제 -->
+                <hr aria-hidden="true" class="divider ty1" />
+                <!-- //e : 퍼블확인용 구분선 _ 개발 삭제 -->
+                <div class="group">
+                    <ul class="list_bullet ty1">
+                        <li>중도인출은 법령에 정해진 사유에 한하여 재직 중 퇴직급여의 중간정산을 신청하는 업무입니다.</li>
+                        <li>정해진 중도인출 사유에 대해서만 중도인출 신청이 가능합니다.
+                            <ul class="list_dash">
+                                <li>무주택자 전세금(임차보증금)의 경우 1개 사업장에서 1회만 중도인출 가능합니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                <div class="group">
+                    <div class="form_group"> 
+                        <!-- s :계좌선택 전-->
+                        <div class="input_label ty1"> 계좌선택 </div>
+                        <div class="dropdown ty2" role="button" title="계좌선택" onclick="comLayerPopUtil.open('popupAccount');">
+                            <div class="dropdown_text">선택해주세요.</div>
+                        </div>
+                        <!-- //e:계좌선택 전--> 
+                        
+                        <!-- s :계좌선택 후-->
+                        <div class="dropdown ty2 active" role="button" title="계좌선택 완료" onclick="comLayerPopUtil.open('popupAccount');">
+                            <div class="dropdown_text">000-000000-00-000</div>
+                        </div>
+                        <!-- //e:계좌선택 후--> 
+                        
+                        <!-- s :계좌가 1개인 경우 자동 세팅-->
+                        <div class="dropdown ty2 default">
+                            <div class="dropdown_text">5*2-O59951-94-*** (확정급여형, DB)</div>
+                        </div>
+                        <!-- //e :계좌가 1개인 경우 자동 세팅--> 
+                        
+                        <!-- s :가입자명-->
+                        <div class="input_label ty1"> 가입자명 </div>
+                        <div class="input">
+                            <input type="text" name="" id="" placeholder="" />
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <!-- //e :가입자명-->
+                        <ul class="list_bullet ty3">
+                            <li class="color ty4">1회 최대 3명까지 신청가능</li>
+                            <li>3명을 초과하는 경우 기업인터넷뱅킹 이용</li>
+                        </ul>
+                        
+                        <!-- s : 버튼영역-->
+                        <div class="btn_area ty1 mt_24">
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('layerpopup1');">조회</button>
+                        </div>
+                        <!-- //e : 버튼영역--> 
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1" />
+                
+                <!-- s : 영업시간 안내-->
+                <div class="group">
+                    <div class="title_text ty1">영업시간 안내</div>
+                    <ul class="list_bullet ty1 pb_16">
+                        <li class="color ty4">[영업시간] 09:00~16:00(주말·공휴일 제외)</li>
+                        <li>영업시간 외 접수(보완접수 포함)건은 익 영업일에 처리되며 업무량 급증 등에 따라 처리가 지연 될 수 있어요.</li>
+                    </ul>
+                    <div class="label">
+                        <input type="checkbox" name="" id="chk1_1" />
+                        <label for="chk1_1" class="checkbox small"> <i></i> <span>영업시간을 확인했어요.</span> </label>
+                    </div>
+                </div>
+                <!-- //e : 영업시간 안내--> 
+            </div>
+        </div>
+        <!-- //e: step1 중도인출 계좌선택 --> 
+        <!-- s: step2 중도인출 대상자 목록 -->
+        <div id="step2" data-jx-step-no="2" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3 ione_loan" aria-hidden="false">
+                <div class="group">
+                    <ul class="list_bullet ty1">
+                        <li>중도인출은 법령에 정해진 사유에 한하여 재직 중 퇴직급여의 중간정산을 신청하는 업무입니다.</li>
+                        <li>정해진 중도인출 사유에 대해서만 중도인출 신청이 가능합니다.
+                            <ul class="list_dash">
+                                <li>무주택자 전세금(임차보증금)의 경우 1개 사업장에서 1회만 중도인출 가능합니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="form_group"> 
+                        <!-- s :계좌선택 전-->
+                        <div class="input_label ty1"> 계좌선택 </div>
+                        <div class="dropdown ty2" role="button" title="계좌선택" onclick="comLayerPopUtil.open('popupAccount');">
+                            <div class="dropdown_text">선택해주세요.</div>
+                        </div>
+                        <!-- //e:계좌선택 전--> 
+                        
+                        <!-- s :계좌선택 후-->
+                        <div class="dropdown ty2 active" role="button" title="계좌선택 완료" onclick="comLayerPopUtil.open('popupAccount');">
+                            <div class="dropdown_text">000-000000-00-000</div>
+                        </div>
+                        <!-- //e:계좌선택 후--> 
+                        
+                        <!-- s :계좌가 1개인 경우 자동 세팅-->
+                        <div class="dropdown ty2 default">
+                            <div class="dropdown_text">5*2-O59951-94-*** (확정급여형, DB)</div>
+                        </div>
+                        <!-- //e :계좌가 1개인 경우 자동 세팅--> 
+                        
+                        <!-- s :가입자명-->
+                        <div class="input_label ty1"> 가입자명</div>
+                        <div class="input">
+                            <input type="text" name="" id="" placeholder="">
+                            <button type="button" class="del">텍스트삭제</button>
+                        </div>
+                        <!-- //e :가입자명-->
+                        <ul class="list_bullet ty3">
+                            <li class="color ty4">1회 최대 3명까지 신청가능</li>
+                            <li>3명을 초과하는 경우 기업인터넷뱅킹 이용</li>
+                        </ul>
+                        
+                        <!-- s : 버튼영역-->
+                        <div class="btn_area ty1 mt_24">
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="comLayerPopUtil.open('layerpopup1');">조회</button>
+                        </div>
+                        <!-- //e : 버튼영역--> 
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="title_text ty1">선택된 중도인출 대상자 </div>
+                    
+                    <!-- s : 신청자 목록-->
+                    <ul class="card_item close_add">
+                        <li class="acount_item ty4">
+                            <div class="item">
+                                <div class="item_top">김기은</div>
+                                <div class="item_bottom"><span>(1961-10-10)</span></div>
+                            </div>
+                        </li>
+                        <li class="card_item_detail">
+                            <ol class="line" role="text">
+                                <span class="line_left"><span class="tit">입사일</span></span> <span class="line_right"><span>2010-01-01</span></span>
+                            </ol>
+                            <ol class="line form_group">
+                                <em class="tooltip_box"> <span class="line_left"> <span class="tit"> 기산일
+                                <div class="tooltip_wrap ty1">
+                                    <button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+                                    <div class="tooltip_wrap_container" role="tooltip">
+                                        <div class="inner">퇴직금 산정의 기준이 되는 날짜 (퇴직금 계산 시작일)</div>
+                                        <button type="button" class="tooltip_close">도움말 닫기</button>
+                                    </div>
+                                </div>
+                                </span> </span> </em><span class="line_right"><span>2010-01-01</span></span>
+                            </ol>
+                            <ol class="line" role="text">
+                                <span class="line_left"><span class="tit">기업납입금액(부담금) </span></span> <span class="line_right"><span class="money">3,178,643</span></span>
+                            </ol>
+                            <ol class="line" role="text">
+                                <span class="line_left"><span class="tit">연간임금총액 </span></span> <span class="line_right"><span class="money">3,178,643</span></span>
+                            </ol>
+                        </li>
+                        <button type="button" class="btn ico_ty2 card_item_delete"><span class="blind">삭제</span></button>
+                    </ul>
+                    <!-- //e : 신청자 목록--> 
+                    
+                </div>
+                <hr aria-hidden="true" class="divider ty1">
+                
+                <!-- s : 영업시간 안내-->
+                <div class="group">
+                    <div class="title_text ty1">영업시간 안내</div>
+                    <ul class="list_bullet ty1 pb_16">
+                        <li class="color ty4">[영업시간] 09:00~16:00(주말·공휴일 제외)</li>
+                        <li>영업시간 외 접수(보완접수 포함)건은 익 영업일에 처리되며 업무량 급증 등에 따라 처리가 지연 될 수 있어요.</li>
+                    </ul>
+                    <div class="label">
+                        <input type="checkbox" name="" id="chk1_2">
+                        <label for="chk1_2" class="checkbox small"> <i></i> <span>영업시간을 확인했어요.</span> </label>
+                    </div>
+                </div>
+                <!-- //e : 영업시간 안내--> 
+                <!-- s : 하단고정버튼-->
+                <div class="bottom_btn_area ty1">
+                    <div class="bottom_btn_area_box">
+                        <div class="btn_area ty1">
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">중도인출  신청 </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- e : 하단고정버튼--> 
+            </div>
+        </div>
+        <!-- //e: step2 중도인출 대상자 목록 --> 
+        
+        <!-- s: step3 중도인출 대상자 정보 확인 -->
+        <div id="step3" data-jx-step-no="3" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3 ione_loan" aria-hidden="false">
+                <div class="group">
+                    <div class="title_text ty1">중도인출 대상자 정보 </div>
+                    <!-- s : 신청자 목록-->
+                    <ul class="card_item">
+                        <li class="card_item_detail">
+                            <ol class="line" role="text">
+                                <span class="line_left"><span class="tit">가입자명</span></span> <span class="line_right"><span>김기은</span></span>
+                            </ol>
+                            <ol class="line" role="text">
+                                <span class="line_left"><span class="tit">입사일</span></span> <span class="line_right"><span>2010-01-01</span></span>
+                            </ol>
+                            <ol class="line form_group">
+                                <em class="tooltip_box"> <span class="line_left"> <span class="tit"> 기산일
+                                <div class="tooltip_wrap ty1">
+                                    <button type="button" class="tooltip_open" aria-expanded="false">도움말 보기</button>
+                                    <div class="tooltip_wrap_container" role="tooltip">
+                                        <div class="inner">퇴직금 산정의 기준이 되는 날짜 (퇴직금 계산 시작일)</div>
+                                        <button type="button" class="tooltip_close">도움말 닫기</button>
+                                    </div>
+                                </div>
+                                </span> </span> </em><span class="line_right"><span>2010-01-01</span></span>
+                            </ol>
+                            <ol class="line" role="text">
+                                <span class="line_left"><span class="tit">기업납입금액(부담금) </span></span> <span class="line_right"><span class="money">3,178,643</span></span>
+                            </ol>
+                            <ol class="line" role="text">
+                                <span class="line_left"><span class="tit">연간임금총액 </span></span> <span class="line_right"><span class="money">37,178,643</span></span>
+                            </ol>
+                        </li>
+                    </ul>
+                    <!-- //e : 신청자 목록--> 
+                    
+                </div>
+                <hr aria-hidden="true" class="divider ty1">
+                
+                <!-- s : 신청 기업 정보입력-->
+                <div class="group">
+                    <div class="title_text ty1">신청 기업 정보</div>
+                    <ul class="space_list_ty2">
+                        <li>
+                            <div class="group_item">
+                                <div class="group_item_detail">
+                                    <p class="line bd_none" role="text"> <span class="line_left"><span class="tit">신청 기업</span></span> <span class="line_right"><span class="txt">기은테크</span></span> </p>
+                                    <p class="line" role="text"> <span class="line_left"><span class="tit">사업자등록번호</span></span> <span class="line_right"><span class="account_no">123-45-56789</span></span> </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //e : 신청 기업 정보입력-->
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="title_text ty1">중도인출 사유 </div>
+                    <div class="dropdown ty2" role="button" title="중도인출 사유 목록보기" onclick="comLayerPopUtil.open('cause');">
+                        <div class="dropdown_text">선택해 주세요.</div>
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="form_group mt_32">
+                        <div class="input_label ty1"> 알림 수단 </div>
+                        <div class="btn_area clickable ty1" role="radiogroup">
+                            <button type="button" role="radio" aria-checked="true" class="active"><span class="text">카카오알림톡</span></button>
+                            <button type="button" role="radio" aria-checked="false" class=""><span class="text">SMS</span></button>
+                        </div>
+                        <div class="input_label ty1"> 알림 수신 휴대폰번호 </div>
+                        <div class="comp_wrap with_btn">
+                            <div class="comp_wrap phone">
+                                <div class="input no_del">
+                                    <input type="tel" name="" id="" title="휴대폰번호 앞 3자리 입력">
+                                </div>
+                                <span>-</span>
+                                <div class="input no_del">
+                                    <input type="tel" name="" id="" title="휴대폰번호 가운데 4자리 입력">
+                                </div>
+                                <span>-</span>
+                                <div class="input no_del">
+                                    <input type="tel" name="" id="" title="휴대폰번호 뒤 4자리 입력">
+                                </div>
+                            </div>
+                            <button type="button" class="btn s_4 c_2 r_2">인증번호 발송</button>
+                        </div>
+                        <div class="input_label ty1"> 인증번호 입력 </div>
+                        <div class="comp_wrap with_count">
+                            <div class="count_wrap">
+                                <div class="input">
+                                    <input type="text" name="" id="" title="인증번호 입력" placeholder="숫자 6자리 입력">
+                                    <button type="button" class="del">텍스트삭제</button>
+                                </div>
+                                <div class="with_count_utils"> <span class="count"> <span class="hidden">남은시간 :</span> 29:15 </span> </div>
+                            </div>
+                            <button type="button" class="btn s_4 c_2 r_2 btn_submit">확인</button>
+                        </div>
+                    </div>
+                </div>
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group"> 
+                    <!-- s : 서비스 이용 유의사항-->
+                    <div class="title_text ty1">서비스 이용 유의사항</div>
+                    <ul class="list_bullet ty1">
+                        <li class="color ty4">신속한 업무 진행상황 확인을 위해 ‘알림 수단’ 및 ‘알림 수신 휴대폰번호’는 꼭 입력해 주세요.</li>
+                        <li>원활한 업무처리를 위해 입력하신 휴대폰번호로 카카오알림 또는 SMS통지(접수/처리/보완요청 안내 등)되며, 필요 시 유선으로 연락드릴 수 있습니다.</li>
+                        <li>업무처리 요청내용 변경/취소는 은행의 업무 처리완료 전에만 가능하며, 업무 처리가 완료된 경우 변경/취소 요청이 불가합니다. (※ 변경/취소요청은 본부담당자에게 유선 문의·확인 필요)</li>
+                        <li>신청서 등 관련 양·서식은 은행에서 정한 양·서식을 사용해야 합니다.</li>
+                    </ul>
+                    <!-- //e : 서비스 이용 유의사항--> 
+                    <!-- s : 체크박스-->
+                    <div class="label mt_16">
+                        <input type="checkbox" name="" id="chk1_4">
+                        <label for="chk1_4" class="checkbox small"> <i></i> <span>서비스 이용 유의사항을 확인했어요.</span> </label>
+                    </div>
+                    <!-- //e : 체크박스--> 
+                </div>
+                <!-- s : 하단고정버튼-->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(2);">이전</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(4);">다음</button>
+                    </div>
+                </div>
+                <!-- e : 하단고정버튼--> 
+            </div>
+        </div>
+        <!-- //e: step3 중도인출 대상자 정보 확인 --> 
+        
+        <!-- s: step4 중도인출 대상자 서류제출 -->
+        <div id="step4" data-jx-step-no="4" data-jx-effect="slide" style="">
+            <div class="content_wrap ty3 ione_loan mobile_approval" aria-hidden="false">
+                <div class="group">
+                    <div class="title_text ty1">제출서류 안내<span class="ess_text ty1">필수</span></div>
+                    <div class="input_label ty1">중도인출신청서 </div>
+                    <div class="btn_group_wrap mt_12">
+                        <div class="btn_area ty1">
+                            <button type="button" class="btn s_4 c_1 r_2" onclick="uf_goStep();">신청서 양식</button>
+                            <button type="button" class="btn s_4 c_1 r_2" onclick="uf_goStep();">샘플서류 보기</button>
+                        </div>
+                    </div>
+                    <div class="input_label ty1 mt_16">중도인출 사유별 필요 서류 </div>
+                    <div class="btn_area ty1  mt_12">
+                        <button type="button" class="btn s_4 c_1 r_2" onclick="uf_goStep();">필요서류 보기</button>
+                    </div>
+                </div>
+                
+                <!--s:  무주택자 주택구입-->
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="title_text ty1">필요서류 제출</div>
+                    <div class="d_list ty3">
+                        <p></p>
+                        
+                        <!-- s: 서류 업로드 전 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l">중도인출 신청서 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div> -->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 전 --> 
+                        <!-- s: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">(현거주지) 주민등록등본 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty3">업로드 완료</span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출<!--<span class="d_list_r color ty4">서류제출 전</span>--></button>
+                            </div>
+                            <!--
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">(현거주지) 건물등기부등본<br>
+                                (또는 건축물관리대장) <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">지방세 세목별 과세증명서 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">주택 매매계약서 및 계약금 납입 영수증 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l">기타 증빙서류 <span class="ess_text ty1">선택</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div> -->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--//e: 무주택자 주택구입--> 
+                <!--s: 무주택자 전세금(임차보증금)-->
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="title_text ty1">필요서류 제출</div>
+                    <div class="d_list ty3">
+                        <p></p>
+                        
+                        <!-- s: 서류 업로드 전 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l">중도인출 신청서 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div> -->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 전 --> 
+                        <!-- s: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">(현거주지) 주민등록등본 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty3">업로드 완료</span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출<!--<span class="d_list_r color ty4">서류제출 전</span>--></button>
+                            </div>
+                            <!--
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">(현거주지) 건물등기부등본<br>
+                                (또는 건축물관리대장) <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">지방세 세목별 과세증명서 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">전세계약서(임대차계약서) 및 계약금 납입 영수증 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l">기타 증빙서류 <span class="ess_text ty1">선택</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div> -->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--//e:  무주택자 전세금(임차보증금)--> 
+                <!--s: 가입자(부양가족) 6개월 이상 요양 -->
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="title_text ty1">필요서류 제출</div>
+                    <div class="d_list ty3">
+                        <p></p>
+                        
+                        <!-- s: 서류 업로드 전 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l">중도인출 신청서 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div> -->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 전 --> 
+                        <!-- s: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">진단서(또는 소견서) <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty3">업로드 완료</span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출<!--<span class="d_list_r color ty4">서류제출 전</span>--></button>
+                            </div>
+                            <!--
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">직전년도 근로소득원천징수영수증(또는 급여명세서)<span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">진료비계산서영수증 등 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">주민등록등본(또는 가족관계증명서) <span class="ess_text ty1">해당 시</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l">기타 증빙서류 <span class="ess_text ty1">선택</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div> -->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--//e: 가입자(부양가족) 6개월 이상 요양 --> 
+                <!--s: 회생절차개시 결정 또는 파산선고 -->
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="title_text ty1">필요서류 제출</div>
+                    <div class="d_list ty3">
+                        <p></p>
+                        
+                        <!-- s: 서류 업로드 전 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l">중도인출 신청서 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div> -->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 전 --> 
+                        <!-- s: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">법원의 결정문(정본) 등 <span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty3">업로드 완료</span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출<!--<span class="d_list_r color ty4">서류제출 전</span>--></button>
+                            </div>
+                            <!--
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l">기타 증빙서류 <span class="ess_text ty1">선택</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div> -->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--//e: 회생절차개시 결정 또는 파산선고 --> 
+                <!--s: 재난피해 -->
+                <hr aria-hidden="true" class="divider ty1">
+                <div class="group">
+                    <div class="title_text ty1">필요서류 제출</div>
+                    <div class="d_list ty3">
+                        <p></p>
+                        
+                        <!-- s: 서류 업로드 전 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l">중도인출 신청서<span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div> -->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 전 --> 
+                        <!-- s: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">피해사실확인서 등<span class="ess_text ty1">필수</span></span> <span class="d_list_r color ty3">업로드 완료</span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출<!--<span class="d_list_r color ty4">서류제출 전</span>--></button>
+                            </div>
+                            <!--
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                        <!-- //e: 서류 업로드 후 -->
+                        <div class="d_list ty3 bd_none">
+                            <p class="line bd_none" role="text"> <span class="d_list_l" style="max-width: 70%;">기타 증빙서류<span class="ess_text ty1">선택</span></span> <span class="d_list_r color ty4">서류제출 전<!--<span class="d_list_r color ty3">업로드 완료</span>--></span> </p>
+                            <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_2 r_2" onclick="">서류제출</button>
+                            </div>
+                            <!--
+                                <div class="btn_area ty1 w_100p">
+                                <button type="button" class="btn s_4 c_1 r_2" onclick="">추가제출</button>
+                            </div>-->
+                            <p class="line pt_0" role="text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!--//e: 재난피해 --> 
+                
+                <!-- s: 유의사항 -->
+                <div class="group">
+                    <div class="acd_wrap accodian_wrap ty3 mt_32 active">
+                        <div class="acd_head accodian_head active">
+                            <button type="button" aria-expanded="true" class="acd_btn"><span class="title">꼭 알아두세요! </span></button>
+                        </div>
+                        <div class="acd_cont accodian_cont">
+                            <div class="inner" style="">
+                                <ul class="list_bullet ty1">
+                                    <li class="color ty4">모든 서류준비는 (중도인출 신청일 기준) 발급일로부터 1개월 이내만 유효합니다. </li>
+                                    <li>빠르고 정확한 업무처리를 위해, ‘샘플서류 보기’는 반드시 확인해 주시기 바랍니다. </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: 유의사항 --> 
+                
+                <!-- s: 하단 고정 버튼 -->
+                <div class="bottom_btn_area">
+                    <div class="btn_area ty1">
+                        <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(3);">취소</button>
+                        <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+                    </div>
+                </div>
+                <!-- e: 하단 고정 버튼 --> 
+            </div>
+        </div>
+        <!-- //e: step4 중도인출 대상자 서류제출 --> 
+        
+        <!-- s: step5 중도인출 신청완료 -->
+        <div id="step5" data-jx-step-no="5" data-jx-effect="slide" style="">
+            <div class="content_wrap ty4" aria-hidden="false">
+                <div class="group">
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        중도인출을 신청했어요 </div>
+                    <div class="bg_box ty1">
+                        <ul class="list_bullet ty1">
+                            <li>접수/완료/보완요청 시 신청하신 알림수단(SMS 또는 카카오알림톡)으로 통지 됩니다.</li>
+                        </ul>
+                    </div>
+                    <div class="ico_txt ty1 lottie_case1">
+                        <div class="lottie_box">
+                            <lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+                        </div>
+                        중도인출 결재를 요청했어요 </div>
+                    <div class="bg_box ty1">
+                        <ul class="list_bullet ty1">
+                            <li>최종결재자의 승인/결재 시 본부(센터)로 접수되며, 접수/완료/보완요청 시 신청하신 알림수단(SMS 또는 카카오알림톡)으로 통지 됩니다. </li>
+                        </ul>
+                    </div>
+                    <!-- s: 하단 고정 버튼 -->
+                    <div class="bottom_btn_area">
+                        <div class="btn_area ty1">
+                            <button type="button" class="btn s_5 c_1 r_2" onclick="uf_goStep(1);">확인</button>
+                            <button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">진행상황조회</button>
+                        </div>
+                    </div>
+                    <!-- e: 하단 고정 버튼 --> 
+                </div>
+            </div>
+        </div>
+        <!-- //e: step5 중도인출 신청완료 --> 
+        
+        <!-- s: step1 중도인출 대상자 선택 레이어 팝업 -->
+        <div class="layer_popup_wrap" id="layerpopup1">
+            <div class="layer_popup">
+                <div class="layer_popup_header">
+                    <h2 class="tit">중도인출 대상자 선택</h2>
+                </div>
+                <div class="layer_popup_body"> 
+                    <!-- s : 중도인출 대상자 선택 대상자 선택 테이블 -->
+                    <div class="tbl ty2">
+                        <table>
+                            <caption>
+                            중도인출 대상자 선택
+                            </caption>
+                            <colgroup>
+                            <col style="width: 10%" />
+                            <col style="width: 30%" />
+                            <col style="width: 40%" />
+                            <col style="width: 20%" />
+                            <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">가입자명</th>
+                                    <th scope="col">생년월일</th>
+                                    <th scope="col">상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio1">
+                                            <label for="radio1" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio2">
+                                            <label for="radio2" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio3">
+                                            <label for="radio3" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio4">
+                                            <label for="radio4" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio5">
+                                            <label for="radio5" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio6">
+                                            <label for="radio6" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio7">
+                                            <label for="radio7" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio8">
+                                            <label for="radio8" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio9">
+                                            <label for="radio9" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio10">
+                                            <label for="radio10" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="label">
+                                            <input type="radio" name="name1" id="radio11">
+                                            <label for="radio11" class="radio"> <i></i> </label>
+                                        </div></td>
+                                    <td><span>김기업</span></td>
+                                    <td><span>1973-05-12</span></td>
+                                    <td><span>정상</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //e : 중도인출 대상자 선택 테이블--> 
+                    
+                    <!-- s : 20명씩 더보기 출력-->
+                    <div class="btn_area ty1 more mt_16">
+                        <button type="button" class="btn s_2 c_1 r_1"><span class="text">더보기</span></button>
+                    </div>
+                    <!-- //e : 20명씩 더보기 출력--> 
+                </div>
+                <div class="layer_popup_footer">
+                    <button type="button" class="btn s_4 c_3 r_2" onclick="uf_goStep(2); comLayerPopUtil.close('layerpopup1');">선택</button>
+                </div>
+            </div>
+        </div>
+        <!-- //e: step1 중도인출 대상자 선택 팝업 --> 
+        
+        <!-- s: bottom popup --> 
+        <!--s: 계좌선택-->
+        <div class="bottom_popup_wrap" id="popupAccount">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit">계좌선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('popupAccount');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty3" role="listbox">
+                        <li class="account_list_item active" role="option" tabindex="-1" aria-selected="true">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"> <span class="badge ty3 colorB5">개인</span>
+                                        <div class="item_top_text">별칭</div>
+                                    </div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"><span class="badge ty3 colorB5">개인</span></div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="badge_cont"><span class="badge ty3 colorETC11">기업</span></div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_top">
+                                    <div class="item_top_text">별칭</div>
+                                </div>
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account_list_item" role="option" tabindex="-1" aria-selected="false">
+                            <div class="item">
+                                <div class="item_bottom">
+                                    <div class="item_bottom_text">000-000000-00-000</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--//e: 계좌선택--> 
+        <!-- s: 중도인출 사유-->
+        <div class="bottom_popup_wrap" id="cause" title="중도인출 사유" aria-hidden="false">
+            <div class="bottom_popup">
+                <div class="bottom_popup_header">
+                    <h2 class="tit" tabindex="0">중도인출 사유 선택</h2>
+                    <button type="button" class="btn_close" onclick="comLayerPopUtil.close('cause');">닫기</button>
+                </div>
+                <div class="bottom_popup_body">
+                    <ul class="select_list ty1" role="listbox">
+                        <li role="option" tabindex="-1" class="active" aria-selected="true">선택해 주세요.</li>
+                        <li role="option" tabindex="-1" aria-selected="false">무주택자 주택구입</li>
+                        <li role="option" tabindex="-1" aria-selected="false">무주택자 전세금(임차보증금)</li>
+                        <li role="option" tabindex="-1" aria-selected="false">회생절차개시 결정</li>
+                        <li role="option" tabindex="-1" aria-selected="false">파산선고</li>
+                        <li role="option" tabindex="-1" aria-selected="false">가입자(부양가족) 6개월 이상 요양</li>
+                        <li role="option" tabindex="-1" aria-selected="false">재난피해</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--//e: 중도인출 사유--> 
+        <!-- //e: bottom popup --> 
+    </div>
+</div>
+
+<!--**퍼블용** 데모확인 로티 구동 스크립트--> 
+<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script> 
+<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+
+</body>
+</html>

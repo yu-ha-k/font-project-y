@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<script type="text/javascript" src="../../../../js/com/comMobHeader.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 오픈뱅킹 : 서비스 가입 -->
+			<div id="step" data-jx-step="step" data-jx-step-default="1" class="container_wrap">
+				<!-- s: step1 첫 화면(메인) -->
+				<div id="step1" data-jx-step-no="1" data-jx-effect="slide">
+					<div class="content_wrap open_bank service_join ty3">
+						<div class="group">
+							<div class="icon_info_group ty1">
+								<div class="tit">계좌통합관리(어카운트인포)</div>
+								<div class="txt">터치 한번으로 내 계좌 정보를 한눈에!</div>
+								<div class="icon account_intro_visual"></div>
+							</div>
+						</div>
+						<!-- s: 설명 문구 -->
+						<div class="group service_outline">
+							<!-- s: 서비스 개요 -->
+							<div class="title_text ty1">계좌통합관리 서비스란?</div>
+							<ul class="list_bullet ty2">
+								<li>개인사업자 대표자가 개인명의로 다른 금융기관에 보유하고 있는 계좌, 증권, 카드를 한 번에 조회할 수 있는 서비스예요.(개인뱅킹용 계좌통합관리 서비스와 동일)</li>
+							</ul>
+							<!-- e: 서비스 개요 -->
+							<!-- s: 이용대상 -->
+							<div class="title_text ty1">이용대상</div>
+							<ul class="list_bullet ty2">
+								<li>
+									<span class="color ty3">개인사업자</span>
+									(법인 및 임의단체, 공동명의 대표 사업자 제외, 대표자는 만 19세 이상)
+								</li>
+								<li>
+									기업뱅킹 이용고객 중
+									<span class="color ty3">관리자인 이용자</span>
+								</li>
+							</ul>
+							<!-- e: 이용대상 -->
+							<!-- s: 제공기능 -->
+							<div class="title_text ty1">제공기능</div>
+							<ul class="list_bullet ty2">
+								<li>
+									<span class="color ty3">대표자 주민번호 기반</span>
+									대표자 주민등록번호 기반으로 서비스 참가기관 계좌 및 카드정보 일괄 조회(은행, 서민금융, 증권사, 카드사)
+								</li>
+								<li>계좌정보(기관명, 계좌번호, 상품명, 개설일, 잔고 등) 일괄 조회</li>
+								<li>카드정보(카드번호 일부, 상품명, 본인/가족카드 구분, 신용/체크카드 구분 등) 일괄 조회</li>
+							</ul>
+							<!-- e: 제공기능 -->
+							<!-- s: 기업뱅킹 이용등록/해지 -->
+							<div class="title_text ty1">기업뱅킹 이용 등록/해지</div>
+							<ul class="list_bullet ty2">
+								<li>
+									계좌통합관리 서비스를 기업인터넷뱅킹, i-ONE뱅크 기업 앱에서
+									<span class="color ty3">안전하게 이용하기 위한 이용 등록 및 해지</span>
+									(서비스 가입과 별개)
+								</li>
+							</ul>
+							<!-- e: 기업뱅킹 이용등록/해지 -->
+						</div>
+						<!-- e: 설명 문구 -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">서비스가입</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step1 첫 화면(메인) -->
+
+				<!-- s: step2 유의사항 안내 -->
+				<div id="step2" data-jx-step-no="2" data-jx-effect="slide">
+					<div class="content_wrap ty3 open_bank service_join">
+						<!-- s: 유의사항 -->
+						<div class="group notice_caution">
+							<div class="title_text ty1">서비스 신청 전 유의사항 안내</div>
+							<p class="txt_caution">계좌통합관리서비스(어카운트인포) 가입 전 유의사항을 안내하오니 확인 후 이용해 주시기 바랍니다.</p>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<!-- e: 유의사항 -->
+						<!-- s: 질문 목록 -->
+						<div class="group">
+							<div class="question_list">
+								<div class="question">
+									<div class="question_num">1.</div>
+									<div class="question_cont">은행에 등록된 휴대폰정보와 일치하는 기기를 보유중이신가요?</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active">
+											<span class="text">아니오</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">예</span>
+										</button>
+									</div>
+								</div>
+
+								<div class="question">
+									<div class="question_num">2.</div>
+									<div class="question_cont">공동명의 사업자이신가요?(공동사업자 신청 불가)</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active">
+											<span class="text">아니오</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">예</span>
+										</button>
+									</div>
+								</div>
+								<div class="question">
+									<div class="question_num">3.</div>
+									<div class="question_cont">대표자 본인 외에 타직원이 관리자인증서로 기업 뱅킹을 함께 이용하나요?</div>
+								</div>
+								<div class="answer select_answer">
+									<div class="btn_area clickable ty1" role="radiogroup">
+										<button type="button" role="radio" aria-checked="true" class="active">
+											<span class="text">아니오</span>
+										</button>
+										<button type="button" role="radio" aria-checked="false">
+											<span class="text">예</span>
+										</button>
+									</div>
+									<ul class="txt_guide">
+										<li>계좌통합관리서비스는 개인 실명번호를 기반으로 타행계좌를 조회하는 서비스로 개인전자금융 가입이 필수입니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- e: 질문 목록 -->
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(3);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step2 유의사항 안내 -->
+
+				<!-- s: step3 정보입력 -->
+				<div id="step3" data-jx-step-no="3" data-jx-effect="slide">
+					<div class="content_wrap ty3 account_info">
+						<div class="group agree">
+							<div class="title_text ty1">
+								약관 동의
+								<span class="ess_text ty1">필수</span>
+							</div>
+							<p>약관, 상품설명서(또는 핵심설명서) [내용보기]를 눌러 주요 내용을 확인해 주세요.</p>
+							<div class="agree_check_group">
+								<div class="agree_check tit_ty">
+									<div class="top">
+										<div class="label">
+											<input type="checkbox" name="" id="ag_multi01" />
+											<label for="ag_multi01" class="checkbox">
+												<i></i>
+												<span>계좌통합관리 서비스 이용약관</span>
+											</label>
+										</div>
+										<button type="button" class="btn ty_txt3 line_bttm btn_view">
+											<span class="sr_only">계좌통합관리 서비스 이용약관</span>
+											보기
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr aria-hidden="true" class="divider ty1" />
+						<div class="group agree">
+							<div class="title_text ty1">
+								추가인증
+								<span class="ess_text ty1">필수</span>
+							</div>
+							<p>대표자 본인확인을 위해 대표자 휴대폰으로 휴대폰인증을 해주세요.</p>
+							<div class="form_group mt_32">
+								<div class="input_label ty2">휴대폰 번호</div>
+								<div class="comp_wrap with_btn column">
+									<div class="comp_wrap phone disabled">
+										<div class="input no_del">
+											<input type="tel" name="" id="" value="010" title="휴대폰번호 앞 3자리 입력" readonly placeholder="휴대폰번호" />
+										</div>
+										<span>-</span>
+										<div class="input no_del">
+											<input type="tel" name="" id="" value="1234" title="휴대폰번호 가운데 4자리 입력" readonly />
+										</div>
+										<span>-</span>
+										<div class="input no_del">
+											<input type="tel" name="" id="" value="5678" title="휴대폰번호 뒤 4자리 입력" readonly />
+										</div>
+									</div>
+									<button type="button" class="btn s_4 c_2 r_2">인증번호 발송</button>
+								</div>
+								<div class="input_label ty2">인증번호 입력</div>
+								<div class="comp_wrap with_count with_btn">
+									<div class="count_wrap">
+										<div class="input">
+											<input type="text" name="" id="" title="인증번호 입력" placeholder="숫자 6자리 입력" />
+
+											<button type="button" class="del">텍스트삭제</button>
+										</div>
+										<div class="with_count_utils">
+											<span class="count">
+												<span class="hidden">남은시간 :</span>
+												29:15
+											</span>
+											<button type="button" class="btn s_2 c_2 r_3"><span class="fw_7">시간연장</span></button>
+										</div>
+									</div>
+								</div>
+								<ul class="list_bullet ty1">
+									<li>인증번호를 받지 못한 경우 [인증번호 요청]을 다시 눌러주세요.</li>
+								</ul>
+								<button type="button" class="btn s_4 c_2 r_2 btn_submit w_full mt_16">확인</button>
+							</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty2">
+								<button type="button" class="btn s_5 c_1 r_2">취소</button>
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(5);">다음</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step3 정보입력 -->
+
+				<!-- s: step4  「계좌통합관리서비스」이용약관 -->
+				<div id="step4" data-jx-step-no="4" data-jx-effect="slide">
+					<div class="content_wrap ty3 open_bank service_join">
+						<div class="group">
+							<div class="title_text ty1">「계좌통합관리서비스」이용약관</div>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2" onclick="uf_goStep(1);">확인</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: step4 「계좌통합관리서비스」이용약관 -->
+
+				<!-- s: step5 가입완료 -->
+				<div id="step5" data-jx-step-no="5" data-jx-effect="slide">
+					<div class="content_wrap ty4">
+						<div class="group">
+							<div class="ico_txt ty1 lottie_case1">
+								<div class="lottie_box">
+									<lottie-player src="../../../../lottie/complete_success.json" background="transparent" speed="1"></lottie-player>
+								</div>
+								가입완료
+								<div class="note_cmt">계좌통합관리(어카운트인포) 서비스에 가입했어요</div>
+							</div>
+
+							<ul class="list_bullet ty1 mt_24">
+								<li>오픈뱅킹 서비스를 가입하면 다른 은행 계좌에서도 이체를 할 수 있어요. 서비스에 가입하려면 [오픈뱅킹 서비스 가입하기]를 눌러주세요.</li>
+							</ul>
+							<button type="button" class="btn s_4 c_2 r_2 w_100p mt_32">오픈뱅킹 서비스 가입하기</button>
+						</div>
+						<!-- s: 화면 하단 고정 버튼 -->
+						<div class="bottom_btn_area">
+							<div class="btn_area ty1">
+								<button type="button" class="btn s_5 c_3 r_2">계좌통합 조회하기</button>
+							</div>
+						</div>
+						<!-- e: 화면 하단 고정 버튼 -->
+					</div>
+				</div>
+				<!-- e: 가입완료 -->
+			</div>
+		</div>
+
+		<!--**퍼블용** 데모확인 로티 구동 스크립트-->
+		<script>
+			// lottie-player 실행
+			const stepLottiePlayers = document.querySelectorAll("lottie-player");
+			stepLottiePlayers.forEach(player => {
+				player.play();
+			});
+		</script>
+		<!--//**퍼블용** 데모확인 로티 구동 스크립트-->
+	</body>
+</html>
