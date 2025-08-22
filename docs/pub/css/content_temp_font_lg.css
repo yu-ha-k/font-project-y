@@ -1491,18 +1491,18 @@ body:not(.font_lg_on) ul.sub_d_list>li.full-line .d_list_r {
 /* 필요한 핵심만 노출, 세부 크기표는 기존 파일 유지 */
 
 /* 큰글씨 모드 전용: result_list 양쪽 정렬 라인 안정화 */
-.font_lg_on .result_list li,
-.font_lg_on .result_list li > a.linkTo {
+.font_lg_on .d_list.result_list li,
+.font_lg_on .d_list.result_list li > a.linkTo {
   display: flex;
   align-items: flex-start;
 }
 
-.font_lg_on .result_list .d_list_l {
+.font_lg_on .d_list.result_list .d_list_l {
   flex: 0 0 auto;   /* 라벨 고정폭 */
   min-width: 0;
 }
 
-.font_lg_on .result_list .d_list_r {
+.font_lg_on .d_list.result_list .d_list_r {
   flex: 1 1 auto;   /* 값 칼럼이 남은 폭 사용 */
   min-width: 0;     /* ★ flex 최소폭 보정: 줄바꿈/측정 가능 */
   white-space: normal;
@@ -1511,8 +1511,8 @@ body:not(.font_lg_on) ul.sub_d_list>li.full-line .d_list_r {
 }
 
 /* 중첩 리스트 대비(있을 경우) */
-.font_lg_on ul.result_list .d_list_l,
-.font_lg_on ul.result_list .d_list_r {
+.font_lg_on ul.d_list.result_list .d_list_l,
+.font_lg_on ul.d_list.result_list .d_list_r {
   min-width: 0;
   white-space: normal;
 }
