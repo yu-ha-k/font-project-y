@@ -927,4 +927,151 @@ $(function () {
   } catch (e) {}
 })();
 
+
+<!-- comUi_temp_font_lg.js 맨 아래 ‘그대로’ 붙여 넣기 -->
+<script>
+(function () {
+  // 안전 스케줄러: 중복 호출 억제 + 레이아웃 안정까지 2패스
+  var scheduled = false;
+  function scheduleReflow() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(run);
+    setTimeout(run, 80);
+  }
+  function run() {
+    scheduled = false;
+    try { if (typeof window.reflowBigTextLines === "function") window.reflowBigTextLines(); } catch (e) {}
+  }
+
+  // “보일 때” 한 번만 재계산: 숨김 상태였다가 처음 보이게 되는 컨테이너/리스트를 관찰
+  function reflowWhenVisible(root) {
+    var targets = (root || document).querySelectorAll(
+      // 좌/우 라인 구조 전체 + d_list 계열 전체
+      ".group_item_detail, .card_item_detail, .card_item_sub_info, .js-wrapscope, ul.d_list, ul.sub_d_list"
+    );
+    if (!targets.length) return;
+
+    // 보이는지 판정
+    function isVisible(el) {
+      if (!el) return false;
+      var cur = el;
+      while (cur && cur !== document.body) {
+        var cs = getComputedStyle(cur);
+        if (cs.display === "none" || cs.visibility === "hidden") return false;
+        cur = cur.parentElement;
+      }
+      var r = el.getBoundingClientRect();
+      return r.width > 0 && r.height > 0;
+    }
+
+    // IntersectionObserver로 “처음 보일 때” 1회만 재계산
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (ents) {
+        var hit = false;
+        ents.forEach(function (en) {
+          if (en.isIntersecting) {
+            try { io.unobserve(en.target); } catch (e) {}
+            hit = true;
+          }
+        });
+        if (hit) scheduleReflow();
+      }, { threshold: 0.01 });
+
+      targets.forEach(function (node) {
+        // 이미 보이는 건 바로 재계산, 숨겨진 건 보일 때까지 대기
+        if (isVisible(node)) {
+          scheduleReflow();
+        } else {
+          try { io.observe(node); } catch (e) {}
+        }
+      });
+    } else {
+      // 폴백: 보일 때까지 폴링 (최대 30회)
+      var tries = 30;
+      (function poll() {
+        var any = false;
+        targets.forEach(function (node) {
+          if (isVisible(node)) any = true;
+        });
+        if (any) scheduleReflow();
+        else if (--tries > 0) setTimeout(poll, 80);
+      })();
+    }
+  }
+
+  // 1) 최초 진입
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      reflowWhenVisible(document);
+      scheduleReflow();
+    });
+  } else {
+    reflowWhenVisible(document);
+    scheduleReflow();
+  }
+
+  // 2) 진짜 로드/웹폰트/툴바 등 “늦게 바뀌는” 요인까지 커버
+  window.addEventListener("load", function(){
+    scheduleReflow();
+    setTimeout(scheduleReflow, 200);
+    setTimeout(scheduleReflow, 600);
+  }, {passive:true});
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(scheduleReflow).catch(function(){});
+  }
+  if (window.visualViewport) {
+    visualViewport.addEventListener("resize", scheduleReflow, {passive:true});
+    visualViewport.addEventListener("scroll", scheduleReflow, {passive:true}); // 모바일 키보드
+  }
+  window.addEventListener("orientationchange", scheduleReflow, {passive:true});
+  window.addEventListener("pageshow", scheduleReflow, {passive:true});
+
+  // 3) JEX 화면 전환 완료 신호 훅 (있을 때만)
+  //   - 너가 말한 “JEX 전환 한 번 해야 정상” 현상을 바로 여기서 끊어줌
+  try {
+    // 커스텀 이벤트 버전
+    document.addEventListener("JEX_PAGE_READY", scheduleReflow);
+  } catch (e) {}
+
+  // 4) AJAX/DOM 주입: 리스트가 나중에 붙는 경우 자동 재계산
+  try {
+    if ("MutationObserver" in window) {
+      var mo = new MutationObserver(function (muts) {
+        var need = false;
+        for (var i = 0; i < muts.length; i++) {
+          var ad = muts[i].addedNodes || [];
+          for (var j = 0; j < ad.length; j++) {
+            var n = ad[j];
+            if (!n || !n.querySelector) continue;
+            if (
+              (n.matches && n.matches("ul.d_list, ul.sub_d_list, .group_item_detail, .card_item_detail, .card_item_sub_info, .js-wrapscope")) ||
+              n.querySelector("ul.d_list, ul.sub_d_list, .group_item_detail, .card_item_detail, .card_item_sub_info, .js-wrapscope")
+            ) {
+              reflowWhenVisible(n);
+              need = true;
+              break;
+            }
+          }
+          if (need) break;
+        }
+        if (need) scheduleReflow();
+      });
+      mo.observe(document.body, {childList:true, subtree:true});
+    }
+  } catch (e) {}
+
+  // 5) jQuery ajaxComplete (JEX 내부가 Ajax 쓸 때)
+  try {
+    if (window.jQuery && jQuery(document)) {
+      jQuery(document).on("ajaxComplete", function(){
+        reflowWhenVisible(document);
+        scheduleReflow();
+      });
+    }
+  } catch (e) {}
+})();
+</script>
+
 /*==========================e: test ================================================*/
