@@ -150,41 +150,78 @@ $(function () {
     return r.width > 0 && r.height > 0;
   }
 
-  function _whenVisible(node, cb) {
-    if (_isVisible(node)) {
-      cb();
-      return;
-    }
-    if ("IntersectionObserver" in window) {
-      var io = new IntersectionObserver(
-        function (ents) {
-          ents.forEach(function (en) {
-            if (en.isIntersecting && en.target) {
-              try {
-                io.unobserve(en.target);
-              } catch (e) {}
-              cb();
-            }
-          });
-        },
-        { threshold: 0.01 }
-      );
-      try {
-        io.observe(node);
-      } catch (e) {
-        cb();
-      }
-    } else {
-      var tries = 30;
-      (function poll() {
-        if (_isVisible(node)) {
-          cb();
-          return;
-        }
-        if (--tries > 0) setTimeout(poll, 80);
-      })();
-    }
+  // ▼ 기존 _whenVisible(node, cb) 함수만 이걸로 교체
+function _whenVisible(node, cb) {
+  // 이미 보이면 즉시
+  if (_isVisible(node)) { cb(); return; }
+
+  var done = false;
+  function fire() {
+    if (done) return;
+    done = true;
+    try { cb(); } catch (e) {}
   }
+
+  // 1) 사이즈 변화 감지: 보이지 않다가 height/width 생기면 실행
+  if ('ResizeObserver' in window) {
+    try {
+      var ro = new ResizeObserver(function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          var r = entries[i].contentRect || {};
+          if ((r.width || 0) > 0 && (r.height || 0) > 0) {
+            ro.disconnect();
+            fire();
+            break;
+          }
+        }
+      });
+      ro.observe(node);
+    } catch (e) {}
+  }
+
+  // 2) 스타일/클래스 변경 감지(탭/스텝 show 시점 캐치)
+  try {
+    var mo = new MutationObserver(function () {
+      var r = node.getBoundingClientRect();
+      if (r.width > 0 && r.height > 0) {
+        mo.disconnect();
+        fire();
+      }
+    });
+    mo.observe(node, { attributes: true, attributeFilter: ['style', 'class'] });
+  } catch (e) {}
+
+  // 3) 뷰포트 교차도 보조(스크롤로 들어올 때)
+  if ('IntersectionObserver' in window) {
+    try {
+      var io = new IntersectionObserver(function (ents) {
+        for (var i = 0; i < ents.length; i++) {
+          if (ents[i].isIntersecting) {
+            io.disconnect();
+            fire();
+            break;
+          }
+        }
+      }, { threshold: 0.0 });
+      io.observe(node);
+    } catch (e) {}
+  }
+
+  // 4) 폴백: 짧은 폴링(최대 4초)
+  var tries = 40;
+  var timer = setInterval(function () {
+    var r = node.getBoundingClientRect();
+    if (r.width > 0 && r.height > 0) {
+      clearInterval(timer);
+      fire();
+    } else if (--tries <= 0) {
+      clearInterval(timer);
+      // 마지막 안전망: 한 번은 시도
+      fire();
+    }
+  }, 100);
+}
+
 
   // 자연폭/크기 헬퍼(캐시 사용)
   var natW = window.__BT_natW__;
