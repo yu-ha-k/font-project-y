@@ -801,3 +801,141 @@ function chkDisabled() {
         /* end iffe */
       })();
                                 });
+
+								/* -------------------------------------------------------------
+ * [접근성 공통 추가 영역 시작]
+ * 금액입력 공통(네이티브 호출형 버튼) 접근성 보강 + 브리지 샘플
+ * ------------------------------------------------------------- */
+(function($, win){
+  'use strict';
+
+  // 고유 ID / 포맷 유틸
+  function uid(p){ return (p||'a11y') + '_' + Math.random().toString(36).slice(2,9); }
+  function fmt(n){
+    if(n==null||n==='') return '';
+    var d = String(n).replace(/[^\d]/g,'');
+    return d.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+
+  // 개별 value 요소 접근성 보강
+  function enhance($v){
+    if($v.data('a11yReady')) return;
+    var disabled = $v.hasClass('disabled') || $v.attr('aria-disabled')==='true';
+    if(!disabled){ if(!$v.attr('tabindex')) $v.attr('tabindex','0'); }
+    else{ $v.attr('aria-disabled','true').removeAttr('tabindex'); }
+    $v.attr('aria-haspopup','dialog');
+
+    var $group = $v.closest('.live_input_group');
+    var nearLabel = $.trim($group.find('.input_label').first().text());
+    var label = $v.attr('aria-label') || nearLabel || $v.attr('title') || '금액 입력';
+    $v.attr('aria-label', label);
+
+    // 힌트 및 상태 연결
+    var hintId = uid('hint'), stateId = uid('state');
+    if(!$('#'+hintId).length){
+      $('<p/>',{id:hintId,'class':'blind',text:'숫자만 입력. 엔터 또는 스페이스로 키패드를 엽니다.'}).appendTo($group);
+    }
+    if(!$('#'+stateId).length){
+      $('<p/>',{id:stateId,'class':'blind','aria-live':'polite'}).appendTo($group);
+    }
+    $v.attr('aria-describedby', hintId+' '+stateId).data('a11yStateId', stateId);
+
+    // 키보드 조작 대응
+    if(!disabled){
+      $v.on('keydown.a11y',function(e){
+        if(e.which===13||e.which===32){ e.preventDefault(); $v.trigger('click'); }
+      });
+    }
+
+    $v.data('a11yReady',true);
+  }
+
+  // 초기화
+  function init(ctx){
+    $('.live_input_group .value[role="button"]',ctx||document).each(function(){ enhance($(this)); });
+  }
+  $(function(){ init(); });
+
+  // 동적 추가 감시
+  if('MutationObserver' in win){
+    new MutationObserver(function(muts){
+      muts.forEach(function(m){
+        $(m.addedNodes).each(function(){
+          if(this.nodeType!==1) return;
+          var $n=$(this);
+          if($n.is('.live_input_group .value[role="button"]')) enhance($n);
+          else init($n);
+        });
+      });
+    }).observe(document.body,{childList:true,subtree:true});
+  }
+
+  // 네이티브 브리지 호출 샘플
+  $(document).on('click','.live_input_group .value[role="button"]',function(){
+    var $btn=$(this);
+    if($btn.attr('aria-disabled')==='true') return;
+    var params={maxLength:12,defaultValue:''};
+
+    try{
+      if(win.nativeBridge && typeof win.nativeBridge.exec==='function'){
+        win.nativeBridge.exec('OPEN_NUMBER_PAD',params,function(result){
+          A11yPriceInput.setValue($btn,result);
+        });
+      }else if(win.webkit && win.webkit.messageHandlers && win.webkit.messageHandlers.nativeBridge){
+        win.webkit.messageHandlers.nativeBridge.postMessage({
+          action:'OPEN_NUMBER_PAD',params:params,callback:'A11yPriceInput_callback'
+        });
+        win.A11yPriceInput_callback=function(value){ A11yPriceInput.setValue($btn,value); };
+      }else{
+        // fallback(PC 테스트용)
+        console.log('[nativeBridge 미탑재] 가상 입력');
+        setTimeout(function(){
+          var mock=prompt('가상 키패드 입력값:','');
+          if(mock) A11yPriceInput.setValue($btn,mock);
+        },0);
+      }
+    }catch(e){ console.error('nativeBridge 호출 실패',e); }
+  });
+
+  // 접근성 상태 제어 API
+  win.A11yPriceInput={
+    setValue:function(target,value,unit){
+      var $v=(typeof target==='string')?$(target):$(target);
+      if(!$v.length) return;
+      var text=fmt(value), unitTxt=unit||'원';
+      if(text){
+        var $unit=$v.find('.unit');
+        if($unit.length){
+          $v.contents().filter(function(){return this.nodeType===3;}).first().replaceWith(text+' ');
+          $unit.text(unitTxt);
+        }else{
+          $v.text(text+' '+unitTxt);
+        }
+        $v.attr('aria-label','현재값 '+text+' '+unitTxt+' (변경)');
+      }else{
+        $v.text('숫자만 입력').attr('aria-label','금액 입력');
+      }
+      var stateId=$v.data('a11yStateId');
+      if(stateId) $('#'+stateId).text(text?('입력됨: '+text+' '+unitTxt):'');
+      $v.removeAttr('aria-invalid').removeClass('is-error');
+    },
+    setError:function(target,msg){
+      var $v=(typeof target==='string')?$(target):$(target);
+      if(!$v.length) return;
+      $v.addClass('is-error').attr('aria-invalid','true');
+      var stateId=$v.data('a11yStateId');
+      if(stateId) $('#'+stateId).text(msg||'입력 오류가 있습니다.');
+    },
+    clearError:function(target){
+      var $v=(typeof target==='string')?$(target):$(target);
+      if(!$v.length) return;
+      $v.removeClass('is-error').removeAttr('aria-invalid');
+      var stateId=$v.data('a11yStateId');
+      if(stateId) $('#'+stateId).text('');
+    }
+  };
+
+})(jQuery, window);
+/* -------------------------------------------------------------
+ * [접근성 공통 추가 영역 끝]
+ * ------------------------------------------------------------- */
