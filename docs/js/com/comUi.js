@@ -820,7 +820,7 @@ setError($btn, '보낼 수 있는 금액이 부족해요.'); 형태로 호출 �
 state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
  * ------------------------------------------------------------- */
 (function ($, win) {
-  'use strict';
+  "use strict";
 
   var A11yPriceInput = {
     // ==========================================================
@@ -843,16 +843,16 @@ state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
         A11yPriceInput.syncInitialValue($btn);
 
         // 4) 클릭 시 네이티브 키패드 호출
-        $btn.off('click.a11yprice').on('click.a11yprice', function () {
-          if ($btn.attr('aria-disabled') === 'true') return;
+        $btn.off("click.a11yprice").on("click.a11yprice", function () {
+          if ($btn.attr("aria-disabled") === "true") return;
           A11yPriceInput.callNativePad($btn);
         });
 
         // 5) 키보드 접근 (Enter / Space)
-        $btn.off('keydown.a11yprice').on('keydown.a11yprice', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') {
+        $btn.off("keydown.a11yprice").on("keydown.a11yprice", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            $(this).trigger('click');
+            $(this).trigger("click");
           }
         });
       });
@@ -863,61 +863,62 @@ state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
     // ----------------------------------------------------------
     setBaseAttr: function ($btn) {
       // 주변 라벨 텍스트 찾기
-      var labelText = '';
-      var $label = $btn.closest('.live_input_group')
-        .find('.input_label, .label, label')
+      var labelText = "";
+      var $label = $btn
+        .closest(".live_input_group")
+        .find(".input_label, .label, label")
         .first();
 
       if ($label.length) {
         labelText = $.trim($label.text());
       }
-      if (!labelText) labelText = '금액입력';
+      if (!labelText) labelText = "금액입력";
 
       // 고유 ID
       var uid = Math.random().toString(36).substr(2, 8);
-      var hintId = 'hint_' + uid;
-      var stateId = 'state_' + uid;
+      var hintId = "hint_" + uid;
+      var stateId = "state_" + uid;
 
       // hint (입력 방법 안내)
-      if (!$btn.siblings('#' + hintId).length) {
+      if (!$btn.siblings("#" + hintId).length) {
         $btn.after(
-          '<p id="' + hintId + '" class="blind">' +
-            '숫자만 입력. 엔터 또는 스페이스로 키패드를 엽니다.' +
-          '</p>'
+          '<p id="' +
+            hintId +
+            '" class="blind">' +
+            "숫자만 입력. 엔터 또는 스페이스로 키패드를 엽니다." +
+            "</p>"
         );
       }
 
       // state (입력/오류/삭제 상태 안내)
-      if (!$btn.siblings('#' + stateId).length) {
+      if (!$btn.siblings("#" + stateId).length) {
         $btn.after(
           '<p id="' + stateId + '" class="blind" aria-live="polite"></p>'
         );
       }
 
       // ★ state / hint id를 data-*로 저장해두고 공통 사용
-      $btn.attr('data-a11y-state-id', stateId);
-      $btn.attr('data-a11y-hint-id', hintId);
+      $btn.attr("data-a11y-state-id", stateId);
+      $btn.attr("data-a11y-hint-id", hintId);
 
       $btn.attr({
-        'aria-label': labelText + ' 입력',
-        'aria-describedby': hintId + ' ' + stateId,
-        'aria-live': 'assertive',
-		'role': 'button'
+        "aria-label": labelText,
+        "aria-describedby": hintId + " " + stateId,
+        role: "button",
       });
-  		// 스크린리더가 버튼 내부 텍스트를 읽지 않도록 숨김 처리
-  		$btn.attr('aria-hidden', 'false'); // 버튼 자체는 읽게
+      // live 영역은 state <p aria-live="polite"> 만 사용
     },
 
     // ----------------------------------------------------------
     // disabled 처리
     // ----------------------------------------------------------
     setDisabled: function ($btn) {
-      if ($btn.hasClass('disabled') || $btn.is('[disabled]')) {
-        $btn.attr('aria-disabled', 'true').removeAttr('tabindex');
+      if ($btn.hasClass("disabled") || $btn.is("[disabled]")) {
+        $btn.attr("aria-disabled", "true").removeAttr("tabindex");
       } else {
         $btn.attr({
-          'aria-disabled': 'false',
-          'tabindex': '0'
+          "aria-disabled": "false",
+          tabindex: "0",
         });
       }
     },
@@ -928,56 +929,58 @@ state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
     //   - 숫자가 없으면(placeholder) → state 텍스트 비움
     // ----------------------------------------------------------
     syncInitialValue: function ($btn) {
-		var rawText = $.trim($btn.text());
-		var stateId = A11yPriceInput.getStateId($btn);
-		if (!stateId) return;
+      var rawText = $.trim($btn.text());
+      var stateId = A11yPriceInput.getStateId($btn);
+      if (!stateId) return;
 
-		if (/[0-9]/.test(rawText)) {
-			$('#' + stateId).text('입력됨: ' + rawText);
-		} else {
-			$('#' + stateId).text('숫자만 입력. 엔터 또는 스페이스로 키패드를 엽니다.');
-		}
-		},
+      if (/[0-9]/.test(rawText)) {
+        // 금액이 이미 들어있는 경우에만 상태 안내
+        $("#" + stateId).text("입력됨: " + rawText);
+      } else {
+        // 값이 없으면 상태는 비워 두고, 힌트(hint_xxx)만 읽히게
+        $("#" + stateId).text("");
+      }
+    },
 
     // ----------------------------------------------------------
     // 네이티브 키패드 호출 (Android / iOS / 웹 Fallback)
     // ----------------------------------------------------------
     callNativePad: function ($btn) {
-      var currentVal = $.trim($btn.text()).replace(/[^0-9]/g, '');
+      var currentVal = $.trim($btn.text()).replace(/[^0-9]/g, "");
       var params = {
         maxLength: 12,
-        defaultValue: currentVal
+        defaultValue: currentVal,
       };
 
       try {
         // [1] Android
-        if (win.nativeBridge && typeof win.nativeBridge.exec === 'function') {
-          win.nativeBridge.exec('OPEN_NUMBER_PAD', params, function (result) {
+        if (win.nativeBridge && typeof win.nativeBridge.exec === "function") {
+          win.nativeBridge.exec("OPEN_NUMBER_PAD", params, function (result) {
             A11yPriceInput.setValue($btn, result);
           });
 
-        // [2] iOS
+          // [2] iOS
         } else if (
           win.webkit &&
           win.webkit.messageHandlers &&
           win.webkit.messageHandlers.nativeBridge
         ) {
           win.webkit.messageHandlers.nativeBridge.postMessage({
-            action: 'OPEN_NUMBER_PAD',
-            params: params
+            action: "OPEN_NUMBER_PAD",
+            params: params,
           });
           // iOS 쪽에서 완료 시 JS의 setValue를 다시 호출해 주어야 함
 
-        // [3] 웹 테스트용 (브리지 없는 환경)
+          // [3] 웹 테스트용 (브리지 없는 환경)
         } else {
-          var result = win.prompt('금액을 입력하세요', currentVal || '');
+          var result = win.prompt("금액을 입력하세요", currentVal || "");
           if (result !== null) {
             A11yPriceInput.setValue($btn, result);
           }
         }
       } catch (e) {
         if (win.console && console.warn) {
-          console.warn('Bridge 호출 오류:', e);
+          console.warn("Bridge 호출 오류:", e);
         }
       }
     },
@@ -986,23 +989,23 @@ state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
     // 값 세팅 (입력 완료 시)
     // ----------------------------------------------------------
     setValue: function ($btn, val) {
-      if (val === null || val === undefined || val === '') {
+      if (val === null || val === undefined || val === "") {
         A11yPriceInput.clearValue($btn);
         return;
       }
 
-      var num = parseInt(String(val).replace(/[^0-9]/g, ''), 10);
+      var num = parseInt(String(val).replace(/[^0-9]/g, ""), 10);
       if (isNaN(num)) {
-        A11yPriceInput.setError($btn, '숫자만 입력 가능합니다.');
+        A11yPriceInput.setError($btn, "숫자만 입력 가능합니다.");
         return;
       }
 
-      var formatted = num.toLocaleString() + ' 원';
+      var formatted = num.toLocaleString() + " 원";
       $btn.text(formatted);
 
       var stateId = A11yPriceInput.getStateId($btn);
       if (stateId) {
-        $('#' + stateId).text('입력됨: ' + formatted);
+        $("#" + stateId).text("입력됨: " + formatted);
       }
     },
 
@@ -1011,11 +1014,11 @@ state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
     // ----------------------------------------------------------
     clearValue: function ($btn) {
       // 시각용 placeholder 문구
-      $btn.text('숫자만 입력');
+      $btn.text("숫자만 입력");
 
       var stateId = A11yPriceInput.getStateId($btn);
       if (stateId) {
-        $('#' + stateId).text('입력값이 삭제되었습니다.');
+        $("#" + stateId).text("입력값이 삭제되었습니다.");
       }
     },
 
@@ -1025,7 +1028,7 @@ state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
     setError: function ($btn, msg) {
       var stateId = A11yPriceInput.getStateId($btn);
       if (stateId) {
-        $('#' + stateId).text('오류: ' + msg);
+        $("#" + stateId).text("오류: " + msg);
       }
     },
 
@@ -1033,21 +1036,21 @@ state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
     // state id 추출 : data-* 우선, 없으면 aria-describedby fallback
     // ----------------------------------------------------------
     getStateId: function ($btn) {
-      var fromData = $btn.attr('data-a11y-state-id');
+      var fromData = $btn.attr("data-a11y-state-id");
       if (fromData) return fromData;
 
-      var desc = $btn.attr('aria-describedby') || '';
+      var desc = $btn.attr("aria-describedby") || "";
       var ids = $.trim(desc).split(/\s+/);
       return (ids.length > 1 ? ids[1] : ids[0]) || null;
-    }
+    },
   };
 
   // DOM 준비 후 실행
   $(function () {
     A11yPriceInput.init();
   });
-
 })(jQuery, window);
 /* -------------------------------------------------------------
  * [접근성 공통 추가 영역 끝]
  * ------------------------------------------------------------- */
+
