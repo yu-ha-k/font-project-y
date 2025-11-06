@@ -899,10 +899,13 @@ state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
       $btn.attr('data-a11y-hint-id', hintId);
 
       $btn.attr({
-        'aria-label': labelText,
+        'aria-label': labelText + ' 입력',
         'aria-describedby': hintId + ' ' + stateId,
-        'aria-live': 'assertive'
+        'aria-live': 'assertive',
+		'role': 'button'
       });
+  		// 스크린리더가 버튼 내부 텍스트를 읽지 않도록 숨김 처리
+  		$btn.attr('aria-hidden', 'false'); // 버튼 자체는 읽게
     },
 
     // ----------------------------------------------------------
@@ -925,19 +928,16 @@ state_xxx: "오류: 보낼 수 있는 금액이 부족해요."
     //   - 숫자가 없으면(placeholder) → state 텍스트 비움
     // ----------------------------------------------------------
     syncInitialValue: function ($btn) {
-      var rawText = $.trim($btn.text());
-      if (!rawText) return;
+		var rawText = $.trim($btn.text());
+		var stateId = A11yPriceInput.getStateId($btn);
+		if (!stateId) return;
 
-      var hasNumber = /[0-9]/.test(rawText);
-      var stateId = A11yPriceInput.getStateId($btn);
-      if (!stateId) return;
-
-      if (hasNumber) {
-        $('#' + stateId).text('입력됨: ' + rawText);
-      } else {
-        $('#' + stateId).text('');
-      }
-    },
+		if (/[0-9]/.test(rawText)) {
+			$('#' + stateId).text('입력됨: ' + rawText);
+		} else {
+			$('#' + stateId).text('숫자만 입력. 엔터 또는 스페이스로 키패드를 엽니다.');
+		}
+		},
 
     // ----------------------------------------------------------
     // 네이티브 키패드 호출 (Android / iOS / 웹 Fallback)
