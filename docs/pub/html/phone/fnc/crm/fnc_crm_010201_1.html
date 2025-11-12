@@ -2343,7 +2343,7 @@
                     <div class="card_item_wrap ty2">
                         <!-- ✅ 카드 전체 클릭 가능 라벨 (proxy) -->
                         <label for="test3" class="card_item_label_proxy">
-                        <span class="blind">지정카드</span>
+                        <span class="blind" aria-hidden="true">지정카드</span>
                         </label>
 
                         <div class="card_chkbox">
@@ -2353,10 +2353,11 @@
                             id="test3"
                             aria-describedby="test3_content"
                         />
-                        <label for="test3">
-                            <span class="blind">지정카드 선택</span>
+                        <label for="test3" aria-hidden="true">
+                            <span class="blind" aria-hidden="true">지정카드 선택</span>
                         </label>
                         </div>
+                        <h3 id="test3_lable" class="blind">지정카드</h3>
 
                         <!-- ✅ 설명 그룹화 -->
                         <div class="card_item" id="test3_content" role="group" aria-labelledby="test3_label">
@@ -2379,7 +2380,7 @@
                     <div class="card_item_wrap ty2 mt_16">
                         <!-- ✅ 카드 전체 클릭 가능 라벨 (proxy) -->
                         <label for="test4" class="card_item_label_proxy">
-                        <span class="blind">공용카드</span>
+                        <span class="blind" aria-hidden="true">공용카드</span>
                         </label>
 
                         <div class="card_chkbox">
@@ -2390,9 +2391,11 @@
                             aria-describedby="test4_content"
                         />
                         <label for="test4">
-                            <span class="blind">공용카드 선택</span>
+                            <span class="blind" aria-hidden="true">지정카드 선택</span>
                         </label>
                         </div>
+                        
+                        <h3 id="test4_lable" class="blind">지정카드</h3>
 
                         <!-- ✅ 설명 그룹화 -->
                         <div class="card_item" id="test4_content" role="group" aria-labelledby="test4_label">
