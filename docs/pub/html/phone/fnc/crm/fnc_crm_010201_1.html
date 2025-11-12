@@ -2324,39 +2324,90 @@
         <!-- s: step13 카드종류 선택 -->
         <div id="step13" data-jx-step-no="13" data-jx-effect="slide">
             <div class="content_wrap ty3">
+                <!-- =========================================================
+     카드 종류 선택 영역 (접근성 개선 버전)
+     기존 대비 변경점:
+     1. 카드 전체 클릭 가능하도록 proxy label 추가
+     2. aria-labelledby / describedby 구조 정비
+     3. 기존 CSS 영향 없이 HTML만 변경
+     ========================================================= -->
                 <div class="group">
-                    <div class="stepper_tit">카드종류 선택</div>
-                    <div class="title_text ty1">원하는 종류의 카드를 선택해 주세요</div>
+                <div class="stepper_tit">카드종류 선택</div>
+                <div class="title_text ty1">원하는 종류의 카드를 선택해 주세요</div>
+
+                    <!-- ==============================================
+                        [1] 지정카드
+                        기존: label 1개만, aria-describedby 누락
+                        개선: proxy label 추가 + aria 연결 정비
+                        ============================================== -->
                     <div class="card_item_wrap ty2">
+                        <!-- ✅ 카드 전체 클릭 가능 라벨 (proxy) -->
+                        <label for="test3" class="card_item_label_proxy">
+                        <span class="blind">지정카드</span>
+                        </label>
+
                         <div class="card_chkbox">
-                            <input type="radio" name="name" id="test3" />
-                            <label for="test3" aria-labelledby="test3_content"></label>
+                        <input
+                            type="radio"
+                            name="cardType"
+                            id="test3"
+                            aria-describedby="test3_content"
+                        />
+                        <label for="test3">
+                            <span class="blind">지정카드 선택</span>
+                        </label>
                         </div>
-                        <div class="card_item" id="test3_content">
-                            <div class="card_item_wrap_head">
-                                <div class="txt_style ty3 fw_4">대표자만 사용할 수 있는</div>
-                                <div class="txt_style ty1 mt_4">지정카드</div>
-                                <div class="txt_style ty3 fw_4 mt_8"> 대표자명이 카드에 표기되고, <br />
-                                    현금카드 기능을 선택할 수 있어요. </div>
+
+                        <!-- ✅ 설명 그룹화 -->
+                        <div class="card_item" id="test3_content" role="group" aria-labelledby="test3_label">
+                        <div class="card_item_wrap_head">
+                            <div class="txt_style ty3 fw_4">대표자만 사용할 수 있는</div>
+                            <div class="txt_style ty1 mt_4" id="test3_label">지정카드</div>
+                            <div class="txt_style ty3 fw_4 mt_8">
+                            대표자명이 카드에 표기되고,<br />
+                            현금카드 기능을 선택할 수 있어요.
                             </div>
                         </div>
+                        </div>
                     </div>
+
+                    <!-- ==============================================
+                        [2] 공용카드
+                        기존: aria 관계 단절 / label 범위 축소
+                        개선: proxy label + 그룹 관계 동일하게 정비
+                        ============================================== -->
                     <div class="card_item_wrap ty2 mt_16">
+                        <!-- ✅ 카드 전체 클릭 가능 라벨 (proxy) -->
+                        <label for="test4" class="card_item_label_proxy">
+                        <span class="blind">공용카드</span>
+                        </label>
+
                         <div class="card_chkbox">
-                            <input type="radio" name="name" id="test4" />
-                            <label for="test4" aria-labelledby="test4_content"></label>
+                        <input
+                            type="radio"
+                            name="cardType"
+                            id="test4"
+                            aria-describedby="test4_content"
+                        />
+                        <label for="test4">
+                            <span class="blind">공용카드 선택</span>
+                        </label>
                         </div>
-                        <div class="card_item" id="test4_content">
-                            <div class="card_item_wrap_head">
-                                <div class="txt_style ty3 fw_4">사용자 지정 없이 사용할 수 있는</div>
-                                <div class="txt_style ty1 mt_4">공용카드</div>
-                                <div class="txt_style ty3 fw_4 mt_8"> 회사명이 카드에 표기되고, <br />
-                                    현금카드 기능은 선택할 수 없어요. <br />
-                                    (카드 발급은 최대 3장까지 가능). </div>
+
+                        <!-- ✅ 설명 그룹화 -->
+                        <div class="card_item" id="test4_content" role="group" aria-labelledby="test4_label">
+                        <div class="card_item_wrap_head">
+                            <div class="txt_style ty3 fw_4">사용자 지정 없이 사용할 수 있는</div>
+                            <div class="txt_style ty1 mt_4" id="test4_label">공용카드</div>
+                            <div class="txt_style ty3 fw_4 mt_8">
+                            회사명이 카드에 표기되고,<br />
+                            현금카드 기능은 선택할 수 없어요.<br />
+                            (카드 발급은 최대 3장까지 가능)
                             </div>
                         </div>
+                        </div>
                     </div>
-                </div>
+                    </div>
                 <!-- s: 화면 하단 고정 버튼 -->
                 <div class="bottom_btn_area">
                     <div class="btn_area ty1">
